@@ -1,0 +1,85 @@
+// =============================================
+// Form
+// =============================================
+
+fieldset {
+	margin: 0;
+    padding: 0;
+	border: 0;
+}
+
+legend {
+    display: none;
+}
+
+input,
+label,
+select,
+textarea {
+	display: block;
+	font-family: $font-family;
+	font-size: 1em;
+	color: $black;
+}
+
+label {
+	margin-bottom: $margin-xs;
+	
+	&.required::after {
+		content: "*";
+	}
+}
+
+input,
+textarea,
+select[multiple=multiple] {
+	background-color: $white;
+	border: 1px solid $grey-dark;
+	border-radius: 0;
+	padding: $margin-sm $margin;
+	width: 100%;
+
+	&:focus {
+		border-color: darken($blue, 20%);
+		outline: none;
+	}
+}
+
+label input {
+    width: auto;
+}
+
+select {
+	max-width: 100%;
+	width: auto;
+}
+
+textarea {
+	resize: vertical;
+}
+
+input[type="search"] {
+	appearence: none;
+	box-sizing: border-box;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline;
+}
+
+input[type="file"] {
+	width: 100%;
+    border-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+// =============================================
+// Form group
+// =============================================
+
+.form-group {
+	margin-bottom: $margin;
+}

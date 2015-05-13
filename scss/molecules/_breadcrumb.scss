@@ -1,0 +1,25 @@
+// =============================================
+// Breadcrumb
+// =============================================
+
+.breadcrumb {
+	padding-top: $margin-xs;
+	padding-bottom: $margin-xs;
+	
+	ul {
+		@extend %list-inline;
+		font-size: $font-size-sm;
+		margin-bottom: 0;
+		
+		> li {
+			padding-right: $margin-sm;
+			padding-left: 0;
+		}
+		
+		a:after {
+			margin-left: $margin-sm;
+			@include triangle(right, 4px, $black);	
+		}
+		
+	}
+}

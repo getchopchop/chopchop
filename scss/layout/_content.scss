@@ -1,0 +1,18 @@
+.span--sidebar {
+	@extend %span;
+	width: 30%;
+}
+.span--content {
+	@extend %span;
+	width: 70%;
+}
+
+
+.content {
+	background-color: $white;
+	padding: 2.5rem;
+	
+	@include breakpoint($screen-lg) {
+		padding: 3.5rem;
+	}
+}

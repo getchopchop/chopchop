@@ -1,0 +1,70 @@
+// =============================================
+// Colours
+// =============================================
+
+$blue                   : #08eeff;
+$green                  : #84ee74;
+$yellow                 : #fceb01;
+
+$grey-darker            : #222;
+$grey-dark              : #444;
+$grey                   : #666;
+$grey-light             : #ddd;
+$grey-lighter           : #e4e4e4;
+
+$white                  : #fff;
+$black                  : #000;
+
+
+// =============================================
+// Fonts
+// =============================================
+
+$font-family            : 'Open Sans', helvetica, arial, sans-serif;
+$font-size              : 83%;
+$line-height            : 1.6;
+
+$font-size-xs           : 0.75em;
+$font-size-sm           : 0.9em;
+$font-size-lg           : 1.2em;
+$font-size-xl           : 1.4em;
+
+$font-weight-bold       : 600;
+
+$line-height-xs         : 1;
+$line-height-sm         : 1.4;
+
+
+// =============================================
+// Headings
+// =============================================
+
+$heading-font-family    : 'Roboto Condensed', helvetica, arial, sans-serif;
+
+$font-size-h1           : 3em;
+$font-size-h2           : $font-size-h1 * 0.7;
+$font-size-h3           : $font-size-h1 * 0.57;
+$font-size-h4           : $font-size-h1 * 0.48;
+$font-size-h5           : $font-size-h1 * 0.4;
+$font-size-h6           : $font-size-h1 * 0.35;
+
+
+// =============================================
+// Margins
+// =============================================
+
+$margin                 : 1rem;
+$margin-xs              : 0.4rem;
+$margin-sm              : 0.6rem;
+$margin-lg              : 1.4rem;
+$margin-xl              : 1.6rem;
+
+
+// =============================================
+// Breakpoints
+// =============================================
+
+$screen-lg              : 76em; // 1204px
+
+$container-min			: 68.5em;
+$container-max			: 86em;

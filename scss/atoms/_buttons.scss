@@ -1,0 +1,155 @@
+// =============================================
+// Base
+// =============================================
+
+%btn,
+.btn {
+    padding: $margin-sm $margin;
+    background-color: $grey-darker;
+    color: $white;
+	border-radius: 0;
+	font-size: $font-size-lg;
+	font-family: $heading-font-family;
+	font-weight: $font-weight-bold;
+	text-transform: uppercase;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    line-height: 1;
+    width: auto;
+
+    &:hover,
+    &:focus {
+        color: $white;
+        background-color: $grey-dark;
+    }
+}
+
+
+// =============================================
+// Small
+// =============================================
+
+%btn--sm,
+.btn--sm {
+    padding: $margin-xs $margin-sm;
+    font-size: 1em;
+}
+
+
+// =============================================
+// Large
+// =============================================
+
+%btn--lg,
+.btn--lg {
+    padding: $margin $margin-lg;
+    font-size: $font-size-xl;
+}
+
+
+// =============================================
+// Text
+// =============================================
+
+%btn--text,
+.btn--text {
+    @extend %link;
+    padding: $margin-sm $margin;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: transparent;
+	color: $black;
+	
+    &:hover,
+    &:focus {
+        background-color: transparent;
+		color: $black;
+		text-decoration: underline;
+    }
+
+    &:disabled {
+        background-color: transparent;
+        color: $grey;
+    }
+}
+
+
+// =============================================
+// Default
+// =============================================
+
+%btn--default,
+.btn--default {
+    background-color: $blue;
+    color: $black;
+
+    &:hover,
+    &:focus {
+        background-color: $black;
+		color: $white;
+    }
+
+    &:disabled {
+        background-color: $grey;
+        color: $grey-dark;
+    }
+}
+
+
+// =============================================
+// Primary
+// =============================================
+
+%btn--primary,
+.btn--primary {
+    background-color: $blue;
+	background: linear-gradient(to right, $green 0%, $blue 100%);
+    color: $black;
+
+    &:hover,
+    &:focus {
+		background: transparent;
+        background-color: $black;
+		color: $white;
+    }
+
+    &:disabled {
+        background-color: $grey;
+        color: $grey-dark;
+    }
+}
+
+
+// =============================================
+// Disabled
+// =============================================
+
+%btn--disabled,
+.btn--disabled,
+.btn:disabled {
+    cursor: not-allowed;
+    background-color: $grey;
+	color: $grey-dark;
+	
+    &:hover,
+    &:focus {
+        background-color: $grey;
+		color: $grey-dark;
+    }
+}
+
+
+// =============================================
+// Button button
+// =============================================
+
+button {
+	@extend %btn;
+}

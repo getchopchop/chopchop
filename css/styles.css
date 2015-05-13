@@ -1,0 +1,1082 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Open+Sans:400,700);
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 9, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 19, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 45, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 57, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 67, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 78, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 89, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 98, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 109, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 118, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 126, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 135, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 144, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 153, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 162, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 169, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 173, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 184, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 192, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 203, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 211, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 221, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 232, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 256, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 266, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 278, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 293, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+button,
+html input[type="button"], input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 303, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 312, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 322, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 335, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 347, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 357, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 371, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 379, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 390, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 399, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 408, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 419, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 425, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+td,
+th {
+  padding: 0;
+}
+
+/* line 7, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/helpers/_clearfix.scss */
+.clearfix:after,
+.container:after, .layout:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 5, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-device-pixel-ratio: 1.25), only screen and (-webkit-min-device-pixel-ratio: 2.0833333333333335), only screen and (min-resolution: 200dpi), only screen and (min-resolution: 1.25dppx) {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* line 21, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+body {
+  font-size: 83%;
+  font-family: "Open Sans", helvetica, arial, sans-serif;
+  line-height: 1.6;
+  color: #666;
+}
+
+@media all and (min-width: 76em) {
+  /* line 21, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+  body {
+    font-size: 87.15%;
+  }
+}
+
+/* line 32, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+ul, ol, p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* line 37, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+ul, ol {
+  margin-bottom: 1.4rem;
+}
+
+/* line 41, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+li {
+  margin-bottom: 0.2rem;
+}
+
+/* line 45, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+blockquote {
+  border-left: 3px solid #e4e4e4;
+  padding-left: 1rem;
+}
+
+/* line 57, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+a,
+.btn--text,
+.link {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* line 61, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+a:hover,
+.btn--text:hover,
+.link:hover {
+  color: #0096a1;
+  text-decoration: none;
+}
+
+/* line 72, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+hr {
+  border: 0;
+  height: 2px;
+  background-color: #ddd;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* line 85, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+p.lead {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.4;
+  margin-bottom: 1.4rem;
+}
+
+/* line 7, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_headings.scss */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Roboto Condensed", helvetica, arial, sans-serif;
+  line-height: 1;
+  font-weight: 600;
+  color: #000;
+  margin-top: 1.6rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+/* line 22, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_headings.scss */
+h1, .h1 {
+  font-size: 3em;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+/* line 33, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_headings.scss */
+h2, .h2 {
+  font-size: 2.1em;
+}
+
+/* line 42, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_headings.scss */
+h3, .h3 {
+  font-size: 1.71em;
+}
+
+/* line 51, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_headings.scss */
+h4, .h4 {
+  font-size: 1.44em;
+}
+
+/* line 60, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_headings.scss */
+h5, .h5 {
+  font-size: 1.2em;
+}
+
+/* line 69, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_headings.scss */
+h6, .h6 {
+  font-size: 1.05em;
+}
+
+/* line 6, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_lists.scss */
+.list-inline,
+.breadcrumb ul {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+/* line 11, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_lists.scss */
+.list-inline > li,
+.breadcrumb ul > li {
+  display: inline-block;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+/* line 16, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_lists.scss */
+.list-inline > li:first-child,
+.breadcrumb ul > li:first-child {
+  padding-left: 0;
+}
+
+/* line 20, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_lists.scss */
+.list-inline > li:last-child,
+.breadcrumb ul > li:last-child {
+  padding-right: 0;
+}
+
+/* line 32, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_lists.scss */
+.list-ordered {
+  list-style: decimal;
+}
+
+/* line 42, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_lists.scss */
+.list-unordered li {
+  list-style: none;
+  position: relative;
+}
+
+/* line 46, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_lists.scss */
+.list-unordered li:before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  top: 0.8em;
+  height: 6px;
+  width: 6px;
+  display: block;
+  background-color: #08eeff;
+  margin-top: -3px;
+}
+
+/* line 65, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_lists.scss */
+.list-unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 5, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_images.scss */
+img {
+  display: block;
+}
+
+/* line 15, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_images.scss */
+.img-responsive {
+  width: 100% \9;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 6, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+button,
+.btn {
+  padding: 0.6rem 1rem;
+  background-color: #222;
+  color: #fff;
+  border-radius: 0;
+  font-size: 1.2em;
+  font-family: "Roboto Condensed", helvetica, arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  line-height: 1;
+  width: auto;
+}
+
+/* line 25, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+button:hover,
+button:focus,
+.btn:hover,
+.btn:focus {
+  color: #fff;
+  background-color: #444;
+}
+
+/* line 37, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+.btn--sm {
+  padding: 0.4rem 0.6rem;
+  font-size: 1em;
+}
+
+/* line 48, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+.btn--lg {
+  padding: 1rem 1.4rem;
+  font-size: 1.4em;
+}
+
+/* line 59, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+.btn--text {
+  padding: 0.6rem 1rem;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: transparent;
+  color: #000;
+}
+
+/* line 71, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+.btn--text:hover,
+.btn--text:focus {
+  background-color: transparent;
+  color: #000;
+  text-decoration: underline;
+}
+
+/* line 77, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+.btn--text:disabled {
+  background-color: transparent;
+  color: #666;
+}
+
+/* line 89, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+.btn--default {
+  background-color: #08eeff;
+  color: #000;
+}
+
+/* line 94, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+.btn--default:hover,
+.btn--default:focus {
+  background-color: #000;
+  color: #fff;
+}
+
+/* line 99, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+.btn--default:disabled {
+  background-color: #666;
+  color: #444;
+}
+
+/* line 111, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+.btn--primary {
+  background-color: #08eeff;
+  background: -webkit-linear-gradient(left, #84ee74 0%, #08eeff 100%);
+  background: linear-gradient(to right, #84ee74 0%, #08eeff 100%);
+  color: #000;
+}
+
+/* line 117, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+.btn--primary:hover,
+.btn--primary:focus {
+  background: transparent;
+  background-color: #000;
+  color: #fff;
+}
+
+/* line 123, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+.btn--primary:disabled {
+  background-color: #666;
+  color: #444;
+}
+
+/* line 136, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+.btn--disabled,
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: #666;
+  color: #444;
+}
+
+/* line 142, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+.btn--disabled:hover,
+.btn--disabled:focus,
+.btn:disabled:hover,
+.btn:disabled:focus {
+  background-color: #666;
+  color: #444;
+}
+
+/* line 5, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 11, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+legend {
+  display: none;
+}
+
+/* line 18, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+input,
+label,
+select,
+textarea {
+  display: block;
+  font-family: "Open Sans", helvetica, arial, sans-serif;
+  font-size: 1em;
+  color: #000;
+}
+
+/* line 25, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+label {
+  margin-bottom: 0.4rem;
+}
+
+/* line 28, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+label.required::after {
+  content: "*";
+}
+
+/* line 35, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+input,
+textarea,
+select[multiple=multiple] {
+  background-color: #fff;
+  border: 1px solid #444;
+  border-radius: 0;
+  padding: 0.6rem 1rem;
+  width: 100%;
+}
+
+/* line 42, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+input:focus,
+textarea:focus,
+select[multiple=multiple]:focus {
+  border-color: #0096a1;
+  outline: none;
+}
+
+/* line 48, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+label input {
+  width: auto;
+}
+
+/* line 52, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+select {
+  max-width: 100%;
+  width: auto;
+}
+
+/* line 57, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 61, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+input[type="search"] {
+  appearence: none;
+  box-sizing: border-box;
+}
+
+/* line 67, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+}
+
+/* line 71, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+input[type="file"] {
+  width: 100%;
+  border-width: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 83, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* line 5, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_confidence.scss */
+.confidence {
+  position: relative;
+  background: -webkit-linear-gradient(left, #08eeff 0%, #84ee74 100%);
+  background: linear-gradient(to right, #08eeff 0%, #84ee74 100%);
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+/* line 11, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_confidence.scss */
+.confidence:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(../images/dots.png) fixed;
+  z-index: 1;
+}
+
+/* line 28, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_confidence.scss */
+.confidence__item {
+  position: relative;
+  z-index: 2;
+}
+
+/* line 32, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_confidence.scss */
+.confidence__item p {
+  background-color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 0.9em;
+  margin-bottom: 0;
+  padding: 0.4rem 0.6rem;
+  line-height: 1.4;
+}
+
+/* line 43, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_confidence.scss */
+.confidence__item strong {
+  display: block;
+}
+
+@media all and (min-width: 76em) {
+  /* line 49, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_confidence.scss */
+  .confidence__item strong {
+    display: inline;
+  }
+}
+
+/* line 5, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_breadcrumb.scss */
+.breadcrumb {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+/* line 9, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_breadcrumb.scss */
+.breadcrumb ul {
+  font-size: 0.9em;
+  margin-bottom: 0;
+}
+
+/* line 14, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_breadcrumb.scss */
+.breadcrumb ul > li {
+  padding-right: 0.6rem;
+  padding-left: 0;
+}
+
+/* line 19, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_breadcrumb.scss */
+.breadcrumb ul a:after {
+  margin-left: 0.6rem;
+  content: '';
+  width: 0;
+  height: 0;
+  display: inline-block;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid #000;
+  border-right: none;
+}
+
+/* line 6, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+*,
+input, textarea, button {
+  box-sizing: border-box;
+}
+
+/* line 15, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+.container {
+  max-width: 86em;
+  min-width: 68.5em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+/* line 29, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+.container--spacing {
+  margin-bottom: 4rem;
+}
+
+/* line 38, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+.container--dots {
+  position: relative;
+  background: #ddd url(../images/dots.png) fixed;
+  padding: 2.5rem;
+}
+
+/* line 43, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+.container--dots:before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  -webkit-transform: skew(0, -15deg);
+      -ms-transform: skew(0, -15deg);
+          transform: skew(0, -15deg);
+}
+
+/* line 54, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+.container--dots > div {
+  position: relative;
+  z-index: 1;
+}
+
+@media all and (min-width: 76em) {
+  /* line 61, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+  .container--dots {
+    padding: 3.5rem;
+  }
+}
+
+/* line 81, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+.span,
+.span--third,
+.span--half,
+.span--two-thirds,
+.span--sidebar, .span--content {
+  float: left;
+}
+
+/* line 85, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+.span--third {
+  width: 33.33%;
+}
+
+/* line 90, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+.span--half {
+  width: 50%;
+}
+
+/* line 95, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+.span--two-thirds {
+  width: 66.66%;
+}
+
+/* line 105, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+.gutter {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+/* line 111, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+.gutter > div,
+.gutter > aside,
+.gutter > article {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* line 122, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+.gutter--lg {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
+/* line 128, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+.gutter--lg > div,
+.gutter--lg > aside,
+.gutter--lg > article {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media all and (min-width: 76em) {
+  /* line 135, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+  .gutter--lg {
+    margin-left: -1.75rem;
+    margin-right: -1.75rem;
+  }
+  /* line 141, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+  .gutter--lg > div,
+  .gutter--lg > aside,
+  .gutter--lg > article {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+}
+
+/* line 1, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_content.scss */
+.span--sidebar {
+  width: 30%;
+}
+
+/* line 5, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_content.scss */
+.span--content {
+  width: 70%;
+}
+
+/* line 11, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_content.scss */
+.content {
+  background-color: #fff;
+  padding: 2.5rem;
+}
+
+@media all and (min-width: 76em) {
+  /* line 11, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_content.scss */
+  .content {
+    padding: 3.5rem;
+  }
+}

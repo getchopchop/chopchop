@@ -1,0 +1,52 @@
+// =============================================
+// Confidence
+// =============================================
+
+.confidence {
+	position: relative;
+	background: linear-gradient(to right, $blue 0%, $green 100%);
+	padding-top: $margin-sm;
+	padding-bottom: $margin-sm;
+	
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: url(../images/dots.png) fixed;
+		z-index: 1;
+	}
+}
+
+
+// =============================================
+// Confidence item
+// =============================================
+
+.confidence__item {
+	position: relative;
+	z-index: 2;
+	
+	p {
+		background-color: $white;
+		text-align: center;
+		text-transform: uppercase;
+		color: $black;
+		font-size: $font-size-sm;
+		margin-bottom: 0;
+		padding: $margin-xs $margin-sm;
+		line-height: $line-height-sm;
+	}
+	
+	strong {
+		display: block;
+	}
+}
+
+@include breakpoint($screen-lg) {
+	.confidence__item strong {
+		display: inline;
+	}
+}
