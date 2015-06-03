@@ -5,8 +5,13 @@
 .confidence {
 	position: relative;
 	background: linear-gradient(to right, $blue 0%, $green 100%);
-	padding-top: $margin-sm;
-	padding-bottom: $margin-sm;
+	padding-top: $spacing-xs;
+	padding-bottom: $spacing-xs;
+	
+	@include breakpoint($screen-md) {
+		padding-top: $spacing-sm;
+		padding-bottom: $spacing-sm;
+	}
 	
 	&:before {
 		content: "";
@@ -15,7 +20,7 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background: url(../images/dots.png) fixed;
+		background: url(../images/dots.png);
 		z-index: 1;
 	}
 }
@@ -36,16 +41,67 @@
 		color: $black;
 		font-size: $font-size-sm;
 		margin-bottom: 0;
-		padding: $margin-xs $margin-sm;
-		line-height: $line-height-sm;
+		padding: $spacing-xs $spacing-sm;
+		line-height: $line-height-xs;
+		
+		@include breakpoint($screen-sm) {
+			padding-top: $spacing-xxs;
+			padding-bottom: $spacing-xxs;
+		}
+		
+		@include breakpoint($screen-md) {
+			line-height: $line-height-xs;
+		}
+		
+		@include breakpoint($screen-lg) {
+			padding-top: $spacing-xs;
+			padding-bottom: $spacing-xs;
+		}
 	}
 	
-	strong {
+	@include breakpoint($screen-sm) {
+		strong {
+			display: block;
+		}
+	}
+}
+
+
+// =============================================
+// Responsive
+// =============================================
+
+.confidence__item {
+	display: none;
+	
+	&:first-child {
 		display: block;
 	}
 }
 
-@include breakpoint($screen-lg) {
+@include breakpoint($screen-sm) {
+	.confidence__item {
+		display: block;
+		float: left;
+		width: 50%;
+	
+		&:last-child {
+			display: none;
+		}
+	}
+}
+
+@include breakpoint($screen-md) {
+	.confidence__item {
+		width: 33.33%;
+	
+		&:last-child {
+			display: block;
+		}
+	}
+}
+
+@include breakpoint($screen-xl) {
 	.confidence__item strong {
 		display: inline;
 	}

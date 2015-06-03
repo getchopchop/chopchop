@@ -23,7 +23,7 @@ textarea {
 }
 
 label {
-	margin-bottom: $margin-xs;
+	margin-bottom: $spacing-xs;
 	
 	&.required::after {
 		content: "*";
@@ -36,7 +36,7 @@ select[multiple=multiple] {
 	background-color: $white;
 	border: 1px solid $grey-dark;
 	border-radius: 0;
-	padding: $margin-sm $margin;
+	padding: $spacing-xs $spacing-sm;
 	width: 100%;
 
 	&:focus {
@@ -60,7 +60,9 @@ textarea {
 
 input[type="search"] {
 	appearence: none;
+	-webkit-appearance: none;
 	box-sizing: border-box;
+	border-radius: 0;
 }
 
 input[type="checkbox"],
@@ -81,5 +83,16 @@ input[type="file"] {
 // =============================================
 
 .form-group {
-	margin-bottom: $margin;
+	margin-bottom: $spacing;
+}
+
+
+// =============================================
+// Form inline
+// =============================================
+
+.form--inline .form-group {
+		vertical-align: top;
+		display: inline-block;
+	
 }

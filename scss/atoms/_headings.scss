@@ -6,11 +6,11 @@ h1, h2, h3, h4, h5, h6,
 %h1, %h2, %h3, %h4, %h4, %h5, %h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: $heading-font-family;
-	line-height: $line-height-xs;
+	line-height: $line-height-xxs;
 	font-weight: $font-weight-bold;
     color: $black;
-    margin-top: $margin-xl;
-    margin-bottom: $margin;
+    margin-top: $spacing-xl;
+    margin-bottom: $spacing;
     text-transform: uppercase;
 }
 
@@ -21,8 +21,7 @@ h1, h2, h3, h4, h5, h6,
 
 h1, %h1, .h1 {
 	font-size: $font-size-h1;
-	margin-bottom: $margin;
-	margin-top: 0;
+	margin-bottom: $spacing;
 }
 
 
@@ -69,3 +68,9 @@ h5, %h5, .h5 {
 h6, %h6, .h6 {
 	font-size: $font-size-h6;
 }
+
+
+// =============================================
+// Toggle
+// =============================================
+

@@ -2,19 +2,30 @@
 <html lang="en-US">
 <head>
     
-    <meta charset="UTF-8">
-    <title></title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	
+	<title>Producer Loops - Style Guide</title>
 
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
 
 </head>
 <body>
     
+	<div class="mobile-nav">
+		
+	</div>
+	
     <div class="wrapper">
         
         <header class="section header">
             <div class="container">
-                <div class="logo"><a href="#"><img src="images/logo.svg" alt="Producer Loops" /></a></div>
+                <div class="logo">
+					<a href="#"><img src="images/logo.png" alt="Producer Loops" /></a>
+				</div>
                 <nav class="nav nav--accounts">
                     <ul>
                         <li class="nav__item"><a href="#">Blog</a></li>
@@ -25,20 +36,46 @@
                         <li class="nav__item nav__item--dropdown nav__item--divide"><a href="#"><img src="img/country/gb.gif" alt="GBP">GBP &pound;</a></li>
                     </ul>
                 </nav>
+				<div class="cart">
+					<div class="cart__value">
+						<p class="cart__price"><strong>&pound;1000.00</strong> (2 items)</p>
+						<p class="cart__approx">(Approx. $199994.94 USD)</p>
+					</div>
+					<div class="cart__view">
+						<a href="#" class="btn btn--primary"><span>View </span>Cart</a>
+					</div>
+				</div>
+				<div class="search search--invert">
+					<form action="" method="post" class="form--inline">
+						<div class="form-group">
+							<label>Search</label>
+							<input type="search" placeholder="Search">
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn--default"><img src="images/search.svg" alt="Search" height="17" width="17"></button>
+						</div>
+					</form>
+				</div>
+				<nav class="nav nav--mobile">
+					<ul>
+						<li><a href="#"><img src="images/burger.svg" alt="Menu" height="24" width="24"></a></li>
+						<li><a href="#"><img src="images/cart.svg" alt="Cart" height="32" width="32"> <span>2</span></a></li>
+					</ul>
+				</nav>
             </div>
         </header>
         
         <nav class="section main-nav">
             <div class="container">
-                <div class="nav nav--primary">
+                <nav class="nav nav--primary">
                     <ul>
                         <li class="nav__item nav__item--dropdown"><a href="#">Browse</a></li>
                         <li class="nav__item nav__item--dropdown"><a href="#">Genres</a></li>
                         <li class="nav__item nav__item--dropdown"><a href="#">Formats</a></li>
                         <li class="nav__item nav__item--dropdown"><a href="#">Brands</a></li>
                     </ul>
-                </div>
-                <div class="nav nav__secondary">
+                </nav>
+                <nav class="nav nav--secondary">
                     <ul>
                         <li class="nav__item"><a href="#">New Arrivals</a></li>
                         <li class="nav__item"><a href="#">Bundles</a></li>
@@ -46,43 +83,69 @@
                         <li class="nav__item"><a href="#">Free Loops</a></li>
                         <li class="nav__item"><a href="#">Sales</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
         </nav>
         
         <section class="section confidence">
             <div class="container">
-				<div class="layout gutter">
-					<div class="span--third confidence__item">
-						<p><strong>World's largest distributor</strong> of sample packs</p>
-					</div>
-            		<div class="span--third confidence__item">
+				<div class="gutter">
+            		<div class="confidence__item">
 						<p><strong>Instant download</strong> on all products</p>
 					</div>
-            		<div class="span--third confidence__item">
+					<div class="confidence__item">
+						<p><strong>World's largest distributor</strong> of sample packs</p>
+					</div>
+            		<div class="confidence__item">
 						<p><strong>11956 legal downloads</strong> from 354 labels</p>
 					</div>
 				</div>
             </div>
         </section>
+		
+		<section class="section search">
+			<div class="container">
+				<form action="" method="post" class="form--inline">
+					<div class="form-group">
+						<label>Search</label>
+						<input type="search" placeholder="Search">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn--default">Search</button>
+					</div>
+				</form>
+			</div>
+		</section>
         
 		<section class="section breadcrumb">
 			<div class="container">
 				<ul>
-					<li><a href="#">Producer Loops Home</a></li>
+					<li><a href="#">Producer Loops</a></li>
 					<li><a href="#">About Us</a></li>
+					<li><a href="#">Company</a></li>
 					<li>Welcome to Producer Loops</li>
 				</ul>
 			</div>
 		</section>
 		
-        <section class="section main-content">
-            <div class="container container--dots container--spacing">
-				<div class="layout gutter--lg">
-					<aside class="span--sidebar">
-						Sidebar here
+        <section class="section main dots">
+            <div class="container">
+				<div class="gutter--lg">
+					<aside class="sidebar">
+						<div class="widget widget--open js-toggle">
+							<h2 class="widget__title js-toggle__title"><span>Pages</span></h2>
+							<div class="widget__content js-toggle__content">
+								<ul>
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">Our Team</a></li>
+									<li><a href="#">Terms</a></li>
+									<li><a href="#">Policy</a></li>
+									<li><a href="#">Contact</a></li>
+								</ul>
+							</div>
+						</div>
 					</aside>
-					<div class="span--content">
+					<div class="main-content">
 						<article class="content">
 			                <h1>Welcome to Producer Loops</h1>
 							<p class="lead">Donec molestie nibh sit amet elit mattis viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi vel est porttitor, interdum sem ac, egestas lacus. Praesent vitae eros malesuada, suscipit odio pulvinar, pellentesque leo. Donec vel libero finibus, gravida nisi sollicitudi.</p>
@@ -145,11 +208,74 @@
 						</article>
 					</div>
 				</div>
-				
             </div>
         </section>
+		
+		<footer class="section footer">
+			<div class="container js-toggle-parent">
+				<div class="footer__widget js-toggle active">
+					<h4 class="footer__title js-toggle__title">Producer Loops</h4>
+					<div class="footer__content js-toggle__content">
+						<ul>
+							<li><a href="#">News</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">How to Order</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">Help</a></li>
+							<li><a href="#">Terms &amp; Conditions</a></li>
+							<li><a href="#">Cookie Policy</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__widget js-toggle">
+					<h4 class="footer__title js-toggle__title">Our Address</h4>
+					<div class="footer__content js-toggle__content">
+						<p><strong>Producer Loops Limited</strong><br />
+							Lupins Business Centre<br />
+							1-3 Greenhill<br />
+							Weymouth<br />
+							Dorset, DT4 7SP<br />
+							United Kingdom</p>
+					</div>
+				</div>
+				<div class="footer__widget js-toggle">
+					<h4 class="footer__title js-toggle__title">Customer Support</h4>
+					<div class="footer__content js-toggle__content">
+						<p><strong>Email:</strong><br />
+							<a href="#">support@producerloops.com</a></p>
+						<p><strong>Calling from UK:</strong><br />
+							Freephone: 0800 098 8607</p>
+						<p><strong>International Numbers:</strong><br />
+							+44 (800) 098 8607 (Call charges apply)</p>
+					</div>
+				</div>
+				<div class="footer__widget footer__widget--cards">
+					<h4 class="footer__title">We accept all major cards</h4>
+					<div class="footer__content">
+						<ul class="cards">
+							<li><img src="images/card-visa.png" alt="Visa" /></li>
+							<li><img src="images/card-mastercard.png" alt="Mastercard" /></li>
+							<li><img src="images/card-maestro.png" alt="Maestro" /></li>
+							<li><img src="images/card-american-express.png" alt="American Express" /></li>
+							<li><img src="images/card-paypal.png" alt="Paypal" /></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+		<footer class="section copyright">
+			<div class="container">
+				<p>&copy; 2008-2015 Producer Loops Ltd. All rights reserved.<br />
+					<a href="http://www.iwebsolutions.co.uk/">Website design</a> by iWeb</p>
+			</div>
+		</footer>
         
     </div>
-    
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+
 </body>
 </html>

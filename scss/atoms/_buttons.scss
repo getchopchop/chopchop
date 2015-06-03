@@ -4,7 +4,7 @@
 
 %btn,
 .btn {
-    padding: $margin-sm $margin;
+    padding: 0.44rem $spacing;
     background-color: $grey-darker;
     color: $white;
 	border-radius: 0;
@@ -13,7 +13,7 @@
 	font-weight: $font-weight-bold;
 	text-transform: uppercase;
     text-decoration: none;
-    border: 0;
+    border: 1px solid transparent;
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
@@ -28,6 +28,14 @@
     }
 }
 
+@include breakpoint($screen-lg) {
+	%btn,
+	.btn {
+	    padding-top: 0.46rem;
+	    padding-bottom: 0.46rem;
+	}
+}
+
 
 // =============================================
 // Small
@@ -35,7 +43,7 @@
 
 %btn--sm,
 .btn--sm {
-    padding: $margin-xs $margin-sm;
+    padding: $spacing-xs $spacing-sm;
     font-size: 1em;
 }
 
@@ -46,7 +54,7 @@
 
 %btn--lg,
 .btn--lg {
-    padding: $margin $margin-lg;
+    padding: $spacing $spacing-lg;
     font-size: $font-size-xl;
 }
 
@@ -58,7 +66,7 @@
 %btn--text,
 .btn--text {
     @extend %link;
-    padding: $margin-sm $margin;
+    padding: $spacing-sm $spacing;
     border: 0;
     cursor: pointer;
     display: inline-block;
@@ -92,7 +100,7 @@
 
     &:hover,
     &:focus {
-        background-color: $black;
+        background-color: darken($blue, 10%);
 		color: $white;
     }
 
@@ -110,14 +118,15 @@
 %btn--primary,
 .btn--primary {
     background-color: $blue;
+	border-left-color: $green;
 	background: linear-gradient(to right, $green 0%, $blue 100%);
     color: $black;
 
     &:hover,
     &:focus {
 		background: transparent;
-        background-color: $black;
-		color: $white;
+    	background-color: $green;
+		color: $black;
     }
 
     &:disabled {
@@ -144,7 +153,6 @@
 		color: $grey-dark;
     }
 }
-
 
 // =============================================
 // Button button

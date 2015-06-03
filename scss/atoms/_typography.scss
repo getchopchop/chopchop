@@ -31,20 +31,26 @@ body {
 
 ul, ol, p {
     margin-top: 0;
-    margin-bottom: $margin;
+    margin-bottom: $spacing;
 }
 
 ul, ol {
-	margin-bottom: $margin-lg;
+	margin-bottom: $spacing-lg;
+	padding-left: $spacing-xxl;
 }
 
 li {
-	margin-bottom: $margin-xs / 2;
+	margin-bottom: $spacing-xs / 2;
 }
 
 blockquote {
     border-left: 3px solid $grey-lighter;
-    padding-left: $margin;
+    padding-left: $spacing;
+}
+
+strong {
+	font-weight: $font-weight-bold;
+	color: $grey-darker;
 }
 
 
@@ -56,11 +62,10 @@ a,
 %link,
 .link {
     color: $black;
-    text-decoration: underline;
+    text-decoration: none;
     
     &:hover {
         color: darken($blue, 20%);
-        text-decoration: none;
     }
 }
 
@@ -74,7 +79,7 @@ hr {
     height: 2px;
     background-color: $grey-light;
     margin-top: 0;
-    margin-bottom: $margin;
+    margin-bottom: $spacing;
 }
 
 
@@ -82,10 +87,26 @@ hr {
 // Lead Paragraph
 // =============================================
 
-p.lead {
+.lead {
 	font-size: $font-size-lg;
 	font-weight: $font-weight-bold;
 	color: $grey-darker;
 	line-height: $line-height-sm;
-	margin-bottom: $margin-lg;
+}
+
+p.lead {
+	margin-bottom: $spacing-lg;
+}
+
+
+// =============================================
+// Hide type (only inline use)
+// =============================================
+
+.hidden-mobile {
+	display: none;
+	
+	@include breakpoint($screen-md) {
+		display: inline;
+	}
 }

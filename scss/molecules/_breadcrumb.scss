@@ -3,23 +3,49 @@
 // =============================================
 
 .breadcrumb {
-	padding-top: $margin-xs;
-	padding-bottom: $margin-xs;
+	padding-bottom: $spacing-xs;
 	
 	ul {
 		@extend %list-inline;
 		font-size: $font-size-sm;
 		margin-bottom: 0;
+    	text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
 		
 		> li {
-			padding-right: $margin-sm;
+			display: inline;
+			padding-right: $spacing-xs;
 			padding-left: 0;
 		}
 		
 		a:after {
-			margin-left: $margin-sm;
+			margin-left: $spacing-xs;
 			@include triangle(right, 4px, $black);	
 		}
 		
 	}
+}
+
+
+// =============================================
+// Responsive
+// =============================================
+
+@include breakpoint($screen-sm) {
+	.breadcrumb ul {
+		> li {
+			padding-right: $spacing-sm;
+		}
+		
+		a:after {
+			margin-left: $spacing-sm;
+		}
+	}
+}
+
+@include breakpoint($screen-md) {
+	.breadcrumb {
+		padding-top: $spacing-xs;		
+	}	
 }

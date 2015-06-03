@@ -13,88 +13,14 @@ input, textarea, button {
 // =============================================
 
 .container {
-	@extend %clearfix;
 	max-width: $container-max;
-	min-width: $container-min;
 	margin-left: auto;
 	margin-right: auto;
-	width: 90%;
-}
-
-
-// =============================================
-// Container spacing
-// =============================================
-
-.container--spacing {
-	margin-bottom: 4rem;
-}
-
-
-// =============================================
-// Container dots
-// =============================================
-
-.container--dots {
-	position: relative;
-	background: $grey-light url(../images/dots.png) fixed;
-	padding: 2.5rem;
+	width: 94%;
 	
-	&:before {
-		content: "";
-		position: absolute;
-		top: 15%;
-		bottom: 15%;
-		left: 0;
-		right: 0;
-		background-color: $white;
-		transform: skew(0, -15deg);
+	@include breakpoint($screen-xl) {
+		width: 90%;
 	}
-	
-	> div {
-		position: relative;
-		z-index: 1;
-	}
-}
-
-@include breakpoint($screen-lg) {
-	.container--dots {
-		padding: 3.5rem;
-	}
-}
-
-
-// =============================================
-// Layout
-// =============================================
-
-.layout {
-	@extend %clearfix;
-}
-
-
-// =============================================
-// Layout Thirds
-// =============================================
-
-.span,
-%span {
-	float: left;
-}
-
-.span--third {
-	@extend .span;
-	width: 33.33%;
-}
-
-.span--half {
-	@extend .span;
-	width: 50%;
-}
-
-.span--two-thirds {
-	@extend .span;
-	width: 66.66%;
 }
 
 
@@ -103,44 +29,14 @@ input, textarea, button {
 // =============================================
 
 .gutter {
-	margin-left: -($margin / 2);
-	margin-right: -($margin / 2);
+	@extend %clearfix;
+	margin-left: -($spacing / 2);
+	margin-right: -($spacing / 2);
 	
 	> div,
 	> aside,
 	> article {
-		padding-left: $margin / 2;
-		padding-right: $margin / 2;
-	}
-}
-
-
-// =============================================
-// Layout Gutter Large
-// =============================================
-
-.gutter--lg {
-	margin-left: -1.5rem;
-	margin-right: -1.5rem;
-	
-	> div,
-	> aside,
-	> article {
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
-	}
-}
-
-@include breakpoint($screen-lg) {
-	.gutter--lg {
-		margin-left: -1.75rem;
-		margin-right: -1.75rem;
-	
-		> div,
-		> aside,
-		> article {
-			padding-left: 1.75rem;
-			padding-right: 1.75rem;
-		}
+		padding-left: $spacing / 2;
+		padding-right: $spacing / 2;
 	}
 }

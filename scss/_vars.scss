@@ -12,6 +12,7 @@ $grey                   : #666;
 $grey-light             : #ddd;
 $grey-lighter           : #e4e4e4;
 
+$faint					: #f6f6f6;
 $white                  : #fff;
 $black                  : #000;
 
@@ -28,10 +29,12 @@ $font-size-xs           : 0.75em;
 $font-size-sm           : 0.9em;
 $font-size-lg           : 1.2em;
 $font-size-xl           : 1.4em;
+$font-size-xl           : 1.6em;
 
 $font-weight-bold       : 600;
 
-$line-height-xs         : 1;
+$line-height-xxs        : 1;
+$line-height-xs         : 1.2;
 $line-height-sm         : 1.4;
 
 
@@ -53,18 +56,23 @@ $font-size-h6           : $font-size-h1 * 0.35;
 // Margins
 // =============================================
 
-$margin                 : 1rem;
-$margin-xs              : 0.4rem;
-$margin-sm              : 0.6rem;
-$margin-lg              : 1.4rem;
-$margin-xl              : 1.6rem;
+$spacing                 : 1rem;
+$spacing-xxs				: 0.2rem;
+$spacing-xs              : 0.4rem;
+$spacing-sm              : 0.6rem;
+$spacing-lg              : 1.4rem;
+$spacing-xl              : 1.6rem;
+$spacing-xxl              : 2.5rem;
+$spacing-xxxl              : 3.5rem;
 
 
 // =============================================
 // Breakpoints
 // =============================================
 
-$screen-lg              : 76em; // 1204px
+$screen-sm              : 35em;
+$screen-md              : 52em;
+$screen-lg              : 63em;
+$screen-xl              : 75em;
 
-$container-min			: 68.5em;
-$container-max			: 86em;
+$container-max			: 90em;

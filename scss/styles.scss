@@ -27,6 +27,9 @@
 @import "helpers/clearfix";
 @import "helpers/arrow";
 
+// Javascript helpers
+@import "helpers/toggle";
+
 
 // =============================================
 // Atoms
@@ -46,6 +49,17 @@
 
 @import "molecules/confidence";
 @import "molecules/breadcrumb";
+@import "molecules/widget";
+@import "molecules/search";
+
+
+// =============================================
+// Organism
+// =============================================
+
+@import "organisms/header";
+@import "organisms/footer";
+@import "organisms/nav";
 
 
 // =============================================

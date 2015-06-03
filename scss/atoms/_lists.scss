@@ -10,8 +10,8 @@
 	
 	> li {
 		display: inline-block;
-		padding-right: $margin;
-		padding-left: $margin;
+		padding-right: $spacing;
+		padding-left: $spacing;
 		
 		&:first-child {
 			padding-left: 0;
@@ -46,7 +46,7 @@
 	&:before {
 		content: "";
 		position: absolute;
-		left: -$margin;
+		left: -$spacing;
 		top: ($line-height / 2) + 0em; // 0em converts value to em
 		height: 6px;
 		width: 6px;

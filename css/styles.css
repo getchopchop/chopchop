@@ -5,7 +5,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 9, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 9, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 html {
   font-family: sans-serif;
   /* 1 */
@@ -18,7 +18,7 @@ html {
 /**
  * Remove default margin.
  */
-/* line 19, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 19, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 body {
   margin: 0;
 }
@@ -31,7 +31,7 @@ body {
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-/* line 45, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 45, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 article,
 aside,
 details,
@@ -52,7 +52,7 @@ summary {
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-/* line 57, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 57, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 audio,
 canvas,
 progress,
@@ -67,7 +67,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 67, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 67, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -77,7 +77,7 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
-/* line 78, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 78, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 [hidden],
 template {
   display: none;
@@ -88,7 +88,7 @@ template {
 /**
  * Remove the gray background color from active links in IE 10.
  */
-/* line 89, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 89, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 a {
   background-color: transparent;
 }
@@ -96,7 +96,7 @@ a {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 98, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 98, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -107,7 +107,7 @@ a:hover {
 /**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
-/* line 109, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 109, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -115,7 +115,7 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-/* line 118, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 118, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 b,
 strong {
   font-weight: bold;
@@ -124,7 +124,7 @@ strong {
 /**
  * Address styling not present in Safari and Chrome.
  */
-/* line 126, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 126, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 dfn {
   font-style: italic;
 }
@@ -133,7 +133,7 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
-/* line 135, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 135, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -142,7 +142,7 @@ h1 {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 144, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 144, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -151,7 +151,7 @@ mark {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 153, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 153, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 small {
   font-size: 80%;
 }
@@ -159,7 +159,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 162, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 162, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -168,12 +168,12 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 169, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 169, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 173, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 173, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
@@ -183,7 +183,7 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9/10.
  */
-/* line 184, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 184, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 img {
   border: 0;
 }
@@ -191,7 +191,7 @@ img {
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
-/* line 192, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 192, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -201,7 +201,7 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari.
  */
-/* line 203, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 203, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 figure {
   margin: 1em 40px;
 }
@@ -209,7 +209,7 @@ figure {
 /**
  * Address differences between Firefox and other browsers.
  */
-/* line 211, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 211, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 hr {
   box-sizing: content-box;
   height: 0;
@@ -218,7 +218,7 @@ hr {
 /**
  * Contain overflow in all browsers.
  */
-/* line 221, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 221, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 pre {
   overflow: auto;
 }
@@ -226,7 +226,7 @@ pre {
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-/* line 232, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 232, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 code,
 kbd,
 pre,
@@ -247,7 +247,7 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-/* line 256, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 256, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 button,
 input,
 optgroup,
@@ -264,7 +264,7 @@ textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-/* line 266, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 266, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 button {
   overflow: visible;
 }
@@ -275,7 +275,7 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-/* line 278, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 278, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -288,7 +288,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 293, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 293, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 button,
 html input[type="button"], input[type="reset"],
 input[type="submit"] {
@@ -301,7 +301,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 303, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 303, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -310,7 +310,7 @@ html input[disabled] {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 312, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 312, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -321,7 +321,7 @@ input::-moz-focus-inner {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 322, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 322, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 input {
   line-height: normal;
 }
@@ -333,7 +333,7 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-/* line 335, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 335, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -347,7 +347,7 @@ input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-/* line 347, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 347, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
@@ -358,7 +358,7 @@ input[type="number"]::-webkit-outer-spin-button {
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 357, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 357, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -371,7 +371,7 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-/* line 371, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 371, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -380,7 +380,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 379, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 379, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -391,7 +391,7 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-/* line 390, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 390, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -402,7 +402,7 @@ legend {
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
-/* line 399, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 399, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 textarea {
   overflow: auto;
 }
@@ -411,7 +411,7 @@ textarea {
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
-/* line 408, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 408, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 optgroup {
   font-weight: bold;
 }
@@ -421,27 +421,39 @@ optgroup {
 /**
  * Remove most spacing between table cells.
  */
-/* line 419, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 419, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 425, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/vendor/_normalize.scss */
+/* line 425, /Users/dredfern/Sites/producer-loops/public_html/scss/vendor/_normalize.scss */
 td,
 th {
   padding: 0;
 }
 
-/* line 7, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/helpers/_clearfix.scss */
+/* line 7, /Users/dredfern/Sites/producer-loops/public_html/scss/helpers/_clearfix.scss */
 .clearfix:after,
-.container:after, .layout:after {
+.header .container:after, .cart:after, .footer__content ul:after, .main-nav:after, .gutter:after, .dots:after,
+.dots .container:after,
+.dots .content:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 5, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+/* line 5, /Users/dredfern/Sites/producer-loops/public_html/scss/helpers/_toggle.scss */
+.js-toggle__title {
+  cursor: pointer;
+}
+
+/* line 9, /Users/dredfern/Sites/producer-loops/public_html/scss/helpers/_toggle.scss */
+.active .js-toggle__content {
+  display: block !important;
+}
+
+/* line 5, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_typography.scss */
 html {
   -webkit-font-smoothing: antialiased;
 }
@@ -450,7 +462,7 @@ html {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-/* line 21, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+/* line 21, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_typography.scss */
 body {
   font-size: 83%;
   font-family: "Open Sans", helvetica, arial, sans-serif;
@@ -458,52 +470,58 @@ body {
   color: #666;
 }
 
-@media all and (min-width: 76em) {
-  /* line 21, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+@media all and (min-width: 63em) {
+  /* line 21, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_typography.scss */
   body {
     font-size: 87.15%;
   }
 }
 
-/* line 32, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+/* line 32, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_typography.scss */
 ul, ol, p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-/* line 37, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+/* line 37, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_typography.scss */
 ul, ol {
   margin-bottom: 1.4rem;
+  padding-left: 2.5rem;
 }
 
-/* line 41, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+/* line 42, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_typography.scss */
 li {
   margin-bottom: 0.2rem;
 }
 
-/* line 45, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+/* line 46, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_typography.scss */
 blockquote {
   border-left: 3px solid #e4e4e4;
   padding-left: 1rem;
 }
 
-/* line 57, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+/* line 51, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_typography.scss */
+strong {
+  font-weight: 600;
+  color: #222;
+}
+
+/* line 63, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_typography.scss */
 a,
 .btn--text,
 .link {
   color: #000;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
-/* line 61, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+/* line 67, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_typography.scss */
 a:hover,
 .btn--text:hover,
 .link:hover {
   color: #0096a1;
-  text-decoration: none;
 }
 
-/* line 72, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
+/* line 77, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_typography.scss */
 hr {
   border: 0;
   height: 2px;
@@ -512,18 +530,34 @@ hr {
   margin-bottom: 1rem;
 }
 
-/* line 85, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_typography.scss */
-p.lead {
+/* line 90, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_typography.scss */
+.lead {
   font-size: 1.2em;
   font-weight: 600;
   color: #222;
   line-height: 1.4;
+}
+
+/* line 97, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_typography.scss */
+p.lead {
   margin-bottom: 1.4rem;
 }
 
-/* line 7, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_headings.scss */
+/* line 106, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_typography.scss */
+.hidden-mobile {
+  display: none;
+}
+
+@media all and (min-width: 52em) {
+  /* line 106, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_typography.scss */
+  .hidden-mobile {
+    display: inline;
+  }
+}
+
+/* line 7, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_headings.scss */
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+.footer__widget--cards .footer__title, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Roboto Condensed", helvetica, arial, sans-serif;
   line-height: 1;
   font-weight: 600;
@@ -533,78 +567,77 @@ h1, h2, h3, h4, h5, h6,
   text-transform: uppercase;
 }
 
-/* line 22, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_headings.scss */
+/* line 22, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_headings.scss */
 h1, .h1 {
   font-size: 3em;
   margin-bottom: 1rem;
-  margin-top: 0;
 }
 
-/* line 33, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_headings.scss */
+/* line 32, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_headings.scss */
 h2, .h2 {
   font-size: 2.1em;
 }
 
-/* line 42, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_headings.scss */
-h3, .h3 {
+/* line 41, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_headings.scss */
+h3, .footer__widget--cards .footer__title, .h3 {
   font-size: 1.71em;
 }
 
-/* line 51, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_headings.scss */
+/* line 50, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_headings.scss */
 h4, .h4 {
   font-size: 1.44em;
 }
 
-/* line 60, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_headings.scss */
+/* line 59, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_headings.scss */
 h5, .h5 {
   font-size: 1.2em;
 }
 
-/* line 69, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_headings.scss */
+/* line 68, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_headings.scss */
 h6, .h6 {
   font-size: 1.05em;
 }
 
-/* line 6, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_lists.scss */
+/* line 6, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_lists.scss */
 .list-inline,
-.breadcrumb ul {
+.breadcrumb ul, .nav--accounts ul, .footer__widget--cards ul {
   padding-left: 0;
   margin-left: 0;
   list-style: none;
 }
 
-/* line 11, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_lists.scss */
+/* line 11, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_lists.scss */
 .list-inline > li,
-.breadcrumb ul > li {
+.breadcrumb ul > li, .nav--accounts ul > li, .footer__widget--cards ul > li {
   display: inline-block;
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-/* line 16, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_lists.scss */
+/* line 16, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_lists.scss */
 .list-inline > li:first-child,
-.breadcrumb ul > li:first-child {
+.breadcrumb ul > li:first-child, .nav--accounts ul > li:first-child, .footer__widget--cards ul > li:first-child {
   padding-left: 0;
 }
 
-/* line 20, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_lists.scss */
+/* line 20, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_lists.scss */
 .list-inline > li:last-child,
-.breadcrumb ul > li:last-child {
+.breadcrumb ul > li:last-child, .nav--accounts ul > li:last-child, .footer__widget--cards ul > li:last-child {
   padding-right: 0;
 }
 
-/* line 32, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_lists.scss */
+/* line 32, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_lists.scss */
 .list-ordered {
   list-style: decimal;
 }
 
-/* line 42, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_lists.scss */
+/* line 42, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_lists.scss */
 .list-unordered li {
   list-style: none;
   position: relative;
 }
 
-/* line 46, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_lists.scss */
+/* line 46, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_lists.scss */
 .list-unordered li:before {
   content: "";
   position: absolute;
@@ -617,29 +650,35 @@ h6, .h6 {
   margin-top: -3px;
 }
 
-/* line 65, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_lists.scss */
+/* line 65, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_lists.scss */
+.widget__content ul,
+.nav--mobile ul,
+.footer__content ul,
+.nav--primary ul,
+.nav--secondary ul,
 .list-unstyled {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 5, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_images.scss */
+/* line 5, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_images.scss */
 img {
   display: block;
 }
 
-/* line 15, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_images.scss */
-.img-responsive {
+/* line 15, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_images.scss */
+.img-responsive,
+.logo img {
   width: 100% \9;
   max-width: 100%;
   height: auto;
 }
 
-/* line 6, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+/* line 6, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_buttons.scss */
 button,
 .btn {
-  padding: 0.6rem 1rem;
+  padding: 0.44rem 1rem;
   background-color: #222;
   color: #fff;
   border-radius: 0;
@@ -648,7 +687,7 @@ button,
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
-  border: 0;
+  border: 1px solid transparent;
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
@@ -657,7 +696,7 @@ button,
   width: auto;
 }
 
-/* line 25, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+/* line 25, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_buttons.scss */
 button:hover,
 button:focus,
 .btn:hover,
@@ -666,19 +705,28 @@ button:focus,
   background-color: #444;
 }
 
-/* line 37, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+@media all and (min-width: 63em) {
+  /* line 33, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_buttons.scss */
+  button,
+  .btn {
+    padding-top: 0.46rem;
+    padding-bottom: 0.46rem;
+  }
+}
+
+/* line 45, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_buttons.scss */
 .btn--sm {
   padding: 0.4rem 0.6rem;
   font-size: 1em;
 }
 
-/* line 48, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+/* line 56, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_buttons.scss */
 .btn--lg {
   padding: 1rem 1.4rem;
-  font-size: 1.4em;
+  font-size: 1.6em;
 }
 
-/* line 59, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+/* line 67, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_buttons.scss */
 .btn--text {
   padding: 0.6rem 1rem;
   border: 0;
@@ -690,7 +738,7 @@ button:focus,
   color: #000;
 }
 
-/* line 71, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+/* line 79, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_buttons.scss */
 .btn--text:hover,
 .btn--text:focus {
   background-color: transparent;
@@ -698,54 +746,55 @@ button:focus,
   text-decoration: underline;
 }
 
-/* line 77, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+/* line 85, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_buttons.scss */
 .btn--text:disabled {
   background-color: transparent;
   color: #666;
 }
 
-/* line 89, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+/* line 97, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_buttons.scss */
 .btn--default {
   background-color: #08eeff;
   color: #000;
 }
 
-/* line 94, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+/* line 102, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_buttons.scss */
 .btn--default:hover,
 .btn--default:focus {
-  background-color: #000;
+  background-color: #00c5d4;
   color: #fff;
 }
 
-/* line 99, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+/* line 107, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_buttons.scss */
 .btn--default:disabled {
   background-color: #666;
   color: #444;
 }
 
-/* line 111, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+/* line 119, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_buttons.scss */
 .btn--primary {
   background-color: #08eeff;
+  border-left-color: #84ee74;
   background: -webkit-linear-gradient(left, #84ee74 0%, #08eeff 100%);
   background: linear-gradient(to right, #84ee74 0%, #08eeff 100%);
   color: #000;
 }
 
-/* line 117, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+/* line 126, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_buttons.scss */
 .btn--primary:hover,
 .btn--primary:focus {
   background: transparent;
-  background-color: #000;
-  color: #fff;
+  background-color: #84ee74;
+  color: #000;
 }
 
-/* line 123, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+/* line 132, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_buttons.scss */
 .btn--primary:disabled {
   background-color: #666;
   color: #444;
 }
 
-/* line 136, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+/* line 145, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_buttons.scss */
 .btn--disabled,
 .btn:disabled {
   cursor: not-allowed;
@@ -753,7 +802,7 @@ button:focus,
   color: #444;
 }
 
-/* line 142, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_buttons.scss */
+/* line 151, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_buttons.scss */
 .btn--disabled:hover,
 .btn--disabled:focus,
 .btn:disabled:hover,
@@ -762,19 +811,19 @@ button:focus,
   color: #444;
 }
 
-/* line 5, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+/* line 5, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_forms.scss */
 fieldset {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-/* line 11, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+/* line 11, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_forms.scss */
 legend {
   display: none;
 }
 
-/* line 18, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+/* line 18, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_forms.scss */
 input,
 label,
 select,
@@ -785,28 +834,28 @@ textarea {
   color: #000;
 }
 
-/* line 25, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+/* line 25, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_forms.scss */
 label {
   margin-bottom: 0.4rem;
 }
 
-/* line 28, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+/* line 28, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_forms.scss */
 label.required::after {
   content: "*";
 }
 
-/* line 35, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+/* line 35, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_forms.scss */
 input,
 textarea,
 select[multiple=multiple] {
   background-color: #fff;
   border: 1px solid #444;
   border-radius: 0;
-  padding: 0.6rem 1rem;
+  padding: 0.4rem 0.6rem;
   width: 100%;
 }
 
-/* line 42, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+/* line 42, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_forms.scss */
 input:focus,
 textarea:focus,
 select[multiple=multiple]:focus {
@@ -814,35 +863,37 @@ select[multiple=multiple]:focus {
   outline: none;
 }
 
-/* line 48, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+/* line 48, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_forms.scss */
 label input {
   width: auto;
 }
 
-/* line 52, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+/* line 52, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_forms.scss */
 select {
   max-width: 100%;
   width: auto;
 }
 
-/* line 57, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+/* line 57, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_forms.scss */
 textarea {
   resize: vertical;
 }
 
-/* line 61, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+/* line 61, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_forms.scss */
 input[type="search"] {
   appearence: none;
+  -webkit-appearance: none;
   box-sizing: border-box;
+  border-radius: 0;
 }
 
-/* line 67, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+/* line 69, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   display: inline;
 }
 
-/* line 71, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+/* line 73, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_forms.scss */
 input[type="file"] {
   width: 100%;
   border-width: 0;
@@ -850,21 +901,35 @@ input[type="file"] {
   padding-right: 0;
 }
 
-/* line 83, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/atoms/_forms.scss */
+/* line 85, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_forms.scss */
 .form-group {
   margin-bottom: 1rem;
 }
 
-/* line 5, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_confidence.scss */
+/* line 94, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_forms.scss */
+.form--inline .form-group {
+  vertical-align: top;
+  display: inline-block;
+}
+
+/* line 5, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_confidence.scss */
 .confidence {
   position: relative;
   background: -webkit-linear-gradient(left, #08eeff 0%, #84ee74 100%);
   background: linear-gradient(to right, #08eeff 0%, #84ee74 100%);
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
 }
 
-/* line 11, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_confidence.scss */
+@media all and (min-width: 52em) {
+  /* line 5, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_confidence.scss */
+  .confidence {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+}
+
+/* line 16, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_confidence.scss */
 .confidence:before {
   content: "";
   position: absolute;
@@ -872,17 +937,17 @@ input[type="file"] {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url(../images/dots.png) fixed;
+  background: url(../images/dots.png);
   z-index: 1;
 }
 
-/* line 28, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_confidence.scss */
+/* line 33, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_confidence.scss */
 .confidence__item {
   position: relative;
   z-index: 2;
 }
 
-/* line 32, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_confidence.scss */
+/* line 37, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_confidence.scss */
 .confidence__item p {
   background-color: #fff;
   text-align: center;
@@ -891,42 +956,104 @@ input[type="file"] {
   font-size: 0.9em;
   margin-bottom: 0;
   padding: 0.4rem 0.6rem;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
-/* line 43, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_confidence.scss */
-.confidence__item strong {
+@media all and (min-width: 35em) {
+  /* line 37, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_confidence.scss */
+  .confidence__item p {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+}
+
+@media all and (min-width: 52em) {
+  /* line 37, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_confidence.scss */
+  .confidence__item p {
+    line-height: 1.2;
+  }
+}
+
+@media all and (min-width: 63em) {
+  /* line 37, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_confidence.scss */
+  .confidence__item p {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+  }
+}
+
+@media all and (min-width: 35em) {
+  /* line 63, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_confidence.scss */
+  .confidence__item strong {
+    display: block;
+  }
+}
+
+/* line 74, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_confidence.scss */
+.confidence__item {
+  display: none;
+}
+
+/* line 77, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_confidence.scss */
+.confidence__item:first-child {
   display: block;
 }
 
-@media all and (min-width: 76em) {
-  /* line 49, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_confidence.scss */
+@media all and (min-width: 35em) {
+  /* line 83, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_confidence.scss */
+  .confidence__item {
+    display: block;
+    float: left;
+    width: 50%;
+  }
+  /* line 88, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_confidence.scss */
+  .confidence__item:last-child {
+    display: none;
+  }
+}
+
+@media all and (min-width: 52em) {
+  /* line 95, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_confidence.scss */
+  .confidence__item {
+    width: 33.33%;
+  }
+  /* line 98, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_confidence.scss */
+  .confidence__item:last-child {
+    display: block;
+  }
+}
+
+@media all and (min-width: 75em) {
+  /* line 105, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_confidence.scss */
   .confidence__item strong {
     display: inline;
   }
 }
 
-/* line 5, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_breadcrumb.scss */
+/* line 5, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_breadcrumb.scss */
 .breadcrumb {
-  padding-top: 0.4rem;
   padding-bottom: 0.4rem;
 }
 
-/* line 9, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_breadcrumb.scss */
+/* line 8, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_breadcrumb.scss */
 .breadcrumb ul {
   font-size: 0.9em;
   margin-bottom: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-/* line 14, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_breadcrumb.scss */
+/* line 16, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_breadcrumb.scss */
 .breadcrumb ul > li {
-  padding-right: 0.6rem;
+  display: inline;
+  padding-right: 0.4rem;
   padding-left: 0;
 }
 
-/* line 19, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/molecules/_breadcrumb.scss */
+/* line 22, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_breadcrumb.scss */
 .breadcrumb ul a:after {
-  margin-left: 0.6rem;
+  margin-left: 0.4rem;
   content: '';
   width: 0;
   height: 0;
@@ -937,91 +1064,922 @@ input[type="file"] {
   border-right: none;
 }
 
-/* line 6, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+@media all and (min-width: 35em) {
+  /* line 37, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_breadcrumb.scss */
+  .breadcrumb ul > li {
+    padding-right: 0.6rem;
+  }
+  /* line 41, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_breadcrumb.scss */
+  .breadcrumb ul a:after {
+    margin-left: 0.6rem;
+  }
+}
+
+@media all and (min-width: 52em) {
+  /* line 48, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_breadcrumb.scss */
+  .breadcrumb {
+    padding-top: 0.4rem;
+  }
+}
+
+/* line 5, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_widget.scss */
+.widget__title {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-top: 1rem;
+}
+
+/* line 9, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_widget.scss */
+.widget__title span {
+  border: 1px solid #000;
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  position: relative;
+  background-color: #fff;
+}
+
+/* line 16, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_widget.scss */
+.widget__title span:after {
+  content: "";
+  position: absolute;
+  right: -34px;
+  top: 50%;
+  margin-top: -12px;
+  height: 25px;
+  width: 25px;
+  background: url(../images/plus.gif) no-repeat center center;
+}
+
+/* line 28, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_widget.scss */
+.widget__title:hover span {
+  background: #ddd;
+}
+
+/* line 34, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_widget.scss */
+.active > .widget__title span {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 38, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_widget.scss */
+.active > .widget__title span:after {
+  background-image: url(../images/minus.gif);
+}
+
+/* line 42, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_widget.scss */
+.active > .widget__title span:before {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  margin-left: -0.85rem;
+  z-index: -1;
+  height: 100%;
+  width: 2rem;
+  background-color: #fceb01;
+}
+
+/* line 54, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_widget.scss */
+.active > .widget__title:hover span {
+  background: #444;
+}
+
+/* line 64, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_widget.scss */
+.widget__content {
+  background: #666 url(../images/dots.png);
+  position: relative;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.4rem;
+}
+
+/* line 70, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_widget.scss */
+.widget__content:after {
+  content: "";
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  right: 0.6rem;
+  bottom: 0.6rem;
+  background-color: #fff;
+  z-index: 0;
+}
+
+/* line 81, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_widget.scss */
+.widget__content * {
+  position: relative;
+  z-index: 1;
+}
+
+@media all and (min-width: 52em) {
+  /* line 98, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_widget.scss */
+  .widget--open > .widget__title span {
+    color: #000;
+    background-color: #fff;
+  }
+  /* line 102, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_widget.scss */
+  .widget--open > .widget__title span:after {
+    display: none;
+  }
+  /* line 106, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_widget.scss */
+  .widget--open > .widget__title span:before {
+    display: none;
+  }
+  /* line 111, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_widget.scss */
+  .widget--open > .widget__title:hover span {
+    background: #fff;
+  }
+  /* line 115, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_widget.scss */
+  .widget--open .widget__content {
+    display: block !important;
+  }
+}
+
+/* line 5, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_search.scss */
+.search {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+/* line 9, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_search.scss */
+.search label {
+  display: none;
+}
+
+/* line 13, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_search.scss */
+.search form {
+  width: 100%;
+  display: table;
+}
+
+/* line 18, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_search.scss */
+.search .form-group {
+  display: table-cell;
+}
+
+/* line 21, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_search.scss */
+.search .form-group:last-child {
+  width: 1px;
+}
+
+/* line 26, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_search.scss */
+.search input {
+  border-color: #666;
+}
+
+/* line 30, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_search.scss */
+.search button {
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  margin-left: 0.6rem;
+}
+
+@media all and (min-width: 52em) {
+  /* line 38, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_search.scss */
+  .search {
+    display: none;
+  }
+}
+
+/* line 48, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_search.scss */
+.search--invert {
+  float: right;
+  width: 50%;
+  max-width: 30em;
+  padding-right: 12%;
+  padding-top: 0.72rem;
+}
+
+/* line 55, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_search.scss */
+.search--invert button {
+  margin-left: 1px;
+}
+
+/* line 59, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_search.scss */
+.search--invert input {
+  border-color: #fff;
+}
+
+@media all and (min-width: 63em) {
+  /* line 65, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_search.scss */
+  .search--invert {
+    width: 30%;
+    padding-right: 6%;
+  }
+}
+
+@media all and (min-width: 75em) {
+  /* line 72, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_search.scss */
+  .search--invert {
+    width: 36%;
+    padding-right: 6%;
+  }
+}
+
+/* line 5, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.header .container {
+  position: relative;
+}
+
+/* line 13, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.search--invert,
+.cart,
+.nav--accounts {
+  display: none;
+}
+
+@media all and (min-width: 52em) {
+  /* line 19, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+  .nav--accounts,
+  .search--invert {
+    display: block;
+  }
+}
+
+@media all and (min-width: 63em) {
+  /* line 25, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+  .cart {
+    display: block;
+  }
+  /* line 28, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+  .nav--mobile {
+    display: none;
+  }
+}
+
+/* line 38, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.header {
+  background-color: #222;
+}
+
+/* line 41, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.header .container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media all and (min-width: 52em) {
+  /* line 48, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+  .header .container {
+    padding-top: 1.6rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media all and (min-width: 63em) {
+  /* line 55, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+  .header .container {
+    padding-bottom: 1.4rem;
+  }
+}
+
+/* line 65, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.logo img {
+  width: 65%;
+  max-width: 21em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media all and (min-width: 52em) {
+  /* line 65, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+  .logo img {
+    margin-left: 0;
+    margin-right: 0;
+    float: left;
+    max-width: 25em;
+  }
+}
+
+@media all and (min-width: 63em) {
+  /* line 65, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+  .logo img {
+    max-width: 26em;
+  }
+}
+
+/* line 89, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.nav--accounts {
+  position: absolute;
+  top: 0.2rem;
+  right: 0;
+}
+
+/* line 94, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.nav--accounts ul {
+  margin-bottom: 0;
+}
+
+/* line 98, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.nav--accounts ul > li {
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  font-size: 0.9em;
+}
+
+/* line 105, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.nav--accounts a {
+  color: #ddd;
+}
+
+/* line 109, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.nav--accounts img {
+  display: inline;
+  display: none;
+  /* temp */
+}
+
+/* line 120, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.cart {
+  float: right;
+  margin-top: 0.72rem;
+  padding-left: 1rem;
+  border-left: 8px solid #fceb01;
+}
+
+/* line 127, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.cart p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.9em;
+  line-height: 1.2;
+}
+
+/* line 136, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.cart__price,
+.cart__price strong {
+  color: #fff;
+}
+
+/* line 140, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.cart__price strong {
+  font-size: 1.6em;
+}
+
+/* line 144, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+p.cart__approx {
+  color: #a6a6a6;
+  font-size: 0.75em;
+}
+
+/* line 149, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.cart__value {
+  float: left;
+  padding-right: 1rem;
+}
+
+/* line 154, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.cart__view {
+  float: right;
+}
+
+/* line 158, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.cart .btn span {
+  display: none;
+}
+
+@media all and (min-width: 75em) {
+  /* line 158, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+  .cart .btn span {
+    display: inline;
+  }
+}
+
+/* line 176, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.nav--mobile li {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -16px;
+}
+
+/* line 182, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.nav--mobile li:first-child {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+/* line 187, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.nav--mobile li:last-child {
+  right: 0;
+  left: auto;
+}
+
+/* line 193, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.nav--mobile a {
+  color: #fff;
+}
+
+/* line 197, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+.nav--mobile span {
+  display: block;
+  border-radius: 1rem;
+  background-color: #fceb01;
+  color: #222;
+  font-weight: 600;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.75em;
+  position: absolute;
+  top: -7px;
+  right: -8px;
+  border: 2px solid #222;
+  line-height: 1;
+}
+
+@media all and (min-width: 52em) {
+  /* line 214, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+  .nav--mobile li:first-child {
+    display: none;
+  }
+  /* line 217, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
+  .nav--mobile li:last-child {
+    margin-top: -10px;
+  }
+}
+
+/* line 5, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.footer {
+  margin-top: 2.8rem;
+}
+
+@media all and (min-width: 35em) {
+  /* line 10, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer {
+    margin-top: 5rem;
+  }
+}
+
+@media all and (min-width: 52em) {
+  /* line 16, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer {
+    background-color: #f6f6f6;
+  }
+  /* line 19, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer .container {
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+  }
+}
+
+@media all and (min-width: 63em) {
+  /* line 27, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer .container {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
+/* line 38, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.footer .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 43, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.footer__widget {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 100%;
+}
+
+/* line 48, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.footer__widget--cards {
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+      -ms-flex-order: 0;
+          order: 0;
+}
+
+@media all and (min-width: 35em) {
+  /* line 53, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer__content li {
+    width: 33.33%;
+  }
+}
+
+@media all and (min-width: 52em) {
+  /* line 59, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  /* line 63, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer__widget {
+    width: 33.33%;
+  }
+  /* line 66, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer__widget--cards {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 63em) {
+  /* line 73, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer__widget,
+  .footer__widget--cards {
+    width: 25%;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+/* line 84, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.footer__widget {
+  border-bottom: 1px dotted #666;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #f6f6f6;
+  font-size: 0.9em;
+}
+
+/* line 92, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.footer__title {
+  position: relative;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+/* line 97, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.footer__title:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  height: 12px;
+  width: 12px;
+  background: url(../images/plus-alt.gif) no-repeat center center;
+  margin-top: -6px;
+  right: 0;
+}
+
+/* line 109, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.footer__content {
+  padding-bottom: 0.4rem;
+}
+
+/* line 112, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.footer__content ul {
+  margin-bottom: 1rem;
+}
+
+/* line 118, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.footer__content li {
+  float: left;
+  width: 50%;
+}
+
+/* line 124, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.footer__content a {
+  color: #666;
+}
+
+/* line 127, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.footer__content a:hover {
+  color: #222;
+  text-decoration: underline;
+}
+
+@media all and (min-width: 52em) {
+  /* line 135, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer__widget {
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 0;
+  }
+  /* line 140, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer__widget h4 {
+    padding-bottom: 0.4rem;
+  }
+  /* line 144, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer__widget li {
+    width: auto;
+    float: none;
+  }
+}
+
+@media all and (min-width: 63em) {
+  /* line 152, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer__widget h4 {
+    padding-bottom: 0.6rem;
+  }
+}
+
+/* line 162, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.active .footer__title:after {
+  background-image: url(../images/minus-alt.gif);
+}
+
+@media all and (min-width: 52em) {
+  /* line 167, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer__title {
+    cursor: auto;
+  }
+  /* line 170, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer__title:after {
+    display: none;
+  }
+  /* line 174, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer__content {
+    display: block !important;
+  }
+}
+
+/* line 184, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.footer__widget--cards {
+  background-color: #fff;
+  text-align: center;
+}
+
+/* line 188, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.footer__widget--cards .footer__title {
+  margin-bottom: 0.6rem;
+  cursor: auto;
+}
+
+/* line 193, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.footer__widget--cards .footer__title:after {
+  display: none;
+}
+
+/* line 198, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.footer__widget--cards .footer__content {
+  display: block;
+}
+
+/* line 205, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.footer__widget--cards ul > li {
+  float: none;
+  width: auto;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
+/* line 213, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.footer__widget--cards img {
+  height: 30px;
+}
+
+@media all and (min-width: 35em) {
+  /* line 219, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer__widget--cards img {
+    height: 38px;
+  }
+}
+
+@media all and (min-width: 52em) {
+  /* line 225, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer__widget--cards {
+    background-color: transparent;
+    text-align: left;
+    border-bottom: 1px dotted #666;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media all and (min-width: 63em) {
+  /* line 235, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer__widget--cards {
+    border-bottom: 0;
+  }
+  /* line 238, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .footer__widget--cards .footer__title {
+    margin-top: 0.6rem;
+    font-size: 1.44em;
+  }
+}
+
+/* line 250, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.copyright {
+  padding-top: 1rem;
+  padding-bottom: 0.6rem;
+}
+
+/* line 254, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+.copyright p {
+  line-height: 1.4;
+  font-size: 0.9em;
+  color: #999999;
+}
+
+@media all and (min-width: 35em) {
+  /* line 250, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .copyright {
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+  }
+}
+
+@media all and (min-width: 52em) {
+  /* line 250, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
+  .copyright {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+/* line 5, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+.main-nav {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+@media all and (min-width: 35em) {
+  /* line 5, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+  .main-nav {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+  }
+}
+
+@media all and (min-width: 52em) {
+  /* line 5, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+  .main-nav {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+}
+
+/* line 20, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+.nav--secondary {
+  display: none;
+}
+
+@media all and (min-width: 63em) {
+  /* line 25, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+  .nav--secondary {
+    display: block;
+    float: right;
+  }
+  /* line 29, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+  .nav--primary {
+    float: left;
+  }
+}
+
+/* line 40, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+.nav--primary ul,
+.nav--secondary ul {
+  font-family: "Roboto Condensed", helvetica, arial, sans-serif;
+  text-transform: uppercase;
+}
+
+/* line 46, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+.nav--primary ul li,
+.nav--secondary ul li {
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+/* line 52, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+.nav--primary ul li:first-child,
+.nav--secondary ul li:first-child {
+  margin-left: 0;
+}
+
+/* line 55, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+.nav--primary ul li:last-child,
+.nav--secondary ul li:last-child {
+  margin-right: 0;
+}
+
+/* line 67, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+.nav--primary ul {
+  text-align: center;
+}
+
+@media all and (min-width: 63em) {
+  /* line 70, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+  .nav--primary ul li {
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+  }
+}
+
+@media all and (min-width: 75em) {
+  /* line 70, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+  .nav--primary ul li {
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+  }
+}
+
+/* line 83, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+.nav--primary li {
+  font-weight: 600;
+  font-size: 1.44em;
+}
+
+@media all and (min-width: 35em) {
+  /* line 90, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+  .nav--primary li {
+    font-size: 1.71em;
+    padding-right: 12px;
+    position: relative;
+  }
+  /* line 95, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+  .nav--primary li:after {
+    content: '';
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-top: 4px solid #222;
+    border-bottom: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -1px;
+  }
+}
+
+@media all and (min-width: 52em) {
+  /* line 107, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+  .nav--primary ul {
+    text-align: left;
+  }
+  /* line 110, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+  .nav--primary li {
+    font-size: 2.1em;
+  }
+}
+
+@media all and (min-width: 63em) {
+  /* line 117, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+  .nav--primary li {
+    font-size: 1.71em;
+  }
+}
+
+@media all and (min-width: 75em) {
+  /* line 123, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+  .nav--primary li {
+    font-size: 2.1em;
+  }
+}
+
+@media all and (min-width: 63em) {
+  /* line 134, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+  .nav--secondary li {
+    font-size: 1.2em;
+    line-height: 2.3em;
+  }
+}
+
+@media all and (min-width: 75em) {
+  /* line 141, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
+  .nav--secondary li {
+    font-size: 1.44em;
+  }
+}
+
+/* line 6, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_base.scss */
 *,
 input, textarea, button {
   box-sizing: border-box;
 }
 
-/* line 15, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+/* line 15, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_base.scss */
 .container {
-  max-width: 86em;
-  min-width: 68.5em;
+  max-width: 90em;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 94%;
 }
 
-/* line 29, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
-.container--spacing {
-  margin-bottom: 4rem;
-}
-
-/* line 38, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
-.container--dots {
-  position: relative;
-  background: #ddd url(../images/dots.png) fixed;
-  padding: 2.5rem;
-}
-
-/* line 43, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
-.container--dots:before {
-  content: "";
-  position: absolute;
-  top: 15%;
-  bottom: 15%;
-  left: 0;
-  right: 0;
-  background-color: #fff;
-  -webkit-transform: skew(0, -15deg);
-      -ms-transform: skew(0, -15deg);
-          transform: skew(0, -15deg);
-}
-
-/* line 54, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
-.container--dots > div {
-  position: relative;
-  z-index: 1;
-}
-
-@media all and (min-width: 76em) {
-  /* line 61, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
-  .container--dots {
-    padding: 3.5rem;
+@media all and (min-width: 75em) {
+  /* line 15, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_base.scss */
+  .container {
+    width: 90%;
   }
 }
 
-/* line 81, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
-.span,
-.span--third,
-.span--half,
-.span--two-thirds,
-.span--sidebar, .span--content {
-  float: left;
-}
-
-/* line 85, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
-.span--third {
-  width: 33.33%;
-}
-
-/* line 90, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
-.span--half {
-  width: 50%;
-}
-
-/* line 95, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
-.span--two-thirds {
-  width: 66.66%;
-}
-
-/* line 105, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+/* line 31, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_base.scss */
 .gutter {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
 }
 
-/* line 111, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
+/* line 38, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_base.scss */
 .gutter > div,
 .gutter > aside,
 .gutter > article {
@@ -1029,54 +1987,115 @@ input, textarea, button {
   padding-right: 0.5rem;
 }
 
-/* line 122, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
-.gutter--lg {
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-}
-
-/* line 128, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
-.gutter--lg > div,
-.gutter--lg > aside,
-.gutter--lg > article {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-@media all and (min-width: 76em) {
-  /* line 135, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
-  .gutter--lg {
-    margin-left: -1.75rem;
-    margin-right: -1.75rem;
+@media all and (min-width: 52em) {
+  /* line 12, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_content.scss */
+  .dots {
+    position: relative;
+    background: #ddd url(../images/dots.png) fixed;
+    padding-top: 1rem;
+    padding-bottom: 1.6rem;
   }
-  /* line 141, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_base.scss */
-  .gutter--lg > div,
-  .gutter--lg > aside,
-  .gutter--lg > article {
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
+  /* line 18, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_content.scss */
+  .dots:before {
+    content: "";
+    position: absolute;
+    top: 15%;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    -webkit-transform: skew(0, -15deg);
+        -ms-transform: skew(0, -15deg);
+            transform: skew(0, -15deg);
+  }
+  /* line 29, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_content.scss */
+  .dots .content {
+    position: relative;
+    z-index: 1;
+    padding: 1rem 2.5rem 2.5rem 2.5rem;
+    margin-bottom: 1.6rem;
+    background-color: #fff;
+  }
+  /* line 37, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_content.scss */
+  .dots .main-content {
+    float: left;
+    width: 75%;
+    margin-top: 1rem;
+  }
+  /* line 43, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_content.scss */
+  .dots .sidebar {
+    float: left;
+    width: 25%;
+    padding-right: 2.5rem;
   }
 }
 
-/* line 1, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_content.scss */
-.span--sidebar {
-  width: 30%;
+@media all and (min-width: 63em) {
+  /* line 52, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_content.scss */
+  .dots {
+    background: transparent;
+    position: relative;
+  }
+  /* line 56, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_content.scss */
+  .dots:before {
+    display: none;
+  }
+  /* line 60, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_content.scss */
+  .dots .container {
+    background: #ddd url(../images/dots.png) fixed;
+    padding-top: 1.6rem;
+    padding-bottom: 1rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  /* line 67, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_content.scss */
+  .dots .container:before {
+    content: "";
+    position: absolute;
+    top: 15%;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    -webkit-transform: skew(0, -15deg);
+        -ms-transform: skew(0, -15deg);
+            transform: skew(0, -15deg);
+  }
+  /* line 79, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_content.scss */
+  .dots .content {
+    position: relative;
+    z-index: 1;
+  }
+  /* line 84, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_content.scss */
+  .dots .main-content {
+    width: 73%;
+  }
+  /* line 88, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_content.scss */
+  .dots .sidebar {
+    width: 27%;
+  }
 }
 
-/* line 5, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_content.scss */
-.span--content {
-  width: 70%;
-}
-
-/* line 11, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_content.scss */
-.content {
-  background-color: #fff;
-  padding: 2.5rem;
-}
-
-@media all and (min-width: 76em) {
-  /* line 11, /Users/dredfern/Google Drive/Clients/Producer Loops/Chop/scss/layout/_content.scss */
-  .content {
-    padding: 3.5rem;
+@media all and (min-width: 75em) {
+  /* line 96, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_content.scss */
+  .dots .container {
+    padding-top: 2.4rem;
+    padding-bottom: 1.4rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+  /* line 103, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_content.scss */
+  .dots .content {
+    padding: 1.4rem 3.5rem 3.5rem 3.5rem;
+    margin-bottom: 2.5rem;
+  }
+  /* line 108, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_content.scss */
+  .dots .main-content {
+    width: 74%;
+  }
+  /* line 112, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_content.scss */
+  .dots .sidebar {
+    padding-right: 3.5rem;
+    width: 26%;
   }
 }
