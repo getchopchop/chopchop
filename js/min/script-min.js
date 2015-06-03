@@ -1,0 +1,1 @@
+$(document).ready(function(){var t=".js-toggle",e=".js-toggle__title",s=".js-toggle__content",a=".js-toggle-parent";$(s).hide(),$(e).click(function(e){e.preventDefault();var s=$(this).parents(t).hasClass("active");$(this).parents(a).find(t).removeClass("active"),s?$(this).parents(t).removeClass("active"):$(this).parents(t).addClass("active")})});

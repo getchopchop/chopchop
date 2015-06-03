@@ -1,0 +1,220 @@
+// =============================================
+// Header Layout
+// =============================================
+
+.header .container {
+	@extend %clearfix;
+	position: relative;
+}
+
+
+.search--invert,
+.cart,
+.nav--accounts {
+	display: none;
+}
+
+@include breakpoint($screen-md) {
+	.nav--accounts,
+	.search--invert {
+		display: block;
+	}
+}
+
+@include breakpoint($screen-lg) {
+	.cart {
+		display: block;
+	}
+	.nav--mobile {
+		display: none;
+	}
+}
+
+
+// =============================================
+// Header
+// =============================================
+
+.header {
+	background-color: $grey-darker;
+	
+	.container {
+		padding-top: $spacing;
+		padding-bottom: $spacing;
+	}
+}
+
+@include breakpoint($screen-md) {
+	.header .container {
+		padding-top: $spacing-xl;
+		padding-bottom: $spacing;
+	}
+}
+
+@include breakpoint($screen-lg) {
+	.header .container {
+		padding-bottom: $spacing-lg;
+	}
+}
+
+
+// =============================================
+// Logo
+// =============================================
+
+.logo img {
+	@extend %img-responsive;
+	width: 65%;
+	max-width: 21em;
+	margin-left: auto;
+	margin-right: auto;
+	
+	@include breakpoint($screen-md) {
+		margin-left: 0;
+		margin-right: 0;
+		float: left;
+		max-width: 25em;
+	}
+	
+	@include breakpoint($screen-lg) {
+		max-width: 26em;
+	}
+}
+
+
+// =============================================
+// Nav Accounts
+// =============================================
+
+.nav--accounts {
+	position: absolute;
+	top: $spacing-xxs;
+	right: 0;
+	
+	ul {
+		@extend %list-inline;
+		margin-bottom: 0;
+
+		> li {
+			padding-left: $spacing-xxs;
+			padding-right: $spacing-xxs;
+			font-size: $font-size-sm;
+		}
+	}
+	
+	a {
+		color: $grey-light;
+	}
+	
+	img {
+		display: inline;
+		display: none; /* temp */
+	}
+}
+
+
+// =============================================
+// Cart
+// =============================================
+
+.cart {
+	@extend %clearfix;
+	float: right;
+	margin-top: $spacing-sm * 1.2;
+	padding-left: $spacing;
+	border-left: 8px solid $yellow;
+	
+	p {
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: $font-size-sm;
+		line-height: $line-height-xs;
+	}
+}
+
+.cart__price,
+.cart__price strong {
+	color: $white;
+}
+
+.cart__price strong {
+	font-size: $font-size-xl;
+}
+
+p.cart__approx {
+	color: lighten($grey, 25%);
+	font-size: $font-size-xs;
+}
+
+.cart__value {
+	float: left;
+	padding-right: $spacing;
+}
+
+.cart__view {
+	float: right;
+}
+
+.cart .btn span {
+	display: none;
+	
+	@include breakpoint($screen-xl) {
+		display: inline;
+	}
+}
+
+
+// =============================================
+// Mobile Nav
+// =============================================
+
+.nav--mobile {
+	ul {
+		@extend %list-unstyled;
+	}
+	
+	li {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		margin-top: -16px;
+	
+		&:first-child {
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+	
+		&:last-child {
+			right: 0;
+			left: auto;
+		}
+	}
+	
+	a {
+		color: #fff;
+	}
+	
+	span {
+		display: block;
+		border-radius: $spacing;
+		background-color: $yellow;
+		color: $grey-darker;
+		font-weight: $font-weight-bold;
+		padding: $spacing-xxs $spacing-xs;
+		font-size: $font-size-xs;
+		position: absolute;
+		top: -7px;
+		right: -8px;
+		border: 2px solid $grey-darker;
+		line-height: 1;
+	}
+}
+
+@include breakpoint($screen-md) {
+	.nav--mobile li:first-child {
+		display: none;
+	}
+	.nav--mobile li:last-child {
+		margin-top: -10px;
+	}
+}
