@@ -470,7 +470,7 @@ body {
   color: #666;
 }
 
-@media all and (min-width: 63em) {
+@media all and (min-width: 62em) {
   /* line 21, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_typography.scss */
   body {
     font-size: 87.15%;
@@ -705,7 +705,7 @@ button:focus,
   background-color: #444;
 }
 
-@media all and (min-width: 63em) {
+@media all and (min-width: 62em) {
   /* line 33, /Users/dredfern/Sites/producer-loops/public_html/scss/atoms/_buttons.scss */
   button,
   .btn {
@@ -974,7 +974,7 @@ input[type="file"] {
   }
 }
 
-@media all and (min-width: 63em) {
+@media all and (min-width: 62em) {
   /* line 37, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_confidence.scss */
   .confidence__item p {
     padding-top: 0.4rem;
@@ -1260,7 +1260,7 @@ input[type="file"] {
   border-color: #fff;
 }
 
-@media all and (min-width: 63em) {
+@media all and (min-width: 62em) {
   /* line 65, /Users/dredfern/Sites/producer-loops/public_html/scss/molecules/_search.scss */
   .search--invert {
     width: 30%;
@@ -1296,7 +1296,7 @@ input[type="file"] {
   }
 }
 
-@media all and (min-width: 63em) {
+@media all and (min-width: 62em) {
   /* line 25, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
   .cart {
     display: block;
@@ -1326,7 +1326,7 @@ input[type="file"] {
   }
 }
 
-@media all and (min-width: 63em) {
+@media all and (min-width: 62em) {
   /* line 55, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
   .header .container {
     padding-bottom: 1.4rem;
@@ -1351,7 +1351,7 @@ input[type="file"] {
   }
 }
 
-@media all and (min-width: 63em) {
+@media all and (min-width: 62em) {
   /* line 65, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_header.scss */
   .logo img {
     max-width: 26em;
@@ -1521,7 +1521,7 @@ p.cart__approx {
   }
 }
 
-@media all and (min-width: 63em) {
+@media all and (min-width: 62em) {
   /* line 27, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
   .footer .container {
     padding-top: 3.5rem;
@@ -1588,7 +1588,7 @@ p.cart__approx {
   }
 }
 
-@media all and (min-width: 63em) {
+@media all and (min-width: 62em) {
   /* line 73, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
   .footer__widget,
   .footer__widget--cards {
@@ -1673,7 +1673,7 @@ p.cart__approx {
   }
 }
 
-@media all and (min-width: 63em) {
+@media all and (min-width: 62em) {
   /* line 152, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
   .footer__widget h4 {
     padding-bottom: 0.6rem;
@@ -1753,7 +1753,7 @@ p.cart__approx {
   }
 }
 
-@media all and (min-width: 63em) {
+@media all and (min-width: 62em) {
   /* line 235, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_footer.scss */
   .footer__widget--cards {
     border-bottom: 0;
@@ -1821,7 +1821,7 @@ p.cart__approx {
   display: none;
 }
 
-@media all and (min-width: 63em) {
+@media all and (min-width: 62em) {
   /* line 25, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
   .nav--secondary {
     display: block;
@@ -1866,7 +1866,7 @@ p.cart__approx {
   text-align: center;
 }
 
-@media all and (min-width: 63em) {
+@media all and (min-width: 62em) {
   /* line 70, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
   .nav--primary ul li {
     margin-left: 0.4rem;
@@ -1923,7 +1923,7 @@ p.cart__approx {
   }
 }
 
-@media all and (min-width: 63em) {
+@media all and (min-width: 62em) {
   /* line 117, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
   .nav--primary li {
     font-size: 1.71em;
@@ -1937,7 +1937,7 @@ p.cart__approx {
   }
 }
 
-@media all and (min-width: 63em) {
+@media all and (min-width: 62em) {
   /* line 134, /Users/dredfern/Sites/producer-loops/public_html/scss/organisms/_nav.scss */
   .nav--secondary li {
     font-size: 1.2em;
@@ -1999,8 +1999,8 @@ input, textarea, button {
   .dots:before {
     content: "";
     position: absolute;
-    top: 15%;
-    bottom: 15%;
+    top: 20%;
+    bottom: 20%;
     left: 0;
     right: 0;
     background-color: #fff;
@@ -2030,7 +2030,7 @@ input, textarea, button {
   }
 }
 
-@media all and (min-width: 63em) {
+@media all and (min-width: 62em) {
   /* line 52, /Users/dredfern/Sites/producer-loops/public_html/scss/layout/_content.scss */
   .dots {
     background: transparent;
@@ -2052,8 +2052,8 @@ input, textarea, button {
   .dots .container:before {
     content: "";
     position: absolute;
-    top: 15%;
-    bottom: 15%;
+    top: 20%;
+    bottom: 20%;
     left: 0;
     right: 0;
     background-color: #fff;
