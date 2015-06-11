@@ -25,3 +25,4 @@ Temporary Items
 
 # Gulp
 node_modules
+.sass-cache

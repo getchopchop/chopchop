@@ -899,11 +899,11 @@ input[type="file"] {
   padding-bottom: 0.4rem;
 }
 .breadcrumb ul {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   font-size: 0.9em;
   margin-bottom: 0;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 .breadcrumb ul > li {
   display: inline;
@@ -1856,13 +1856,13 @@ p.cart__approx {
   margin-bottom: 0;
 }
 .nav__dropdown a {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   color: #fff;
   display: block;
   border-bottom: 1px dotted #222;
   padding: 0.6rem 0.4rem;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
   padding-right: 2.5rem;
   position: relative;
 }
@@ -2130,10 +2130,10 @@ p.cart__approx {
   width: 35%;
 }
 .player__title p {
-  line-height: 2.5rem;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  line-height: 2.5rem;
   color: #fff;
   font-weight: 600;
 }

@@ -12,7 +12,7 @@
 	padding-top: $spacing-sm;
 	padding-bottom: $spacing-sm;
 	border-top: 1px solid $grey-dark;
-	
+
 	.container {
 		display: flex;
 		flex-direction: row;
@@ -42,21 +42,21 @@
 	ul {
 		@extend %list-unstyled;
 		display: table;
-		
+
 		li {
 			display: table-cell;
 			vertical-align: middle;
 			height: $player-sm;
 		}
 	}
-	
+
 	p {
 		margin: 0;
 	}
 
 	a:not(.btn) {
 		color: $white;
-		
+
 		&:hover {
 			color: $blue;
 		}
@@ -81,12 +81,10 @@
 
 .player__title {
 	width: 35%;
-	
+
 	p {
+		@include ellipsis();
 		line-height: $player-sm;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		white-space: nowrap;
 		color: $white;
 		font-weight: $bold;
 	}

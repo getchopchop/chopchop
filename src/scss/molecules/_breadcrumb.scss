@@ -4,26 +4,24 @@
 
 .breadcrumb {
 	padding-bottom: $spacing-xs;
-	
+
 	ul {
 		@extend %list-inline;
+		@include ellipsis();
 		font-size: $font-size-sm;
 		margin-bottom: 0;
-    	text-overflow: ellipsis;
-		white-space: nowrap;
-		overflow: hidden;
-		
+
 		> li {
 			display: inline;
 			padding-right: $spacing-xs;
 			padding-left: 0;
 		}
-		
+
 		a:after {
 			margin-left: $spacing-xs;
-			@include triangle(right, 4px, $black);	
+			@include triangle(right, 4px, $black);
 		}
-		
+
 	}
 }
 
@@ -37,7 +35,7 @@
 		> li {
 			padding-right: $spacing-sm;
 		}
-		
+
 		a:after {
 			margin-left: $spacing-sm;
 		}
@@ -46,6 +44,6 @@
 
 @include breakpoint($screen-md) {
 	.breadcrumb {
-		padding-top: $spacing-xs;		
-	}	
+		padding-top: $spacing-xs;
+	}
 }
