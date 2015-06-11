@@ -1,0 +1,138 @@
+// =============================================
+// Player
+// =============================================
+
+.player {
+	background-color: $black;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 50;
+	padding-top: $spacing-sm;
+	padding-bottom: $spacing-sm;
+	border-top: 1px solid $grey-dark;
+	
+	.container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+
+
+// =============================================
+// Player Show and hide
+// =============================================
+
+.player__wave,
+.player__volume,
+.player__price,
+.player__buttons {
+	display: none;
+}
+
+
+// =============================================
+// Player general styles
+// =============================================
+
+.player {
+	ul {
+		@extend %list-unstyled;
+		display: table;
+		
+		li {
+			display: table-cell;
+			vertical-align: middle;
+			height: $player-sm;
+		}
+	}
+	
+	p {
+		margin: 0;
+	}
+
+	a:not(.btn) {
+		color: $white;
+		
+		&:hover {
+			color: $blue;
+		}
+	}
+
+}
+
+
+// =============================================
+// Player artwork
+// =============================================
+
+.player__artwork img {
+	height: $player-sm;
+	border: 1px solid $white;
+}
+
+
+// =============================================
+// Player title
+// =============================================
+
+.player__title {
+	width: 35%;
+	
+	p {
+		line-height: $player-sm;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		color: $white;
+		font-weight: $bold;
+	}
+}
+
+
+// =============================================
+// Player wave
+// =============================================
+
+.player__wave img {
+	height: $player-sm;
+}
+
+
+// =============================================
+// Player volume
+// =============================================
+
+.player__volume img {
+	height: $player-sm;
+}
+
+
+// =============================================
+// Player controls
+// =============================================
+
+.player__controls {
+	li {
+		padding-left: $spacing-xs;
+		padding-right: $spacing-xs;
+	}
+}
+
+
+// =============================================
+// Player toggle
+// =============================================
+
+.player__toggle {
+	padding-left: 5%;
+	p {
+		text-align: right;
+		font-size: $font-size-sm;
+		text-transform: uppercase;
+		font-weight: $bold;
+	}
+}

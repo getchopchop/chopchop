@@ -1,0 +1,119 @@
+// =============================================
+// Container dots
+// =============================================
+
+.dots,
+.dots .container,
+.dots .content {
+	@extend %clearfix;
+}
+
+@include breakpoint($screen-md) {
+	.dots {
+		position: relative;
+		background: $grey-light url(../images/dots.png) fixed;
+	
+		&:before {
+			content: "";
+			position: absolute;
+			top: 20%;
+			bottom: 20%;
+			left: 0;
+			right: 0;
+			background-color: $white;
+			transform: skew(0, -15deg);
+		}
+		
+		.container {
+			padding-top: $spacing;
+			padding-bottom: $spacing;
+		}
+	
+		.content {
+			position: relative;
+			z-index: 1;
+			padding: $spacing $spacing-xxl $spacing-xxl $spacing-xxl;
+			margin-bottom: $spacing-xl;
+			background-color: $white;
+		}
+
+		.main-content {
+			float: left;
+			width: 75%;
+			margin-top: $spacing;
+		}
+		
+		.sidebar {
+			float: left;
+			width: 25%;
+			padding-right: $spacing-xxl;
+		}
+	}
+}
+
+@include breakpoint($screen-lg) {
+	.dots {
+		background: transparent;
+		position: relative;
+		
+		&:before {
+			display: none;
+		}
+		
+		.container {
+			background: $grey-light url(../images/dots.png) fixed;
+			padding-top: $spacing-xl;
+			padding-left: $spacing-xxl;
+			padding-right: $spacing-xxl;
+		
+			&:before {
+				content: "";
+				position: absolute;
+				top: 20%;
+				bottom: 20%;
+				left: 0;
+				right: 0;
+				background-color: $white;
+				transform: skew(0, -15deg);
+			}
+		}
+
+		.content {
+			position: relative;
+			z-index: 1;
+		}
+
+		.main-content {
+			width: 73%;
+		}
+		
+		.sidebar {
+			width: 27%;
+		}
+	}
+}
+
+@include breakpoint($screen-xl) {
+	.dots {
+		.container {
+			padding-top: $spacing-xl * 1.5;
+			padding-bottom: $spacing-lg;
+			padding-left: $spacing-xxxl;
+			padding-right: $spacing-xxxl;
+		}
+	
+		.content {
+			padding: $spacing-lg $spacing-xxxl $spacing-xxxl $spacing-xxxl;
+			margin-bottom: $spacing-xxl;
+		}
+
+		.main-content {
+			width: 74%;
+		}
+		
+		.sidebar {
+			padding-right: $spacing-xxxl;
+			width: 26%;
+		}
+	}
+}

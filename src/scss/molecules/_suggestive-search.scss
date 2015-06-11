@@ -1,0 +1,39 @@
+// =============================================
+// Suggestive search
+// =============================================
+
+.suggestive-search {
+	display: none;
+	background-color: $blue;
+	position: absolute;
+	width: 100%;
+	top: calc(100% + #{$spacing-sm});
+	left: 0;
+	z-index: 20;
+	padding: 0 $spacing-xl $spacing-xl;
+	
+	ul {
+		@extend %list-unstyled;
+	}
+	hr {
+		border-bottom: 1px dotted $black;
+		margin-top: $spacing-lg;
+		background-color: transparent;
+	}
+	&:before {
+		@include triangle(up, 8px, $blue);
+		position: absolute;
+		top: -8px;
+	}
+	
+	a:hover {
+		color: $black;
+		text-decoration: underline;
+	}
+}
+
+.suggestive-search--invert {
+	top: 100%;
+	width: 82%;
+	min-width: 18rem;
+}

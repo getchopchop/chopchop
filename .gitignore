@@ -22,3 +22,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Gulp
+node_modules

@@ -1,0 +1,51 @@
+// =============================================
+// Box sizing
+// =============================================
+
+*,
+input, textarea, button {
+	box-sizing: border-box;
+}
+
+
+// =============================================
+// Body
+// =============================================
+
+body {
+	position: relative;
+}
+
+
+// =============================================
+// Container
+// =============================================
+
+.container {
+	max-width: $container-max;
+	margin-left: auto;
+	margin-right: auto;
+	width: 94%;
+	
+	@include breakpoint($screen-xl) {
+		width: 90%;
+	}
+}
+
+
+// =============================================
+// Layout Gutter
+// =============================================
+
+.gutter {
+	@extend %clearfix;
+	margin-left: -($spacing / 2);
+	margin-right: -($spacing / 2);
+	
+	> div,
+	> aside,
+	> article {
+		padding-left: $spacing / 2;
+		padding-right: $spacing / 2;
+	}
+}
