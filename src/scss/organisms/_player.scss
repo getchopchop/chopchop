@@ -18,6 +18,10 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
+
+		> div {
+			height: $player-sm;
+		}
 	}
 }
 
@@ -66,28 +70,29 @@
 
 
 // =============================================
-// Player artwork
+// Player info
 // =============================================
+
+.player__info {
+	width: 58%;
+	padding-right: 5%;
+
+	p:first-child {
+		float: left;
+		padding-right: 5%;
+	}
+}
 
 .player__artwork img {
 	height: $player-sm;
 	border: 1px solid $white;
 }
 
-
-// =============================================
-// Player title
-// =============================================
-
 .player__title {
-	width: 35%;
-
-	p {
-		@include ellipsis();
-		line-height: $player-sm;
-		color: $white;
-		font-weight: $bold;
-	}
+	@include ellipsis();
+	line-height: $player-sm;
+	color: $white;
+	font-weight: $bold;
 }
 
 
@@ -117,6 +122,13 @@
 	li {
 		padding-left: $spacing-xs;
 		padding-right: $spacing-xs;
+
+		&:last-child {
+			padding-left: $spacing-xxs;
+		}
+	}
+	a:hover img {
+		opacity: 0.7;
 	}
 }
 
@@ -126,11 +138,36 @@
 // =============================================
 
 .player__toggle {
-	padding-left: 5%;
+	padding-left: 6%;
+	padding-top: calc(#{$player-sm} / 4);
+
 	p {
 		text-align: right;
-		font-size: $font-size-sm;
+		font-size: $font-size-xs;
 		text-transform: uppercase;
 		font-weight: $bold;
+		vertical-align: middle;
+	}
+
+	a {
+		display: block;
+		position: relative;
+	}
+
+	span {
+		display: block;
+		border: 4px solid $black;
+		box-shadow: inset 0 0 0 1px rgba(255,255,255,1);
+		padding: 0.3rem;
+		position: absolute;
+		bottom: 80%;
+		left: 50%;
+		background-color: $black;
+		margin-left: -15px;
+	}
+
+	img {
+		height: 12px;
+		width: 12px;
 	}
 }

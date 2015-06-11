@@ -78,17 +78,21 @@
 
 		// Search focus
 		var searchFocus = '.search input',
+			searchInvertFocus = '.search--invert input',
 			searchSuggestions = '.suggestive-search';
 
 		$(searchFocus).on('focus', function() {
-			if($(this).parents('.search--invert')) {
-				showOverlay('overlay-search');
-			}
 			$(searchSuggestions).show();
 		});
 		$(searchFocus).on('focusout', function() {
-			hideOverlay();
 			$(searchSuggestions).hide();
+		});
+
+		$(searchInvertFocus).on('focus', function() {
+			showOverlay('overlay-search');
+		});
+		$(searchInvertFocus).on('focusout', function() {
+			hideOverlay();
 		});
 
 

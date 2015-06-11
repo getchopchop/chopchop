@@ -2095,6 +2095,9 @@ p.cart__approx {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.player .container > div {
+  height: 2.5rem;
+}
 
 .player__wave,
 .player__volume,
@@ -2121,15 +2124,21 @@ p.cart__approx {
   color: #08eeff;
 }
 
+.player__info {
+  width: 58%;
+  padding-right: 5%;
+}
+.player__info p:first-child {
+  float: left;
+  padding-right: 5%;
+}
+
 .player__artwork img {
   height: 2.5rem;
   border: 1px solid #fff;
 }
 
 .player__title {
-  width: 35%;
-}
-.player__title p {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -2150,15 +2159,42 @@ p.cart__approx {
   padding-left: 0.4rem;
   padding-right: 0.4rem;
 }
+.player__controls li:last-child {
+  padding-left: 0.2rem;
+}
+.player__controls a:hover img {
+  opacity: 0.7;
+}
 
 .player__toggle {
-  padding-left: 5%;
+  padding-left: 6%;
+  padding-top: calc(2.5rem / 4);
 }
 .player__toggle p {
   text-align: right;
-  font-size: 0.9em;
+  font-size: 0.75em;
   text-transform: uppercase;
   font-weight: 600;
+  vertical-align: middle;
+}
+.player__toggle a {
+  display: block;
+  position: relative;
+}
+.player__toggle span {
+  display: block;
+  border: 4px solid #000;
+  box-shadow: inset 0 0 0 1px white;
+  padding: 0.3rem;
+  position: absolute;
+  bottom: 80%;
+  left: 50%;
+  background-color: #000;
+  margin-left: -15px;
+}
+.player__toggle img {
+  height: 12px;
+  width: 12px;
 }
 
 *,
