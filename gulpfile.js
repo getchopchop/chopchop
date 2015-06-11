@@ -5,7 +5,7 @@
 
 // Load plugins
 var gulp = require('gulp'),
-	sass = require('gulp-ruby-sass'),
+	sass = require('gulp-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
 	minifycss = require('gulp-minify-css'),
 	jshint = require('gulp-jshint'),
@@ -16,18 +16,19 @@ var gulp = require('gulp'),
 	notify = require('gulp-notify'),
 	cache = require('gulp-cache'),
 	livereload = require('gulp-livereload'),
-	del = require('del');
+	del = require('del'),
+	sourcemaps = require('gulp-sourcemaps');
 
 
 // Locations
 var styleSrc = 'src/scss/styles.scss',
 	styleDest = 'public_html/css',
 	styleWatch = 'src/scss/**/*.scss',
-	
+
 	imageSrc = 'src/images/**/*',
 	imageDest = 'public_html/images',
 	imageWatch = 'src/images/**/*',
-	
+
 	scriptSrc = 'src/js/*.js',
 	scriptDest = 'public_html/js',
 	scriptWatch = 'src/js/**/*.js',
@@ -41,9 +42,12 @@ var styleSrc = 'src/scss/styles.scss',
 
 // Styles
 gulp.task('styles', function() {
-	return sass(styleSrc, { style: 'expanded' })
-		.pipe(autoprefixer('last 2 version'))
-		.pipe(gulp.dest(styleDest))
+	return gulp.src(styleSrc)
+  		.pipe(sourcemaps.init())
+    	.pipe(sass())
+		.pipe(autoprefixer('last 3 version'))
+  		.pipe(sourcemaps.write())
+  		.pipe(gulp.dest(styleDest))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(minifycss())
 		.pipe(gulp.dest(styleDest))
