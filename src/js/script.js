@@ -98,7 +98,15 @@
 		// Toggle player
 		$('.toggle-preview').click(function(e) {
 			e.preventDefault();
+			if($('body').hasClass('active-preview')) {
+				$('.playlist').removeClass('active');
+			}
 			$('body').toggleClass('active-preview');
+		});
+
+		// Queue
+		$('.player__queue, .player__toggle').click(function() {
+			$('.playlist').toggleClass('active');
 		});
 
 

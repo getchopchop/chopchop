@@ -43,14 +43,21 @@
                             <h3 class="playlist__title"><a href="#">Fturue Deep House Vol 1</a></h3>
                             <p class="playlist__artist"><a href="#">Loopmasters</a></p>
                         </div>
-                        <div class="player__buttons">
+                        <div class="playlist__buttons">
                             <ul>
-                                <li class="player__delete"><a href="#"><img src="images/delete.svg" height="20px" width="20px" alt="Delete track"></a></li>
-                                <li class="player__play"><a href="#"><img src="images/play.svg" height="20px" width="20px" alt="Play / Pause"></a></li>
+                                <li class="playlist__delete"><a href="#"><img src="images/delete.svg" height="20px" width="20px" alt="Delete track"></a></li>
+                                <li class="playlist__play"><a href="#"><img src="images/play.svg" height="20px" width="20px" alt="Play / Pause"></a></li>
                             </ul>
                         </div>
                     </div>
                 <?php endfor; ?>
+            </div>
+            <div class="playlist__controls">
+                <p class="playlist__total">Showing 1 - 9 of 75</p>
+                <ul class="playlist__slide">
+                    <li class="playlist__prev"><a href="#"><img src="images/playlist-prev.svg" alt="Previous"></a></li>
+                    <li class="playlist__next"><a href="#"><img src="images/playlist-next.svg" alt="Next"></a></li>
+                </ul>
             </div>
         </div>
     </div>

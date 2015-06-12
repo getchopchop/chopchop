@@ -3,5 +3,121 @@
 // =============================================
 
 .playlist {
+    display: none;
     position: absolute;
+    right: 0;
+    bottom: 100%;
+    background-color: $black;
+    padding: $spacing-lg;
+
+    width: 106.2%;
+    margin-left: -3.1%;
+    margin-right: -3.1%;
+
+    @include breakpoint($screen-sm) {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        max-width: 30em;
+        padding: $spacing-xl;
+    }
+
+    h2 {
+        color: $white;
+        margin-top: 0;
+    }
+}
+
+.playlist {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+
+// =============================================
+// Playlist track
+// =============================================
+
+.playlist__track {
+    background-color: $white;
+    margin-bottom: 3px;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+    overflow: hidden;
+    height: $player-md;
+    position: relative;
+
+    h3,
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    h3 {
+        @extend %h6;
+        @include ellipsis();
+        line-height: $line-height-xs;
+    }
+
+    p {
+        line-height: $line-height-sm;
+    }
+
+    img {
+        height: $player-md;
+    }
+}
+
+.playlist__info {
+    padding-top: $spacing-xs;
+    padding-left: $spacing-sm;
+    padding-right: $spacing-sm;
+    width: calc(100% - (#{$player-md} * 2));
+}
+
+.playlist__artist {
+    font-size: $font-size-sm;
+}
+
+.playlist__buttons {
+    ul {
+        @extend %list-unstyled;
+        width: $player-md;
+    }
+
+    a {
+        display: block;
+        height: $player-md;
+        width: $player-md;
+        background-color: $grey-light;
+        position: absolute;
+        top: 0;
+        transition: right 1s, opacity 0.3s;
+    }
+
+    .playlist__play a {
+        left: 0;
+        background-color: $blue;
+        opacity: 0
+    }
+
+    .playlist__delete a {
+        right: -100%;
+    }
+}
+
+.playlist__track:hover {
+    .playlist__buttons a {
+    transition: right 0.5s, opacity 0.3s;
+    }
+    .playlist__play a {
+        opacity: 1;
+    }
+    .playlist__delete a {
+        right: 0;
+    }
 }

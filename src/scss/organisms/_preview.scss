@@ -17,6 +17,10 @@
     	padding-top: calc(#{$spacing} - 1px);
     	padding-bottom: $spacing;
     }
+
+	> .container {
+		position: relative;
+	}
 }
 
 

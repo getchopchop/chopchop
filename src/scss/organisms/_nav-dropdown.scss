@@ -36,17 +36,13 @@
 .nav__dropdown {
 	background-color: $black;
 	text-align: left;
-	padding: $spacing-xl;
+	padding: $spacing-lg;
 	padding-bottom: $spacing-xxl;
 
 	ul {
 		@extend %list-unstyled;
 		@extend %clearfix;
 		width: 100%;
-	}
-
-	li {
-		margin-bottom: 0;
 	}
 
 	a {
