@@ -26,3 +26,12 @@ Temporary Items
 # Gulp
 node_modules
 .sass-cache
+
+# Server stuff
+.bash_history
+.bash_logout
+.bashrc
+.cache
+.profile
+.ssh
+log
