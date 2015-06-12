@@ -3,47 +3,28 @@
 // =============================================
 
 .player {
-	background-color: $black;
-	position: fixed;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 50;
-	padding-top: calc(#{$spacing-sm} - 1px);
-	padding-bottom: $spacing-sm;
-	border-top: 1px solid $grey-dark;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
 
-	.container {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
+	> div {
+		padding-left: 1%;
+		padding-right: 1%;
 
-		> div {
-			padding-left: 1%;
-			padding-right: 1%;
-
-			&:first-child {
-				padding-left: 0;
-			}
-			&:last-child {
-				padding-right: 0;
-			}
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
 		}
 	}
 }
 
 @include breakpoint($screen-md) {
-	.player .container > div {
+	.player > div {
 		padding-left: 0.5%;
 		padding-right: 0.5%;
-	}
-}
-
-@include breakpoint($screen-lg) {
-	.player {
-		padding-top: calc(#{$spacing} - 1px);
-		padding-bottom: $spacing;
 	}
 }
 

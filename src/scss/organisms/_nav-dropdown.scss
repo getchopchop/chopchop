@@ -254,11 +254,11 @@
 .nav__title--az {
 	position: absolute;
 	top: 0;
-	left: 12rem;
+	left: 13rem;
 	top: $spacing-xl;
 
 	@include breakpoint($screen-sm) {
-		left: 13rem;
+		left: 14rem;
 	}
 
 	@include breakpoint($screen-md) {

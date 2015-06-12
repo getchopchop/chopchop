@@ -1,0 +1,35 @@
+// =============================================
+// Preview
+// =============================================
+
+.preview {
+	background-color: $black;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: -100%;
+	z-index: 50;
+	padding-top: calc(#{$spacing-sm} - 1px);
+	padding-bottom: $spacing-sm;
+	border-top: 1px solid $grey-dark;
+
+    @include breakpoint($screen-lg) {
+    	padding-top: calc(#{$spacing} - 1px);
+    	padding-bottom: $spacing;
+    }
+}
+
+
+// =============================================
+// Preview Transitions
+// =============================================
+
+.preview {
+	bottom: -100%;
+	transition: bottom 1.5s ease;
+}
+
+.active-preview .preview {
+	bottom: 0;
+	transition: bottom 0.7s ease;
+}

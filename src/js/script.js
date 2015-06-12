@@ -95,6 +95,12 @@
 			hideOverlay();
 		});
 
+		// Toggle player
+		$('.toggle-preview').click(function(e) {
+			e.preventDefault();
+			$('body').toggleClass('active-preview');
+		});
+
 
 		// Show and hide overlays
 		function showOverlay(type) {
