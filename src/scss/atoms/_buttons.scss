@@ -74,7 +74,7 @@
     white-space: nowrap;
     background-color: transparent;
 	color: $black;
-	
+
     &:hover,
     &:focus {
         background-color: transparent;
@@ -118,9 +118,10 @@
 %btn--primary,
 .btn--primary {
     background-color: $blue;
-	border-left-color: $green;
 	background: linear-gradient(to right, $green 0%, $blue 100%);
     color: $black;
+    border-right: 0;
+    border-left: 0;
 
     &:hover,
     &:focus {
@@ -146,7 +147,7 @@
     cursor: not-allowed;
     background-color: $grey;
 	color: $grey-dark;
-	
+
     &:hover,
     &:focus {
         background-color: $grey;

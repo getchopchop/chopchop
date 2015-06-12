@@ -46,10 +46,9 @@ gulp.task('styles', function() {
   		.pipe(sourcemaps.init())
     	.pipe(sass())
 		.pipe(autoprefixer('last 3 version'))
-  		.pipe(sourcemaps.write())
-  		.pipe(gulp.dest(styleDest))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(minifycss())
+  		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(styleDest))
 		.pipe(notify({ message: 'Styles task complete' }));
 });
@@ -61,7 +60,6 @@ gulp.task('scripts', function() {
 		.pipe(jshint())
 		.pipe(jshint.reporter('default'))
 		.pipe(concat('script.js'))
-		.pipe(gulp.dest(scriptDest))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(uglify())
 		.pipe(gulp.dest(scriptDest))
