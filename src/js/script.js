@@ -105,7 +105,8 @@
 		});
 
 		// Queue
-		$('.player__queue, .player__toggle').click(function() {
+		$('.player__queue, .player__toggle').click(function(e) {
+			e.preventDefault();
 			$('.playlist').toggleClass('active');
 		});
 

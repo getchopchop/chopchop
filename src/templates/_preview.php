@@ -36,11 +36,11 @@
         <div class="playlist">
             <h2>Your playlist</h2>
             <div class="playlist__tracks">
-                <?php for($i = 0; $i <= 10; $i++) : ?>
+                <?php for($i = 0; $i <= 9; $i++) : ?>
                     <div class="playlist__track">
                         <p class="playlist__artwork"><img src="https://placeimg.com/100/100/tech"></p>
                         <div class="playlist__info">
-                            <h3 class="playlist__title"><a href="#">Fturue Deep House Vol 1</a></h3>
+                            <h3 class="playlist__title"><a href="#">Future Deep House Vol 1</a></h3>
                             <p class="playlist__artist"><a href="#">Loopmasters</a></p>
                         </div>
                         <div class="playlist__buttons">

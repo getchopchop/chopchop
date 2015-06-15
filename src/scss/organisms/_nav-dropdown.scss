@@ -8,7 +8,6 @@
 
 .nav--primary > ul > li.active .nav__dropdown {
 	display: block;
-	z-index: 101;
 
 	@include breakpoint($screen-md) {
 		display: flex;
@@ -22,7 +21,6 @@
 
 .nav__dropdown {
 	position: absolute;
-	z-index: 100;
 	left: -3.1%;
 	right: -3.1%;
 	top: 100%;
@@ -222,9 +220,9 @@
 		&:before {
 			content: "";
 			position: absolute;
+			z-index: -1;
 			top: $spacing-xs - 0.15rem;
 			margin-left: -($spacing-sm + 0.25rem);
-			z-index: -1;
 			height: 100%;
 			width: 2rem;
 			background-color: $yellow;

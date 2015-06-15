@@ -5,9 +5,8 @@
 .main-nav {
 	@extend %clearfix;
 	background-color: $white;
-	z-index: 20;
 	position: relative;
-	
+
 	.container {
 		@extend %clearfix;
 		position: relative;
@@ -36,22 +35,22 @@
 .nav--primary > ul,
 .nav--secondary > ul {
 	@extend %list-unstyled;
-	
-	> li {		
+
+	> li {
 		margin-left: $spacing-sm;
 		margin-right: $spacing-sm;
 		display: inline-block;
 		margin-bottom: 0;
 		padding-top: $spacing-sm;
 		padding-bottom: $spacing-sm;
-		
+
 		&:first-child {
 			margin-left: 0;
 		}
 		&:last-child {
 			margin-right: 0;
 		}
-		
+
 		> a {
 			font-family: $heading-font-family;
 			text-transform: uppercase;
@@ -67,24 +66,24 @@
 .nav--primary {
 	> ul {
 		text-align: center;
-	
+
 		> li {
 			@include breakpoint($screen-lg) {
 				margin-left: $spacing-xs;
 				margin-right: $spacing-xs;
 			}
-		
+
 			@include breakpoint($screen-xl) {
 				margin-left: $spacing-sm;
 				margin-right: $spacing-sm;
 			}
-		    
+
 			> a {
 		   		font-weight: $bold;
 		   		font-size: $font-size-h4;
 				position: relative;
 		   	}
-			
+
 			/* Active state */
 			&.active a:before {
 				@include triangle(up, 8px, $black);
@@ -101,7 +100,7 @@
 	.nav--primary > ul > li > a {
 		font-size: $font-size-h3;
 		padding-right: 12px;
-		
+
 		&:after {
 			@include triangle(down, 4px, $grey-darker);
 			position: absolute;
@@ -109,7 +108,7 @@
 			right: 0;
 			margin-top: -1px;
 		}
-		
+
 		&:hover:after {
 			@include triangle(down, 4px, darken($blue, 20%));
 		}
@@ -120,11 +119,11 @@
 	.nav--primary {
 		> ul {
 			text-align: left;
-			
+
 			> li > a {
 				font-size: $font-size-h2;
 			}
-		} 
+		}
 	}
 }
 
@@ -169,14 +168,13 @@
 	top: 100%;
 	background-color: $black;
 	position: absolute;
-	z-index: 40;
 	left: -3.1%;
 	width: 106.2%;
 	top: 100%;
 	border-top: 1px solid $grey;
 	padding-top: $spacing-xs;
 	padding-bottom: $spacing;
-	
+
 	@include breakpoint($screen-sm) {
 		left: -3.2%;
 		right: 0;
@@ -184,46 +182,46 @@
 		padding-left: $spacing;
 		padding-right: $spacing;
 	}
-	
+
 	@include breakpoint($screen-md) {
 		display: none;
 	}
-	
+
 	&:before {
 		@include triangle(up, 10px, $grey);
 		position: absolute;
-		z-index: 100;
+			z-index: 100;
 		top: -10px;
 		left: calc(4% - 2px);
-		
+
 		@include breakpoint($screen-sm) {
 			left: calc(6.5% - 2px);
 		}
 	}
-	
+
 	&:after {
 		@include triangle(up, 8px, $black);
 		position: absolute;
 		z-index: 101;
 		top: -8px;
 		left: 4%;
-		
+
 		@include breakpoint($screen-sm) {
 			left: 6.5%;
 		}
 	}
-	
+
 	ul {
 		@extend %list-unstyled;
 		width: 94%;
 		margin-left: auto;
 		margin-right: auto;
-		
+
 		@include breakpoint($screen-sm) {
 			width: 100%;
 		}
 	}
-	
+
 	li {
 		border-bottom: 1px dotted $grey-darker;
 		text-transform: uppercase;
@@ -232,12 +230,12 @@
 		font-size: $font-size-lg;
 		line-height: $line-height-xxs;
 		margin-bottom: 0;
-		
+
 		&:last-child {
 			border-bottom: 0;
 		}
 	}
-	
+
 	a {
 		color: darken($grey-light, 20%);
 		display: block;
@@ -245,17 +243,17 @@
 		padding-bottom: $spacing-sm;
 		padding-left: $spacing-xs;
 		padding-right: $spacing-xs;
-		
+
 		&:hover {
 			color: $blue;
 			background-color: darken($grey-darker, 7%);
 		}
 	}
-	
+
 	.nav--lg a {
 		font-size: $font-size-lg;
 		color: $white;
-		
+
 		&:hover {
 			color: $blue;
 			background-color: darken($grey-darker, 7%);

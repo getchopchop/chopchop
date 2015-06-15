@@ -115,7 +115,7 @@
 
 		<?php include('../src/templates/_footer.php'); ?>
 
-		<?php include('../src/templates/_player.php'); ?>
+		<?php include('../src/templates/_preview.php'); ?>
 
     </div>
 

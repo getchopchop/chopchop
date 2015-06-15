@@ -1,11 +1,4 @@
 // =============================================
-// External assets
-// =============================================
-
-@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Open+Sans:400,700);
-
-
-// =============================================
 // Vendor
 // =============================================
 
@@ -27,6 +20,7 @@
 @import "helpers/clearfix";
 @import "helpers/arrow";
 @import "helpers/ellipsis";
+@import "helpers/z-index";
 
 // Javascript helpers
 @import "helpers/toggle";

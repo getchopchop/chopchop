@@ -7,21 +7,21 @@
 	background: linear-gradient(to right, $blue 0%, $green 100%);
 	padding-top: $spacing-xs;
 	padding-bottom: $spacing-xs;
-	
+
 	@include breakpoint($screen-md) {
 		padding-top: $spacing-sm;
 		padding-bottom: $spacing-sm;
 	}
-	
+
 	&:before {
 		content: "";
 		position: absolute;
+		z-index: 1;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
 		background: url(../images/dots.png);
-		z-index: 1;
 	}
 }
 
@@ -33,7 +33,7 @@
 .confidence__item {
 	position: relative;
 	z-index: 2;
-	
+
 	p {
 		background-color: $white;
 		text-align: center;
@@ -43,22 +43,22 @@
 		margin-bottom: 0;
 		padding: $spacing-xs $spacing-sm;
 		line-height: $line-height-xs;
-		
+
 		@include breakpoint($screen-sm) {
 			padding-top: $spacing-xxs;
 			padding-bottom: $spacing-xxs;
 		}
-		
+
 		@include breakpoint($screen-md) {
 			line-height: $line-height-xs;
 		}
-		
+
 		@include breakpoint($screen-lg) {
 			padding-top: $spacing-xs;
 			padding-bottom: $spacing-xs;
 		}
 	}
-	
+
 	@include breakpoint($screen-sm) {
 		strong {
 			display: block;
@@ -73,7 +73,7 @@
 
 .confidence__item {
 	display: none;
-	
+
 	&:first-child {
 		display: block;
 	}
@@ -84,7 +84,7 @@
 		display: block;
 		float: left;
 		width: 50%;
-	
+
 		&:last-child {
 			display: none;
 		}
@@ -94,7 +94,7 @@
 @include breakpoint($screen-md) {
 	.confidence__item {
 		width: 33.33%;
-	
+
 		&:last-child {
 			display: block;
 		}

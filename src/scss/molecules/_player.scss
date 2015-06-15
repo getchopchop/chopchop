@@ -159,6 +159,12 @@
 
 @include breakpoint($screen-md) {
 	.player__info {
+		width: 22%;
+	}
+}
+
+@include breakpoint($screen-xl) {
+	.player__info {
 		width: 24%;
 	}
 }

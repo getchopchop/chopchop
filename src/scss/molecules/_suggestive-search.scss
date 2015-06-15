@@ -9,9 +9,8 @@
 	width: 100%;
 	top: calc(100% + #{$spacing-sm});
 	left: 0;
-	z-index: 20;
 	padding: 0 $spacing-xl $spacing-xl;
-	
+
 	ul {
 		@extend %list-unstyled;
 	}
@@ -25,7 +24,7 @@
 		position: absolute;
 		top: -8px;
 	}
-	
+
 	a:hover {
 		color: $black;
 		text-decoration: underline;

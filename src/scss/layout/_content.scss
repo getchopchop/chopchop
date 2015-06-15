@@ -12,7 +12,7 @@
 	.dots {
 		position: relative;
 		background: $grey-light url(../images/dots.png) fixed;
-	
+
 		&:before {
 			content: "";
 			position: absolute;
@@ -23,12 +23,12 @@
 			background-color: $white;
 			transform: skew(0, -15deg);
 		}
-		
+
 		.container {
 			padding-top: $spacing;
 			padding-bottom: $spacing;
 		}
-	
+
 		.content {
 			position: relative;
 			z-index: 1;
@@ -42,7 +42,7 @@
 			width: 75%;
 			margin-top: $spacing;
 		}
-		
+
 		.sidebar {
 			float: left;
 			width: 25%;
@@ -55,17 +55,17 @@
 	.dots {
 		background: transparent;
 		position: relative;
-		
+
 		&:before {
 			display: none;
 		}
-		
+
 		.container {
 			background: $grey-light url(../images/dots.png) fixed;
 			padding-top: $spacing-xl;
 			padding-left: $spacing-xxl;
 			padding-right: $spacing-xxl;
-		
+
 			&:before {
 				content: "";
 				position: absolute;
@@ -86,7 +86,7 @@
 		.main-content {
 			width: 73%;
 		}
-		
+
 		.sidebar {
 			width: 27%;
 		}
@@ -101,7 +101,7 @@
 			padding-left: $spacing-xxxl;
 			padding-right: $spacing-xxxl;
 		}
-	
+
 		.content {
 			padding: $spacing-lg $spacing-xxxl $spacing-xxxl $spacing-xxxl;
 			margin-bottom: $spacing-xxl;
@@ -110,7 +110,7 @@
 		.main-content {
 			width: 74%;
 		}
-		
+
 		.sidebar {
 			padding-right: $spacing-xxxl;
 			width: 26%;

@@ -37,9 +37,8 @@
 
 .header {
 	background-color: $black;
-	z-index: 30;
 	position: relative;
-	
+
 	.container {
 		padding-top: $spacing;
 		padding-bottom: $spacing;
@@ -70,14 +69,14 @@
 	max-width: 21em;
 	margin-left: auto;
 	margin-right: auto;
-	
+
 	@include breakpoint($screen-md) {
 		margin-left: 0;
 		margin-right: 0;
 		float: left;
 		max-width: 25em;
 	}
-	
+
 	@include breakpoint($screen-lg) {
 		max-width: 26em;
 	}
@@ -92,7 +91,7 @@
 	position: absolute;
 	top: $spacing-xxs;
 	right: 0;
-	
+
 	ul {
 		@extend %list-inline;
 		margin-bottom: 0;
@@ -103,11 +102,11 @@
 			font-size: $font-size-sm;
 		}
 	}
-	
+
 	a {
 		color: $grey-light;
 	}
-	
+
 	img {
 		display: inline;
 		display: none; /* temp */
@@ -125,7 +124,7 @@
 	margin-top: $spacing-sm * 1.2;
 	padding-left: $spacing;
 	border-left: 8px solid $yellow;
-	
+
 	p {
 		margin-top: 0;
 		margin-bottom: 0;
@@ -159,7 +158,7 @@ p.cart__approx {
 
 .cart .btn span {
 	display: none;
-	
+
 	@include breakpoint($screen-xl) {
 		display: inline;
 	}
@@ -174,28 +173,28 @@ p.cart__approx {
 	ul {
 		@extend %list-unstyled;
 	}
-	
+
 	li {
 		position: absolute;
 		top: 50%;
 		left: 0;
 		margin-top: -16px;
-	
+
 		&:first-child {
 			padding-top: 4px;
 			padding-bottom: 4px;
 		}
-	
+
 		&:last-child {
 			right: 0;
 			left: auto;
 		}
 	}
-	
+
 	a {
 		color: #fff;
 	}
-	
+
 	span {
 		display: block;
 		border-radius: $spacing;

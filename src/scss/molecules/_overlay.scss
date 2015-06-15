@@ -5,27 +5,10 @@
 .overlay {
 	background-color: $black;
 	position: absolute;
-	z-index: 10;
 	right: 0;
 	left: 0;
 	bottom: 0;
 	top: 0;
 	display: none;
 	opacity: 0.5;
-}
-
-.overlay-nav .overlay {
-	z-index: 10;
-}
-
-.overlay-search .overlay {
-	z-index: 21;
-}
-
-.overlay-player .overlay {
-	z-index: 31;
-}
-
-.overlay-modal .overlay {
-	z-index: 41;
 }

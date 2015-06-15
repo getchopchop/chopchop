@@ -6,7 +6,7 @@
     display: none;
     position: absolute;
     right: 0;
-    bottom: 100%;
+    bottom: calc(100% + #{$spacing-sm});
     background-color: $black;
     padding: $spacing-lg;
 
@@ -119,5 +119,47 @@
     }
     .playlist__delete a {
         right: 0;
+    }
+}
+
+
+// =============================================
+// Playlist controls
+// =============================================
+
+.playlist__controls {
+    padding-top: $spacing;
+    text-align: right;
+}
+
+.playlist__total,
+.playlist__slide {
+    display: inline-block;
+    line-height: $spacing;
+    vertical-align: middle;
+}
+
+.playlist__total {
+    color: $grey-light;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: $spacing-xs;
+}
+
+.playlist__slide {
+    @extend %list-unstyled;
+
+    li {
+        display: inline-block;
+        padding-left: $spacing-xs;
+    }
+
+    a {
+        display: inline-block;
+        background-color: $grey-dark;
+
+        &:hover {
+            background-color: $blue;
+        }
     }
 }

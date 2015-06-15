@@ -5,14 +5,14 @@
 .widget__title {
 	user-select: none;
 	margin-top: $spacing;
-	
+
 	span {
 		border: 1px solid $black;
 		display: inline-block;
 		padding: $spacing-xxs $spacing-sm;
 		position: relative;
 		background-color: $white;
-	
+
 		&:after {
 			content: "";
 			position: absolute;
@@ -24,7 +24,7 @@
 			background: url(../images/plus.gif) no-repeat center center;
 		}
 	}
-	
+
 	&:hover span {
 		background: $grey-light;
 	}
@@ -34,23 +34,23 @@
 	span {
 		color: $white;
 		background-color: $black;
-	
+
 		&:after {
 			background-image: url(../images/minus.gif);
 		}
-	
+
 		&:before {
 			content: "";
 			position: absolute;
+			z-index: -1;
 			top: $spacing-xs - 0.15rem;
 			margin-left: -($spacing-sm + 0.25rem);
-			z-index: -1;
 			height: 100%;
 			width: 2rem;
 			background-color: $yellow;
 		}
 	}
-	
+
 	&:hover span {
 		background: $grey-dark;
 	}
@@ -66,23 +66,23 @@
 	position: relative;
 	padding: $spacing-lg $spacing-xl;
 	margin-bottom: $spacing-lg;
-	
+
 	&:after {
 		content: "";
 		position: absolute;
+		z-index: 0;
 		top: $spacing-sm;
 		left: $spacing-sm;
 		right: $spacing-sm;
 		bottom: $spacing-sm;
 		background-color: $white;
-		z-index: 0;
 	}
-	
+
 	* {
 		position: relative;
 		z-index: 1;
 	}
-	
+
 	ul {
 		@extend %list-unstyled;
 	}
@@ -96,21 +96,21 @@
 	.widget--open {
 		> .widget__title {
 			cursor: auto;
-			
+
 			span {
 				color: $black;
 				background-color: $white;
 				cursor: auto;
-			
+
 				&:after {
 					display: none;
 				}
-			
+
 				&:before {
 					display: none;
 				}
 			}
-	
+
 			&:hover span {
 				background: $white;
 			}
