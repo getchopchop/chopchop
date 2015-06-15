@@ -1,7 +1,7 @@
 <!-- Template: _player !-->
 <div class="section preview">
     <div class="container">
-        <div class="player">
+        <article class="player">
             <div class="player__info">
                 <p class="player__artwork"><a href="#"><img src="https://placeimg.com/100/100/tech"></a></p>
                 <p class="player__title"><a href="#">LA Pop Vocal Sessions Vol 1</a></p>
@@ -32,12 +32,12 @@
             <div class="player__toggle">
                 <p><a href="#"><span><img src="images/up.svg"></span> Open</a></p>
             </div>
-        </div>
+        </article>
         <div class="playlist">
             <h2>Your playlist</h2>
             <div class="playlist__tracks">
                 <?php for($i = 0; $i <= 9; $i++) : ?>
-                    <div class="playlist__track">
+                    <article class="playlist__track">
                         <p class="playlist__artwork"><img src="https://placeimg.com/100/100/tech"></p>
                         <div class="playlist__info">
                             <h3 class="playlist__title"><a href="#">Future Deep House Vol 1</a></h3>
@@ -49,7 +49,7 @@
                                 <li class="playlist__play"><a href="#"><img src="images/play.svg" height="20px" width="20px" alt="Play / Pause"></a></li>
                             </ul>
                         </div>
-                    </div>
+                    </article>
                 <?php endfor; ?>
             </div>
             <div class="playlist__controls">

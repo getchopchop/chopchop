@@ -1,0 +1,26 @@
+// =============================================
+// Products layout
+// =============================================
+
+.products {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+    > * {
+        width: 100%;
+    }
+}
+
+@include breakpoint($screen-sm) {
+    .products {
+        margin-left: -$spacing-xs;
+        margin-right: -$spacing-xs;
+
+        > * {
+            width: calc(33.33% - (#{$spacing-xs} * 2));
+            margin: $spacing-xs;
+        }
+    }
+}

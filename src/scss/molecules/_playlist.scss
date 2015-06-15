@@ -22,6 +22,10 @@
         padding: $spacing-xl;
     }
 
+    @include breakpoint($screen-lg) {
+        bottom: calc(100% + #{$spacing});
+    }
+
     h2 {
         color: $white;
         margin-top: 0;

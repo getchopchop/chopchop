@@ -3,12 +3,11 @@
 // =============================================
 
 .overlay {
-	background-color: $black;
 	position: absolute;
 	right: 0;
 	left: 0;
 	bottom: 0;
 	top: 0;
 	display: none;
-	opacity: 0.5;
+	background-color: rgba($black, 0.5);
 }

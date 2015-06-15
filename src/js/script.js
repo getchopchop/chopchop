@@ -105,8 +105,13 @@
 		});
 
 		// Queue
-		$('.player__queue, .player__toggle').click(function(e) {
+		$(document).delegate('.overlay-player .overlay, .player__queue, .player__toggle', 'click', function(e) {
 			e.preventDefault();
+			if($('.playlist').hasClass('active')) {
+				hideOverlay();
+			} else {
+				showOverlay('overlay-player');
+			}
 			$('.playlist').toggleClass('active');
 		});
 

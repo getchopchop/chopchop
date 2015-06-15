@@ -46,6 +46,15 @@
 						</div>
 					</aside>
 					<div class="main-content">
+						<div class="products">
+							<?php
+								for($i = 0; $i <= 11; $i++) {
+									include "../src/templates/_product.php";
+								}
+							?>
+						</div>
+
+
 						<article class="content">
 			                <h1>Welcome to Producer Loops</h1>
 							<p class="lead">Donec molestie nibh sit amet elit mattis viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi vel est porttitor, interdum sem ac, egestas lacus. Praesent vitae eros malesuada, suscipit odio pulvinar, pellentesque leo. Donec vel libero finibus, gravida nisi sollicitudi.</p>

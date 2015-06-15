@@ -1,0 +1,206 @@
+// =============================================
+// Product
+// =============================================
+
+.product {
+    position: relative;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@include breakpoint($screen-md) {
+    .product {
+        background-color: $white;
+        padding: $spacing;
+    }
+}
+
+
+// =============================================
+// Product layout
+// =============================================
+
+.product__title {
+    width: 100%;
+    order: 1;
+}
+
+.product__artwork {
+    order: 2;
+    width: 27%;
+}
+
+.product__info {
+    order: 3;
+    width: 73%;
+    text-align: right;
+
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+    > * {
+        width: 100%;
+    }
+}
+
+// Inside info
+.product__desc {
+    display: none;
+}
+.product__discounts {
+    order: 2;
+}
+.product__price {
+    order: 1;
+}
+.product__controls {
+    order: 3;
+    width: auto;
+    text-align: left;
+}
+.product__buy {
+    order: 4;
+    width: auto;
+}
+
+@include breakpoint($screen-sm) {
+    .product__title {
+        order: 2;
+    }
+    .product__artwork {
+        order: 1;
+        width: 100%;
+    }
+    .product__info {
+        text-align: left;
+        width: 100%;
+    }
+
+    // inside info
+    .product__desc {
+        display: block;
+        width: 100%;
+    }
+    .product__discounts {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .product__controls {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        background: $blue;
+    }
+    .product__price {
+        width: auto;
+    }
+    .product__buy {
+        width: auto;
+    }
+}
+
+
+// =============================================
+// Product title
+// =============================================
+
+.product__title h3 {
+    @extend %h4;
+    margin-top: 0;
+    margin-bottom :0;
+}
+
+
+// =============================================
+// Product artwork
+// =============================================
+
+.product__artwork img {
+    @extend %img-responsive;
+}
+
+
+// =============================================
+// Product discount
+// =============================================
+
+.product__discounts ul {
+    @extend %list-unstyled;
+
+    li {
+        display: inline-block;
+    }
+}
+
+.discount {
+    @extend %h6;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    padding: $spacing-xxs $spacing-xs;
+    background-color: $black;
+    color: $white;
+
+    &:hover {
+        color: $grey-light;
+    }
+
+    &--multibuy {
+        color: $blue;
+
+        &:hover {
+            background-color: $blue;
+            color: $black;
+        }
+    }
+
+    &--percentage {
+        color: $yellow;
+
+        &:hover {
+            background-color: $yellow;
+            color: $black;
+        }
+    }
+}
+
+
+// =============================================
+// Product options
+// =============================================
+
+.product__controls ul {
+    @extend %list-unstyled;
+
+    li {
+        display: inline-block;
+    }
+}
+
+
+// =============================================
+// Product price
+// =============================================
+
+.product__gbp {
+	font-size: $font-size-xl;
+	font-weight: $bold;
+    color: $black;
+
+	span {
+		font-weight: 400;
+		font-size: $font-size-xxs;
+        vertical-align: super;
+        line-height: $line-height-xs;
+	}
+}

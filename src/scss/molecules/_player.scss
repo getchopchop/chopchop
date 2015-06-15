@@ -22,7 +22,7 @@
 }
 
 @include breakpoint($screen-md) {
-	.player > div {
+	.player > * {
 		padding-left: 0.5%;
 		padding-right: 0.5%;
 	}
@@ -68,7 +68,7 @@
 // Player bump heights
 // =============================================
 
-.player .container > div,
+.player .container > *,
 .player li,
 .player__artwork img,
 .player__wave img,
@@ -226,6 +226,7 @@
 
 .player__price {
 	p {
+		@include ellipsis();
 		font-size: $font-size-lg;
 		font-weight: $bold;
 		color: $white;
@@ -280,6 +281,8 @@
 .player__toggle {
 	padding-left: 6%;
 	padding-top: calc(#{$player-sm} / 4);
+	position: relative;
+	z-index: $z-1;
 
 	p {
 		text-align: right;
@@ -303,7 +306,7 @@
 		bottom: 80%;
 		left: 50%;
 		background-color: $black;
-		margin-left: -15px;
+		margin-left: -14px;
 	}
 
 	img {
