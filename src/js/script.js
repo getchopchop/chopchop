@@ -115,7 +115,6 @@
 			$('.playlist').toggleClass('active');
 		});
 
-
 		// Show and hide overlays
 		function showOverlay(type) {
 			$('body').addClass(type);

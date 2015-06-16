@@ -44,7 +44,7 @@ var styleSrc = 'src/scss/styles.scss',
 gulp.task('styles', function() {
 	return gulp.src(styleSrc)
   		.pipe(sourcemaps.init())
-    	.pipe(sass())
+    	.pipe(sass.sync().on('error', sass.logError))
 		.pipe(autoprefixer('last 3 version'))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(minifycss())

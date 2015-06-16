@@ -9,9 +9,29 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 
+    padding-bottom: $spacing-lg;
+    padding-top: $spacing-xl;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: $grey-light url(../images/dots.png) top left;
+    }
+
     p {
         margin-top: 0;
         margin-bottom: 0;
+    }
+}
+
+@include breakpoint($screen-sm) {
+    .product {
+        padding-bottom: $spacing;
+        padding-top: $spacing;
     }
 }
 
@@ -19,6 +39,11 @@
     .product {
         background-color: $white;
         padding: $spacing;
+
+        &:after {
+            left: $spacing;
+            right: $spacing;
+        }
     }
 }
 
@@ -28,49 +53,48 @@
 // =============================================
 
 .product__title {
-    width: 100%;
     order: 1;
+    width: 100%;
 }
 
 .product__artwork {
     order: 2;
-    width: 27%;
+    width: 28%;
 }
 
 .product__info {
     order: 3;
-    width: 73%;
+    width: 68%;
     text-align: right;
 
     display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: flex-end;
 
     > * {
         width: 100%;
     }
 }
 
-// Inside info
-.product__desc {
-    display: none;
-}
-.product__discounts {
-    order: 2;
-}
-.product__price {
-    order: 1;
-}
-.product__controls {
-    order: 3;
-    width: auto;
-    text-align: left;
-}
-.product__buy {
-    order: 4;
-    width: auto;
-}
+    // Inside info
+    .product__desc {
+        display: none;
+    }
+    .product__discounts {
+        order: 2;
+    }
+    .product__price {
+        order: 1;
+    }
+    .product__controls {
+        order: 3;
+        width: auto;
+    }
+    .product__buy {
+        order: 4;
+        width: auto;
+    }
 
 @include breakpoint($screen-sm) {
     .product__title {
@@ -79,34 +103,24 @@
     .product__artwork {
         order: 1;
         width: 100%;
+        position: relative;
     }
     .product__info {
         text-align: left;
         width: 100%;
+	    justify-content: space-between;
     }
 
-    // inside info
-    .product__desc {
-        display: block;
-        width: 100%;
-    }
-    .product__discounts {
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    .product__controls {
-        position: absolute;
-        top: 20%;
-        left: 0;
-        background: $blue;
-    }
-    .product__price {
-        width: auto;
-    }
-    .product__buy {
-        width: auto;
-    }
+        // inside info
+        .product__desc {
+            display: block;
+        }
+        .product__price {
+            width: auto;
+        }
+        .product__buy {
+            width: auto;
+        }
 }
 
 
@@ -114,10 +128,14 @@
 // Product title
 // =============================================
 
-.product__title h3 {
-    @extend %h4;
-    margin-top: 0;
-    margin-bottom :0;
+.product__title {
+    margin-bottom: $spacing-sm;
+
+    h3 {
+        @extend %h4;
+        margin-top: 0;
+        margin-bottom :0;
+    }
 }
 
 
@@ -125,8 +143,116 @@
 // Product artwork
 // =============================================
 
-.product__artwork img {
-    @extend %img-responsive;
+.product__artwork {
+    img {
+        @extend %img-responsive;
+    }
+}
+
+@include breakpoint($screen-sm) {
+    .product__artwork {
+        position: relative;
+        margin-bottom: $spacing;
+
+        &:before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+            overflow: hidden;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+
+// =============================================
+// Product controls & discount - overlay magic
+// =============================================
+
+.product__controls ul,
+.product__discounts ul {
+    @extend %list-unstyled;
+
+    li {
+        display: inline-block;
+    }
+}
+
+@include breakpoint($screen-sm) {
+    .product__discounts,
+    .product__controls {
+        position: absolute;
+        top: $spacing;
+        width: 100%;
+        left: 0;
+
+        &:before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+            overflow: hidden;
+        }
+
+        ul {
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+    }
+}
+
+@include breakpoint($screen-md) {
+    .product__discounts,
+    .product__controls {
+        left: $spacing;
+        width: calc(100% - (#{$spacing} * 2));
+    }
+}
+
+
+// =============================================
+// Product controls
+// =============================================
+
+.product__controls {
+    padding-right: $spacing;
+
+    a {
+        @extend %btn;
+        @extend %btn--default;
+        @extend %btn--sm;
+        display: inline-block;
+    }
+}
+
+@include breakpoint($screen-sm) {
+    .product__controls {
+        padding-right: 0;
+        opacity: 0;
+        background: rgba($black, 0.7);
+        transition: opacity 0.2s ease;
+
+        ul {
+            text-align: center;
+            top: 50%;
+            margin-top: -$spacing-lg;
+        }
+
+        .product__play a {
+            padding: $spacing;
+        }
+    }
+
+    .product:hover .product__controls {
+        opacity: 1;
+    }
 }
 
 
@@ -134,11 +260,25 @@
 // Product discount
 // =============================================
 
-.product__discounts ul {
-    @extend %list-unstyled;
+.product__discounts {
+    margin-bottom: $spacing-sm;
 
-    li {
-        display: inline-block;
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin-right: -2px;
+    }
+
+    @include breakpoint($screen-sm) {
+        ul {
+            justify-content: flex-start;
+
+            bottom: -6px;
+            left: -2px;
+            z-index: $z-2;
+        }
     }
 }
 
@@ -150,6 +290,7 @@
     padding: $spacing-xxs $spacing-xs;
     background-color: $black;
     color: $white;
+    border: 2px solid $white;
 
     &:hover {
         color: $grey-light;
@@ -176,14 +317,17 @@
 
 
 // =============================================
-// Product options
+// Product description
 // =============================================
 
-.product__controls ul {
-    @extend %list-unstyled;
+.product__desc {
+    padding-bottom: $spacing;
 
-    li {
-        display: inline-block;
+    p {
+        font-size: $font-size-sm;
+        line-height: $line-height-sm;
+        height: calc(#{$line-height-sm}em * 3);
+        overflow: hidden;
     }
 }
 
@@ -192,10 +336,20 @@
 // Product price
 // =============================================
 
+.product__price {
+    margin-bottom: $spacing-sm;
+
+    @include breakpoint($screen-sm) {
+        padding-right: $spacing;
+        margin-bottom: 0;
+    }
+}
+
 .product__gbp {
 	font-size: $font-size-xl;
 	font-weight: $bold;
     color: $black;
+    line-height: 1;
 
 	span {
 		font-weight: 400;
@@ -203,4 +357,9 @@
         vertical-align: super;
         line-height: $line-height-xs;
 	}
+}
+
+.product__convert {
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
 }
