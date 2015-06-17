@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
+
 <head>
 
 	<meta charset="utf-8">
@@ -10,33 +11,34 @@
 
 	<title>Producer Loops - Listing</title>
 
-	<?php include('../src/templates/_styles.php'); ?>
+	<?php include( '../src/templates/_styles.php'); ?>
 
 </head>
+
 <body>
 
-    <div class="wrapper">
+	<div class="wrapper">
 
-        <?php include('../src/templates/_header.php'); ?>
+		<?php include( '../src/templates/_header.php'); ?>
 
-        <?php include('../src/templates/_nav.php'); ?>
+		<?php include( '../src/templates/_nav.php'); ?>
 
-		<?php include('../src/templates/_confidence.php'); ?>
+		<?php include( '../src/templates/_confidence.php'); ?>
 
-		<?php include('../src/templates/_search.php'); ?>
+		<?php include( '../src/templates/_search.php'); ?>
 
-		<?php include('../src/templates/_breadcrumb.php'); ?>
-
+		<?php include( '../src/templates/_breadcrumb.php'); ?>
 
 		<section class="section title">
 			<div class="container">
 				<h1>Construction Kits</h1>
-				<p><strong>We are the world's largest distributor of downloadable Sample Packs. We sell 12210 LEGAL downloads from 361 sample pack labels.</strong> Whether you are a producer, soundtrack composer or DJ, we have the sample packs you need to succeed.
+				<p>
+					<strong>We are the world's largest distributor of downloadable Sample Packs. We sell 12210 LEGAL downloads from 361 sample pack labels.</strong> Whether you are a producer, soundtrack composer or DJ, we have the sample packs you need to succeed.
 			</div>
 		</section>
 
-        <section class="section main dots">
-            <div class="container">
+		<section class="section main dots">
+			<div class="container">
 				<div class="gutter--lg">
 					<aside class="sidebar">
 						<div class="modal-controls">
@@ -44,7 +46,9 @@
 						</div>
 						<div class="widgets" id="widgets">
 							<div class="widget widget--scroll active js-toggle">
-								<h2 class="widget__title js-toggle__title"><span>Genres</span></h2>
+								<h2 class="widget__title js-toggle__title">
+									<span>Genres</span>
+								</h2>
 								<div class="widget__content js-toggle__content">
 									<ul>
 										<li><a href="#">Art Punk</a></li>
@@ -79,7 +83,9 @@
 							</div>
 
 							<div class="widget widget--scroll active js-toggle">
-								<h2 class="widget__title js-toggle__title"><span>Formats</span></h2>
+								<h2 class="widget__title js-toggle__title">
+									<span>Formats</span>
+								</h2>
 								<div class="widget__content js-toggle__content">
 									<ul>
 										<li><a href="#">Art Punk</a></li>
@@ -113,7 +119,9 @@
 								</div>
 							</div>
 							<div class="widget widget--scroll js-toggle">
-								<h2 class="widget__title js-toggle__title"><span>Brands</span></h2>
+								<h2 class="widget__title js-toggle__title">
+									<span>Brands</span>
+								</h2>
 								<div class="widget__content js-toggle__content">
 									<ul>
 										<li><a href="#">Art Punk</a></li>
@@ -147,7 +155,9 @@
 								</div>
 							</div>
 							<div class="widget widget--scroll js-toggle">
-								<h2 class="widget__title js-toggle__title"><span>Discounts</span></h2>
+								<h2 class="widget__title js-toggle__title">
+									<span>Discounts</span>
+								</h2>
 								<div class="widget__content js-toggle__content">
 									<ul>
 										<li><a href="#">Art Punk</a></li>
@@ -181,7 +191,9 @@
 								</div>
 							</div>
 							<div class="widget widget--scroll js-toggle">
-								<h2 class="widget__title js-toggle__title"><span>Price</span></h2>
+								<h2 class="widget__title js-toggle__title">
+									<span>Price</span>
+								</h2>
 								<div class="widget__content js-toggle__content">
 									<ul>
 										<li><a href="#">Art Punk</a></li>
@@ -218,28 +230,24 @@
 					</aside>
 					<div class="main-content">
 
-						<?php include('../src/templates/_toolbar.php'); ?>
+						<?php include( '../src/templates/_toolbar.php'); ?>
 
 						<div class="products">
-							<?php
-								for($i = 0; $i <= 17; $i++) {
-									include "../src/templates/_product.php";
-								}
-							?>
+							<?php for($i=0 ; $i <=1 7; $i++) { include "../src/templates/_product.php"; } ?>
 						</div>
 
-                        <?php include('../src/templates/_toolbar.php'); ?>
+						<?php include( '../src/templates/_toolbar.php'); ?>
 
 					</div>
 				</div>
-            </div>
-        </section>
+			</div>
+		</section>
 
-		<?php include('../src/templates/_footer.php'); ?>
+		<?php include( '../src/templates/_footer.php'); ?>
 
-		<?php include('../src/templates/_preview.php'); ?>
+		<?php include( '../src/templates/_preview.php'); ?>
 
-    </div>
+	</div>
 
 	<div class="modal">
 		<div class="modal__title">
@@ -253,9 +261,10 @@
 		</div>
 	</div>
 
-	<?php include('../src/templates/_overlay.php'); ?>
+	<?php include( '../src/templates/_overlay.php'); ?>
 
-	<?php include('../src/templates/_scripts.php'); ?>
+	<?php include( '../src/templates/_scripts.php'); ?>
 
 </body>
+
 </html>
