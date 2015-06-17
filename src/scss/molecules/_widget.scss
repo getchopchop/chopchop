@@ -31,6 +31,9 @@
 }
 
 .active > .widget__title {
+	position: relative;
+	z-index: 2;
+
 	span {
 		color: $white;
 		background-color: $black;
@@ -65,7 +68,7 @@
 	background: $grey url(../images/dots.png);
 	position: relative;
 	padding: $spacing-lg $spacing-xl;
-	margin-bottom: $spacing-lg;
+	margin-bottom: $spacing-xl;
 
 	&:after {
 		content: "";
@@ -85,8 +88,19 @@
 
 	ul {
 		@extend %list-unstyled;
+
+		li {
+			margin-bottom: $spacing-xxs;
+		}
 	}
 }
+
+@include breakpoint($screen-lg) {
+	.widget__content ul {
+		font-size: $font-size-sm;
+	}
+}
+
 
 // =============================================
 // Widget Open Desktop
@@ -119,4 +133,41 @@
 			display: block !important;
 		}
 	}
+}
+
+
+// =============================================
+// Widget Filter
+// =============================================
+
+.widget--filter .widget__content a {
+	position: relative;
+	display: inline-block;
+	padding-left: calc(12px + #{$spacing-xs});
+
+	&:before {
+		content: "";
+		display: block;
+		height: 12px;
+		width: 12px;
+		background-color: $grey-light;
+		position: absolute;
+		left: 0;
+		top: 2px;
+	}
+
+	&:hover:before,
+	&.active:before {
+		background-color: $blue;
+	}
+}
+
+
+// =============================================
+// Widget Scroll
+// =============================================
+
+.widget--scroll .widget__content ul {
+	max-height: 19.5em;
+	overflow-y: auto;
 }

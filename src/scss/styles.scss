@@ -51,6 +51,10 @@
 @import "molecules/playlist";
 @import "molecules/player";
 @import "molecules/product";
+@import "molecules/title";
+@import "molecules/pagination";
+@import "molecules/sortby";
+@import "molecules/modal";
 
 
 // =============================================
@@ -63,6 +67,7 @@
 @import "organisms/nav-dropdown";
 @import "organisms/preview";
 @import "organisms/products";
+@import "organisms/toolbar";
 
 
 // =============================================

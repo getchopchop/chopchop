@@ -1,0 +1,16 @@
+// =============================================
+// Sort by
+// =============================================
+
+.sortby {
+    text-align: right;
+
+    > * {
+        display: inline-block;
+    }
+
+    label {
+        padding-right: $spacing-xxs;
+        margin-bottom: 0;
+    }
+}

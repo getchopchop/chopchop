@@ -20,7 +20,7 @@
 
         > * {
             width: calc(33.33% - (#{$spacing-xs} * 2));
-            margin: $spacing-xs;
+            margin: 0 $spacing-xs ($spacing-xs * 2) $spacing-xs;
         }
     }
 }

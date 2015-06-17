@@ -2,15 +2,17 @@
 // Font Anti aliasing magic
 // =============================================
 
-html {
-	-webkit-font-smoothing: antialiased;
-}
+/*html {
+	font-smoothing: antialiased;
+}*/
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25),
 only screen and ( min-device-pixel-ratio: 1.25),
 only screen and ( min-resolution: 200dpi),
 only screen and ( min-resolution: 1.25dppx) {
-	-webkit-font-smoothing: subpixel-antialiased;
+	html {
+		-webkit-font-smoothing: subpixel-antialiased;
+	}
 }
 
 
@@ -63,7 +65,7 @@ a,
 .link {
     color: $black;
     text-decoration: none;
-    
+
     &:hover {
         color: darken($blue, 20%);
     }
@@ -105,7 +107,7 @@ p.lead {
 
 .hidden-mobile {
 	display: none;
-	
+
 	@include breakpoint($screen-md) {
 		display: inline;
 	}

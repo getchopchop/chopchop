@@ -30,7 +30,7 @@
 
 @include breakpoint($screen-sm) {
     .product {
-        padding-bottom: $spacing;
+        padding-bottom: $spacing-sm;
         padding-top: $spacing;
     }
 }
@@ -39,6 +39,7 @@
     .product {
         background-color: $white;
         padding: $spacing;
+        padding-bottom: $spacing-sm;
 
         &:after {
             left: $spacing;
@@ -326,8 +327,19 @@
     p {
         font-size: $font-size-sm;
         line-height: $line-height-sm;
-        height: calc(#{$line-height-sm}em * 3);
+        height: ($line-height-sm * 3) * 1em;
         overflow: hidden;
+    }
+}
+
+
+// =============================================
+// Product Buy
+// =============================================
+
+@include breakpoint($screen-sm) {
+    .product__buy {
+        margin-bottom: $spacing-sm;
     }
 }
 
@@ -336,12 +348,10 @@
 // Product price
 // =============================================
 
-.product__price {
-    margin-bottom: $spacing-sm;
-
-    @include breakpoint($screen-sm) {
+@include breakpoint($screen-sm) {
+    .product__price {
         padding-right: $spacing;
-        margin-bottom: 0;
+        margin-bottom: $spacing-sm;
     }
 }
 

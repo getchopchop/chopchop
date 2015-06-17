@@ -33,7 +33,7 @@
 			position: relative;
 			z-index: 1;
 			padding: $spacing $spacing-xxl $spacing-xxl $spacing-xxl;
-			margin-bottom: $spacing-xl;
+			margin-bottom: $spacing;
 			background-color: $white;
 		}
 
@@ -62,9 +62,7 @@
 
 		.container {
 			background: $grey-light url(../images/dots.png) fixed;
-			padding-top: $spacing-xl;
-			padding-left: $spacing-xxl;
-			padding-right: $spacing-xxl;
+			padding: $spacing-xl $spacing-xxl;
 
 			&:before {
 				content: "";
@@ -97,14 +95,13 @@
 	.dots {
 		.container {
 			padding-top: $spacing-xl * 1.5;
-			padding-bottom: $spacing-lg;
+			padding-bottom: $spacing-xl * 1.5;
 			padding-left: $spacing-xxxl;
 			padding-right: $spacing-xxxl;
 		}
 
 		.content {
 			padding: $spacing-lg $spacing-xxxl $spacing-xxxl $spacing-xxxl;
-			margin-bottom: $spacing-xxl;
 		}
 
 		.main-content {

@@ -68,11 +68,15 @@
 		});
 
 		enquire.register("screen and (min-width:52em)", {
+			unmatch : function() {
+				$('.widgets').appendTo('.modal__content');
+			},
 			match : function() {
-		    	if(burgerState == 1) {
-					$(burgerItem).click();
-		    	}
-		    }
+				$('.widgets').appendTo('.sidebar');
+		    },
+			setup : function() {
+				this.unmatch();
+			}
 		});
 
 

@@ -1,0 +1,43 @@
+// =============================================
+// Modal controls
+// =============================================
+
+@include breakpoint($screen-md) {
+    .modal-controls {
+        display: none;
+    }
+}
+
+
+// =============================================
+// Modal
+// =============================================
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $white;
+    z-index: $z-9;
+
+    display: flex;
+}
+
+
+// =============================================
+// Modal content
+// =============================================
+
+
+
+// =============================================
+// Modal hide on desktop
+// =============================================
+
+@include breakpoint($screen-md) {
+    .modal {
+        display: none !important;
+    }
+}

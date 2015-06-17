@@ -42,7 +42,7 @@ var styleSrc = 'src/scss/styles.scss',
 
 // Styles
 gulp.task('styles', function() {
-	return gulp.src(styleSrc)
+	gulp.src(styleSrc)
   		.pipe(sourcemaps.init())
     	.pipe(sass.sync().on('error', sass.logError))
 		.pipe(autoprefixer('last 3 version'))

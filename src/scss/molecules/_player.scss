@@ -280,7 +280,7 @@
 
 .player__toggle {
 	padding-left: 6%;
-	padding-top: calc(#{$player-sm} / 4);
+	padding-top: $player-sm / 4;
 	position: relative;
 	z-index: $z-1;
 
