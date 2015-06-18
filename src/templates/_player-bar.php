@@ -1,4 +1,4 @@
-<!-- Template: _player !-->
+<!-- Template: _player-bar !-->
 <div class="section player-bar">
     <div class="container">
         <article class="player">
@@ -62,4 +62,4 @@
         </div>
     </div>
 </div>
-<!-- End template: _player !-->
+<!-- End template: _player-bar !-->
