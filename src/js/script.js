@@ -70,6 +70,7 @@
 		enquire.register("screen and (min-width:52em)", {
 			unmatch : function() {
 				$('.widgets').appendTo('.modal__content');
+				$('.widget').removeClass('active');
 			},
 			match : function() {
 				$('.widgets').appendTo('.sidebar');
@@ -117,6 +118,17 @@
 				showOverlay('overlay-player');
 			}
 			$('.playlist').toggleClass('active');
+		});
+
+		// filter results
+		$('.modal-controls a').on('click', function(e) {
+			e.preventDefault();
+			$('.modal').fadeIn(300);
+			$('body').addClass('modal-active');
+		});
+		$('.modal__title a').on('click', function(e) {
+			e.preventDefault();
+			$('.modal').fadeOut(300);
 		});
 
 		// Show and hide overlays

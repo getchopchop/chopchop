@@ -153,7 +153,7 @@
 		background-color: $grey-light;
 		position: absolute;
 		left: 0;
-		top: 2px;
+		top: 3px;
 	}
 
 	&:hover:before,
@@ -170,4 +170,23 @@
 .widget--scroll .widget__content ul {
 	max-height: 19.5em;
 	overflow-y: auto;
+}
+
+
+// =============================================
+// Widget Scroll
+// =============================================
+
+.modal .widget .widget__content ul {
+	max-height: none;
+	overflow-y: auto;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	li {
+		width: 50%;
+	}
 }
