@@ -76,6 +76,7 @@
 			},
 			match : function() {
 				$('.widgets').appendTo('.sidebar');
+				$('body').removeClass('modal-active');
 				$('.widget').each(function() {
 					if($(this).data('default') == 'active') {
 						$(this).addClass('active');
@@ -94,7 +95,7 @@
 			$('.modal').fadeIn(300);
 			$('body').addClass('modal-active');
 		});
-		$('.modal__title a').on('click', function(e) {
+		$('.modal__title a, .modal__controls a').on('click', function(e) {
 			e.preventDefault();
 			$('body').removeClass('modal-active');
 			$('.modal').fadeOut(300);
