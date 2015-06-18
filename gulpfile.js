@@ -46,6 +46,7 @@ gulp.task('styles', function() {
         .pipe(sourcemaps.init())
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(autoprefixer('last 3 version'))
+        .pipe(gulp.dest(styleDest))
         .pipe(rename({
             suffix: '.min'
         }))

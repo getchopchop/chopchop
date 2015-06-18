@@ -1,0 +1,51 @@
+// =============================================
+// Z indexes
+// =============================================
+
+// molecules/_overlay.scss
+.overlay {
+	z-index: $z-2;
+}
+.overlay-nav .overlay {
+	z-index: $z-2;
+}
+.overlay-search .overlay {
+	z-index: 21;
+}
+.overlay-player .overlay {
+	z-index: 31;
+}
+.overlay-modal .overlay {
+	z-index: 41;
+}
+
+// molecules/_suggestive-search.scss
+.suggestive-search {
+	z-index: $z-3;
+}
+
+// organisms/_header.scss
+.header {
+	z-index: $z-4;
+}
+
+// organisms/_nav-dropdown.scss
+.nav--primary > ul > li.active .nav__dropdown {
+	z-index: 101;
+}
+.nav__dropdown {
+	z-index: 100;
+}
+
+// organisms/_nav.scss
+.main-nav {
+	z-index: $z-3;
+}
+.nav--burger {
+	z-index: $z-5;
+}
+
+// organisms/_preview.scss
+.player-bar {
+	z-index: $z-6;
+}

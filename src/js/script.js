@@ -122,12 +122,12 @@
 		});
 
 		// Toggle player
-		$('.toggle-preview').click(function(e) {
+		$('.toggle-player-bar').click(function(e) {
 			e.preventDefault();
-			if($('body').hasClass('active-preview')) {
+			if($('body').hasClass('active-player-bar')) {
 				$('.playlist').removeClass('active');
 			}
-			$('body').toggleClass('active-preview');
+			$('body').toggleClass('active-player-bar');
 		});
 
 		// Queue

@@ -147,7 +147,7 @@
 
 						<?php include( '../src/templates/_toolbar.php'); ?>
 
-						<div class="products">
+						<div class="product-list">
 							<?php for($i=0 ; $i <=5 ; $i++) { include "../src/templates/_product.php"; } ?>
 						</div>
 
@@ -160,7 +160,7 @@
 
 		<?php include( '../src/templates/_footer.php'); ?>
 
-		<?php include( '../src/templates/_preview.php'); ?>
+		<?php include( '../src/templates/_player-bar.php'); ?>
 
 	</div>
 

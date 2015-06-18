@@ -71,7 +71,7 @@
 
 		<?php include( '../src/templates/_footer.php'); ?>
 
-		<?php include( '../src/templates/_preview.php'); ?>
+		<?php include( '../src/templates/_player-bar.php'); ?>
 
 	</div>
 
