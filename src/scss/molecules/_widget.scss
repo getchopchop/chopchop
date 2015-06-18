@@ -188,5 +188,10 @@
 
 	li {
 		width: 50%;
+		@include ellipsis();
+
+		@include breakpoint($screen-sm) {
+			width: 33.33%;
+		}
 	}
 }

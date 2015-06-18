@@ -12,6 +12,20 @@
     padding-bottom: $spacing-lg;
     padding-top: $spacing-xl;
 
+    &:first-child:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: $grey-light url(../images/dots.png) top left;
+
+        @include breakpoint($screen-sm) {
+            display: none;    
+        }
+    }
+
     &:after {
         content: "";
         position: absolute;

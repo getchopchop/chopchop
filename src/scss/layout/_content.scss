@@ -62,7 +62,7 @@
 
 		.container {
 			background: $grey-light url(../images/dots.png) fixed;
-			padding: $spacing-xl $spacing-xxl;
+			padding: $spacing-xl $spacing-xxl $spacing-xxl;
 
 			&:before {
 				content: "";
@@ -94,7 +94,7 @@
 @include breakpoint($screen-xl) {
 	.dots {
 		.container {
-			padding-top: $spacing-xl * 1.5;
+			padding-top: $spacing-xxxl;
 			padding-bottom: $spacing-xl * 1.5;
 			padding-left: $spacing-xxxl;
 			padding-right: $spacing-xxxl;

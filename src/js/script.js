@@ -67,6 +67,8 @@
 			}
 		});
 
+
+		// Filters for mobile / desktop
 		enquire.register("screen and (min-width:52em)", {
 			unmatch : function() {
 				$('.widgets').appendTo('.modal__content');
@@ -74,10 +76,28 @@
 			},
 			match : function() {
 				$('.widgets').appendTo('.sidebar');
+				$('.widget').each(function() {
+					if($(this).data('default') == 'active') {
+						$(this).addClass('active');
+					}
+				});
 		    },
 			setup : function() {
 				this.unmatch();
 			}
+		});
+
+		// filter results
+		$('.modal-controls a').on('click', function(e) {
+			e.preventDefault();
+			$('.widget').removeClass('active');
+			$('.modal').fadeIn(300);
+			$('body').addClass('modal-active');
+		});
+		$('.modal__title a').on('click', function(e) {
+			e.preventDefault();
+			$('body').removeClass('modal-active');
+			$('.modal').fadeOut(300);
 		});
 
 
@@ -120,16 +140,6 @@
 			$('.playlist').toggleClass('active');
 		});
 
-		// filter results
-		$('.modal-controls a').on('click', function(e) {
-			e.preventDefault();
-			$('.modal').fadeIn(300);
-			$('body').addClass('modal-active');
-		});
-		$('.modal__title a').on('click', function(e) {
-			e.preventDefault();
-			$('.modal').fadeOut(300);
-		});
 
 		// Show and hide overlays
 		function showOverlay(type) {

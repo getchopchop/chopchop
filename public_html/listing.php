@@ -45,7 +45,7 @@
 							<p><a href="#widgets" class="btn btn--lg btn--default">Filter results</a></p>
 						</div>
 						<div class="widgets" id="widgets">
-							<div class="widget widget--scroll widget--filter active js-toggle">
+							<div class="widget widget--scroll widget--filter js-toggle" data-default="active">
 								<h2 class="widget__title js-toggle__title">
 									<span>Genres</span>
 								</h2>
@@ -82,7 +82,7 @@
 								</div>
 							</div>
 
-							<div class="widget widget--scroll widget--filter active js-toggle">
+							<div class="widget widget--scroll widget--filter js-toggle" data-default="active">
 								<h2 class="widget__title js-toggle__title">
 									<span>Formats</span>
 								</h2>
