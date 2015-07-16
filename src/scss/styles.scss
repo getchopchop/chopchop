@@ -22,6 +22,7 @@
 @import "helpers/toggle";
 @import "helpers/breakpoint";
 
+
 // =============================================
 // Atoms
 // =============================================
@@ -32,45 +33,46 @@
 @import "atoms/images";
 @import "atoms/buttons";
 @import "atoms/forms";
+@import "atoms/tags";
 
 
 // =============================================
 // Molecules
 // =============================================
 
-@import "molecules/confidence";
-@import "molecules/breadcrumb";
-@import "molecules/widget";
-@import "molecules/search";
-@import "molecules/suggestive-search";
-@import "molecules/overlay";
-@import "molecules/playlist";
-@import "molecules/player";
-@import "molecules/product-item";
-@import "molecules/title";
-@import "molecules/pagination";
-@import "molecules/sortby";
-@import "molecules/modal";
-@import "molecules/nav";
-@import "molecules/nav-dropdown";
+// @import "molecules/confidence";
+// @import "molecules/breadcrumb";
+// @import "molecules/widget";
+// @import "molecules/search";
+// @import "molecules/suggestive-search";
+// @import "molecules/overlay";
+// @import "molecules/playlist";
+// @import "molecules/player";
+// @import "molecules/product-item";
+// @import "molecules/title";
+// @import "molecules/pagination";
+// @import "molecules/sortby";
+// @import "molecules/modal";
+// @import "molecules/nav";
+// @import "molecules/nav-dropdown";
 
 
 // =============================================
 // Organism
 // =============================================
 
-@import "organisms/header";
-@import "organisms/footer";
-@import "organisms/main-nav";
-@import "organisms/player-bar";
-@import "organisms/product-list";
-@import "organisms/toolbar";
+// @import "organisms/header";
+// @import "organisms/footer";
+// @import "organisms/main-nav";
+// @import "organisms/player-bar";
+// @import "organisms/product-list";
+// @import "organisms/toolbar";
 
 
 // =============================================
 // Layout
 // =============================================
 
-@import "layout/base";
-@import "layout/content";
-@import "layout/z-index";
+// @import "layout/base";
+// @import "layout/content";
+// @import "layout/z-index";

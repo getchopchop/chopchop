@@ -28,14 +28,6 @@
     }
 }
 
-@include breakpoint($screen-lg) {
-	%btn,
-	.btn {
-	    padding-top: 0.46rem;
-	    padding-bottom: 0.46rem;
-	}
-}
-
 
 // =============================================
 // Small
@@ -90,49 +82,26 @@
 
 
 // =============================================
-// Default
-// =============================================
-
-%btn--default,
-.btn--default {
-    background-color: $blue;
-    color: $black;
-
-    &:hover,
-    &:focus {
-        background-color: darken($blue, 10%);
-		color: $white;
-    }
-
-    &:disabled {
-        background-color: $grey;
-        color: $grey-dark;
-    }
-}
-
-
-// =============================================
 // Primary
 // =============================================
 
 %btn--primary,
 .btn--primary {
-    background-color: $blue;
-	background: linear-gradient(to right, $green 0%, $blue 100%);
-    color: $black;
+    background-color: $black;
+    color: $white;
     border-right: 0;
     border-left: 0;
 
     &:hover,
     &:focus {
 		background: transparent;
-    	background-color: $green;
-		color: $black;
+    	background-color: $grey-darker;
+		color: $white;
     }
 
     &:disabled {
         background-color: $grey;
-        color: $grey-dark;
+        color: $white;
     }
 }
 

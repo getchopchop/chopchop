@@ -7,18 +7,18 @@
 	padding-left: 0;
 	margin-left: 0;
 	list-style: none;
-	
+
 	> li {
 		display: inline-block;
-		padding-right: $spacing;
-		padding-left: $spacing;
-		
+		margin-right: $spacing;
+		margin-left: $spacing;
+
 		&:first-child {
-			padding-left: 0;
+			margin-left: 0;
 		}
-		
+
 		&:last-child {
-			padding-right: 0;
+			margin-right: 0;
 		}
 	}
 }
@@ -40,20 +40,7 @@
 
 .list-unordered li ,
 %list-unordered li {
-	list-style: none;
-	position: relative;
-
-	&:before {
-		content: "";
-		position: absolute;
-		left: -$spacing;
-		top: ($line-height / 2) + 0em; // 0em converts value to em
-		height: 6px;
-		width: 6px;
-		display: block;
-		background-color: $blue;
-		margin-top: -3px;
-	}
+	list-style: disc;
 }
 
 
@@ -65,9 +52,5 @@
 .list-unstyled {
 	margin: 0;
 	padding: 0;
-	list-style:none;
-	
-	li {
-		margin-bottom: 0;
-	}
+	list-style: none;
 }

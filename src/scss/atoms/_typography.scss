@@ -2,9 +2,9 @@
 // Font Anti aliasing magic
 // =============================================
 
-/*html {
+html {
 	font-smoothing: antialiased;
-}*/
+}
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25),
 only screen and ( min-device-pixel-ratio: 1.25),
@@ -25,20 +25,19 @@ body {
     font-family: $font-family;
     line-height: $line-height;
     color: $grey;
-
-	@include breakpoint($screen-lg) {
-		font-size: $font-size * 1.05;
-	}
 }
 
 ul, ol, p {
     margin-top: 0;
+}
+
+p {
     margin-bottom: $spacing;
 }
 
 ul, ol {
 	margin-bottom: $spacing-lg;
-	padding-left: $spacing-xxl;
+	padding-left: $spacing-xl;
 }
 
 li {
@@ -67,7 +66,7 @@ a,
     text-decoration: none;
 
     &:hover {
-        color: darken($blue, 20%);
+        color: $grey;
     }
 }
 
@@ -78,7 +77,7 @@ a,
 
 hr {
     border: 0;
-    height: 2px;
+    height: 1px;
     background-color: $grey-light;
     margin-top: 0;
     margin-bottom: $spacing;
@@ -94,21 +93,5 @@ hr {
 	font-weight: $bold;
 	color: $grey-darker;
 	line-height: $line-height-sm;
-}
-
-p.lead {
 	margin-bottom: $spacing-lg;
-}
-
-
-// =============================================
-// Hide type (only inline use)
-// =============================================
-
-.hidden-mobile {
-	display: none;
-
-	@include breakpoint($screen-md) {
-		display: inline;
-	}
 }

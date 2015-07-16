@@ -24,7 +24,7 @@ textarea {
 
 label {
 	margin-bottom: $spacing-xs;
-	
+
 	&.required::after {
 		content: "*";
 	}
@@ -34,13 +34,13 @@ input,
 textarea,
 select[multiple=multiple] {
 	background-color: $white;
-	border: 1px solid $grey-dark;
+	border: 1px solid $grey;
 	border-radius: 0;
 	padding: $spacing-xs $spacing-sm;
 	width: 100%;
 
 	&:focus {
-		border-color: darken($blue, 20%);
+		border-color: $black;
 		outline: none;
 	}
 }
@@ -60,7 +60,6 @@ textarea {
 
 input[type="search"] {
 	appearence: none;
-	-webkit-appearance: none;
 	box-sizing: border-box;
 	border-radius: 0;
 }
@@ -91,8 +90,10 @@ input[type="file"] {
 // Form inline
 // =============================================
 
-.form--inline .form-group {
-		vertical-align: top;
-		display: inline-block;
-	
+.form--inline {
+	display: flex;
+
+	> * {
+		margin-right: $spacing;
+	}
 }

@@ -1,0 +1,51 @@
+// =============================================
+// Discount labels
+// =============================================
+
+.tag {
+    display: inline-block;
+    background-color: $grey;
+    color: $white;
+    font-size: $font-size-sm;
+    padding: $spacing-xs $spacing-sm;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    line-height: 1;
+    font-weight: bold;
+    border-radius: $border-radius;
+}
+
+
+// =============================================
+// Tag variations
+// =============================================
+
+.tag--primary {
+    background-color: purple;
+}
+
+.tag--success {
+    background-color: green;
+}
+
+.tag--info {
+    background-color: blue;
+}
+
+.tag--warning {
+    background-color: orange;
+}
+
+.tag--danger {
+    background-color: red;
+}
+
+
+// =============================================
+// Badges
+// =============================================
+
+.tag--badge {
+    border-radius: $spacing;
+}

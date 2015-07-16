@@ -35,3 +35,9 @@ node_modules
 .profile
 .ssh
 log
+
+
+# Temp files
+public_html/css
+public_html/js
+public_html/img
