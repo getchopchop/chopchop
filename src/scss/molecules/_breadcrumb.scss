@@ -2,48 +2,17 @@
 // Breadcrumb
 // =============================================
 
-.breadcrumb {
-	padding-bottom: $spacing-xs;
-
-	ul {
-		@extend %list-inline;
-		@include ellipsis();
-		font-size: $font-size-sm;
-		margin-bottom: 0;
-
-		> li {
-			display: inline;
-			padding-right: $spacing-xs;
-			padding-left: 0;
-		}
-
-		a:after {
-			margin-left: $spacing-xs;
-			@include triangle(right, 4px, $black);
-		}
-
-	}
+.breadcrumb__list {
+	margin: 0;
+	padding: 0;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
-
-// =============================================
-// Responsive
-// =============================================
-
-@include breakpoint($screen-sm) {
-	.breadcrumb ul {
-		> li {
-			padding-right: $spacing-sm;
-		}
-
-		a:after {
-			margin-left: $spacing-sm;
-		}
-	}
-}
-
-@include breakpoint($screen-md) {
-	.breadcrumb {
-		padding-top: $spacing-xs;
-	}
+.breadcrumb__item {
+	list-style: none;
+	display: inline;
+	padding-left: 0;
+	padding-right: $spacing-sm;
 }

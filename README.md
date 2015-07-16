@@ -1,13 +1,14 @@
-# Producer Loops
+# Primer
 
-This contains the HTML, CSS and some JavaScript for the Producer Loops webiste.
+## To get going with it here are the commands
 
-Project Manager: Ian
-Designer: Jaz, Dave R
-Frontend Developer: Dave R
+1. CD to directory
+2. npm install
+3. gulp
 
-## To get going with it here are the commands.
+## Working on the project
 
-You'll need to install all the node modules. Then use gulp to regenerate all the assets. Use gulp watch while working.
+1. CD to directory
+2. gulp watch
 
 Info: https://gist.github.com/markgoodyear/8497946#file-gulpfile-js

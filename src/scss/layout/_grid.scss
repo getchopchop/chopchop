@@ -1,0 +1,81 @@
+// =============================================
+// Grid
+// =============================================
+
+.g-two-up,
+.g-three-up,
+.g-four-up,
+.g-five-up,
+.g-six-up {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    > * {
+        width: 100%;
+    }
+}
+
+
+// =============================================
+// Two up
+// =============================================
+
+@include breakpoint($screen-sm) {
+    .g-two-up > * {
+        width: (100% / 2);
+    }
+}
+
+
+// =============================================
+// Three up
+// =============================================
+
+@include breakpoint($screen-sm) {
+    .g-three-up > * {
+        width: (100% / 3);
+    }
+}
+
+
+// =============================================
+// Four up
+// =============================================
+
+.g-four-up > * {
+    @include breakpoint($screen-sm) {
+        width: (100% / 2);
+    }
+    @include breakpoint($screen-md) {
+        width: (100% / 4);
+    }
+}
+
+
+// =============================================
+// Five up
+// =============================================
+
+.g-five-up > * {
+    @include breakpoint($screen-sm) {
+        width: (100% / 3);
+    }
+    @include breakpoint($screen-md) {
+        width: (100% / 5);
+    }
+}
+
+
+// =============================================
+// Six up
+// =============================================
+
+.g-six-up > * {
+    @include breakpoint($screen-sm) {
+        width: (100% / 3);
+    }
+    @include breakpoint($screen-md) {
+        width: (100% / 6);
+    }
+}
