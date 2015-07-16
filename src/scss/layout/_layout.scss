@@ -1,0 +1,80 @@
+// =============================================
+// Layout
+// =============================================
+
+.l-two-col-left,
+.l-two-col-right,
+.l-three-col {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-between;
+
+	> * {
+		width: 100%;
+	}
+
+	@include breakpoint($screen-sm) {
+		flex-flow: nowrap;
+	}
+}
+
+
+// =============================================
+// Left and right hand side
+// =============================================
+
+@include breakpoint($screen-sm) {
+	.l-two-col-left,
+	.l-two-col-right {
+		.l-side {
+			width: 25%;
+		}
+		.l-body {
+			width: 75%;
+		}
+	}
+}
+
+
+// =============================================
+// Right column
+// =============================================
+
+@include breakpoint($screen-sm) {
+	.l-two-col-right {
+		flex-direction: row-reverse;
+	}
+}
+
+
+// =============================================
+// Three column
+// =============================================
+
+@include breakpoint($screen-sm) {
+	.l-three-col {
+		.l-side {
+			width: 20%;
+			order: 1;
+		}
+		.l-body {
+			width: 60%;
+			order: 2;
+		}
+		.l-side--right {
+			order: 3;
+		}
+	}
+}
+
+
+/* temp */
+div {
+box-sizing: border-box;
+}
+div > div {
+background: red;
+height: 100px;
+border: 10px solid green;
+}
+/* end temp */

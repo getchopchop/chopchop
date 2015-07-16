@@ -40,8 +40,10 @@
 // Molecules
 // =============================================
 
-// @import "molecules/confidence";
-// @import "molecules/breadcrumb";
+@import "molecules/breadcrumb";
+@import "molecules/confidence";
+@import "molecules/embed-container";
+
 // @import "molecules/widget";
 // @import "molecules/search";
 // @import "molecules/suggestive-search";
@@ -73,6 +75,7 @@
 // Layout
 // =============================================
 
-// @import "layout/base";
-// @import "layout/content";
-// @import "layout/z-index";
+@import "layout/base";
+@import "layout/layout";
+@import "layout/grid";
+@import "layout/z-index";
