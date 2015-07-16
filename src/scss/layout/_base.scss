@@ -25,9 +25,5 @@ body {
 	max-width: $container-max;
 	margin-left: auto;
 	margin-right: auto;
-	width: 94%;
-
-	@include breakpoint($screen-xl) {
-		width: 90%;
-	}
+	width: 90%;
 }

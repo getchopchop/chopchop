@@ -1,0 +1,174 @@
+// =============================================
+// Visible
+// =============================================
+
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg {
+    display: none !important;
+}
+
+@include breakpoint(max-width $screen-xs-max) {
+    .visible-xs {
+        display: block !important;
+    }
+}
+
+@include breakpoint($screen-sm $screen-sm-max) {
+    .visible-sm {
+        display: block !important;
+    }
+}
+
+@include breakpoint($screen-md $screen-md-max) {
+    .visible-md {
+        display: block !important;
+    }
+}
+
+@include breakpoint($screen-lg) {
+    .visible-lg {
+        display: block !important;
+    }
+}
+
+
+// =============================================
+// Visible inline
+// =============================================
+
+.visible-xs-inline,
+.visible-sm-inline,
+.visible-md-inline,
+.visible-lg-inline {
+    display: none !important;
+}
+
+@include breakpoint(max-width $screen-xs-max) {
+    .visible-xs-inline {
+        display: inline !important;
+    }
+}
+
+@include breakpoint($screen-sm $screen-sm-max) {
+    .visible-sm-inline {
+        display: inline !important;
+    }
+}
+
+@include breakpoint($screen-md $screen-md-max) {
+    .visible-md-inline {
+        display: inline !important;
+    }
+}
+
+@include breakpoint($screen-lg) {
+    .visible-lg-inline {
+        display: inline !important;
+    }
+}
+
+
+// =============================================
+// Visible inline block
+// =============================================
+
+.visible-xs-inline-block,
+.visible-sm-inline-block,
+.visible-md-inline-block,
+.visible-lg-inline-block {
+    display: none !important;
+}
+
+@include breakpoint(max-width $screen-xs-max) {
+    .visible-xs-inline-block {
+        display: inline-block !important;
+    }
+}
+
+@include breakpoint($screen-sm $screen-sm-max) {
+    .visible-sm-inline-block {
+        display: inline-block !important;
+    }
+}
+
+@include breakpoint($screen-md $screen-md-max) {
+    .visible-md-inline-block {
+        display: inline-block !important;
+    }
+}
+
+@include breakpoint($screen-lg) {
+    .visible-lg-inline-block {
+        display: inline-block !important;
+    }
+}
+
+
+// =============================================
+// Hidden
+// =============================================
+
+.hidden-xs,
+.hidden-sm,
+.hidden-md,
+.hidden-lg {
+    display: block !important;
+}
+
+@include breakpoint(max-width $screen-xs-max) {
+    .hidden-xs {
+        display: none !important;
+    }
+}
+
+@include breakpoint($screen-sm $screen-sm-max) {
+    .hidden-sm {
+        display: none !important;
+    }
+}
+
+@include breakpoint($screen-md $screen-md-max) {
+    .hidden-md {
+        display: none !important;
+    }
+}
+
+@include breakpoint($screen-lg) {
+    .hidden-lg {
+        display: none !important;
+    }
+}
+
+
+// =============================================
+// Hide
+// =============================================
+
+.no-display,
+.hidden,
+.hidden:before,
+.hidden:after {
+    display: none !important;
+}
+
+.none {
+    display: none;
+}
+
+
+// =============================================
+// Screen reader only
+// =============================================
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
