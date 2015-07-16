@@ -17,6 +17,8 @@
 
 <body>
     
+    <?php include('../src/templates/primer/header.php'); ?>
+    
     <div class="container">
         
         <h5 class="primer-heading">Headings</h5>
