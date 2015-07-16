@@ -42,6 +42,9 @@ ul, ol {
 
 li {
 	margin-bottom: $spacing-xs / 2;
+    > * {
+        margin-top: $spacing-lg;
+    }
 }
 
 blockquote {

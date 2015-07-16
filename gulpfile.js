@@ -21,7 +21,7 @@ var gulp = require('gulp'),
 
 
 // Locations
-var styleSrc = 'src/scss/styles.scss',
+var styleSrc = 'src/scss/*.scss',
     styleDest = 'public_html/css',
     styleWatch = 'src/scss/**/*.scss',
 

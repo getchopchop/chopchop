@@ -1,0 +1,23 @@
+.primer-header,
+.primer-heading {
+    background: hotpink;
+    color: #fff;
+}
+.primer-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.primer-logo {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    text-transform: uppercase;
+    &:hover {
+        color: yellow;
+    }
+}
+.primer-heading {
+    text-transform: uppercase;
+    padding: 10px;
+}
