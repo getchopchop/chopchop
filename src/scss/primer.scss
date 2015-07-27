@@ -1,12 +1,93 @@
+// =============================================
+// Vars
+// =============================================
+
+@import "vars";
+
+
+// =============================================
+// Helpers
+// =============================================
+
+@import "helpers/clearfix";
+@import "helpers/arrow";
+@import "helpers/ellipsis";
+@import "helpers/toggle";
+@import "helpers/breakpoint";
+@import "helpers/visible";
+
+
+.main {
+    
+}
+
+
+body {
+    border-left: 4px solid hotpink;
+}
+
+// =============================================
+// Primer -- Structure
+// =============================================
+$sidebar-width: 350px;
+
+#primer-sidebar,
+#primer-wrapper,
+#primer-content-wrapper {
+    transition: all 0.5s ease;
+}
+#primer-sidebar {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: $sidebar-width;
+    width: $sidebar-width;
+    height: 100%;
+    margin-left: -$sidebar-width;
+    overflow-y: auto;
+    
+}
+#primer-wrapper {
+    padding-left: $sidebar-width;
+}
+#primer-content-wrapper {
+    width: 100%;
+    position: relative;
+    padding: 15px;
+}
+
+// Toggled
+.js-toggled {
+    padding-left: 0 !important;
+}
+
+.js-toggled #primer-sidebar {
+    width: 0 !important;
+}
+
+
+// =============================================
+// Primer -- Branding
+// =============================================
+#primer-sidebar,
 .primer-header,
 .primer-heading {
     background: hotpink;
     color: #fff;
 }
+
+
+.primer-title {
+    text-transform: uppercase;
+}
+
+
+// =============================================
+// Primer -- Content
+// =============================================
 .primer-header {
     padding-top: 10px;
     padding-bottom: 10px;
-    text-align: center;
 }
 .primer-logo {
     color: #fff;
@@ -19,4 +100,64 @@
 .primer-heading {
     text-transform: uppercase;
     padding: 10px;
+}
+
+
+
+
+.menu-toggle,
+.menu-toggle__bar {
+    transition: all 0.5s ease;
+}
+
+.menu-toggle {
+    color: hotpink;
+    width: 50px;
+    height: 50px;
+    padding: 1.1rem 0;
+    text-align: center;
+    
+    &__bar {
+        top: 50%;
+        margin-top: -1px;
+        opacity: 1;
+    }
+    
+    &__label {
+        font-size: 0.4rem;
+        text-transform: uppercase;
+        display: none;
+    }
+    &__bar,
+    &:before,
+    &:after {
+        height: 2px;
+        background-color: hotpink;
+        position: absolute;
+        left: 10px;
+        right: 10px;
+    }
+    
+    &:before,
+    &:after {
+        content: "";
+    }
+    
+    &:before {
+        top: 15px;
+    }
+    
+    &:after {
+        bottom: 15px;
+    }
+    
+    &.js-toggled .menu-toggle__bar {
+        opacity: 0;
+    }
+//    &.js-toggled:before {
+//        transform: rotate(-45deg);
+//    }
+//    &.js-toggled:after {
+//        transform: rotate(45deg);
+//    }
 }

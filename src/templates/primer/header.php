@@ -2,13 +2,13 @@
     <div class="container">
         <a href="/" class="primer-logo">&rho; primer</a>
         
-        <nav class="nav nav--primary primer-nav">
-            <ul>
+        <nav class="nav">
+            <ul class="list-unstyled">
                 <li><a href="atoms.php">Atoms</a></li>
                 <li><a href="molecules.php">Molecules</a></li>
-                <li><a href="style-guide.php">Style guide</a></li>
-                <li><a href="page.php">CMS page</a></li>
-                <li><a href="listing.php">Product listing</a></li>
+                <li><a href="organisms.php">Organisms</a></li>
+                <li><a href="templates.php">Templates</a></li>
+                <li><a href="pages.php">Pages</a></li>
             </ul>
         </nav>
         

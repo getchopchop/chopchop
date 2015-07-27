@@ -3,7 +3,7 @@
 <html>
 <head>
 <?php require_once('../src/inc/meta.php'); ?>
-    <title>Primer - Molecules</title>
+    <title>Primer - Organisms</title>
 <?php include('../src/templates/_styles.php'); ?>
 </head>
 <body>
@@ -26,7 +26,7 @@
             <div class="container">
                 
                 
-                <h1 class="primer-title">Molecules</h1>
+                <h1 class="primer-title">Organisms</h1>
                 
                 to add...
                 <?php //echo getBlock('Headings', 'atoms/headings'); ?>

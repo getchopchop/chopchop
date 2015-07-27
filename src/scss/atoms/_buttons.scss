@@ -16,6 +16,7 @@
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
+    text-align: center;
     white-space: nowrap;
     line-height: 1;
     width: auto;
@@ -104,6 +105,14 @@
     }
 }
 
+// =============================================
+// Block
+// =============================================
+%btn--block,
+.btn--block {
+    display: block;
+    width: 100%;
+}
 
 // =============================================
 // Disabled
