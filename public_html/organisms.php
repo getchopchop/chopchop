@@ -18,10 +18,9 @@
     
         <main class="main" id="primer-content-wrapper">
             
-            <a href="#sidebar-toggle" id="sidebar-toggle" class="menu-toggle" style="position: absolute; top: 0; left: 0; z-index: 333;">
-                <span class="menu-toggle__bar"></span>
-                <span class="menu-toggle__label">menu</span>
-            </a>
+            <button class="c-hamburger c-hamburger--htx js-menu-toggle primer-menu-toggle">
+              <span>toggle menu</span>
+            </button>
             
             <div class="container">
                 
