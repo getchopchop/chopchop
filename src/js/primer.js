@@ -1,9 +1,9 @@
 ;(function($){
     $(document).ready(function() {
         
-        $("#sidebar-toggle").click(function(e) {
+        $(".js-menu-toggle").click(function(e) {
             e.preventDefault();
-            $("#primer-wrapper, #sidebar-toggle").toggleClass("js-toggled");
+            $("#primer-wrapper, .js-menu-toggle").toggleClass("js-toggled");
         });
         
     });

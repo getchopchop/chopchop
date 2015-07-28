@@ -18,22 +18,22 @@
     
         <main class="main" id="primer-content-wrapper">
             
-            <a href="#sidebar-toggle" id="sidebar-toggle" class="menu-toggle" style="position: absolute; top: 0; left: 0; z-index: 333;">
-                <span class="menu-toggle__bar"></span>
-                <span class="menu-toggle__label">menu</span>
-            </a>
+            <button class="c-hamburger c-hamburger--htx js-menu-toggle primer-menu-toggle">
+              <span>toggle menu</span>
+            </button>
             
             <div class="container">
             
                 <span style="font-size: 22px;">&rho; &infin; &omega; &loz; &fnof;</span>
                 
                 <h1 class="primer-title">Atoms</h1>
-            
+                
                 <?php echo getBlock('Headings', 'atoms/headings'); ?>
                 <?php echo getBlock('Paragraphs', 'atoms/paragraphs'); ?>
                 <?php echo getBlock('Blockquotes', 'atoms/blockquotes'); ?>
                 <?php echo getBlock('Horizontal Rule', 'atoms/hr'); ?>
                 <?php echo getBlock('Buttons', 'atoms/buttons'); ?>
+                <?php echo getBlock('Animated Hamburger', 'atoms/hamburger'); ?>
                 <?php echo getBlock('Forms', 'atoms/forms'); ?>
                 <?php echo getBlock('Inline Elements', 'atoms/inline'); ?>
                 <?php echo getBlock('Lists', 'atoms/lists'); ?>
