@@ -27,8 +27,7 @@
                 
                 <h1 class="primer-title">Molecules</h1>
                 
-                to add...
-                <?php //echo getBlock('Headings', 'atoms/headings'); ?>
+                <?php echo getBlock('Heading Groups', 'molecules/heading-groups'); ?>
                 
             </div>
             

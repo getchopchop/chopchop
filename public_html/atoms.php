@@ -23,8 +23,6 @@
             </button>
             
             <div class="container">
-            
-                <span style="font-size: 22px;">&rho; &infin; &omega; &loz; &fnof;</span>
                 
                 <h1 class="primer-title">Atoms</h1>
                 
