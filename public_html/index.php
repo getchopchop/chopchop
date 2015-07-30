@@ -43,7 +43,11 @@
 
                 <p>Asking these question and designing the elements that make up the website is a much more effective way of producing a better end result.</p>
 
-                <p>We often find ourselves initially stuck when starting a new project. Questions are asked: &quot;So what is the thing we are using for this project?&quot; We should be able to get going on a project irrespective of platform used or hosting setup. Front-end should be just that, we shouldn&rsquo;t need to install Magento or WordPress in order to start a project. Moving the front-end experience away from the platform lowers the barrier to entry but this doesn&rsquo;t mean we should ignore the platforms entirely.</p>
+                <p>We often find ourselves initially stuck when starting a new project. Questions are asked:</p>
+                
+                <blockquote>&quot;So what is the thing we are using for this project?&quot;</blockquote>
+                
+                <p>We should be able to get going on a project irrespective of platform used or hosting setup. Front-end should be just that, we shouldn&rsquo;t need to install Magento or WordPress in order to start a project. Moving the front-end experience away from the platform lowers the barrier to entry but this doesn&rsquo;t mean we should ignore the platforms entirely.</p>
 
                 <h3>The aims of Primer</h3>
 
@@ -58,7 +62,6 @@
                 <p>A complete framework. We wanted to keep primer small.</p>
 
                 <h3>The Roadmap</h3>
-
                 <ul>
                     <li>Automate Functional Testing?</li>
                     <li>Bundle with Gerbil so everyone gets the library on their laptops.</li>
