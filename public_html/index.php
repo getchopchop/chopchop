@@ -35,7 +35,11 @@
 
                 <p>We need a common design system that we all use and contribute to across all projects irrespective of platform used. If we all use this system and contribute to it, over time it will grow and be refined. A lot of the design work (particularly layout based) can be done by throwing elements together in the browser and seeing how they react to varying screen sizes. Instead of designing complete layouts we should ask ourselves questions like,</p>
 
-                <p>What do my headings look like? What does a button look like? How many button variants do we need?</p>
+                <ul>
+                    <li>What do my headings look like?</li>
+                    <li>What does a button look like?</li>
+                    <li>How many button variants do we need?</li>
+                </ul>
 
                 <p>Asking these question and designing the elements that make up the website is a much more effective way of producing a better end result.</p>
 
