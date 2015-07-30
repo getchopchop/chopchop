@@ -30,8 +30,12 @@
                 <h1 class="primer-title">Grid</h1>
                 <p>Grids equally divide their direct descendants. An example would be product listing of items. They should not be used for page layouts.</p>
                 <p>There are classes available to apply to any element which follow the pattern <code>.g-num-up {}</code>. These work from two up to six columns.</p>
-                <p>Custom grids can be made using mixin functions. Apply <code>@mixin grid;</code> to the wrapper. Then <code>@mixin grid-up($cols: 1, $gutter: false);</code> to the wrapper. Gutters are optional and by default are set to false. <code>@mixin grid-up;</code> can then be applied inside media queries to change both columns and gutters.</p>
-
+                <p>Custom grids can be created with the following functions:</p>
+                <ul>
+                    <li><code>@include grid;</code> generates a grid and should be applied to the containing div. No variables can be passed into this.</li>
+                    <li><code>@include grid-gutter($gap);</code> applies a gutter. It should be applied to the containing div. You can pass through an optional value for gutter which can be any unit (%, px, em, rem). By default this value uses the <code>$gutter</code> variable declared in the vars file. This can be used at any breakpoint to change the gutter size.</li>
+                    <li><code>@include grid-up($cols);</code> declares how many columns should show on each row. By default this is just 1, so sets all containing divs to 100%. If this mixin is not called divs will wrap to their natual widths. The can be called in any breakpoints to change the number show per row.</li>
+                </ul>
                 <?php echo getBlock('Grid', 'layout/grid'); ?>
 
             </div>
