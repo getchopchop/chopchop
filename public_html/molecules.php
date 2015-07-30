@@ -11,7 +11,7 @@
     <div id="primer-wrapper">
     
         <aside class="aside" id="primer-sidebar">
-            <div style="width: 330px;">
+            <div style="width: 130px;">
                 <?php include('../src/templates/primer/header.php'); ?>
             </div>
         </aside>
