@@ -170,10 +170,12 @@ $sidebar-width: 120px;
 // =============================================
 
 .primer-grid > * {
-    background-color: hotpink;
-    height: 40px;
-
-    &:nth-child(odd) {
+    span {
+        background-color: hotpink;
+        height: 40px;
+        display: block;
+    }
+    &:nth-child(odd) span {
         background-color: blue;
     }
 }

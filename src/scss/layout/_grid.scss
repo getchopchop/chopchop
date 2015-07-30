@@ -13,113 +13,82 @@
 
 
 // =============================================
-// Two up
+// Grid Gutter
+// =============================================
+
+.g-gutter {
+    @include grid-gutter; // defaults to gutter var
+}
+
+
+// =============================================
+// Grid Two up
 // =============================================
 
 @include breakpoint($screen-sm) {
     .g-two-up {
-        &:not(.g-gutter) {
-            @include grid-up(2);
-        }
-        &.g-gutter {
-            @include grid-up(2, $gutter);
-        }
+        @include grid-up(2);
     }
 }
 
 
 // =============================================
-// Three up
+// Grid Three up
 // =============================================
 
 @include breakpoint($screen-sm) {
     .g-three-up {
-        &:not(.g-gutter) {
-            @include grid-up(3);
-        }
-        &.g-gutter {
-            @include grid-up(3, $gutter);
-        }
+        @include grid-up(3);
     }
 }
 
 
 // =============================================
-// Four up
+// Grid Four up
 // =============================================
 
-@include breakpoint($screen-sm $screen-sm-max) {
+@include breakpoint($screen-sm) {
     .g-four-up {
-        &:not(.g-gutter) {
-            @include grid-up(2);
-        }
-        &.g-gutter {
-            @include grid-up(2, $gutter);
-        }
+        @include grid-up(2);
     }
 }
 
 @include breakpoint($screen-md) {
     .g-four-up {
-        &:not(.g-gutter) {
-            @include grid-up(4);
-        }
-        &.g-gutter {
-            @include grid-up(4, $gutter);
-        }
+        @include grid-up(4);
     }
 }
 
 
 // =============================================
-// Five up
+// Grid Five up
 // =============================================
 
-@include breakpoint($screen-sm $screen-sm-max) {
+@include breakpoint($screen-sm) {
     .g-five-up {
-        &:not(.g-gutter) {
-            @include grid-up(3);
-        }
-        &.g-gutter {
-            @include grid-up(3, $gutter);
-        }
+        @include grid-up(3);
     }
 }
 
 @include breakpoint($screen-md) {
     .g-five-up {
-        &:not(.g-gutter) {
-            @include grid-up(5);
-        }
-        &.g-gutter {
-            @include grid-up(5, $gutter);
-        }
+        @include grid-up(5);
     }
 }
 
 
 // =============================================
-// Six up
+// Grid Six up
 // =============================================
 
-@include breakpoint($screen-sm $screen-sm-max) {
+@include breakpoint($screen-sm) {
     .g-six-up {
-        &:not(.g-gutter) {
-            @include grid-up(3);
-        }
-        &.g-gutter {
-            @include grid-up(3, $gutter);
-        }
+        @include grid-up(3);
     }
 }
 
 @include breakpoint($screen-md) {
     .g-six-up {
-        &:not(.g-gutter) {
-            @include grid-up(6);
-        }
-        &.g-gutter {
-            @include grid-up(6, $gutter);
-        }
+        @include grid-up(6);
     }
 }
