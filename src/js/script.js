@@ -3,8 +3,6 @@
         
         var $body = $('body');
         
-        
-        
         // Hamburger Toggle Class
         var $hamburgers = $('.c-hamburger');
         
