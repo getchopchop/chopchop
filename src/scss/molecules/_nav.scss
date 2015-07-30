@@ -68,7 +68,7 @@
 
 			/* Active state */
 			&.active a:before {
-				@include triangle(up, 8px, $black);
+				@include arrow(up, 8px, $black);
 				position: absolute;
 				bottom: -0.9rem;
 				left: 50%;
@@ -116,105 +116,16 @@
 }
 
 
-// =============================================
-// Nav Burger
-// =============================================
-
-.nav--burger {
-	display: none;
-	position: absolute;
-	top: 100%;
-	background-color: $black;
-	position: absolute;
-	left: -3.1%;
-	width: 106.2%;
-	top: 100%;
-	border-top: 1px solid $grey;
-	padding-top: $spacing-xs;
-	padding-bottom: $spacing;
-
-	@include breakpoint($screen-sm) {
-		left: -3.2%;
-		right: 0;
-		max-width: 350px;
-		padding-left: $spacing;
-		padding-right: $spacing;
-	}
-
-	@include breakpoint($screen-md) {
-		display: none;
-	}
-
-	&:before {
-		@include triangle(up, 10px, $grey);
-		position: absolute;
-			z-index: 100;
-		top: -10px;
-		left: calc(4% - 2px);
-
-		@include breakpoint($screen-sm) {
-			left: calc(6.5% - 2px);
-		}
-	}
-
-	&:after {
-		@include triangle(up, 8px, $black);
-		position: absolute;
-		z-index: 101;
-		top: -8px;
-		left: 4%;
-
-		@include breakpoint($screen-sm) {
-			left: 6.5%;
-		}
-	}
-
-	ul {
-		@extend %list-unstyled;
-		width: 94%;
-		margin-left: auto;
-		margin-right: auto;
-
-		@include breakpoint($screen-sm) {
-			width: 100%;
-		}
-	}
-
-	li {
-		border-bottom: 1px dotted $grey-darker;
-		text-transform: uppercase;
-		font-family: $heading-font-family;
-		font-weight: $bold;
-		font-size: $font-size-lg;
-		line-height: $line-height-xs;
-		margin-bottom: 0;
-
-		&:last-child {
-			border-bottom: 0;
-		}
-	}
-
-	a {
-		color: darken($grey-light, 20%);
-		display: block;
-		padding-top: $spacing-sm;
-		padding-bottom: $spacing-sm;
-		padding-left: $spacing-xs;
-		padding-right: $spacing-xs;
-
-		&:hover {
-			color: blue;
-			background-color: darken($grey-darker, 7%);
-		}
-	}
-
-	.nav--lg a {
-		font-size: $font-size-lg;
-		color: $white;
-
-		&:hover {
-			color: blue;
-			background-color: darken($grey-darker, 7%);
-		}
-	}
+.nav--stack {
+    ul,
+    ol {
+        @extend %list-unstyled;
+    }
+    li {
+        
+    }
+    a {
+        display: block;
+        padding: $spacing-xs 0;
+    }
 }

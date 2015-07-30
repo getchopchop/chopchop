@@ -42,7 +42,7 @@ ul, ol {
 
 li {
 	margin-bottom: $spacing-xs / 2;
-    > * {
+    li {
         margin-top: $spacing-lg;
     }
 }

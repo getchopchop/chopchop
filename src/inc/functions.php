@@ -4,5 +4,6 @@
     
     function getBlock($title, $location) {
         $contents = file_get_contents(TEMPLATE_PATH . $location . '.php');
-        return '<h5 class="primer-heading">' . $title . '</h5>' . $contents . "<textarea>" . htmlspecialchars($contents) . "</textarea>";
+        return '<h5 class="primer-heading">' . $title . '</h5>' . $contents .
+        "<textarea>" . htmlspecialchars($contents) . "</textarea>";
     }
