@@ -1,0 +1,22 @@
+{
+  "name": "primer",
+  "version": "0.0.1",
+  "authors": [
+    "Dave Redfern <dave@daveredfern.com>"
+  ],
+  "description": "a simple library of common reuseable patterns we use across all projects everyday",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "enquire": "~2.1.2",
+    "slick-carousel": "~1.5.8",
+    "modernizer": "~2.8.2"
+  }
+}

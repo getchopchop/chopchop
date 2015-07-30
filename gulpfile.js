@@ -15,10 +15,23 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
+    bower = require('gulp-bower'),
     livereload = require('gulp-livereload'),
     del = require('del'),
     sourcemaps = require('gulp-sourcemaps');
 
+
+// bower
+var config = {
+     bowerDir: 'bower_components' 
+};
+
+var bowerLoc = [
+    config.bowerDir + '/modernizer/modernizr.js',
+    config.bowerDir + '/enquire/dist/enquire.js',
+    config.bowerDir + '/jquery/dist/jquery.js',
+    config.bowerDir + '/slick-carousel/slick/slick.js'
+];
 
 // Locations
 var styleSrc = 'src/scss/*.scss',
@@ -37,7 +50,22 @@ var styleSrc = 'src/scss/*.scss',
     thirdScriptDest = 'public_html/js',
     thirdScriptWatch = 'src/js/**/*.js',
 
-    liveReloadDest = 'public_html/**';
+    liveReloadDest = 'public_html/**',
+
+    bowerSrc = 'bower_components',
+    bowerDest = 'src/js/vendor';
+
+
+// bower
+gulp.task('bower-install', ['clean'], function() { 
+    return bower()
+         .pipe(gulp.dest(bowerSrc)) ;
+});
+
+gulp.task('bower', ['bower-install'], function() { 
+    return gulp.src(bowerLoc) 
+        .pipe(gulp.dest(bowerDest)); 
+});
 
 
 // Styles
@@ -65,6 +93,7 @@ gulp.task('scripts', function() {
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
         .pipe(concat('script.js'))
+        .pipe(gulp.dest(scriptDest))
         .pipe(rename({
             suffix: '.min'
         }))
@@ -107,12 +136,12 @@ gulp.task('images', function() {
 
 // Clean
 gulp.task('clean', function(cb) {
-    del([styleDest, scriptDest, imageDest], cb)
+    return del([styleDest, scriptDest, imageDest, config.bowerDir, bowerDest], cb)
 });
 
 
 // Default task
-gulp.task('default', ['clean'], function() {
+gulp.task('default', ['clean', 'bower'], function() {
     gulp.start('styles', 'scripts', 'third-scripts', 'images');
 });
 
