@@ -7,13 +7,8 @@
 .g-four-up,
 .g-five-up,
 .g-six-up {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    > * {
-        width: 100%;
-    }
+    @include grid;
+    @include grid-up; // Default 1 column
 }
 
 
@@ -22,8 +17,13 @@
 // =============================================
 
 @include breakpoint($screen-sm) {
-    .g-two-up > * {
-        width: (100% / 2);
+    .g-two-up {
+        &:not(.g-gutter) {
+            @include grid-up(2);
+        }
+        &.g-gutter {
+            @include grid-up(2, $gutter);
+        }
     }
 }
 
@@ -33,8 +33,13 @@
 // =============================================
 
 @include breakpoint($screen-sm) {
-    .g-three-up > * {
-        width: (100% / 3);
+    .g-three-up {
+        &:not(.g-gutter) {
+            @include grid-up(3);
+        }
+        &.g-gutter {
+            @include grid-up(3, $gutter);
+        }
     }
 }
 
@@ -43,12 +48,25 @@
 // Four up
 // =============================================
 
-.g-four-up > * {
-    @include breakpoint($screen-sm) {
-        width: (100% / 2);
+@include breakpoint($screen-sm $screen-sm-max) {
+    .g-four-up {
+        &:not(.g-gutter) {
+            @include grid-up(2);
+        }
+        &.g-gutter {
+            @include grid-up(2, $gutter);
+        }
     }
-    @include breakpoint($screen-md) {
-        width: (100% / 4);
+}
+
+@include breakpoint($screen-md) {
+    .g-four-up {
+        &:not(.g-gutter) {
+            @include grid-up(4);
+        }
+        &.g-gutter {
+            @include grid-up(4, $gutter);
+        }
     }
 }
 
@@ -57,12 +75,25 @@
 // Five up
 // =============================================
 
-.g-five-up > * {
-    @include breakpoint($screen-sm) {
-        width: (100% / 3);
+@include breakpoint($screen-sm $screen-sm-max) {
+    .g-five-up {
+        &:not(.g-gutter) {
+            @include grid-up(3);
+        }
+        &.g-gutter {
+            @include grid-up(3, $gutter);
+        }
     }
-    @include breakpoint($screen-md) {
-        width: (100% / 5);
+}
+
+@include breakpoint($screen-md) {
+    .g-five-up {
+        &:not(.g-gutter) {
+            @include grid-up(5);
+        }
+        &.g-gutter {
+            @include grid-up(5, $gutter);
+        }
     }
 }
 
@@ -71,11 +102,24 @@
 // Six up
 // =============================================
 
-.g-six-up > * {
-    @include breakpoint($screen-sm) {
-        width: (100% / 3);
+@include breakpoint($screen-sm $screen-sm-max) {
+    .g-six-up {
+        &:not(.g-gutter) {
+            @include grid-up(3);
+        }
+        &.g-gutter {
+            @include grid-up(3, $gutter);
+        }
     }
-    @include breakpoint($screen-md) {
-        width: (100% / 6);
+}
+
+@include breakpoint($screen-md) {
+    .g-six-up {
+        &:not(.g-gutter) {
+            @include grid-up(6);
+        }
+        &.g-gutter {
+            @include grid-up(6, $gutter);
+        }
     }
 }

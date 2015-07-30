@@ -1,0 +1,30 @@
+// =============================================
+// Grid
+// =============================================
+
+@mixin grid() {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+// =============================================
+// Grid Up
+// =============================================
+
+@mixin grid-up($cols: 1, $gutter: false) {
+    > * {
+        @if not $gutter {
+            width: 100% / $cols;
+        } @else {
+            $gaps: $cols - 1;
+            $gutter-total: $gutter * $gaps;
+            width: calc((100% - #{$gutter-total}) / #{$cols});
+            margin-right: $gutter;
+
+            &:nth-child(#{$cols}n + #{$cols}) {
+                margin-right: 0;
+            }
+        }
+    }
+}

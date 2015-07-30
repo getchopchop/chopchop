@@ -4,7 +4,6 @@
             <span style="font-size: 400%; line-height: 0; position: absolute; top: 0; left: 0;">&there4;</span>
             plug
         </a>
-        
         <nav class="nav nav--stack">
             <ul>
                 <li><a href="helpers.php">Helpers</a></li>
@@ -13,8 +12,9 @@
                 <li><a href="organisms.php">Organisms</a></li>
                 <li><a href="templates.php">Templates</a></li>
                 <li><a href="pages.php">Pages</a></li>
+                <li><a href="layout.php">Layout</a></li>
             </ul>
         </nav>
-        
+
     </div>
 </header>
