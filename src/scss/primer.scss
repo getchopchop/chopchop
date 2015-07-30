@@ -118,13 +118,13 @@ $sidebar-width: 350px;
     height: 50px;
     padding: 1.1rem 0;
     text-align: center;
-    
+
     &__bar {
         top: 50%;
         margin-top: -1px;
         opacity: 1;
     }
-    
+
     &__label {
         font-size: 0.4rem;
         text-transform: uppercase;
@@ -139,20 +139,20 @@ $sidebar-width: 350px;
         left: 10px;
         right: 10px;
     }
-    
+
     &:before,
     &:after {
         content: "";
     }
-    
+
     &:before {
         top: 15px;
     }
-    
+
     &:after {
         bottom: 15px;
     }
-    
+
     &.js-toggled .menu-toggle__bar {
         opacity: 0;
     }
@@ -162,4 +162,18 @@ $sidebar-width: 350px;
 //    &.js-toggled:after {
 //        transform: rotate(45deg);
 //    }
+}
+
+
+// =============================================
+// Primer -- Grid
+// =============================================
+
+.primer-grid > * {
+    background-color: hotpink;
+    height: 40px;
+
+    &:nth-child(odd) {
+        background-color: blue;
+    }
 }
