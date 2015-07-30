@@ -1,7 +1,3 @@
-<p>Grids equally divide their direct descendants. An example would be product listing of items. They should not be used for page layouts.</p>
-<p>There are classes available to apply to any element which follow the pattern <strong>.g-num-up</strong>. These work from two up to six columns.</p>
-<p>Custom grids can be made using mixin functions. Apply <strong>@mixin grid</strong> to the wrapper. Then <strong>@mixin grid-up($cols: 1, $gutter: false)</strong> to the wrapper. Gutters are optional and by default are set to false. <strong>grid-up</strong> can then be applied inside media queries to change both columns and gutters.</p>
-
 <h2>Grid Two Up</h2>
 <div class="g-two-up primer-grid">
     <div>1</div>
