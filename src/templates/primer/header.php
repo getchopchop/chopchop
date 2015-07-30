@@ -4,6 +4,7 @@
         
         <nav class="nav">
             <ul class="list-unstyled">
+                <li><a href="helpers.php">Helpers</a></li>
                 <li><a href="atoms.php">Atoms</a></li>
                 <li><a href="molecules.php">Molecules</a></li>
                 <li><a href="organisms.php">Organisms</a></li>

@@ -28,7 +28,6 @@
                 <p>We have a bank of helpers we can call upon in times of crisis. Use these sparingly!</p>
                 
                 <p>Helpers are a collection of styles that don't really do much by themselves. Some are utilities, (prefixed with u-) and some are mixins.</p>
-                <?php echo getBlock('Headings', 'atoms/headings'); ?>
                 
             </div>
             
