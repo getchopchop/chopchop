@@ -34,7 +34,8 @@
                 <ul>
                     <li><code>@include grid;</code> generates a grid and should be applied to the containing div. No variables can be passed into this.</li>
                     <li><code>@include grid-gutter($gap);</code> applies a gutter. It should be applied to the containing div. You can pass through an optional value for gutter which can be any unit (%, px, em, rem). By default this value uses the <code>$gutter</code> variable declared in the vars file. This can be used at any breakpoint to change the gutter size.</li>
-                    <li><code>@include grid-up($cols);</code> declares how many columns should show on each row. By default this is just 1, so sets all containing divs to 100%. If this mixin is not called divs will wrap to their natual widths. The can be called in any breakpoints to change the number show per row.</li>
+                    <li><code>@include grid-up($cols);</code> declares how many columns should show on each row. By default this is just 1, so 100% width. This should be applied on the children of the grid container. This is so you can have multiple grid widths in one containing grid. If this mixin is not called divs will wrap to their natual widths. This can be called in any breakpoints to change the number show per row.</li>
+                    <li><code>@include grid-center;</code> makes all items inside the grid centered. This should be applied to the container.</li>
                 </ul>
                 <?php echo getBlock('Grid', 'layout/grid'); ?>
 
