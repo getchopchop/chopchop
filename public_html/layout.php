@@ -14,9 +14,7 @@
 
         <main class="main" id="primer-content-wrapper">
 
-            <button class="c-hamburger c-hamburger--htx js-menu-toggle primer-menu-toggle">
-              <span>toggle menu</span>
-            </button>
+            
 
             <div class="container">
 
