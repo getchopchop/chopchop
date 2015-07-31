@@ -25,6 +25,7 @@ Temporary Items
 
 # Gulp
 node_modules
+bower_components
 .sass-cache
 
 # Server stuff
@@ -41,3 +42,4 @@ log
 public_html/css
 public_html/js
 public_html/img
+src/js/vendor
