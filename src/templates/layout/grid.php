@@ -28,7 +28,7 @@
     <div><span>5</span></div>
 </div>
 
-<h2>Grid Size Up</h2>
+<h2>Grid Six Up</h2>
 <div class="g-six-up primer-grid">
     <div><span>1</span></div>
     <div><span>2</span></div>

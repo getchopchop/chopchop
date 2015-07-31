@@ -17,8 +17,31 @@
 
 <body>
     
-    <?php include('../src/templates/primer/header.php'); ?>
-    What is going here?
+    <div id="primer-wrapper">
+    
+        <?php include('../src/templates/primer/sidebar.php'); ?>
+    
+        <main class="main" id="primer-content-wrapper">
+            
+            <button class="c-hamburger c-hamburger--htx js-menu-toggle primer-menu-toggle">
+              <span>toggle menu</span>
+            </button>
+            
+            <div class="container">
+                
+                
+                <h1 class="primer-title">Templates</h1>
+                
+                what to add here?
+                <?php //echo getBlock('Headings', 'atoms/headings'); ?>
+                
+            </div>
+            
+        </main>
+    
+    </div><!--/#wrapper -->
+    
+    <?php include('../src/templates/_js.php'); ?>
 
 </body>
 

@@ -10,11 +10,7 @@
     
     <div id="primer-wrapper">
     
-        <aside class="aside" id="primer-sidebar">
-            <div style="width: 130px;">
-                <?php include('../src/templates/primer/header.php'); ?>
-            </div>
-        </aside>
+        <?php include('../src/templates/primer/sidebar.php'); ?>
     
         <main class="main" id="primer-content-wrapper">
             
@@ -28,6 +24,8 @@
                 <h1 class="primer-title">Molecules</h1>
                 
                 <?php echo getBlock('Heading Groups', 'molecules/heading-groups'); ?>
+                
+                <?php echo getBlock('Accordions &amp; Tabs', 'molecules/tab-accordion'); ?>
                 
             </div>
             

@@ -17,20 +17,13 @@
 @import "helpers/visible";
 
 
-.main {
-    border-left: 4px solid hotpink;
-}
-
 // =============================================
 // Primer -- Structure
 // =============================================
-$sidebar-width: 120px;
+$sidebar-open-width: 120px;
+$sidebar-closed-width: 50px;
 
 .primer-menu-toggle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 333;
     background-color: hotpink;
     &.is-active,
     &:hover,
@@ -48,14 +41,14 @@ $sidebar-width: 120px;
     z-index: 1000;
     position: fixed;
     top: 0;
-    left: $sidebar-width;
-    width: $sidebar-width;
+    left: $sidebar-open-width;
+    width: $sidebar-open-width;
     height: 100%;
-    margin-left: -$sidebar-width;
+    margin-left: -$sidebar-open-width;
     overflow-y: auto;
 }
 #primer-wrapper {
-    padding-left: $sidebar-width;
+    padding-left: $sidebar-open-width;
 }
 #primer-content-wrapper {
     width: 100%;
@@ -65,11 +58,11 @@ $sidebar-width: 120px;
 
 // Toggled
 .js-toggled {
-    padding-left: 0 !important;
+    padding-left: $sidebar-closed-width !important;
 }
 
 .js-toggled #primer-sidebar {
-    width: 0 !important;
+    width: $sidebar-closed-width !important;
 }
 
 
