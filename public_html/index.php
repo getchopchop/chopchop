@@ -10,11 +10,7 @@
     
     <div id="primer-wrapper">
     
-        <aside class="aside" id="primer-sidebar">
-            <div style="width: 130px;">
-                <?php include('../src/templates/primer/header.php'); ?>
-            </div>
-        </aside>
+        <?php include('../src/templates/primer/sidebar.php'); ?>
     
         <main class="main" id="primer-content-wrapper">
             
@@ -29,6 +25,13 @@
                   <h5 class="hgroup__subtitle">a simple library of common reuseable patterns we use across all projects everyday</h5>
                 </hgroup>
 
+                <h3>Documentation to write</h3>
+                <ul>
+                    <li>Browser Support, why?</li>
+                    <li>Notes on Gulp, why? Available commands.</li>
+                    <li>Notes on BEM, why?</li>
+                </ul>
+                
                 <h3>Why Primer?</h3>
 
                 <p>With responsive web design being the norm, we find ourselves fighting against our old processes. The traditional Wireframe > Design > Chop > Build > Go Live process isn&rsquo;t working, we need to move away from this flow and we need something to help us do that.</p>
@@ -68,6 +71,11 @@
                     <li>Product Magento templates.</li>
                     <li>WordPress theme?</li>
                 </ul>
+                
+                
+
+                
+                
             </div>
 
 

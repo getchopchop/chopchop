@@ -10,11 +10,7 @@
 
     <div id="primer-wrapper">
 
-        <aside class="aside" id="primer-sidebar">
-            <div style="width: 130px;">
-                <?php include('../src/templates/primer/header.php'); ?>
-            </div>
-        </aside>
+        <?php include('../src/templates/primer/sidebar.php'); ?>
 
         <main class="main" id="primer-content-wrapper">
 
@@ -25,9 +21,8 @@
             <div class="container">
 
                 <h1 class="primer-title">Layout</h1>
-                <p>Coming soon...</p>
 
-                <h1 class="primer-title">Grid</h1>
+                <h2 class="primer-title">Grid</h2>
                 <p>Grids equally divide their direct descendants. An example would be product listing of items. They should not be used for page layouts.</p>
                 <p>There are classes available to apply to any element which follow the pattern <code>.g-num-up {}</code>. These work from two up to six columns.</p>
                 <p>Custom grids can be created with the following functions:</p>
