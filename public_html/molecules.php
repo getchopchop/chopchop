@@ -29,6 +29,8 @@
                 
                 <?php echo getBlock('Heading Groups', 'molecules/heading-groups'); ?>
                 
+                <?php echo getBlock('Accordions &amp; Tabs', 'molecules/tab-accordion'); ?>
+                
             </div>
             
         </main>
