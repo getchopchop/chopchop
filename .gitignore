@@ -39,7 +39,7 @@ log
 
 
 # Temp files
-public_html/css
-public_html/js
-public_html/img
-src/js/vendor
+public_html/build
+public_html/vendor
+public_html/bower_components
+public_html/node_modules
