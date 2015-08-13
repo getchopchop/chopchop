@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 // =============================================
 
 var config = {
-     bowerDir: 'bower_components' ,
+    bowerDir: 'bower_components' ,
     dest: 'build',
     src: 'src',
     vendorDir: 'vendor',

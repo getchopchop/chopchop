@@ -41,6 +41,12 @@
 
 @include breakpoint($screen-sm) {
     .g-three-up > * {
+        @include grid-up(2);
+    }
+}
+
+@include breakpoint($screen-md) {
+    .g-three-up > * {
         @include grid-up(3);
     }
 }
