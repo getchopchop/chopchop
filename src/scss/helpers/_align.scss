@@ -1,0 +1,30 @@
+// =============================================
+// Alignments -- Text
+// =============================================
+
+.u-text-center,
+%u-text-center {
+    text-align: center !important;
+}
+.u-text-left,
+%u-text-center {
+    text-align: left !important;
+}
+.u-text-right,
+%u-text-center {
+    text-align: right !important;
+}
+
+
+// =============================================
+// Alignments -- Floats
+// =============================================
+
+.u-pull-left,
+%u-pull-left {
+    float: left !important;
+}
+.u-pull-right,
+%u-pull-right {
+    float: right !important;
+}

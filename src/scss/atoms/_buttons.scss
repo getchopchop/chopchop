@@ -1,0 +1,142 @@
+// =============================================
+// Base
+// =============================================
+
+%btn,
+.btn {
+    padding: 0.44rem $spacing;
+    background-color: $grey-darker;
+    color: $white;
+	border-radius: 0;
+	font-size: $font-size-lg;
+	font-family: $heading-font-family;
+	font-weight: $bold;
+    text-decoration: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 1;
+    width: auto;
+
+    &:hover,
+    &:focus {
+        color: $white;
+        background-color: $grey-dark;
+    }
+}
+
+
+// =============================================
+// Small
+// =============================================
+
+%btn--sm,
+.btn--sm {
+    padding: $spacing-xs $spacing-sm;
+    font-size: 1em;
+}
+
+
+// =============================================
+// Large
+// =============================================
+
+%btn--lg,
+.btn--lg {
+    padding: $spacing-sm $spacing-lg;
+    font-size: $font-size-xl;
+}
+
+
+// =============================================
+// Text
+// =============================================
+
+%btn--text,
+.btn--text {
+    @extend %link;
+    padding: $spacing-sm $spacing;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: transparent;
+	color: $black;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+		color: $black;
+		text-decoration: underline;
+    }
+
+    &:disabled {
+        background-color: transparent;
+        color: $grey;
+    }
+}
+
+
+// =============================================
+// Primary
+// =============================================
+
+%btn--primary,
+.btn--primary {
+    background-color: $black;
+    color: $white;
+    border-right: 0;
+    border-left: 0;
+
+    &:hover,
+    &:focus {
+		background: transparent;
+    	background-color: $grey-darker;
+		color: $white;
+    }
+
+    &:disabled {
+        background-color: $grey;
+        color: $white;
+    }
+}
+
+// =============================================
+// Block
+// =============================================
+%btn--block,
+.btn--block {
+    display: block;
+    width: 100%;
+}
+
+// =============================================
+// Disabled
+// =============================================
+
+%btn--disabled,
+.btn--disabled,
+.btn:disabled {
+    cursor: not-allowed;
+    background-color: $grey;
+	color: $grey-dark;
+
+    &:hover,
+    &:focus {
+        background-color: $grey;
+		color: $grey-dark;
+    }
+}
+
+
+// =============================================
+// Button button
+// =============================================
+
+button {
+	@extend %btn;
+}

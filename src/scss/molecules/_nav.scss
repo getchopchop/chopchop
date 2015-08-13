@@ -1,0 +1,131 @@
+
+// =============================================
+// Navs Primary and Secondary
+// =============================================
+
+.nav--scroll {
+    position: relative;
+    
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 4em;
+        background: linear-gradient(to right, rgba(0,0,0,0) 0, rgba(0,0,0,0.12) 100%);
+    }
+}
+
+.nav--primary > ul,
+.nav--secondary > ul {
+	@extend %list-unstyled;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    
+	> li {
+		margin-left: $spacing-sm;
+		margin-right: $spacing-sm;
+		display: inline-block;
+		margin-bottom: 0;
+		padding-top: $spacing-sm;
+		padding-bottom: $spacing-sm;
+
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+
+		> a {
+			font-family: $heading-font-family;
+		}
+	}
+}
+
+
+// =============================================
+// Nav Primary
+// =============================================
+
+.nav--primary {
+	> ul {
+		text-align: center;
+
+		> li {
+			@include breakpoint($screen-lg) {
+				margin-left: $spacing-xs;
+				margin-right: $spacing-xs;
+			}
+
+			> a {
+		   		font-weight: $bold;
+		   		font-size: $font-size-h6;
+				position: relative;
+		   	}
+
+			/* Active state */
+			&.active a:before {
+				@include arrow(up, 8px, $black);
+				position: absolute;
+				bottom: -0.9rem;
+				left: 50%;
+				margin-left: -12px;
+			}
+		}
+	}
+}
+
+@include breakpoint($screen-sm) {
+	.nav--primary > ul > li > a {
+		font-size: $font-size-h3;
+		padding-right: 12px;
+	}
+}
+
+@include breakpoint($screen-md) {
+	.nav--primary {
+		> ul {
+			text-align: left;
+
+			> li > a {
+				font-size: $font-size-h2;
+			}
+		}
+	}
+}
+
+@include breakpoint($screen-lg) {
+	.nav--primary > ul > li > a {
+		font-size: $font-size-h3;
+	}
+}
+
+
+// =============================================
+// Nav Secondary
+// =============================================
+
+@include breakpoint($screen-lg) {
+	.nav--secondary li {
+		font-size: $font-size-h5;
+		line-height: 2.3em;
+	}
+}
+
+
+.nav--stack {
+    ul,
+    ol {
+        @extend %list-unstyled;
+    }
+    li {
+        
+    }
+    a {
+        display: block;
+        padding: $spacing-xs 0;
+    }
+}

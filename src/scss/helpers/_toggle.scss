@@ -1,0 +1,11 @@
+// =============================================
+// Toggle
+// =============================================
+
+.js-toggle__title {
+	cursor: pointer;
+}
+
+.active > .js-toggle__content {
+	display: block !important;
+}

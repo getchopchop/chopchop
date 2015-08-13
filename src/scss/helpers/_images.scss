@@ -1,0 +1,16 @@
+// =============================================
+// Image Responsive
+// =============================================
+
+%img-responsive {
+    display: block;
+    width: 100% \9;
+    max-width: 100%;
+    height: auto;
+}
+figure {
+    margin: 0;
+    img {
+        @extend %img-responsive;
+    }
+}

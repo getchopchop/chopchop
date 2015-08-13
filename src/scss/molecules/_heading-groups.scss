@@ -1,0 +1,25 @@
+// Basic Heading Group
+.hgroup {
+    &__title {
+        margin-bottom: 0;
+    }
+    &__subtitle {
+        margin-top: 0;
+    }
+}
+
+// Heading Group w/Buttons
+.hgroup--actions {
+    display: flex;
+    align-items: center;
+}
+.hgroup--actions .hgroup__headings {
+    flex-grow: 1;
+}
+.hgroup--actions .hgroup__actions {
+    flex-grow: 1;
+    text-align: right;
+    .btn {
+        margin-bottom: .2rem;
+    }
+}
