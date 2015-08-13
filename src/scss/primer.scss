@@ -23,15 +23,6 @@
 $sidebar-open-width: 120px;
 $sidebar-closed-width: 50px;
 
-.primer-menu-toggle {
-    background-color: hotpink;
-    &.is-active,
-    &:hover,
-    &:focus {
-        background-color: darken(hotpink, 20%);
-    }
-}
-
 #primer-sidebar,
 #primer-wrapper,
 #primer-content-wrapper {
@@ -71,9 +62,28 @@ $sidebar-closed-width: 50px;
 // =============================================
 #primer-sidebar,
 .primer-header,
-.primer-heading {
+.primer-heading,
+.primer-menu-toggle,
+.menu-toggle__bar,
+.menu-toggle:before,
+.menu-toggle:after,
+.primer-grid > * span {
     background: hotpink;
-    color: #fff;
+}
+.primer-menu-toggle {
+    &.is-active,
+    &:hover,
+    &:focus {
+        background-color: darken(hotpink, 20%);
+    }
+}
+.menu-toggle {
+    color: hotpink;
+}
+#primer-sidebar,
+.primer-header,
+.primer-heading {
+    color: white;
 }
 
 
@@ -106,7 +116,6 @@ $sidebar-closed-width: 50px;
 }
 
 .menu-toggle {
-    color: hotpink;
     width: 50px;
     height: 50px;
     padding: 1.1rem 0;
@@ -127,7 +136,6 @@ $sidebar-closed-width: 50px;
     &:before,
     &:after {
         height: 2px;
-        background-color: hotpink;
         position: absolute;
         left: 10px;
         right: 10px;
@@ -164,7 +172,6 @@ $sidebar-closed-width: 50px;
 
 .primer-grid > * {
     span {
-        background-color: hotpink;
         height: 40px;
         display: block;
     }

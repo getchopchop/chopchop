@@ -1,5 +1,5 @@
 <aside class="aside" id="primer-sidebar">
-    <header class="primer-header" style="width: 130px;">
+    <header class="primer-header" style="width: 100%;">
         
         <a href="/" class="primer-logo" style="display: block; position: relative; padding-left: 40px; margin-bottom: 40px;">
             <span style="font-size: 400%; line-height: 0; position: absolute; top: 0; left: 0;">&there4;</span>
