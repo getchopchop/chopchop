@@ -19,7 +19,7 @@
     
     <div id="primer-wrapper">
     
-        <?php include('../src/templates/primer/sidebar.php'); ?>
+        <?php include('templates/primer/sidebar.php'); ?>
     
         <main class="main" id="primer-content-wrapper">
             
@@ -41,7 +41,7 @@
     
     </div><!--/#wrapper -->
     
-    <?php include('../src/templates/_js.php'); ?>
+    <?php include('templates/_js.php'); ?>
 
 </body>
 

@@ -4,13 +4,13 @@
 <head>
 <?php require_once('../src/inc/meta.php'); ?>
     <title>Primer - Little user interface patterns to get us going</title>
-<?php include('../src/templates/_styles.php'); ?>
+<?php include('templates/_styles.php'); ?>
 </head>
 <body>
     
     <div id="primer-wrapper">
     
-        <?php include('../src/templates/primer/sidebar.php'); ?>
+        <?php include('templates/primer/sidebar.php'); ?>
     
         <main class="main" id="primer-content-wrapper">
             
@@ -83,7 +83,7 @@
     
     </div><!--/#wrapper -->
     
-    <?php include('../src/templates/_js.php'); ?>
+    <?php include('templates/_js.php'); ?>
 
 </body>
 </html>
