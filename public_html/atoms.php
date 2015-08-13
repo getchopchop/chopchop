@@ -34,6 +34,7 @@
                 <?php echo getBlock('Preformatted Text', 'atoms/pre'); ?>
                 <?php echo getBlock('Tables', 'atoms/tables'); ?>
                 <?php echo getBlock('Tags', 'atoms/tags'); ?>
+                <?php echo getBlock('Alerts', 'atoms/alerts'); ?>
                 <?php echo getBlock('Timestamps', 'atoms/timestamps'); ?>
                 <?php echo getBlock('Icons', 'atoms/icons'); ?>
                 <?php echo getBlock('Social Icons', 'atoms/icons-social'); ?>
