@@ -1,8 +1,8 @@
-<?php require_once('../src/inc/functions.php'); ?>
+<?php require_once('inc/functions.php'); ?>
 <!DOCTYPE HTML>
 <html>
 <head>
-<?php require_once('../src/inc/meta.php'); ?>
+<?php require_once('inc/meta.php'); ?>
     <title>Primer - Little user interface patterns to get us going</title>
 <?php include('templates/_styles.php'); ?>
 </head>
