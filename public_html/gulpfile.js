@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 // =============================================
 
 var config = {
-     bowerDir: 'bower_components' ,
+    bowerDir: 'bower_components',
     dest: 'build',
     src: 'src',
     vendorDir: 'vendor',
@@ -42,9 +42,9 @@ var bowerCss = [
 // Bower download
 // =============================================
 
-gulp.task('bower-install', ['clean'], function() { 
+gulp.task('bower-install', ['clean'], function() {
     return plugin.bower()
-         .pipe(gulp.dest(config.bowerDir)) 
+        .pipe(gulp.dest(config.bowerDir))
         .pipe(plugin.notify({
             message: 'Bower install task complete',
             onLast: true
@@ -56,8 +56,8 @@ gulp.task('bower-install', ['clean'], function() { 
 // Bower move JS
 // =============================================
 
-gulp.task('bower-js', ['bower-install'], function() { 
-    return gulp.src(bowerJs) 
+gulp.task('bower-js', ['bower-install'], function() {
+    return gulp.src(bowerJs)
         .pipe(plugin.rename({
             suffix: '.min'
         }))
@@ -74,7 +74,7 @@ gulp.task('bower-js', ['bower-install'], function() { 
 // Bower move CSS
 // =============================================
 
-gulp.task('bower-css', ['bower-install'], function() { 
+gulp.task('bower-css', ['bower-install'], function() {
     return gulp.src(bowerCss)
         .pipe(plugin.rename({
             suffix: '.min'
@@ -154,8 +154,8 @@ gulp.task('images', function() {
 // Fonts
 // =============================================
 
-gulp.task('fonts', function() { 
-    return gulp.src(config.src + '/fonts/**/*') 
+gulp.task('fonts', function() {
+    return gulp.src(config.src + '/fonts/**/*')
         .pipe(gulp.dest(config.dest + '/fonts'))
         .pipe(plugin.notify({
             message: 'Fonts task complete',
