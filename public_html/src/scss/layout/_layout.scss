@@ -5,16 +5,11 @@
 .l-two-col-left,
 .l-two-col-right,
 .l-three-col {
-	display: flex;
-	flex-flow: wrap;
-	justify-content: space-between;
+	@include layout;
+	@include layout-gutter;
 
 	> * {
-		width: 100%;
-	}
-
-	@include breakpoint($screen-sm) {
-		flex-flow: nowrap;
+		@include layout-col;
 	}
 }
 
@@ -27,10 +22,10 @@
 	.l-two-col-left,
 	.l-two-col-right {
 		.l-side {
-			width: 25%;
+			@include layout-col(25%);
 		}
 		.l-body {
-			width: 75%;
+			@include layout-col(75%);
 		}
 	}
 }
@@ -42,7 +37,7 @@
 
 @include breakpoint($screen-sm) {
 	.l-two-col-right {
-		flex-direction: row-reverse;
+		@include layout-reserve;
 	}
 }
 
@@ -54,11 +49,11 @@
 @include breakpoint($screen-sm) {
 	.l-three-col {
 		.l-side {
-			width: 20%;
+			@include layout-col(20%);
 			order: 1;
 		}
 		.l-body {
-			width: 60%;
+			@include layout-col(60%);
 			order: 2;
 		}
 		.l-side--right {

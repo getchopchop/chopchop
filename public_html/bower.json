@@ -1,10 +1,11 @@
 {
-  "name": "primer",
+  "name": "Primer",
   "version": "0.0.1",
   "authors": [
-    "Dave Redfern <dave@daveredfern.com>"
+    "Dave Redfern <dave@iweb.co.uk>"
+    "Gareth Joyce <gareth@iweb.co.uk>"
   ],
-  "description": "a simple library of common reuseable patterns we use across all projects everyday",
+  "description": "A starter pack to get things going for frontend development.",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -16,7 +17,7 @@
   "dependencies": {
     "jquery": "~2.1.4",
     "enquire": "~2.1.2",
-    "slick-carousel": "~1.5.8",
-    "modernizer": "~2.8.2"
+    "modernizer": "~2.8.2",
+    "normalize.css": "~3.0.3"
   }
 }
