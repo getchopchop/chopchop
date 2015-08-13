@@ -29,7 +29,8 @@ var config = {
 var bowerJs = [
     config.bowerDir + '/modernizer/modernizr.js',
     config.bowerDir + '/enquire/dist/enquire.js',
-    config.bowerDir + '/jquery/dist/jquery.js'
+    config.bowerDir + '/jquery/dist/jquery.js',
+    config.bowerDir + '/prism/prism.js'
 ];
 
 // bower css to include
