@@ -16,9 +16,9 @@ var config = {
      bowerDir: 'bower_components' ,
     dest: 'build',
     src: 'src',
-    vendor: 'vendor',
+    vendorDir: 'vendor',
     browserSyncDest: ['*', 'src/**/*'],
-    browserSyncProxy: 'booster.dredfern.dyn.iweb.co.uk'
+    browserSyncProxy: 'primer.dredfern.dyn.iweb.co.uk'
 };
 
 
@@ -26,10 +26,14 @@ var config = {
 // Bower files to fetch
 // =============================================
 
-var bowerFiles = [
+var bowerJs = [
     config.bowerDir + '/modernizer/modernizr.js',
     config.bowerDir + '/enquire/dist/enquire.js',
-    config.bowerDir + '/jquery/dist/jquery.js',
+    config.bowerDir + '/jquery/dist/jquery.js'
+];
+
+// bower css to include
+var bowerCss = [
     config.bowerDir + '/normalize.css/normalize.css'
 ];
 
@@ -47,15 +51,38 @@ gulp.task('bower-install', ['clean'], function() { 
         }));
 });
 
+
 // =============================================
-// Bower move
+// Bower move JS
 // =============================================
 
-gulp.task('bower-move', ['bower-install'], function() { 
-    return gulp.src(bowerFiles) 
-        .pipe(gulp.dest(config.vendor))
+gulp.task('bower-js', ['bower-install'], function() { 
+    return gulp.src(bowerJs) 
+        .pipe(plugin.rename({
+            suffix: '.min'
+        }))
+        .pipe(plugin.uglify())
+        .pipe(gulp.dest(config.vendorDir))
         .pipe(plugin.notify({
-            message: 'Bower moved task complete',
+            message: 'Bower JS task complete',
+            onLast: true
+        }));
+});
+
+
+// =============================================
+// Bower move CSS
+// =============================================
+
+gulp.task('bower-css', ['bower-install'], function() { 
+    return gulp.src(bowerCss)
+        .pipe(plugin.rename({
+            suffix: '.min'
+        }))
+        .pipe(plugin.minifyCss())
+        .pipe(gulp.dest(config.vendorDir))
+        .pipe(plugin.notify({
+            message: 'Bower CSS task complete',
             onLast: true
         }));
 });
@@ -145,7 +172,7 @@ gulp.task('clean', function(cb) {
     return del([
             config.bowerDir,
             config.dest,
-            config.vendor
+            config.vendorDir
         ], cb);
 });
 
@@ -154,7 +181,7 @@ gulp.task('clean', function(cb) {
 // Run build
 // =============================================
 
-gulp.task('default', ['clean', 'bower-install', 'bower-move'], function() {
+gulp.task('default', ['clean', 'bower-install', 'bower-js', 'bower-css'], function() {
     gulp.start('styles', 'scripts', 'images', 'fonts');
 });
 
