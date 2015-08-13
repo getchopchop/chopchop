@@ -9,7 +9,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="mobile-web-app-capable" content="yes">
 	<title>Primer - Style Guide</title>
-	<?php include( '../src/templates/_styles.php'); ?>
+	<?php include( 'templates/_styles.php'); ?>
 
 </head>
 

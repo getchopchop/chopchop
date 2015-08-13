@@ -8,7 +8,10 @@
 .g-five-up,
 .g-six-up {
     @include grid;
-    @include grid-up; // Default 1 column
+
+    > * {
+        @include grid-up; // Default 1 column
+    }
 }
 
 
