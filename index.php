@@ -4,7 +4,7 @@
 <head>
 <?php require_once('inc/meta.php'); ?>
     <title>Primer - Little user interface patterns to get us going</title>
-<?php include('templates/_styles.php'); ?>
+<?php include('templates/styles.php'); ?>
 </head>
 <body>
 
@@ -105,7 +105,7 @@
 
     </div><!--/#wrapper -->
 
-    <?php include('templates/_js.php'); ?>
+    <?php include('templates/scripts.php'); ?>
 
 </body>
 </html>
