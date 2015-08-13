@@ -23,23 +23,6 @@ var config = {
 
 
 // =============================================
-// Bower files to fetch
-// =============================================
-
-var bowerJs = [
-    config.bowerDir + '/modernizer/modernizr.js',
-    config.bowerDir + '/enquire/dist/enquire.js',
-    config.bowerDir + '/jquery/dist/jquery.js',
-    config.bowerDir + '/prism/prism.js'
-];
-
-// bower css to include
-var bowerCss = [
-    config.bowerDir + '/normalize.css/normalize.css'
-];
-
-
-// =============================================
 // Bower download
 // =============================================
 
@@ -48,42 +31,6 @@ gulp.task('bower-install', ['clean'], function() {
         .pipe(gulp.dest(config.bowerDir))
         .pipe(plugin.notify({
             message: 'Bower install task complete',
-            onLast: true
-        }));
-});
-
-
-// =============================================
-// Bower move JS
-// =============================================
-
-gulp.task('bower-js', ['bower-install'], function() {
-    return gulp.src(bowerJs)
-        .pipe(plugin.rename({
-            suffix: '.min'
-        }))
-        .pipe(plugin.uglify())
-        .pipe(gulp.dest(config.vendorDir))
-        .pipe(plugin.notify({
-            message: 'Bower JS task complete',
-            onLast: true
-        }));
-});
-
-
-// =============================================
-// Bower move CSS
-// =============================================
-
-gulp.task('bower-css', ['bower-install'], function() {
-    return gulp.src(bowerCss)
-        .pipe(plugin.rename({
-            suffix: '.min'
-        }))
-        .pipe(plugin.minifyCss())
-        .pipe(gulp.dest(config.vendorDir))
-        .pipe(plugin.notify({
-            message: 'Bower CSS task complete',
             onLast: true
         }));
 });
@@ -182,7 +129,7 @@ gulp.task('clean', function(cb) {
 // Run build
 // =============================================
 
-gulp.task('default', ['clean', 'bower-install', 'bower-js', 'bower-css'], function() {
+gulp.task('default', ['clean', 'bower-install'], function() {
     gulp.start('styles', 'scripts', 'images', 'fonts');
 });
 

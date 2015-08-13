@@ -18,6 +18,6 @@
     "enquire": "~2.1.2",
     "modernizer": "~2.8.2",
     "normalize.css": "~3.0.3",
-    "prism": "~1.0.1"
+    "highlightjs": "~8.7.0"
   }
 }
