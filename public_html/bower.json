@@ -17,6 +17,7 @@
     "jquery": "~2.1.4",
     "enquire": "~2.1.2",
     "modernizer": "~2.8.2",
-    "normalize.css": "~3.0.3"
+    "normalize.css": "~3.0.3",
+    "highlightjs": "~8.7.0"
   }
 }
