@@ -5,6 +5,10 @@
 @mixin grid() {
     display: flex;
     flex-wrap: wrap;
+
+    > * {
+        @include grid-up;
+    }
 }
 
 
@@ -22,6 +26,7 @@
         padding-right: $half-gutter;
     }
 }
+
 
 // =============================================
 // Grid Up
