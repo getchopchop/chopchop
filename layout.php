@@ -8,13 +8,9 @@
 </head>
 <body>
 
-    <div id="primer-wrapper">
-
-        <?php include('templates/primer/sidebar.php'); ?>
+    <div id="primer-wrapper">        
 
         <main class="main" id="primer-content-wrapper">
-
-
 
             <div class="container">
 

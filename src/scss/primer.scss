@@ -17,50 +17,12 @@
 @import "helpers/visible";
 
 
-// =============================================
-// Primer -- Structure
-// =============================================
-$sidebar-open-width: 120px;
-$sidebar-closed-width: 50px;
-
-#primer-sidebar,
-#primer-wrapper,
-#primer-content-wrapper {
-    transition: all 0.5s ease;
-}
-#primer-sidebar {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: $sidebar-open-width;
-    width: $sidebar-open-width;
-    height: 100%;
-    margin-left: -$sidebar-open-width;
-    overflow-y: auto;
-}
-#primer-wrapper {
-    padding-left: $sidebar-open-width;
-}
-#primer-content-wrapper {
-    width: 100%;
-    position: relative;
-    padding: 15px;
-}
-
-// Toggled
-.js-toggled {
-    padding-left: $sidebar-closed-width !important;
-}
-
-.js-toggled #primer-sidebar {
-    width: $sidebar-closed-width !important;
-}
 
 
 // =============================================
 // Primer -- Branding
 // =============================================
-#primer-sidebar,
+
 .primer-header,
 .primer-heading,
 .primer-menu-toggle,
@@ -80,7 +42,6 @@ $sidebar-closed-width: 50px;
 .menu-toggle {
     color: hotpink;
 }
-#primer-sidebar,
 .primer-header,
 .primer-heading {
     color: white;

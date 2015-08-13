@@ -10,13 +10,7 @@
 
     <div id="primer-wrapper">
 
-        <?php include('templates/primer/sidebar.php'); ?>
-
         <main class="main" id="primer-content-wrapper">
-
-            <button class="c-hamburger c-hamburger--htx js-menu-toggle primer-menu-toggle">
-              <span>toggle menu</span>
-            </button>
 
             <div class="container">
 <?php if($_SERVER['REQUEST_URI'] == '/') { ?>
@@ -25,7 +19,30 @@
                   <h5 class="hgroup__subtitle">a simple library of common reuseable patterns we use across all projects everyday</h5>
                 </hgroup>
 
-                <h3>Documentation to write</h3>
+                <h2>Components</h2>
+                <div class="g-three-up g-gutter">
+                    <?php
+                    foreach(array('atoms', 'molecules', 'organisms', 'grid', 'layout', 'helpers') as $toplevel) {
+                    ?>
+                    <div>
+                        <h3><?= ucwords($toplevel) ?></h3>
+                        <ul>
+                            <?php
+                            $quarks = dir('templates/' . $toplevel);
+                            while (false !== ($entry = $quarks->read())) {
+                                if(substr($entry, -4) == '.php') {
+                                    $entry = substr($entry, 0, strlen($entry) - 4);
+                            ?>
+                            <li><a href="<?= $toplevel ?>/<?= $entry ?>"><?= ucwords($entry) ?></a></li>
+                            <?php }} ?>
+                        </ul>
+                    </div>
+                    <?php } ?>
+                </div>
+
+                <hr />
+
+                <h2>Documentation to write</h2>
                 <ul>
                     <li>Browser Support, why?</li>
                     <li>Notes on Gulp, why? Available commands.</li>
@@ -72,96 +89,15 @@
                     <li>WordPress theme?</li>
                 </ul>
 
-                <hr />
 
-                <div class="g-three-up g-gutter">
-                    <?php
-                    foreach(array('atoms', 'molecules', 'organisms', 'grid', 'layout', 'helpers') as $toplevel) {
-                    ?>
-                    <div>
-                        <h2><?= ucwords($toplevel) ?></h2>
-                        <ul>
-                            <?php
-                            $quarks = dir('templates/' . $toplevel);
-                            while (false !== ($entry = $quarks->read())) {
-                                if(substr($entry, -4) == '.php') {
-                                    $entry = substr($entry, 0, strlen($entry) - 4);
-                            ?>
-                            <li><a href="atoms/<?= $entry ?>"><?= ucwords($entry) ?></a></li>
-                            <?php }} ?>
-                        </ul>
-                    </div>
-                    <?php } ?>
-<!--
-                    <div>
-                        <h2>Molecules</h2>
-                        <ul>
-                            <li><a href="molecules.php">Breadcrumb</a></li>
-                            <li><a href="molecules.php">Embed Container</a></li>
-                            <li><a href="molecules.php">Heading Groups</a></li>
-                            <li><a href="molecules.php">Modal</a></li>
-                            <li><a href="molecules.php">Nav Dropdown</a></li>
-                            <li><a href="molecules.php">Nav</a></li>
-                            <li><a href="molecules.php">Overlay</a></li>
-                            <li><a href="molecules.php">Pagination</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Organisms</h2>
-                        <ul>
-                            <li><a href="organisms.php">Footer</a></li>
-                            <li><a href="organisms.php">Header</a></li>
-                            <li><a href="organisms.php">Main Nav</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Grids</h2>
-                        <ul>
-                            <li><a href="layout.php">Grid Two Up</a></li>
-                            <li><a href="layout.php">Grid Three Up</a></li>
-                            <li><a href="layout.php">Grid Four Up</a></li>
-                            <li><a href="layout.php">Grid Five Up</a></li>
-                            <li><a href="layout.php">Grid Six Up</a></li>
-                            <li><a href="layout.php">Grid Two Up with Gutter</a></li>
-                            <li><a href="layout.php">Grid Three Up with Gutter</a></li>
-                            <li><a href="layout.php">Grid Four Up with Gutter</a></li>
-                            <li><a href="layout.php">Grid Five Up with Gutter</a></li>
-                            <li><a href="layout.php">Grid Six Up with Gutter</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Layout</h2>
-                        <ul>
-                            <li><a href="layout.php">Two Column Left Sidebar</a></li>
-                            <li><a href="layout.php">Two Column Right Sidebar</a></li>
-                            <li><a href="layout.php">Three Column</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Helpers</h2>
-                        <ul>
-                            <li><a href="helpers.php">Align</a></li>
-                            <li><a href="helpers.php">Animation</a></li>
-                            <li><a href="helpers.php">Arrow</a></li>
-                            <li><a href="helpers.php">Breakpoint</a></li>
-                            <li><a href="helpers.php">Clearfix</a></li>
-                            <li><a href="helpers.php">Ellipsis</a></li>
-                            <li><a href="helpers.php">Grid</a></li>
-                            <li><a href="helpers.php">Images</a></li>
-                            <li><a href="helpers.php">Layout</a></li>
-                            <li><a href="helpers.php">Toggle</a></li>
-                            <li><a href="helpers.php">Visible</a></li>
-                        </ul>
-                    </div>
-                -->
-                </div>
-<?php } else {
+                <?php } else {
 
-    if(file_exists("templates" . $_SERVER['REQUEST_URI'] . ".php")) {
-        echo getBlock(str_replace("/", " &gt; ",substr($_SERVER['REQUEST_URI'], 1)), $_SERVER['REQUEST_URI']);
-    }
+                    if(file_exists("templates" . $_SERVER['REQUEST_URI'] . ".php")) {
+                        echo getBlock(str_replace("/", " &gt; ",substr($_SERVER['REQUEST_URI'], 1)), $_SERVER['REQUEST_URI']);
+                    }
 
-}?>
+                }?>
+
             </div>
 
 
