@@ -33,7 +33,7 @@
                                 if(substr($entry, -4) == '.php') {
                                     $entry = substr($entry, 0, strlen($entry) - 4);
                             ?>
-                            <li><a href="<?= $toplevel ?>/<?= $entry ?>"><?= ucwords($entry) ?></a></li>
+                            <li><a href="<?= $toplevel ?>/<?= $entry ?>"><?= str_replace('-', ' ', ucwords($entry)) ?></a></li>
                             <?php }} ?>
                         </ul>
                     </div>
