@@ -16,8 +16,8 @@
                 
                 <?php if($_SERVER['REQUEST_URI'] == '/') { ?>
                 <hgroup class="hgroup">
-                  <h1 class="hgroup__title">Primer</h1>
-                  <h5 class="hgroup__subtitle">a simple library of common reuseable patterns we use across all projects everyday</h5>
+                  <h1 class="hgroup__title">ChopChop</h1>
+                  <h5 class="hgroup__subtitle">a simple library of common reuseable patterns we use everyday!</h5>
                 </hgroup>
 
                 <h2>Components</h2>

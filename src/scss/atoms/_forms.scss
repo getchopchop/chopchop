@@ -2,16 +2,6 @@
 // Form
 // =============================================
 
-fieldset {
-	margin: 0;
-    padding: 0;
-	border: 0;
-}
-
-legend {
-    display: none;
-}
-
 input,
 label,
 select,
@@ -19,7 +9,6 @@ textarea {
 	display: block;
 	font-family: $font-family;
 	font-size: 1em;
-	color: $black;
 }
 
 label {
@@ -76,13 +65,31 @@ input[type="file"] {
     padding-right: 0;
 }
 
+input[type="color"] {
+    padding: 0;
+    max-width: 10rem;
+}
+input[type="range"] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+// Button Padding Fix
+input[type="submit"].btn {
+    vertical-align: bottom;
+}
+
 
 // =============================================
-// Form group
+// Form field groups
 // =============================================
 
-.form-group {
+.field-container {
 	margin-bottom: $spacing;
+    margin: 0.6em 0;
+}
+.field-group .field-container:first-of-type {
+    margin-top: 0;
 }
 
 
@@ -100,115 +107,47 @@ input[type="file"] {
 
 
 // =============================================
-// Form Lists
+// Fieldsets
 // =============================================
-.form-list {
+
+fieldset {
     margin: 0;
     padding: 0;
-    list-style: none;
+	border: 0;
+    margin-bottom: 2rem;
 }
-.form-group,
-.field-container {
-    margin: 0.6em 0;
+legend {
+    @extend .h5;
 }
+
+
+// =============================================
+// Validation
+// =============================================
+
+.error,
 abbr[title="Required"],
 .required em {
     color: red;
 }
-.required em {
-    margin-right: 4px;
+.valid {
+    color: green;
 }
-.legend {
-    @extend .h5;
+.is-error {
+    border-color: red;
 }
-.fieldset {
-    margin-bottom: 2rem;
+.is-valid {
+    border-color: green;
 }
-
-
-// =============================================
-// Input Groups
-// =============================================
-.input-group {
-    position: relative;
-    display: table;
-    border-collapse: separate;
-}
-.input-group .form-control {
-    position: relative;
-    z-index: 2;
-    float: left;
-    width: 100%;
-    margin-bottom: 0;
-}
-.input-group-btn,
-.input-group .form-control {
-    display: table-cell;
-}
-.input-group-btn:not(:first-child):not(:last-child),
-.input-group .form-control:not(:first-child):not(:last-child) {
-    border-radius: 0;
-}
-.input-group-btn {
-    width: 1%;
-    white-space: nowrap;
-    vertical-align: middle;
-    .btn,
-    .button {
-        margin-left: -2px;
-    }
-}
-.input-group .form-control {
-    border-right: 0;
-}
-.input-group .form-control:first-child,
-.input-group-btn:first-child > .btn,
-.input-group-btn:first-child > .btn-group > .btn,
-.input-group-btn:first-child > .dropdown-toggle,
-.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-}
-.input-group .form-control:last-child,
-.input-group-btn:last-child > .btn,
-.input-group-btn:last-child > .btn-group > .btn,
-.input-group-btn:last-child > .dropdown-toggle,
-.input-group-btn:first-child > .btn:not(:first-child),
-.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-}
-.input-group-btn {
-    position: relative;
-    font-size: 0;
-    white-space: nowrap;
-}
-.input-group-btn > .btn {
-    position: relative;
-}
-.input-group-btn > .btn + .btn {
-    margin-left: -1px;
-}
-.input-group-btn > .btn:hover,
-.input-group-btn > .btn:focus,
-.input-group-btn > .btn:active {
-    z-index: 2;
-}
-.input-group-btn:first-child > .btn,
-.input-group-btn:first-child > .btn-group {
-    margin-right: -1px;
-}
-
-
-// =============================================
-// Input Radio Wrapper
-// =============================================
-.input-radio-wrapper {}
-.input-radio-wrapper .input-radio {
+.validation-advice {
     display: inline-block;
-    margin-right: 6px;
-    .radio {
-        margin-left: 4px;
+    padding: 0.5rem 1rem;
+    margin-top: 0.2rem;
+    > * {
+        margin: 0;
     }
+}
+.has-error .validation-advice {
+    background-color: #fcc;
+    border-color: red;
 }

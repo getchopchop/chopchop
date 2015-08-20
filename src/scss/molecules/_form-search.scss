@@ -1,0 +1,29 @@
+// =============================================
+// Molecule - Search Form
+// =============================================
+
+.form-search {
+    
+    position: relative;
+
+    input {
+        display: block;
+    }
+
+    input[type=search] {
+        width: 100%;
+        padding-right: 7em;
+        position: relative;
+        top: 0;
+    }
+
+    input[type=submit] {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        cursor: pointer;
+    }
+    
+}
