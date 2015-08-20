@@ -5,5 +5,5 @@
     function getBlock($title, $location) {
         $contents = file_get_contents(TEMPLATE_PATH . $location . '.php');
         return '<h5 class="primer-heading">' . $title . '</h5>' . $contents .
-        "<pre><code class='html'>" . htmlspecialchars($contents) . "</code></pre>";
+        "<pre class='primer-code'><code class='html'>" . htmlspecialchars($contents) . "</code></pre>";
     }

@@ -13,7 +13,8 @@
         <main class="main" id="primer-content-wrapper">
 
             <div class="container">
-<?php if($_SERVER['REQUEST_URI'] == '/') { ?>
+                
+                <?php if($_SERVER['REQUEST_URI'] == '/') { ?>
                 <hgroup class="hgroup">
                   <h1 class="hgroup__title">Primer</h1>
                   <h5 class="hgroup__subtitle">a simple library of common reuseable patterns we use across all projects everyday</h5>

@@ -140,3 +140,32 @@
         background-color: blue;
     }
 }
+
+.primer-quark,
+.primer-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+}
+
+.primer-callout {
+    border-left-width: 5px;
+    border-radius: 3px;
+    border-left-color: hotpink;
+    h4 {
+        margin-top: 0;
+    }
+    :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.primer-code {
+    clear: both;
+    border: 1px solid #efefef;
+}
+
+
+.primer-ellipsis {
+    @include ellipsis;
+}

@@ -19,7 +19,7 @@
 </p>
 
 <p>
-    <a href="#" class="btn btn--sm">Button SM</a>
+    <a href="#" class="btn btn--sm">Button sm</a>
     <button type="button" class="btn btn--sm">Button sm</button>
 </p>
 
@@ -31,5 +31,5 @@
 <p>
     <a href="#" class="btn btn--block">Button Block</a>
     <br>
-    <button type="button" class="btn btn--block btn--primary">Button Block</button>
+    <button type="button" class="btn btn--block">Button Block</button>
 </p>

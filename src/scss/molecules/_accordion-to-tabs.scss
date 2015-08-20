@@ -1,0 +1,120 @@
+$tabs-padding			: 10px !default;
+
+// =============================================
+// Accordion to Tabs
+// =============================================
+.tabs__toggle__item {
+	position: relative;
+}
+
+.tabs__tab {
+	display: block;
+	font-size: $font-size-lg * 1.2;
+	padding: $tabs-padding;
+	text-decoration: none;
+    background-color: #ddd;
+	&:hover {
+		text-decoration: none;
+	}
+}
+.tabs__tab:hover,
+.tabs__tab--active {
+	background-color: #999;
+	color: white;
+	.tabs__tab__title {
+		color: white;
+	}
+}
+.tabs__content {
+	margin: 0;
+	overflow: hidden;
+	height: 0;
+	visibility: hidden;
+}
+.tabs__content--active {
+	height: auto;
+	visibility: visible;
+}
+.tabs__content-wrapper {
+	margin-top: 0;
+    margin-bottom: 0;
+}
+
+@include breakpoint($screen-md) {
+    .tabs__toggle__item {
+    	.btn {
+    		top: $tabs-padding * 1.6;
+            right: $tabs-padding * 1.6;
+    	}
+    }
+    .tabs__tab {
+        padding-top: $tabs-padding * 1.6;
+        padding-bottom: $tabs-padding * 1.6;
+    }
+}
+
+
+
+// =============================================
+// THE UL THAT TOGGLES TAB DISPLAY
+// =============================================
+.tabs__toggle {
+	margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// =============================================
+// THIS BIT DOES THE SWITCH
+// BETWEEN ACCORDION AND TABS
+// ACCORDION BY DEFAULT
+// THIS NEEDS TO BE CHANGED
+// TO A MIXIN, HELP!
+// =============================================
+.tabs__toggle {
+	@include breakpoint(max-width $screen-xs-max) {
+		display: none;
+	}
+	.tabs__toggle__item {
+		display: inline-block;
+	}
+}
+.tabs__content-wrapper {
+	.tabs__toggle__item {
+		@include breakpoint($screen-sm) {
+			display: none;
+		}
+	}
+}
+
+
+// =============================================
+// FORCE TABS!
+// ADD THIS CLASS TO SHOW TABS
+// WITHOUT ACCORDION
+// ON ALL SCREEN SIZES
+// =============================================
+.tabs--forced {
+    .tabs__toggle {
+        display: block !important;
+    }
+    .tabs__content-wrapper .tabs__toggle__item {
+        display: none !important;
+    }
+}
+
+
+// =============================================
+// FORCE ACCORDION!
+// ADD THIS CLASS TO SHOW ACCORDION
+// WITHOUT TABS
+// ON ALL SCREEN SIZES
+// =============================================
+.accordion--forced {
+    .tabs__toggle {
+        display: none !important;
+    }
+    .tabs__content-wrapper .tabs__toggle__item {
+        display: block !important;
+    }
+}
