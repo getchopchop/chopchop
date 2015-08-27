@@ -48,7 +48,7 @@ gulp.task('styles', function() {
         .pipe(plugin.rename({
             suffix: '.min'
         }))
-        .pipe(plugin.minifyCss())
+        //.pipe(plugin.minifyCss())
         //.pipe(plugin.sourcemaps.write())
         .pipe(gulp.dest(config.dest + '/css'))
         .pipe(plugin.notify({
@@ -148,6 +148,7 @@ gulp.task('watch', function() {
     // Create browser sync server
     browserSync.init({
         proxy: config.browserSyncProxy,
+        open: false,
         ghostMode: {
             clicks: true,
             forms: true,
