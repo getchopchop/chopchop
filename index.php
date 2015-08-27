@@ -15,6 +15,7 @@
             <div class="container">
                 
                 <?php if($_SERVER['REQUEST_URI'] == '/') { ?>
+                    <a href="#" class="btn js-toggle-theme">Toggle Theme</a>
                 <hgroup class="hgroup">
                   <h1 class="hgroup__title">ChopChop</h1>
                   <h5 class="hgroup__subtitle">a simple library of common reuseable patterns we use everyday!</h5>
