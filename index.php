@@ -14,12 +14,12 @@
 
             <div class="container">
                 
-                 <a href="#" class="btn js-toggle-theme">Toggle Theme</a>
+                <a href="#" class="btn js-toggle-theme">Toggle Theme</a>
                  
                 <?php if($_SERVER['REQUEST_URI'] == '/') { ?>
                    
                 <hgroup class="hgroup">
-                  <h1 class="hgroup__title">ChopChop</h1>
+                  <h1 class="hgroup__title">ChopChop Chop Chop Chop-Chop chop chop</h1>
                   <h5 class="hgroup__subtitle">a simple library of common reuseable patterns we use everyday!</h5>
                 </hgroup>
 
@@ -121,6 +121,7 @@
                 <ul class="list-unstyled">
                     <li><a href="https://gitlab.iweb.co.uk/frontend/primer">Gitlab</a></li>
                 </ul>
+                <small>&copy; <a href="/getting-started/credits/">ChopChop</a> is part of the <strong>CrackOn Group</strong>&trade; 2015.</small>
             </div>
         </footer>
 
