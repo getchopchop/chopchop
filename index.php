@@ -13,7 +13,7 @@
         <main class="main" id="primer-content-wrapper">
 
             <div class="container">
-                <a href="#" class="btn js-toggle-theme">Toggle Theme</a>
+                <a href="#" class="btn js-toggle-theme" style="position: fixed; top: 0; right: 0;">T</a>
 
                 <?php if($_SERVER['REQUEST_URI'] == '/') { ?>
 
@@ -105,7 +105,19 @@
                 <?php } else {
 
                     if(file_exists("templates" . $_SERVER['REQUEST_URI'] . ".php")) {
-                        echo getBlock(str_replace("/", " &gt; ",substr($_SERVER['REQUEST_URI'], 1)), $_SERVER['REQUEST_URI']);
+                        $paths = explode("/", substr($_SERVER['REQUEST_URI'], 1));
+                        if(count($paths)){
+                            $html = "<h1 style='margin-top: 0;'>" . array_pop($paths) . "</h1>";
+                    
+                            $wrapped = array_map(
+                               function ($el) {
+                                  return "<a href='#'>{$el}</a>";
+                               },
+                               $paths
+                            );
+
+                            echo getBlock(implode($wrapped) . $html, $_SERVER['REQUEST_URI']);
+                        }
                     }
 
                 }?>

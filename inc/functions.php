@@ -9,5 +9,5 @@
             return '<pre class="primer-code"><code class="html">' . htmlspecialchars(trim($matches[1])) . '</code></pre>';
         }, $contents);
 
-        return '<h1 class="primer-heading">' . $title . '</h1>' . $contents;
+        return '<header class="site-masthead">' . $title . '</header>' . $contents;
     }
