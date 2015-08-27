@@ -113,6 +113,14 @@
 
 
         </main>
+        
+        <footer class="footer">
+            <div class="container">
+                <ul class="list-unstyled">
+                    <li><a href="https://gitlab.iweb.co.uk/frontend/primer">Gitlab</a></li>
+                </ul>
+            </div>
+        </footer>
 
     </div><!--/#wrapper -->
 
