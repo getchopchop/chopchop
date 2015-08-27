@@ -2,6 +2,7 @@
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/highlightjs/highlight.pack.min.js"></script>
 <script src="/build/js/script.min.js"></script>
+<script src="/build/js/primer.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 <script type='text/javascript' id="__bs_script__">//<![CDATA[

@@ -14,7 +14,10 @@
 
             <div class="container">
                 
+                 <a href="#" class="btn js-toggle-theme">Toggle Theme</a>
+                 
                 <?php if($_SERVER['REQUEST_URI'] == '/') { ?>
+                   
                 <hgroup class="hgroup">
                   <h1 class="hgroup__title">ChopChop</h1>
                   <h5 class="hgroup__subtitle">a simple library of common reuseable patterns we use everyday!</h5>
@@ -112,6 +115,14 @@
 
 
         </main>
+        
+        <footer class="footer">
+            <div class="container">
+                <ul class="list-unstyled">
+                    <li><a href="https://gitlab.iweb.co.uk/frontend/primer">Gitlab</a></li>
+                </ul>
+            </div>
+        </footer>
 
     </div><!--/#wrapper -->
 
