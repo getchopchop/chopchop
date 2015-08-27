@@ -23,149 +23,20 @@
 // Primer -- Branding
 // =============================================
 
-.primer-header,
-.primer-heading,
-.primer-menu-toggle,
-.menu-toggle__bar,
-.menu-toggle:before,
-.menu-toggle:after,
-.primer-grid > * span {
-    background: hotpink;
-}
-.primer-menu-toggle {
-    &.is-active,
-    &:hover,
-    &:focus {
-        background-color: darken(hotpink, 20%);
-    }
-}
-.menu-toggle {
-    color: hotpink;
-}
-.primer-header,
-.primer-heading {
-    color: white;
-}
+.well {
+    padding: 20px 40px 40px 40px;
 
-
-// =============================================
-// Primer -- Content
-// =============================================
-.primer-header {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.primer-logo {
-    color: #fff;
-    font-weight: bold;
-    font-size: 1em;
-    &:hover {
-        color: yellow;
-    }
-}
-.primer-heading {
-    text-transform: uppercase;
-    padding: 10px;
-}
-
-
-
-
-.menu-toggle,
-.menu-toggle__bar {
-    transition: all 0.5s ease;
-}
-
-.menu-toggle {
-    width: 50px;
-    height: 50px;
-    padding: 1.1rem 0;
-    text-align: center;
-
-    &__bar {
-        top: 50%;
-        margin-top: -1px;
-        opacity: 1;
+    pre code {
+        background-color: #f4f4f4;
+        padding: 20px;
+        border: 1px solid #ccc;
     }
 
-    &__label {
-        font-size: 0.4rem;
-        text-transform: uppercase;
-        display: none;
+    &:nth-child(even) {
+        background-color: #f4f4f4;
+
+        pre code {
+            background-color: #fff;
+        }
     }
-    &__bar,
-    &:before,
-    &:after {
-        height: 2px;
-        position: absolute;
-        left: 10px;
-        right: 10px;
-    }
-
-    &:before,
-    &:after {
-        content: "";
-    }
-
-    &:before {
-        top: 15px;
-    }
-
-    &:after {
-        bottom: 15px;
-    }
-
-    &.js-toggled .menu-toggle__bar {
-        opacity: 0;
-    }
-//    &.js-toggled:before {
-//        transform: rotate(-45deg);
-//    }
-//    &.js-toggled:after {
-//        transform: rotate(45deg);
-//    }
-}
-
-
-// =============================================
-// Primer -- Grid
-// =============================================
-
-.primer-grid > * {
-    span {
-        height: 40px;
-        display: block;
-    }
-    &:nth-child(odd) span {
-        background-color: blue;
-    }
-}
-
-.primer-quark,
-.primer-callout {
-    padding: 20px;
-    margin: 20px 0;
-    border: 1px solid #eee;
-}
-
-.primer-callout {
-    border-left-width: 5px;
-    border-radius: 3px;
-    border-left-color: hotpink;
-    h4 {
-        margin-top: 0;
-    }
-    :last-child {
-        margin-bottom: 0;
-    }
-}
-
-.primer-code {
-    clear: both;
-    border: 1px solid #efefef;
-}
-
-
-.primer-ellipsis {
-    @include ellipsis;
 }
