@@ -42,12 +42,21 @@
                 </div>
 
                 <hr />
-
+                
+                <h2>Getting Started</h2>
+                <p class="lead">This is the lead.</p>
+                
                 <h2>Documentation to write</h2>
                 <ul>
+                    <li>https://www.daveredfern.com/2015/08/npm-and-bower-when-to-use-each/</li>
+                    <li>Notes on Gulp, why? Available commands.</li>
+                    <li>NPM, manages packages including gulp</li>
+                    <li>Bower, manages production ready packages</li>
                     <li>Browser Support, why?</li>
                     <li>Notes on Gulp, why? Available commands.</li>
+                    <li>http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/</li>
                     <li>Notes on BEM, why?</li>
+                    <li>Integration w/Isabela: https://gitlab.iweb.co.uk/iweb/isabela</li>
                 </ul>
 
                 <h3>Why Primer?</h3>
