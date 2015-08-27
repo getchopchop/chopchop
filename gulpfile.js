@@ -17,8 +17,8 @@ var config = {
     dest: 'build',
     src: 'src',
     vendorDir: 'vendor',
-    browserSyncDest: ['*', 'src/**/*'],
-    browserSyncProxy: 'primer.dredfern.dyn.iweb.co.uk'
+    browserSyncDest: ['*', 'src/**/*']
+    //browserSyncProxy: 'primer.dredfern.dyn.iweb.co.uk'
 };
 
 
@@ -147,7 +147,7 @@ gulp.task('watch', function() {
 
     // Create browser sync server
     browserSync.init({
-        proxy: config.browserSyncProxy,
+        //proxy: config.browserSyncProxy,
         open: false,
         ghostMode: {
             clicks: true,
