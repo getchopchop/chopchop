@@ -4,7 +4,7 @@
 <head>
 <?php require_once('inc/meta.php'); ?>
     <title>Primer - Little user interface patterns to get us going</title>
-<?php include('templates/styles.php'); ?>
+<?php include('inc/styles.php'); ?>
 </head>
 <body>
 
@@ -13,11 +13,10 @@
         <main class="main" id="primer-content-wrapper">
 
             <div class="container">
-                
                 <a href="#" class="btn js-toggle-theme">Toggle Theme</a>
-                 
+
                 <?php if($_SERVER['REQUEST_URI'] == '/') { ?>
-                   
+
                 <hgroup class="hgroup">
                   <h1 class="hgroup__title">ChopChop Chop Chop Chop-Chop chop chop</h1>
                   <h5 class="hgroup__subtitle">a simple library of common reuseable patterns we use everyday!</h5>
@@ -45,10 +44,10 @@
                 </div>
 
                 <hr />
-                
+
                 <h2>Getting Started</h2>
                 <p class="lead">This is the lead.</p>
-                
+
                 <h2>Documentation to write</h2>
                 <ul>
                     <li>https://www.daveredfern.com/2015/08/npm-and-bower-when-to-use-each/</li>
@@ -115,7 +114,7 @@
 
 
         </main>
-        
+
         <footer class="footer">
             <div class="container">
                 <ul class="list-inline">
@@ -128,7 +127,7 @@
 
     </div><!--/#wrapper -->
 
-    <?php include('templates/scripts.php'); ?>
+    <?php include('inc/scripts.php'); ?>
 
 </body>
 </html>
