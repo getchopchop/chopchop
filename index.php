@@ -118,10 +118,11 @@
         
         <footer class="footer">
             <div class="container">
-                <ul class="list-unstyled">
+                <ul class="list-inline">
+                    <li><a href="/">/</a></li>
                     <li><a href="https://gitlab.iweb.co.uk/frontend/primer">Gitlab</a></li>
                 </ul>
-                <small>&copy; <a href="/getting-started/credits/">ChopChop</a> is part of the <strong>CrackOn Group</strong>&trade; 2015.</small>
+                <small>&copy; <a href="/getting-started/credits">ChopChop</a> is part of the <b>CrackOn Group</b>&trade; 2015.</small>
             </div>
         </footer>
 
