@@ -16,11 +16,21 @@
                 <a href="#" class="btn js-toggle-theme" style="position: fixed; top: 0; right: 0;">T</a>
 
                 <?php if($_SERVER['REQUEST_URI'] == '/') { ?>
-
-                <hgroup class="hgroup">
-                  <h1 class="hgroup__title">ChopChop Chop Chop Chop-Chop chop chop</h1>
-                  <h5 class="hgroup__subtitle">a simple library of common reuseable patterns we use everyday!</h5>
-                </hgroup>
+                
+                <a href="/" class="logo" style="display: block;">
+                    <hgroup class="hgroup">
+                      <h1 class="hgroup__title">
+                          <span style="display: inline-block; width: 100px; height: 100px; overflow: hidden; margin-top: 40px; vertical-align: middle; border: 4px solid black;  border-radius: 100%;">
+                              <img src="/src/img/noun_35441_cc.svg" />
+                          </span>
+                          
+                          <span style="display: inline-block; vertical-align: bottom;">Chop Chop</span>
+                      </h1>
+                      <h5 class="hgroup__subtitle">a simple library of common reuseable patterns we use everyday!</h5>
+                    </hgroup>
+                </a>
+                
+                
 
                 <h2>Components</h2>
                 <div class="g-three-up g-gutter">
