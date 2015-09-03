@@ -24,7 +24,7 @@
 // =============================================
 
 .well {
-    padding: 20px 40px 40px 40px;
+    padding: 2rem;
 
     pre code {
         background-color: #f4f4f4;
@@ -52,13 +52,18 @@
     padding: 1rem 2rem;
     background-color: #16325c;
     color: #fff;
-    * {
+    *,
+    *:hover {
         color: white;
     }
     h1 {
+        margin-top: 0.2rem;
         margin-bottom: 0;
         text-transform: capitalize;
     }
+}
+.breadcrumbs :hover {
+    text-decoration: underline;
 }
 
 .site-content {
@@ -71,11 +76,10 @@
     
     &__circle {
         display: inline-block;
-        width: 60px;
-        height: 50px;
+        width: 55px;
+        height: 58px;
         overflow: hidden;
         vertical-align: middle;
-        border-radius: 100%;
     }
     &__text > * {
         display: inline-block;
@@ -104,11 +108,17 @@
     }
 }
 .site-navigation{
+    background-color: #f4f6f9;
     &__toggle {
         display: block;
         padding: 0.5rem;
         text-align: center;
         background-color: #E9FFD6;
+        @include breakpoint(max-width $screen-sm-max) {
+            position: absolute;
+            top: 25px;
+            right: 20px;
+        }
         @include breakpoint($screen-md) {
             display: none;
         }
@@ -144,7 +154,7 @@
         top: 0;
         bottom: 0;
         border-right: 1px solid #f4f6f9;
-        padding-top: 5rem;
+        padding-top: 90px;
         width: 15rem;
         overflow: hidden;
         overflow-y: auto;
