@@ -146,15 +146,15 @@ gulp.task('watch', function() {
     gulp.watch(config.src + '/fonts/**/*', ['fonts']);
 
     // Create browser sync server
-    browserSync.init({
-        //proxy: config.browserSyncProxy,
-        open: false,
-        ghostMode: {
-            clicks: true,
-            forms: true,
-            scroll: true
-        }
-    });
+    // browserSync.init({
+ //        //proxy: config.browserSyncProxy,
+ //        open: false,
+ //        ghostMode: {
+ //            clicks: true,
+ //            forms: true,
+ //            scroll: true
+ //        }
+ //    });
 
     // Watch any files in dist/, reload on change
     gulp.watch([config.browserSyncDest]).on('change', browserSync.reload);

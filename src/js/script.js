@@ -57,6 +57,19 @@
 			$content.addClass(activeContentClass);
 			$container.find(tabLinkSelector + "[href='" + $this.attr('href') + "']").addClass(activeLinkClass);
 		});
+        
+        
+        
+        // Toggle Blocks
+        $.fn.toggleSingle = function() {
+            return this.on('click', function(e) {
+                e.preventDefault();
+                $(this).next().toggleClass('active');
+            });
+        }
+        $('.block-toggle').toggleSingle();
+  
+
 
 
     });

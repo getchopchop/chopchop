@@ -44,8 +44,113 @@
 .footer {
     background-color: #f4f4f4;
     padding: 2rem 0;
+    text-align: center;
+    margin-top: 2rem;
 }
 
-.site-masthead h1 {
-    text-transform: capitalize;
+.site-masthead {
+    padding: 1rem 2rem;
+    background-color: #16325c;
+    color: #fff;
+    * {
+        color: white;
+    }
+    h1 {
+        margin-bottom: 0;
+        text-transform: capitalize;
+    }
+} 
+
+.logo {
+    
+    display: block;
+    
+    &__circle {
+        display: inline-block;
+        width: 60px;
+        height: 50px;
+        overflow: hidden;
+        vertical-align: middle;
+        border-radius: 100%;
+    }
+    &__text > * {
+        display: inline-block;
+    }
+    &__text :first-child {
+        transform: rotate(-11deg);
+        font-size: 120%;
+    }
+    &__text :last-child {
+        transform: rotate(12deg);
+        font-size: 90%;
+    }
+}
+
+
+.site-banner {
+    img {
+        @extend %img-responsive;
+    }
+    .logo {
+        padding: 1rem;
+        background: #efefef;
+        &:hover {
+            background-color: #E9FFD6;
+        }
+    }
+}
+.site-navigation{
+    &__toggle {
+        display: block;
+        padding: 0.5rem;
+        text-align: center;
+        background-color: #E9FFD6;
+        @include breakpoint($screen-md) {
+            display: none;
+        }
+    }
+    &__content {
+        display: none;
+        &.active {
+            display: block !important;
+        }
+        @include breakpoint($screen-md) {
+            display: block !important;
+        }
+    }
+}
+@include breakpoint($screen-md) {
+    .site-wrapper {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+    .site-banner {
+        position: fixed;
+        top: 0;
+        border-right: 1px solid #f4f6f9;
+        width: 15rem;
+        text-align: left;
+        z-index: 8000;
+
+
+    }
+    .site-navigation {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        border-right: 1px solid #f4f6f9;
+        padding-top: 5rem;
+        width: 15rem;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    .site-main {
+        flex: 1 1 auto;
+        margin-left: 15rem;
+        min-height: calc(100vh - 5.375rem);
+    }
+    .site-footer {
+        margin-left: 15rem;
+    }
 }

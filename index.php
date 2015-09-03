@@ -1,56 +1,83 @@
 <?php require_once('inc/functions.php'); ?>
+<?php $paths = explode("/", substr($_SERVER['REQUEST_URI'], 1));?>
 <!DOCTYPE HTML>
 <html>
 <head>
 <?php require_once('inc/meta.php'); ?>
-    <title>Primer - Little user interface patterns to get us going</title>
+    <title>ChopChop - Little user interface patterns to get us going</title>
 <?php include('inc/styles.php'); ?>
 </head>
 <body>
 
-    <div id="primer-wrapper">
+    <div class="site-wrapper">
+        
+        
+        <header class="site-banner">
+            <a href="/" class="logo">
+                <span class="logo__circle"><img src="/src/img/noun_35441_cc.svg" class="logo__img" /></span>
+                <span class="logo__text h6"><span>Chop</span><span>Chop</span></span>
+            </a>
+        </header>
+        
+        <nav class="site-navigation">
+            <a href="" class="site-navigation__toggle block-toggle">Show Navigation</a>
+            <div class="block-content site-navigation__content">
+                <?php include('inc/nav.php'); ?>
+                <ul>
+                    <li>
+                        <a href="/">Getting Started</a>
+                        <ul>
+                            <li><a href="/getting-started/structure">Structure</a></li>
+                            <li><a href="/getting-started/credits">Credits</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <main class="main site-main">
+            
+            <header class="site-masthead">            
+                <?php if($_SERVER['REQUEST_URI'] != '/') { ?>
 
-        <main class="main" id="primer-content-wrapper">
-
+                    <hgroup class="hgroup">
+                        <h1 class="hgroup__title"><?php echo array_pop($paths);?></h1>
+                        <?php
+                            $wrapped = array_map(
+                               function ($el) {
+                                  return "<a href='#'>{$el}</a>";
+                               },
+                               $paths
+                            );
+                        ?>
+                        <h2 class="hgroup__subtitle"><?php echo implode($wrapped); ?></h2>
+                    </hgroup>
+                
+                <?php } else { ?>
+                    <a href="/" class="logo">
+                        <hgroup class="hgroup">
+                          <h1 class="hgroup__title">
+                              <span class="logo__circle">
+                                  <img src="/src/img/noun_35441_cc.svg" class="logo__img" />
+                              </span>
+                          
+                              <span style="display: inline-block; vertical-align: bottom;">ChopChop</span>
+                          </h1>
+                          <h5 class="hgroup__subtitle">a simple library of common reuseable patterns we use everyday!</h5>
+                        </hgroup>
+                    </a>
+                <?php } ?>
+            
+            </header>
+            
+            
             <div class="container">
-                <a href="#" class="btn js-toggle-theme" style="position: fixed; top: 0; right: 0;">T</a>
 
                 <?php if($_SERVER['REQUEST_URI'] == '/') { ?>
-                
-                <a href="/" class="logo" style="display: block;">
-                    <hgroup class="hgroup">
-                      <h1 class="hgroup__title">
-                          <span style="display: inline-block; width: 100px; height: 100px; overflow: hidden; margin-top: 40px; vertical-align: middle; border: 4px solid black;  border-radius: 100%;">
-                              <img src="/src/img/noun_35441_cc.svg" />
-                          </span>
-                          
-                          <span style="display: inline-block; vertical-align: bottom;">Chop Chop</span>
-                      </h1>
-                      <h5 class="hgroup__subtitle">a simple library of common reuseable patterns we use everyday!</h5>
-                    </hgroup>
-                </a>
-                
-                
 
                 <h2>Components</h2>
                 <div class="g-three-up g-gutter">
-                    <?php
-                    foreach(array('atoms', 'molecules', 'organisms', 'grid', 'layout', 'helpers') as $toplevel) {
-                    ?>
-                    <div>
-                        <h3><?= ucwords($toplevel) ?></h3>
-                        <ul>
-                            <?php
-                            $quarks = dir('templates/' . $toplevel);
-                            while (false !== ($entry = $quarks->read())) {
-                                if(substr($entry, -4) == '.php') {
-                                    $entry = substr($entry, 0, strlen($entry) - 4);
-                            ?>
-                            <li><a href="<?= $toplevel ?>/<?= $entry ?>"><?= str_replace('-', ' ', ucwords($entry)) ?></a></li>
-                            <?php }} ?>
-                        </ul>
-                    </div>
-                    <?php } ?>
+                    <?php include('inc/nav.php'); ?>
                 </div>
 
                 <hr />
@@ -115,18 +142,8 @@
                 <?php } else {
 
                     if(file_exists("templates" . $_SERVER['REQUEST_URI'] . ".php")) {
-                        $paths = explode("/", substr($_SERVER['REQUEST_URI'], 1));
                         if(count($paths)){
-                            $html = "<h1 style='margin-top: 0;'>" . array_pop($paths) . "</h1>";
-                    
-                            $wrapped = array_map(
-                               function ($el) {
-                                  return "<a href='#'>{$el}</a>";
-                               },
-                               $paths
-                            );
-
-                            echo getBlock(implode($wrapped) . $html, $_SERVER['REQUEST_URI']);
+                            echo getBlock($_SERVER['REQUEST_URI']);
                         }
                     }
 
@@ -137,11 +154,12 @@
 
         </main>
 
-        <footer class="footer">
+        <footer class="footer site-footer">
             <div class="container">
                 <ul class="list-inline">
-                    <li><a href="/">/</a></li>
-                    <li><a href="https://gitlab.iweb.co.uk/frontend/primer">Gitlab</a></li>
+                    <li><a href="/">ChopChop</a></li>
+                    <li><a href="/getting-started/credits">Credit</a></li>
+                    <li><a href="https://gitlab.iweb.co.uk/frontend/primer"><img src="https://gitlab.iweb.co.uk/favicon.ico" width="16" height="16" class="img-inline" style="vertical-align: text-top;"> Project on Gitlab</a></li>
                 </ul>
                 <small>&copy; <a href="/getting-started/credits">ChopChop</a> is part of the <b>CrackOn Group</b>&trade; 2015.</small>
             </div>
