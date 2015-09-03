@@ -70,9 +70,8 @@
             
             </header>
             
+            <div class="site-content">
             
-            <div class="container">
-
                 <?php if($_SERVER['REQUEST_URI'] == '/') { ?>
 
                 <h2>Components</h2>
@@ -149,8 +148,8 @@
 
                 }?>
 
+                
             </div>
-
 
         </main>
 
