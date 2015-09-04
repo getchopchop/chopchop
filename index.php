@@ -76,12 +76,6 @@
                 <?php if($_SERVER['REQUEST_URI'] == '/') { ?>
                     
                 <div class="container">
-                    <h2>Components</h2>
-                    <div class="g-three-up g-gutter">
-                        <?php include('inc/nav.php'); ?>
-                    </div>
-
-                        <hr />
 
                         <h2>Getting Started</h2>
                         <p class="lead">This is the lead.</p>
