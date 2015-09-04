@@ -99,7 +99,7 @@
                             <li>Integration w/Isabela: https://gitlab.iweb.co.uk/iweb/isabela</li>
                         </ul>
 
-                        <h3>Why Primer?</h3>
+                        <h3>Why Chop Chop?</h3>
 
                         <p>With responsive web design being the norm, we find ourselves fighting against our old processes. The traditional Wireframe > Design > Chop > Build > Go Live process isn&rsquo;t working, we need to move away from this flow and we need something to help us do that.</p>
 
@@ -119,17 +119,17 @@
 
                         <p>We should be able to get going on a project irrespective of platform used or hosting setup. Front-end should be just that, we shouldn&rsquo;t need to install Magento or WordPress in order to start a project. Moving the front-end experience away from the platform lowers the barrier to entry but this doesn&rsquo;t mean we should ignore the platforms entirely.</p>
 
-                        <h3>The aims of Primer</h3>
+                        <h3>The aims of Chop Chop</h3>
 
                         <p>Create a coherent frontend language that is platform agnostic Provide a starting point for any project Cut down the amount of repetitive work</p>
 
-                        <h3>What Primer is</h3>
+                        <h3>What Chop Chop is</h3>
 
-                        <p>Primer is a simple library of common reusable patterns we use across all projects everyday. the patterns are made up of HTML/CSS, (SCSS) and JavaScript.</p>
+                        <p>Chop Chop is a simple library of common reusable patterns we use across all projects everyday. the patterns are made up of HTML/CSS, (SCSS) and JavaScript.</p>
 
-                        <h3>What Primer is not</h3>
+                        <h3>What Chop Chop is not</h3>
 
-                        <p>A complete framework. We wanted to keep primer small.</p>
+                        <p>A complete framework. We wanted to keep Chop Chop small.</p>
 
                         <h3>The Roadmap</h3>
                         <ul>
@@ -161,9 +161,9 @@
                 <ul class="list-inline">
                     <li><a href="/">Chop Chop</a></li>
                     <li><a href="/getting-started/credits">Credit</a></li>
-                    <li><a href="https://gitlab.iweb.co.uk/frontend/primer"><img src="https://gitlab.iweb.co.uk/favicon.ico" width="16" height="16" class="img-inline" style="vertical-align: text-top;"> Project on Gitlab</a></li>
+                    <li><a href="https://gitlab.iweb.co.uk/frontend/Chop Chop"><img src="https://gitlab.iweb.co.uk/favicon.ico" width="16" height="16" class="img-inline" style="vertical-align: text-top;"> Project on Gitlab</a></li>
                 </ul>
-                <small>&copy; <a href="/getting-started/credits">Chop Chop</a> is part of the <b>Crack On Group</b>&trade; 2015.</small>
+                <small>&copy; <a href="/getting-started/credits">Chop Chop</a> is part of the <b>Crack On Group</b>&trade; <?php echo date("Y"); ?>.</small>
             </div>
         </footer>
 
