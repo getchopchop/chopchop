@@ -1,9 +1,9 @@
 <?php
-foreach(array('atoms', 'molecules', 'organisms', 'grid', 'layout', 'helpers') as $toplevel) {
+foreach(array('overview', 'atoms', 'molecules', 'organisms', 'grid', 'layout', 'helpers') as $toplevel) {
 ?>
-<div>
-    <h3><?= ucwords($toplevel) ?></h3>
+<nav class="nav--stack">
     <ul>
+        <li><a href="/<?= $toplevel ?>"><?= ucwords($toplevel) ?></a></li>
         <?php
         $quarks = dir('templates/' . $toplevel);
         while (false !== ($entry = $quarks->read())) {
@@ -13,5 +13,5 @@ foreach(array('atoms', 'molecules', 'organisms', 'grid', 'layout', 'helpers') as
         <li><a href="/<?= $toplevel ?>/<?= $entry ?>"><?= str_replace('-', ' ', ucwords($entry)) ?></a></li>
         <?php }} ?>
     </ul>
-</div>
+</nav>
 <?php } ?>
