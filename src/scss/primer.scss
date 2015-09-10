@@ -132,6 +132,10 @@
             display: block !important;
         }
     }
+    
+    ul {
+        border-bottom: 3px solid red;
+    }
 }
 @include breakpoint($screen-md) {
     .site-wrapper {
@@ -166,4 +170,9 @@
     .site-footer {
         margin-left: 15rem;
     }
+}
+
+
+.chop-example {
+    border: 1px solid #f4f6f9;
 }

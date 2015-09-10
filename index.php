@@ -14,7 +14,7 @@
         
         <header class="site-banner">
             <a href="/" class="logo">
-                <span class="logo__circle"><img src="/src/img/noun_35441_cc.svg" class="logo__img" /></span>
+                <span class="logo__circle"><img src="/src/img/chopper_black.svg" class="logo__img" /></span>
                 <span class="logo__text h6"><span>Chop</span><span>Chop</span></span>
             </a>
         </header>
@@ -23,15 +23,6 @@
             <a href="" class="site-navigation__toggle block-toggle">Show Navigation</a>
             <div class="block-content site-navigation__content">
                 <?php include('inc/nav.php'); ?>
-                <ul>
-                    <li>
-                        <a href="/">Getting Started</a>
-                        <ul>
-                            <li><a href="/getting-started/structure">Structure</a></li>
-                            <li><a href="/getting-started/credits">Credits</a></li>
-                        </ul>
-                    </li>
-                </ul>
             </div>
         </nav>
         
@@ -57,14 +48,15 @@
                 <?php } else { ?>
                     <a href="/" class="logo">
                         <hgroup class="hgroup">
+                            <span class="logo__circle" style="float: right;">
+                                <img src="/src/img/chopper_white.svg" class="logo__img" />
+                            </span>
                           <h1 class="hgroup__title">
-                              <span class="logo__circle">
-                                  <img src="/src/img/noun_35441_cc.svg" class="logo__img" />
-                              </span>
+                              
                           
-                              <span style="display: inline-block; vertical-align: bottom;">Chop Chop</span>
+                              <span style="display: inline-block; vertical-align: bottom;">Get Chopping</span>
                           </h1>
-                          <h5 class="hgroup__subtitle">a simple library of common reuseable patterns we use everyday!</h5>
+                          <h5 class="hgroup__subtitle">Everything you need for the perfect slice.</h5>
                         </hgroup>
                     </a>
                 <?php } ?>
@@ -115,7 +107,11 @@
 
                         <h3>The aims of Chop Chop</h3>
 
-                        <p>Create a coherent frontend language that is platform agnostic Provide a starting point for any project Cut down the amount of repetitive work</p>
+                        <ul>
+                            <li>Create a coherent frontend language that is platform agnostic</li>
+                            <li>Provide a starting point for any project</li>
+                            <li>Cut down the amount of repetitive work</li>
+                        </ul>
 
                         <h3>What Chop Chop is</h3>
 

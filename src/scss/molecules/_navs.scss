@@ -116,16 +116,20 @@
 }
 
 
+// =============================================
+// Nav Stacked
+// =============================================
 .nav--stack {
     ul,
     ol {
         @extend %list-unstyled;
     }
-    li {
-        
-    }
     a {
         display: block;
-        padding: $spacing-xs 0;
+        padding: $spacing-xs;
+        &:hover {
+            background-color: #efefef;
+        }
+        
     }
 }
