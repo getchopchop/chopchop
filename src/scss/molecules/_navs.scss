@@ -1,48 +1,60 @@
+// =============================================
+// Navs Reset Lists
+// =============================================
+
+
+.nav--primary ul,
+.nav--primary ol,
+.nav--secondary ul,
+.nav--secondary ol,
+.nav--stack ul,
+.nav--stack ol {
+	@extend %list-unstyled;
+}
+
 
 // =============================================
-// Navs Primary and Secondary
+// Nav Stacked
 // =============================================
 
-.nav--scroll {
-    position: relative;
-    
-    &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 4em;
-        background: linear-gradient(to right, rgba(0,0,0,0) 0, rgba(0,0,0,0.12) 100%);
+.nav--stack {
+    a {
+        display: block;
+        padding: $spacing-xs;
+        &:hover {
+            background-color: #efefef;
+        }
+        
     }
 }
 
+
+// =============================================
+// Navs Shared Styles
+// =============================================
+
 .nav--primary > ul,
-.nav--secondary > ul {
-	@extend %list-unstyled;
-    overflow-x: auto;
+.nav--primary > ol,
+.nav--secondary > ul,
+.nav--secondary > ol {
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     
-	> li {
-		margin-left: $spacing-sm;
-		margin-right: $spacing-sm;
-		display: inline-block;
-		margin-bottom: 0;
-		padding-top: $spacing-sm;
-		padding-bottom: $spacing-sm;
-
-		&:first-child {
-			margin-left: 0;
-		}
-		&:last-child {
-			margin-right: 0;
-		}
-
-		> a {
-			font-family: $heading-font-family;
-		}
-	}
+    > li {
+        display: inline-block;
+        
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        
+        a {
+            display: block;
+            padding: $spacing-sm;
+        }
+    }
 }
 
 
@@ -51,7 +63,8 @@
 // =============================================
 
 .nav--primary {
-	> ul {
+	> ul,
+    > ol {
 		text-align: center;
 
 		> li {
@@ -61,8 +74,6 @@
 			}
 
 			> a {
-		   		font-weight: $bold;
-		   		font-size: $font-size-h6;
 				position: relative;
 		   	}
 
@@ -76,60 +87,56 @@
 			}
 		}
 	}
-}
 
-@include breakpoint($screen-sm) {
-	.nav--primary > ul > li > a {
-		font-size: $font-size-h3;
-		padding-right: 12px;
-	}
 }
 
 @include breakpoint($screen-md) {
 	.nav--primary {
-		> ul {
+		> ul,
+        > ol {
 			text-align: left;
-
-			> li > a {
-				font-size: $font-size-h2;
-			}
 		}
 	}
 }
 
-@include breakpoint($screen-lg) {
-	.nav--primary > ul > li > a {
-		font-size: $font-size-h3;
-	}
-}
 
 
 // =============================================
-// Nav Secondary
+// Nav Multi Level
 // =============================================
 
-@include breakpoint($screen-lg) {
-	.nav--secondary li {
-		font-size: $font-size-h5;
-		line-height: 2.3em;
-	}
-}
-
-
-// =============================================
-// Nav Stacked
-// =============================================
-.nav--stack {
-    ul,
-    ol {
-        @extend %list-unstyled;
+.nav--multi-level {
+    
+    li {
+        position: relative;
     }
-    a {
+    
+    // Stack the navs
+    ul ul,
+    ul ol,
+    ol ul,
+    ol ol {
+        @extend .nav--stack;
+    }
+    
+    // All levels
+    ul {
+        display: none;
+        position: absolute;
+        background-color: $grey-lighter;
+    }
+    
+    // Just Level 0
+    > ul {
+        top: 100%;
+    }
+    ul ul {
+        top: 0;
+        left: 100%;
+    }
+    
+    li:hover > ul,
+    li:hover > ol {
         display: block;
-        padding: $spacing-xs;
-        &:hover {
-            background-color: #efefef;
-        }
-        
     }
 }
