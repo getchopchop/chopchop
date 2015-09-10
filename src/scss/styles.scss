@@ -9,17 +9,25 @@
 // Helpers
 // =============================================
 
-@import "helpers/clearfix";
-@import "helpers/align";
-@import "helpers/images";
 @import "helpers/arrow";
 @import "helpers/ellipsis";
-@import "helpers/toggle";
 @import "helpers/breakpoint";
-@import "helpers/visible";
 @import "helpers/grid";
-@import "helpers/layout";
 
+
+// =============================================
+// Utilities
+// =============================================
+
+@import "utilities/images";
+@import "utilities/clearfix";
+@import "utilities/align";
+@import "utilities/visible";
+@import "utilities/toggle";
+@import "utilities/layout";
+@import "utilities/grid";
+@import "utilities/box-sizing";
+@import "utilities/z-index";
 
 
 // =============================================
@@ -77,10 +85,5 @@
 
 
 // =============================================
-// Layout
+// Organism
 // =============================================
-
-@import "layout/base";
-@import "layout/layout";
-@import "layout/grid";
-@import "layout/z-index";
