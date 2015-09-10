@@ -2,7 +2,7 @@
 foreach(array('overview', 'atoms', 'molecules', 'organisms', 'grid', 'layout', 'helpers') as $toplevel) {
 ?>
 
-<ul>
+<ul class="stacked-nav">
     <li><a href="/<?= $toplevel ?>" class="h5"><?= ucwords($toplevel) ?></a></li>
     <?php
     $quarks = dir('templates/' . $toplevel);
