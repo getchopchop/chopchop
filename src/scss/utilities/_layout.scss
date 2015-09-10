@@ -5,11 +5,11 @@
 .l-two-col-left,
 .l-two-col-right,
 .l-three-col {
-	@include layout;
-	@include layout-gutter;
+	@include grid;
+	@include grid-gutter;
 
 	> * {
-		@include layout-col;
+		@include grid-col;
 	}
 }
 
@@ -22,10 +22,10 @@
 	.l-two-col-left,
 	.l-two-col-right {
 		.l-side {
-			@include layout-col(25%);
+			@include grid-col(25%);
 		}
 		.l-body {
-			@include layout-col(75%);
+			@include grid-col(75%);
 		}
 	}
 }
@@ -37,7 +37,7 @@
 
 @include breakpoint($screen-sm) {
 	.l-two-col-right {
-		@include layout-reserve;
+		@include grid-reserve;
 	}
 }
 
@@ -49,11 +49,11 @@
 @include breakpoint($screen-sm) {
 	.l-three-col {
 		.l-side {
-			@include layout-col(20%);
+			@include grid-col(20%);
 			order: 1;
 		}
 		.l-body {
-			@include layout-col(60%);
+			@include grid-col(60%);
 			order: 2;
 		}
 		.l-side--right {

@@ -9,12 +9,25 @@
 // Helpers
 // =============================================
 
-@import "helpers/clearfix";
 @import "helpers/arrow";
 @import "helpers/ellipsis";
-@import "helpers/toggle";
 @import "helpers/breakpoint";
-@import "helpers/visible";
+@import "helpers/grid";
+
+
+// =============================================
+// Utilities
+// =============================================
+
+@import "utilities/images";
+@import "utilities/clearfix";
+@import "utilities/align";
+@import "utilities/visible";
+@import "utilities/toggle";
+@import "utilities/layout";
+@import "utilities/grid";
+@import "utilities/box-sizing";
+@import "utilities/z-index";
 
 
 
@@ -71,9 +84,9 @@
 }
 
 .logo {
-    
+
     display: block;
-    
+
     &__circle {
         display: inline-block;
         width: 55px;
@@ -132,7 +145,7 @@
             display: block !important;
         }
     }
-    
+
     ul {
         border-bottom: 3px solid red;
     }
@@ -171,7 +184,6 @@
         margin-left: 15rem;
     }
 }
-
 
 .chop-example {
     outline: 1px solid #d8dde6;
