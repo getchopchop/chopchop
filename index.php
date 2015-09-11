@@ -85,8 +85,8 @@
 
                             <p>Asking these question and designing the elements that make up the website is a much more effective way of producing a better end result.</p>
 
-                            <p>We often find ourselves initially stuck when starting a new project. Questions are asked:</p>
-
+                            <p>Also we often find ourselves initially stuck when starting a new project. Questions are asked:</p>
+                            
                             <p><blockquote>&quot;So what is the thing we are using for this project?&quot;</blockquote></p>
 
                             <p>We should be able to get going on a project irrespective of platform used or hosting setup. Front-end should be just that, we shouldn&rsquo;t need to install Magento or WordPress in order to start a project. Moving the front-end experience away from the platform lowers the barrier to entry but this doesn&rsquo;t mean we should ignore the platforms entirely. We will be looking to see how we can easily integrate this with WordPress and Magento soon.</p>
