@@ -164,8 +164,8 @@
             <div class="container">
                 <ul class="list-inline">
                     <li><a href="/">Get Chopping</a></li>
-                    <li><a href="/overview/credits">Credit</a></li>
-                    <li><a href="https://gitlab.iweb.co.uk/frontend/Chop Chop"><img src="https://gitlab.iweb.co.uk/favicon.ico" width="16" height="16" class="img-inline" style="vertical-align: text-top;"> Project on Gitlab</a></li>
+                    <li><a href="/credits">Credit</a></li>
+                    <li><a href="https://gitlab.iweb.co.uk/frontend/chopchop"><img src="https://gitlab.iweb.co.uk/favicon.ico" width="16" height="16" class="img-inline" style="vertical-align: text-top;"> Project on Gitlab</a></li>
                 </ul>
                 <small>&copy; <?php echo date("Y"); ?> <a href="/overview/credits">Chop Chop</a> is part of the <b><a href="http://www.iwebsolutions.co.uk/">Crack On Group</a></b>&trade; Cracking On Since 1995.</small>
             </div>
