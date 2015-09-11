@@ -90,7 +90,12 @@
                             <p><blockquote>&quot;So what is the thing we are using for this project?&quot;</blockquote></p>
 
                             <p>We should be able to get going on a project irrespective of platform used or hosting setup. Front-end should be just that, we shouldn&rsquo;t need to install Magento or WordPress in order to start a project. Moving the front-end experience away from the platform lowers the barrier to entry but this doesn&rsquo;t mean we should ignore the platforms entirely. We will be looking to see how we can easily integrate this with WordPress and Magento soon.</p>
-
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="well">
+                        <div class="container">
                             <h3>The aims of Chop Chop</h3>
 
                             <ul>
@@ -98,20 +103,38 @@
                                 <li>Provide a starting point for any project</li>
                                 <li>Cut down the amount of repetitive work</li>
                             </ul>
-
+                        </div>
+                    </div>
+                    
+                    <div class="well">
+                        <div class="container">
                             <h3>What Chop Chop is</h3>
 
                             <p>Chop Chop is a simple library of common reusable patterns we use across all projects everyday. the patterns are made up of HTML/CSS, (SCSS) and JavaScript.</p>
-
+                        </div>
+                    </div>
+                    
+                    <div class="well">
+                        <div class="container">
+                            
                             <h3>What Chop Chop is not</h3>
 
                             <p>A complete framework. We wanted to keep Chop Chop small.</p>
                             
+                        </div>
+                    </div>
+                    
+                    <div class="well">
+                        <div class="container">
                             <h3>The Toolkit</h3>
                             <p>The modern web developer is now expected to know 9348 different program languages and syntaxes. We have selected a few technologies that help us build this site and will hopefully help you too.</p>
                             <a href="/overview/toolkit" class="btn">Read more</a>
                             
-
+                        </div>
+                    </div>
+                    
+                    <div class="well">
+                        <div class="container">
                             <h3>The Roadmap</h3>
                             <ul>
                                 <li>Automate Functional Testing?</li>
@@ -122,7 +145,6 @@
                             </ul>
                         
                         </div>
-                        
                     </div>
                     
                 <?php } else {
