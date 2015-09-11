@@ -2,7 +2,7 @@
     <h2>Atoms?! What are atoms?</h2>
     <p>Atoms are basic tags, such as form labels, inputs or buttons. They also include more abstract elements like color palettes, fonts, and animations.</p>
     <p>Atoms are abstract and aren't often terribly useful on their own, but they provide a useful reference and allow you to see all your global styles laid out at a glance.</p>
-    
+
     <?php
     foreach(array('atoms') as $toplevel) {
     ?>
@@ -19,5 +19,5 @@
         </ul>
     </nav>
     <?php } ?>
-    
+
 </div>
