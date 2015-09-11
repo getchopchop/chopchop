@@ -138,7 +138,7 @@
                             <h3>The Roadmap</h3>
                             <ul>
                                 <li>Automate Functional Testing?</li>
-                                <li>Integration w/Isabela: https://gitlab.iweb.co.uk/iweb/isabela</li>
+                                <li>Integration w/Isabela: https://gitlab.iweb.co.uk/iweb/isabela or https://gitlab.iweb.co.uk/iweb-modules/iweb-isabela</li>
                                 <li>Bundle with Gerbil so everyone gets the library on their laptops.</li>
                                 <li>Product Magento templates.</li>
                                 <li>WordPress theme?</li>
