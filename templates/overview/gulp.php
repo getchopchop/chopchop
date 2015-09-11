@@ -1,1 +1,0 @@
-Notes on gulp, available commands to go here.

@@ -1,5 +1,5 @@
 <?php
-foreach(array('overview', 'atoms', 'molecules', 'organisms', 'grid', 'layout', 'helpers') as $toplevel) {
+foreach(array('overview', 'atoms', 'molecules', 'organisms', 'grid', 'layout', 'helpers', 'credits') as $toplevel) {
 ?>
 <nav class="nav--stack">
     <ul>

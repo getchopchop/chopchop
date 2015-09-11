@@ -70,22 +70,10 @@
                 <div class="well">
                     <div class="container">
 
-                            <h2>Documentation to write</h2>
-                            <ul>
-                                <li>https://www.daveredfern.com/2015/08/npm-and-bower-when-to-use-each/</li>
-                                <li>Notes on Gulp, why? Available commands.</li>
-                                <li>NPM, manages packages including gulp</li>
-                                <li>Bower, manages production ready packages</li>
-                                <li>Browser Support, why?</li>
-                                <li>Notes on Gulp, why? Available commands.</li>
-                                <li>http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/</li>
-                                <li>Notes on BEM, why?</li>
-                                <li>Integration w/Isabela: https://gitlab.iweb.co.uk/iweb/isabela</li>
-                            </ul>
-
                             <h3>Why Chop Chop?</h3>
 
-                            <p>With responsive web design being the norm, we find ourselves fighting against our old processes. The traditional Wireframe > Design > Chop > Build > Go Live process isn&rsquo;t working, we need to move away from this flow and we need something to help us do that.</p>
+                            <p class="lead">With responsive web design being the norm, we find ourselves fighting against our old processes.</p>
+                            <p>The traditional Wireframe > Design > Chop > Build > Go Live process isn&rsquo;t working, we need to move away from this flow and we need something to help us do that.</p>
 
                             <p>We need a common design system that we all use and contribute to across all projects irrespective of platform used. If we all use this system and contribute to it, over time it will grow and be refined. A lot of the design work (particularly layout based) can be done by throwing elements together in the browser and seeing how they react to varying screen sizes. Instead of designing complete layouts we should ask ourselves questions like,</p>
 
@@ -99,9 +87,9 @@
 
                             <p>We often find ourselves initially stuck when starting a new project. Questions are asked:</p>
 
-                            <blockquote>&quot;So what is the thing we are using for this project?&quot;</blockquote>
+                            <p><blockquote>&quot;So what is the thing we are using for this project?&quot;</blockquote></p>
 
-                            <p>We should be able to get going on a project irrespective of platform used or hosting setup. Front-end should be just that, we shouldn&rsquo;t need to install Magento or WordPress in order to start a project. Moving the front-end experience away from the platform lowers the barrier to entry but this doesn&rsquo;t mean we should ignore the platforms entirely.</p>
+                            <p>We should be able to get going on a project irrespective of platform used or hosting setup. Front-end should be just that, we shouldn&rsquo;t need to install Magento or WordPress in order to start a project. Moving the front-end experience away from the platform lowers the barrier to entry but this doesn&rsquo;t mean we should ignore the platforms entirely. We will be looking to see how we can easily integrate this with WordPress and Magento soon.</p>
 
                             <h3>The aims of Chop Chop</h3>
 
@@ -118,10 +106,16 @@
                             <h3>What Chop Chop is not</h3>
 
                             <p>A complete framework. We wanted to keep Chop Chop small.</p>
+                            
+                            <h3>The Toolkit</h3>
+                            <p>The modern web developer is now expected to know 9348 different program languages and syntaxes. We have selected a few technologies that help us build this site and will hopefully help you too.</p>
+                            <a href="/overview/toolkit" class="btn">Read more</a>
+                            
 
                             <h3>The Roadmap</h3>
                             <ul>
                                 <li>Automate Functional Testing?</li>
+                                <li>Integration w/Isabela: https://gitlab.iweb.co.uk/iweb/isabela</li>
                                 <li>Bundle with Gerbil so everyone gets the library on their laptops.</li>
                                 <li>Product Magento templates.</li>
                                 <li>WordPress theme?</li>
@@ -134,9 +128,7 @@
                 <?php } else {
 
                     if(file_exists("templates" . $_SERVER['REQUEST_URI'] . ".php")) {
-                        if(count($paths)){
-                            echo getBlock($_SERVER['REQUEST_URI']);
-                        }
+                        echo getBlock($_SERVER['REQUEST_URI']);
                     }
 
                 }?>
