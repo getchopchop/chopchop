@@ -1,6 +1,6 @@
-# Structure
-
-## Global folder structure
+<div class="container">
+    
+<h2>Global folder structure</h2>
 
 ### Source
 
@@ -11,18 +11,32 @@
 ### Bower Components (temporary folder)
 
 
-## Sass folder structure
+<h2>Sass folder structure</h2>
 
 ### Helpers
 
 The helper folder contains mixins only. None of the Sass contained in this folder creates CSS, it's there to help you create CSS. An example of helpers include grids, triangles, breakpoint.
 
 #### Usage
+{% highlight html %}
+<p>para</p>
+{% end highlight html %}
 
-```.top-links {
+{% highlight html %}
+<p>para</p>
+{% end highlight html %}
+
+{% highlight html %}
+<p>para</p>
+{% end highlight html %}
+
+
+{% highlight css %}
+.top-links {
     @include list-inline;
 }
-```
+{% end highlight css %}
+
 
 ### Utilities
 
@@ -47,3 +61,5 @@ Organisms can consist of similar and/or disparate molecule types. For example, a
 Building up from molecules to organisms encourages creating standalone, portable, reusable components.
 
 ### Templates
+
+</div>
