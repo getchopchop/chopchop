@@ -9,9 +9,16 @@
         $contents = ob_get_contents();
         ob_end_clean();
 
-        $contents = preg_replace_callback('|{% highlight code %}([^{]+){% end highlight code %}|s', function($matches) {
+        $contents = preg_replace_callback('|{% highlight html %}(.+?(?={%)){% end highlight html %}|s', function($matches) {
             return '<pre class="primer-code"><code class="html">' . htmlspecialchars(trim($matches[1])) . '</code></pre>';
         }, $contents);
+        
+        $contents = preg_replace_callback('|{% highlight css %}(.+?(?={%)){% end highlight css %}|s', function($matches) {
+            return '<pre class="primer-code"><code class="css">' . htmlspecialchars(trim($matches[1])) . '</code></pre>';
+        }, $contents);
+        
 
+
+        
         return $contents;
     }
