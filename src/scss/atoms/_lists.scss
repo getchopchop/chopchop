@@ -10,16 +10,6 @@
 
 	> li {
 		display: inline-block;
-		margin-right: $spacing;
-		margin-left: $spacing;
-
-		&:first-child {
-			margin-left: 0;
-		}
-
-		&:last-child {
-			margin-right: 0;
-		}
 	}
 }
 
