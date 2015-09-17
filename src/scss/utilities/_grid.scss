@@ -8,10 +8,7 @@
 .g-five-up,
 .g-six-up {
     @include grid;
-
-    > * {
-        @include grid-up; // Default 1 column
-    }
+    @include grid-up;
 }
 
 
@@ -29,7 +26,7 @@
 // =============================================
 
 @include breakpoint($screen-sm) {
-    .g-two-up > * {
+    .g-two-up {
         @include grid-up(2);
     }
 }
@@ -40,13 +37,13 @@
 // =============================================
 
 @include breakpoint($screen-sm) {
-    .g-three-up > * {
+    .g-three-up {
         @include grid-up(2);
     }
 }
 
 @include breakpoint($screen-md) {
-    .g-three-up > * {
+    .g-three-up {
         @include grid-up(3);
     }
 }
@@ -57,13 +54,13 @@
 // =============================================
 
 @include breakpoint($screen-sm) {
-    .g-four-up > * {
+    .g-four-up {
         @include grid-up(2);
     }
 }
 
 @include breakpoint($screen-md) {
-    .g-four-up > * {
+    .g-four-up {
         @include grid-up(4);
     }
 }
@@ -74,13 +71,13 @@
 // =============================================
 
 @include breakpoint($screen-sm) {
-    .g-five-up > * {
+    .g-five-up {
         @include grid-up(3);
     }
 }
 
 @include breakpoint($screen-md) {
-    .g-five-up > * {
+    .g-five-up {
         @include grid-up(5);
     }
 }
@@ -91,13 +88,13 @@
 // =============================================
 
 @include breakpoint($screen-sm) {
-    .g-six-up > * {
+    .g-six-up {
         @include grid-up(3);
     }
 }
 
 @include breakpoint($screen-md) {
-    .g-six-up > * {
+    .g-six-up {
         @include grid-up(6);
     }
 }
