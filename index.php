@@ -48,14 +48,7 @@
                 <?php } else { ?>
                     <a href="/" class="logo">
                         <hgroup class="hgroup">
-                            <span class="logo__circle" style="float: right;">
-                                <img src="/src/img/chopper_white.svg" class="logo__img" />
-                            </span>
-                          <h1 class="hgroup__title">
-                              
-                          
-                              <span style="display: inline-block; vertical-align: bottom;">Get Chopping</span>
-                          </h1>
+                          <h1 class="hgroup__title">Get Chopping</h1>
                           <h5 class="hgroup__subtitle">Everything you need for the perfect slice.</h5>
                         </hgroup>
                     </a>
@@ -73,6 +66,9 @@
                             <h3>Why Chop Chop?</h3>
 
                             <p class="lead">With responsive web design being the norm, we find ourselves fighting against our old processes.</p>
+                            <p>On a fixed width website we could just &ldquo;Chop&rdquo; a Photoshop picture of the website to deliver to our clients and it would be <em>almost</em> pixel perfect.</p>
+                            <p>This is not the case anymore, if we produce a Photoshop picture for a responsive site it is a mockup of what the site <em>could</em> look like at <em>that</em> particular screen size. It will not show us how the design behaves when the screen is resized.</p>
+                            
                             <p>The traditional Wireframe > Design > Chop > Build > Go Live process isn&rsquo;t working, we need to move away from this flow and we need something to help us do that.</p>
 
                             <p>We need a common design system that we all use and contribute to across all projects irrespective of platform used. If we all use this system and contribute to it, over time it will grow and be refined. A lot of the design work (particularly layout based) can be done by throwing elements together in the browser and seeing how they react to varying screen sizes. Instead of designing complete layouts we should ask ourselves questions like,</p>
@@ -91,11 +87,13 @@
 
                             <p>We should be able to get going on a project irrespective of platform used or hosting setup. Front-end should be just that, we shouldn&rsquo;t need to install Magento or WordPress in order to start a project. Moving the front-end experience away from the platform lowers the barrier to entry but this doesn&rsquo;t mean we should ignore the platforms entirely. We will be looking to see how we can easily integrate this with WordPress and Magento soon.</p>
                             
+                            
                         </div>
                     </div>
                     
                     <div class="well">
                         <div class="container">
+                            <h2>Enter Chop Chop...</h2>
                             <h3>The aims of Chop Chop</h3>
 
                             <ul>
@@ -103,19 +101,11 @@
                                 <li>Provide a starting point for any project</li>
                                 <li>Cut down the amount of repetitive work</li>
                             </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="well">
-                        <div class="container">
+
                             <h3>What Chop Chop is</h3>
 
                             <p>Chop Chop is a simple library of common reusable patterns we use across all projects everyday. the patterns are made up of HTML/CSS, (SCSS) and JavaScript.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="well">
-                        <div class="container">
+
                             
                             <h3>What Chop Chop is not</h3>
 
@@ -126,7 +116,7 @@
                     
                     <div class="well">
                         <div class="container">
-                            <h3>The Toolkit</h3>
+                            <h3>The Chop Chop Toolkit</h3>
                             <p>The modern web developer is now expected to know 9348 different program languages and syntaxes. We have selected a few technologies that help us build this site and will hopefully help you too.</p>
                             <a href="/overview/toolkit" class="btn">Read more</a>
                             
