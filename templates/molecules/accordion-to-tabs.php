@@ -1,11 +1,7 @@
-<div class="primer-callout primer-callout-info">
-    <h4>Modifiers</h4>
-    <p>Add <code>tabs--forced</code> to force tabs on all screen sizes.</p>
-    <p>Add <code>accordion--forced</code> to force accordion on all screen sizes.</p>
-</div>
-
-<div class="primer-quark">
-
+<div class="container">
+    
+    <p>This pattern is an accordion on mobile and changes to tabs at <code>$screen-md</code>.</p>
+    
     <div class="tabs">
     	<ul class="tabs__toggle">
     		<li class="tabs__toggle__item"><a href="#tab-1" class="tabs__tab tabs__tab__title">Tab_1</a></li><li class="tabs__toggle__item"><a href="#tab-2" class="tabs__tab tabs__tab__title">Tab_2</a></li>
@@ -25,6 +21,10 @@
     		</dd>
     	</dl>
     </div>
+
+    <h4>Modifiers</h4>
+    <p>Add <code>tabs--forced</code> to force tabs on all screen sizes.</p>
+    <p>Add <code>accordion--forced</code> to force accordion on all screen sizes.</p>
 
 
 </div>
