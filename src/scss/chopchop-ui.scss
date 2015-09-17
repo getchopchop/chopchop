@@ -43,6 +43,10 @@
 .well {
     padding: 2rem;
 
+    pre {
+        margin-bottom: $spacing;
+    }
+
     pre code {
         background-color: #f4f4f4;
         padding: 20px;
