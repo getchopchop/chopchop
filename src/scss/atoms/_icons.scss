@@ -13,7 +13,7 @@
 
  .icon--sm,
  %icon--sm {
-     font-size: 0.75em;
+     font-size: $font-size-xs;
  }
 
 
@@ -23,5 +23,5 @@
 
 .icon--lg,
 %icon--lg {
-    font-size: 1.5em;
+    font-size: $font-size-xl;
 }
