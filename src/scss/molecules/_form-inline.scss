@@ -1,23 +1,23 @@
 // =============================================
-// Molecule - Search Form
+// Molecule - Form inline
 // =============================================
 
-.form-search {
+.form-inline {
     
     position: relative;
-
+    
     input {
         display: block;
     }
 
-    input[type=search] {
+    &__query {
         width: 100%;
         padding-right: 7em;
         position: relative;
         top: 0;
     }
 
-    input[type=submit] {
+    .btn {
         position: absolute;
         right: 0;
         top: 0;

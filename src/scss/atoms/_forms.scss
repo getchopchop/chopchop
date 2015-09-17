@@ -94,37 +94,6 @@ input[type="submit"].btn {
 
 
 // =============================================
-// Form inline
-// =============================================
-
-.form-inline {
-    
-    position: relative;
-    
-    input {
-        display: block;
-    }
-
-    &__query {
-        width: 100%;
-        padding-right: 7em;
-        position: relative;
-        top: 0;
-    }
-
-    .btn {
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 1;
-        cursor: pointer;
-    }
-    
-}
-
-
-// =============================================
 // Fieldsets
 // =============================================
 
