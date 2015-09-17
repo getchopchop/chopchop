@@ -22,15 +22,6 @@ The helper folder contains mixins only. None of the Sass contained in this folde
 <p>para</p>
 {% end highlight html %}
 
-{% highlight html %}
-<p>para</p>
-{% end highlight html %}
-
-{% highlight html %}
-<p>para</p>
-{% end highlight html %}
-
-
 {% highlight css %}
 .top-links {
     @include list-inline;

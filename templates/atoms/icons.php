@@ -7,7 +7,7 @@
 <div class="well">
     <div class="container">
         <h3>Icon sizes</h3>
-        <p>All icons (excluding payment icons) can have <code>icon--sm</code> and <code>icon--lg</code> applied to decrease or increase the size. <code>icon--sm</code> will decrease the size by 25%. <code>icon--lg</code> will increase the size by 50%. Font sizes are relative to its parent.</p>
+        <p>All icons (excluding payment icons) can have <code>icon--sm</code> and <code>icon--lg</code> applied to decrease or increase the size. <code>icon--sm</code> will decrease the size by 25%. <code>icon--lg</code> will increase the size by 50%. Icon font sizes are relative to their parent.</p>
         <ul class="list-unstyled g-three-up">
             <li>
                 <i class="icon-twitter"></i>
