@@ -1,6 +1,6 @@
 <div class="container">
     
-    <h1><span class="icon-star"></span> I am the big heading</h1>
+    <h1><span class="icon-star"></span> I am the big heading <span class="tag">tag</span></h1>
     
     <?php include('paragraphs.php'); ?>
     
