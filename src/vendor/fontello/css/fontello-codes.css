@@ -28,4 +28,12 @@
 .icon-star:before { content: '\e81a'; } /* '' */
 .icon-comment:before { content: '\e81b'; } /* '' */
 .icon-chat:before { content: '\e81c'; } /* '' */
+.icon-twitter:before { content: '\e81d'; } /* '' */
 .icon-download-cloud:before { content: '\e81e'; } /* '' */
+.icon-youtube:before { content: '\e81f'; } /* '' */
+.icon-tumblr:before { content: '\e820'; } /* '' */
+.icon-linkedin:before { content: '\e821'; } /* '' */
+.icon-pinterest:before { content: '\e822'; } /* '' */
+.icon-facebook:before { content: '\e823'; } /* '' */
+.icon-gplus:before { content: '\e824'; } /* '' */
+.icon-instagram:before { content: '\e825'; } /* '' */
