@@ -7,10 +7,7 @@
 .l-three-col {
 	@include grid;
 	@include grid-gutter;
-
-	> * {
-		@include grid-col;
-	}
+    @include grid-up;
 }
 
 
@@ -23,9 +20,11 @@
 	.l-two-col-right {
 		.l-side {
 			@include grid-col(25%);
+            order: 1;
 		}
 		.l-body {
 			@include grid-col(75%);
+            order: 2;
 		}
 	}
 }
