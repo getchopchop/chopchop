@@ -1,0 +1,197 @@
+// =============================================
+// Vars
+// =============================================
+
+@import "vars";
+
+
+// =============================================
+// Helpers
+// =============================================
+
+@import "helpers/arrow";
+@import "helpers/ellipsis";
+@import "helpers/breakpoint";
+@import "helpers/grid";
+
+
+// =============================================
+// Utilities
+// =============================================
+
+@import "utilities/images";
+@import "utilities/clearfix";
+@import "utilities/align";
+@import "utilities/visible";
+@import "utilities/toggle";
+@import "utilities/layout";
+@import "utilities/grid";
+@import "utilities/box-sizing";
+@import "utilities/z-index";
+
+
+
+
+.container-xs-max {
+    max-width: $screen-xs;
+}
+
+// =============================================
+// Primer -- Branding
+// =============================================
+
+.well {
+    padding: 2rem;
+
+    pre code {
+        background-color: #f4f4f4;
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+
+    &:nth-child(even) {
+        background-color: #f4f4f4;
+
+        pre code {
+            background-color: #fff;
+        }
+    }
+}
+
+.footer {
+    background-color: #f4f4f4;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.site-masthead {
+    padding: 1rem 2rem;
+    background-color: #16325c;
+    color: #fff;
+    *,
+    *:hover {
+        color: white;
+    }
+    h1 {
+        margin-top: 0.2rem;
+        margin-bottom: 0;
+        text-transform: capitalize;
+    }
+}
+.breadcrumbs :hover {
+    text-decoration: underline;
+}
+
+.site-content {
+    padding: 2rem 0;
+}
+
+.logo {
+
+    display: block;
+
+    &__circle {
+        display: inline-block;
+        width: 55px;
+        height: 58px;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+    &__text > * {
+        display: inline-block;
+    }
+    &__text :first-child {
+        transform: rotate(-11deg);
+        font-size: 120%;
+    }
+    &__text :last-child {
+        transform: rotate(12deg);
+        font-size: 90%;
+    }
+}
+
+
+.site-banner {
+    img {
+        @extend %img-responsive;
+    }
+    .logo {
+        padding: 1rem;
+        background: #efefef;
+        &:hover {
+            background-color: #E9FFD6;
+        }
+    }
+}
+.site-navigation{
+    background-color: #f4f6f9;
+    &__toggle {
+        display: block;
+        padding: 0.5rem;
+        text-align: center;
+        background-color: #E9FFD6;
+        @include breakpoint(max-width $screen-sm-max) {
+            position: absolute;
+            top: 25px;
+            right: 20px;
+        }
+        @include breakpoint($screen-md) {
+            display: none;
+        }
+    }
+    &__content {
+        display: none;
+        &.active {
+            display: block !important;
+        }
+        @include breakpoint($screen-md) {
+            display: block !important;
+        }
+    }
+
+    ul {
+        border-bottom: 1px dotted red;
+    }
+    .tag {
+        font-size: 60%;
+    }
+}
+@include breakpoint($screen-md) {
+    .site-wrapper {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+    .site-banner {
+        position: fixed;
+        top: 0;
+        border-right: 1px solid #f4f6f9;
+        width: 15rem;
+        text-align: left;
+        z-index: 8000;
+
+
+    }
+    .site-navigation {
+        position: fixed;
+        top: 90px;
+        bottom: 0;
+        border-right: 1px solid #f4f6f9;
+        width: 15rem;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    .site-main {
+        flex: 1 1 auto;
+        margin-left: 15rem;
+        min-height: calc(100vh - 5.375rem);
+    }
+    .site-footer {
+        margin-left: 15rem;
+    }
+}
+
+.chop-example {
+    outline: 1px solid #d8dde6;
+}

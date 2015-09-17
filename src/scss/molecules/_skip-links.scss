@@ -1,0 +1,24 @@
+.skip-links {
+    background: #000;
+    display: flex;
+}
+.skip-link {
+    width: 25%;
+    padding: 20px 10px;
+    text-align: center;
+    color: #fff;
+    
+    &.skip-active,
+    &:hover {
+        color: #fff;
+        background-color: #222;
+    }
+}
+.skip-content {
+    display: none;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+.skip-active {
+    display: block;
+}
