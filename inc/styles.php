@@ -5,6 +5,5 @@
 <link rel="stylesheet" type="text/css" href="/build/css/chopchop-ui.min.css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" type="text/css" href="/src/vendor/fontello-common/css/fontello.css" media="all" />
-<link rel="stylesheet" type="text/css" href="/src/vendor/fontello-social/css/fontello.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/src/vendor/fontello/css/fontello.css" media="all" />
 <!-- End template: _styles !-->

@@ -3,6 +3,8 @@
     
     <p>All icons are denoted by the prefix <code>icon-</code>. These icons are taken from <a href="http://fontello.com/">fontello.com</a> and used as directed from there.</p>
     
+    
+    <h3>Social Icons</h3>
     <ul class="list-unstyled">
         <li>
             <i class="icon-linkedin"></i>
@@ -41,7 +43,7 @@
     <br/><br/>
     
 
-    
+    <h3>Common UI Icons</h3>
     <ul class="list-unstyled">
         <li>
             <i class="icon-search"></i>
