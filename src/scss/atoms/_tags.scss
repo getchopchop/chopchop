@@ -1,19 +1,38 @@
 // =============================================
-// Discount labels
+// Tag
 // =============================================
 
 .tag {
     display: inline-block;
     background-color: $grey;
     color: $white;
-    font-size: $font-size-sm;
-    padding: $spacing-xs $spacing-sm;
+    font-size: $font-size-sm * 0.9;
+    padding: ($spacing-xs/1.5) $spacing-sm;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
     line-height: 1;
     font-weight: bold;
     border-radius: $border-radius;
+}
+
+
+// =============================================
+// Tag small
+// =============================================
+
+.tag--sm {
+    font-size: $font-size-xxs;
+}
+
+
+// =============================================
+// Tag large
+// =============================================
+
+.tag--lg {
+    font-size: $font-size-lg;
+    padding: ($spacing-sm/2) $spacing-sm;
 }
 
 
@@ -47,5 +66,5 @@
 // =============================================
 
 .tag--badge {
-    border-radius: $spacing;
+    border-radius: $spacing-xl;
 }
