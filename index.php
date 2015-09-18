@@ -170,7 +170,16 @@
                         <li><a href="/credits">Credit</a></li>
                         <li><a href="https://gitlab.iweb.co.uk/frontend/chopchop"><img src="https://gitlab.iweb.co.uk/favicon.ico" width="16" height="16" class="img-inline" style="vertical-align: text-top;"> Project on Gitlab</a></li>
                     </ul>
-            
+                    
+                    <a href="https://www.iwebsolutions.co.uk" class="iweb-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="585.1" height="394.6" viewBox="-1.8 223.3 585.1 394.6">
+                            <path d="M101.5 506.5l12.7-59.5-23-108c-3.6-17-20.4-30.8-37.4-30.8H-1.8l42.2 198.4c3.1 14.7 15.8 30.1 30.5 30.1s27.4-15.5 30.6-30.2z"/>
+                            <path d="M216.8 306.7c-3.2-15.1-16.6-30.3-31.5-30.3s-28.3 15.2-31.5 30.3l-42.5 199.8c-3.6 17-20.4 30.8-37.4 30.8h102.7c17 0 33.8-13.8 37.4-30.8l22.6-106.3-19.8-93.5z"/>
+                            <path d="M360.5 587.1l70.8-333c3.6-17 20.4-30.8 37.4-30.8h114.6l-85.5 363.8c-3.6 17-20.4 30.8-37.4 30.8H323.2c17 0 33.7-13.8 37.3-30.8z"/>
+                            <path d="M347.4 587.1l34.8-163.7-24.8-116.8c-3.6-17-20.4-30.8-37.4-30.8H191c17 0 33.8 13.8 37.4 30.8L288 587c3.1 14.4 15.7 29.9 29.7 29.9 14.1.1 26.6-15.3 29.7-29.8z"/>
+                        </svg>
+                    </a>
+                    
                     <small>&copy; <?php echo date("Y"); ?> <a href="/overview/credits">Chop Chop</a> is part of the <b><a href="http://www.iwebsolutions.co.uk/">Crack On Group</a></b>&trade; Cracking On Since 1995.</small>
                 </nav>
             </div>
