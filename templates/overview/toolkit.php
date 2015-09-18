@@ -12,12 +12,12 @@
         NPM, manages packages including gulp
     
         {% highlight code %}
-    npm install
+npm install
     
-    ./node_modules/.bin/gulp
+./node_modules/.bin/gulp
     
-    gulp
-    gulp watch
+gulp
+gulp watch
         {% end highlight code %}
     
         <a href="http://gulpjs.com/" class="btn">Gulp Website</a>
@@ -34,9 +34,9 @@
         Notes on BEM, why?
     
         {% highlight css %}
-    .block {}
-    .block__element {}
-    .block--modifier {}
+.block {}
+.block__element {}
+.block--modifier {}
 
         {% end highlight css %}
     
