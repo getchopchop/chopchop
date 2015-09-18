@@ -1,6 +1,7 @@
-
-<div class="container">
-    <p>A <strong>card</strong> is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options.</p>
+<div class="well">
+    <div class="container">
+        <p>A <strong>card</strong> is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options.</p>
+    </div>
 </div>
 
 <div class="well">
