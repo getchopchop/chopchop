@@ -2,15 +2,9 @@
 // List inline
 // =============================================
 
-.list-inline,
-%list-inline {
-	padding-left: 0;
-	margin-left: 0;
-	list-style: none;
-
-	> li {
-		display: inline-block;
-	}
+.u-list-inline,
+%u-list-inline {
+    @include list-inline;
 }
 
 
@@ -18,9 +12,9 @@
 // Ordered list
 // =============================================
 
-.list-ordered,
-%list-ordered {
-	list-style: decimal;
+.u-list-ordered,
+%u-list-ordered {
+	@include list-ordered;
 }
 
 
@@ -28,9 +22,9 @@
 // Unordered list
 // =============================================
 
-.list-unordered li ,
-%list-unordered li {
-	list-style: disc;
+.u-list-unordered li ,
+%u-list-unordered li {
+	@include list-unordered;
 }
 
 
@@ -38,9 +32,7 @@
 // Unstyled list
 // =============================================
 
-%list-unstyled,
-.list-unstyled {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+%u-list-unstyled,
+.u-list-unstyled {
+    @include list-unstyled;
 }

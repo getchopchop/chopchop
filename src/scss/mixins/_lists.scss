@@ -1,0 +1,42 @@
+// =============================================
+// List inline
+// =============================================
+
+@mixin list-inline() {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+    
+    > li {
+        display: inline-block;
+    }
+}
+
+
+// =============================================
+// Ordered list
+// =============================================
+
+@mixin list-ordered() {
+    list-style: decimal;
+}
+
+
+// =============================================
+// Ordered list
+// =============================================
+
+@mixin list-unordered() {
+    list-style: disc;
+}
+
+
+// =============================================
+// Unstyled list
+// =============================================
+
+@mixin list-unstyled() {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
