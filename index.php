@@ -12,7 +12,7 @@
     <div class="site-wrapper">
         
         
-        <header class="site-banner">
+        <header class="site-header">
             <a href="/" class="logo">
                 <span class="logo__circle"><img src="/src/img/chopper_black.svg" class="logo__img" /></span>
                 <span class="logo__text h6"><span>Chop</span><span>Chop</span></span>
@@ -151,8 +151,17 @@
         </main>
 
         <footer class="footer site-footer">
+            
+            <h4>Related Patterns</h4>
+            <nav class="nav--stack">
+                <ul>
+                    <li><a href="#">Related Patterns</a></li>
+                </ul>
+            </nav>
+            
+            
             <div class="container">
-                <ul class="list-inline">
+                <ul>
                     <li><a href="/">Get Chopping</a></li>
                     <li><a href="/credits">Credit</a></li>
                     <li><a href="https://gitlab.iweb.co.uk/frontend/chopchop"><img src="https://gitlab.iweb.co.uk/favicon.ico" width="16" height="16" class="img-inline" style="vertical-align: text-top;"> Project on Gitlab</a></li>

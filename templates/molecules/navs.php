@@ -36,12 +36,9 @@
         <p class="lead">These are horrible but we still use them, they are strictly desktop only as users on toch devices should not have this experience.</p>
         
         <p>The Multi Level Primary Nav pattern is generally used as the main navigation for the website.</p>
-
-        <div class="chop-example">
+        
+        <?php include('templates/molecules/navs/multi-level.php'); ?>
             
-            <?php include('templates/molecules/navs/multi-level.php'); ?>
-            
-        </div>
 
         {% highlight code %}
         
@@ -60,16 +57,14 @@
         <h2>Stacked Nav</h2>
         <p>The Stacked Nav pattern is generally used to style a list of links that would appear in a tall container such as a sidebar or <a href="/molecules/drawers">drawer</a>.
             
-        <div class="chop-example">
-            <nav class="nav--stack">
-                <ul>
-                    <li><a href="#">Overview</a></li>
-                    <li><a href="#">Credits</a></li>
-                    <li><a href="#">Structure</a></li>
-                </ul>
-            </nav>
-        </div>
-
+        <nav class="nav--stack">
+            <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Credits</a></li>
+                <li><a href="#">Structure</a></li>
+            </ul>
+        </nav>
+        
         {% highlight code %}
 <nav class="nav--stack">
     <ul>

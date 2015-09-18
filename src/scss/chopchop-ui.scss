@@ -32,12 +32,72 @@
 
 
 
+// =============================================
+// Containers
+// =============================================
+
 .container-xs-max {
     max-width: $screen-xs;
 }
 
+
 // =============================================
-// Primer -- Branding
+// Colours -- Branding
+// =============================================
+
+body {
+    color: #404040;
+}
+h1 {
+    color: #404040;
+}
+h2 {
+    color: #545d65;
+}
+
+
+// =============================================
+// Font Sizes
+// =============================================
+h1 {
+    font-size: 2.111em;
+}
+h2 {
+    font-size: 1.444em;
+}
+
+
+// =============================================
+// Logo
+// =============================================
+
+.logo {
+
+    display: block;
+
+    &__circle {
+        display: inline-block;
+        width: 55px;
+        height: 58px;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+    &__text > * {
+        display: inline-block;
+        transition: all 0.5 ease;
+    }
+    &__text :first-child {
+        transform: rotate(-11deg);
+        font-size: 120%;
+    }
+    &__text :last-child {
+        transform: rotate(12deg);
+        font-size: 90%;
+    }
+}
+
+// =============================================
+// Wells
 // =============================================
 
 .well {
@@ -54,7 +114,10 @@
     }
 
     &:nth-child(even) {
-        background-color: #f4f4f4;
+        background: #f3f5f8;
+        color: #738a9f;
+        border-bottom: solid 1px #e3eaf3;
+        border-top: solid 1px #e3eaf3;
 
         pre code {
             background-color: #fff;
@@ -62,12 +125,10 @@
     }
 }
 
-.footer {
-    background-color: #f4f4f4;
-    padding: 2rem 0;
-    text-align: center;
-    margin-top: 2rem;
-}
+
+// =============================================
+// Masthead
+// =============================================
 
 .site-masthead {
     padding: 1rem 2rem;
@@ -83,83 +144,22 @@
         text-transform: capitalize;
     }
 }
+
+// =============================================
+// Breadcrumbs
+// =============================================
+
 .breadcrumbs :hover {
     text-decoration: underline;
 }
 
+
+// =============================================
+// Layout
+// =============================================
+
 .site-content {
     padding: 2rem 0;
-}
-
-.logo {
-
-    display: block;
-
-    &__circle {
-        display: inline-block;
-        width: 55px;
-        height: 58px;
-        overflow: hidden;
-        vertical-align: middle;
-    }
-    &__text > * {
-        display: inline-block;
-    }
-    &__text :first-child {
-        transform: rotate(-11deg);
-        font-size: 120%;
-    }
-    &__text :last-child {
-        transform: rotate(12deg);
-        font-size: 90%;
-    }
-}
-
-
-.site-banner {
-    img {
-        @extend %img-responsive;
-    }
-    .logo {
-        padding: 1rem;
-        background: #efefef;
-        &:hover {
-            background-color: #E9FFD6;
-        }
-    }
-}
-.site-navigation{
-    background-color: #f4f6f9;
-    &__toggle {
-        display: block;
-        padding: 0.5rem;
-        text-align: center;
-        background-color: #E9FFD6;
-        @include breakpoint(max-width $screen-sm-max) {
-            position: absolute;
-            top: 25px;
-            right: 20px;
-        }
-        @include breakpoint($screen-md) {
-            display: none;
-        }
-    }
-    &__content {
-        display: none;
-        &.active {
-            display: block !important;
-        }
-        @include breakpoint($screen-md) {
-            display: block !important;
-        }
-    }
-
-    ul {
-        border-bottom: 1px dotted red;
-    }
-    .tag {
-        font-size: 60%;
-    }
 }
 @include breakpoint($screen-md) {
     .site-wrapper {
@@ -167,15 +167,13 @@
         min-height: 100vh;
         flex-direction: column;
     }
-    .site-banner {
+    .site-header {
         position: fixed;
         top: 0;
         border-right: 1px solid #f4f6f9;
         width: 15rem;
         text-align: left;
         z-index: 8000;
-
-
     }
     .site-navigation {
         position: fixed;
@@ -191,11 +189,137 @@
         margin-left: 15rem;
         min-height: calc(100vh - 5.375rem);
     }
-    .site-footer {
-        margin-left: 15rem;
+}
+@include breakpoint($screen-lg) {
+    .site-main {
+        margin-right: 15rem;
     }
 }
 
-.chop-example {
-    outline: 1px solid #d8dde6;
+
+
+
+// =============================================
+// Header
+// =============================================
+
+.site-header {
+    img {
+        @extend %img-responsive;
+    }
+    .logo {
+        padding: 1rem;
+        background: #efefef;
+        &:hover {
+            .logo__text :first-child {
+                transform: rotate(0);
+            }
+            .logo__text :last-child {
+                transform: rotate(0);
+            }
+        }
+    }
 }
+
+// =============================================
+// Navigation
+// =============================================
+
+.site-navigation{
+    background-color: #2f3942;
+    //font-size: 0.778em;
+    font-weight: 600;
+    
+    a {
+        text-transform: capitalize;
+        color: #68747f;
+        border-bottom: 1px solid #3c454e;
+        &:hover {
+            background-color: #28313a;
+            color: #e3eaf3;
+            transition: .1s ease-in;
+        }
+    }
+    
+    &__toggle {
+        display: block;
+        padding: 0.5rem;
+        text-align: center;
+        background-color: #E9FFD6;
+        @include breakpoint(max-width $screen-sm-max) {
+            position: absolute;
+            top: 25px;
+            right: 20px;
+        }
+        @include breakpoint($screen-md) {
+            display: none;
+        }
+    }
+    &__content {
+        //display: none;
+        &.active {
+            display: block !important;
+        }
+        @include breakpoint($screen-md) {
+            display: block !important;
+            margin-bottom: 6em;
+        }
+    }
+
+    ul {
+        margin-bottom: 2em;
+    }
+    .tag {
+        font-size: 60%;
+    }
+}
+
+
+
+// =============================================
+// Footer
+// =============================================
+
+.site-footer {
+    background: #f3f5f8;
+    padding: 2rem 0;
+    
+}
+@include breakpoint($screen-md $screen-md-max) {
+    .site-footer {
+        margin-left: 15rem;
+        text-align: center;
+    }
+}
+
+@include breakpoint(max-width $screen-md-max) {
+    .site-footer {
+        margin-top: 2rem;
+    }
+}
+@include breakpoint($screen-lg) {
+    .site-footer {
+        position: fixed;
+        float: right;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 15rem;
+        height: 100%;
+        padding: 2.5em;
+        color: #545d65;
+        font-size: 0.778em;
+        line-height: 1;
+        border-bottom: solid 1px #e3eaf3;
+        border-left: 1px solid #e3eaf3;
+        
+        .container {
+            width: auto;
+            max-width: 15rem;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+    }
+}
+

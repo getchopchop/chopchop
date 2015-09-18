@@ -1,7 +1,7 @@
 <?php
-foreach(array('overview', 'atoms', 'molecules', 'organisms', 'grid', 'layout', 'helpers', 'credits') as $toplevel) {
+foreach(array('overview', 'atoms', 'molecules', 'organisms', 'grid', 'mixins', 'utilities', 'credits') as $toplevel) {
 ?>
-<nav class="nav--stack">
+<nav class="nav--stack nav-<?= $toplevel ?>">
     <ul>
         <li><a href="/<?= $toplevel ?>"><?= ucwords($toplevel) ?></a></li>
         <?php
