@@ -112,6 +112,121 @@
                 elem.addClass('skip-active');
             }
         });
+        
+        
+        
+        
+    // =============================================
+    // Drawers
+    // =============================================
+    var $body = $('body'),
+        $title = $('.title--drawer'),
+        $overlay = $('.overlay');
+        
+    var $originalDrawerTitle = $title.html();
+
+    // =============================================
+    // Drawer
+    // =============================================
+    
+    function closeDrawers(targetDrawer) {
+        
+        // get original drawer title
+        // we switch this later
+        $title.html($originalDrawerTitle);
+        
+        // Deal with contents
+        if(targetDrawer){
+            targetDrawer.removeAttr('data-content');
+        }
+        
+        // close the drawers
+        $('[data-toggle=drawer]').each(function(){
+            var bodyClassName = 'drawer--' + $(this).data('target') + '--open';
+            $body.removeClass(bodyClassName);
+            $body.removeClass('drawer--open');
+        });
+        
+        $overlay.off('touchstart.close.drawer click.close.drawer');
+        
+        // reset body overflow
+        $body.css('overflow', 'auto');
+        $(window).unbind('scroll.drawer');
+        //$overlay.stop().fadeOut();
+    };
+    
+    
+    $(document.body).on('click', '[data-toggle=drawer]', function(event) {
+        event.preventDefault();
+        
+        var target          = $(this).data('target'),
+            targetDrawer    = $('.drawer--' + target),
+            bodyClassName   = 'drawer--' + target + '--open',
+            content         = $(this).data('content'),
+			drawerAttr		= $(this).data('drawer-attr'),
+            drawerOpen      = false;
+        
+		$('[data-toggle=drawer]').removeClass('btn--active');
+		
+        // Work out if the drawer is open
+        if($body.hasClass(bodyClassName)){
+            if(content && targetDrawer.data('content') == content){
+                drawerOpen = true;
+            }
+            
+            if(!content){
+                drawerOpen = true;
+            }
+        }
+        //console.log(content);
+        closeDrawers(targetDrawer);
+        
+        
+        if(drawerOpen){
+            return;
+        }
+		
+		$(this).addClass('btn--active');
+        
+        if(content){
+            targetDrawer.data('content', content);
+        }
+		
+		if(drawerAttr){
+			targetDrawer.addClass(drawerAttr);
+		}
+		
+        $overlay.on('touchstart.close.drawer click.close.drawer', function() {
+           closeDrawers(); 
+        });
+        
+        // Show relevant content inside
+        // the target drawer
+        if(content) {
+            $(targetDrawer).find('.toggleable').hide();
+            $(targetDrawer).find('.' + content).show();
+        }
+        
+        // switch drawer title
+        $title.html($(this).data('title'));
+        
+        // add open class
+        $body.addClass('drawer--open');
+        $body.addClass(bodyClassName);
+        
+        // freeze body scrolling
+        var top = $(window).scrollTop(),
+            left = $(window).scrollLeft();
+            
+        $body.css('overflow', 'hidden');
+        $(window).on('scroll.drawer', function(){
+            $(this).scrollTop(top).scrollLeft(left);
+        });
+        //$overlay.stop().fadeIn();
+        
+        
+    });
+    
 
 
     });
