@@ -274,21 +274,27 @@ body {
             display: block !important;
         }
         @include breakpoint($screen-md) {
-            display: block !important;
-            margin-bottom: 6em;
+            display: flex !important;
+            flex-direction: column;
+            height: 100%;
+            padding-top: 2em;
+            
+            .nav--stack:nth-last-child(2) {
+                flex-grow: 2;
+            }
         }
     }
     
-    nav:first-child {
-        margin-top: 2em;
-    }
     .nav--stack ul ul {
         margin-bottom: 2em;
     }
     
-    .tag {
-        font-size: 60%;
-    }
+    
+    
+    
+    // =============================================
+    // Collapsing menu
+    // =============================================
     
     .child {
         display: none;
@@ -310,6 +316,8 @@ body {
             display: inline-block;
         }
     }
+    
+    
 }
 
 
@@ -367,10 +375,13 @@ body {
         display: block;
         width: 50px;
         height: 35px;
-        fill: red;
+        transition: all 0.1s ease;
     }
     svg {
         fill: #e3eaf3;
+    }
+    &:hover svg {
+        fill: #2f3942;
     }
 }
 
