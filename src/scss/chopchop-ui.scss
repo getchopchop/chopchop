@@ -13,6 +13,7 @@
 @import "mixins/ellipsis";
 @import "mixins/breakpoint";
 @import "mixins/grid";
+@import "mixins/lists";
 
 
 // =============================================
@@ -28,7 +29,7 @@
 @import "utilities/grid";
 @import "utilities/box-sizing";
 @import "utilities/z-index";
-
+@import "utilities/lists";
 
 
 
@@ -36,6 +37,10 @@
 // Containers
 // =============================================
 
+.container {
+    margin-left: 0;
+    margin-right: 0;
+}
 .container-xs-max {
     max-width: $screen-xs;
 }
@@ -74,17 +79,22 @@ h2 {
 .logo {
 
     display: block;
+    font-weight: bold;
 
-    &__circle {
+    &__art {
         display: inline-block;
         width: 55px;
         height: 58px;
         overflow: hidden;
         vertical-align: middle;
+        transition: all 0.3s ease;
+    }
+    &__text {
+        font-size: 140%;
     }
     &__text > * {
         display: inline-block;
-        transition: all 0.5 ease;
+        //transition: all 0.5s ease;
     }
     &__text :first-child {
         transform: rotate(-11deg);
@@ -170,7 +180,6 @@ h2 {
     .site-header {
         position: fixed;
         top: 0;
-        border-right: 1px solid #f4f6f9;
         width: 15rem;
         text-align: left;
         z-index: 8000;
@@ -179,7 +188,6 @@ h2 {
         position: fixed;
         top: 90px;
         bottom: 0;
-        border-right: 1px solid #f4f6f9;
         width: 15rem;
         overflow: hidden;
         overflow-y: auto;
@@ -209,13 +217,17 @@ h2 {
     }
     .logo {
         padding: 1rem;
-        background: #efefef;
+        background-color: #2f3942;
+        color: white;
+        border-bottom: 3px solid #3c454e;
+        
         &:hover {
-            .logo__text :first-child {
-                transform: rotate(0);
+            .logo__art {
+                transform: rotate(100deg);
             }
-            .logo__text :last-child {
+            .logo__text span {
                 transform: rotate(0);
+                font-size: 100%;
             }
         }
     }
@@ -225,7 +237,7 @@ h2 {
 // Navigation
 // =============================================
 
-.site-navigation{
+.site-navigation {
     background-color: #2f3942;
     //font-size: 0.778em;
     font-weight: 600;
@@ -267,7 +279,7 @@ h2 {
     }
 
     ul {
-        margin-bottom: 2em;
+        margin-top: 2em;
     }
     .tag {
         font-size: 60%;
@@ -288,13 +300,19 @@ h2 {
 @include breakpoint($screen-md $screen-md-max) {
     .site-footer {
         margin-left: 15rem;
-        text-align: center;
     }
 }
 
 @include breakpoint(max-width $screen-md-max) {
     .site-footer {
         margin-top: 2rem;
+        
+        .links {
+            @include list-inline;
+            li {
+                margin-right: 1em;
+            }
+        }
     }
 }
 @include breakpoint($screen-lg) {
@@ -306,20 +324,13 @@ h2 {
         bottom: 0;
         width: 15rem;
         height: 100%;
-        padding: 2.5em;
+        padding: 2.5em 2em;
         color: #545d65;
         font-size: 0.778em;
         line-height: 1;
         border-bottom: solid 1px #e3eaf3;
         border-left: 1px solid #e3eaf3;
         
-        .container {
-            width: auto;
-            max-width: 15rem;
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-        }
     }
 }
 

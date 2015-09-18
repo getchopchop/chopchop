@@ -9,7 +9,7 @@
 .nav--secondary ol,
 .nav--stack ul,
 .nav--stack ol {
-	@extend %list-unstyled;
+	@include list-unstyled;
 }
 
 

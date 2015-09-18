@@ -14,8 +14,8 @@
         
         <header class="site-header">
             <a href="/" class="logo">
-                <span class="logo__circle"><img src="/src/img/chopper_black.svg" class="logo__img" /></span>
-                <span class="logo__text h6"><span>Chop</span><span>Chop</span></span>
+                <span class="logo__art"><img src="/src/img/chopper_white.svg" class="logo__img" /></span>
+                <span class="logo__text"><span>Chop</span> <span>Chop</span></span>
             </a>
         </header>
         
@@ -152,16 +152,21 @@
 
         <footer class="footer site-footer">
             
-            <h4>Related Patterns</h4>
-            <nav class="nav--stack">
-                <ul>
-                    <li><a href="#">Related Patterns</a></li>
-                </ul>
-            </nav>
+
             
             
             <div class="container">
-                <ul>
+                
+                <h4>Related Patterns</h4>
+                <nav class="nav--stack">
+                    <ul>
+                        <li><a href="#">Related Pattern 1</a></li>
+                        <li><a href="#">Related Pattern 2</a></li>
+                        <li><a href="#">Related Pattern 3</a></li>
+                    </ul>
+                </nav>
+                
+                <ul class="links">
                     <li><a href="/">Get Chopping</a></li>
                     <li><a href="/credits">Credit</a></li>
                     <li><a href="https://gitlab.iweb.co.uk/frontend/chopchop"><img src="https://gitlab.iweb.co.uk/favicon.ico" width="16" height="16" class="img-inline" style="vertical-align: text-top;"> Project on Gitlab</a></li>

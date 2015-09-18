@@ -13,6 +13,7 @@
 @import "mixins/ellipsis";
 @import "mixins/breakpoint";
 @import "mixins/grid";
+@import "mixins/lists";
 
 
 // =============================================
@@ -28,6 +29,7 @@
 @import "utilities/grid";
 @import "utilities/box-sizing";
 @import "utilities/z-index";
+@import "utilities/lists";
 
 
 // =============================================
@@ -36,7 +38,6 @@
 
 @import "atoms/typography";
 @import "atoms/headings";
-@import "atoms/lists";
 @import "atoms/images";
 @import "atoms/buttons";
 @import "atoms/forms";
