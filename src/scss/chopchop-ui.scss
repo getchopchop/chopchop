@@ -278,12 +278,37 @@ body {
             margin-bottom: 6em;
         }
     }
-
-    ul {
+    
+    nav:first-child {
         margin-top: 2em;
     }
+    .nav--stack ul ul {
+        margin-bottom: 2em;
+    }
+    
     .tag {
         font-size: 60%;
+    }
+    
+    .child {
+        display: none;
+        &.show {
+            display: block;
+        }
+        a {
+            padding-left: 3rem;
+        }
+    }
+    .parent > a .icon-minus {
+        display: none;
+    }
+    .active > a {
+        .icon-plus {
+            display: none;
+        }
+        .icon-minus {
+            display: inline-block;
+        }
     }
 }
 
