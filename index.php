@@ -28,34 +28,32 @@
         
         <main class="main site-main">
             
-            <header class="site-masthead">            
-                <?php if($_SERVER['REQUEST_URI'] != '/') { ?>
-
-                    <hgroup class="hgroup">
-                        <?php
-                            $wrapped = array_map(
-                               function ($el) {
-                                  return "<a href='#'>{$el}</a>";
-                               },
-                               $paths
-                            );
-                        ?>
-                        <span class="breadcrumbs"><?php echo "&larr;&nbsp;", implode($wrapped, "&nbsp;&larr;&nbsp;"); ?></span>
-                        <h1 class="hgroup__title"><?php echo array_pop($paths);?></h1>
-                        
-                    </hgroup>
-                
-                <?php } else { ?>
-                    <a href="/" class="logo">
-                        <hgroup class="hgroup">
-                          <h1 class="hgroup__title">Get Chopping</h1>
-                          <h5 class="hgroup__subtitle">Everything you need for the perfect slice.</h5>
-                        </hgroup>
-                    </a>
-                <?php } ?>
-            
+            <?php if($_SERVER['REQUEST_URI'] != '/') { ?>
+                <?php
+                    $wrapped = array_map(
+                       function ($el) {
+                          return "<a href='#'>{$el}</a>";
+                       },
+                       $paths
+                    );
+                ?>
+            <header class="site-masthead theme-atom">
+                <hgroup class="hgroup">
+                    <span class="breadcrumbs"><?php echo "&larr;&nbsp;", implode($wrapped, "&nbsp;&larr;&nbsp;"); ?></span>
+                    <h1 class="hgroup__title"><?php echo array_pop($paths);?></h1>
+                </hgroup>
             </header>
-            
+            <?php } else { ?>
+            <header class="site-masthead">
+                <a href="/" class="logo">
+                    <hgroup class="hgroup">
+                      <h1 class="hgroup__title">Get Chopping</h1>
+                      <h5 class="hgroup__subtitle">Everything you need for the perfect slice.</h5>
+                    </hgroup>
+                </a>
+            </header>
+            <?php } ?>
+
             <div class="site-content">
             
                 <?php if($_SERVER['REQUEST_URI'] == '/') { ?>
