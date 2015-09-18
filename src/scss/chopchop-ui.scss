@@ -53,23 +53,23 @@
 body {
     color: #404040;
 }
-h1 {
-    color: #404040;
-}
-h2 {
-    color: #545d65;
-}
+//h1 {
+//    color: #404040;
+//}
+//h2 {
+//    color: #545d65;
+//}
 
 
 // =============================================
 // Font Sizes
 // =============================================
-h1 {
-    font-size: 2.111em;
-}
-h2 {
-    font-size: 1.444em;
-}
+//h1 {
+//    font-size: 2.111em;
+//}
+//h2 {
+//    font-size: 1.444em;
+//}
 
 
 // =============================================
@@ -80,6 +80,7 @@ h2 {
 
     display: block;
     font-weight: bold;
+    text-decoration: none;
 
     &__art {
         display: inline-block;

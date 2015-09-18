@@ -8,7 +8,7 @@
     <div class="container">
         <h3>Icon sizes</h3>
         <p>All icons (excluding payment icons) can have <code>icon--sm</code> and <code>icon--lg</code> applied to decrease or increase the size. <code>icon--sm</code> will decrease the size by 25%. <code>icon--lg</code> will increase the size by 50%. Icon font sizes are relative to their parent.</p>
-        <ul class="list-unstyled g-three-up">
+        <ul class="u-list-unstyled g-three-up">
             <li>
                 <i class="icon-twitter"></i>
                 <span class="i-name">icon-twitter</span>
@@ -28,7 +28,7 @@
 <div class="well">
     <div class="container">
         <h3>Social Icons</h3>
-        <ul class="list-unstyled g-three-up">
+        <ul class="u-list-unstyled g-three-up">
             <li>
                 <i class="icon-linkedin"></i>
                 <span class="i-name">icon-linkedin</span>
@@ -68,7 +68,7 @@
 <div class="well">
     <div class="container">
         <h3>Common UI Icons</h3>
-        <ul class="list-unstyled g-three-up">
+        <ul class="u-list-unstyled g-three-up">
             <li>
                 <i class="icon-search"></i>
                 <span class="i-name">icon-search</span>
@@ -244,7 +244,7 @@
 {% end highlight html %}
         <hr />
         <h4>Coloured payment icons</h4>
-        <ul class="list-inline">
+        <ul class="u-list-inline">
             <li><img src="/build/img/icons/payments/color/amazon.svg" alt="Amazon" height="40" /></li>
             <li><img src="/build/img/icons/payments/color/american-express.svg" alt="America Express" height="40" /></li>
             <li><img src="/build/img/icons/payments/color/braintree.svg" alt="Braintree" height="40" /></li>
@@ -267,7 +267,7 @@
         </ul>
         <hr />
         <h4>White payment icons</h4>
-        <ul class="list-inline">
+        <ul class="u-list-inline">
             <li><img src="/build/img/icons/payments/white/amazon.svg" alt="Amazon" height="40" /></li>
             <li><img src="/build/img/icons/payments/white/american-express.svg" alt="America Express" height="40" /></li>
             <li><img src="/build/img/icons/payments/white/braintree.svg" alt="Braintree" height="40" /></li>
@@ -290,7 +290,7 @@
         </ul>
         <hr />
         <h4>Transparent payment icons</h4>
-        <ul class="list-inline">
+        <ul class="u-list-inline">
             <li><img src="/build/img/icons/payments/transparent/amazon.svg" alt="Amazon" height="40" /></li>
             <li><img src="/build/img/icons/payments/transparent/american-express.svg" alt="America Express" height="40" /></li>
             <li><img src="/build/img/icons/payments/transparent/braintree.svg" alt="Braintree" height="40" /></li>

@@ -11,6 +11,9 @@
 .nav--stack ol {
 	@include list-unstyled;
 }
+nav a {
+    text-decoration: none;
+}
 
 
 // =============================================
