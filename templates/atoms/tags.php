@@ -1,32 +1,35 @@
-<<<<<<< HEAD
-<p><span class="tag">No additional class</span>
-<span class="tag tag--default">Default</span>
-<span class="tag tag--primary">Primary</span>
-<span class="tag tag--success">Success</span>
-<span class="tag tag--info">Info</span>
-<span class="tag tag--warning">Warning</span>
-<span class="tag tag--danger">Danger</span></p>
-
-<p><span class="tag tag--sm">small</span>
-<span class="tag tag--lg">large</span></p>
-
-
-<h1>Hello world <span class="tag">hello again</span></h1>
-
-<h1>Test title with badge <span class="tag tag--badge">12</span></h1>
-<p>This is some text in a paragraph <span class="tag tag--badge tag--primary">12</span></p>
-=======
-<div class="container">
+<div class="well">
     
-    <span class="tag tag--default">Default</span>
-    <span class="tag tag--primary">Primary</span>
-    <span class="tag tag--success">Success</span>
-    <span class="tag tag--info">Info</span>
-    <span class="tag tag--warning">Warning</span>
-    <span class="tag tag--danger">Danger</span>
+    <p>
+        <span class="tag">No additional class</span>
+        <span class="tag tag--default">Default</span>
+        <span class="tag tag--primary">Primary</span>
+        <span class="tag tag--success">Success</span>
+        <span class="tag tag--info">Info</span>
+        <span class="tag tag--warning">Warning</span>
+        <span class="tag tag--danger">Danger</span>
+    </p>
 
-    <h1>Test title with badge <span class="tag tag--badge">12</span></h1>
-    <p>This is some text in a paragraph <span class="tag tag--badge tag--primary">12</span></p>
+    <p>
+        <span class="tag tag--sm">small</span>
+        <span class="tag tag--lg">large</span>
+    </p>
+
+
+    <h1>Hello world <span class="tag">hello again</span></h1>
+
+    <div class="container">
     
+        <span class="tag tag--default">Default</span>
+        <span class="tag tag--primary">Primary</span>
+        <span class="tag tag--success">Success</span>
+        <span class="tag tag--info">Info</span>
+        <span class="tag tag--warning">Warning</span>
+        <span class="tag tag--danger">Danger</span>
+
+        <h1>Test title with badge <span class="tag tag--badge">12</span></h1>
+        <p>This is some text in a paragraph <span class="tag tag--badge tag--primary">12</span></p>
+    
+    </div>
+
 </div>
->>>>>>> 52e5cf18f1413d058aac6c7b81d7df6c136a0bd7
