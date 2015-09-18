@@ -16,16 +16,16 @@
     a {
         display: inline-block;
         padding: $spacing-xs $spacing-sm;
-        background-color: $black;
-        color: $white;
+        background-color: black;
+        color: #fff;
 
         &:hover {
-            background-color: $grey-dark;
+            background-color: $grey;
         }
 
         &.active {
-            background-color: $blue;
-            color: $black;
+            background-color: blue;
+            color: black;
         }
     }
 
@@ -33,7 +33,7 @@
         display: inline-block;
         margin-top: 0;
         margin-bottom: 0;
-        color: $black;
+        color: black;
     }
 }
 

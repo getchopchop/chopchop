@@ -145,6 +145,7 @@ body {
     padding: 1rem 2rem;
     background-color: #16325c;
     color: #fff;
+    position: relative;
     *,
     *:hover {
         color: white;
@@ -153,6 +154,12 @@ body {
         margin-top: 0.2rem;
         margin-bottom: 0;
         text-transform: capitalize;
+    }
+    
+    .pagination {
+        position: absolute;
+        top: 1em;
+        right: 1em;
     }
 }
 

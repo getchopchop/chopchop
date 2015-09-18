@@ -42,6 +42,22 @@
                     <span class="breadcrumbs"><?php echo "&larr;&nbsp;", implode($wrapped, "&nbsp;&larr;&nbsp;"); ?></span>
                     <h1 class="hgroup__title"><?php echo array_pop($paths);?></h1>
                 </hgroup>
+                
+                <nav class="pagination">
+                  <ul>
+                    <li>
+                      <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                
             </header>
             <?php } else { ?>
             <header class="site-masthead">
