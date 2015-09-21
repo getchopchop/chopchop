@@ -371,6 +371,14 @@ body {
         border-bottom: solid 1px #e3eaf3;
         border-left: 1px solid #e3eaf3;
         
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            .nav--stack {
+                flex-grow: 2;
+            }
+        }
     }
 }
 
