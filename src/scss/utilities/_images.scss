@@ -9,9 +9,21 @@
     max-width: 100%;
     height: auto;
 }
+
 figure {
     margin: 0;
+
     img {
         @extend %u-img-responsive;
     }
+}
+
+
+// =============================================
+// Image Responsive
+// =============================================
+
+.u-img-inline,
+%u-img-inline {
+    display: inline;
 }

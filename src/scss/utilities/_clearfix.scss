@@ -2,8 +2,8 @@
 // Clearfix
 // =============================================
 
-.clearfix,
-%clearfix {
+.u-clearfix,
+%u-clearfix {
 	&:after {
 		content: "";
 		display: table;

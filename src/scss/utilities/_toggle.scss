@@ -6,6 +6,6 @@
 	cursor: pointer;
 }
 
-.active > .js-toggle__content {
+.is-active > .js-toggle__content {
 	display: block !important;
 }

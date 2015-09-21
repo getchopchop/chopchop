@@ -3,8 +3,16 @@
 // =============================================
 
 .container {
-	max-width: $container-max;
+	max-width: $container;
 	margin-left: auto;
 	margin-right: auto;
 	width: 90%;
+
+	&--sm {
+		max-width: $container-sm;
+	}
+
+	&--lg {
+		max-width: $container-lg;
+	}
 }

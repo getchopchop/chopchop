@@ -2,33 +2,41 @@
 // Visible
 // =============================================
 
-.visible-xs,
-.visible-sm,
-.visible-md,
-.visible-lg {
+.u-visible-xs,
+.u-visible-sm,
+.u-visible-md,
+.u-visible-lg,
+%u-visible-xs,
+%u-visible-sm,
+%u-visible-md,
+%u-visible-lg {
     display: none !important;
 }
 
 @include breakpoint(max-width $screen-xs-max) {
-    .visible-xs {
+    .u-visible-xs,
+    %u-visible-xs {
         display: block !important;
     }
 }
 
 @include breakpoint($screen-sm $screen-sm-max) {
-    .visible-sm {
+    .u-visible-sm,
+    %u-visible-sm {
         display: block !important;
     }
 }
 
 @include breakpoint($screen-md $screen-md-max) {
-    .visible-md {
+    .u-visible-md,
+    %u-visible-md {
         display: block !important;
     }
 }
 
 @include breakpoint($screen-lg) {
-    .visible-lg {
+    .u-visible-lg,
+    %u-visible-lg {
         display: block !important;
     }
 }
@@ -38,33 +46,41 @@
 // Visible inline
 // =============================================
 
-.visible-xs-inline,
-.visible-sm-inline,
-.visible-md-inline,
-.visible-lg-inline {
+.u-visible-xs-inline,
+.u-visible-sm-inline,
+.u-visible-md-inline,
+.u-visible-lg-inline,
+%u-visible-xs-inline,
+%u-visible-sm-inline,
+%u-visible-md-inline,
+%u-visible-lg-inline {
     display: none !important;
 }
 
 @include breakpoint(max-width $screen-xs-max) {
-    .visible-xs-inline {
+    .u-visible-xs-inline,
+    %u-visible-xs-inline {
         display: inline !important;
     }
 }
 
 @include breakpoint($screen-sm $screen-sm-max) {
-    .visible-sm-inline {
+    .u-visible-sm-inline,
+    %u-visible-sm-inline {
         display: inline !important;
     }
 }
 
 @include breakpoint($screen-md $screen-md-max) {
-    .visible-md-inline {
+    .u-visible-md-inline,
+    %u-visible-md-inline {
         display: inline !important;
     }
 }
 
 @include breakpoint($screen-lg) {
-    .visible-lg-inline {
+    .u-visible-lg-inline,
+    %u-visible-lg-inline {
         display: inline !important;
     }
 }
@@ -74,33 +90,41 @@
 // Visible inline block
 // =============================================
 
-.visible-xs-inline-block,
-.visible-sm-inline-block,
-.visible-md-inline-block,
-.visible-lg-inline-block {
+.u-visible-xs-inline-block,
+.u-visible-sm-inline-block,
+.u-visible-md-inline-block,
+.u-visible-lg-inline-block,
+%u-visible-xs-inline-block,
+%u-visible-sm-inline-block,
+%u-visible-md-inline-block,
+%u-visible-lg-inline-block {
     display: none !important;
 }
 
 @include breakpoint(max-width $screen-xs-max) {
-    .visible-xs-inline-block {
+    .u-visible-xs-inline-block,
+    %u-visible-xs-inline-block {
         display: inline-block !important;
     }
 }
 
 @include breakpoint($screen-sm $screen-sm-max) {
-    .visible-sm-inline-block {
+    .u-visible-sm-inline-block,
+    %u-visible-sm-inline-block {
         display: inline-block !important;
     }
 }
 
 @include breakpoint($screen-md $screen-md-max) {
-    .visible-md-inline-block {
+    .u-visible-md-inline-block,
+    %u-visible-md-inline-block {
         display: inline-block !important;
     }
 }
 
 @include breakpoint($screen-lg) {
-    .visible-lg-inline-block {
+    .u-visible-lg-inline-block,
+    %u-visible-lg-inline-block {
         display: inline-block !important;
     }
 }
@@ -110,33 +134,41 @@
 // Hidden
 // =============================================
 
-.hidden-xs,
-.hidden-sm,
-.hidden-md,
-.hidden-lg {
+.u-hidden-xs,
+.u-hidden-sm,
+.u-hidden-md,
+.u-hidden-lg,
+%u-hidden-xs,
+%u-hidden-sm,
+%u-hidden-md,
+%u-hidden-lg {
     display: block !important;
 }
 
 @include breakpoint(max-width $screen-xs-max) {
-    .hidden-xs {
+    .u-hidden-xs,
+    %u-hidden-xs {
         display: none !important;
     }
 }
 
 @include breakpoint($screen-sm $screen-sm-max) {
-    .hidden-sm {
+    .u-hidden-sm,
+    %u-hidden-sm {
         display: none !important;
     }
 }
 
 @include breakpoint($screen-md $screen-md-max) {
-    .hidden-md {
+    .u-hidden-md,
+    %u-hidden-md {
         display: none !important;
     }
 }
 
 @include breakpoint($screen-lg) {
-    .hidden-lg {
+    .u-hidden-lg,
+    %u-hidden-lg {
         display: none !important;
     }
 }
@@ -146,15 +178,9 @@
 // Hide
 // =============================================
 
-.no-display,
-.hidden,
-.hidden:before,
-.hidden:after {
+.u-hidden,
+%u-hidden {
     display: none !important;
-}
-
-.none {
-    display: none;
 }
 
 
@@ -162,7 +188,8 @@
 // Visually Hidden
 // =============================================
 
-.is-vishidden {
+.u-visibility-hidden,
+%u-visibility-hidden {
     position: absolute;
     overflow: hidden;
     width: 1px;
