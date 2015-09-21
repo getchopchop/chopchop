@@ -58,20 +58,15 @@
 %btn--text,
 .btn--text {
     @extend %link;
-    padding: $spacing-sm $spacing;
-    border: 0;
-    cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
-    white-space: nowrap;
     background-color: transparent;
-	color: $black;
-
+    color: $black;
+    font-weight: normal;
+    text-decoration: underline;
     &:hover,
     &:focus {
         background-color: transparent;
-		color: $black;
-		text-decoration: underline;
+        color: $black;
+        text-decoration: none;
     }
 
     &:disabled {
@@ -114,5 +109,5 @@
 // =============================================
 
 button {
-	@extend %btn;
+	//@extend %btn;
 }

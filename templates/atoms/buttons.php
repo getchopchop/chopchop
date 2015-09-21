@@ -33,8 +33,8 @@
         <p>These buttons use the <code>btn--text</code> modifier to make them look like text.</p>
         
         <p>
-            <a href="#" class="btn--text">Text Button</a>
-            <button type="button" class="btn--text">Text Button</button>
+            <a href="#" class="btn btn--text">Text Button</a>
+            <button type="button" class="btn btn--text">Text Button</button>
         </p>
 
     </div>
