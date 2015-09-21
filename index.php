@@ -20,7 +20,6 @@
         </header>
         
         <nav class="site-navigation">
-            <a href="" class="site-navigation__toggle block-toggle">Show Navigation</a>
             <div class="block-content site-navigation__content">
                 <?php include('inc/nav.php'); ?>
             </div>
