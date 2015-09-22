@@ -73,46 +73,12 @@ body {
 
 
 // =============================================
-// Logo
-// =============================================
-
-.logo {
-
-    display: block;
-    font-weight: bold;
-    text-decoration: none;
-
-    &__art {
-        display: inline-block;
-        width: 55px;
-        height: 58px;
-        overflow: hidden;
-        vertical-align: middle;
-        transition: all 0.3s ease;
-    }
-    &__text {
-        font-size: 140%;
-    }
-    &__text > * {
-        display: inline-block;
-        //transition: all 0.5s ease;
-    }
-    &__text :first-child {
-        transform: rotate(-11deg);
-        font-size: 120%;
-    }
-    &__text :last-child {
-        transform: rotate(12deg);
-        font-size: 90%;
-    }
-}
-
-// =============================================
 // Wells
 // =============================================
 
 .well {
-    padding: 4rem 3rem;
+    padding: 3rem 2rem;
+    border-bottom: 1px solid #e4e4e4;
 
     pre {
         margin-bottom: $spacing;
@@ -123,12 +89,11 @@ body {
         padding: 1rem;
     }
 
-    &:nth-child(even) {
-        background: #ececf3;
-
-        pre code {
-            background-color: #fff;
-        }
+    @include breakpoint($screen-sm) {
+        width: 88%;
+        margin-left: auto;
+        margin-right: auto;
+            padding: 3rem 0;
     }
 }
 
@@ -138,7 +103,7 @@ body {
 // =============================================
 
 .site-masthead {
-    padding: 1rem 3rem 1.5em;
+    padding: 1.5rem 3rem 2.5em;
     background-color: #28288f;
     color: #fff;
     position: relative;
@@ -147,7 +112,7 @@ body {
         color: white;
     }
     h1 {
-        margin-top: $spacing-lg;
+        margin-top: $spacing-xl * 1.4;
         margin-bottom: 0;
         text-transform: capitalize;
     }
@@ -173,7 +138,6 @@ body {
 // Layout
 // =============================================
 
-
 @include breakpoint($screen-md) {
     .site-wrapper {
         display: flex;
@@ -189,7 +153,7 @@ body {
     }
     .site-navigation {
         position: fixed;
-        top: 90px;
+        top: 13.05rem;
         bottom: 0;
         width: 15rem;
         overflow: hidden;
@@ -214,20 +178,26 @@ body {
         @extend %img-responsive;
     }
     .logo {
-        padding: 1rem;
-        background-color: darken(#28288f, 15%);
-        color: white;
+        background-color: #040429;
+        height: 13.05rem;
+        position: relative;
+        display: block;
 
-        &:hover {
-            .logo__art {
-                transform: rotate(100deg);
-            }
-            .logo__text span {
-                transform: rotate(0);
-                font-size: 100%;
-            }
+        .logo__art {
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 120px;
+        }
+
+        &:hover .logo__art {
+            transform: translate(-50%, -50%) rotate(100deg);
         }
     }
+
+
 }
 
 // =============================================
@@ -333,6 +303,10 @@ body {
 // Credits
 // =============================================
 
+
+.nav-credits {
+    padding-top: 3rem;
+}
 .nav-credits ul {
     padding-bottom: $spacing;
     a {
@@ -361,6 +335,6 @@ body {
 // =============================================
 
 .extra-info {
-    background-color: #d5d5df;
-    padding: 4rem 2rem;
+    background-color: #ececf3;
+    padding: 3rem 2rem;
 }

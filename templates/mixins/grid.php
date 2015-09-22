@@ -1,6 +1,5 @@
 <div class="l-two-col-right">
     <div class="l-body">
-
 <div class="well">
     <div class="container container--sm">
         <p class="lead">Grid mixins are a collection of functions to allow you to create custom grids or layouts.</p>
@@ -14,6 +13,7 @@
         <p>The grid mixin is used to initiate a grid. <strong>You must use <code>@include grid;</code> to create a grid or layout</strong>. This should be added to the grid container.</p>
         <p>Here is a code example:</p>
     </div>
+    <hr class="blank" />
     <div class="container">
         <div class="g-two-up g-gutter">
             <div>
@@ -43,6 +43,7 @@
         <p>Adding this to the grid container will equally divide all direct descendants. You can pass through any numeric whole number, such as <code>@include grid-up(3);</code> or <code>@include grid-up(4);</code>.</p>
         <p>Here is a code example:</p>
     </div>
+    <hr class="blank" />
     <div class="container">
         <div class="g-two-up g-gutter">
             <div>
@@ -112,6 +113,7 @@
         <p>Grid columns adds a specific width to a direct descendant of the grid container. Unlike the other examples, this should be applied to a child element using <code>@include grid-col(25%);</code>. If you're using this, it is likely you'll need to apply <code>@include grid-col();</code> to every direct descendant of the grid.</p>
         <p>Here is a code example:</p>
     </div>
+    <hr class="blank" />
     <div class="container">
         <div class="g-two-up g-gutter">
             <div>
@@ -153,6 +155,7 @@
         <p>By default grids will left align. This is important for grids where items are equally distributed, such as a product listing. If there is an odd number of items you want the remainder to sit on the left. If you wish to centre them instead you can use <code>@include grid-center();</code>.</p>
         <p>Here is a code example:</p>
     </div>
+    <hr class="blank" />
     <div class="container">
         <div class="g-two-up g-gutter">
             <div>
@@ -184,6 +187,7 @@
         <p>If you wish to reserve a grid layout you can use <code>@include grid-reserve</code>. This could be useful for quickly flipping layouts around.</p>
         <p>Here is a code example:</p>
     </div>
+    <hr class="blank" />
     <div class="container">
         <div class="g-two-up g-gutter">
             <div>
@@ -215,6 +219,7 @@
         <p>The advantage of using mixins is you can include them inside any media query. This means we can completely customise how a grid appears at each breakpoint.</p>
         <p>Here is a code example:</p>
     </div>
+    <hr class="blank" />
     <div class="container">
         <div class="g-two-up g-gutter">
             <div>
@@ -274,7 +279,7 @@
 
 </div>
 <div class="l-side extra-info">
-    <h4>Related patterns</h4>
+    <h3>Related patterns</h3>
     <ul>
         <li><a href="layout/grid">Grid Utility</a></li>
         <li><a href="layout/layout">Layout Utility</a></li>

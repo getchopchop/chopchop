@@ -94,6 +94,11 @@ hr {
     margin-bottom: $spacing-lg;
 }
 
+hr.blank {
+	background-color: transparent;
+	margin-bottom: 0;
+}
+
 
 // =============================================
 // Lead Paragraph

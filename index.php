@@ -15,7 +15,6 @@
         <header class="site-header">
             <a href="/" class="logo">
                 <span class="logo__art"><img src="/src/img/chopper_white.svg" class="logo__img" /></span>
-                <span class="logo__text"><span>Chop</span> <span>Chop</span></span>
             </a>
         </header>
 
@@ -60,12 +59,11 @@
             </header>
             <?php } else { ?>
             <header class="site-masthead">
-                <a href="/" class="logo">
+                    <span class="breadcrumbs">Everything you need to get slicing!</span>
+
                     <hgroup class="hgroup">
                       <h1 class="hgroup__title">Get Chopping</h1>
-                      <h5 class="hgroup__subtitle">Everything you need for the perfect slice.</h5>
                     </hgroup>
-                </a>
             </header>
             <?php } ?>
 
@@ -74,9 +72,9 @@
                 <?php if($_SERVER['REQUEST_URI'] == '/') { ?>
 
                 <div class="well">
-                    <div class="container">
+                    <div class="container container--sm">
 
-                            <h3>Why Chop Chop?</h3>
+                            <h2>Why Chop Chop?</h2>
 
                             <p class="lead">With responsive web design being the norm, we find ourselves fighting against our old processes.</p>
                             <p>On a fixed width website we could just &ldquo;Chop&rdquo; a Photoshop picture of the website to deliver to our clients and it would be <em>almost</em> pixel perfect.</p>
@@ -105,7 +103,7 @@
                     </div>
 
                     <div class="well">
-                        <div class="container">
+                        <div class="container container--sm">
                             <h2>Enter Chop Chop...</h2>
                             <h3>The aims of Chop Chop</h3>
 
@@ -128,7 +126,7 @@
                     </div>
 
                     <div class="well">
-                        <div class="container">
+                        <div class="container container--sm">
                             <h3>The Chop Chop Toolkit</h3>
                             <p>The modern web developer is now expected to know 9348 different program languages and syntaxes. We have selected a few technologies that help us build this site and will hopefully help you too.</p>
                             <a href="/overview/toolkit" class="btn">Read more</a>
@@ -137,7 +135,7 @@
                     </div>
 
                     <div class="well">
-                        <div class="container">
+                        <div class="container container--sm">
                             <h3>The Roadmap</h3>
                             <ul>
                                 <li>Automate Functional Testing?</li>
