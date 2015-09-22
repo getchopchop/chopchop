@@ -50,7 +50,7 @@
                 <h4 class="card__title">Card Title</h4>
                 <h6 class="card__subtitle">Supporting title</h6>
             </div>
-            <img class="card__cap" src="//placehold.it/400x240" alt="Card image cap">
+            <img class="card__img" src="//placehold.it/400x240" alt="Card image">
             <div class="card__body">
                 <p class="card__text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="btn btn--primary">Button</a>
