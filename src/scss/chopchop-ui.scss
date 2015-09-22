@@ -206,7 +206,7 @@ body {
         min-height: calc(100vh - 5.375rem);
     }
 }
-@include breakpoint($screen-lg) {
+@include breakpoint($screen-xl) {
     .site-main {
         margin-right: 15rem;
     }
@@ -338,13 +338,13 @@ body {
     padding: 2rem 0;
     
 }
-@include breakpoint($screen-md $screen-md-max) {
+@include breakpoint($screen-lg $screen-lg-max) {
     .site-footer {
         margin-left: 15rem;
     }
 }
 
-@include breakpoint(max-width $screen-md-max) {
+@include breakpoint(max-width $screen-lg-max) {
     .site-footer {
         margin-top: 2rem;
         
@@ -356,7 +356,7 @@ body {
         }
     }
 }
-@include breakpoint($screen-lg) {
+@include breakpoint($screen-xl) {
     .site-footer {
         position: fixed;
         float: right;

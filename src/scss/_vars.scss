@@ -82,6 +82,7 @@ $screen-xs              : 30em;
 $screen-sm              : 35em;
 $screen-md              : 52em;
 $screen-lg              : 62em;
+$screen-xl              : 82em;
 
 $container	     		: 90em;
 $container-sm	     	: 110em;
@@ -90,6 +91,7 @@ $container-lg	     	: 56em;
 $screen-xs-max          : $screen-sm - 0.01em;
 $screen-sm-max          : $screen-md - 0.01em;
 $screen-md-max          : $screen-lg - 0.01em;
+$screen-lg-max          : $screen-xl - 0.01em;
 
 
 // =============================================
