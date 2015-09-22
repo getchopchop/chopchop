@@ -16,7 +16,7 @@ $black                  : #000;
 // Fonts
 // =============================================
 
-$font-family            : 'Open Sans', helvetica, arial, sans-serif;
+$font-family            : Merriweather, Georgia, Times, "Times New Roman", serif;
 
 $font-size              : 83%;
 $font-size-xxs          : 0.5em;
@@ -36,9 +36,9 @@ $line-height-sm         : 1.4;
 // Headings
 // =============================================
 
-$heading-font-family    : $font-family;
+$heading-font-family    : montserrat, helvetica, arial, sans-serif;
 
-$font-size-h1           : 3em;
+$font-size-h1           : 3.4em;
 $font-size-h2           : $font-size-h1 * 0.7;
 $font-size-h3           : $font-size-h1 * 0.57;
 $font-size-h4           : $font-size-h1 * 0.48;
@@ -84,8 +84,8 @@ $screen-md              : 52em;
 $screen-lg              : 62em;
 
 $container	     		: 90em;
-$container-sm	     	: 110em;
-$container-lg	     	: 56em;
+$container-sm	     	: 52em;
+$container-lg	     	: 110em;
 
 $screen-xs-max          : $screen-sm - 0.01em;
 $screen-sm-max          : $screen-md - 0.01em;

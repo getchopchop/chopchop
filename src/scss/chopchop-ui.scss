@@ -155,7 +155,7 @@ body {
         margin-bottom: 0;
         text-transform: capitalize;
     }
-    
+
     .pagination {
         position: absolute;
         top: 1em;
@@ -228,7 +228,7 @@ body {
         background-color: #2f3942;
         color: white;
         border-bottom: 3px solid #3c454e;
-        
+
         &:hover {
             .logo__art {
                 transform: rotate(100deg);
@@ -249,7 +249,7 @@ body {
     background-color: #2f3942;
     //font-size: 0.778em;
     font-weight: 600;
-    
+
     a {
         text-transform: capitalize;
         color: #68747f;
@@ -260,7 +260,7 @@ body {
             transition: .1s ease-in;
         }
     }
-    
+
     &__toggle {
         display: block;
         padding: 0.5rem;
@@ -285,24 +285,24 @@ body {
             flex-direction: column;
             height: 100%;
             padding-top: 2em;
-            
+
             .nav--stack:nth-last-child(2) {
                 flex-grow: 2;
             }
         }
     }
-    
+
     .nav--stack ul ul {
         margin-bottom: 2em;
     }
-    
-    
-    
-    
+
+
+
+
     // =============================================
     // Collapsing menu
     // =============================================
-    
+
     .child {
         display: none;
         &.show {
@@ -323,8 +323,8 @@ body {
             display: inline-block;
         }
     }
-    
-    
+
+
 }
 
 
@@ -336,7 +336,7 @@ body {
 .site-footer {
     background: #f3f5f8;
     padding: 2rem 0;
-    
+
 }
 @include breakpoint($screen-md $screen-md-max) {
     .site-footer {
@@ -347,7 +347,7 @@ body {
 @include breakpoint(max-width $screen-md-max) {
     .site-footer {
         margin-top: 2rem;
-        
+
         .links {
             @include list-inline;
             li {
@@ -370,7 +370,7 @@ body {
         font-size: 0.778em;
         border-bottom: solid 1px #e3eaf3;
         border-left: 1px solid #e3eaf3;
-        
+
         .container {
             display: flex;
             flex-direction: column;
@@ -399,4 +399,3 @@ body {
         fill: #2f3942;
     }
 }
-

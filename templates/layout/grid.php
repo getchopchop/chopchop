@@ -1,4 +1,25 @@
 <div class="well">
+    <div class="container container--narrow">
+        <p class="lead">Grids are a collection of classes to allow you to equally divide up a layout. This is useful for product listings or blog listings.</p>
+        <p>To initiate a grid layout you need to wrap a div around the items and add the class <code>g-two-up</code> or <code>g-three-up</code> up to six. You can add a gutter using the class <code>g-gutter</code>. The gutters can be changed globally in the variables files.</p>
+        <p>Here is a code example of it in use:</p>
+
+{% highlight html %}
+<div class="g-three-up">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+    <div>Item 4</div>
+    <div>Item 5</div>
+    <div>Item 6</div>
+</div>
+{% end highlight html %}
+
+        <p>If you wish to have more control, you can make your own layouts and grids using the <a href="/mixins/grid">grids mixins</a>.</p>
+    </div>
+</div>
+
+<div class="well">
     <div class="container">
 
         <h2>Grid Two Up</h2>
