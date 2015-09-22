@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6,
 	font-family: $heading-font-family;
 	line-height: $line-height-xs;
 	font-weight: $bold;
-    color: $black;
+    color: $grey;
     margin-top: 0;
     margin-bottom: $spacing;
 }
@@ -34,6 +34,7 @@ h1, %h1, .h1 {
 // =============================================
 
 h2, %h2, .h2 {
+color: $blue;
 	font-size: $font-size-h2;
 }
 

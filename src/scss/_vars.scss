@@ -4,12 +4,14 @@
 
 $grey-darker            : #222;
 $grey-dark              : #444;
-$grey                   : #666;
+$grey                   : #484852;
 $grey-light             : #ddd;
 $grey-lighter           : #e4e4e4;
 
 $white                  : #fff;
 $black                  : #000;
+
+$blue                   : #28288f;
 
 
 // =============================================
@@ -18,7 +20,7 @@ $black                  : #000;
 
 $font-family            : Merriweather, Georgia, Times, "Times New Roman", serif;
 
-$font-size              : 83%;
+$font-size              : 100%;
 $font-size-xxs          : 0.5em;
 $font-size-xs           : 0.75em;
 $font-size-sm           : 0.9em;
@@ -39,8 +41,8 @@ $line-height-sm         : 1.4;
 $heading-font-family    : montserrat, helvetica, arial, sans-serif;
 
 $font-size-h1           : 3.4em;
-$font-size-h2           : $font-size-h1 * 0.7;
-$font-size-h3           : $font-size-h1 * 0.57;
+$font-size-h2           : $font-size-h1 * 0.8;
+$font-size-h3           : $font-size-h1 * 0.55;
 $font-size-h4           : $font-size-h1 * 0.48;
 $font-size-h5           : $font-size-h1 * 0.4;
 $font-size-h6           : $font-size-h1 * 0.37;
@@ -54,7 +56,7 @@ $spacing                : 1rem;
 $spacing-xs             : 0.4rem;
 $spacing-sm             : 0.7rem;
 $spacing-lg             : 1.3rem;
-$spacing-xl             : 1.6rem;
+$spacing-xl             : 2rem;
 
 
 // =============================================

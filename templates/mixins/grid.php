@@ -1,3 +1,6 @@
+<div class="l-two-col-right">
+    <div class="l-body">
+
 <div class="well">
     <div class="container container--sm">
         <p class="lead">Grid mixins are a collection of functions to allow you to create custom grids or layouts.</p>
@@ -267,4 +270,13 @@
             </div>
         </div>
     </div>
+</div>
+
+</div>
+<div class="l-side extra-info">
+    <h4>Related patterns</h4>
+    <ul>
+        <li><a href="layout/grid">Grid Utility</a></li>
+        <li><a href="layout/layout">Layout Utility</a></li>
+</div>
 </div>

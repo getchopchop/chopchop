@@ -112,23 +112,19 @@ body {
 // =============================================
 
 .well {
-    padding: 2rem;
+    padding: 4rem 3rem;
 
     pre {
         margin-bottom: $spacing;
     }
 
     pre code {
-        background-color: #f4f4f4;
-        padding: 20px;
-        border: 1px solid #ccc;
+        background-color: #ececf3;
+        padding: 1rem;
     }
 
     &:nth-child(even) {
-        background: #f3f5f8;
-        color: #738a9f;
-        border-bottom: solid 1px #e3eaf3;
-        border-top: solid 1px #e3eaf3;
+        background: #ececf3;
 
         pre code {
             background-color: #fff;
@@ -142,8 +138,8 @@ body {
 // =============================================
 
 .site-masthead {
-    padding: 1rem 2rem;
-    background-color: #16325c;
+    padding: 1rem 3rem 1.5em;
+    background-color: #28288f;
     color: #fff;
     position: relative;
     *,
@@ -151,12 +147,13 @@ body {
         color: white;
     }
     h1 {
-        margin-top: 0.2rem;
+        margin-top: $spacing-lg;
         margin-bottom: 0;
         text-transform: capitalize;
     }
 
     .pagination {
+        display: none;
         position: absolute;
         top: 1em;
         right: 1em;
@@ -176,9 +173,7 @@ body {
 // Layout
 // =============================================
 
-.site-content {
-    padding: 2rem 0;
-}
+
 @include breakpoint($screen-md) {
     .site-wrapper {
         display: flex;
@@ -206,11 +201,6 @@ body {
         min-height: calc(100vh - 5.375rem);
     }
 }
-@include breakpoint($screen-xl) {
-    .site-main {
-        margin-right: 15rem;
-    }
-}
 
 
 
@@ -225,9 +215,8 @@ body {
     }
     .logo {
         padding: 1rem;
-        background-color: #2f3942;
+        background-color: darken(#28288f, 15%);
         color: white;
-        border-bottom: 3px solid #3c454e;
 
         &:hover {
             .logo__art {
@@ -246,20 +235,27 @@ body {
 // =============================================
 
 .site-navigation {
-    background-color: #2f3942;
+    background-color: darken(#28288f, 15%);
     //font-size: 0.778em;
     font-weight: 600;
 
     a {
         text-transform: capitalize;
-        color: #68747f;
-        border-bottom: 1px solid #3c454e;
+        color: #fff;
+            border-bottom: 0;
         &:hover {
-            background-color: #28313a;
-            color: #e3eaf3;
+            color: #e529c4;
+                background-color: transparent;
             transition: .1s ease-in;
         }
     }
+    .active > a {
+        color: #e529c4;
+            background-color: transparent;
+
+    }
+
+
 
     &__toggle {
         display: block;
@@ -305,11 +301,15 @@ body {
 
     .child {
         display: none;
+        font-size: $font-size-sm;
         &.show {
             display: block;
         }
         a {
             padding-left: 3rem;
+            color: darken(#ececf3, 8%);
+            padding-top: $spacing-xs;
+            padding-bottom: $spacing-xs;
         }
     }
     .parent > a .icon-minus {
@@ -330,72 +330,37 @@ body {
 
 
 // =============================================
-// Footer
+// Credits
 // =============================================
 
-.site-footer {
-    background: #f3f5f8;
-    padding: 2rem 0;
-
-}
-@include breakpoint($screen-lg $screen-lg-max) {
-    .site-footer {
-        margin-left: 15rem;
+.nav-credits ul {
+    padding-bottom: $spacing;
+    a {
+        padding-top: $spacing-xs;
+        padding-bottom: $spacing-xs;
     }
 }
+.nav-credits small {
+    color: #fff;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: inline-block;
+    padding-bottom: 2rem;
+    opacity :0.5;
+    font-size: $font-size-xs;
 
-@include breakpoint(max-width $screen-lg-max) {
-    .site-footer {
-        margin-top: 2rem;
-
-        .links {
-            @include list-inline;
-            li {
-                margin-right: 1em;
-            }
-        }
-    }
-}
-@include breakpoint($screen-xl) {
-    .site-footer {
-        position: fixed;
-        float: right;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        width: 15rem;
-        height: 100%;
-        padding: 2.5em 2em;
-        color: #545d65;
-        font-size: 0.778em;
-        border-bottom: solid 1px #e3eaf3;
-        border-left: 1px solid #e3eaf3;
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            .nav--stack {
-                flex-grow: 2;
-            }
-        }
+    a {
+        display: inline;
+        padding: 0;
     }
 }
 
-.iweb-logo {
-    width: 50px;
-    display: block;
-    margin-bottom: 1em;
-    svg {
-        display: block;
-        width: 50px;
-        height: 35px;
-        transition: all 0.1s ease;
-    }
-    svg {
-        fill: #e3eaf3;
-    }
-    &:hover svg {
-        fill: #2f3942;
-    }
+
+// =============================================
+// Extra info
+// =============================================
+
+.extra-info {
+    background-color: #d5d5df;
+    padding: 4rem 2rem;
 }

@@ -6,7 +6,6 @@
 .l-two-col-right,
 .l-three-col {
 	@include grid;
-	@include grid-gutter;
     @include grid-up;
 }
 
