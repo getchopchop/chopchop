@@ -90,10 +90,10 @@ body {
     }
 
     @include breakpoint($screen-sm) {
-        width: 88%;
-        margin-left: auto;
-        margin-right: auto;
-            padding: 3rem 0;
+        width: 86%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 3rem;
     }
 }
 
