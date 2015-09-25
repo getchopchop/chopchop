@@ -84,11 +84,11 @@ input[type="submit"].btn {
 // Form field groups
 // =============================================
 
-.field-container {
+.fields__group {
 	margin-bottom: $spacing;
     margin: 0.6em 0;
 }
-.field-group .field-container:first-of-type {
+.fields .fields__group:first-of-type {
     margin-top: 0;
 }
 
