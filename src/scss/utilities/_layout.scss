@@ -2,8 +2,7 @@
 // Layout
 // =============================================
 
-.l-two-col-left,
-.l-two-col-right,
+.l-two-col,
 .l-three-col {
 	@include grid;
     @include grid-up;
@@ -20,12 +19,29 @@
 
 
 // =============================================
+// Grid Center
+// =============================================
+
+.l-center {
+    @include grid-center;
+}
+
+
+// =============================================
+// Grid Reverse
+// =============================================
+
+.l-reverse {
+    @include grid-reverse;
+}
+
+
+// =============================================
 // Left and right hand side
 // =============================================
 
 @include breakpoint($screen-sm) {
-	.l-two-col-left,
-	.l-two-col-right {
+	.l-two-col {
 		.l-side {
 			@include grid-col(25%);
             order: 1;
@@ -34,17 +50,6 @@
 			@include grid-col(75%);
             order: 2;
 		}
-	}
-}
-
-
-// =============================================
-// Right column
-// =============================================
-
-@include breakpoint($screen-sm) {
-	.l-two-col-right {
-		@include grid-reserve;
 	}
 }
 
