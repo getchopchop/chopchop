@@ -3,12 +3,7 @@
 // =============================================
 
 .u-embed-container {
-    position: relative;
-    padding-bottom: 56.25%; // 16:9 ratio
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    height: auto;
+    @include ratio(56.25%);
 
     iframe,
     object,
@@ -23,6 +18,8 @@
 
     // 16 by 9 is default
     &--4by3 {
-        padding-bottom: 75%; // 4:3 ratio
+        &:before {
+            padding-top: 75%;
+        }
     }
 }
