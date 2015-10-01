@@ -5,7 +5,7 @@
 %btn,
 .btn {
     padding: 0.44rem $spacing;
-    background-color: $grey-darker;
+    background-color: $darker-grey;
     color: $white;
 	border-radius: 0;
 	font-size: $font-size-lg;
@@ -24,7 +24,7 @@
     &:hover,
     &:focus {
         color: $white;
-        background-color: $grey-dark;
+        background-color: $dark-grey;
     }
 }
 
@@ -94,11 +94,11 @@
 .btn:disabled {
     cursor: not-allowed;
     background-color: $grey;
-	color: $grey-dark;
+	color: $dark-grey;
 
     &:hover,
     &:focus {
         background-color: $grey;
-		color: $grey-dark;
+		color: $dark-grey;
     }
 }

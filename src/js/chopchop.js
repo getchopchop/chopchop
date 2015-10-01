@@ -45,6 +45,13 @@
             tog($ul);
         
         });
+        
+        
+        $('.js-kill-nav').on('click',function(e){
+            e.preventDefault();
+            $('.site-navigation').remove();
+            $('.site-main').removeClass('site-main');
+        });
     
     });
 })(jQuery);

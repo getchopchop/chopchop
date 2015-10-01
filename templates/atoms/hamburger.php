@@ -1,4 +1,4 @@
-<div class="container">
+<div class="u-container">
     
     <button class="c-hamburger c-hamburger--rot">
       <span>toggle menu</span>

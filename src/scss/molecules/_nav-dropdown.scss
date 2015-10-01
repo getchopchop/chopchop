@@ -47,7 +47,7 @@
 		@include ellipsis();
 		color: $white;
 		display: block;
-		border-bottom: 1px dotted $grey-darker;
+		border-bottom: 1px dotted $dark-grey;
 		padding: $spacing-sm $spacing-xs;
 		padding-right: $spacing-xxl;
 		position: relative;
@@ -64,7 +64,7 @@
 
 		&:hover {
 			color: $blue;
-			background-color: darken($grey-darker, 7%);
+			background-color: darken($dark-grey, 7%);
 		}
 	}
 
@@ -134,7 +134,7 @@
 
 		&--featured {
 			width: 33.3%;
-			border-right: 1px dotted $grey-darker;
+			border-right: 1px dotted $dark-grey;
 			margin-right: $spacing-xxl;
 
 			li {
@@ -207,7 +207,7 @@
 	}
 
 	&:hover span {
-		background: $grey-darker;
+		background: $dark-grey;
 	}
 }
 
@@ -241,7 +241,7 @@
 	}
 
 	&:hover span {
-		background: $grey-light;
+		background: $light-grey;
 	}
 }
 

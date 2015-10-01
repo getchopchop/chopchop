@@ -11,13 +11,13 @@ th, td {
     padding: $spacing;
     line-height: 1.42857143;
     vertical-align: top;
-    border-top: 1px solid $grey-light;
+    border-top: 1px solid $light-grey;
 }
 
 th {
     text-align: left;
     vertical-align: bottom;
-    border-bottom: 2px solid $grey-light;
+    border-bottom: 2px solid $light-grey;
 }
 
 caption {
@@ -32,7 +32,7 @@ tr:first-child > th {
 }
 
 table > tbody {
-    border-bottom: 1px solid $grey-light;
+    border-bottom: 1px solid $light-grey;
 }
 
 
@@ -53,11 +53,11 @@ table > tbody {
 // =============================================
 
 .table--bordered {
-    border: 1px solid $grey-light;
+    border: 1px solid $light-grey;
 
     th,
     td {
-        border: 1px solid $grey-light;
+        border: 1px solid $light-grey;
     }
 
     > thead th,
@@ -72,7 +72,7 @@ table > tbody {
 // =============================================
 
 .table--striped > tbody > tr:nth-child(odd) {
-    background-color: $grey-lighter;
+    background-color: $light-grey;
 }
 
 
@@ -96,7 +96,7 @@ table > tbody {
         margin-bottom: 15px;
         overflow-y: hidden;
         -ms-overflow-style: -ms-autohiding-scrollbar;
-        border: 1px solid $grey-light;
+        border: 1px solid $light-grey;
 
         > table {
             margin-bottom: 0;

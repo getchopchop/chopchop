@@ -1,5 +1,5 @@
 <div class="well">
-    <div class="container">
+    <div class="u-container">
         <h2>Drawers</h2>
         <p>Drawers are special molecules that need thier own page to demonstrate how they work.</p>
         <p><a href="/drawers.php" class="btn" target="_blank">View Demo</a></p>
@@ -8,7 +8,7 @@
     </div>
 </div>
 <div class="well">
-    <div class="container">
+    <div class="u-container">
         
         <h3>Required Data Attributes</h3>
         <p class="lead">Drawers are hidden by default and need a toggle in order to show them on screen.</p>
@@ -17,7 +17,7 @@
     </div>
 </div>
 <div class="well">
-    <div class="container">
+    <div class="u-container">
         
         <h3>Optional Data Attributes.</h3>
         <p>There are also some data attributes that aren't required to make the drawers function. Adding a <code>data-content</code> attribute will show blocks within the given drawer providing the value matches a given class.</p>
@@ -30,7 +30,7 @@
     </div>
 </div>
 <div class="well">
-    <div class="container">
+    <div class="u-container">
         
         <h2>Drawer Code Example</h2>
         <p>Simple left drawer example.</p>
