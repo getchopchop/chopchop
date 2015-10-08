@@ -1,4 +1,7 @@
-// Basic Heading Group
+// =============================================
+// Heading group
+// =============================================
+
 .hgroup {
     &__title {
         margin-bottom: 0;
@@ -8,7 +11,10 @@
     }
 }
 
-// Heading Group w/Buttons
+// =============================================
+// Heading group with actions
+// =============================================
+
 .hgroup--actions {
     display: flex;
     align-items: center;
