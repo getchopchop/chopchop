@@ -1,18 +1,14 @@
 // =============================================
-// Navs Reset Lists
+// Base Nav
 // =============================================
 
-
-.nav--primary ul,
-.nav--primary ol,
-.nav--secondary ul,
-.nav--secondary ol,
-.nav--stack ul,
-.nav--stack ol {
-	@include list-unstyled;
-}
-nav a {
-    text-decoration: none;
+%nav,
+.nav {
+    @extend %u-list-unstyled;
+    
+    a {
+        text-decoration: none;
+    }
 }
 
 
@@ -20,89 +16,54 @@ nav a {
 // Nav Stacked
 // =============================================
 
-.nav--stack {
+.nav--inline {
+    display: flex;
+    flex-flow: wrap;
+}
+
+
+// =============================================
+// Nav Pills
+// =============================================
+
+.nav--pills {
     a {
         display: block;
-        padding: 0.75em 2em;
-        border-bottom: 1px solid #ddd;
-        &:hover {
-            background-color: #efefef;
-        }
-
+        padding: $spacing-xs;
     }
 }
 
 
 // =============================================
-// Navs Shared Styles
+// Priority Nav
 // =============================================
 
-.nav--primary > ul,
-.nav--primary > ol,
-.nav--secondary > ul,
-.nav--secondary > ol {
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-
-    > li {
-        display: inline-block;
-
-        &:first-child {
-            margin-left: 0;
-        }
-        &:last-child {
-            margin-right: 0;
-        }
-
-        a {
-            display: block;
-            padding: $spacing-sm;
-        }
+.priority-nav {
+    
+    display: flex;
+    overflow: hidden;
+    
+    .nav {
+        display: flex;
+    }
+    
+    &__scroll {
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+    
+    &__toggle {
+        flex-shrink: 0;
+    }
+    
+    &__sub {
+        padding: $spacing;
+    }
+    
+    ::-webkit-scrollbar { 
+        display: none; 
     }
 }
-
-
-// =============================================
-// Nav Primary
-// =============================================
-
-.nav--primary {
-	> ul,
-    > ol {
-		text-align: center;
-
-		> li {
-			@include breakpoint($screen-lg) {
-				margin-left: $spacing-xs;
-				margin-right: $spacing-xs;
-			}
-
-			> a {
-				position: relative;
-		   	}
-
-			/* Active state */
-			&.active a:before {
-				@include triangle(up, $black, 8px);
-				position: absolute;
-				bottom: -0.9rem;
-				left: 50%;
-				margin-left: -12px;
-			}
-		}
-	}
-
-}
-
-@include breakpoint($screen-md) {
-	.nav--primary {
-		> ul,
-        > ol {
-			text-align: left;
-		}
-	}
-}
-
 
 
 // =============================================
@@ -110,37 +71,39 @@ nav a {
 // =============================================
 
 .nav--multi-level {
-
+    
     li {
         position: relative;
     }
-
-    // Stack the navs
-    ul ul,
-    ul ol,
-    ol ul,
-    ol ol {
-        @extend .nav--stack;
-    }
-
+    
     // All levels
-    ul {
+    ul,
+    ol {
+        @extend %nav;
         display: none;
         position: absolute;
-        background-color: $light-grey;
     }
-
+    
     // Just Level 0
-    > ul {
+    > ul,
+    > ol {
         top: 100%;
     }
-    ul ul {
+    
+    ul ul,
+    ol ol,
+    ul ol,
+    ol ul {
         top: 0;
         left: 100%;
     }
-
+    
     li:hover > ul,
     li:hover > ol {
         display: block;
+    }
+    
+    a {
+        white-space: nowrap;
     }
 }
