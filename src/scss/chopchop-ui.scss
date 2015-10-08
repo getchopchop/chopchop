@@ -98,7 +98,7 @@
 
     }
 
-    .nav--stack ul ul {
+    .nav--pills ul ul {
         margin-bottom: 2em;
     }
 }
@@ -116,7 +116,7 @@
             display: block;
         }
         a {
-            padding-left: 3rem;
+            padding-left: 1rem;
             padding-top: $spacing-xs;
             padding-bottom: $spacing-xs;
         }
