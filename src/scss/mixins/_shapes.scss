@@ -12,6 +12,18 @@
 
 
 // =============================================
+// Square
+// =============================================
+
+@mixin square($color: #000, $size: 5px) {
+    height: $size;
+    width: $size;
+    background-color: $color;
+    display: inline-block;
+}
+
+
+// =============================================
 // Triangle
 // =============================================
 
@@ -49,16 +61,4 @@
         border-right: $size-2 solid $color;
         border-left: none;
     }
-}
-
-
-// =============================================
-// Square
-// =============================================
-
-@mixin square($color: #000, $size: 5px) {
-    height: $size;
-    width: $size;
-    background-color: $color;
-    display: inline-block;
 }
