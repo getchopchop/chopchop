@@ -5,7 +5,7 @@
 </nav>
 
 <?php
-foreach(array('branding', 'atoms', 'molecules', 'organisms', 'layout') as $toplevel) {
+foreach(array('branding', 'atoms', 'molecules', 'layout') as $toplevel) {
 ?>
 <nav class="nav--stack nav-<?= $toplevel ?> nav-collapse">
     <ul>
