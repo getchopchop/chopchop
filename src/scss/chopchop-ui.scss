@@ -9,7 +9,7 @@
 // Helpers
 // =============================================
 
-@import "mixins/arrow";
+@import "mixins/shape";
 @import "mixins/ellipsis";
 @import "mixins/breakpoint";
 @import "mixins/grid";
@@ -45,7 +45,7 @@
     background-color: #666;
     color: #fff;
     position: relative;
-    
+
     *,
     *:hover {
         color: white;
@@ -97,13 +97,13 @@
         border-bottom: 0;
 
     }
-    
+
     .nav--stack ul ul {
         margin-bottom: 2em;
     }
 }
 
-    
+
 // =============================================
 // Collapsing menu
 // =============================================
@@ -121,11 +121,11 @@
             padding-bottom: $spacing-xs;
         }
     }
-    
+
     .parent > a .icon-minus {
         display: none;
     }
-    
+
     .active > a {
         .icon-plus {
             display: none;
@@ -154,5 +154,3 @@
         border-bottom-right-radius: $border-radius;
     }
 }
-
-

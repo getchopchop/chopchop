@@ -1,0 +1,64 @@
+// =============================================
+// Circle
+// =============================================
+
+@mixin circle($color: #000, $size: 5px) {
+    height: $size;
+    width: $size;
+    border-radius: 100%;
+    background-color: $color;
+    display: inline-block;
+}
+
+
+// =============================================
+// Triangle
+// =============================================
+
+@mixin triangle($direction: up, $color: #000, $size: 5px, $size-2: $size) {
+    content: '';
+    width: 0;
+    height: 0;
+    display: inline-block;
+
+    @if $direction == up {
+        border-right: $size solid transparent;
+        border-left: $size solid transparent;
+        border-bottom: $size-2 solid $color;
+        border-top: none;
+    }
+
+    @if $direction == down {
+        border-right: $size solid transparent;
+        border-left: $size solid transparent;
+        border-top: $size-2 solid $color;
+        border-bottom: none;
+        border-bottom: none;
+    }
+
+    @if $direction == right {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size-2 solid $color;
+        border-right: none;
+    }
+
+    @if $direction == left {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size-2 solid $color;
+        border-left: none;
+    }
+}
+
+
+// =============================================
+// Square
+// =============================================
+
+@mixin square($color: #000, $size: 5px) {
+    height: $size;
+    width: $size;
+    background-color: $color;
+    display: inline-block;
+}

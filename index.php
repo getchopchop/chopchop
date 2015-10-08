@@ -45,7 +45,7 @@
             <div class="site-content">
 
                 <?php if($_SERVER['REQUEST_URI'] == '/') { ?>
-                    
+
                     index
 
                 <?php } else {

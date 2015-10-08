@@ -28,7 +28,7 @@ nav a {
         &:hover {
             background-color: #efefef;
         }
-        
+
     }
 }
 
@@ -43,17 +43,17 @@ nav a {
 .nav--secondary > ol {
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
-    
+
     > li {
         display: inline-block;
-        
+
         &:first-child {
             margin-left: 0;
         }
         &:last-child {
             margin-right: 0;
         }
-        
+
         a {
             display: block;
             padding: $spacing-sm;
@@ -83,7 +83,7 @@ nav a {
 
 			/* Active state */
 			&.active a:before {
-				@include arrow(up, 8px, $black);
+				@include triangle(up, $black, 8px);
 				position: absolute;
 				bottom: -0.9rem;
 				left: 50%;
@@ -110,11 +110,11 @@ nav a {
 // =============================================
 
 .nav--multi-level {
-    
+
     li {
         position: relative;
     }
-    
+
     // Stack the navs
     ul ul,
     ul ol,
@@ -122,14 +122,14 @@ nav a {
     ol ol {
         @extend .nav--stack;
     }
-    
+
     // All levels
     ul {
         display: none;
         position: absolute;
         background-color: $light-grey;
     }
-    
+
     // Just Level 0
     > ul {
         top: 100%;
@@ -138,7 +138,7 @@ nav a {
         top: 0;
         left: 100%;
     }
-    
+
     li:hover > ul,
     li:hover > ol {
         display: block;
