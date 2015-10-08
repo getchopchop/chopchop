@@ -46,7 +46,7 @@
 
                 <?php if($_SERVER['REQUEST_URI'] == '/') { ?>
 
-                    index
+                    Chop Chop Home :-)
 
                 <?php } else {
 
