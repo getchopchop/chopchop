@@ -43,7 +43,8 @@ var ChopChop = (function($, ChopChop) {
                     if (this === $target[0]) {
                         $this.removeClass('is-inactive').addClass('is-active');
 
-                        if (cascade = $this.data('toggle-cascade')) {
+                        var cascade = $this.data('toggle-cascade');
+                        if (cascade) {
                             cascades.push(cascade);
                         }
                     } else {
