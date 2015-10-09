@@ -62,3 +62,34 @@
         border-left: none;
     }
 }
+
+
+// =============================================
+// Chevron
+// =============================================
+
+@mixin chevron($direction: left, $size: 5px, $thickness: 1px, $color:  #000) {
+    content: '';
+    display: inline-block;
+    width: $size;
+    height: $size;
+    background: transparent;
+    border-top: $thickness solid $color;
+    border-right: $thickness solid $color;
+    
+    @if $direction == up {
+        transform: translate3d(0,-50%,0) rotate(-45deg);
+    }
+    
+    @if $direction == down {
+        transform: translate3d(0,-50%,0) rotate(135deg);
+    }
+    
+    @if $direction == left {
+        transform: translate3d(0,-50%,0) rotate(-135deg);
+    }
+    
+    @if $direction == right {
+        transform: translate3d(0,-50%,0) rotate(45deg);
+    }
+}
