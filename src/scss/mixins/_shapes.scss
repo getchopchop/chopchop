@@ -93,3 +93,61 @@
         transform: translate3d(0,-50%,0) rotate(45deg);
     }
 }
+
+
+// =============================================
+// Minus
+// =============================================
+
+@mixin minus($size: 22px, $thickness: 2px, $color: #000) {
+    display: inline-block;
+    position: relative;
+    width: $size;
+    height: $size;
+    
+    &:before {
+        content: '';
+        display: inline-block;
+        background-color: $color;
+        position: absolute;
+        width: $size;
+        height: $thickness;
+        left: 0;
+        top: 50%;
+        margin-top: -($thickness/2);
+    }
+}
+
+
+// =============================================
+// Plus
+// =============================================
+
+@mixin plus($size: 22px, $thickness: 2px, $color: #000) {
+    display: inline-block;
+    position: relative;
+    width: $size;
+    height: $size;
+    
+    &:before,
+    &:after {
+        content: '';
+        display: inline-block;
+        background-color: $color;
+        position: absolute;
+    }
+    &:before {
+        width: $size;
+        height: $thickness;
+        left: 0;
+        top: 50%;
+        margin-top: -($thickness/2);
+    }
+    &:after {
+        width: $thickness;
+        height: $size;
+        left: 50%;
+        top: 0;
+        margin-left: -($thickness/2);
+    }
+}
