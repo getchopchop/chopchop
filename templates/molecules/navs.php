@@ -1,5 +1,5 @@
 <div class="u-container">
-    
+
     <h2>Base Nav</h2>
     <nav>
         <ul class="nav">
@@ -8,7 +8,47 @@
             <li><a href="#">Structure</a></li>
         </ul>
     </nav>
-    
+
+    <h2>Inline Nav</h2>
+    <nav>
+        <ul class="nav nav--inline">
+            <?php for($i=0; $i <=1; $i++) { ?>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Credits</a></li>
+            <li><a href="#">Structure</a></li>
+            <?php } ?>
+        </ul>
+    </nav>
+
+    <h2>Pills Nav</h2>
+    <nav>
+        <ul class="nav nav--pills">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Credits</a></li>
+            <li><a href="#">Structure</a></li>
+        </ul>
+    </nav>
+
+    <h2>Stacked Nav</h2>
+    <nav>
+        <ul class="nav nav--stacked">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Credits</a></li>
+            <li><a href="#">Structure</a></li>
+        </ul>
+    </nav>
+
+    <h2>Nav inline and space</h2>
+    <nav>
+        <ul class="nav nav--inline nav--space">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Credits</a></li>
+            <li><a href="#">Structure</a></li>
+        </ul>
+    </nav>
+
+    <hr />
+
     <h2>Priority Nav</h2>
     <div class="priority-nav">
         <div class="priority-nav__scroll">
@@ -41,35 +81,5 @@
 
     <h2>Multi Level Primary Nav</h2>
     <?php include('templates/molecules/navs/multi-level.php'); ?>
-    
-    <h2>Inline Nav</h2>
-    <nav>
-        <ul class="nav nav--inline">
-            <?php for($i=0; $i <=1; $i++) { ?>
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Credits</a></li>
-            <li><a href="#">Structure</a></li>
-            <?php } ?>
-        </ul>
-    </nav>
-    
-    <h2>Pills Nav</h2>
-    <p>Stacked by default</p>
-    <nav>
-        <ul class="nav nav--pills">
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Credits</a></li>
-            <li><a href="#">Structure</a></li>
-        </ul>
-    </nav>
-    
-    <h2>Pills &amp; Inline Nav</h2>
-    <nav>
-        <ul class="nav nav--inline nav--pills">
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Credits</a></li>
-            <li><a href="#">Structure</a></li>
-        </ul>
-    </nav>
-    
+
 </div>

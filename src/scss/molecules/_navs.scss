@@ -31,13 +31,18 @@
 // Nav Stacked
 // =============================================
 
-.nav--stacked {
+.nav--stacked a {
     display: block;
+    padding: $spacing-xs;
+}
 
-    a {
-        display: block;
-        padding: $spacing-xs;
-    }
+
+// =============================================
+// Nav inline
+// =============================================
+
+.nav--inline > * {
+    display: inline-block;
 }
 
 
