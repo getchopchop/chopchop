@@ -30,7 +30,7 @@
     <div class="site-wrapper">
         
 
-        <nav class="site-navigation is-active">
+        <nav class="site-navigation">
             <div class="block-content site-navigation__content">
                 <?php include('inc/nav.php'); ?>
             </div>
