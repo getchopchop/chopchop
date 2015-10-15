@@ -47,10 +47,9 @@
         });
         
         
-        $('.js-kill-nav').on('click',function(e){
+        $('.js-toggle-nav').on('click',function(e){
             e.preventDefault();
-            $('.site-navigation').remove();
-            $('.site-main').removeClass('site-main');
+            $('.site-navigation').toggleClass('is-active');
         });
     
     });
