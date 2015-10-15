@@ -27,7 +27,7 @@
 // Triangle
 // =============================================
 
-@mixin triangle($direction: up, $color: #000, $size: 5px, $size-2: $size) {
+@mixin triangle($color: #000, $size: 5px, $size-2: $size, $direction: up) {
     content: '';
     width: 0;
     height: 0;
@@ -68,7 +68,7 @@
 // Chevron
 // =============================================
 
-@mixin chevron($direction: left, $size: 5px, $thickness: 1px, $color:  #000) {
+@mixin chevron($color:  #000, $size: 5px, $direction: left, $thickness: 1px) {
     content: '';
     display: inline-block;
     width: $size;
@@ -99,7 +99,7 @@
 // Minus
 // =============================================
 
-@mixin minus($size: 22px, $thickness: 2px, $color: #000) {
+@mixin minus($color: #000, $size: 22px, $thickness: 2px) {
     display: inline-block;
     position: relative;
     width: $size;
@@ -123,7 +123,42 @@
 // Plus
 // =============================================
 
-@mixin plus($size: 22px, $thickness: 2px, $color: #000) {
+@mixin plus($color: #000, $size: 22px, $thickness: 2px) {
+    display: inline-block;
+    position: relative;
+    width: $size;
+    height: $size;
+    
+    &:before,
+    &:after {
+        content: '';
+        display: inline-block;
+        background-color: $color;
+        position: absolute;
+    }
+    &:before {
+        width: $size;
+        height: $thickness;
+        left: 0;
+        top: 50%;
+        margin-top: -($thickness/2);
+    }
+    &:after {
+        width: $thickness;
+        height: $size;
+        left: 50%;
+        top: 0;
+        margin-left: -($thickness/2);
+    }
+}
+
+
+// =============================================
+// Cross
+// =============================================
+
+@mixin cross($color: #000, $size: 22px, $thickness: 2px) {
+    transform: rotate(45deg);
     display: inline-block;
     position: relative;
     width: $size;
