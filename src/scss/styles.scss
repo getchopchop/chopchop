@@ -24,6 +24,7 @@
 @import "utilities/align";
 @import "utilities/box-sizing";
 @import "utilities/clearfix";
+@import "utilities/colors";
 @import "utilities/container";
 @import "utilities/overlay";
 @import "utilities/embed-container";
@@ -41,10 +42,9 @@
 // =============================================
 
 @import "atoms/alerts";
-@import "atoms/colors";
+@import "atoms/body";
 @import "atoms/buttons";
 @import "atoms/forms";
-//@import "atoms/hamburger";
 @import "atoms/headings";
 @import "atoms/icons";
 @import "atoms/images";
