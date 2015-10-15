@@ -5,20 +5,10 @@
 %nav,
 .nav {
     @extend %u-list-unstyled;
-    
+
     a {
         text-decoration: none;
     }
-}
-
-
-// =============================================
-// Nav Stacked
-// =============================================
-
-.nav--inline {
-    display: flex;
-    flex-flow: wrap;
 }
 
 
@@ -27,9 +17,44 @@
 // =============================================
 
 .nav--pills {
+    display: flex;
+    flex-wrap: wrap;
+
     a {
         display: block;
         padding: $spacing-xs;
+    }
+}
+
+
+// =============================================
+// Nav Stacked
+// =============================================
+
+.nav--stacked {
+    display: block;
+
+    a {
+        display: block;
+        padding: $spacing-xs;
+    }
+}
+
+
+// =============================================
+// Nav Space
+// =============================================
+
+.nav--space > * {
+    margin-left: $spacing-sm;
+    margin-right: $spacing-sm;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
     }
 }
 
@@ -39,29 +64,28 @@
 // =============================================
 
 .priority-nav {
-    
     display: flex;
     overflow: hidden;
-    
+
     .nav {
         display: flex;
     }
-    
+
     &__scroll {
         overflow-x: scroll;
         white-space: nowrap;
     }
-    
+
     &__toggle {
         flex-shrink: 0;
     }
-    
+
     &__sub {
         padding: $spacing;
     }
-    
-    ::-webkit-scrollbar { 
-        display: none; 
+
+    ::-webkit-scrollbar {
+        display: none;
     }
 }
 
@@ -71,11 +95,10 @@
 // =============================================
 
 .nav--multi-level {
-    
     li {
         position: relative;
     }
-    
+
     // All levels
     ul,
     ol {
@@ -83,13 +106,13 @@
         display: none;
         position: absolute;
     }
-    
+
     // Just Level 0
     > ul,
     > ol {
         top: 100%;
     }
-    
+
     ul ul,
     ol ol,
     ul ol,
@@ -97,12 +120,12 @@
         top: 0;
         left: 100%;
     }
-    
+
     li:hover > ul,
     li:hover > ol {
         display: block;
     }
-    
+
     a {
         white-space: nowrap;
     }
