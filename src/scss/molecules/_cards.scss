@@ -1,58 +1,49 @@
+// =============================================
+// Card
+// =============================================
+
 .card {
-    
-    max-width: 20rem;
-    position: relative;
-    border: .0625rem solid #e5e5e5;
-    border-radius: .25rem;
-    margin-bottom: .75rem;
-    background-color: #fff;
-    
-    &__cap,
+    margin-bottom: $spacing;
+
     &__img {
         @extend %u-img-responsive;
     }
-    
-    &__cap {
-        border-radius: .25rem .25rem 0 0;
-    }
-    
-    &__title {
-        margin-top: 0;
-        margin-bottom: .75rem;
-    }
-    
-    &__subtitle {
-        margin-top: -.375rem;
-        margin-bottom: 0;
+
+    &__header,
+    &__body,
+    &__footer {
+        padding: $spacing-sm $spacing;
+
+        > *:last-child {
+            margin-bottom: 0;
+        }
     }
 
-    &__body {
-        padding: 1.25rem;
-    }
-    
-    &__footer,
-    &__header {
-        padding: .75rem 1.25rem;
-        background-color: #f5f5f5;
-    }
-    
-    &__header {
-        border-bottom: .0625rem solid #e5e5e5;
-    }
-    
+    &__header,
     &__footer {
-        border-top: .0625rem solid #e5e5e5;
+        background-color: $lighter-grey;
     }
-    
+
+    &__title,
+    &__subtitle {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
 
-.card-columns {
-    column-count: 3;
-    column-gap: 1.25rem;
-        
-    .card {
-        width: 100%;
-        display: inline-block;
+// =============================================
+// Card with border
+// =============================================
+
+.card--bordered {
+    border: 1px solid $light-grey;
+
+    .card__header {
+        border-bottom: 1px solid $light-grey;
+    }
+
+    .card__footer {
+        border-top: 1px solid $light-grey;
     }
 }
