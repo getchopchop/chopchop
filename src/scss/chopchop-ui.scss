@@ -32,6 +32,10 @@
 @import "utilities/z-index";
 @import "utilities/lists";
 
+
+$off-white           : #f9f9f7 !default;
+
+
 .well {
     padding: 1.5rem;
 }
@@ -45,7 +49,6 @@
     background-color: #666;
     color: #fff;
     position: relative;
-
     *,
     *:hover {
         color: white;
@@ -57,6 +60,9 @@
 // Layout
 // =============================================
 
+.site-navigation__toggle {
+    display: none;
+}
 @include breakpoint($screen-md) {
     .site-wrapper {
         display: flex;
@@ -75,9 +81,41 @@
         top: 0;
         bottom: 0;
         width: 15rem;
-        overflow: hidden;
-        overflow-y: auto;
-        border-right: 2px solid $light-grey;
+        border-right: 2px solid $grey;
+        background-color: $off-white;
+        z-index: 2000;
+        transform: translateX(-100%);
+        transition: all 0.4s ease;
+        
+        &.is-active {
+            transform: translateX(0);
+        }
+        
+        &__content {
+            overflow: hidden;
+        }
+        
+        &__toggle {
+            display: block;
+            padding: .7em 1em;
+            white-space: nowrap;
+            position: absolute;
+            left: 100%;
+            bottom: 0;
+            font-size: 8px;
+            font-weight: $bold;
+            background-color: $grey;
+            color: $white;
+            text-decoration: none;
+            border-top-right-radius: 4px;
+            border: 1px solid $darker-grey;
+            border-bottom: 0;
+            border-left: 0;
+            &:hover {
+                color: $white;
+                background-color: lighten($grey, 5%);
+            }
+        }
     }
     .site-main {
         flex: 1 1 auto;
@@ -93,22 +131,20 @@
 // =============================================
 
 .site-navigation {
+
     a {
         border-bottom: 0;
 
     }
-
-    .nav--pills ul ul {
+    
+    .nav--stack ul ul {
         margin-bottom: 2em;
     }
-}
-
-
+    
 // =============================================
 // Collapsing menu
 // =============================================
 
-.site-navigation {
     .child {
         display: none;
         font-size: $font-size-sm;
@@ -116,16 +152,14 @@
             display: block;
         }
         a {
-            padding-left: 1rem;
+            padding-left: 3rem;
             padding-top: $spacing-xs;
             padding-bottom: $spacing-xs;
         }
     }
-
     .parent > a .icon-minus {
         display: none;
     }
-
     .active > a {
         .icon-plus {
             display: none;
@@ -134,6 +168,8 @@
             display: inline-block;
         }
     }
+
+
 }
 
 
@@ -154,3 +190,5 @@
         border-bottom-right-radius: $border-radius;
     }
 }
+
+
