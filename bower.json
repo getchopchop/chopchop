@@ -1,10 +1,22 @@
 {
-  "name": "Primer",
-  "version": "0.0.1",
+  "name": "Kettle",
+  "version": "1.0.0",
+  "homepage": "https://github.com/JakeCobley/Kettle",
   "authors": [
-    "Dave Redfern <dave@daveredfern.com>"
+    "Jake Cobley <jake@cobe.ly>"
   ],
-  "description": "A starter pack to get things going for frontend development.",
+  "description": "Kettle is a boilerplate gulpfile.js for use in front-end projects.",
+  "main": "gulpfile.js",
+  "keywords": [
+    "npm",
+    "gulp",
+    "sass",
+    "css",
+    "js",
+    "img",
+    "fonts",
+    "bower"
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",

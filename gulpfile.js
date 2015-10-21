@@ -1,161 +1,139 @@
 // =============================================
-// Bower Dependencies
+// Dependencies
 // =============================================
 
 var gulp = require('gulp'),
-    del = require('del'),
-    browserSync = require('browser-sync').create(),
     plugin = require('gulp-load-plugins')();
 
-
 // =============================================
-// Config
+// Paths
 // =============================================
 
-var config = {
-    bowerDir: 'bower_components',
-    dest: 'build',
-    src: 'src',
-    vendorDir: 'vendor',
-    browserSyncDest: ['*', 'src/**/*']
-    //browserSyncProxy: 'primer.dredfern.dyn.iweb.co.uk'
+var basePath = {
+	src: './src',
+    dist: './build',
+    bowerDir: './bower_components'
 };
 
+var path = {
+    scss: basePath.src + '/scss/**/*.scss',
+    js: basePath.src + '/js/**/*.js',
+    img: [
+        basePath.src + '/img/**/*.png',
+        basePath.src + '/img/**/*.jpg',
+        basePath.src + '/img/**/*.jpeg',
+        basePath.src + '/img/**/*.gif',
+        basePath.src + '/img/**/*.svg'
+    ],
+    fonts: [
+        basePath.src + '/font/**/*.eot',
+        basePath.src + '/font/**/*.otf',
+        basePath.src + '/font/**/*.ttf',
+        basePath.src + '/font/**/*.woff',
+        basePath.src + '/font/**/*.svg',
+    ]
+}
 
 // =============================================
-// Bower download
+// Options
 // =============================================
 
-gulp.task('bower-install', ['clean'], function() {
+var option = {
+    autoprefixer: [
+        'last 2 version',
+        'safari 5',
+        'opera 12.1',
+        'ios 6',
+        'android 4'
+    ],
+    imageopt: {
+        progressive: true,
+        svgoPlugins: [{removeViewBox: false}]
+    }
+};
+
+// =============================================
+// Environment
+// =============================================
+
+var isProduction = false;
+
+if(plugin.util.env.production === true) {
+    isProduction = true;
+}
+
+// =============================================
+// BOWER `gulp bower`
+// =============================================
+
+gulp.task('bower', function() {
     return plugin.bower()
-        .pipe(gulp.dest(config.bowerDir))
-        .pipe(plugin.notify({
-            message: 'Bower install task complete',
-            onLast: true
-        }));
+        .pipe(gulp.dest(basePath.bowerDir))
 });
 
-
 // =============================================
-// Styles
-// =============================================
-
-gulp.task('styles', function() {
-    gulp.src(config.src + '/scss/**/*.scss')
-        //.pipe(plugin.sourcemaps.init())
-        .pipe(plugin.sass.sync().on('error', plugin.sass.logError))
-        .pipe(plugin.autoprefixer('last 3 version'))
-        .pipe(plugin.rename({
-            suffix: '.min'
-        }))
-        //.pipe(plugin.minifyCss())
-        //.pipe(plugin.sourcemaps.write())
-        .pipe(gulp.dest(config.dest + '/css'))
-        .pipe(plugin.notify({
-            message: 'Styles task complete',
-            onLast: true
-        }));
-});
-
-
-// =============================================
-// Scripts
-// =============================================
-
-gulp.task('scripts', function() {
-    return gulp.src(config.src + '/js/**/*.js')
-        .pipe(plugin.jshint())
-        .pipe(plugin.jshint.reporter('default'))
-        .pipe(plugin.rename({
-            suffix: '.min'
-        }))
-        .pipe(plugin.uglify())
-        .pipe(gulp.dest(config.dest + '/js'))
-        .pipe(plugin.notify({
-            message: 'Scripts task complete',
-            onLast: true
-        }));
-});
-
-
-// =============================================
-// Images
-// =============================================
-
-gulp.task('images', function() {
-    gulp.src(config.src + '/img/**/*')
-        .pipe(plugin.changed(config.dest + '/img'))
-        .pipe(plugin.imagemin({
-            optimizationLevel: 3,
-            progressive: true,
-            interlaced: true
-        }))
-        .pipe(gulp.dest(config.dest + '/img'))
-        .pipe(plugin.notify({
-            message: 'Images task complete',
-            onLast: true
-        }));
-});
-
-
-// =============================================
-// Fonts
+// FONTS `gulp fonts`
 // =============================================
 
 gulp.task('fonts', function() {
-    return gulp.src(config.src + '/fonts/**/*')
-        .pipe(gulp.dest(config.dest + '/fonts'))
-        .pipe(plugin.notify({
-            message: 'Fonts task complete',
-            onLast: true
-        }));
+    return gulp.src(path.fonts)
+    .pipe(gulp.dest(basePath.dist + '/fonts'))
 });
 
-
 // =============================================
-// Clean up
+// IMG `gulp img`
 // =============================================
 
-gulp.task('clean', function(cb) {
-    return del([
-            config.bowerDir,
-            config.dest,
-            config.vendorDir
-        ], cb);
+gulp.task('img', function() {
+    return gulp.src(path.img)
+    .pipe(plugin.imagemin(option.imageopt))
+    .pipe(gulp.dest(basePath.dist + '/img'))
 });
 
-
 // =============================================
-// Run build
+// JS `gulp js`
 // =============================================
 
-gulp.task('default', ['clean', 'bower-install'], function() {
-    gulp.start('styles', 'scripts', 'images', 'fonts');
+gulp.task('js', function() {
+    return gulp.src(path.js)
+    .pipe(plugin.jshint())
+    .pipe(plugin.jshint.reporter('default'))
+    .pipe(isProduction ? plugin.uglify() : plugin.util.noop())
+    .pipe(gulp.dest(basePath.dist + '/js'))
 });
 
+// =============================================
+// CSS `gulp css`
+// =============================================
+
+gulp.task('css', function() {
+    return gulp.src(path.scss)
+        .pipe(plugin.sass())
+        .pipe(plugin.autoprefixer(option.autoprefixer))
+        .pipe(isProduction ? plugin.combineMq() : plugin.util.noop())
+        .pipe(isProduction ? plugin.minifyCss() : plugin.util.noop())
+        .pipe(gulp.dest(basePath.dist + '/css'))
+});
 
 // =============================================
-// Watch
+// Watch 'gulp watch'
 // =============================================
 
 gulp.task('watch', function() {
-    // Watch lots of function
-    gulp.watch(config.src + '/scss/**/*.scss', ['styles']);
-    gulp.watch(config.src + '/js/**/*.js', ['scripts']);
-    gulp.watch(config.src + '/img/**/*', ['images']);
-    gulp.watch(config.src + '/fonts/**/*', ['fonts']);
-
-    // Create browser sync server
-    // browserSync.init({
- //        //proxy: config.browserSyncProxy,
- //        open: false,
- //        ghostMode: {
- //            clicks: true,
- //            forms: true,
- //            scroll: true
- //        }
- //    });
-
-    // Watch any files in dist/, reload on change
-    gulp.watch([config.browserSyncDest]).on('change', browserSync.reload);
+    gulp.watch(path.scss, ['css']);
+    gulp.watch(path.js, ['js']);
+    gulp.watch(path.img, ['img']);
+    gulp.watch(path.fonts, ['fonts']);
 });
+
+// =============================================
+// Build 'gulp build'
+// =============================================
+
+gulp.task('build', ['bower', 'css', 'js', 'img', 'fonts']);
+
+// =============================================
+// Default 'gulp'
+// =============================================
+
+gulp.task('default', ['build', 'watch']);
