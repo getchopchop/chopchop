@@ -4,28 +4,7 @@
 
 %btn,
 .btn {
-    padding: 0.44rem $spacing;
-    background-color: $darker-grey;
-    color: $white;
-	border-radius: 0;
-	font-size: $font-size-lg;
-	font-family: $heading-font-family;
-	font-weight: $bold;
-    text-decoration: none;
-    border: 1px solid transparent;
-    cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    white-space: nowrap;
-    line-height: 1;
-    width: auto;
-
-    &:hover,
-    &:focus {
-        color: $white;
-        background-color: $dark-grey;
-    }
+    @include btn;
 }
 
 
@@ -35,8 +14,7 @@
 
 %btn--sm,
 .btn--sm {
-    padding: $spacing-xs $spacing-sm;
-    font-size: 1em;
+    @include btn--sm;
 }
 
 
@@ -46,8 +24,7 @@
 
 %btn--lg,
 .btn--lg {
-    padding: $spacing-sm $spacing-lg;
-    font-size: $font-size-xl;
+    @include btn--lg;
 }
 
 
@@ -57,32 +34,17 @@
 
 %btn--text,
 .btn--text {
-    @extend %link;
-    background-color: transparent;
-    color: $black;
-    font-weight: normal;
-    text-decoration: underline;
-    &:hover,
-    &:focus {
-        background-color: transparent;
-        color: $black;
-        text-decoration: none;
-    }
-
-    &:disabled {
-        background-color: transparent;
-        color: $grey;
-    }
+    @include btn--text;
 }
 
 
 // =============================================
 // Block
 // =============================================
+
 %btn--block,
 .btn--block {
-    display: block;
-    width: 100%;
+    @include btn--block;
 }
 
 // =============================================
@@ -92,13 +54,5 @@
 %btn--disabled,
 .btn--disabled,
 .btn:disabled {
-    cursor: not-allowed;
-    background-color: $grey;
-	color: $dark-grey;
-
-    &:hover,
-    &:focus {
-        background-color: $grey;
-		color: $dark-grey;
-    }
+    @include btn--disabled;
 }
