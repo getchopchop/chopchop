@@ -21,14 +21,18 @@
         return $contents;
     }
 
-    function getUrl($url = false) {
+    function getBaseUrl() {
         static $baseUrl;
 
         if (!$baseUrl) {
             $baseUrl = substr($_SERVER['SCRIPT_NAME'], 0, strpos($_SERVER['SCRIPT_NAME'], 'index.php'));
         }
 
-        return $baseUrl.($url ?: '');
+        return $baseUrl;
+    }
+
+    function getUrl($url = false) {
+        return getBaseUrl().($url ?: '');
     }
 
     function getRequestPath() {
@@ -40,3 +44,12 @@
         return getRequestPath() === '/';
     }
 
+    function imageUrl($src, array $args) {
+        if (strlen($src) >= 4 && substr($src, 0, 4) !== 'http') {
+            $src = getUrl($src);
+        }
+
+        $qs = http_build_query($args);
+
+        return 'http://iweb:developer@isabelaweb1.cms.iwebcloud.co.uk/image/'.base64_encode($src).($qs ? '?'.$qs : '');
+    }

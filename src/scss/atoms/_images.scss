@@ -3,5 +3,6 @@
 // =============================================
 
 img {
-	display: block;
+    @extend %u-img-responsive;
 }
+
