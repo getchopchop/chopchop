@@ -22,8 +22,8 @@ var ChopChop = (function($, ChopChop) {
         this.$root = $(root);
         this.init();
     };
-	
-	var Mode = {
+
+	var Action = {
 		TOGGLE: 'toggle',
 		ACTIVATE: 'activate',
 		DEACTIVATE: 'deactivate'
@@ -38,41 +38,39 @@ var ChopChop = (function($, ChopChop) {
                 var $this = $(this), t,
                     $target = (t = $this.data('toggle-target')) ? $('[data-toggle-id="' + t + '"]') : $this;
 
-				self.toggle($target, $this.data('toggle-action') || Mode.TOGGLE);
+				self.toggle($target, $this.data('toggle-action') || Action.TOGGLE);
             });
         },
 		toggle: function($el, action) {
-			var mode = action;
-
-			if (mode === Mode.TOGGLE) {
+			if (action === Action.TOGGLE) {
 				if ($el.hasClass('is-active')) {
-					mode = Mode.DEACTIVATE;
+					action = Action.DEACTIVATE;
 				} else {
-					mode = Mode.ACTIVATE;
+					action = Action.ACTIVATE;
 				}
 			}
-			
+
 			var pending = [$el], processed = [],
 				id, dependants, group, $current,
                 iterations = 0,
                 el, chain, $other, i;
-			
+
 			while (pending.length > 0) {
 				$current = pending.shift();
-				
+
 				// Skip already processed nodes
 				if (processed.indexOf($current) !== -1) {
 					continue;
 				}
-				
+
 				id = $current.data('toggle-id');
 				group = $current.data('toggle-group');
-				
+
 				// NOTE: Perhaps don't process these; add to some kind of queue first (with activate or deactivate action)
 				for (i = 0, all = $('[data-toggle-group="' + group + '"]'), l = all.length; i < l; ++i) {
                     el = all[i];
     			    $other = $(el);
-					
+
                     // Skip element itself
 					if (el === $current[0]) {
                         continue;
@@ -81,17 +79,17 @@ var ChopChop = (function($, ChopChop) {
                     // Just a group member, not the target: deactivate
                     $other.addClass('is-inactive').removeClass('is-active');
 				}
-				
+
                 // Process target
-                if (mode === Mode.ACTIVATE) {
+                if (action === Action.ACTIVATE) {
                     $current.addClass('is-active').removeClass('is-inactive');
                 } else {
                     $current.addClass('is-inactive').removeClass('is-active');
                 }
-                
+
                 // Chain onto targets
-                chain = ($current.data('toggle-' + mode) || '').split(',');
-                
+                chain = ($current.data('toggle-' + action) || '').split(',');
+
                 for (i = 0, l = chain.length; i < l; ++i) {
                     $other = $('[data-toggle-id="' + chain[i] + '"]');
 
