@@ -54,7 +54,8 @@ var ChopChop = (function($, ChopChop) {
 			
 			var pending = [$el], processed = [],
 				id, dependants, group, $current,
-                iterations = 0;
+                iterations = 0,
+                el, chain, $other, i;
 			
 			while (pending.length > 0) {
 				$current = pending.shift();
@@ -68,17 +69,18 @@ var ChopChop = (function($, ChopChop) {
 				group = $current.data('toggle-group');
 				
 				// NOTE: Perhaps don't process these; add to some kind of queue first (with activate or deactivate action)
-				$('[data-toggle-group="' + group + '"]').each(function() {
-					var $this = $(this), chain;
+				for (i = 0, all = $('[data-toggle-group="' + group + '"]'), l = all.length; i < l; ++i) {
+                    el = all[i];
+    			    $other = $(el);
 					
                     // Skip element itself
-					if (this === $current[0]) {
-                        return;
+					if (el === $current[0]) {
+                        continue;
                     }
 
                     // Just a group member, not the target: deactivate
-                    $this.addClass('is-inactive').removeClass('is-active');														
-				});
+                    $other.addClass('is-inactive').removeClass('is-active');
+				}
 				
                 // Process target
                 if (mode === Mode.ACTIVATE) {
@@ -88,16 +90,16 @@ var ChopChop = (function($, ChopChop) {
                 }
                 
                 // Chain onto targets
-                if (chain = $current.data('toggle-' + mode)) {
-                    chain.split(',').forEach(function(chained) {
-                        var $chained = $('[data-toggle-id="' + chain + '"]');
+                chain = ($current.data('toggle-' + mode) || '').split(',');
+                
+                for (i = 0, l = chain.length; i < l; ++i) {
+                    $other = $('[data-toggle-id="' + chain[i] + '"]');
 
-                        if (processed.indexOf($chained[0]) !== -1 || pending.indexOf($chained[0]) !== -1) {
-                            return;
-                        }
+                    if (processed.indexOf($other[0]) !== -1 || pending.indexOf($other[0]) !== -1) {
+                        continue;
+                    }
 
-                        pending.push($('[data-toggle-id="' + chained + '"]'));
-                    });
+                    pending.push($other);
                 }
 
 				processed.push($current[0]);
