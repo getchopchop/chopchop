@@ -5,7 +5,7 @@
     <div class="g-four-up g-gutter">
         
         <div>
-            <div class="card card--swatch">
+            <div class="card cc-card--swatch">
                 <div class="card__body bg-grey">
             
                 </div>
@@ -16,7 +16,7 @@
         </div>
         
         <div>
-            <div class="card card--swatch">
+            <div class="card cc-card--swatch">
                 <div class="card__body bg-light-grey">
             
                 </div>
@@ -27,7 +27,7 @@
         </div>
         
         <div>
-            <div class="card card--swatch">
+            <div class="card cc-card--swatch">
                 <div class="card__body bg-lighter-grey">
             
                 </div>
@@ -38,7 +38,7 @@
         </div>
             
         <div>
-            <div class="card card--swatch">
+            <div class="card cc-card--swatch">
                 <div class="card__body bg-dark-grey">
             
                 </div>
@@ -49,7 +49,7 @@
         </div>
         
         <div>
-            <div class="card card--swatch">
+            <div class="card cc-card--swatch">
                 <div class="card__body bg-darker-grey">
             
                 </div>
@@ -60,7 +60,7 @@
         </div>
         
         <div>
-            <div class="card card--swatch">
+            <div class="card cc-card--swatch">
                 <div class="card__body bg-white">
             
                 </div>
@@ -71,7 +71,7 @@
         </div>
         
         <div>
-            <div class="card card--swatch">
+            <div class="card cc-card--swatch">
                 <div class="card__body bg-black">
             
                 </div>
@@ -87,7 +87,7 @@
     <div class="g-four-up g-gutter">
         
         <div>
-            <div class="card card--swatch">
+            <div class="card cc-card--swatch">
                 <div class="card__body bg-twitter">
             
                 </div>
@@ -98,7 +98,7 @@
         </div>
         
         <div>
-            <div class="card card--swatch">
+            <div class="card cc-card--swatch">
                 <div class="card__body bg-facebook">
             
                 </div>
@@ -109,7 +109,7 @@
         </div>
         
         <div>
-            <div class="card card--swatch">
+            <div class="card cc-card--swatch">
                 <div class="card__body bg-google">
             
                 </div>
@@ -120,7 +120,7 @@
         </div>
         
         <div>
-            <div class="card card--swatch">
+            <div class="card cc-card--swatch">
                 <div class="card__body bg-pinterest">
             
                 </div>
@@ -131,7 +131,7 @@
         </div>
         
         <div>
-            <div class="card card--swatch">
+            <div class="card cc-card--swatch">
                 <div class="card__body bg-instagram">
             
                 </div>
@@ -142,7 +142,7 @@
         </div>
         
         <div>
-            <div class="card card--swatch">
+            <div class="card cc-card--swatch">
                 <div class="card__body bg-vimeo">
             
                 </div>
@@ -153,7 +153,7 @@
         </div>
         
         <div>
-            <div class="card card--swatch">
+            <div class="card cc-card--swatch">
                 <div class="card__body bg-linkedin">
             
                 </div>
@@ -164,7 +164,7 @@
         </div>
         
         <div>
-            <div class="card card--swatch">
+            <div class="card cc-card--swatch">
                 <div class="card__body bg-youtube">
             
                 </div>

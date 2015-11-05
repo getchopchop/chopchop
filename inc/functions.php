@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(E_ALL);
+
     define('TEMPLATE_PATH', realpath(__DIR__) . '/../templates/');
 
     function getBlock($location) {
@@ -53,3 +55,5 @@
 
         return 'http://iweb:developer@isabelaweb1.cms.iwebcloud.co.uk/image/'.base64_encode($src).($qs ? '?'.$qs : '');
     }
+    
+    $toplevels = array('branding', 'atoms', 'molecules');

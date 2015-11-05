@@ -10,6 +10,8 @@
 </head>
 <body>
     
+    <span class="cc-mq-readout"></span>
+    
     <div class="site-wrapper">
         
         <nav class="site-navigation">
@@ -22,11 +24,19 @@
         <!-- <main class="main site-main"> -->
         <main>
             <div class="site-content">
-             <?php if(isIndex()) { ?>
-                     <?php include('inc/nav.php'); ?>
-                 <?php } else {
-                     echo getBlock(getRequestPath());
-                }?>
+              <?php if(isIndex()) { ?>
+                 
+                  <div class="u-container">
+                      <hgroup class="hgroup page-title hero-title u-hidden">
+                          <h1 class="hgroup__title">Chop Chop</h1>
+                          <h4 class="hgroup__subtitle">Static Pattern Library</h4>
+                      </hgroup>
+                      <br>
+                      <?php include('inc/nav-index.php'); ?>
+                  </div>
+             <?php } else {
+                 echo getBlock(getRequestPath());
+             }?>
             </div>
         </main>
         

@@ -4,6 +4,8 @@
 
 @import "vars";
 
+$z-100: 100;
+$z-200: 200;
 
 // =============================================
 // Helpers
@@ -32,26 +34,45 @@
 @import "utilities/z-index";
 @import "utilities/lists";
 
-
-$off-white           : #f9f9f7 !default;
-
-
 .well {
     padding: 1.5rem;
 }
 
-// =============================================
-// Masthead
-// =============================================
+.site-navigation ul a,
+.cc-heading {
+    font-size: $font-size-xs;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-bottom: 1px dashed $lighter-grey;
+}
 
-.site-masthead {
-    padding: 1em;
-    background-color: #666;
-    color: #fff;
-    position: relative;
-    *,
-    *:hover {
-        color: white;
+.cc-heading {
+    
+    padding-bottom: $spacing;
+    margin-top: $spacing-xl * 3;
+    margin-bottom: $spacing-xl;
+    
+    &__sub {
+        display: block;
+        font-family: Georgia;
+        font-style: italic;
+        letter-spacing: 0;
+        text-transform: none;
+        &:before {
+            content: "(";
+        }
+        &:after {
+            content: ")";
+        }
+    }
+    code {
+        font-size: 100%;
+        text-transform: none;
+        letter-spacing: 0;
+    }
+    
+    &:first-of-type {
+        margin-top: 0;
     }
 }
 
@@ -60,67 +81,81 @@ $off-white           : #f9f9f7 !default;
 // Layout
 // =============================================
 
-.site-navigation__toggle {
-    display: none;
+.site-navigation {
+    
+    position: fixed;
+    background-color: $white;
+    transition: all 0.4s ease;
+    z-index: $z-100;
+    
+    &__toggle {
+        display: block;
+        padding: .2em .6em;
+        white-space: nowrap;
+        position: absolute;
+        font-size: 10px;
+        //font-weight: $bold;
+        background-color: $black;
+        color: $white;
+        text-decoration: none;
+        border: 1px solid rgba(0,0,0,0.3);
+        bottom: 100%;
+        border-top-right-radius: 4px;
+        border-bottom: 0;
+        border-left: 0;
+        border-top-right-radius: 4px;
+        border-bottom: 0;
+        border-left: 0;
+        
+        &:hover {
+            color: $white;
+            background-color: lighten($black, 20%);
+        }
+    }
+    
+    
+    @include breakpoint(max-width $screen-sm-max) {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-top: 2px solid $lighter-grey;
+        transform: translateY(100%);
+        &.is-active {
+            transform: translateY(0);
+        }
+    }
+    
+    
+    @include breakpoint($screen-md) {
+        top: 0;
+        bottom: 0;
+        width: 15rem;
+        border-right: 2px solid $lighter-grey;
+        transform: translateX(-100%);
+        
+        &.is-active {
+            transform: translateX(0);
+        }
+        
+        &__toggle {
+            left: 100%;
+            bottom: 0;
+        }
+    }
+    
 }
+
+
+
+
 @include breakpoint($screen-md) {
     .site-wrapper {
         display: flex;
         min-height: 100vh;
         flex-direction: column;
     }
-    .site-header {
-        position: fixed;
-        top: 0;
-        width: 15rem;
-        text-align: left;
-        z-index: 8000;
-    }
-    .site-navigation {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        width: 15rem;
-        border-right: 2px solid $grey;
-        background-color: $off-white;
-        z-index: 2000;
-        transform: translateX(-100%);
-        transition: all 0.4s ease;
-        
-        &.is-active {
-            transform: translateX(0);
-        }
-        
-        &__content {
-            overflow: hidden;
-        }
-        
-        &__toggle {
-            display: block;
-            padding: .7em 1em;
-            white-space: nowrap;
-            position: absolute;
-            left: 100%;
-            bottom: 0;
-            font-size: 8px;
-            font-weight: $bold;
-            background-color: $grey;
-            color: $white;
-            text-decoration: none;
-            border-top-right-radius: 4px;
-            border: 1px solid $darker-grey;
-            border-bottom: 0;
-            border-left: 0;
-            &:hover {
-                color: $white;
-                background-color: lighten($grey, 5%);
-            }
-        }
-    }
-    .site-main {
-        flex: 1 1 auto;
-        margin-left: 15rem;
-        min-height: calc(100vh - 5.375rem);
+    .site-navigation__content {
+        overflow: hidden;
     }
 }
 
@@ -131,10 +166,19 @@ $off-white           : #f9f9f7 !default;
 // =============================================
 
 .site-navigation {
-
-    a {
-        border-bottom: 0;
-
+    
+    .shape-hook {
+        float: right;
+        margin-top: 0.3em;
+    }
+    
+    li {
+        &:not(.is-active) .shape-hook {
+            @include plus(12px, 2px, $lighter-grey);
+        }
+        &.is-active .shape-hook {
+            @include minus(12px, 2px, $lighter-grey);
+        }
     }
     
     .nav--stack ul ul {
@@ -152,9 +196,14 @@ $off-white           : #f9f9f7 !default;
             display: block;
         }
         a {
-            padding-left: 3rem;
+            padding-left: $spacing-lg;
             padding-top: $spacing-xs;
             padding-bottom: $spacing-xs;
+            background-color: lighten($lighter-grey, 5%);
+            &:hover {
+                background-color: lighten($lighter-grey, 3%);
+            }
+            
         }
     }
     .parent > a .icon-minus {
@@ -177,8 +226,37 @@ $off-white           : #f9f9f7 !default;
 // Color Swatches
 // =============================================
 
-.card--swatch {
-    border: 0;
+.cc-line {
+    display: block;
+}
+
+
+// =============================================
+// Color Swatches on Variables page
+// =============================================
+
+.cc-disc-swatch {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: $spacing;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    border: 1px solid rgba(0,0,0,0.2);
+    transition: transform 0.1s ease;
+    &:hover {
+        transform: scale(2);
+    }
+}
+
+
+// =============================================
+// Color Swatches on colours page
+// =============================================
+
+.cc-card--swatch {
+    //border: 0;
+    @extend .card--bordered;
     border-radius: $border-radius;
     .card__body {
         @include ratio(50%);
@@ -192,3 +270,64 @@ $off-white           : #f9f9f7 !default;
 }
 
 
+
+// =============================================
+// Media Query Readout
+// =============================================
+
+.cc-mq-readout {
+    
+    z-index: $z-200;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 10px;
+    white-space: nowrap;
+    
+    &:after {
+        display: block;
+        padding: .2em .6em;
+        background-color: magenta;
+        color: $white;
+        content: "$screen-xs < #{$screen-xs}"
+    }
+    
+    @include breakpoint($screen-xs) {
+        
+        &:after {
+            background-color: red;
+            content: "$screen-xs > #{$screen-xs}"
+        }
+    }
+    @include breakpoint($screen-sm) {
+        
+        &:after {
+            background-color: green;
+            content: "$screen-sm > #{$screen-sm}"
+        }
+    }
+    @include breakpoint($screen-md) {
+        
+        &:after {
+            background-color: blue;
+            content: "$screen-md > #{$screen-md}"
+        }
+    }
+    @include breakpoint($screen-lg) {
+        
+        &:after {
+            background-color: yellow;
+            color: $black;
+            content: "$screen-lg > #{$screen-lg}"
+        }
+    }
+    @include breakpoint($screen-xl) {
+        
+        &:after {
+            background-color: hotpink;
+            color: $white;
+            content: "$screen-xl > #{$screen-xl}"
+        }
+    }
+}

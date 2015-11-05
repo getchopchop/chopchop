@@ -1,9 +1,9 @@
 <?php
-foreach(array('branding', 'atoms', 'molecules', 'layout') as $toplevel) {
+foreach($toplevels as $toplevel) {
 ?>
 <nav class=" nav-<?= $toplevel ?> nav-collapse">
     <ul class="nav nav--pills">
-        <li class="level0 parent"><a href="<?= $toplevel ?>"><?= ucwords($toplevel) ?><i class="icon-plus"></i> <i class="icon-minus"></i></a>
+        <li class="level0 parent"><a href="<?= $toplevel ?>"><?= ucwords($toplevel) ?> <span class="shape-hook"></span></a>
             <ul class="nav nav--pills child">
                 <?php
                 $quarks = dir('templates/' . $toplevel);
