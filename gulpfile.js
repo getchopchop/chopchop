@@ -49,8 +49,9 @@ var option = {
         'android 4'
     ],
     imageopt: {
-        progressive: true,
-        svgoPlugins: [{removeViewBox: false}]
+        optimizationLevel: 3,   // (PNG) Between 0 - 7
+        progressive: true,      // (JPG)
+        interlaced: true        // (GIF)
     }
 };
 
@@ -106,7 +107,7 @@ gulp.task('vendor', function() {
 gulp.task('img', function() {
     return gulp.src(path.img)
         .pipe(plugin.imagemin(option.imageopt))
-        .pipe(gulp.dest(basePath.dist + '/img'))
+        .pipe(gulp.dest(basePath.dist + '/img'));
 });
 
 // =============================================
