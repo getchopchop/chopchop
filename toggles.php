@@ -87,8 +87,8 @@
 
     <section>
         <h2>Drawers</h2>
-        <p><a href="#">Left draw</a></p>
-        <p><a href="#">Right draw</a></p>
+        <p><a href="#">Left drawer</a></p>
+        <p><a href="#">Right drawer</a></p>
     </section>
 
 
