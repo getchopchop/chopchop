@@ -1,71 +1,54 @@
 // =============================================
-// Modals
+// Modal
 // =============================================
 
 .modal {
     position: fixed;
-    display: none;
-    z-index: $z-10;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     overflow: auto;
-    
-    &__dialog {
-        background-color: $white;
-        margin-left: auto;
-        margin-right: auto;
-        position: relative;
-        
-        @include breakpoint($screen-sm) {
-            max-width: 30em;
-            margin: 5em auto;
-            border-radius: $border-radius;
-        }
+    display: none;
+}
+
+.is-active.modal {
+    display: block;
+}
+
+// =============================================
+// Modal dialog
+// =============================================
+
+.modal__dialog {
+    background-color: $white;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    @include breakpoint($screen-sm) {
+        max-width: 50em;
+        width: 90%;
+        margin: 5em auto;
     }
-    
-    &__close {
-        position: fixed;
-        top: $spacing;
-        right: $spacing-lg;
-        z-index: $z-1;
-    }
-    
-    &__title {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-    
-    &__header,
-    &__body,
-    &__footer {
-        padding: $spacing $spacing-lg;
-    }
-    
-    &__body > :last-child,
-    &__header > *,
-    &__footer > * {
-        margin-bottom: 0;
-    }
-    
-    &__header {
-        border-bottom: 1px solid $light-grey;
-    }
-    
-    &__footer {
-        border-top: 1px solid $light-grey;
-    }
-    
-    &--sm .modal__dialog {
-        max-width: 26em;
-    }
-    &--lg .modal__dialog {
-        max-width: 42em;
-    }
-    
-    &.is-active {
-        display: block;
-    }
-    
+}
+
+.modal--sm .modal__dialog {
+    max-width: 26em;
+}
+
+.modal--lg .modal__dialog {
+    max-width: 42em;
+}
+
+
+// =============================================
+// Modal close
+// =============================================
+
+.modal__close {
+    position: fixed;
+    top: $spacing;
+    right: $spacing-lg;
+    z-index: $z-1;
 }

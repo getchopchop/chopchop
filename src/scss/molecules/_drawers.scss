@@ -1,80 +1,32 @@
-/* =============================================
-// Drawer -- Layout
-// =============================================*/
-.drawer {
-    .drawer__dialog {
-        position: fixed;
-        width: 100%;
-        max-width: 400px;
-        background: #ddd;
-        transition: all 0.3s ease;
-        z-index: 5;
-    }
+// =============================================
+// Drawer
+// =============================================
+
+.drawer__dialog {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 90%;
+    max-width: 30em;
+    background: $white;
+    overflow: auto;
 }
 
-/* =============================================
-// Drawer -- Left/Right Positioning
-// =============================================*/
-.drawer--left,
-.drawer--right {
-    .drawer__dialog {
-        top: 0;
-        bottom: 0;
-    }
-}
+
+// =============================================
+// Drawer - Left/Right Positioning
+// =============================================
+
 .drawer--left .drawer__dialog {
     left: 0;
     transform: translateX(-100%);
 }
+
 .drawer--right .drawer__dialog {
     right: 0;
     transform: translateX(100%);
 }
-.drawer--left--open .drawer--left .drawer__dialog,
-.drawer--right--open .drawer--right .drawer__dialog {
+
+.is-active.drawer .drawer__dialog {
     transform: translateX(0);
-}
-
-/* =============================================
-// Drawer -- Bottom
-// =============================================*/
-.drawer--bottom {
-    .drawer__dialog {
-        transform: translateY(130%);
-        top: 0;
-        bottom: 0;
-        
-        @include breakpoint($screen-md) {
-            max-width: 400px;
-            left: 50%;
-            margin-left: -200px;
-        }
-        @include breakpoint($screen-lg) {
-            max-width: 600px;
-            margin-left: -300px;
-        }
-    }
-}
-.drawer--bottom--open .drawer--bottom .drawer__dialog {
-    transform: translateY(0);
-}
-
-%base-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #13111c;
-    opacity: 0;
-    z-index: 1;
-}
-.overlay {
-    @extend %base-overlay;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
-}
-.drawer--open .overlay {
-    opacity: 0.85;
-    visibility: visible;
 }
