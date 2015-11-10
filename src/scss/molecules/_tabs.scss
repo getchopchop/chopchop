@@ -13,5 +13,10 @@
     &__body {
         order: 2;
         width: 100%;
+        display: none;
     }
+}
+
+.is-active.tabs__body {
+    display: block;
 }

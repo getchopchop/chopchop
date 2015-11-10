@@ -2,5 +2,10 @@
 // Accordion
 // =============================================
 
-.accordion {
+.accordion__body {
+    display: none;
+}
+
+.is-active.accordion__body {
+    display: block;
 }
