@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     del = require('del'),
     plugin = require('gulp-load-plugins')();
 
+
 // =============================================
 // Paths
 // =============================================
@@ -36,6 +37,7 @@ var path = {
     vendor: basePath.src + '/vendor/**/*'
 }
 
+
 // =============================================
 // Options
 // =============================================
@@ -55,6 +57,7 @@ var option = {
     }
 };
 
+
 // =============================================
 // Environment
 // =============================================
@@ -65,6 +68,7 @@ if(plugin.util.env.production === true) {
     isProduction = true;
 }
 
+
 // =============================================
 // BOWER `gulp bower`
 // =============================================
@@ -74,6 +78,7 @@ gulp.task('bower', function() {
         .pipe(gulp.dest(basePath.bowerDir))
 });
 
+
 // =============================================
 // CLEAN `gulp clean`
 // =============================================
@@ -82,14 +87,16 @@ gulp.task('clean', function(cb) {
     return del([basePath.dist], cb)
 });
 
+
 // =============================================
 // FONTS `gulp fonts`
 // =============================================
 
 gulp.task('fonts', function() {
     return gulp.src(path.fonts)
-    .pipe(gulp.dest(basePath.dist + '/fonts'))
+        .pipe(gulp.dest(basePath.dist + '/fonts'))
 });
+
 
 // =============================================
 // VENDOR `gulp vendor`
@@ -97,8 +104,9 @@ gulp.task('fonts', function() {
 
 gulp.task('vendor', function() {
     return gulp.src(path.vendor)
-    .pipe(gulp.dest(basePath.dist + '/vendor'))
+        .pipe(gulp.dest(basePath.dist + '/vendor'))
 });
+
 
 // =============================================
 // IMG `gulp img`
@@ -109,6 +117,7 @@ gulp.task('img', function() {
         .pipe(plugin.imagemin(option.imageopt))
         .pipe(gulp.dest(basePath.dist + '/img'));
 });
+
 
 // =============================================
 // JS `gulp js`
@@ -121,6 +130,7 @@ gulp.task('js', function() {
         .pipe(isProduction ? plugin.uglify() : plugin.util.noop())
         .pipe(gulp.dest(basePath.dist + '/js'))
 });
+
 
 // =============================================
 // CSS `gulp css`
@@ -135,6 +145,7 @@ gulp.task('css', function() {
         .pipe(gulp.dest(basePath.dist + '/css'))
 });
 
+
 // =============================================
 // Watch 'gulp watch'
 // =============================================
@@ -146,6 +157,7 @@ gulp.task('watch', function() {
     gulp.watch(path.fonts, ['fonts']);
 });
 
+
 // =============================================
 // Build 'gulp build'
 // =============================================
@@ -153,6 +165,7 @@ gulp.task('watch', function() {
 gulp.task('build', ['clean'], function() {
     gulp.start('bower', 'css', 'js', 'img', 'fonts', 'vendor');
 });
+
 
 // =============================================
 // Default 'gulp'

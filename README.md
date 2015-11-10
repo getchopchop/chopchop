@@ -4,7 +4,7 @@
 
 1. create directory in Sites folder
 2. create public_html folder
-3. git clone git@gitlab.iweb.co.uk:frontend/chopchop.git .
+3. git clone git@gitlab.iweb.co.uk:labs/chopchop.git
 4. npm install
 5. gulp
 
