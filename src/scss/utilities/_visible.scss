@@ -175,6 +175,26 @@
 
 
 // =============================================
+// Visible
+// =============================================
+
+.u-visible,
+%u-visible {
+    display: block !important;
+}
+
+.u-visible-inline,
+%u-visible-inline {
+    display: inline !important;
+}
+
+.u-visible-inline-block,
+%u-visible-inline-block {
+    display: inline-block !important;
+}
+
+
+// =============================================
 // Hide
 // =============================================
 
