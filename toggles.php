@@ -161,7 +161,7 @@
     </div><!--/#wrapper -->
 
 
-    <div class="u-overlay"></div> <!-- toggle is-active to show !-->
+    <div class="overlay"></div> <!-- toggle is-active to show !-->
 
     <div class="drawer drawer--left"> <!-- toggle is-active to show !-->
         <div class="drawer__dialog card">
