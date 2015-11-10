@@ -45,6 +45,72 @@
     <hr />
 
     <section>
+        <h2>Accordion that can be collapsed or one open at a time</h2>
+
+        <div class="accordion">
+            <div class="accordion__header">
+                <h3>Tab 1</h3>
+            </div>
+            <div class="accordion__body">
+                <p>tab 1 content</p>
+            </div>
+            <div class="accordion__header">
+                <h3>Tab 2</h3>
+            </div>
+            <div class="accordion__body">
+                <p>tab 2 content</p>
+            </div>
+            <div class="accordion__header">
+                <h3>Tab 3</h3>
+            </div>
+            <div class="accordion__body">
+                <p>tab 3 content</p>
+            </div>
+            <div class="accordion__header">
+                <h3>Tab 4</h3>
+            </div>
+            <div class="accordion__body">
+                <p>tab 4 content</p>
+            </div>
+        </div>
+    </section>
+
+    <hr />
+
+    <section>
+        <h2>Accordion that can have multiple open at once</h2>
+
+        <div class="accordion">
+            <div class="accordion__header">
+                <h3>Tab 1</h3>
+            </div>
+            <div class="accordion__body">
+                <p>tab 1 content</p>
+            </div>
+            <div class="accordion__header">
+                <h3>Tab 2</h3>
+            </div>
+            <div class="accordion__body">
+                <p>tab 2 content</p>
+            </div>
+            <div class="accordion__header">
+                <h3>Tab 3</h3>
+            </div>
+            <div class="accordion__body">
+                <p>tab 3 content</p>
+            </div>
+            <div class="accordion__header">
+                <h3>Tab 4</h3>
+            </div>
+            <div class="accordion__body">
+                <p>tab 4 content</p>
+            </div>
+        </div>
+    </section>
+
+    <hr />
+
+    <section>
         <h2>Tabs</h2>
 
         <div class="tabs">
