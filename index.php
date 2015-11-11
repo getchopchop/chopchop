@@ -9,23 +9,23 @@
 <?php include('inc/styles.php'); ?>
 </head>
 <body>
-    
+
     <span class="cc-mq-readout"></span>
-    
+
     <div class="site-wrapper">
-        
+
         <nav class="site-navigation">
             <div class="block-content site-navigation__content">
                 <?php include('inc/nav.php'); ?>
             </div>
             <a href="#" class="site-navigation__toggle js-toggle-nav">Toggle Nav</a>
         </nav>
-        
+
         <!-- <main class="main site-main"> -->
         <main>
             <div class="site-content">
               <?php if(isIndex()) { ?>
-                 
+
                   <div class="u-container">
                       <hgroup class="hgroup page-title hero-title u-hidden">
                           <h1 class="hgroup__title">Chop Chop</h1>
@@ -39,9 +39,9 @@
              }?>
             </div>
         </main>
-        
+
     </div><!--/#wrapper -->
     <?php include('inc/scripts.php'); ?>
-    
+
 </body>
 </html>

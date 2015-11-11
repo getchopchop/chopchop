@@ -1,12 +1,12 @@
-<?php require_once('inc/functions.php'); ?>
+<?php require_once('../inc/functions.php'); ?>
 <?php $paths = explode("/", substr($_SERVER['REQUEST_URI'], 1));?>
 <!DOCTYPE HTML>
 <html>
 <head>
-<?php require_once('inc/meta.php'); ?>
+<?php require_once('../inc/meta.php'); ?>
 <title>Chop Chop - Little user interface patterns to get us going</title>
-<?php include('inc/favicons.php'); ?>
-<?php include('inc/styles.php'); ?>
+<?php include('../inc/favicons.php'); ?>
+<?php include('../inc/styles.php'); ?>
 </head>
 <body>
 
@@ -213,7 +213,7 @@
     </div>
 
 
-    <?php include('inc/scripts.php'); ?>
+    <?php include('../inc/scripts.php'); ?>
 
 </body>
 </html>

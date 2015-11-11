@@ -24,6 +24,10 @@ error_reporting(E_ALL);
     }
 
     function getBaseUrl() {
+        return 'http://' . $_SERVER['HTTP_HOST'] . '/';
+echo '<prE>';
+        print_r($_SERVER);
+        exit;
         static $baseUrl;
 
         if (!$baseUrl) {
@@ -55,5 +59,5 @@ error_reporting(E_ALL);
 
         return 'http://iweb:developer@isabelaweb1.cms.iwebcloud.co.uk/image/'.base64_encode($src).($qs ? '?'.$qs : '');
     }
-    
+
     $toplevels = array('branding', 'atoms', 'molecules');
