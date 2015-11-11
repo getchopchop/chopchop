@@ -15,28 +15,48 @@
         <h2>Accordion</h2>
 
         <div class="accordion">
-            <div class="accordion__header">
+            <div class="is-active accordion__header" 
+                data-toggle-group="tabs1"
+                data-toggle-action="activate"
+                data-toggle-activate="tabs1-content1">
                 <h3>Tab 1</h3>
             </div>
-            <div class="is-active accordion__body">
+            <div class="is-active accordion__body" i
+                data-toggle-id="tabs1-content1"
+                data-toggle-group="tabs1-content">
                 <p>tab 1 content</p>
             </div>
-            <div class="accordion__header">
+            <div class="accordion__header" 
+                data-toggle-group="tabs1"
+                data-toggle-action="activate"
+                data-toggle-activate="tabs1-content2">
                 <h3>Tab 2</h3>
             </div>
-            <div class="accordion__body">
+            <div class="accordion__body"
+                data-toggle-id="tabs1-content2"
+                data-toggle-group="tabs1-content">
                 <p>tab 2 content</p>
             </div>
-            <div class="accordion__header">
+            <div class="accordion__header"
+                data-toggle-group="tabs1"
+                data-toggle-action="activate"
+                data-toggle-activate="tabs1-content3">
                 <h3>Tab 3</h3>
             </div>
-            <div class="accordion__body">
+            <div class="accordion__body"
+                data-toggle-id="tabs1-content3"
+                data-toggle-group="tabs1-content">
                 <p>tab 3 content</p>
             </div>
-            <div class="accordion__header">
+            <div class="accordion__header"
+                data-toggle-group="tabs1"
+                data-toggle-action="activate"
+                data-toggle-activate="tabs1-content4">
                 <h3>Tab 4</h3>
             </div>
-            <div class="accordion__body">
+            <div class="accordion__body"
+                data-toggle-id="tabs1-content4"
+                data-toggle-group="tabs1-content">
                 <p>tab 4 content</p>
             </div>
         </div>
@@ -48,28 +68,52 @@
         <h2>Accordion that can be collapsed or one open at a time</h2>
 
         <div class="accordion">
-            <div class="accordion__header">
+            <div class="accordion__header"
+                data-toggle-group="tabs2"
+                data-toggle-action="toggle"
+                data-toggle-activate="tabs2-content1"
+                data-toggle-deactivate="tabs2-content1">
                 <h3>Tab 1</h3>
             </div>
-            <div class="accordion__body">
+            <div class="accordion__body"
+                data-toggle-id="tabs2-content1"
+                data-toggle-group="tabs2-content">
                 <p>tab 1 content</p>
             </div>
-            <div class="accordion__header">
+            <div class="accordion__header"
+                data-toggle-group="tabs2"
+                data-toggle-action="toggle"
+                data-toggle-activate="tabs2-content2"
+                data-toggle-deactivate="tabs2-content2">
                 <h3>Tab 2</h3>
             </div>
-            <div class="accordion__body">
+            <div class="accordion__body"
+                data-toggle-id="tabs2-content2"
+                data-toggle-group="tabs2-content">
                 <p>tab 2 content</p>
             </div>
-            <div class="accordion__header">
+            <div class="accordion__header"
+                data-toggle-group="tabs2"
+                data-toggle-action="toggle"
+                data-toggle-activate="tabs2-content3"
+                data-toggle-deactivate="tabs2-content3">
                 <h3>Tab 3</h3>
             </div>
-            <div class="accordion__body">
+            <div class="accordion__body"
+                data-toggle-id="tabs2-content3"
+                data-toggle-group="tabs2-content">
                 <p>tab 3 content</p>
             </div>
-            <div class="accordion__header">
+            <div class="accordion__header"
+                data-toggle-group="tabs2"
+                data-toggle-action="toggle"
+                data-toggle-activate="tabs2-content4"
+                data-toggle-deactivate="tabs2-content4">
                 <h3>Tab 4</h3>
             </div>
-            <div class="accordion__body">
+            <div class="accordion__body"
+                data-toggle-id="tabs2-content4"
+                data-toggle-group="tabs2-content">
                 <p>tab 4 content</p>
             </div>
         </div>
@@ -81,28 +125,44 @@
         <h2>Accordion that can have multiple open at once</h2>
 
         <div class="accordion">
-            <div class="is-active accordion__header">
+            <div class="is-active accordion__header"
+                data-toggle-action="toggle"
+                data-toggle-activate="tabs3-content1"
+                data-toggle-deactivate="tabs3-content1">
                 <h3>Tab 1</h3>
             </div>
-            <div class="is-active accordion__body">
+            <div class="is-active accordion__body"
+                data-toggle-id="tabs3-content1">
                 <p>tab 1 content</p>
             </div>
-            <div class="accordion__header">
+            <div class="accordion__header"
+                data-toggle-action="toggle"
+                data-toggle-activate="tabs3-content2"
+                data-toggle-deactivate="tabs3-content2">
                 <h3>Tab 2</h3>
             </div>
-            <div class="accordion__body">
+            <div class="accordion__body"
+                data-toggle-id="tabs3-content2">
                 <p>tab 2 content</p>
             </div>
-            <div class="is-active accordion__header">
+            <div class="is-active accordion__header"
+                data-toggle-action="toggle"
+                data-toggle-activate="tabs3-content3"
+                data-toggle-deactivate="tabs3-content3">
                 <h3>Tab 3</h3>
             </div>
-            <div class="is-active accordion__body">
+            <div class="is-active accordion__body"
+                data-toggle-id="tabs3-content3">
                 <p>tab 3 content</p>
             </div>
-            <div class="accordion__header">
+            <div class="accordion__header"
+                data-toggle-action="toggle"
+                data-toggle-activate="tabs3-content4"
+                data-toggle-deactivate="tabs3-content4">
                 <h3>Tab 4</h3>
             </div>
-            <div class="accordion__body">
+            <div class="accordion__body"
+                data-toggle-id="tabs3-content4">
                 <p>tab 4 content</p>
             </div>
         </div>
@@ -114,28 +174,48 @@
         <h2>Tabs</h2>
 
         <div class="tabs">
-            <div class="is-active tabs__header">
+            <div class="is-active tabs__header"
+                data-toggle-group="tabs4"
+                data-toggle-action="activate"
+                data-toggle-activate="tabs4-content1">
                 <h3>Tab 1</h3>
             </div>
-            <div class="is-active tabs__body">
+            <div class="is-active tabs__body"
+                data-toggle-id="tabs4-content1"
+                data-toggle-group="tabs4-content">
                 <p>tab 1 content</p>
             </div>
-            <div class="tabs__header">
+            <div class="tabs__header"
+                data-toggle-group="tabs4"
+                data-toggle-action="activate"
+                data-toggle-activate="tabs4-content2">
                 <h3>Tab 2</h3>
             </div>
-            <div class="tabs__body">
+            <div class="tabs__body"
+                data-toggle-id="tabs4-content2"
+                data-toggle-group="tabs4-content">
                 <p>tab 2 content</p>
             </div>
-            <div class="tabs__header">
+            <div class="tabs__header"
+                data-toggle-group="tabs4"
+                data-toggle-action="activate"
+                data-toggle-activate="tabs4-content3">
                 <h3>Tab 3</h3>
             </div>
-            <div class="tabs__body">
+            <div class="tabs__body"
+                data-toggle-id="tabs4-content3"
+                data-toggle-group="tabs4-content">
                 <p>tab 3 content</p>
             </div>
-            <div class="tabs__header">
+            <div class="tabs__header"
+                data-toggle-group="tabs4"
+                data-toggle-action="activate"
+                data-toggle-activate="tabs4-content4">
                 <h3>Tab 4</h3>
             </div>
-            <div class="tabs__body">
+            <div class="tabs__body"
+                data-toggle-id="tabs4-content4"
+                data-toggle-group="tabs4-content">
                 <p>tab 4 content</p>
             </div>
         </div>
@@ -145,7 +225,13 @@
 
     <section>
         <h2>Modal</h2>
-        <p><a href="#">Click me for modal time</a></p>
+        <p>
+            <a href="#" 
+                data-toggle-action="activate"
+                data-toggle-activate="modal">
+                    Click me for modal time
+            </a>
+        </p>
     </section>
     </section>
 
@@ -153,17 +239,26 @@
 
     <section>
         <h2>Drawers</h2>
-        <p><a href="#">Left drawer</a></p>
-        <p><a href="#">Right drawer</a></p>
+        <p><a href="#" data-toggle-action="activate" data-toggle-activate="drawer-left">Left drawer</a></p>
+        <p><a href="#" data-toggle-action="activate" data-toggle-activate="drawer-right">Right drawer</a></p>
     </section>
 
 
     </div><!--/#wrapper -->
 
 
-    <div class="overlay"></div> <!-- toggle is-active to show !-->
+    <div class="overlay" 
+        data-toggle-id="overlay" 
+        data-toggle-action="deactivate"
+        data-toggle-deactivate="drawer-left,drawer-right,modal">
+    </div> <!-- toggle is-active to show !-->
 
-    <div class="drawer drawer--left"> <!-- toggle is-active to show !-->
+    <!-- toggle is-active to show !-->
+    <div class="drawer drawer--left" 
+        data-toggle-id="drawer-left"
+        data-toggle-group="drawers"
+        data-toggle-activate="overlay">
+
         <div class="drawer__dialog card">
             <div class="card__header">
                 <h2>Left drawer</h2>
@@ -179,7 +274,12 @@
         </div>
     </div>
 
-    <div class="drawer drawer--right"> <!-- toggle class is-active to show !-->
+    <!-- toggle class is-active to show !-->
+    <div class="drawer drawer--right"
+        data-toggle-id="drawer-right"
+        data-toggle-group="drawers"
+        data-toggle-activate="overlay">
+
         <div class="drawer__dialog card">
             <div class="card__header">
                 <h2>Right drawer</h2>
@@ -195,7 +295,11 @@
         </div>
     </div>
 
-    <div class="modal"> <!-- toggle is-active to show !-->
+    <!-- toggle is-active to show !-->
+    <div class="modal"
+        data-toggle-id="modal"
+        data-toggle-activate="overlay">
+
         <div class="modal__dialog card">
             <div class="card__header">
                 <h2>This is a modal</h2>
@@ -209,11 +313,17 @@
                 <p>Some footer bits</p>
             </div>
         </div>
-        <a href="#" class="btn modal__close">Close</a>
+        <a href="#" class="btn modal__close" data-toggle-action="deactivate" data-toggle-deactivate="overlay">Close</a>
     </div>
 
 
     <?php include('../inc/scripts.php'); ?>
+    <script type="text/javascript" src="/src/js/chopchop.lib.js"></script>
 
+    <script type="text/javascript">
+        (function() {
+            var toggle = new ChopChop.Toggle('body');
+        })();
+    </script>
 </body>
 </html>
