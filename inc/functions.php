@@ -25,16 +25,6 @@ error_reporting(E_ALL);
 
     function getBaseUrl() {
         return 'http://' . $_SERVER['HTTP_HOST'] . '/';
-echo '<prE>';
-        print_r($_SERVER);
-        exit;
-        static $baseUrl;
-
-        if (!$baseUrl) {
-            $baseUrl = substr($_SERVER['SCRIPT_NAME'], 0, strpos($_SERVER['SCRIPT_NAME'], 'index.php'));
-        }
-
-        return $baseUrl;
     }
 
     function getUrl($url = false) {
