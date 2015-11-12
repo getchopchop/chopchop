@@ -14,4 +14,4 @@
     cd ~/Sites/chopchop/public_html
     node_modules/gulp/bin/gulp.js watch
 
-Info: https://gist.github.com/markgoodyear/8497946#file-gulpfile-js
+Info: https://github.com/JakeCobley/Kettle
