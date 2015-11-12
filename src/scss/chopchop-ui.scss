@@ -34,6 +34,9 @@ $z-200: 200;
 @import "utilities/z-index";
 @import "utilities/lists";
 
+body {
+    margin-top: 1em;
+}
 
 // =============================================
 // Layering z-index
