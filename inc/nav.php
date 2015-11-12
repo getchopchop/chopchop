@@ -3,8 +3,8 @@ foreach($toplevels as $toplevel) {
 ?>
 <nav class=" nav-<?= $toplevel ?> nav-collapse">
     <ul class="nav nav--pills">
-        <li class="level0 parent"><a href="<?= $toplevel ?>"><?= ucwords($toplevel) ?> <span class="shape-hook"></span></a>
-            <ul class="nav nav--pills child">
+        <li class="level0 parent"><a href="<?= $toplevel ?>" data-toggle-action="toggle" data-toggle="<?= ucwords($toplevel) ?>"><?= ucwords($toplevel) ?> <span class="shape-hook"></span></a>
+            <ul class="nav nav--pills child" data-toggle-id="<?= ucwords($toplevel) ?>">
                 <?php
                 $quarks = dir('templates/' . $toplevel);
                 while (false !== ($entry = $quarks->read())) {

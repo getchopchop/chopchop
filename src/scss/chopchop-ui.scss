@@ -55,7 +55,6 @@ $z-200: 200;
     padding: 1.5rem;
 }
 
-.site-navigation ul a,
 .cc-heading {
     font-size: $font-size-xs;
     letter-spacing: 0.12em;
@@ -126,6 +125,10 @@ $z-200: 200;
         
     }
     
+    a.is-active {
+        background-color: $lighter-grey;
+    }
+    
 }
 
 
@@ -140,12 +143,12 @@ $z-200: 200;
         margin-top: 0.3em;
     }
     
-    li {
+    a {
         &:not(.is-active) .shape-hook {
-            @include plus(12px, 2px, $lighter-grey);
+            @include plus($light-grey, 12px, 2px);
         }
         &.is-active .shape-hook {
-            @include minus(12px, 2px, $lighter-grey);
+            @include minus($light-grey, 12px, 2px);
         }
     }
 }
@@ -155,11 +158,14 @@ $z-200: 200;
 // Navigation Sub Navigation
 // =============================================
 
+.site-navigation a {
+    padding-left: $spacing;
+}
 .site-navigation .child {
     display: none;
     font-size: $font-size-sm;
     
-    &.show {
+    &.is-active {
         display: block;
     }
     a {

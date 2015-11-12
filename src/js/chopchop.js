@@ -43,14 +43,8 @@
             $li.addClass('active');
 
             tog($ul);
-
+            
         });
-
-
-        $('.js-toggle-nav').on('click',function(e){
-            e.preventDefault();
-            $('.site-navigation').toggleClass('is-active');
-        });
-
+        
     });
 })(jQuery);
