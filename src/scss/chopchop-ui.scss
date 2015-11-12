@@ -34,6 +34,23 @@ $z-200: 200;
 @import "utilities/z-index";
 @import "utilities/lists";
 
+
+// =============================================
+// Layering z-index
+// =============================================
+
+.site-navigation {
+    z-index: $z-100;
+}
+.cc-readout {
+    z-index: $z-200;
+}
+
+
+// =============================================
+// Light Styles
+// =============================================
+
 .well {
     padding: 1.5rem;
 }
@@ -47,7 +64,6 @@ $z-200: 200;
 }
 
 .cc-heading {
-    
     padding-bottom: $spacing;
     margin-top: $spacing-xl * 3;
     margin-bottom: $spacing-xl;
@@ -78,41 +94,13 @@ $z-200: 200;
 
 
 // =============================================
-// Layout
+// Navigation
 // =============================================
 
 .site-navigation {
-    
     position: fixed;
     background-color: $white;
     transition: all 0.4s ease;
-    z-index: $z-100;
-    
-    &__toggle {
-        display: block;
-        padding: .2em .6em;
-        white-space: nowrap;
-        position: absolute;
-        font-size: 10px;
-        //font-weight: $bold;
-        background-color: $black;
-        color: $white;
-        text-decoration: none;
-        border: 1px solid rgba(0,0,0,0.3);
-        bottom: 100%;
-        border-top-right-radius: 4px;
-        border-bottom: 0;
-        border-left: 0;
-        border-top-right-radius: 4px;
-        border-bottom: 0;
-        border-left: 0;
-        
-        &:hover {
-            color: $white;
-            background-color: lighten($black, 20%);
-        }
-    }
-    
     
     @include breakpoint(max-width $screen-sm-max) {
         bottom: 0;
@@ -125,7 +113,6 @@ $z-200: 200;
         }
     }
     
-    
     @include breakpoint($screen-md) {
         top: 0;
         bottom: 0;
@@ -137,32 +124,13 @@ $z-200: 200;
             transform: translateX(0);
         }
         
-        &__toggle {
-            left: 100%;
-            bottom: 0;
-        }
     }
     
 }
 
 
-
-
-@include breakpoint($screen-md) {
-    .site-wrapper {
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
-    }
-    .site-navigation__content {
-        overflow: hidden;
-    }
-}
-
-
-
 // =============================================
-// Navigation
+// Navigation Shapes +/-
 // =============================================
 
 .site-navigation {
@@ -180,46 +148,67 @@ $z-200: 200;
             @include minus(12px, 2px, $lighter-grey);
         }
     }
-    
-    .nav--stack ul ul {
-        margin-bottom: 2em;
-    }
-    
-// =============================================
-// Collapsing menu
-// =============================================
-
-    .child {
-        display: none;
-        font-size: $font-size-sm;
-        &.show {
-            display: block;
-        }
-        a {
-            padding-left: $spacing-lg;
-            padding-top: $spacing-xs;
-            padding-bottom: $spacing-xs;
-            background-color: lighten($lighter-grey, 5%);
-            &:hover {
-                background-color: lighten($lighter-grey, 3%);
-            }
-            
-        }
-    }
-    .parent > a .icon-minus {
-        display: none;
-    }
-    .active > a {
-        .icon-plus {
-            display: none;
-        }
-        .icon-minus {
-            display: inline-block;
-        }
-    }
-
-
 }
+
+
+// =============================================
+// Navigation Sub Navigation
+// =============================================
+
+.site-navigation .child {
+    display: none;
+    font-size: $font-size-sm;
+    
+    &.show {
+        display: block;
+    }
+    a {
+        padding-left: $spacing-lg;
+        padding-top: $spacing-xs;
+        padding-bottom: $spacing-xs;
+        background-color: lighten($lighter-grey, 5%);
+        &:hover {
+            background-color: lighten($lighter-grey, 3%);
+        }
+        
+    }
+}
+
+
+// =============================================
+// Navigation Toggle
+// =============================================
+
+.site-navigation__toggle {
+    position: fixed;
+    display: block;
+    bottom: 0;
+    left: 0;
+    padding: .2em .6em;
+    
+    &:hover {
+        color: $white;
+        background-color: lighten($black, 20%);
+    }
+}
+
+
+// =============================================
+// Layout
+// =============================================
+
+@include breakpoint($screen-md) {
+    .site-wrapper {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+    .site-navigation__content {
+        overflow: hidden;
+    }
+}
+
+
 
 
 // =============================================
@@ -270,64 +259,54 @@ $z-200: 200;
 }
 
 
-
 // =============================================
 // Media Query Readout
 // =============================================
 
-.cc-mq-readout {
-    
-    z-index: $z-200;
+.cc-readout {
     display: block;
+    font-size: 10px;
+    white-space: nowrap;
+    color: $white;
+    background-color: $black;
+    text-decoration: none;
+}
+
+.cc-readout--mq {
     position: fixed;
     bottom: 0;
     right: 0;
-    font-size: 10px;
-    white-space: nowrap;
-    
+    color: $white;
+    background-color: magenta;
     &:after {
         display: block;
         padding: .2em .6em;
-        background-color: magenta;
-        color: $white;
-        content: "$screen-xs < #{$screen-xs}"
-    }
-    
-    @include breakpoint($screen-xs) {
+        content: "$screen-xs < #{$screen-xs}";
         
-        &:after {
+        @include breakpoint($screen-xs) {
             background-color: red;
-            content: "$screen-xs > #{$screen-xs}"
+            content: "$screen-xs > #{$screen-xs}";
         }
-    }
-    @include breakpoint($screen-sm) {
-        
-        &:after {
+        @include breakpoint($screen-sm) {
             background-color: green;
-            content: "$screen-sm > #{$screen-sm}"
+            content: "$screen-sm > #{$screen-sm}";
         }
-    }
-    @include breakpoint($screen-md) {
-        
-        &:after {
+        @include breakpoint($screen-md) {
             background-color: blue;
-            content: "$screen-md > #{$screen-md}"
+            content: "$screen-md > #{$screen-md}";
         }
-    }
-    @include breakpoint($screen-lg) {
-        
-        &:after {
+        @include breakpoint($screen-lg) {
             background-color: yellow;
             color: $black;
-            content: "$screen-lg > #{$screen-lg}"
+            content: "$screen-lg > #{$screen-lg}";
         }
-    }
-    @include breakpoint($screen-xl) {
-        
-        &:after {
+        @include breakpoint($screen-xl) {
             background-color: hotpink;
             color: $white;
-            content: "$screen-xl > #{$screen-xl}"
+            content: "$screen-xl > #{$screen-xl}";
         }
+        
     }
+    
+    
 }
