@@ -2,7 +2,7 @@
 
 error_reporting(E_ALL);
 
-    define('TEMPLATE_PATH', realpath(__DIR__) . '/../templates/');
+    define('TEMPLATE_PATH', realpath(__DIR__) . '/../');
 
     function getBlock($location) {
         $path = TEMPLATE_PATH . trim($location, '/') . '.php';
@@ -24,7 +24,7 @@ error_reporting(E_ALL);
     }
 
     function getBaseUrl() {
-        return 'http://' . $_SERVER['HTTP_HOST'] . '/';
+        return 'http://' . $_SERVER['HTTP_HOST'] . '/static/';
     }
 
     function getUrl($url = false) {
