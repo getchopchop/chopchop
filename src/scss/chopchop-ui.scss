@@ -99,36 +99,17 @@ $z-200: 200;
 .site-navigation {
     position: fixed;
     background-color: $white;
-    transition: all 0.4s ease;
+    transition: transform 0.4s ease;
+    top: 0;
+    bottom: 0;
+    min-width: 12rem;
+    max-width: 15rem;
+    border-right: 2px solid $lighter-grey;
+    transform: translateX(-100%);
     
-    @include breakpoint(max-width $screen-sm-max) {
-        bottom: 0;
-        left: 0;
-        right: 0;
-        border-top: 2px solid $lighter-grey;
-        transform: translateY(100%);
-        &.is-active {
-            transform: translateY(0);
-        }
+    &.is-active {
+        transform: translateX(0);
     }
-    
-    @include breakpoint($screen-md) {
-        top: 0;
-        bottom: 0;
-        width: 15rem;
-        border-right: 2px solid $lighter-grey;
-        transform: translateX(-100%);
-        
-        &.is-active {
-            transform: translateX(0);
-        }
-        
-    }
-    
-    a.is-active {
-        background-color: $lighter-grey;
-    }
-    
 }
 
 
@@ -159,8 +140,14 @@ $z-200: 200;
 // =============================================
 
 .site-navigation a {
-    padding-left: $spacing;
+    a {
+        padding-left: $spacing;
+        &.is-active {
+            background-color: $lighter-grey;
+        }
+    }
 }
+
 .site-navigation .child {
     display: none;
     font-size: $font-size-sm;
@@ -213,8 +200,6 @@ $z-200: 200;
         overflow: hidden;
     }
 }
-
-
 
 
 // =============================================
@@ -284,6 +269,7 @@ $z-200: 200;
     right: 0;
     color: $white;
     background-color: magenta;
+    
     &:after {
         display: block;
         padding: .2em .6em;
@@ -311,8 +297,5 @@ $z-200: 200;
             color: $white;
             content: "$screen-xl > #{$screen-xl}";
         }
-        
     }
-    
-    
 }
