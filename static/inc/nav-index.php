@@ -6,7 +6,7 @@
         <p class="cc-heading"><?= ucwords($toplevel) ?></p>
         <ul class="nav nav--pills nav--bordered child">
             <?php
-            $quarks = dir('templates/' . $toplevel);
+            $quarks = dir($toplevel);
             while (false !== ($entry = $quarks->read())) {
                 if(substr($entry, -4) == '.php') {
                     $entry = substr($entry, 0, strlen($entry) - 4);
