@@ -78,19 +78,19 @@
     border-right: $thickness solid $color;
     
     @if $direction == up {
-        transform: translate3d(0,-50%,0) rotate(-45deg);
+        transform: rotate(-45deg);
     }
-    
+
     @if $direction == down {
-        transform: translate3d(0,-50%,0) rotate(135deg);
+        transform: rotate(135deg);
     }
-    
+
     @if $direction == left {
-        transform: translate3d(0,-50%,0) rotate(-135deg);
+        transform: rotate(-135deg);
     }
-    
+
     @if $direction == right {
-        transform: translate3d(0,-50%,0) rotate(45deg);
+        transform: rotate(45deg);
     }
 }
 
