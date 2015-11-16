@@ -1,174 +1,190 @@
 // =============================================
+// Project Settings
+// edit these variables to suit your project
+// **this is the only section you should need to edit
+// =============================================
+
+var sourceDirectory = './src',
+    buildDirectory = './build',
+    scssFolder = 'scss',
+    cssFolder = 'css',
+    jsFolder = 'js',
+    imagesFolder = 'img',
+    fontsFolder = 'fonts',
+    vendorFolder = 'vendor',
+    bowerFolder = './build/bower_components',
+    url = 'chopchop.NAME.dyn.iweb.co.uk',
+    autoprefixer = ['last 2 versions'],
+    imageOptimisation = {
+        optimizationLevel: 3,   // PNG (Between 0 - 7)
+        progressive: true,      // JPG
+        interlaced: true        // GIF
+    };
+
+// =============================================
 // Dependencies
 // =============================================
 
 var gulp = require('gulp'),
+    plugin = require('gulp-load-plugins')(),
     del = require('del'),
-    plugin = require('gulp-load-plugins')();
-
+    runSequence = require('run-sequence'),
+    browserSync = require('browser-sync').create();
 
 // =============================================
 // Paths
 // =============================================
 
-var basePath = {
-	src: './src',
-    dist: './build',
-    bowerDir: './build/bower_components'
-};
-
-var path = {
-    scss: basePath.src + '/scss/**/*.scss',
-    js: basePath.src + '/js/**/*.js',
-    img: [
-        basePath.src + '/img/**/*.png',
-        basePath.src + '/img/**/*.jpg',
-        basePath.src + '/img/**/*.jpeg',
-        basePath.src + '/img/**/*.gif',
-        basePath.src + '/img/**/*.svg'
-    ],
-    fonts: [
-        basePath.src + '/font/**/*.eot',
-        basePath.src + '/font/**/*.otf',
-        basePath.src + '/font/**/*.ttf',
-        basePath.src + '/font/**/*.woff',
-        basePath.src + '/font/**/*.svg'
-    ],
-    vendor: basePath.src + '/vendor/**/*'
-}
-
+var scss = {
+        source: sourceDirectory + '/' + scssFolder + '/**/*.scss',
+        build: buildDirectory + '/' + cssFolder
+    },
+    js = {
+        source: [
+            sourceDirectory + '/' + jsFolder + '/**/*.js',
+            '!' + sourceDirectory + '/' + jsFolder + '/**/_*.js',
+        ],
+        build: buildDirectory + '/' + jsFolder
+    },
+    img = {
+        source: sourceDirectory + '/' + imagesFolder + '/**/*',
+        build: buildDirectory + '/' + imagesFolder
+    },
+    fonts = {
+        source: sourceDirectory + '/' + fontsFolder + '/**/*',
+        build: buildDirectory + '/' + fontsFolder
+    },
+    vendor = {
+        source: sourceDirectory + '/' + vendorFolder + '/**/*',
+        build: buildDirectory + '/' + vendorFolder
+    },
+    bower = './' + bowerFolder;
 
 // =============================================
-// Options
+// BROWSER SYNC `gulp browser-sync`
+// sync injection and auto reloads the browser
 // =============================================
 
-var option = {
-    autoprefixer: [
-        'last 2 version',
-        'safari 5',
-        'opera 12.1',
-        'ios 6',
-        'android 4'
-    ],
-    imageopt: {
-        optimizationLevel: 3,   // (PNG) Between 0 - 7
-        progressive: true,      // (JPG)
-        interlaced: true        // (GIF)
-    }
-};
-
-
-// =============================================
-// Environment
-// =============================================
-
-var isProduction = false;
-
-if(plugin.util.env.production === true) {
-    isProduction = true;
-}
-
+gulp.task('browser-sync', function() {
+    browserSync.init(null, {
+        proxy: url,
+        open: false
+    });
+});
 
 // =============================================
 // BOWER `gulp bower`
+// installs dependencies from the bower.json file
 // =============================================
 
 gulp.task('bower', function() {
     return plugin.bower()
-        .pipe(gulp.dest(basePath.bowerDir))
+        .pipe(gulp.dest(bower));
 });
-
-
-// =============================================
-// CLEAN `gulp clean`
-// =============================================
-
-gulp.task('clean', function(cb) {
-    return del([basePath.dist], cb)
-});
-
 
 // =============================================
 // FONTS `gulp fonts`
+// moves fonts to build directory
 // =============================================
 
 gulp.task('fonts', function() {
-    return gulp.src(path.fonts)
-        .pipe(gulp.dest(basePath.dist + '/fonts'))
+    return gulp.src(fonts.source)
+        .pipe(gulp.dest(fonts.build));
 });
-
 
 // =============================================
 // VENDOR `gulp vendor`
+// moves vendor to build directory
 // =============================================
 
 gulp.task('vendor', function() {
-    return gulp.src(path.vendor)
-        .pipe(gulp.dest(basePath.dist + '/vendor'))
+    return gulp.src(vendor.source)
+        .pipe(gulp.dest(vendor.build + '/vendor'))
 });
-
 
 // =============================================
 // IMG `gulp img`
+// minifys images
 // =============================================
 
 gulp.task('img', function() {
-    return gulp.src(path.img)
-        .pipe(plugin.imagemin(option.imageopt))
-        .pipe(gulp.dest(basePath.dist + '/img'));
+    return gulp.src(img.source)
+        .pipe(plugin.imagemin(imageOptimisation))
+        .pipe(gulp.dest(img.build));
 });
-
 
 // =============================================
 // JS `gulp js`
+// compiles js, Jshint, Minify if `--production`
+// ** does not compile files with `_FILENAME`
 // =============================================
 
 gulp.task('js', function() {
-    gulp.src(path.js)
+    return gulp.src(js.source)
         .pipe(plugin.jshint())
         .pipe(plugin.jshint.reporter('default'))
-        .pipe(isProduction ? plugin.uglify() : plugin.util.noop())
-        .pipe(gulp.dest(basePath.dist + '/js'))
+        .pipe(!plugin.util.env.production ? plugin.sourcemaps.init() : plugin.util.noop())
+        .pipe(plugin.include())
+        .pipe(!plugin.util.env.production ? plugin.sourcemaps.write() : plugin.util.noop())
+        .pipe(plugin.util.env.production ? plugin.uglify() : plugin.util.noop())
+        .pipe(gulp.dest(js.build))
+        .pipe(browserSync.reload({stream: true}));
 });
-
 
 // =============================================
 // CSS `gulp css`
+// compiles scss to css, autoprefixer, combines media queries and minifies if `--production`
 // =============================================
 
 gulp.task('css', function() {
-    gulp.src(path.scss)
+    return gulp.src(scss.source)
+        .pipe(plugin.clipEmptyFiles())
+        .pipe(!plugin.util.env.production ? plugin.sourcemaps.init() : plugin.util.noop())
         .pipe(plugin.sass())
-        .pipe(plugin.autoprefixer(option.autoprefixer))
-        .pipe(isProduction ? plugin.combineMq() : plugin.util.noop())
-        .pipe(isProduction ? plugin.minifyCss() : plugin.util.noop())
-        .pipe(gulp.dest(basePath.dist + '/css'))
+        .pipe(plugin.autoprefixer(autoprefixer))
+        .pipe(!plugin.util.env.production ? plugin.sourcemaps.write() : plugin.util.noop())
+        .pipe(plugin.util.env.production ? plugin.combineMq() : plugin.util.noop())
+        .pipe(plugin.util.env.production ? plugin.minifyCss() : plugin.util.noop())
+        .pipe(gulp.dest(scss.build))
+        .pipe(browserSync.reload({stream: true}));
 });
 
+// =============================================
+// Clean `gulp clean
+// destroys the build directory
+// =============================================
+
+gulp.task('clean', function(cb) {
+    return del([buildDirectory], cb);
+});
 
 // =============================================
 // Watch 'gulp watch'
+// watches for changes and runs the associated task on change
 // =============================================
 
-gulp.task('watch', function() {
-    gulp.watch(path.scss, ['css']);
-    gulp.watch(path.js, ['js']);
-    gulp.watch(path.img, ['img']);
-    gulp.watch(path.fonts, ['fonts']);
+gulp.task('watch', function(cb) {
+    runSequence('browser-sync', cb);
+    gulp.watch(scss.source, ['css']);
+    gulp.watch(js.source, ['js']);
+    gulp.watch(img.source, ['img']);
+    gulp.watch(fonts.source, ['fonts']);
 });
-
 
 // =============================================
 // Build 'gulp build'
+// builds all assets, also has `--production` option to build production ready assets
 // =============================================
 
-gulp.task('build', ['clean'], function() {
-    gulp.start('bower', 'css', 'js', 'img', 'fonts', 'vendor');
+gulp.task('build', function(cb) {
+    runSequence('clean', 'bower', 'css', 'js', 'img', 'fonts', cb);
 });
-
 
 // =============================================
 // Default 'gulp'
+// runs build task, then runs watche task
 // =============================================
 
-gulp.task('default', ['build', 'watch']);
+gulp.task('default', function(cb) {
+    runSequence('build', 'watch', cb);
+});
