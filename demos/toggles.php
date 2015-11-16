@@ -10,12 +10,18 @@
 </head>
 <body>
 
+    <section>
+        <h2>Basic toggle example</h2>
+
+        <h3 data-toggle-action="toggle" data-toggle-activate="content-box" data-toggle-deactivate="content-box">A target title</h3>
+        <div data-toggle-id="content-box">This is some content that is toggled.</div>
+    </div>
 
     <section>
         <h2>Accordion</h2>
 
         <div class="accordion">
-            <div class="is-active accordion__header" 
+            <div class="is-active accordion__header"
                 data-toggle-group="tabs1"
                 data-toggle-action="activate"
                 data-toggle-activate="tabs1-content1">
@@ -26,7 +32,7 @@
                 data-toggle-group="tabs1-content">
                 <p>tab 1 content</p>
             </div>
-            <div class="accordion__header" 
+            <div class="accordion__header"
                 data-toggle-group="tabs1"
                 data-toggle-action="activate"
                 data-toggle-activate="tabs1-content2">
@@ -226,7 +232,7 @@
     <section>
         <h2>Modal</h2>
         <p>
-            <a href="#" 
+            <a href="#"
                 data-toggle-action="activate"
                 data-toggle-activate="modal">
                     Click me for modal time
@@ -247,14 +253,14 @@
     </div><!--/#wrapper -->
 
 
-    <div class="overlay" 
-        data-toggle-id="overlay" 
+    <div class="overlay"
+        data-toggle-id="overlay"
         data-toggle-action="deactivate"
         data-toggle-deactivate="drawer-left,drawer-right,modal">
     </div> <!-- toggle is-active to show !-->
 
     <!-- toggle is-active to show !-->
-    <div class="drawer drawer--left" 
+    <div class="drawer drawer--left"
         data-toggle-id="drawer-left"
         data-toggle-group="drawers"
         data-toggle-activate="overlay">
