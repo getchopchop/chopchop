@@ -80,6 +80,6 @@
     </div>
 
     <h2>Multi Level Primary Nav</h2>
-    <?php include('templates/molecules/navs/multi-level.php'); ?>
+    <?php include('molecules/navs/multi-level.php'); ?>
 
 </div>

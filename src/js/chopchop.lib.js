@@ -88,7 +88,8 @@ var ChopChop = (function($, ChopChop) {
                 }
 
                 // Chain onto targets
-                chain = ($current.data('toggle-' + action) || '').split(',');
+                chain = ($current.data('toggle-' + action) || '').split(',')
+                    .concat(($current.data('toggle') || '').split(','));
 
                 for (i = 0, l = chain.length; i < l; ++i) {
                     $other = $('[data-toggle-id="' + chain[i] + '"]');

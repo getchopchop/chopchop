@@ -10,15 +10,15 @@
 </head>
 <body>
 
-    <span class="cc-mq-readout"></span>
+    <span class="cc-readout cc-readout--mq"></span>
+    <a href="#" class="site-navigation__toggle cc-readout" data-toggle-action="toggle" data-toggle="navigation">Toggle Nav</a>
 
     <div class="site-wrapper">
 
-        <nav class="site-navigation">
+        <nav class="site-navigation" data-toggle-id="navigation">
             <div class="block-content site-navigation__content">
                 <?php include('inc/nav.php'); ?>
             </div>
-            <a href="#" class="site-navigation__toggle js-toggle-nav">Toggle Nav</a>
         </nav>
 
         <!-- <main class="main site-main"> -->

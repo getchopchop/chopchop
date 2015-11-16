@@ -2,15 +2,16 @@
 
 ## To get going with it here are the commands
 
-1. create directory in Sites folder
-2. create public_html folder
-3. git clone git@gitlab.iweb.co.uk:labs/chopchop.git
-4. npm install
-5. gulp
+    mkdir ~/Sites/chopchop
+    cd ~/Sites/chopchop
+    git clone git@gitlab.iweb.co.uk:labs/chopchop.git public_html
+    cd public_html
+    npm install
+    node_modules/gulp/bin/gulp.js build
 
 ## Working on the project
 
-1. CD to directory
-2. gulp watch
+    cd ~/Sites/chopchop/public_html
+    node_modules/gulp/bin/gulp.js watch
 
-Info: https://gist.github.com/markgoodyear/8497946#file-gulpfile-js
+Info: https://github.com/JakeCobley/Kettle
