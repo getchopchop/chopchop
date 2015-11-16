@@ -1,10 +1,18 @@
 ;(function($){
     $(document).ready(function() {
-        
+
         // =============================================
-        // Sensible Variables
+        // Global variables
         // =============================================
+
         var $body = $('body');
-        
+
+
+        // =============================================
+        // Initialise toggles globally
+        // =============================================
+
+        var toggle = new ChopChop.Toggle('body');
+
     });
 }(jQuery));
