@@ -28,7 +28,7 @@
   "homepage": "https://gitlab.iweb.co.uk/labs/chopchop/tree/master#README",
   "devDependencies": {
     "bower": "^1.6.2",
-    "browser-sync": "^2.9.11",
+    "browser-sync": "^2.10.0",
     "del": "^2.1.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.2",
