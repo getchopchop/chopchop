@@ -169,6 +169,7 @@ gulp.task('watch', function(cb) {
     gulp.watch(js.source, ['js']);
     gulp.watch(img.source, ['img']);
     gulp.watch(fonts.source, ['fonts']);
+    gulp.watch(vendor.source, ['vendor']);
 });
 
 // =============================================
@@ -177,7 +178,7 @@ gulp.task('watch', function(cb) {
 // =============================================
 
 gulp.task('build', function(cb) {
-    runSequence('clean', 'bower', 'css', 'js', 'img', 'fonts', cb);
+    runSequence('clean', 'bower', 'css', 'js', 'img', 'fonts', 'vendor' cb);
 });
 
 // =============================================
