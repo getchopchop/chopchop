@@ -11,7 +11,7 @@
 <body>
 
     <span class="cc-readout cc-readout--mq"></span>
-    <a href="#" class="site-navigation__toggle cc-readout" data-toggle-action="toggle" data-toggle="navigation">Toggle Nav</a>
+    <a href="#" class="site-navigation__toggle cc-readout" data-toggle-action="toggle" data-toggle-target="navigation">Toggle Nav</a>
 
     <div class="site-wrapper">
 
