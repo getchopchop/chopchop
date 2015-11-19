@@ -2,13 +2,17 @@
     <div class="u-container">
 
         <h2>Drawers</h2>
-        <p><a href="#" data-toggle-action="activate" data-toggle-activate="drawer-left">Left drawer</a></p>
-        <p><a href="#" data-toggle-action="activate" data-toggle-activate="drawer-right">Right drawer</a></p>
+        <p><a href="#" data-toggle-action="activate" data-toggle-target="drawer-left">Left drawer</a></p>
+        <p><a href="#" data-toggle-action="activate" data-toggle-target="drawer-right">Right drawer</a></p>
 
     </div>
 </section>
 
-<div class="overlay" data-toggle-id="overlay" data-toggle-action="deactivate" data-toggle-deactivate="drawer-left,drawer-right,modal"></div> <!-- toggle is-active to show !-->
+<div class="overlay"
+    data-toggle-id="overlay"
+    data-toggle-action="deactivate"
+    data-toggle-target="overlay"
+    data-toggle-deactivate="drawer-left,drawer-right,modal"></div> <!-- toggle is-active to show !-->
 
 <!-- toggle is-active to show !-->
 <div class="drawer drawer--left" data-toggle-id="drawer-left" data-toggle-group="drawers" data-toggle-activate="overlay">
