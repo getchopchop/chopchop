@@ -99,7 +99,7 @@ gulp.task('fonts', function() {
 
 gulp.task('vendor', function() {
     return gulp.src(vendor.source)
-        .pipe(gulp.dest(vendor.build + '/vendor'))
+        .pipe(gulp.dest(vendor.build))
 });
 
 // =============================================
