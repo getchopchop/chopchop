@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(E_ALL);
+    error_reporting(E_ALL);
 
     define('TEMPLATE_PATH', realpath(__DIR__) . '/../');
 
