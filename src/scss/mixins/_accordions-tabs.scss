@@ -1,0 +1,45 @@
+// =============================================
+// Accordions
+// =============================================
+
+@mixin accordion {
+    > [class*="__header"].is-active {
+        color: red;
+    }
+
+    > [class*="__body"] {
+        display: none;
+
+        &.is-active {
+            display: block;
+        }
+    }
+}
+
+
+// =============================================
+// Tabs
+// =============================================
+
+@mixin tabs {
+    display: flex;
+    flex-wrap: wrap;
+
+    > [class*="__header"] {
+        order: 1;
+
+        &.is-active {
+            color: red;
+        }
+    }
+
+    > [class*="__body"] {
+        order: 2;
+        width: 100%;
+        display: none;
+
+        &.is-active {
+            display: block;
+        }
+    }
+}

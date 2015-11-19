@@ -1,0 +1,44 @@
+// =============================================
+// Accordion
+// =============================================
+
+.accordion {
+    @include accordion;
+}
+
+
+// =============================================
+// Tabs
+// =============================================
+
+.tabs {
+    @include tabs;
+}
+
+
+// =============================================
+// Accordion to Tabs @screen-md
+// =============================================
+
+.accordion-to-tabs {
+    @include breakpoint(max-width $screen-sm-max) {
+        @include accordion;
+    }
+    @include breakpoint($screen-md) {
+        @include tabs;
+    }
+}
+
+
+// =============================================
+// Tabs to Accordion @screen-md
+// =============================================
+
+.tabs-to-accordion {
+    @include breakpoint(max-width $screen-sm-max) {
+        @include tabs;
+    }
+    @include breakpoint($screen-md) {
+        @include accordion;
+    }
+}
