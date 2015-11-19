@@ -1,0 +1,80 @@
+<div>
+	<a href="#" data-toggle-target="first-one">Toggle first, group one</a>
+	<a href="#" data-toggle-target="second-one">Toggle second, group one</a>
+	<a href="#" data-toggle-target="first-two">Toggle first, group two</a>
+	<a href="#" data-toggle-target="second-two">Toggle second, group two</a>
+</div>
+
+<div>
+	<div data-toggle="first-one" data-toggle-group="group-one"></div>
+	<div data-toggle="second-one" data-toggle-group="group-one"></div>
+
+	<div data-toggle="first-two" data-toggle-group="group-two"></div>
+	<div data-toggle="second-two" data-toggle-group="group-two"></div>
+</div>
+
+<div>
+	<div data-toggle="first-one" data-toggle-group="group-one"></div>
+	<div data-toggle="second-one" data-toggle-group="group-one"></div>
+
+	<div data-toggle="first-two" data-toggle-group="group-two"></div>
+	<div data-toggle="second-two" data-toggle-group="group-two"></div>
+</div>
+
+
+# example accordion
+<div class="js-group"> -- default
+<div class="js-group" data-group-collapse="allow-single">
+
+<div class="js-group sidebar" data-group-collapse="allow-all">
+	<div class="card">
+		<div class="js-group__target is-active"></div>
+		<div class="js-group__body is-active"></div>
+	</div>
+	<div class="card">
+		<div class="js-group__target"></div>
+		<div class="js-group__body"></div>
+	</div>
+	<div class="card">
+		<div class="js-group__target"></div>
+		<div class="js-group__body"></div>
+	</div>
+	<div class="card">
+		<div class="js-group__target"></div>
+		<div class="js-group__body"></div>
+	</div>
+</div>
+
+allow collapse, one open at a time
+allow collapse, any open
+** must be one open **
+
+
+# example toggle
+<div class="drawer"></div>
+<div class="modal"></div>
+<div class="drawer"></div>
+
+<a href="#" class="js-actions" data-open="modal, overlay">Hello world open</a>
+<div class="overlay js-actions" data-close="modal, overlay, drawer"></div>
+<a href="#" class="js-actions" data-toggle="modal, overlay">Hello world toggle</a>
+
+
+
+
+<div>
+	<a href="#" data-target="social-widget">modal</a>
+	<a href="#" data-target="login-widget">modal</a>
+</div>
+
+<div>
+	<div data-toggle="draw-left" data-toggle-cascade="overlay" data-toggle-group="draws">
+		<div data-toggle="social-widget" data-toggle-group="drawer-content" data-toggle-cascade="modal">
+		</div>
+		<div data-toggle="login-widget" data-toggle-group="drawer-content" data-toggle-cascade="draw-left">
+		</div>
+	</div>
+	<div data-toggle="draw-right" data-toggle-cascade="overlay" data-toggle-group="draws">
+	</div>
+	<div data-toggle="overlay"></div>
+</div>

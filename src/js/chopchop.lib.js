@@ -36,7 +36,11 @@ var ChopChop = (function($, ChopChop) {
             $(document).on('click', '[data-toggle-action]', function(e) {
                 e.preventDefault();
                 var $this = $(this), t,
-                    $target = (t = $this.data('toggle-target')) ? $('[data-toggle-id="' + t + '"]') : $this;
+                    $target = (t = $this.data('toggle-target')) ? $('[data-toggle-id="' + t + '"]') : false;
+
+                if (!$target) {
+                    return;
+                }
 
 				self.toggle($target, $this.data('toggle-action') || Action.TOGGLE);
             });

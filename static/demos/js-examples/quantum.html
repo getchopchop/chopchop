@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+    <head>
+        <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="/src/js/chopchop.lib.js"></script>
+        <style type="text/css">
+			body {
+				font-family: sans-serif;
+			}
+			.group {
+				border: 3px solid;
+				padding: 5px;
+				overflow: hidden;
+			}
+			.el {
+				border: 1px solid;
+				padding: 5px;
+				margin-right: 5px;
+				float: left;
+				cursor: pointer;
+			}
+            .tabs {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .tabs, .tab-contents {
+                clear: left;
+                overflow: hidden;
+                margin-bottom: 10px;
+            }
+            .is-active {
+                border: 3px solid red;
+            }
+            .is-inactive {
+                
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h1>Quantum-style drawers, widgets and buttons</h1>
+            <h2>Buttons</h2>
+            <div class="buttons group">
+                <div data-toggle-group="buttons" 
+                     data-toggle-id="btn-search"
+                     data-toggle-action="toggle"
+                     data-toggle-activate="wgt-search"
+                     class="el search">Search</div>
+                <div data-toggle-group="buttons" 
+                     data-toggle-id="btn-browse" 
+                     data-toggle-action="toggle"
+                     data-toggle-activate="wgt-browse"
+                     class="el burger">Browse</div>
+                <div data-toggle-group="buttons"
+                     data-toggle-action="toggle"
+                     data-toggle-id="btn-customer" 
+                     data-toggle-activate="wgt-customer"
+                     class="el customer">Customer</div>
+                <div data-toggle-group="buttons" 
+                     data-toggle-action="toggle"
+                     data-toggle-id="btn-cart"
+                     data-toggle-activate="wgt-cart"
+                     class="el cart">Cart</div>
+            </div>
+            
+            <h2>Widgets left</h2>
+            <div class="widgets-left group">
+                <div data-toggle-group="widgets-left" 
+                     data-toggle-id="wgt-search" 
+                     data-toggle-activate="drw-left,btn-search"
+                     data-toggle-deactivate="btn-search"
+                     class="el search">Search</div>
+                <div data-toggle-group="widgets-left"
+                     data-toggle-id="wgt-browse"
+                     data-toggle-activate="drw-left,btn-browse"
+                     data-toggle-deactivate="btn-browse"
+                     class="el browse">Browse</div>
+            </div>
+            
+            <h2>Widgets right</h2>
+            <div class="widgets-right group">
+                <div data-toggle-group="widgets-right"
+                     data-toggle-id="wgt-customer"
+                     data-toggle-activate="drw-right,btn-customer"
+                     data-toggle-deactivate="btn-customer"
+                     class="el customer">Customer</div>
+                <div data-toggle-group="widgets-right"
+                     data-toggle-id="wgt-cart"
+                     data-toggle-activate="drw-right,btn-cart"
+                     data-toggle-deactivate="btn-customer"
+                     class="el cart">Cart</div>
+            </div>
+                    
+            <h2>Draws</h2>
+            <div class="draws group">
+                <div data-toggle-group="draws" 
+                     data-toggle-id="drw-left"
+                     data-toggle-activate="overlay"
+                     data-toggle-deactivate="wgt-search,wgt-browse"
+                     class="el left">Left draw</div>
+                <div data-toggle-group="draws"
+                     data-toggle-id="drw-right"
+                     data-toggle-activate="overlay"
+                     data-toggle-deactivate="wgt-customer,wgt-cart"
+                     class="el right">Right draw</div>
+            </div>
+            
+            <h2>Overlay</h2>	
+            <div class="overlay group">
+                <div data-toggle-id="overlay"
+                     data-toggle-action="deactivate"
+                     data-toggle-deactivate="drw-left,drw-right"
+                     class="el overlay">Overlay</div>
+            </div>
+
+            <h2>Remote triggers</h2>
+            <div class="remote-triggers">
+                <ul>
+                    <li><a href="#" data-toggle-target="drw-left" data-toggle-action="activate">Activate left drawer</a></li>
+                    <li><a href="#" data-toggle-target="wgt-search" data-toggle-action="activate">Activate search widget</a></li>
+                    <li><a href="#" data-toggle-target="wgt-cart" data-toggle-action="activate">Activate cart widget</a></li>
+                    <li><a href="#" data-toggle-target="overlay" data-toggle-action="deactivate">Deactivate overlay</a></li>
+                </ul>
+            </div>
+        </div>
+		
+        <div>
+            <h1>Tabs</h1>
+
+            <ul class="tabs">
+                <li><a href="#" class="el is-active" data-toggle-action="activate" data-toggle-group="tabs" data-toggle-id="tab1" data-toggle-activate="tab1-content">Tab 1</a>
+                <li><a href="#" class="el" data-toggle-action="activate" data-toggle-group="tabs" data-toggle-id="tab2" data-toggle-activate="tab2-content">Tab 3</a>
+                <li><a href="#" class="el" data-toggle-action="activate" data-toggle-group="tabs" data-toggle-id="tab3" data-toggle-activate="tab3-content">Tab 2</a>
+            </ul>
+            <div class="tab-contents">
+                <div class="el is-active" data-toggle-group="tab-content" data-toggle-id="tab1-content">
+                    Tab 1 content
+                </div>
+                <div class="el" data-toggle-group="tab-content" data-toggle-id="tab2-content">
+                    Tab 2 content
+                </div>
+                <div class="el" data-toggle-group="tab-content" data-toggle-id="tab3-content">
+                    Tab 3 content
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            (function() {
+                var toggle = new ChopChop.Toggle('body');
+            })();
+        </script>
+    </body>
+</html>

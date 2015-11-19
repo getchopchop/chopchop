@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="/src/js/chopchop.lib.js"></script>
+        <style type="text/css">
+            .is-active {
+                display: block;
+            }
+            .is-inactive {
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Toggle tester</h1>
+
+        <ul>
+            <li><a href="#" data-toggle-target="first-one">Toggle first, group one</a></li>
+            <li><a href="#" data-toggle-target="second-one">Toggle second, group one</a></li>
+        </ul>
+        <ul>
+            <li><a href="#" data-toggle-target="first-two">Toggle first, group two</a></li>
+            <li><a href="#" data-toggle-target="second-two">Toggle second, group two</a></li>
+        </ul>
+
+        <div>
+            <div data-toggle="first-one" data-toggle-group="group-one" data-toggle-cascade="first-two">
+                CONTENT: First one, group one
+            </div>
+            <div data-toggle="second-one" data-toggle-group="group-one" data-toggle-cascade="second-two">
+                CONTENT: Second one, group one
+            </div>
+
+            <div data-toggle="first-two" data-toggle-group="group-two" data-toggle-cascade="red">
+                CONTENT: First two, group two
+            </div>
+            <div data-toggle="second-two" data-toggle-group="group-two" data-toggle-cascade="yellow">
+                CONTENT: Second two, group two
+            </div>
+        </div>
+
+
+        <div style="background-color: red;" data-toggle="red" data-toggle-group="group-colors" data-toggle-cascade="first-one">Red!</div>
+        <div style="background-color: yellow;" data-toggle="yellow" data-toggle-group="group-colors">Yellow!</div>
+
+        <script type="text/javascript">
+            (function() {
+                var toggle = new ChopChop.Toggle('body');
+            })();
+        </script>
+    </body>
+</html>
