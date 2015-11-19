@@ -1,25 +1,21 @@
-<div class="u-container">
-    
-    <p class="cc-heading">Drawers <code>.drawer</code></p>
-    
-    <p><a href="#" data-toggle-action="activate" data-toggle-activate="drawer-left">Left drawer</a></p>
-    <p><a href="#" data-toggle-action="activate" data-toggle-activate="drawer-right">Right drawer</a></p>
-    
-    <div class="overlay" 
-        data-toggle-id="overlay" 
-        data-toggle-action="deactivate"
-        data-toggle-deactivate="drawer-left,drawer-right,modal">
-    </div> <!-- toggle is-active to show !-->
+<section>
+    <div class="u-container">
 
-    <!-- toggle is-active to show !-->
-    <div class="drawer drawer--left" 
-        data-toggle-id="drawer-left"
-        data-toggle-group="drawers"
-        data-toggle-activate="overlay">
+        <h2>Drawers</h2>
+        <p><a href="#" data-toggle-action="activate" data-toggle-activate="drawer-left">Left drawer</a></p>
+        <p><a href="#" data-toggle-action="activate" data-toggle-activate="drawer-right">Right drawer</a></p>
 
-        <div class="drawer__dialog card">
+    </div>
+</section>
+
+<div class="overlay" data-toggle-id="overlay" data-toggle-action="deactivate" data-toggle-deactivate="drawer-left,drawer-right,modal"></div> <!-- toggle is-active to show !-->
+
+<!-- toggle is-active to show !-->
+<div class="drawer drawer--left" data-toggle-id="drawer-left" data-toggle-group="drawers" data-toggle-activate="overlay">
+    <div class="drawer__dialog">
+        <div class="card">
             <div class="card__header">
-                <p class="cc-heading">Left Drawer <code>.drawer--left</code></p>
+                <h2>Left drawer</h2>
             </div>
             <div class="card__body">
                 <p>Vestibulum varius sem vitae diam venenatis porttitor. Pellentesque nec quam eget eros tincidunt mattis non ac nunc. Vivamus tristique, turpis vitae efficitur laoreet, eros tellus lobortis nulla, ac auctor neque velit at risus. Sed volutpat dolor erat, placerat malesuada quam tempor eu. Morbi a tellus sit amet lectus tincidunt imperdiet a tincidunt est. Cras vel volutpat mauris. Sed consectetur felis vel maximus elementum. Proin sed nisl lectus. Nunc non est ac ipsum gravida commodo vel quis nunc.</p>
@@ -31,16 +27,14 @@
             </div>
         </div>
     </div>
+</div>
 
-    <!-- toggle class is-active to show !-->
-    <div class="drawer drawer--right"
-        data-toggle-id="drawer-right"
-        data-toggle-group="drawers"
-        data-toggle-activate="overlay">
-
-        <div class="drawer__dialog card">
+<!-- toggle class is-active to show !-->
+<div class="drawer drawer--right" data-toggle-id="drawer-right" data-toggle-group="drawers" data-toggle-activate="overlay">
+    <div class="drawer__dialog">
+        <div class="card">
             <div class="card__header">
-                <p class="cc-heading">Right Drawer <code>.drawer--right</code></p>
+                <h2>Right drawer</h2>
             </div>
             <div class="card__body">
                 <p>Vestibulum varius sem vitae diam venenatis porttitor. Pellentesque nec quam eget eros tincidunt mattis non ac nunc. Vivamus tristique, turpis vitae efficitur laoreet, eros tellus lobortis nulla, ac auctor neque velit at risus. Sed volutpat dolor erat, placerat malesuada quam tempor eu. Morbi a tellus sit amet lectus tincidunt imperdiet a tincidunt est. Cras vel volutpat mauris. Sed consectetur felis vel maximus elementum. Proin sed nisl lectus. Nunc non est ac ipsum gravida commodo vel quis nunc.</p>
@@ -52,5 +46,4 @@
             </div>
         </div>
     </div>
-    
 </div>

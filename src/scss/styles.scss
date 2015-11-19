@@ -9,6 +9,7 @@
 // Helpers
 // =============================================
 
+@import "mixins/accordions-tabs";
 @import "mixins/buttons";
 @import "mixins/breakpoint";
 @import "mixins/ellipsis";
@@ -58,7 +59,7 @@
 // Molecules
 // =============================================
 
-@import "molecules/accordions";
+@import "molecules/accordions-tabs";
 @import "molecules/breadcrumb";
 @import "molecules/cards";
 @import "molecules/drawers";
@@ -68,7 +69,6 @@
 @import "molecules/modals";
 @import "molecules/navs";
 @import "molecules/pagination";
-@import "molecules/tabs";
 
 
 // =============================================
