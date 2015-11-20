@@ -10,6 +10,7 @@ h1, h2, h3, h4, h5, h6,
 	font-weight: $bold;
     margin-top: 0;
     margin-bottom: $spacing;
+	// font-smoothing: antialiased;
 }
 
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
