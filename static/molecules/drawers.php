@@ -2,20 +2,16 @@
     <div class="u-container">
 
         <h2>Drawers</h2>
-        <p><a href="#" data-toggle-action="activate" data-toggle-target="drawer-left">Left drawer</a></p>
-        <p><a href="#" data-toggle-action="activate" data-toggle-target="drawer-right">Right drawer</a></p>
+        <p><a href="#" data-target="drawer-left" data-action="activate">Left drawer</a></p>
+        <p><a href="#" data-target="drawer-right" data-action="activate">Right drawer</a></p>
 
     </div>
 </section>
 
-<div class="overlay"
-    data-toggle-id="overlay"
-    data-toggle-action="deactivate"
-    data-toggle-target="overlay"
-    data-toggle-deactivate="drawer-left,drawer-right,modal"></div> <!-- toggle is-active to show !-->
+<div class="overlay" id="overlay" data-action="deactivate" data-target="drawer-left,drawer-right"></div> <!-- toggle is-active to show !-->
 
 <!-- toggle is-active to show !-->
-<div class="drawer drawer--left" data-toggle-id="drawer-left" data-toggle-group="drawers" data-toggle-activate="overlay">
+<div class="drawer drawer--left" id="drawer-left" data-cascade="overlay">
     <div class="drawer__dialog">
         <div class="card">
             <div class="card__header">
@@ -34,7 +30,7 @@
 </div>
 
 <!-- toggle class is-active to show !-->
-<div class="drawer drawer--right" data-toggle-id="drawer-right" data-toggle-group="drawers" data-toggle-activate="overlay">
+<div class="drawer drawer--right" id="drawer-right" data-cascade="overlay">
     <div class="drawer__dialog">
         <div class="card">
             <div class="card__header">
