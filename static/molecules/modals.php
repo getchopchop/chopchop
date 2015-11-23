@@ -3,9 +3,7 @@
 
         <h2>Modal</h2>
         <p>
-            <a href="#"
-                data-toggle-action="activate"
-                data-toggle-target="modal">
+            <a href="#" data-action="activate" data-target="modal">
                     Click me for modal time
             </a>
         </p>
@@ -14,15 +12,11 @@
 </section>
 
 
-<div class="overlay"
-    data-toggle-id="overlay"
-    data-toggle-action="deactivate"
-    data-toggle-target="overlay"
-    data-toggle-deactivate="drawer-left,drawer-right,modal"></div> <!-- toggle is-active to show !-->
+<div class="overlay" id="overlay" data-action="deactivate" data-target="modal"></div> <!-- toggle is-active to show !-->
 
 
 <!-- toggle is-active to show !-->
-<div class="modal" data-toggle-id="modal" data-toggle-activate="overlay">
+<div class="modal" id="modal" data-cascade="overlay">
     <div class="modal__dialog">
         <div class="card">
             <div class="card__header">
@@ -35,8 +29,8 @@
             </div>
             <div class="card__footer">
                 <p>Some footer bits</p>
+                <a href="#" data-action="deactivate" data-target="modal">Close</a>
             </div>
         </div>
     </div>
-    <a href="#" class="btn modal__close" data-toggle-action="deactivate" data-toggle-target="overlay">Close</a>
 </div>

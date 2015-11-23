@@ -8,7 +8,7 @@
     </div>
 </section>
 
-<div class="overlay" id="overlay" data-action="deactivate" data-target="drawer-left,drawer-right"></div> <!-- toggle is-active to show !-->
+<div class="overlay" id="overlay" data-action="deactivate" data-target="overlay" data-cascade-deactivate="drawer-left,drawer-right"></div> <!-- toggle is-active to show !-->
 
 <!-- toggle is-active to show !-->
 <div class="drawer drawer--left" id="drawer-left" data-cascade="overlay">
