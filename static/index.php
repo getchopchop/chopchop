@@ -11,11 +11,11 @@
 <body>
 
     <span class="cc-readout cc-readout--mq"></span>
-    <a href="#" class="site-navigation__toggle cc-readout" data-toggle-action="toggle" data-toggle-target="navigation">Toggle Nav</a>
+    <a href="#" class="site-navigation__toggle cc-readout" data-action="toggle" data-target="navigation">Toggle Nav</a>
 
     <div class="site-wrapper">
 
-        <nav class="site-navigation" data-toggle-id="navigation">
+        <nav class="site-navigation" id="navigation">
             <div class="block-content site-navigation__content">
                 <?php include('inc/nav.php'); ?>
             </div>
