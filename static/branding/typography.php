@@ -29,9 +29,9 @@
     </ul>
 
     <p><a href="#" class="btn">I am a button</a></p>
-    
+
     <hr/>
-    
+
     <h2><span class="icon-twitter"></span> I am a second level heading</h2>
 
 
@@ -43,9 +43,9 @@
     </blockquote>
 
     <h3>I am a third level heading</h3>
-    
+
     <p>Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. <b>This is bold</b>. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. <i>This is an i tag</i>. Quisque volutpat condimentum velit.</p>
-    
+
     <h4>I am a fourth level heading</h4>
 
     <figure class="u-pull-right" style="margin: 0 0 1em 3em;">
@@ -63,7 +63,7 @@
         <li>Aenean sit amet erat nunc</li>
         <li>Eget porttitor lorem</li>
     </ol>
-    
+
     <p>Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. <b>This is bold</b>. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. <i>This is an i tag</i>. Quisque volutpat condimentum velit.</p>
-    
+
 </div>
