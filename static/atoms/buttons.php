@@ -1,12 +1,12 @@
 <div class="u-container">
-    
+
     <h2>Default Button</h2>
     <p>
         <a href="#" class="btn">Button</a>
         <button type="button" class="btn">Button</button>
     </p>
 
-    
+
     <h2>Disabled Button</h2>
     <p>
         <a href="#" class="btn btn--disabled">Disabled Button</a>
@@ -31,9 +31,9 @@
 
     <h2>Full Width Buttons</h2>
     <p>
-        <a href="#" class="btn btn--blue btn--block">Button Block</a>
+        <a href="#" class="btn btn--block">Button Block</a>
         <br>
-        <button type="button" class="btn btn--green btn--block">Button Block</button>
+        <button type="button" class="btn btn--block">Button Block</button>
     </p>
-    
+
 </div>
