@@ -9,14 +9,14 @@
 // Helpers
 // =============================================
 
-@import "mixins/accordions-tabs";
-@import "mixins/buttons";
+@import "mixins/accordion-tab";
+@import "mixins/button";
 @import "mixins/breakpoint";
 @import "mixins/ellipsis";
 @import "mixins/grid";
-@import "mixins/lists";
+@import "mixins/list";
 @import "mixins/ratio";
-@import "mixins/shapes";
+@import "mixins/shape";
 
 
 // =============================================
@@ -60,15 +60,15 @@
 // Molecules
 // =============================================
 
-@import "molecules/accordions-tabs";
+@import "molecules/accordion-tab";
 @import "molecules/breadcrumb";
-@import "molecules/cards";
-@import "molecules/drawers";
-@import "molecules/flags";
+@import "molecules/card";
+@import "molecules/drawer";
+@import "molecules/flag";
 @import "molecules/heading-group";
 @import "molecules/inline-form";
-@import "molecules/modals";
-@import "molecules/navs";
+@import "molecules/modal";
+@import "molecules/nav";
 @import "molecules/pagination";
 
 
