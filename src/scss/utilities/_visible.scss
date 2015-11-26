@@ -6,10 +6,12 @@
 .u-visible-sm,
 .u-visible-md,
 .u-visible-lg,
+.u-visible-xl,
 %u-visible-xs,
 %u-visible-sm,
 %u-visible-md,
-%u-visible-lg {
+%u-visible-lg,
+%u-visible-xl {
     display: none !important;
 }
 
@@ -41,6 +43,13 @@
     }
 }
 
+@include breakpoint($screen-xl) {
+    .u-visible-xl,
+    %u-visible-xl {
+        display: block !important;
+    }
+}
+
 
 // =============================================
 // Visible inline
@@ -50,10 +59,12 @@
 .u-visible-sm-inline,
 .u-visible-md-inline,
 .u-visible-lg-inline,
+.u-visible-xl-inline,
 %u-visible-xs-inline,
 %u-visible-sm-inline,
 %u-visible-md-inline,
-%u-visible-lg-inline {
+%u-visible-lg-inline,
+%u-visible-xl-inline {
     display: none !important;
 }
 
@@ -85,6 +96,13 @@
     }
 }
 
+@include breakpoint($screen-xl) {
+    .u-visible-xl-inline,
+    %u-visible-xl-inline {
+        display: inline !important;
+    }
+}
+
 
 // =============================================
 // Visible inline block
@@ -94,10 +112,12 @@
 .u-visible-sm-inline-block,
 .u-visible-md-inline-block,
 .u-visible-lg-inline-block,
+.u-visible-xl-inline-block,
 %u-visible-xs-inline-block,
 %u-visible-sm-inline-block,
 %u-visible-md-inline-block,
-%u-visible-lg-inline-block {
+%u-visible-lg-inline-block,
+%u-visible-xl-inline-block {
     display: none !important;
 }
 
@@ -129,6 +149,13 @@
     }
 }
 
+@include breakpoint($screen-xl) {
+    .u-visible-xl-inline-block,
+    %u-visible-xl-inline-block {
+        display: inline-block !important;
+    }
+}
+
 
 // =============================================
 // Hidden
@@ -138,10 +165,12 @@
 .u-hidden-sm,
 .u-hidden-md,
 .u-hidden-lg,
+.u-hidden-xl,
 %u-hidden-xs,
 %u-hidden-sm,
 %u-hidden-md,
 %u-hidden-lg {
+%u-hidden-xl {
     display: block !important;
 }
 
@@ -169,6 +198,119 @@
 @include breakpoint($screen-lg) {
     .u-hidden-lg,
     %u-hidden-lg {
+        display: none !important;
+    }
+}
+
+@include breakpoint($screen-xl) {
+    .u-hidden-xl,
+    %u-hidden-xl {
+        display: none !important;
+    }
+}
+
+
+// =============================================
+// Hidden inline
+// =============================================
+
+.u-hidden-xs-inline,
+.u-hidden-sm-inline,
+.u-hidden-md-inline,
+.u-hidden-lg-inline,
+.u-hidden-xl-inline,
+%u-hidden-xs-inline,
+%u-hidden-sm-inline,
+%u-hidden-md-inline,
+%u-hidden-lg-inline,
+%u-hidden-xl-inline {
+    display: inline !important;
+}
+
+@include breakpoint(max-width $screen-xs-max) {
+    .u-hidden-xs-inline,
+    %u-hidden-xs-inline {
+        display: none !important;
+    }
+}
+
+@include breakpoint($screen-sm $screen-sm-max) {
+    .u-hidden-sm-inline,
+    %u-hidden-sm-inline {
+        display: none !important;
+    }
+}
+
+@include breakpoint($screen-md $screen-md-max) {
+    .u-hidden-md-inline,
+    %u-hidden-md-inline {
+        display: none !important;
+    }
+}
+
+@include breakpoint($screen-lg) {
+    .u-hidden-lg-inline,
+    %u-hidden-lg-inline {
+        display: none !important;
+    }
+}
+
+@include breakpoint($screen-xl) {
+    .u-hidden-xl-inline,
+    %u-hidden-xl-inline {
+        display: none !important;
+    }
+}
+
+
+// =============================================
+// Hidden inline block
+// =============================================
+
+.u-hidden-xs-inline-block,
+.u-hidden-sm-inline-block,
+.u-hidden-md-inline-block,
+.u-hidden-lg-inline-block,
+.u-hidden-xl-inline-block,
+%u-hidden-xs-inline-block,
+%u-hidden-sm-inline-block,
+%u-hidden-md-inline-block,
+%u-hidden-lg-inline-block,
+%u-hidden-xl-inline-block {
+    display: inline !important;
+}
+
+@include breakpoint(max-width $screen-xs-max) {
+    .u-hidden-xs-inline-block,
+    %u-hidden-xs-inline-block {
+        display: none !important;
+    }
+}
+
+@include breakpoint($screen-sm $screen-sm-max) {
+    .u-hidden-sm-inline-block,
+    %u-hidden-sm-inline-block {
+        display: none !important;
+    }
+}
+
+@include breakpoint($screen-md $screen-md-max) {
+    .u-hidden-md-inline-block,
+    %u-hidden-md-inline-block {
+        display: none !important;
+    }
+}
+
+@include breakpoint($screen-lg) {
+    .u-hidden-lg-inline-block,
+    %u-hidden-lg-inline-block {
+        display: none !important;
+    }
+}
+
+@include breakpoint($screen-xl) {
+    .u-hidden-xl-inline-block,
+    %u-hidden-xl-inline-block {
         display: none !important;
     }
 }

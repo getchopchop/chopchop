@@ -2,7 +2,7 @@
 // Vars
 // =============================================
 
-@import "vars";
+@import "var";
 
 
 // =============================================
@@ -26,13 +26,13 @@
 @import "utilities/align";
 @import "utilities/box-sizing";
 @import "utilities/clearfix";
-@import "utilities/colors";
+@import "utilities/color";
 @import "utilities/container";
 @import "utilities/embed-container";
 @import "utilities/grid";
-@import "utilities/images";
+@import "utilities/image";
 @import "utilities/layout";
-@import "utilities/lists";
+@import "utilities/list";
 @import "utilities/visible";
 @import "utilities/z-index";
 
@@ -41,18 +41,18 @@
 // Atoms
 // =============================================
 
-@import "atoms/alerts";
+@import "atoms/alert";
 @import "atoms/body";
-@import "atoms/buttons";
-@import "atoms/colors";
-@import "atoms/forms";
-@import "atoms/headings";
+@import "atoms/button";
+@import "atoms/color";
+@import "atoms/form";
+@import "atoms/heading";
 @import "atoms/horizontal-rule";
-@import "atoms/icons";
-@import "atoms/images";
+@import "atoms/icon";
+@import "atoms/image";
 @import "atoms/overlay";
-@import "atoms/tables";
-@import "atoms/tags";
+@import "atoms/table";
+@import "atoms/tag";
 @import "atoms/text";
 
 
