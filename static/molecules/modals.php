@@ -16,7 +16,7 @@
 
 
 <!-- toggle is-active to show !-->
-<div class="modal" id="modal" data-cascade="overlay">
+<div class="modal" id="modal" data-cascade="overlay" data-trigger-on="direct-only" data-action="deactivate" data-target="modal">
     <div class="modal__dialog">
         <div class="card">
             <div class="card__header">
