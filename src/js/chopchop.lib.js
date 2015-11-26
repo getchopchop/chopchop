@@ -29,6 +29,12 @@ var ChopChop = (function($, ChopChop) {
 		DEACTIVATE: 'deactivate'
 	};
 
+    var Trigger = {
+        DIRECT_ONLY: 'direct-only',
+        INDIRECT_ONLY: 'indirect-only',     // Why would you want this? Oh well.
+        BOTH: 'both'    // Default
+    };
+
     Toggle.prototype = {
         init: function() {
             var self = this;
@@ -36,9 +42,16 @@ var ChopChop = (function($, ChopChop) {
             $(document).on('click', '[data-action]', function(e) {
                 e.preventDefault();
                 var $this = $(this), t,
-                    $target = (t = $this.data('target')) ? $('#' + t) : false;
+                    $target = (t = $this.data('target')) ? $('#' + t) : false,
+                    mode = $this.data('trigger-on') || Trigger.BOTH;
 
                 if (!$target) {
+                    return;
+                }
+
+                if (mode === Trigger.DIRECT_ONLY && e.target !== this) {
+                    return;
+                } else if (mode === Trigger.INDIRECT_ONLY && e.target === this) {
                     return;
                 }
 
