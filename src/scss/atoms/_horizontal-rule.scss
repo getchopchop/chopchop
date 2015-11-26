@@ -1,0 +1,11 @@
+// =============================================
+// Horizontal line
+// =============================================
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: $light-grey;
+    margin-top: $spacing-lg;
+    margin-bottom: $spacing-lg;
+}
