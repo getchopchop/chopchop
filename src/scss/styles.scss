@@ -2,21 +2,21 @@
 // Vars
 // =============================================
 
-@import "vars";
+@import "var";
 
 
 // =============================================
 // Helpers
 // =============================================
 
-@import "mixins/accordions-tabs";
-@import "mixins/buttons";
+@import "mixins/accordion-tab";
+@import "mixins/button";
 @import "mixins/breakpoint";
 @import "mixins/ellipsis";
 @import "mixins/grid";
-@import "mixins/lists";
+@import "mixins/list";
 @import "mixins/ratio";
-@import "mixins/shapes";
+@import "mixins/shape";
 
 
 // =============================================
@@ -26,13 +26,13 @@
 @import "utilities/align";
 @import "utilities/box-sizing";
 @import "utilities/clearfix";
-@import "utilities/colors";
+@import "utilities/color";
 @import "utilities/container";
 @import "utilities/embed-container";
 @import "utilities/grid";
-@import "utilities/images";
+@import "utilities/image";
 @import "utilities/layout";
-@import "utilities/lists";
+@import "utilities/list";
 @import "utilities/visible";
 @import "utilities/z-index";
 
@@ -41,17 +41,18 @@
 // Atoms
 // =============================================
 
-@import "atoms/alerts";
+@import "atoms/alert";
 @import "atoms/body";
-@import "atoms/buttons";
-@import "atoms/colors";
-@import "atoms/forms";
-@import "atoms/headings";
-@import "atoms/icons";
-@import "atoms/images";
+@import "atoms/button";
+@import "atoms/color";
+@import "atoms/form";
+@import "atoms/heading";
+@import "atoms/horizontal-rule";
+@import "atoms/icon";
+@import "atoms/image";
 @import "atoms/overlay";
-@import "atoms/tables";
-@import "atoms/tags";
+@import "atoms/table";
+@import "atoms/tag";
 @import "atoms/text";
 
 
@@ -59,15 +60,15 @@
 // Molecules
 // =============================================
 
-@import "molecules/accordions-tabs";
+@import "molecules/accordion-tab";
 @import "molecules/breadcrumb";
-@import "molecules/cards";
-@import "molecules/drawers";
-@import "molecules/flags";
+@import "molecules/card";
+@import "molecules/drawer";
+@import "molecules/flag";
 @import "molecules/heading-group";
 @import "molecules/inline-form";
-@import "molecules/modals";
-@import "molecules/navs";
+@import "molecules/modal";
+@import "molecules/nav";
 @import "molecules/pagination";
 
 
@@ -75,12 +76,12 @@
 // Organism
 // =============================================
 
-// @import "organisms/header";
-// @import "organisms/footer";
+@import "organisms/header";
+@import "organisms/footer";
 
 
 // =============================================
 // Templates
 // =============================================
 
-// @import "templates/homepage";
+@import "templates/homepage";

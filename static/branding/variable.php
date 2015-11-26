@@ -2,7 +2,7 @@
     <div class="u-container">
 
 <?php
-$contents = file_get_contents('../src/scss/_vars.scss', true);
+$contents = file_get_contents('../src/scss/_var.scss', true);
 $lines = explode("\n", $contents);
 $hasHeading = false;
 foreach($lines as $line) {

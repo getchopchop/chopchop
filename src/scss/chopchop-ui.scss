@@ -2,7 +2,7 @@
 // Vars
 // =============================================
 
-@import "vars";
+@import "var";
 
 $z-100: 100;
 $z-200: 200;
@@ -11,11 +11,11 @@ $z-200: 200;
 // Helpers
 // =============================================
 
-@import "mixins/shapes";
+@import "mixins/shape";
 @import "mixins/ellipsis";
 @import "mixins/breakpoint";
 @import "mixins/grid";
-@import "mixins/lists";
+@import "mixins/list";
 @import "mixins/ratio";
 
 
@@ -23,7 +23,7 @@ $z-200: 200;
 // Utilities
 // =============================================
 
-@import "utilities/images";
+@import "utilities/image";
 @import "utilities/clearfix";
 @import "utilities/align";
 @import "utilities/visible";
@@ -32,7 +32,7 @@ $z-200: 200;
 @import "utilities/grid";
 @import "utilities/box-sizing";
 @import "utilities/z-index";
-@import "utilities/lists";
+@import "utilities/list";
 
 body {
     margin-top: 1em;
