@@ -1,11 +1,11 @@
 <div class="u-container">
 
 <?php
-    $contents = file_get_contents('../src/scss/_vars.scss', true);
+    $contents = file_get_contents('../src/scss/_var.scss', true);
     $lines = explode("\n", $contents);
     $hasHeading = false;
     foreach($lines as $line) {
-    
+
         if(substr($line, 0, 2) == '//') {
             if(strpos($line, '=====') === false) {
                 if($hasHeading === true) {
@@ -25,7 +25,7 @@
             <div>
                 <div class="card cc-card--swatch">
                     <div class="card__body" style="background-color: <?php echo $colour ?>">
-            
+
                     </div>
                     <div class="card__footer">
                         <?php $bits = explode(' ', $line); $a = $bits[0]; ?>
