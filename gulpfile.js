@@ -78,8 +78,7 @@ gulp.task('browser-sync', function() {
 // =============================================
 
 gulp.task('bower', function() {
-    return plugin.bower()
-        .pipe(gulp.dest(bower));
+    return plugin.bower(bower);
 });
 
 // =============================================
