@@ -1,28 +1,28 @@
 // =============================================
-// Heading group
+// Title
 // =============================================
 
-.hgroup {
-    &__title {
+.title {
+    &__main {
         margin-bottom: 0;
     }
-    &__subtitle {
+    &__sub {
         margin-top: 0;
     }
 }
 
 // =============================================
-// Heading group with actions
+// Titles with actions
 // =============================================
 
-.hgroup--actions {
+.title--actions {
     display: flex;
     align-items: center;
 }
-.hgroup--actions .hgroup__headings {
+.title--actions .title__headings {
     flex-grow: 1;
 }
-.hgroup--actions .hgroup__actions {
+.title--actions .title__actions {
     flex-grow: 1;
     text-align: right;
     .btn {

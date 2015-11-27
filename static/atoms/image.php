@@ -1,24 +1,23 @@
 <div class="u-container">
     
-    <h2>Image with Utitlity Class</h2>
-    <p>This image uses the <code>.u-img-responsive</code> class.</p>
-    
-    <img src="<?php echo getUrl('src/img/placeholders/yellow/500x500.gif'); ?>" width="500" height="500" alt="Demo Image" class="u-img-responsive" />
+    <p class="cc-heading">Responsive Utility <code>.u-img-responsive</code></p>
+    <img src="<?php echo getUrl('../build/img/placeholders/yellow/500x500.gif'); ?>" width="500" height="500" alt="Demo Image" class="u-img-responsive" />
     
     <hr />
     
-    <h2>Image using <code>&lt;picture&gt;</code> tag</h2>
-    <p>This <code>&lt;picture&gt;</code> is set to change at <code>media="(min-width: 768px)"</code>.</p>
+    <p class="cc-heading">Picture Element <code>&lt;picture&gt;</code>
+        <span class="cc-heading__sub">set to change at <code>media="(min-width: 768px)"</code></span>
+    </p>
     <picture>
-        <source srcset="<?php echo getUrl('src/img/placeholders/yellow/1000x1000.gif'); ?>" media="(min-width: 768px)" />
-        <img srcset="<?php echo getUrl('src/img/placeholders/red/1000x1000.gif'); ?>" alt="Demo Image" />
+        <source srcset="<?php echo getUrl('../build/img/placeholders/yellow/1000x1000.gif'); ?>" media="(min-width: 768px)" />
+        <img srcset="<?php echo getUrl('../build/img/placeholders/red/1000x1000.gif'); ?>" alt="Demo Image" />
     </picture>
     
     <hr />
     
-    <h2>Image inside <code>&lt;figure&gt;</code> tag</h2>
+    <p class="cc-heading">Figure <code>&lt;figure&gt;</code></p>
     <figure>
-        <img src="<?php echo getUrl('src/img/placeholders/yellow/500x500.gif'); ?>" width="500" height="500" alt="Demo Image" />
+        <img src="<?php echo getUrl('../build/img/placeholders/yellow/500x500.gif'); ?>" width="500" height="500" alt="Demo Image" />
     </figure>
     
 </div>

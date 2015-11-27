@@ -1,7 +1,7 @@
 <section>
     <div class="u-container">
 
-        <h2>Accordion</h2>
+        <p class="cc-heading">Accordion <code>.accordion</code></p>
         <div class="accordion">
             <div class="is-active accordion__header"
                 id="tabs1-tab1"
@@ -57,9 +57,8 @@
             </div>
         </div>
 
-        <hr />
 
-        <h2>Tabs</h2>
+        <p class="cc-heading">Tabs <code>.tabs</code></p>
         <div class="tabs">
             <div class="is-active tabs__header"
                 id="tabs2-tab1"
@@ -115,9 +114,10 @@
             </div>
         </div>
 
-        <hr />
 
-        <h2>Tabs to accordion</h2>
+        <p class="cc-heading">Tabs to Accordion <code>.tabs-to-accordion</code>
+            <span class="cc-heading__sub">Switches at <code>$screen-md</code></span>
+        </p>
         <div class="tabs-to-accordion">
             <div class="is-active tabs__header"
                 id="tabs3-tab1"
@@ -173,9 +173,10 @@
             </div>
         </div>
 
-        <hr />
 
-        <h2>Accordion to tabs</h2>
+        <p class="cc-heading">Accordion to Tabs <code>.accordion-to-tabs</code>
+            <span class="cc-heading__sub">Switches at <code>$screen-md</code></span>
+        </p>
         <div class="accordion-to-tabs">
             <div class="is-active tabs__header"
                 id="tabs4-tab1"
@@ -231,9 +232,10 @@
             </div>
         </div>
 
-        <hr />
 
-        <h2>Accordion that can be collapsed or one open at a time</h2>
+        <p class="cc-heading">Accordion
+            <span class="cc-heading__sub">that can be collapsed or one open at a time</span>
+        </p>
         <div class="accordion">
             <div class="accordion__header"
                 id="tabs5-tab1"
@@ -289,9 +291,9 @@
             </div>
         </div>
 
-        <hr />
-
-        <h2>Accordion that can have multiple open at once</h2>
+        <p class="cc-heading">Accordion
+            <span class="cc-heading__sub">that can have multiple open at once</span>
+        </p>
         <div class="accordion">
             <div class="is-active accordion__header"
                 id="tabs6-tab1"

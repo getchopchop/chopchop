@@ -1,7 +1,28 @@
 
 <div class="u-container">
+    
+    <p class="cc-heading">Label <code>&lt;label&gt;</code></p>
+    <label for="in">Sing up for news and offers</label>
+    
+    <p class="cc-heading">Legend <code>&lt;legend&gt;</code></p>
+    <legend>Sign up for an account</legend>
+    
+    <p class="cc-heading">Select <code>&lt;select&gt;</code></p>
     <fieldset class="fields">
-        <legend>Checkbox Group <abbr title="Required">*</abbr></legend>
+        <div class="fields__group">
+            <label for="select">Choose an option...</label>
+            <select id="select">
+                <optgroup label="Option Group">
+                    <option>Option One</option>
+                    <option>Option Two</option>
+                    <option>Option Three</option>
+                </optgroup>
+            </select>
+        </div>
+    </fieldset>
+    
+    <p class="cc-heading">Checkbox Input <code>&lt;input type="checkbox" /&gt;</code></p>
+    <fieldset class="fields">
         <div class="fields__group">
             <label for="checkbox1">
                 <input id="checkbox1" name="checkbox" type="checkbox" checked="checked">
@@ -20,9 +41,9 @@
             </label>
         </div>
     </fieldset>
-
+    
+    <p class="cc-heading">Radio Input  <code>&lt;input type="radio" /&gt;</code></p>
     <fieldset class="fields">
-        <legend>Radio Group</legend>
         <div class="fields__group">
             <label for="radio1">
                 <input id="radio1" name="radio" type="radio" class="radio" checked="checked">
@@ -42,104 +63,63 @@
             </label>
         </div>
     </fieldset>
-
+    
+    <p class="cc-heading">Submit Input <code>&lt;input type="submit" /&gt;</code></p>
+    <input type="submit" class="btn" value="Submit" />
+    
+    <p class="cc-heading">Text Input <code>&lt;input type="text" /&gt;</code></p>
+    <input id="text" type="text" placeholder="Text Input">
+    
+    <p class="cc-heading">Password Input <code>&lt;input type="password" /&gt;</code></p>
+    <input id="password" type="password" placeholder="Type your Password">
+    
+    <p class="cc-heading">Textarea <code>&lt;textarea&gt;</code></p>
+    <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+    
+    <p class="cc-heading">Color Input <code>&lt;input type="color" /&gt;</code></p>
+    <input type="color" id="ic" value="#000000">
+    
+    <p class="cc-heading">Number Input <code>&lt;input type="number" /&gt;</code></p>
+    <input type="number" id="in" min="0" max="10" value="5">
+    
+    <p class="cc-heading">Range Input <code>&lt;input type="range" /&gt;</code></p>
+    <input type="range" id="ir" value="10">
+    
+    <p class="cc-heading">Range Input <code>&lt;input type="range" /&gt;</code> with <code>&lt;output&gt;</code></p>
+    <input type="range" min="0" max="100" value="50" id="fader" step="1" oninput="outputUpdate(value)">
+    <output for="fader" id="volume">50</output>
+    <script>
+        function outputUpdate(vol) {
+            document.querySelector('#volume').value = vol;
+        }
+    </script>
+    
+    <p class="cc-heading">Date Input <code>&lt;input type="date" /&gt;</code></p>
+    <input type="date" id="idd" value="1970-01-01">
+    
+    <p class="cc-heading">Month Input <code>&lt;input type="month" /&gt;</code></p>
+    <input type="month" id="idm" value="1970-01">
+    
+    <p class="cc-heading">Week Input <code>&lt;input type="week" /&gt;</code></p>
+    <input type="week" id="idw" value="1970-W01">
+    
+    <p class="cc-heading">Datetime Input <code>&lt;input type="datetime" /&gt;</code></p>
+    <input type="datetime" id="idt" value="1970-01-01T00:00:00Z">
+    
+    <p class="cc-heading">Datetime Local Input <code>&lt;input type="datetime-local" /&gt;</code></p>
+    <input type="datetime-local" id="idtl" value="1970-01-01T00:00">
+    
+    <p class="cc-heading">Web Address Input <code>&lt;input type="webaddress" /&gt;</code></p>
+    <input id="webaddress" type="url" placeholder="http://yoursite.com">
+    
+    <p class="cc-heading">Email Address Input <code>&lt;input type="emailaddress" /&gt;</code></p>
+    <input id="webaddress" type="email" placeholder="name@email.com">
+    
+    <p class="cc-heading">Search Input <code>&lt;input type="search" /&gt;</code></p>
+    <input id="search" type="search" placeholder="Enter Search Term">
+    
+    <p class="cc-heading">Form Validation</p>
     <fieldset class="fields">
-        <legend>Select Menu</legend>
-        <div class="fields__group">
-            <label for="select">Choose an option...</label>
-            <select id="select">
-                <optgroup label="Option Group">
-                    <option>Option One</option>
-                    <option>Option Two</option>
-                    <option>Option Three</option>
-                </optgroup>
-            </select>
-        </div>
-    </fieldset>
-
-    <fieldset class="fields">
-        <legend>Standard Field Types</legend>
-        <div class="fields__group">
-            <label for="text">Text Input <abbr title="Required">*</abbr></label>
-            <input id="text" type="text" placeholder="Text Input">
-        </div>
-        <div class="fields__group">
-            <label for="password">Password</label>
-            <input id="password" type="password" placeholder="Type your Password">
-        </div>
-        <div class="fields__group">
-            <label for="textarea">Textarea</label>
-            <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
-        </div>
-        <input type="submit" class="btn" value="Submit" />
-    </fieldset>
-
-    <fieldset class="fields">
-        <legend>HTML5 Field Types</legend>
-        <div class="fields__group">
-            <label for="ic">Color input</label>
-            <input type="color" id="ic" value="#000000">
-        </div>
-        <div class="fields__group">
-            <label for="in">Number input</label>
-            <input type="number" id="in" min="0" max="10" value="5">
-        </div>
-        <div class="fields__group">
-            <label for="ir">Range input</label>
-            <input type="range" id="ir" value="10">
-        </div>
-
-        <div class="fields__group">
-            <label for="fader">Range Input with Output</label>
-            <input type="range" min="0" max="100" value="50" id="fader" step="1" oninput="outputUpdate(value)">
-            <output for="fader" id="volume">50</output>
-            <script>
-                function outputUpdate(vol) {
-                    document.querySelector('#volume').value = vol;
-                }
-            </script>
-        </div>
-
-        <div class="fields__group">
-            <label for="idd">Date input</label>
-            <input type="date" id="idd" value="1970-01-01">
-        </div>
-        <div class="fields__group">
-            <label for="idm">Month input</label>
-            <input type="month" id="idm" value="1970-01">
-        </div>
-        <div class="fields__group">
-            <label for="idw">Week input</label>
-            <input type="week" id="idw" value="1970-W01">
-        </div>
-        <div class="fields__group">
-            <label for="idt">Datetime input</label>
-            <input type="datetime" id="idt" value="1970-01-01T00:00:00Z">
-        </div>
-        <div class="fields__group">
-            <label for="idtl">Datetime-local input</label>
-            <input type="datetime-local" id="idtl" value="1970-01-01T00:00">
-        </div>
-        <div class="fields__group">
-            <label for="webaddress">Web Address</label>
-            <input id="webaddress" type="url" placeholder="http://yoursite.com">
-        </div>
-        <div class="fields__group">
-            <label for="emailaddress">Email Address</label>
-            <input id="emailaddress" type="email" placeholder="name@email.com">
-        </div>
-        <div class="fields__group">
-            <label for="search">Search</label>
-            <input id="search" type="search" placeholder="Enter Search Term">
-        </div>
-        <div class="fields__group">
-            <label for="text">Number Input <abbr title="Required">*</abbr></label>
-            <input id="text" type="number" placeholder="Enter a Number" pattern="[0-9]*">
-        </div>
-    </fieldset>
-
-    <fieldset class="fields">
-        <legend>Validation</legend>
         <div class="fields__group has-error">
             <label class="error">Error Input</label>
             <input class="is-error" type="text" placeholder="Text Input">
@@ -152,14 +132,5 @@
             <input class="is-valid" type="text" placeholder="Text Input">
         </div>
     </fieldset>
-
-    <fieldset class="fields" id="inline-form">
-        <legend>Inline Form</legend>
-        <form action="#" method="post" class="form-inline form-search">
-            <label class="u-visually-hidden">Search the site</label>     
-            <input type="search" placeholder="Search the site" class="form-inline__query" />
-            <input type="submit" class="btn search-submit" value="Search">
-        </form>
-    </fieldset>
-
+    
 </div>
