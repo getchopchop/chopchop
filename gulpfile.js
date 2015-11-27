@@ -28,8 +28,7 @@ var sourceDirectory = './src',
 var gulp = require('gulp'),
     plugin = require('gulp-load-plugins')(),
     del = require('del'),
-    runSequence = require('run-sequence'),
-    browserSync = require('browser-sync').create();
+    runSequence = require('run-sequence');
 
 // =============================================
 // Paths
@@ -59,18 +58,6 @@ var scss = {
         build: buildDirectory + '/' + vendorFolder
     },
     bower = './' + bowerFolder;
-
-// =============================================
-// BROWSER SYNC `gulp browser-sync`
-// sync injection and auto reloads the browser
-// =============================================
-
-gulp.task('browser-sync', function() {
-    browserSync.init(null, {
-        proxy: url,
-        open: false
-    });
-});
 
 // =============================================
 // BOWER `gulp bower`
@@ -122,12 +109,9 @@ gulp.task('js', function() {
     return gulp.src(js.source)
         .pipe(plugin.jshint())
         .pipe(plugin.jshint.reporter('default'))
-        .pipe(!plugin.util.env.production ? plugin.sourcemaps.init() : plugin.util.noop())
         .pipe(plugin.include())
-        .pipe(!plugin.util.env.production ? plugin.sourcemaps.write() : plugin.util.noop())
         .pipe(plugin.util.env.production ? plugin.uglify() : plugin.util.noop())
-        .pipe(gulp.dest(js.build))
-        .pipe(browserSync.reload({stream: true}));
+	.pipe(gulp.dest(js.build));
 });
 
 // =============================================
@@ -138,14 +122,11 @@ gulp.task('js', function() {
 gulp.task('css', function() {
     return gulp.src(scss.source)
         .pipe(plugin.clipEmptyFiles())
-        .pipe(!plugin.util.env.production ? plugin.sourcemaps.init() : plugin.util.noop())
         .pipe(plugin.sass.sync().on('error', plugin.sass.logError))
         .pipe(plugin.autoprefixer(autoprefixer))
-        .pipe(!plugin.util.env.production ? plugin.sourcemaps.write() : plugin.util.noop())
         .pipe(plugin.util.env.production ? plugin.combineMq() : plugin.util.noop())
         .pipe(plugin.util.env.production ? plugin.minifyCss() : plugin.util.noop())
-        .pipe(gulp.dest(scss.build))
-        .pipe(browserSync.reload({stream: true}));
+	.pipe(gulp.dest(scss.build));
 });
 
 // =============================================
@@ -163,7 +144,6 @@ gulp.task('clean', function(cb) {
 // =============================================
 
 gulp.task('watch', function(cb) {
-    runSequence('browser-sync', cb);
     gulp.watch(scss.source, ['css']);
     gulp.watch(js.source, ['js']);
     gulp.watch(img.source, ['img']);
