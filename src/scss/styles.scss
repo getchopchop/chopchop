@@ -41,7 +41,6 @@
 // Atoms
 // =============================================
 
-@import "atoms/alert";
 @import "atoms/body";
 @import "atoms/button";
 @import "atoms/color";
@@ -60,6 +59,7 @@
 // Molecules
 // =============================================
 
+@import "molecules/alert";
 @import "molecules/accordion-tab";
 @import "molecules/breadcrumb";
 @import "molecules/card";
