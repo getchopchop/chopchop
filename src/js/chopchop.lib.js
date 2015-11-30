@@ -40,7 +40,6 @@ var ChopChop = (function($, ChopChop) {
             var self = this;
 
             $(document).on('click', '[data-action]', function(e) {
-                e.preventDefault();
                 var $this = $(this), t,
                     $target = (t = $this.data('target')) ? $('#' + t) : false,
                     mode = $this.data('trigger-on') || Trigger.BOTH;
@@ -55,6 +54,7 @@ var ChopChop = (function($, ChopChop) {
                     return;
                 }
 
+                e.preventDefault();
 				self.toggle($target, $this.data('action') || Action.TOGGLE);
             });
         },
