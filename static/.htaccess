@@ -1,3 +1,7 @@
 Options -Multiviews
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule .* /static/index.php [L]
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^(.*)$ index.php [PT,L]
