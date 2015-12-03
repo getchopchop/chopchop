@@ -4,7 +4,7 @@
         <h2>Modal</h2>
         <p>
             <a href="#" data-action="activate" data-target="modal">
-                    Click me for modal time
+                Click me for modal time
             </a>
         </p>
 
