@@ -2,17 +2,30 @@
 
     error_reporting(E_ALL);
 
-    define('TEMPLATE_PATH', realpath(__DIR__) . '/../');
+    define('TEMPLATE_PATH', realpath(__DIR__ . '/../') . '/');
 
     function getBlock($location) {
-        $path = TEMPLATE_PATH . trim($location, '/') . '.php';
+        $path = TEMPLATE_PATH . trim($location, '/');
+        $files = array();
 
-        if (!file_exists($path)) {
+        if(is_dir($path)){
+            $files = glob($path . '/*.php');
+        } 
+        else {
+            $path = TEMPLATE_PATH . trim($location, '/') . '.php';
+            if (file_exists($path)) {
+                $files[] = $path;
+            }
+        }
+
+        if(empty($files)) {
             return '';
         }
 
         ob_start();
-        include $path;
+        foreach($files as $path) {
+            include $path;
+        }
         $contents = ob_get_contents();
         ob_end_clean();
 
