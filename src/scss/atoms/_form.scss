@@ -56,6 +56,7 @@ input[type="search"] {
 input[type="checkbox"],
 input[type="radio"] {
 	display: inline;
+	width: auto;
 }
 
 input[type="file"] {
@@ -77,19 +78,6 @@ input[type="range"] {
 // Button Padding Fix
 input[type="submit"].btn {
     vertical-align: bottom;
-}
-
-
-// =============================================
-// Form field groups
-// =============================================
-
-.fields__group {
-	margin-bottom: $spacing;
-    margin: 0.6em 0;
-}
-.fields .fields__group:first-of-type {
-    margin-top: 0;
 }
 
 
