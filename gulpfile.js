@@ -183,7 +183,7 @@ gulp.task('watch', function(cb) {
 // =============================================
 
 gulp.task('build', function(cb) {
-    plugin.runSequence('clean', 'bower', 'css', 'js', 'img', 'fonts', 'vendor', cb);
+    plugin.runSequence('clean', ['bower', 'css', 'js', 'img', 'fonts', 'vendor'], cb);
 });
 
 // =============================================
