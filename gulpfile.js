@@ -4,7 +4,8 @@
 // **this is the only section you should need to edit
 // =============================================
 
-var sourceDirectory = './src',
+var name = 'chopchop',          // Used for DYN
+    sourceDirectory = './src',
     buildDirectory = './build',
     scssFolder = 'scss',
     cssFolder = 'css',
@@ -13,7 +14,6 @@ var sourceDirectory = './src',
     fontsFolder = 'fonts',
     vendorFolder = 'vendor',
     bowerFolder = './build/bower_components',
-    url = 'chopchop.NAME.dyn.iweb.co.uk',
     autoprefixer = ['last 2 versions'],
     imageOptimisation = {
         optimizationLevel: 3,   // PNG (Between 0 - 7)
@@ -26,9 +26,21 @@ var sourceDirectory = './src',
 // =============================================
 
 var gulp = require('gulp'),
-    plugin = require('gulp-load-plugins')(),
-    del = require('del'),
-    runSequence = require('run-sequence');
+    plugin = {
+        util:               require('gulp-util'),
+        browserSync:        require('browser-sync'),
+        bower:              require('gulp-bower'),
+        del:                require('del'),
+        runSequence:        require('run-sequence'),
+        imageMin:           require('gulp-imagemin'),
+        sass:               require('gulp-sass'),
+        autoPrefixer:       require('gulp-autoprefixer'),
+        clipEmptyFiles:     require('gulp-clip-empty-files'),
+        combineMq:          require('gulp-combine-mq'),
+        jsHint:             require('gulp-jshint'),
+        minifyCss:          require('gulp-minify-css'),
+        uglify:             require('gulp-uglify')
+    };
 
 // =============================================
 // Paths
@@ -60,12 +72,25 @@ var scss = {
     bower = './' + bowerFolder;
 
 // =============================================
+// BROWSER SYNC `gulp browser-sync`
+// injects css changes and auto reloads on js changes
+// ** gets developer name from enviroment name
+// =============================================
+
+gulp.task('browser-sync', function() {
+    plugin.browserSync({
+	    proxy: 'http://' + name + '.' + plugin.util.env.name + '.dyn.iweb.co.uk/'
+    });
+});
+
+// =============================================
 // BOWER `gulp bower`
 // installs dependencies from the bower.json file
 // =============================================
 
 gulp.task('bower', function() {
-    return plugin.bower(bower);
+    return plugin.bower()
+        .pipe(gulp.dest(bower));
 });
 
 // =============================================
@@ -95,7 +120,7 @@ gulp.task('vendor', function() {
 
 gulp.task('img', function() {
     return gulp.src(img.source)
-        .pipe(plugin.imagemin(imageOptimisation))
+        .pipe(plugin.imageMin(imageOptimisation))
         .pipe(gulp.dest(img.build));
 });
 
@@ -107,9 +132,8 @@ gulp.task('img', function() {
 
 gulp.task('js', function() {
     return gulp.src(js.source)
-        .pipe(plugin.jshint())
-        .pipe(plugin.jshint.reporter('default'))
-        .pipe(plugin.include())
+        .pipe(plugin.jsHint())
+        .pipe(plugin.jsHint.reporter('default'))
         .pipe(plugin.util.env.production ? plugin.uglify() : plugin.util.noop())
 	.pipe(gulp.dest(js.build));
 });
@@ -123,7 +147,7 @@ gulp.task('css', function() {
     return gulp.src(scss.source)
         .pipe(plugin.clipEmptyFiles())
         .pipe(plugin.sass.sync().on('error', plugin.sass.logError))
-        .pipe(plugin.autoprefixer(autoprefixer))
+        .pipe(plugin.autoPrefixer(autoprefixer))
         .pipe(plugin.util.env.production ? plugin.combineMq() : plugin.util.noop())
         .pipe(plugin.util.env.production ? plugin.minifyCss() : plugin.util.noop())
 	.pipe(gulp.dest(scss.build));
@@ -135,7 +159,7 @@ gulp.task('css', function() {
 // =============================================
 
 gulp.task('clean', function(cb) {
-    return del([buildDirectory], cb);
+    return plugin.del([buildDirectory], cb);
 });
 
 // =============================================
@@ -157,7 +181,7 @@ gulp.task('watch', function(cb) {
 // =============================================
 
 gulp.task('build', function(cb) {
-    runSequence('clean', 'bower', 'css', 'js', 'img', 'fonts', 'vendor', cb);
+    plugin.runSequence('clean', 'bower', 'css', 'js', 'img', 'fonts', 'vendor', cb);
 });
 
 // =============================================
@@ -166,5 +190,5 @@ gulp.task('build', function(cb) {
 // =============================================
 
 gulp.task('default', function(cb) {
-    runSequence('build', 'watch', cb);
+    plugin.runSequence('build', 'watch', cb);
 });
