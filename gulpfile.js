@@ -101,6 +101,7 @@ gulp.task('bower', function() {
 
 gulp.task('fonts', function() {
     return gulp.src(fonts.source)
+        .pipe(plugin.changed(fonts.build))
         .pipe(gulp.dest(fonts.build));
 });
 
@@ -111,6 +112,7 @@ gulp.task('fonts', function() {
 
 gulp.task('vendor', function() {
     return gulp.src(vendor.source)
+        .pipe(plugin.changed(vendor.build))
         .pipe(gulp.dest(vendor.build))
 });
 
