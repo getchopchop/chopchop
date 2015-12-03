@@ -38,6 +38,10 @@ p {
 ul, ol {
 	margin-bottom: $spacing-lg;
 	padding-left: $spacing-xl;
+
+	ul, ol {
+		margin-bottom: 0;
+	}
 }
 
 blockquote {

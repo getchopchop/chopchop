@@ -4,7 +4,7 @@
     ?>
     <div class="nav-<?= $toplevel ?>">
         <p class="cc-heading"><?= ucwords($toplevel) ?></p>
-        <ul class="nav nav--pills nav--bordered child">
+        <ul class="nav nav--stacked nav--bordered child">
             <?php
             $quarks = dir($toplevel);
             while (false !== ($entry = $quarks->read())) {

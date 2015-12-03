@@ -9,7 +9,8 @@
     width: 90%;
     max-width: 30em;
     background: $white;
-    overflow: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 

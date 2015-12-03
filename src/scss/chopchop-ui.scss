@@ -101,6 +101,8 @@ body {
 
 .site-navigation {
     position: fixed;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
     background-color: $white;
     transition: transform 0.4s ease;
     top: 0;
@@ -264,6 +266,7 @@ body {
     color: $white;
     background-color: $black;
     text-decoration: none;
+    padding: 5px 10px;
 }
 
 .cc-readout--mq {
@@ -272,10 +275,11 @@ body {
     right: 0;
     color: $white;
     background-color: magenta;
+    padding: 0;
 
     &:after {
         display: block;
-        padding: .2em .6em;
+        padding: 5px 10px;
         content: "$screen-xs < #{$screen-xs}";
 
         @include breakpoint($screen-xs) {

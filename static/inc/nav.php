@@ -2,7 +2,7 @@
 foreach($toplevels as $toplevel) {
 ?>
 <nav class=" nav-<?= $toplevel ?> nav-collapse">
-    <ul class="nav nav--pills">
+    <ul class="nav nav--stacked">
         <li class="level0 parent">
             <a href="<?= $toplevel ?>"
                 id="<?= ucwords($toplevel) ?>-title"

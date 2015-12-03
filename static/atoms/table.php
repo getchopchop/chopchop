@@ -1,5 +1,5 @@
 <div class="u-container">
-    
+
     <p class="cc-heading">Table <code>&lt;table&gt;</code></p>
     <table>
 		<thead>
@@ -51,10 +51,63 @@
 	    	</tr>
 		</tbody>
 	</table>
-    
-    
+
+
+    <p class="cc-heading">Table <code>.table</code></p>
+    <table class="table">
+		<thead>
+			<tr>
+				<th>Table Heading 1</th>
+				<th>Table Heading 2</th>
+				<th>Table Heading 3</th>
+				<th>Table Heading 4</th>
+				<th>Table Heading 5</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th>Table Footer 1</th>
+				<th>Table Footer 2</th>
+				<th>Table Footer 3</th>
+				<th>Table Footer 4</th>
+				<th>Table Footer 5</th>
+			</tr>
+		</tfoot>
+		<tbody>
+	    	<tr>
+	    		<td>Table Cell 1</td>
+	    		<td>Table Cell 2</td>
+	    		<td>Table Cell 3</td>
+	    		<td>Table Cell 4</td>
+	    		<td>Table Cell 5</td>
+	    	</tr>
+	    	<tr>
+	    		<td>Table Cell 1</td>
+	    		<td>Table Cell 2</td>
+	    		<td>Table Cell 3</td>
+	    		<td>Table Cell 4</td>
+	    		<td>Table Cell 5</td>
+	    	</tr>
+	    	<tr>
+	    		<td>Table Cell 1</td>
+	    		<td>Table Cell 2</td>
+	    		<td>Table Cell 3</td>
+	    		<td>Table Cell 4</td>
+	    		<td>Table Cell 5</td>
+	    	</tr>
+	    	<tr>
+	    		<td>Table Cell 1</td>
+	    		<td>Table Cell 2</td>
+	    		<td>Table Cell 3</td>
+	    		<td>Table Cell 4</td>
+	    		<td>Table Cell 5</td>
+	    	</tr>
+		</tbody>
+	</table>
+
+
     <p class="cc-heading">Condensed Table <code>.table--condensed</code></p>
-	<table class="table--condensed">
+	<table class="table table--condensed">
 		<thead>
 			<tr>
 				<th>Table Heading 1</th>
@@ -125,10 +178,10 @@
 	    	</tr>
 		</tbody>
 	</table>
-    
-    
+
+
     <p class="cc-heading">Striped Table <code>.table--striped</code></p>
-	<table class="table--striped">
+	<table class="table table--striped">
 		<thead>
 			<tr>
 				<th>Table Heading 1</th>
@@ -199,10 +252,10 @@
 	    	</tr>
 		</tbody>
 	</table>
-    
-    
+
+
     <p class="cc-heading">Borderd Table <code>.table--bordered</code></p>
-	<table class="table--bordered">
+	<table class="table table--bordered">
 		<thead>
 			<tr>
 				<th>Table Heading 1</th>
@@ -277,7 +330,7 @@
     <p class="cc-heading">Responsive Scrolling Table <code>.table--responsive</code>
         <span class="cc-heading__sub">has <code>&lt;div&gt;</code> wrapper
     </p>
-	<div class="table--responsive">
+	<div class="table table--responsive">
 	    <table>
 	    	<thead>
 	    		<tr>
@@ -359,10 +412,10 @@
 	    	</tbody>
 	    </table>
 	</div>
-    
-    
+
+
     <p class="cc-heading">Responsive Stacked Table <code>.table--stacked</code></p>
-    <table class="table--stacked">
+    <table class="table table--stacked">
         <thead>
             <tr>
                 <th>Table Heading 1</th>
@@ -442,5 +495,5 @@
             </tr>
         </tbody>
     </table>
-	
+
 </div>
