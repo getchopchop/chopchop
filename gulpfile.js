@@ -129,7 +129,6 @@ gulp.task('img', function() {
 // =============================================
 // JS `gulp js`
 // compiles js, Jshint, Minify if `--production`
-// ** does not compile files with `_FILENAME`
 // =============================================
 
 gulp.task('js', function() {
