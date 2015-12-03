@@ -39,7 +39,8 @@ var gulp = require('gulp'),
         combineMq:          require('gulp-combine-mq'),
         jsHint:             require('gulp-jshint'),
         minifyCss:          require('gulp-minify-css'),
-        uglify:             require('gulp-uglify')
+        uglify:             require('gulp-uglify'),
+        changed:            require('gulp-changed')
     };
 
 // =============================================
@@ -120,6 +121,7 @@ gulp.task('vendor', function() {
 
 gulp.task('img', function() {
     return gulp.src(img.source)
+        .pipe(plugin.changed(img.build))
         .pipe(plugin.imageMin(imageOptimisation))
         .pipe(gulp.dest(img.build));
 });
