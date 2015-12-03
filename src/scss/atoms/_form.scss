@@ -48,7 +48,7 @@ textarea {
 }
 
 input[type="search"] {
-	appearence: none;
+	-webkit-appearance: none;
 	box-sizing: border-box;
 	border-radius: 0;
 }
@@ -70,9 +70,15 @@ input[type="color"] {
     padding: 0;
     max-width: 10rem;
 }
+
 input[type="range"] {
     padding-left: 0;
     padding-right: 0;
+	border: 0;
+
+	&::-moz-focus-outer {
+		border: 0;
+	}
 }
 
 // Button Padding Fix

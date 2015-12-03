@@ -21,10 +21,10 @@
 // =============================================
 
 .accordion-to-tabs {
-    @include breakpoint(max-width $screen-sm-max) {
+    @include breakpoint(max-width $screen-xs-max) {
         @include accordion;
     }
-    @include breakpoint($screen-md) {
+    @include breakpoint($screen-sm) {
         @include tabs;
     }
 }
@@ -35,10 +35,10 @@
 // =============================================
 
 .tabs-to-accordion {
-    @include breakpoint(max-width $screen-sm-max) {
+    @include breakpoint(max-width $screen-xs-max) {
         @include tabs;
     }
-    @include breakpoint($screen-md) {
+    @include breakpoint($screen-sm) {
         @include accordion;
     }
 }

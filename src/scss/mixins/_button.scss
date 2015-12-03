@@ -25,6 +25,13 @@
         color: $white;
         background-color: $dark-grey;
     }
+
+    &::moz-focus-inner {
+        border: 0;
+        padding: 0;
+        margin-top: -2px;
+        margin-bottom: -2px;
+    }
 }
 
 
@@ -34,7 +41,7 @@
 
 @mixin btn--sm {
     padding: $spacing-xs $spacing-sm;
-    font-size: 1em;
+    font-size: $font-size-sm;
 }
 
 

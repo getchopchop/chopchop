@@ -17,6 +17,9 @@
 // =============================================
 
 .nav--pills {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: wrap;
 
     a {
         display: block;
@@ -41,24 +44,6 @@
 
 .nav--inline > * {
     display: inline-block;
-}
-
-
-// =============================================
-// Nav Space
-// =============================================
-
-.nav--space > * {
-    margin-left: $spacing-sm;
-    margin-right: $spacing-sm;
-
-    &:first-child {
-        margin-left: 0;
-    }
-
-    &:last-child {
-        margin-right: 0;
-    }
 }
 
 

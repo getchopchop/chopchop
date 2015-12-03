@@ -116,7 +116,7 @@
 
 
         <p class="cc-heading">Tabs to Accordion <code>.tabs-to-accordion</code>
-            <span class="cc-heading__sub">Switches at <code>$screen-md</code></span>
+            <span class="cc-heading__sub">Switches at <code>$screen-sm</code></span>
         </p>
         <div class="tabs-to-accordion">
             <div class="is-active tabs__header"
@@ -175,7 +175,7 @@
 
 
         <p class="cc-heading">Accordion to Tabs <code>.accordion-to-tabs</code>
-            <span class="cc-heading__sub">Switches at <code>$screen-md</code></span>
+            <span class="cc-heading__sub">Switches at <code>$screen-sm</code></span>
         </p>
         <div class="accordion-to-tabs">
             <div class="is-active tabs__header"

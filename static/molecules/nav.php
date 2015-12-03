@@ -38,36 +38,25 @@
         </ul>
     </nav>
 
-    <h2>Nav inline and space</h2>
-    <nav>
-        <ul class="nav nav--inline nav--space">
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Credits</a></li>
-            <li><a href="#">Structure</a></li>
-        </ul>
-    </nav>
-
-    <hr />
-
     <h2>Priority Nav</h2>
     <div class="priority-nav">
         <div class="priority-nav__scroll">
             <nav class="priority-nav__container">
                 <ul class="nav nav--pills">
-                    <li><a href="#"><span>home</span></a></li>
-                    <li><a href="#"><span>UK</span></a></li>
-                    <li><a href="#"><span>world</span></a></li>
-                    <li><a href="#"><span>politics</span></a></li>
-                    <li><a href="#"><span>sport</span></a></li>
-                    <li><a href="#"><span>football</span></a></li>
-                    <li><a href="#"><span>opinion</span></a></li>
-                    <li><a href="#"><span>culture</span></a></li>
-                    <li><a href="#"><span>business</span></a></li>
-                    <li><a href="#"><span>lifestyle</span></a></li>
-                    <li><a href="#"><span>fashion</span></a></li>
-                    <li><a href="#"><span>environment</span></a></li>
-                    <li><a href="#"><span>tech</span></a></li>
-                    <li><a href="#"><span>travel</span></a></li>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">UK</a></li>
+                    <li><a href="#">world</a></li>
+                    <li><a href="#">politics</a></li>
+                    <li><a href="#">sport</a></li>
+                    <li><a href="#">football</a></li>
+                    <li><a href="#">opinion</a></li>
+                    <li><a href="#">culture</a></li>
+                    <li><a href="#">business</a></li>
+                    <li><a href="#">lifestyle</a></li>
+                    <li><a href="#">fashion</a></li>
+                    <li><a href="#">environment</a></li>
+                    <li><a href="#">tech</a></li>
+                    <li><a href="#">travel</a></li>
                 </ul>
             </nav>
         </div><!--/priority-nav__scroll -->
