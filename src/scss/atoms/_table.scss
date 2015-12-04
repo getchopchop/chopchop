@@ -5,34 +5,44 @@
 table {
     background-color: transparent;
     width: 100%;
+
+    > * {
+        border: 0;
+        text-align: left;
+    }
 }
 
-th, td {
-    padding: $spacing;
-    line-height: 1.42857143;
-    vertical-align: top;
-    border-top: 1px solid $light-grey;
-}
 
-th {
-    text-align: left;
-    vertical-align: bottom;
-    border-bottom: 2px solid $light-grey;
-}
+// =============================================
+// Table
+// =============================================
 
-caption {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    color: $grey;
-    text-align: left;
-}
+.table {
+    th, td {
+        padding: $spacing;
+        vertical-align: top;
+        border-top: 1px solid $light-grey;
+    }
 
-tr:first-child > th {
-    border-top: 0;
-}
+    th {
+        vertical-align: bottom;
+        border-bottom: 2px solid $light-grey;
+    }
 
-table > tbody {
-    border-bottom: 1px solid $light-grey;
+    caption {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        color: $grey;
+        text-align: left;
+    }
+
+    tr:first-child > th {
+        border-top: 0;
+    }
+
+    table > tbody {
+        border-bottom: 1px solid $light-grey;
+    }
 }
 
 
@@ -72,7 +82,7 @@ table > tbody {
 // =============================================
 
 .table--striped > tbody > tr:nth-child(odd) {
-    background-color: $light-grey;
+    background-color: $lighter-grey;
 }
 
 
@@ -83,6 +93,7 @@ table > tbody {
 .table--responsive {
     overflow-x: auto;
     min-height: 0.01%;
+    -webkit-overflow-scrolling: touch;
 
     th,
     td {

@@ -24,6 +24,7 @@
             </div>
             <div class="card__footer">
                 <p>Some footer bits</p>
+                <p><a href="#" data-action="deactivate" data-target="drawer-left">Close</a></p>
             </div>
         </div>
     </div>
@@ -43,6 +44,7 @@
             </div>
             <div class="card__footer">
                 <p>Some footer bits</p>
+                <p><a href="#" data-action="deactivate" data-target="drawer-right">Close</a></p>
             </div>
         </div>
     </div>

@@ -101,6 +101,7 @@ gulp.task('bower', function() {
 
 gulp.task('fonts', function() {
     return gulp.src(fonts.source)
+        .pipe(plugin.changed(fonts.build))
         .pipe(gulp.dest(fonts.build));
 });
 
@@ -111,6 +112,7 @@ gulp.task('fonts', function() {
 
 gulp.task('vendor', function() {
     return gulp.src(vendor.source)
+        .pipe(plugin.changed(vendor.build))
         .pipe(gulp.dest(vendor.build))
 });
 
@@ -129,7 +131,6 @@ gulp.task('img', function() {
 // =============================================
 // JS `gulp js`
 // compiles js, Jshint, Minify if `--production`
-// ** does not compile files with `_FILENAME`
 // =============================================
 
 gulp.task('js', function() {
@@ -183,7 +184,7 @@ gulp.task('watch', function(cb) {
 // =============================================
 
 gulp.task('build', function(cb) {
-    plugin.runSequence('clean', 'bower', 'css', 'js', 'img', 'fonts', 'vendor', cb);
+    plugin.runSequence('clean', ['bower', 'css', 'js', 'img', 'fonts', 'vendor'], cb);
 });
 
 // =============================================

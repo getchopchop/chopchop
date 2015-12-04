@@ -3,6 +3,10 @@
 // =============================================
 
 @mixin accordion {
+    > [class*="__header"] {
+        cursor: pointer;
+    }
+
     > [class*="__header"].is-active {
         color: red;
     }
@@ -26,6 +30,7 @@
     flex-wrap: wrap;
 
     > [class*="__header"] {
+        cursor: pointer;
         order: 1;
 
         &.is-active {
