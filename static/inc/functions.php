@@ -10,7 +10,7 @@
 
         if(is_dir($path)){
             $files = glob($path . '/*.php');
-        } 
+        }
         else {
             $path = TEMPLATE_PATH . trim($location, '/') . '.php';
             if (file_exists($path)) {
@@ -26,12 +26,8 @@
         foreach($files as $path) {
             include $path;
         }
-        $contents = ob_get_contents();
+        $contents .= ob_get_contents();
         ob_end_clean();
-
-        $contents = preg_replace_callback('|{% highlight (.*?) %}(.+?(?={%)){% end highlight (.*?) %}|s', function($matches) {
-            return '<pre class="cc-code"><code class="' .$matches[1]. '">' . htmlspecialchars(trim($matches[2])) . '</code></pre>';
-        }, $contents);
 
         return $contents;
     }

@@ -23,7 +23,7 @@
 
         <!-- <main class="main site-main"> -->
         <main>
-            <div class="site-content">
+            <div class="u-container">
               <?php if(isIndex()) { ?>
 
                   <div class="u-container">
