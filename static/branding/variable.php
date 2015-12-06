@@ -1,6 +1,3 @@
-<div class="well">
-    <div class="u-container">
-
 <?php
 $contents = file_get_contents('../src/scss/_var.scss', true);
 $lines = explode("\n", $contents);
@@ -29,7 +26,3 @@ foreach($lines as $line) {
 }
 ?>
 </div> <!-- close the last cc-vars div -->
-
-
-</div>
-</div>

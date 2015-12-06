@@ -54,24 +54,9 @@
 // Alert colour variations
 // =============================================
 
-.alert--primary {
-    background-color: lighten(purple, 70%);
-    border-color: purple;
-}
-
-.alert--info {
-    background-color: lighten(blue, 40%);
-    border-color: blue;
-}
-
 .alert--success {
     background-color: lighten(green, 70%);
     border-color: green;
-}
-
-.alert--warning {
-    background-color: lighten(orange, 40%);
-    border-color: orange;
 }
 
 .alert--error {
