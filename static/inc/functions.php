@@ -1,4 +1,5 @@
 <?php
+    require_once(__DIR__ . '/lib/Spyc.php');
 
     error_reporting(E_ALL);
 
@@ -25,6 +26,7 @@
 
         ob_start();
         foreach($files as $path) {
+            $_t = new TemplateHelper(parseComments(file_get_contents($path)), $options);
             include $path;
         }
         $contents .= ob_get_contents();
@@ -66,6 +68,50 @@
             'class'=>$class,
             'description'=>$description
         );
+    }
+
+    function parseComments($source) {
+        $tokens = token_get_all( $source );
+        $comments = array();
+        $comment = array(
+            T_COMMENT,
+            T_DOC_COMMENT
+        );
+        foreach( $tokens as $token ) {
+            if( !in_array($token[0], $comment) ) {
+                continue;
+            }
+            $matches = array();
+            if(preg_match('#(?:/\*+)((?:(?!\*+/).)*)#ms', $token[1], $matches)){
+                $comments[] = $matches[1];
+            }
+            else{
+                $comments[] = substr(trim($token[1]), 2);
+            }
+        }
+
+        $data = "";
+        foreach($comments as $comment) {
+            $data = array_merge($data, spyc_load($comment));
+        }
+        return $data;
+    }
+
+    class TemplateHelper {
+        protected $data = array();
+        protected $options = array();
+
+        public function __construct($data = array(), $options=array()) {
+            $this->data = $data;
+            $this->options = $options;
+        }
+
+        public function __get($key) {
+            if(isset($this->data[$key])){
+                return $this->data[$key];
+            }
+            return '';
+        }
     }
 
     $toplevels = array('branding', 'atoms', 'molecule', 'organisms', 'templates');
