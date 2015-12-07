@@ -40,8 +40,16 @@ var gulp = require('gulp'),
         jsHint:             require('gulp-jshint'),
         minifyCss:          require('gulp-minify-css'),
         uglify:             require('gulp-uglify'),
-        changed:            require('gulp-changed')
+        changed:            require('gulp-changed'),
+        sourcemaps:         require('gulp-sourcemaps')
     };
+
+// =============================================
+// Enviroment Variables
+// =============================================
+
+var dev = plugin.util.env.dev,
+    production = plugin.util.env.production;
 
 // =============================================
 // Paths
@@ -59,15 +67,15 @@ var scss = {
         build: buildDirectory + '/' + jsFolder
     },
     img = {
-        source: sourceDirectory + '/' + imagesFolder + '/**/*',
+        source: sourceDirectory + '/' + imagesFolder + '/**/*.*',
         build: buildDirectory + '/' + imagesFolder
     },
     fonts = {
-        source: sourceDirectory + '/' + fontsFolder + '/**/*',
+        source: sourceDirectory + '/' + fontsFolder + '/**/*.*',
         build: buildDirectory + '/' + fontsFolder
     },
     vendor = {
-        source: sourceDirectory + '/' + vendorFolder + '/**/*',
+        source: sourceDirectory + '/' + vendorFolder + '/**/*.*',
         build: buildDirectory + '/' + vendorFolder
     },
     bower = './' + bowerFolder;
@@ -79,9 +87,11 @@ var scss = {
 // =============================================
 
 gulp.task('browser-sync', function() {
-    plugin.browserSync({
+    if(dev) {
+        plugin.browserSync({
 	    proxy: 'http://' + name + '.' + plugin.util.env.name + '.dyn.iweb.co.uk/'
-    });
+        });
+    }
 });
 
 // =============================================
@@ -124,7 +134,7 @@ gulp.task('vendor', function() {
 gulp.task('img', function() {
     return gulp.src(img.source)
         .pipe(plugin.changed(img.build))
-        .pipe(plugin.imageMin(imageOptimisation))
+        .pipe(plugin.util.env.production ? plugin.imageMin(imageOptimisation) : plugin.util.noop())
         .pipe(gulp.dest(img.build));
 });
 
@@ -138,7 +148,8 @@ gulp.task('js', function() {
         .pipe(plugin.jsHint())
         .pipe(plugin.jsHint.reporter('default'))
         .pipe(plugin.util.env.production ? plugin.uglify() : plugin.util.noop())
-	.pipe(gulp.dest(js.build));
+        .pipe(gulp.dest(js.build))
+        .pipe(plugin.util.env.dev ? plugin.browserSync.reload({stream: true}) : plugin.util.noop());
 });
 
 // =============================================
@@ -149,11 +160,14 @@ gulp.task('js', function() {
 gulp.task('css', function() {
     return gulp.src(scss.source)
         .pipe(plugin.clipEmptyFiles())
+        .pipe(plugin.util.env.dev ? plugin.sourcemaps.init() : plugin.util.noop())
         .pipe(plugin.sass.sync().on('error', plugin.sass.logError))
         .pipe(plugin.autoPrefixer(autoprefixer))
+        .pipe(plugin.util.env.dev ? plugin.sourcemaps.write() : plugin.util.noop())
         .pipe(plugin.util.env.production ? plugin.combineMq() : plugin.util.noop())
         .pipe(plugin.util.env.production ? plugin.minifyCss() : plugin.util.noop())
-	.pipe(gulp.dest(scss.build));
+        .pipe(gulp.dest(scss.build))
+        .pipe(plugin.util.env.dev ? plugin.browserSync.reload({stream: true}) : plugin.util.noop());
 });
 
 // =============================================
@@ -170,7 +184,7 @@ gulp.task('clean', function(cb) {
 // watches for changes and runs the associated task on change
 // =============================================
 
-gulp.task('watch', function(cb) {
+gulp.task('watch', ['browser-sync'], function(cb) {
     gulp.watch(scss.source, ['css']);
     gulp.watch(js.source, ['js']);
     gulp.watch(img.source, ['img']);
