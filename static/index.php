@@ -3,10 +3,10 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<?php require_once('inc/meta.php'); ?>
-<title>Chop Chop - Little user interface patterns to get us going</title>
-<?php include('inc/favicons.php'); ?>
-<?php include('inc/styles.php'); ?>
+    <?php require_once('inc/meta.php'); ?>
+    <title>Chop Chop - Little user interface patterns to get us going</title>
+    <?php include('inc/favicons.php'); ?>
+    <?php include('inc/styles.php'); ?>
 </head>
 <body>
 
