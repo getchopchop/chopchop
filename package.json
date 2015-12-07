@@ -4,9 +4,9 @@
   "description": "Chop Chop is a lightweight frontend pattern primer.",
   "main": "gulpfile.js",
   "scripts": {
-    "gulp": "gulp",
-    "development": "gulp build",
-    "production": "gulp build --production"
+    "watch": "gulp",
+    "watch-dev": "gulp --dev",
+    "build-production": "gulp build --production"
   },
   "repository": {
     "type": "git",
