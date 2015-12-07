@@ -48,7 +48,6 @@ var ChopChop = (function($, ChopChop) {
 
         if (api.hasOwnProperty(method)) {
             return this.each(function() {
-                console.log('Api', api, method);
                 var params = args.slice(0);
                 params.unshift(this);
                 api[method].apply(api, params);
