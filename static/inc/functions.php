@@ -4,7 +4,8 @@
 
     define('TEMPLATE_PATH', realpath(__DIR__ . '/../') . '/');
 
-    function getBlock($location) {
+    function getBlock($location, $options=array()) {
+        $printTitle = isset($options['print_title']) && $options['print_title'];
         $path = TEMPLATE_PATH . trim($location, '/');
         $files = array();
 
@@ -59,4 +60,12 @@
         return 'http://iweb:developer@isabelaweb1.cms.iwebcloud.co.uk/image/'.base64_encode($src).($qs ? '?'.$qs : '');
     }
 
-    $toplevels = array('branding', 'atoms', 'molecules', 'organisms', 'templates');
+    function title($title, $class, $description='') {
+	return array(
+            'title'=>$title,
+            'class'=>$class,
+            'description'=>$description
+        );
+    }
+
+    $toplevels = array('branding', 'atoms', 'molecule', 'organisms', 'templates');

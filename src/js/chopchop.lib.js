@@ -1,9 +1,7 @@
+// Generics
 var ChopChop = (function($, ChopChop) {
-
-    var defaultOptions = {
-        classActive: 'is-active',
-        classInactive: 'is-inactive'
-    };
+    var api = ChopChop.api = {},
+        plugins = ChopChop.plugins = {};
 
     // Exception
     var Exception = ChopChop.Exception = function(message) {
@@ -16,10 +14,61 @@ var ChopChop = (function($, ChopChop) {
         }
     };
 
+    // Initialisation
+    var defaultInitOptions = {
+        'toggle': {}
+    };
+
+    ChopChop.init = api.init = function(options) {
+        options = options || defaultInitOptions;
+
+        for (var plugin in options) {
+            if (!options.hasOwnProperty(plugin)) {
+                continue;
+            }
+
+            var name = plugin.charAt(0).toUpperCase() + plugin.substr(1);
+
+            if (!plugins[plugin] && ChopChop[name]) {
+                plugins[plugin] = new ChopChop[name](options);
+            }
+        }
+    };
+
+    // jQuery goodness
+    $.fn.chopchop = function() {
+        var args = Array.prototype.slice.call(arguments),
+            numArgs = args.length;
+
+        if (numArgs === 0) {
+            return api;
+        }
+
+        var method = args.shift();
+
+        if (api.hasOwnProperty(method)) {
+            return this.each(function() {
+                var params = args.slice(0);
+                params.unshift(this);
+                api[method].apply(api, params);
+            });
+        }
+    };
+
+    return ChopChop;
+})(jQuery, ChopChop || {});
+
+
+// Toggles
+var ChopChop = (function($, ChopChop) {
+    var defaultOptions = {
+        classActive: 'is-active',
+        classInactive: 'is-inactive'
+    };
+
     // Toggle
-    var Toggle = ChopChop.Toggle = function(root, options) {
+    var Toggle = ChopChop.Toggle = function(options) {
         this.options = $.extend({}, defaultOptions, options);
-        this.$root = $(root);
         this.init();
     };
 
@@ -55,10 +104,19 @@ var ChopChop = (function($, ChopChop) {
                 }
 
                 e.preventDefault();
-				self.toggle($target, $this.data('action') || Action.TOGGLE);
+				self.performAction($target, $this.data('action') || Action.TOGGLE);
             });
         },
-		toggle: function($el, action) {
+        toggle: function(target, action) {
+            var $target = typeof target === 'string' ? $('#' + target) : $(target);
+
+            if (!$target.size()) {
+                return;
+            }
+
+            this.performAction($target, action || Action.TOGGLE);
+        },
+		performAction: function($el, action) {
 			if (action === Action.TOGGLE) {
 				if ($el.hasClass('is-active')) {
 					action = Action.DEACTIVATE;
@@ -128,5 +186,11 @@ var ChopChop = (function($, ChopChop) {
 		}
     };
 
+    // Expose toggle api
+    ChopChop.api.toggle = function() {
+        return ChopChop.plugins.toggle.toggle.apply(ChopChop.plugins.toggle, arguments);
+    };
+
     return ChopChop;
 })(jQuery, ChopChop || {});
+
