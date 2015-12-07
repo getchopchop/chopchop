@@ -59,4 +59,4 @@
         return 'http://iweb:developer@isabelaweb1.cms.iwebcloud.co.uk/image/'.base64_encode($src).($qs ? '?'.$qs : '');
     }
 
-    $toplevels = array('branding', 'atoms', 'molecules', 'organisms', 'templates');
+    $toplevels = array('branding', 'atoms', 'molecule', 'organisms', 'templates');
