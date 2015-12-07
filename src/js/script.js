@@ -12,7 +12,8 @@
         // Initialise toggles globally
         // =============================================
 
-        var toggle = new ChopChop.Toggle('body');
+        //var toggle = window.toggle = new ChopChop.Toggle('body');
+        ChopChop.init();
 
     });
 }(jQuery));
