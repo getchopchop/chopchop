@@ -1,7 +1,7 @@
 <?php /*
-    Title: This is a title
-    Class: .card
-    Description: This is a description
+Title: This is a title
+Class: .card
+Description: This is a description
 */ ?>
 <div class="card">
     <div class="card__header">

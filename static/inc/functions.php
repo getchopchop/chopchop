@@ -25,9 +25,6 @@
 
         ob_start();
         foreach($files as $path) {
-            if(){
-
-            }
             include $path;
         }
         $contents .= ob_get_contents();
@@ -65,8 +62,8 @@
 
     function title($title, $class, $description='') {
 	return array(
-            'title'=>$title, 
-            'class'=>$class, 
+            'title'=>$title,
+            'class'=>$class,
             'description'=>$description
         );
     }
