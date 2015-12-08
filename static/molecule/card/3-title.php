@@ -1,5 +1,5 @@
 <?php /*
-Title: This is a title
+Title: Card with Title
 Class: .card
 */ ?>
 
