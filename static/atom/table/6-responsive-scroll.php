@@ -1,3 +1,8 @@
+<?php /*
+Title: Responsive Table
+Class: .table.table--responsive
+*/ ?>
+
 <div class="table table--responsive">
     <table>
     	<thead>

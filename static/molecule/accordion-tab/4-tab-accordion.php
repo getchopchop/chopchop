@@ -1,3 +1,8 @@
+<?php /*
+Title: Tabs to Accordion
+Class: .tabs-to-accordion
+*/ ?>
+
 <div class="tabs-to-accordion">
     <div class="is-active tabs__header"
         id="tabs3-tab1"

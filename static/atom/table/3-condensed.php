@@ -1,3 +1,8 @@
+<?php /*
+Title: Condensed Table
+Class: .table.table--condensed
+*/ ?>
+
 <table class="table table--condensed">
 	<thead>
 		<tr>

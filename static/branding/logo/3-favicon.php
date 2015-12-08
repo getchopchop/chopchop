@@ -1,3 +1,7 @@
+<?php /*
+Title: Favicon
+*/ ?>
+
 <ul class="g-four-up u-list-unstyled">
     <li>
         <img src="<?php echo getUrl('../build/vendor/favicons/favicon-194x194.png'); ?>" class="u-img-responsive" />

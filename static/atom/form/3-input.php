@@ -1,3 +1,7 @@
+<?php /*
+Title: Inputs
+*/ ?>
+
 <input type="submit" class="btn" value="Submit" />
 
 <input id="text" type="text" placeholder="Text Input">

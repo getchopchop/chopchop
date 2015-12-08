@@ -1,13 +1,16 @@
-<p><a href="#" data-target="drawer-right" data-action="activate">Right drawer</a></p>
+<?php /*
+Title: Right Drawer
+*/ ?>
 
-<div class="overlay" id="overlay" data-action="deactivate" data-target="overlay" data-cascade-deactivate="drawer-left,drawer-right"></div> <!-- toggle is-active to show !-->
+<p><a href="#" data-target="drawer-left" data-action="activate">Left drawer</a></p>
 
-<!-- toggle class is-active to show !-->
-<div class="drawer drawer--right" id="drawer-right" data-cascade="overlay">
+<div class="overlay" id="overlay" data-action="deactivate" data-target="overlay" data-cascade-deactivate="drawer-left,drawer-right"></div>
+
+<div class="drawer drawer--left" id="drawer-left" data-cascade="overlay">
     <div class="drawer__dialog">
         <div class="card">
             <div class="card__header">
-                <h2>Right drawer</h2>
+                <h2>Left drawer</h2>
             </div>
             <div class="card__body">
                 <p>Vestibulum varius sem vitae diam venenatis porttitor. Pellentesque nec quam eget eros tincidunt mattis non ac nunc. Vivamus tristique, turpis vitae efficitur laoreet, eros tellus lobortis nulla, ac auctor neque velit at risus. Sed volutpat dolor erat, placerat malesuada quam tempor eu. Morbi a tellus sit amet lectus tincidunt imperdiet a tincidunt est. Cras vel volutpat mauris. Sed consectetur felis vel maximus elementum. Proin sed nisl lectus. Nunc non est ac ipsum gravida commodo vel quis nunc.</p>
@@ -16,7 +19,7 @@
             </div>
             <div class="card__footer">
                 <p>Some footer bits</p>
-                <p><a href="#" data-action="deactivate" data-target="drawer-right">Close</a></p>
+                <p><a href="#" data-action="deactivate" data-target="drawer-left">Close</a></p>
             </div>
         </div>
     </div>

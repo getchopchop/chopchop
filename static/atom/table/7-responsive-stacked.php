@@ -1,3 +1,8 @@
+<?php /*
+Title: Stacked Table
+Class: .table.table--stacked
+*/ ?>
+
 <table class="table table--stacked">
     <thead>
         <tr>

@@ -1,3 +1,8 @@
+<?php /*
+Title: Priority Nav
+Class: .priority-nav
+*/ ?>
+
 <div class="priority-nav">
     <div class="priority-nav__scroll">
         <nav class="priority-nav__container">

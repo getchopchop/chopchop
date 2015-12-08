@@ -1,3 +1,7 @@
+<?php /*
+Title: Checkbox
+*/ ?>
+
 <fieldset>
     <div class="field-group">
         <label class="field-group__label" for="checkbox1">

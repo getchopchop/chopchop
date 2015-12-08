@@ -1,3 +1,8 @@
+<?php /*
+Title: Collapsed Accordion
+Class: .accordion
+*/ ?>
+
 <div class="accordion">
     <div class="accordion__header"
         id="tabs5-tab1"

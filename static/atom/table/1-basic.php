@@ -1,3 +1,7 @@
+<?php /*
+Title: Table
+*/ ?>
+
 <table>
 	<thead>
 		<tr>

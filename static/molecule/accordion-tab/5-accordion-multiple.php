@@ -1,3 +1,8 @@
+<?php /*
+Title: Multiple Open Accordion
+Class: .accordion
+*/ ?>
+
 <div class="accordion">
     <div class="is-active accordion__header"
         id="tabs6-tab1"

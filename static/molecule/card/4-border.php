@@ -1,3 +1,8 @@
+<?php /*
+Title: Bordered Card
+Class: .card.card--bordered
+*/ ?>
+
 <div class="card card--bordered">
     <div class="card__header">
         <h4 class="card__title">Card Title</h4>

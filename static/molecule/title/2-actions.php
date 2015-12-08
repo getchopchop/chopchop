@@ -1,3 +1,8 @@
+<?php /*
+Title: Title with Actions
+Class: .title.title--actions
+*/ ?>
+
 <hgroup class="title title--actions">
     <div class="title__titles">
         <h1 class="title__main">This is a Title with Buttons</h1>

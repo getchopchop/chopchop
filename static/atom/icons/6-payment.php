@@ -1,3 +1,7 @@
+<?php /*
+Title: Payment Icons
+*/ ?>
+
 <ul class="u-list-inline">
     <li><img src="<?php echo getUrl('../build/img/icons/payments/color/amazon.svg'); ?>" alt="Amazon" width="64" height="40" /></li>
     <li><img src="<?php echo getUrl('../build/img/icons/payments/color/american-express.svg'); ?>" alt="America Express" width="64" height="40" /></li>

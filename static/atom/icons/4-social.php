@@ -1,3 +1,7 @@
+<?php /*
+Title: Social Icons
+*/ ?>
+
 <ul class="u-list-unstyled g-three-up">
     <li>
         <i class="icon-linkedin"></i>

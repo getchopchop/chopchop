@@ -1,8 +1,11 @@
+<?php /*
+Title: Modal
+*/ ?>
+
 <p><a href="#" data-action="activate" data-target="modal">Click me for modal time</a></p>
 
-<div class="overlay" id="overlay" data-action="deactivate" data-target="modal"></div> <!-- toggle is-active to show !-->
+<div class="overlay" id="overlay" data-action="deactivate" data-target="modal"></div>
 
-<!-- toggle is-active to show !-->
 <div class="modal" id="modal" data-cascade="overlay" data-trigger-on="direct-only" data-action="deactivate" data-target="modal">
     <div class="modal__dialog">
         <div class="card">

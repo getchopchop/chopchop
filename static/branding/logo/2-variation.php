@@ -1,3 +1,7 @@
+<?php /*
+Title: Logo Variations
+*/ ?>
+
 <div class="g-two-up g-gutter">
     <div>
         <h4>Print logo</h4>

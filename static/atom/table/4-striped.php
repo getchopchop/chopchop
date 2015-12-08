@@ -1,3 +1,8 @@
+<?php /*
+Title: Striped Table
+Class: .table.table--striped
+*/ ?>
+
 <table class="table table--striped">
 	<thead>
 		<tr>

@@ -1,3 +1,7 @@
+<?php /*
+Title: Radio
+*/ ?>
+
 <fieldset>
     <div class="field-group">
         <label class="field-group__label" for="radio1">

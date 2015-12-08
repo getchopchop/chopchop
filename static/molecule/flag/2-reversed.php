@@ -1,3 +1,8 @@
+<?php /*
+Title: Reversed Flag
+Class: .flag.flag--flip
+*/ ?>
+
 <div class="flag flag--flip">
     <div class="flag__media">
         <img src="//placehold.it/350x350">
