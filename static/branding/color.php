@@ -1,3 +1,7 @@
+<?php /*
+Title: Colour
+*/ ?>
+
 <?php
     $contents = file_get_contents('../src/scss/_var.scss', true);
     $lines = explode("\n", $contents);

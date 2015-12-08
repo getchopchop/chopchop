@@ -11,7 +11,7 @@
                 if(substr($entry, -4) == '.php') {
                     $entry = substr($entry, 0, strlen($entry) - 4);
                 }
-		if(substr($entry, 0, 1) == '.') {
+		        if(substr($entry, 0, 1) == '.') {
                      continue;
                 }
             ?>

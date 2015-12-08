@@ -1,3 +1,7 @@
+<?php /*
+Title: Apple Icons
+*/ ?>
+
 <ul class="g-four-up u-list-unstyled">
     <li>
         <img src="<?php echo getUrl('../build/vendor/favicons/apple-touch-icon-180x180.png'); ?>" class="u-img-responsive" />

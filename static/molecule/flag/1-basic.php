@@ -1,3 +1,8 @@
+<?php /*
+Title: Flag
+Class: .flag
+*/ ?>
+
 <div class="flag">
     <div class="flag__media">
         <img src="//placehold.it/350x350">

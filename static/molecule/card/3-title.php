@@ -1,8 +1,8 @@
 <?php /*
 Title: This is a title
 Class: .card
-Description: This is a description
 */ ?>
+
 <div class="card">
     <div class="card__header">
         <h4 class="card__title">Card Title</h4>

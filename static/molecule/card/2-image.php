@@ -1,3 +1,8 @@
+<?php /*
+Title: Card with Image
+Class: .card
+*/ ?>
+
 <div class="card">
     <img class="card__img" src="//placehold.it/400x240" alt="Card image">
     <div class="card__body">

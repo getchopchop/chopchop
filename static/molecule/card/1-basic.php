@@ -1,3 +1,8 @@
+<?php /*
+Title: Card
+Class: .card
+*/ ?>
+
 <div class="card">
     <div class="card__header">
         Card Header

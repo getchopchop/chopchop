@@ -1,3 +1,8 @@
+<?php /*
+Title: Tabs
+Class: .tabs
+*/ ?>
+
 <div class="tabs">
     <div class="is-active tabs__header"
         id="tabs2-tab1"

@@ -1,3 +1,8 @@
+<?php /*
+Title: Nav
+Class: .nav
+*/ ?>
+
 <nav>
     <ul class="nav">
         <li><a href="#">Overview</a></li>

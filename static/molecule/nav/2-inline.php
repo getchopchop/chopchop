@@ -1,3 +1,8 @@
+<?php /*
+Title: Inline Nav
+Class: .nav.nav--inline
+*/ ?>
+
 <nav>
     <ul class="nav nav--inline">
         <?php for($i=0; $i <=1; $i++) { ?>

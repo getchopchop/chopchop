@@ -1,3 +1,8 @@
+<?php /*
+Title: Scafford Form
+Class: .scafford-form
+*/ ?>
+
 <form class="scaffold-form">
     <fieldset>
 
