@@ -63,7 +63,7 @@
     }
 
     function title($title, $class, $description='') {
-	return array(
+	    return array(
             'title'=>$title,
             'class'=>$class,
             'description'=>$description
@@ -91,6 +91,7 @@
         }
 
         $data = "";
+            print_r($comments);
         foreach($comments as $comment) {
             $data = array_merge($data, spyc_load($comment));
         }
