@@ -35,7 +35,10 @@
                       <?php include('inc/nav-index.php'); ?>
                   </div>
              <?php } else {
-                 echo getBlock(getRequestPath());
+                 $options = array(
+                    'print_title' => true
+                 );
+                 echo getBlock(getRequestPath(), $options);
              }?>
             </div>
         </main>

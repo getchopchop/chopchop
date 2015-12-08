@@ -6,7 +6,7 @@
     define('TEMPLATE_PATH', realpath(__DIR__ . '/../') . '/');
 
     function getBlock($location, $options=array()) {
-        $printTitle = isset($options['print_title']) && $options['print_title'];
+
         $path = TEMPLATE_PATH . trim($location, '/');
         $files = array();
 
@@ -27,6 +27,7 @@
         ob_start();
         foreach($files as $path) {
             $_t = new TemplateHelper(parseComments(file_get_contents($path)), $options);
+            echo $_t->printTitle();
             include $path;
         }
         $contents .= ob_get_contents();
@@ -103,6 +104,7 @@
         protected $options = array();
 
         public function __construct($data = array(), $options=array()) {
+            $this->printTitle = isset($options['print_title']) && $options['print_title'];
             $this->data = $data;
             $this->options = $options;
         }
@@ -112,6 +114,23 @@
                 return $this->data[$key];
             }
             return '';
+        }
+
+        public function printTitle() {
+            if(!$this->printTitle) {
+                return '';
+            }
+            if($this->Title) {
+                $title = '<p class=cc-heading>' . $this->Title;
+                if($this->Class) {
+                    $title .= ' <code>' . $this->Class . '</code>';
+                }
+                $title .= '</p>';
+                if($this->Description) {
+                    $title .= '<p>' . $this->Description . '</p>';
+                }
+            }
+            return $title;
         }
     }
 
