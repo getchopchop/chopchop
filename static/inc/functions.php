@@ -91,7 +91,7 @@
         }
 
         $data = "";
-            print_r($comments);
+
         foreach($comments as $comment) {
             $data = array_merge($data, spyc_load($comment));
         }
