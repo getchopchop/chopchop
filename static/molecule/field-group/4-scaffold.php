@@ -1,6 +1,6 @@
 <?php /*
-Title: Scafford Form
-Class: .scafford-form
+Title: Scaffold Form
+Class: .scaffold-form
 */ ?>
 
 <form class="scaffold-form">

@@ -15,17 +15,19 @@
 // Titles with actions
 // =============================================
 
-.title--actions {
-    display: flex;
-    align-items: center;
-}
-.title--actions .title__headings {
-    flex-grow: 1;
-}
-.title--actions .title__actions {
-    flex-grow: 1;
-    text-align: right;
-    .btn {
-        margin-bottom: .2rem;
+@include breakpoint($screen-sm) {
+    .title--actions {
+        display: flex;
+        align-items: center;
+    }
+    .title--actions .title__headings {
+        flex-grow: 1;
+    }
+    .title--actions .title__actions {
+        flex-grow: 1;
+        text-align: right;
+        .btn {
+            margin-bottom: .2rem;
+        }
     }
 }
