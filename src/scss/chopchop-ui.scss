@@ -11,28 +11,28 @@ $z-200: 200;
 // Helpers
 // =============================================
 
-@import "mixins/shape";
-@import "mixins/ellipsis";
-@import "mixins/breakpoint";
-@import "mixins/grid";
-@import "mixins/list";
-@import "mixins/ratio";
+@import "mixin/shape";
+@import "mixin/ellipsis";
+@import "mixin/breakpoint";
+@import "mixin/grid";
+@import "mixin/list";
+@import "mixin/ratio";
 
 
 // =============================================
-// Utilities
+// utility
 // =============================================
 
-@import "utilities/image";
-@import "utilities/clearfix";
-@import "utilities/align";
-@import "utilities/visible";
-//@import "utilities/toggle";        NOTE:// Does this need to be removed ? It Doesn't exist
-@import "utilities/layout";
-@import "utilities/grid";
-@import "utilities/box-sizing";
-@import "utilities/z-index";
-@import "utilities/list";
+@import "utility/image";
+@import "utility/clearfix";
+@import "utility/align";
+@import "utility/visible";
+//@import "utility/toggle";        NOTE:// Does this need to be removed ? It Doesn't exist
+@import "utility/layout";
+@import "utility/grid";
+@import "utility/box-sizing";
+@import "utility/z-index";
+@import "utility/list";
 
 body {
     margin-top: 1em;
