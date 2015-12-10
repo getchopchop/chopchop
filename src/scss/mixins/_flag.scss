@@ -1,0 +1,31 @@
+// =============================================
+// Flag
+// =============================================
+
+@mixin flag {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    &__media {
+        width: 30%;
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            display: block;
+        }
+    }
+
+    &__body {
+        width: 65%;
+    }
+}
+
+// =============================================
+// Flag Reversed
+// =============================================
+
+@mixin flag--flip {
+    flex-direction: row-reverse;
+}

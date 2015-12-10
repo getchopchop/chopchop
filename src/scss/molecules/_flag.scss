@@ -3,21 +3,7 @@
 // =============================================
 
 .flag {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-}
-.flag__media {
-    width: 30%;
-
-    img {
-        width: 100%;
-        max-width: 100%;
-        display: block;
-    }
-}
-.flag__body {
-    width: 65%;
+    @include flag;
 }
 
 
@@ -26,5 +12,5 @@
 // =============================================
 
 .flag--flip {
-    flex-direction: row-reverse;
+    @include flag--flip;
 }
