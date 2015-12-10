@@ -2,29 +2,30 @@
 // Flag
 // =============================================
 
-.flag {
+@mixin flag {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
-}
-.flag__media {
-    width: 30%;
 
-    img {
-        width: 100%;
-        max-width: 100%;
-        display: block;
+    &__media {
+        width: 30%;
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            display: block;
+        }
+    }
+
+    &__body {
+        width: 65%;
     }
 }
-.flag__body {
-    width: 65%;
-}
-
 
 // =============================================
 // Flag Reversed
 // =============================================
 
-.flag--flip {
+@mixin flag--flip {
     flex-direction: row-reverse;
 }

@@ -1,0 +1,13 @@
+// =============================================
+// Pagination
+// =============================================
+
+.pagination {
+    ul {
+        @extend %u-list-inline;
+    }
+    a {
+        background-color: $lighter-grey;
+        padding: $spacing-xs $spacing-sm;
+    }
+}

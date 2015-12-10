@@ -9,79 +9,82 @@
 // Helpers
 // =============================================
 
-@import "mixins/accordion-tab";
-@import "mixins/button";
-@import "mixins/breakpoint";
-@import "mixins/ellipsis";
-@import "mixins/grid";
-@import "mixins/list";
-@import "mixins/ratio";
-@import "mixins/shape";
+@import "mixin/accordion-tab";
+@import "mixin/button";
+@import "mixin/breakpoint";
+@import "mixin/card";
+@import "mixin/ellipsis";
+@import "mixin/flag";
+@import "mixin/grid";
+@import "mixin/list";
+@import "mixin/ratio";
+@import "mixin/shape";
+@import "mixin/table";
 
 
 // =============================================
-// Utilities
+// utility
 // =============================================
 
-@import "utilities/align";
-@import "utilities/box-sizing";
-@import "utilities/clearfix";
-@import "utilities/color";
-@import "utilities/container";
-@import "utilities/embed-container";
-@import "utilities/grid";
-@import "utilities/image";
-@import "utilities/layout";
-@import "utilities/list";
-@import "utilities/visible";
-@import "utilities/z-index";
-
-
-// =============================================
-// Atoms
-// =============================================
-
-@import "atoms/body";
-@import "atoms/button";
-@import "atoms/form";
-@import "atoms/heading";
-@import "atoms/horizontal-rule";
-@import "atoms/icon";
-@import "atoms/image";
-@import "atoms/overlay";
-@import "atoms/table";
-@import "atoms/tag";
-@import "atoms/text";
+@import "utility/align";
+@import "utility/box-sizing";
+@import "utility/clearfix";
+@import "utility/color";
+@import "utility/container";
+@import "utility/embed-container";
+@import "utility/grid";
+@import "utility/image";
+@import "utility/layout";
+@import "utility/list";
+@import "utility/visible";
+@import "utility/z-index";
 
 
 // =============================================
-// Molecules
+// atom
 // =============================================
 
-@import "molecules/accordion-tab";
-@import "molecules/alert";
-@import "molecules/breadcrumb";
-@import "molecules/card";
-@import "molecules/drawer";
-@import "molecules/flag";
-@import "molecules/field-group";
-@import "molecules/title";
-@import "molecules/inline-form";
-@import "molecules/modal";
-@import "molecules/nav";
-@import "molecules/pagination";
+@import "atom/body";
+@import "atom/button";
+@import "atom/form";
+@import "atom/heading";
+@import "atom/horizontal-rule";
+@import "atom/icon";
+@import "atom/image";
+@import "atom/overlay";
+@import "atom/table";
+@import "atom/tag";
+@import "atom/text";
+
+
+// =============================================
+// molecule
+// =============================================
+
+@import "molecule/accordion-tab";
+@import "molecule/alert";
+@import "molecule/breadcrumb";
+@import "molecule/card";
+@import "molecule/drawer";
+@import "molecule/flag";
+@import "molecule/field-group";
+@import "molecule/title";
+@import "molecule/inline-form";
+@import "molecule/modal";
+@import "molecule/nav";
+@import "molecule/pagination";
 
 
 // =============================================
 // Organism
 // =============================================
 
-@import "organisms/header";
-@import "organisms/footer";
+@import "organism/header";
+@import "organism/footer";
 
 
 // =============================================
-// Templates
+// template
 // =============================================
 
-@import "templates/homepage";
+@import "template/homepage";

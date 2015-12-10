@@ -1,0 +1,73 @@
+// =============================================
+// Table
+// =============================================
+
+@mixin table {
+    th, td {
+        padding: $spacing;
+        vertical-align: top;
+        border-top: 1px solid $light-grey;
+    }
+
+    th {
+        vertical-align: bottom;
+        border-bottom: 2px solid $light-grey;
+    }
+
+    caption {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        color: $grey;
+        text-align: left;
+    }
+
+    thead th {
+        border-top: 0;
+    }
+
+    table > tbody {
+        border-bottom: 1px solid $light-grey;
+    }
+}
+
+
+// =============================================
+// Condensed Table
+// =============================================
+
+@mixin table--condensed {
+    th,
+    td {
+        padding: $spacing-xs;
+    }
+}
+
+
+// =============================================
+// Bordered Table
+// =============================================
+
+@mixin table--bordered {
+    border: 1px solid $light-grey;
+
+    th,
+    td {
+        border: 1px solid $light-grey;
+    }
+
+    > thead th,
+    > thead td {
+       border-bottom-width: 2px;
+    }
+}
+
+
+// =============================================
+// Striped Table
+// =============================================
+
+@mixin table--striped {
+    > tbody > tr:nth-child(odd) {
+        background-color: $lighter-grey;
+    }
+}

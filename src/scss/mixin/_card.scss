@@ -2,7 +2,7 @@
 // Card
 // =============================================
 
-.card {
+@mixin card {
     margin-bottom: $spacing;
 
     &__img {
@@ -36,7 +36,7 @@
 // Card with border
 // =============================================
 
-.card--bordered {
+@mixin card--bordered {
     border: 1px solid $light-grey;
 
     .card__header {
