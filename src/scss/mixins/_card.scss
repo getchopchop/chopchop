@@ -1,0 +1,49 @@
+// =============================================
+// Card
+// =============================================
+
+@mixin card {
+    margin-bottom: $spacing;
+
+    &__img {
+        @extend %u-img-responsive;
+    }
+
+    &__header,
+    &__body,
+    &__footer {
+        padding: $spacing-sm $spacing;
+
+        > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__header,
+    &__footer {
+        background-color: $lighter-grey;
+    }
+
+    &__title,
+    &__subtitle {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+
+// =============================================
+// Card with border
+// =============================================
+
+@mixin card--bordered {
+    border: 1px solid $light-grey;
+
+    .card__header {
+        border-bottom: 1px solid $light-grey;
+    }
+
+    .card__footer {
+        border-top: 1px solid $light-grey;
+    }
+}
