@@ -158,8 +158,10 @@ var ChopChop = (function($, ChopChop) {
                 // Process target
                 if (action === Action.ACTIVATE) {
                     $current.addClass('is-active').removeClass('is-inactive');
+                    $current.trigger('chopchop:activate');
                 } else {
                     $current.addClass('is-inactive').removeClass('is-active');
+                    $current.trigger('chopchop:deactivate');
                 }
 
                 // Chain onto targets
