@@ -2,17 +2,17 @@
 // Icons
 // =============================================
 
- [class^="icon-"], [class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
      font-size: 1em;
- }
+}
 
 
  // =============================================
  // Icons Small
  // =============================================
 
- .icon--sm,
- %icon--sm {
+.icon--sm,
+%icon--sm {
      font-size: $font-size-xs;
  }
 
