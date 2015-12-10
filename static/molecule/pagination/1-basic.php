@@ -8,7 +8,6 @@ Class: .pagination
         <li>
             <a href="#" aria-label="Previous" class="disabled">
                 <i class="icon-angle-left"></i>
-                <span aria-hidden="true">&laquo;</span>
             </a>
         </li>
         <li><a href="#" class="active">1</a></li>
@@ -19,7 +18,6 @@ Class: .pagination
         <li>
             <a href="#" aria-label="Next">
                 <i class="icon-angle-right"></i>
-                <span aria-hidden="true">&raquo;</span>
             </a>
         </li>
     </ul>
