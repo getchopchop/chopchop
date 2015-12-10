@@ -114,26 +114,3 @@ table {
         }
     }
 }
-
-
-// =============================================
-// Table Stacked
-// =============================================
-
-.table--stacked {
-    thead {
-        display: none;
-    }
-    tr,
-    th,
-    td {
-        display: block;
-    }
-    td {
-        border-top: none;
-    }
-    tr td:first-child {
-        border-top: 1px solid #ddd;
-        font-weight: bold;
-    }
-}
