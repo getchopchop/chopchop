@@ -11,7 +11,9 @@
 		margin-right: $spacing-sm;
 
 		&:after {
-			content: ">";
+			content: '\e811';
+			font-family: fontello;
+			display: inline-block;
 		}
 	}
 	a {
