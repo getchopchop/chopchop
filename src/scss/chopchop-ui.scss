@@ -27,7 +27,6 @@ $z-200: 200;
 @import "utility/clearfix";
 @import "utility/align";
 @import "utility/visible";
-//@import "utility/toggle";        NOTE:// Does this need to be removed ? It Doesn't exist
 @import "utility/layout";
 @import "utility/grid";
 @import "utility/box-sizing";
@@ -35,7 +34,7 @@ $z-200: 200;
 @import "utility/list";
 
 body {
-    margin-top: 1em;
+    margin: 1em 0;
 }
 
 // =============================================
@@ -45,7 +44,7 @@ body {
 .site-navigation {
     z-index: $z-100;
 }
-.cc-readout {
+.cc-toolbar {
     z-index: $z-200;
 }
 
@@ -177,17 +176,9 @@ body {
 // Navigation Toggle
 // =============================================
 
-.site-navigation__toggle {
-    position: fixed;
-    display: block;
-    bottom: 0;
-    left: 0;
-    padding: .2em .6em;
-
-    &:hover {
-        color: $white;
-        background-color: lighten($black, 20%);
-    }
+.site-navigation__toggle:hover {
+    color: $white;
+    background-color: lighten($black, 20%);
 }
 
 
@@ -266,43 +257,54 @@ body {
     color: $white;
     background-color: $black;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 3px 8px;
 }
 
-.cc-readout--mq {
+.cc-toolbar {
+    display: flex;
     position: fixed;
+    left: 0;
     bottom: 0;
     right: 0;
-    color: $white;
     background-color: magenta;
-    padding: 0;
-
-    &:after {
-        display: block;
-        padding: 5px 10px;
-        content: "$screen-xs < #{$screen-xs}";
-
-        @include breakpoint($screen-xs) {
-            background-color: red;
-            content: "$screen-xs > #{$screen-xs}";
-        }
-        @include breakpoint($screen-sm) {
-            background-color: green;
-            content: "$screen-sm > #{$screen-sm}";
-        }
-        @include breakpoint($screen-md) {
-            background-color: blue;
-            content: "$screen-md > #{$screen-md}";
-        }
-        @include breakpoint($screen-lg) {
-            background-color: yellow;
-            color: $black;
-            content: "$screen-lg > #{$screen-lg}";
-        }
-        @include breakpoint($screen-xl) {
-            background-color: hotpink;
-            color: $white;
-            content: "$screen-xl > #{$screen-xl}";
-        }
+    
+    @include breakpoint($screen-xs) {
+        background-color: red;
+    }
+    @include breakpoint($screen-sm) {
+        background-color: green;
+    }
+    @include breakpoint($screen-md) {
+        background-color: blue;
+    }
+    @include breakpoint($screen-lg) {
+        background-color: yellow;
+    }
+    @include breakpoint($screen-xl) {
+        background-color: hotpink;
+    }
+    
+    > :last-child {
+        margin-left: auto;
+    }
+    
+}
+.cc-readout--mq:after {
+    content: "$screen-xs < #{$screen-xs}";
+    
+    @include breakpoint($screen-xs) {
+        content: "$screen-xs > #{$screen-xs}";
+    }
+    @include breakpoint($screen-sm) {
+        content: "$screen-sm > #{$screen-sm}";
+    }
+    @include breakpoint($screen-md) {
+        content: "$screen-md > #{$screen-md}";
+    }
+    @include breakpoint($screen-lg) {
+        content: "$screen-lg > #{$screen-lg}";
+    }
+    @include breakpoint($screen-xl) {
+        content: "$screen-xl > #{$screen-xl}";
     }
 }

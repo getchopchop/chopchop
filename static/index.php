@@ -9,9 +9,11 @@
     <?php include('inc/styles.php'); ?>
 </head>
 <body>
-
-    <span class="cc-readout cc-readout--mq"></span>
-    <a href="#" class="site-navigation__toggle cc-readout" data-action="toggle" data-target="navigation">Toggle Nav</a>
+    
+    <div class="cc-toolbar">
+        <a href="#" class="site-navigation__toggle cc-readout" data-action="toggle" data-target="navigation">Menu</a>
+        <span class="cc-readout cc-readout--mq"></span>
+    </div>
 
     <div class="site-wrapper">
 
