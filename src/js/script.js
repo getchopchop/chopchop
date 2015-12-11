@@ -12,8 +12,21 @@
         // Initialise toggles globally
         // =============================================
 
-        //var toggle = window.toggle = new ChopChop.Toggle('body');
         ChopChop.init();
+
+
+        // =============================================
+        // Overlay
+        // =============================================
+
+        $('#overlay').on('chopchop:activate', function() {
+            $body.addClass('overlay-is-active');
+        });
+
+        $('#overlay').on('chopchop:deactivate', function() {
+            $body.removeClass('overlay-is-active');
+        });
+        
 
     });
 }(jQuery));
