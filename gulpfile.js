@@ -7,10 +7,9 @@ var project = {
     name: 'chopchop',
     source: './src',
     dist: './build',
-    scss: 'scss',
-    css: 'css',
-    js: 'js',
-    images: 'img',
+    styles: 'styles',
+    scripts: 'scripts',
+    images: 'images',
     fonts: 'fonts',
     vendor: 'vendor',
     bower: './build/bower_components',
@@ -65,12 +64,12 @@ var dev = plugin.util.env.dev,
 // =============================================
 
 var scss = {
-        source: project.source + '/' + project.scss + '/**/*.scss',
-        build: project.dist + '/' + project.css
+        source: project.source + '/' + project.styles + '/**/*.scss',
+        build: project.dist + '/' + project.styles
     },
     js = {
-        source: project.source + '/' + project.js + '/**/*.js',
-        build: project.dist + '/' + project.js
+        source: project.source + '/' + project.scripts + '/**/*.js',
+        build: project.dist + '/' + project.scripts
     },
     img = {
         source: project.source + '/' + project.images + '/**/*.*',
