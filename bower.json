@@ -1,11 +1,9 @@
 {
-  "name": "Kettle",
+  "name": "chopchop",
   "version": "1.0.0",
-  "homepage": "https://github.com/JakeCobley/Kettle",
-  "authors": [
-    "Jake Cobley <jake@cobe.ly>"
-  ],
-  "description": "Kettle is a boilerplate gulpfile.js for use in front-end projects.",
+  "homepage": "https://gitlab.iweb.co.uk/labs/chopchop/tree/master#README",
+  "author": "iWeb http://www.iweb.co.uk",
+  "description": "Chop Chop is a lightweight frontend pattern primer.",
   "main": "gulpfile.js",
   "keywords": [
     "npm",
@@ -17,7 +15,12 @@
     "fonts",
     "bower"
   ],
-  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
   "ignore": [
     "**/.*",
     "node_modules",
