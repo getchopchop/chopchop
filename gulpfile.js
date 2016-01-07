@@ -99,16 +99,7 @@ gulp.task('bower', require('./gulp-tasks/bower')(gulp, nodeModule, path));
 
 gulp.task('fonts', require('./gulp-tasks/fonts')(gulp, nodeModule, path));
 
-// =============================================
-// VENDOR `gulp vendor`
-// moves vendor to build directory
-// =============================================
-
-gulp.task('vendor', function() {
-    return gulp.src(path.vendor.source)
-        .pipe(nodeModule.changed(path.vendor.build))
-        .pipe(gulp.dest(path.vendor.build));
-});
+gulp.task('vendor', require('./gulp-tasks/vendor')(gulp, nodeModule, path));
 
 // =============================================
 // IMG `gulp img`
