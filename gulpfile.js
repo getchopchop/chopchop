@@ -4,22 +4,24 @@
 // **this is the only section you should need to edit
 // =============================================
 
-var name = 'chopchop',          // Used for DYN
-    sourceDirectory = './src',
-    buildDirectory = './build',
-    scssFolder = 'scss',
-    cssFolder = 'css',
-    jsFolder = 'js',
-    imagesFolder = 'img',
-    fontsFolder = 'fonts',
-    vendorFolder = 'vendor',
-    bowerFolder = './build/bower_components',
-    autoprefixer = ['last 2 versions'],
-    imageOptimisation = {
+var project = {
+    name: 'chopchop',
+    source: './src',
+    dist: './build',
+    scss: 'scss',
+    css: 'css',
+    js: 'js',
+    images: 'img',
+    fonts: 'fonts',
+    vendor: 'vendor',
+    bower: './build/bower_components',
+    autoprefixer: ['last 2 versions'],
+    imageOptimisation: {
         optimizationLevel: 3,   // PNG (Between 0 - 7)
         progressive: true,      // JPG
         interlaced: true        // GIF
-    };
+    }
+};
 
 // =============================================
 // Dependencies
@@ -56,29 +58,29 @@ var dev = plugin.util.env.dev,
 // =============================================
 
 var scss = {
-        source: sourceDirectory + '/' + scssFolder + '/**/*.scss',
-        build: buildDirectory + '/' + cssFolder
+        source: project.source + '/' + project.scss + '/**/*.scss',
+        build: project.dist + '/' + project.css
     },
     js = {
         source: [
-            sourceDirectory + '/' + jsFolder + '/**/*.js',
-            '!' + sourceDirectory + '/' + jsFolder + '/**/_*.js',
+            project.source + '/' + project.js + '/**/*.js',
+            '!' + project.source + '/' + project.js + '/**/_*.js',
         ],
-        build: buildDirectory + '/' + jsFolder
+        build: project.dist + '/' + project.js
     },
     img = {
-        source: sourceDirectory + '/' + imagesFolder + '/**/*.*',
-        build: buildDirectory + '/' + imagesFolder
+        source: project.source + '/' + project.images + '/**/*.*',
+        build: project.dist + '/' + project.images
     },
     fonts = {
-        source: sourceDirectory + '/' + fontsFolder + '/**/*.*',
-        build: buildDirectory + '/' + fontsFolder
+        source: project.source + '/' + project.fonts + '/**/*.*',
+        build: project.dist + '/' + project.fonts
     },
     vendor = {
-        source: sourceDirectory + '/' + vendorFolder + '/**/*.*',
-        build: buildDirectory + '/' + vendorFolder
+        source: project.source + '/' + project.vendor + '/**/*.*',
+        build: project.dist + '/' + project.vendor
     },
-    bower = './' + bowerFolder;
+    bower = './' + project.bower;
 
 // =============================================
 // BROWSER SYNC `gulp browser-sync`
@@ -89,7 +91,7 @@ var scss = {
 gulp.task('browser-sync', function() {
     if(dev) {
         plugin.browserSync({
-	    proxy: 'http://' + name + '.' + plugin.util.env.name + '.dyn.iweb.co.uk/'
+	    proxy: 'http://' + project.name + '.' + plugin.util.env.name + '.dyn.iweb.co.uk/'
         });
     }
 });
@@ -123,7 +125,7 @@ gulp.task('fonts', function() {
 gulp.task('vendor', function() {
     return gulp.src(vendor.source)
         .pipe(plugin.changed(vendor.build))
-        .pipe(gulp.dest(vendor.build))
+        .pipe(gulp.dest(vendor.build));
 });
 
 // =============================================
@@ -134,7 +136,7 @@ gulp.task('vendor', function() {
 gulp.task('img', function() {
     return gulp.src(img.source)
         .pipe(plugin.changed(img.build))
-        .pipe(plugin.util.env.production ? plugin.imageMin(imageOptimisation) : plugin.util.noop())
+        .pipe(plugin.util.env.production ? plugin.imageMin(project.imageOptimisation) : plugin.util.noop())
         .pipe(gulp.dest(img.build));
 });
 
@@ -162,7 +164,7 @@ gulp.task('css', function() {
         .pipe(plugin.clipEmptyFiles())
         .pipe(plugin.util.env.dev ? plugin.sourcemaps.init() : plugin.util.noop())
         .pipe(plugin.sass.sync().on('error', plugin.sass.logError))
-        .pipe(plugin.autoPrefixer(autoprefixer))
+        .pipe(plugin.autoPrefixer(project.autoprefixer))
         .pipe(plugin.util.env.dev ? plugin.sourcemaps.write() : plugin.util.noop())
         .pipe(plugin.util.env.production ? plugin.combineMq() : plugin.util.noop())
         .pipe(plugin.util.env.production ? plugin.cssNano() : plugin.util.noop())
@@ -176,7 +178,7 @@ gulp.task('css', function() {
 // =============================================
 
 gulp.task('clean', function(cb) {
-    return plugin.del([buildDirectory], cb);
+    return plugin.del([project.dist], cb);
 });
 
 // =============================================
