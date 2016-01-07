@@ -105,23 +105,7 @@ gulp.task('images', require('./gulp-tasks/images')(gulp, nodeModule, path, optio
 
 gulp.task('scripts', require('./gulp-tasks/scripts')(gulp, nodeModule, path));
 
-// =============================================
-// CSS `gulp css`
-// compiles scss to css, autoprefixer, combines media queries and minifies if `--production`
-// =============================================
-
-gulp.task('css', function() {
-    return gulp.src(path.styles.source)
-        .pipe(nodeModule.clipEmptyFiles())
-        .pipe(nodeModule.util.env.dev ? nodeModule.sourcemaps.init() : nodeModule.util.noop())
-        .pipe(nodeModule.sass.sync().on('error', nodeModule.sass.logError))
-        .pipe(nodeModule.autoPrefixer(option.autoprefixer))
-        .pipe(nodeModule.util.env.dev ? nodeModule.sourcemaps.write() : nodeModule.util.noop())
-        .pipe(nodeModule.util.env.production ? nodeModule.combineMq() : nodeModule.util.noop())
-        .pipe(nodeModule.util.env.production ? nodeModule.cssNano() : nodeModule.util.noop())
-        .pipe(gulp.dest(path.styles.build))
-        .pipe(nodeModule.util.env.dev ? nodeModule.browserSync.reload({stream: true}) : nodeModule.util.noop());
-});
+gulp.task('styles', require('./gulp-tasks/styles')(gulp, nodeModule, path, option));
 
 // =============================================
 // Clean `gulp clean
@@ -138,7 +122,7 @@ gulp.task('clean', function(cb) {
 // =============================================
 
 gulp.task('watch', ['browser-sync'], function(cb) {
-    gulp.watch(path.styles.source, ['css']);
+    gulp.watch(path.styles.source, ['styles']);
     gulp.watch(path.scripts.source, ['scripts']);
     gulp.watch(path.images.source, ['images']);
     gulp.watch(path.fonts.source, ['fonts']);
@@ -151,7 +135,7 @@ gulp.task('watch', ['browser-sync'], function(cb) {
 // =============================================
 
 gulp.task('build', function(cb) {
-    nodeModule.runSequence('clean', ['bower', 'css', 'scripts', 'images', 'fonts', 'vendor'], cb);
+    nodeModule.runSequence('clean', ['bower', 'styles', 'scripts', 'images', 'fonts', 'vendor'], cb);
 });
 
 // =============================================
