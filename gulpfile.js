@@ -12,7 +12,7 @@ var project = {
     images: 'images',
     fonts: 'fonts',
     vendor: 'vendor',
-    bower: './build/bower_components',
+    bower: 'bower_components',
 };
 
 // =============================================
@@ -86,7 +86,7 @@ var path = {
         source: project.source + '/' + project.vendor + '/**/*.*',
         build: project.dist + '/' + project.vendor
     },
-    bower: './' + project.bower
+    bower: project.dist + '/' + project.bower
 };
 
 // =============================================
@@ -95,7 +95,7 @@ var path = {
 
 gulp.task('browser-sync', require('./gulp-tasks/browser-sync')(nodeModule, project, enviroment));
 
-gulp.task('bower', require('./gulp-tasks/bower')(gulp, nodeModule, project));
+gulp.task('bower', require('./gulp-tasks/bower')(gulp, nodeModule, path));
 
 gulp.task('fonts', require('./gulp-tasks/fonts')(gulp, nodeModule, path));
 
