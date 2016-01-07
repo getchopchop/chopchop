@@ -101,17 +101,7 @@ gulp.task('fonts', require('./gulp-tasks/fonts')(gulp, nodeModule, path));
 
 gulp.task('vendor', require('./gulp-tasks/vendor')(gulp, nodeModule, path));
 
-// =============================================
-// IMG `gulp img`
-// minifys images
-// =============================================
-
-gulp.task('img', function() {
-    return gulp.src(path.images.source)
-        .pipe(nodeModule.changed(path.images.build))
-        .pipe(nodeModule.util.env.production ? nodeModule.imageMin(option.imageOptimisation) : nodeModule.util.noop())
-        .pipe(gulp.dest(path.images.build));
-});
+gulp.task('images', require('./gulp-tasks/images')(gulp, nodeModule, path, option));
 
 // =============================================
 // JS `gulp js`
