@@ -4,8 +4,13 @@
 
 .inline-form {
     display: flex;
-
-    >*:last-child {
+    
+    > *:first-child {
+        flex-shrink: 1;
+        flex-grow: 1;
+    }
+    
+    > *:last-child {
         flex-shrink: 0;
     }
 }
