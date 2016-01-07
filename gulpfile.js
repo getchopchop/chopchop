@@ -95,16 +95,7 @@ gulp.task('browser-sync', require('./gulp-tasks/browser-sync')(nodeModule, proje
 
 gulp.task('bower', require('./gulp-tasks/bower')(gulp, nodeModule, project));
 
-// =============================================
-// FONTS `gulp fonts`
-// moves fonts to build directory
-// =============================================
-
-gulp.task('fonts', function() {
-    return gulp.src(fonts.source)
-        .pipe(nodeModule.changed(fonts.build))
-        .pipe(gulp.dest(fonts.build));
-});
+gulp.task('fonts', require('./gulp-tasks/fonts')(gulp, nodeModule, fonts));
 
 // =============================================
 // VENDOR `gulp vendor`
