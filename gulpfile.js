@@ -107,14 +107,7 @@ gulp.task('scripts', require('./gulp-tasks/scripts')(gulp, nodeModule, path));
 
 gulp.task('styles', require('./gulp-tasks/styles')(gulp, nodeModule, path, option));
 
-// =============================================
-// Clean `gulp clean
-// destroys the build directory
-// =============================================
-
-gulp.task('clean', function(cb) {
-    return nodeModule.del([project.dist], cb);
-});
+gulp.task('clean', require('./gulp-tasks/clean')(nodeModule, project));
 
 // =============================================
 // Watch 'gulp watch'
