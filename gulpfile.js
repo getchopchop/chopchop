@@ -7,9 +7,10 @@ var project = {
     name: 'chopchop',
     source: './src',
     dist: './build',
-    styles: 'styles',
-    scripts: 'scripts',
-    images: 'images',
+    scss: 'scss',
+    css: 'css',
+    js: 'js',
+    images: 'img',
     fonts: 'fonts',
     vendor: 'vendor',
     bower: 'bower_components',
@@ -67,12 +68,12 @@ var enviroment = {
 
 var path = {
     styles: {
-        source: project.source + '/' + project.styles + '/**/*.scss',
-        build: project.dist + '/' + project.styles
+        source: project.source + '/' + project.scss + '/**/*.scss',
+        build: project.dist + '/' + project.css
     },
     scripts: {
-        source: project.source + '/' + project.scripts + '/**/*.js',
-        build: project.dist + '/' + project.scripts
+        source: project.source + '/' + project.js + '/**/*.js',
+        build: project.dist + '/' + project.js
     },
     images: {
         source: project.source + '/' + project.images + '/**/*.*',
