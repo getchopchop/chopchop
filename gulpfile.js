@@ -65,27 +65,29 @@ var enviroment = {
 // Paths
 // =============================================
 
-var scss = {
+var path = {
+    styles: {
         source: project.source + '/' + project.styles + '/**/*.scss',
         build: project.dist + '/' + project.styles
     },
-    js = {
+    scripts: {
         source: project.source + '/' + project.scripts + '/**/*.js',
         build: project.dist + '/' + project.scripts
     },
-    img = {
+    images: {
         source: project.source + '/' + project.images + '/**/*.*',
         build: project.dist + '/' + project.images
     },
-    fonts = {
+    fonts: {
         source: project.source + '/' + project.fonts + '/**/*.*',
         build: project.dist + '/' + project.fonts
     },
-    vendor = {
+    vendor: {
         source: project.source + '/' + project.vendor + '/**/*.*',
         build: project.dist + '/' + project.vendor
     },
-    bower = './' + project.bower;
+    bower: './' + project.bower
+};
 
 // =============================================
 // Gulp Tasks
@@ -95,7 +97,7 @@ gulp.task('browser-sync', require('./gulp-tasks/browser-sync')(nodeModule, proje
 
 gulp.task('bower', require('./gulp-tasks/bower')(gulp, nodeModule, project));
 
-gulp.task('fonts', require('./gulp-tasks/fonts')(gulp, nodeModule, fonts));
+gulp.task('fonts', require('./gulp-tasks/fonts')(gulp, nodeModule, path));
 
 // =============================================
 // VENDOR `gulp vendor`
@@ -103,9 +105,9 @@ gulp.task('fonts', require('./gulp-tasks/fonts')(gulp, nodeModule, fonts));
 // =============================================
 
 gulp.task('vendor', function() {
-    return gulp.src(vendor.source)
-        .pipe(nodeModule.changed(vendor.build))
-        .pipe(gulp.dest(vendor.build));
+    return gulp.src(path.vendor.source)
+        .pipe(nodeModule.changed(path.vendor.build))
+        .pipe(gulp.dest(path.vendor.build));
 });
 
 // =============================================
@@ -114,10 +116,10 @@ gulp.task('vendor', function() {
 // =============================================
 
 gulp.task('img', function() {
-    return gulp.src(img.source)
-        .pipe(nodeModule.changed(img.build))
+    return gulp.src(path.images.source)
+        .pipe(nodeModule.changed(path.images.build))
         .pipe(nodeModule.util.env.production ? nodeModule.imageMin(option.imageOptimisation) : nodeModule.util.noop())
-        .pipe(gulp.dest(img.build));
+        .pipe(gulp.dest(path.images.build));
 });
 
 // =============================================
@@ -126,11 +128,11 @@ gulp.task('img', function() {
 // =============================================
 
 gulp.task('js', function() {
-    return gulp.src(js.source)
+    return gulp.src(path.scripts.source)
         .pipe(nodeModule.jsHint())
         .pipe(nodeModule.jsHint.reporter('default'))
         .pipe(nodeModule.util.env.production ? nodeModule.uglify() : nodeModule.util.noop())
-        .pipe(gulp.dest(js.build))
+        .pipe(gulp.dest(path.scripts.build))
         .pipe(nodeModule.util.env.dev ? nodeModule.browserSync.reload({stream: true}) : nodeModule.util.noop());
 });
 
@@ -140,7 +142,7 @@ gulp.task('js', function() {
 // =============================================
 
 gulp.task('css', function() {
-    return gulp.src(scss.source)
+    return gulp.src(path.styles.source)
         .pipe(nodeModule.clipEmptyFiles())
         .pipe(nodeModule.util.env.dev ? nodeModule.sourcemaps.init() : nodeModule.util.noop())
         .pipe(nodeModule.sass.sync().on('error', nodeModule.sass.logError))
@@ -148,7 +150,7 @@ gulp.task('css', function() {
         .pipe(nodeModule.util.env.dev ? nodeModule.sourcemaps.write() : nodeModule.util.noop())
         .pipe(nodeModule.util.env.production ? nodeModule.combineMq() : nodeModule.util.noop())
         .pipe(nodeModule.util.env.production ? nodeModule.cssNano() : nodeModule.util.noop())
-        .pipe(gulp.dest(scss.build))
+        .pipe(gulp.dest(path.styles.build))
         .pipe(nodeModule.util.env.dev ? nodeModule.browserSync.reload({stream: true}) : nodeModule.util.noop());
 });
 
@@ -167,11 +169,11 @@ gulp.task('clean', function(cb) {
 // =============================================
 
 gulp.task('watch', ['browser-sync'], function(cb) {
-    gulp.watch(scss.source, ['css']);
-    gulp.watch(js.source, ['js']);
-    gulp.watch(img.source, ['img']);
-    gulp.watch(fonts.source, ['fonts']);
-    gulp.watch(vendor.source, ['vendor']);
+    gulp.watch(path.styles.source, ['css']);
+    gulp.watch(path.scripts.source, ['js']);
+    gulp.watch(path.images.source, ['img']);
+    gulp.watch(path.fonts.source, ['fonts']);
+    gulp.watch(path.vendor.source, ['vendor']);
 });
 
 // =============================================
