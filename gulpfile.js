@@ -34,7 +34,7 @@ var option = {
 // =============================================
 
 var gulp = require('gulp'),
-    plugin = {
+    nodeModule = {
         util:               require('gulp-util'),
         browserSync:        require('browser-sync'),
         bower:              require('gulp-bower'),
@@ -56,8 +56,8 @@ var gulp = require('gulp'),
 // Enviroment Variables
 // =============================================
 
-var dev = plugin.util.env.dev,
-    production = plugin.util.env.production;
+var dev = nodeModule.util.env.dev,
+    production = nodeModule.util.env.production;
 
 // =============================================
 // Paths
@@ -93,8 +93,8 @@ var scss = {
 
 gulp.task('browser-sync', function() {
     if(dev) {
-        plugin.browserSync({
-	    proxy: 'http://' + project.name + '.' + plugin.util.env.name + '.dyn.iweb.co.uk/'
+        nodeModule.browserSync({
+	    proxy: 'http://' + project.name + '.' + nodeModule.util.env.name + '.dyn.iweb.co.uk/'
         });
     }
 });
@@ -105,7 +105,7 @@ gulp.task('browser-sync', function() {
 // =============================================
 
 gulp.task('bower', function() {
-    return plugin.bower()
+    return nodeModule.bower()
         .pipe(gulp.dest(bower));
 });
 
@@ -116,7 +116,7 @@ gulp.task('bower', function() {
 
 gulp.task('fonts', function() {
     return gulp.src(fonts.source)
-        .pipe(plugin.changed(fonts.build))
+        .pipe(nodeModule.changed(fonts.build))
         .pipe(gulp.dest(fonts.build));
 });
 
@@ -127,7 +127,7 @@ gulp.task('fonts', function() {
 
 gulp.task('vendor', function() {
     return gulp.src(vendor.source)
-        .pipe(plugin.changed(vendor.build))
+        .pipe(nodeModule.changed(vendor.build))
         .pipe(gulp.dest(vendor.build));
 });
 
@@ -138,8 +138,8 @@ gulp.task('vendor', function() {
 
 gulp.task('img', function() {
     return gulp.src(img.source)
-        .pipe(plugin.changed(img.build))
-        .pipe(plugin.util.env.production ? plugin.imageMin(option.imageOptimisation) : plugin.util.noop())
+        .pipe(nodeModule.changed(img.build))
+        .pipe(nodeModule.util.env.production ? nodeModule.imageMin(option.imageOptimisation) : nodeModule.util.noop())
         .pipe(gulp.dest(img.build));
 });
 
@@ -150,11 +150,11 @@ gulp.task('img', function() {
 
 gulp.task('js', function() {
     return gulp.src(js.source)
-        .pipe(plugin.jsHint())
-        .pipe(plugin.jsHint.reporter('default'))
-        .pipe(plugin.util.env.production ? plugin.uglify() : plugin.util.noop())
+        .pipe(nodeModule.jsHint())
+        .pipe(nodeModule.jsHint.reporter('default'))
+        .pipe(nodeModule.util.env.production ? nodeModule.uglify() : nodeModule.util.noop())
         .pipe(gulp.dest(js.build))
-        .pipe(plugin.util.env.dev ? plugin.browserSync.reload({stream: true}) : plugin.util.noop());
+        .pipe(nodeModule.util.env.dev ? nodeModule.browserSync.reload({stream: true}) : nodeModule.util.noop());
 });
 
 // =============================================
@@ -164,15 +164,15 @@ gulp.task('js', function() {
 
 gulp.task('css', function() {
     return gulp.src(scss.source)
-        .pipe(plugin.clipEmptyFiles())
-        .pipe(plugin.util.env.dev ? plugin.sourcemaps.init() : plugin.util.noop())
-        .pipe(plugin.sass.sync().on('error', plugin.sass.logError))
-        .pipe(plugin.autoPrefixer(option.autoprefixer))
-        .pipe(plugin.util.env.dev ? plugin.sourcemaps.write() : plugin.util.noop())
-        .pipe(plugin.util.env.production ? plugin.combineMq() : plugin.util.noop())
-        .pipe(plugin.util.env.production ? plugin.cssNano() : plugin.util.noop())
+        .pipe(nodeModule.clipEmptyFiles())
+        .pipe(nodeModule.util.env.dev ? nodeModule.sourcemaps.init() : nodeModule.util.noop())
+        .pipe(nodeModule.sass.sync().on('error', nodeModule.sass.logError))
+        .pipe(nodeModule.autoPrefixer(option.autoprefixer))
+        .pipe(nodeModule.util.env.dev ? nodeModule.sourcemaps.write() : nodeModule.util.noop())
+        .pipe(nodeModule.util.env.production ? nodeModule.combineMq() : nodeModule.util.noop())
+        .pipe(nodeModule.util.env.production ? nodeModule.cssNano() : nodeModule.util.noop())
         .pipe(gulp.dest(scss.build))
-        .pipe(plugin.util.env.dev ? plugin.browserSync.reload({stream: true}) : plugin.util.noop());
+        .pipe(nodeModule.util.env.dev ? nodeModule.browserSync.reload({stream: true}) : nodeModule.util.noop());
 });
 
 // =============================================
@@ -181,7 +181,7 @@ gulp.task('css', function() {
 // =============================================
 
 gulp.task('clean', function(cb) {
-    return plugin.del([project.dist], cb);
+    return nodeModule.del([project.dist], cb);
 });
 
 // =============================================
@@ -203,7 +203,7 @@ gulp.task('watch', ['browser-sync'], function(cb) {
 // =============================================
 
 gulp.task('build', function(cb) {
-    plugin.runSequence('clean', ['bower', 'css', 'js', 'img', 'fonts', 'vendor'], cb);
+    nodeModule.runSequence('clean', ['bower', 'css', 'js', 'img', 'fonts', 'vendor'], cb);
 });
 
 // =============================================
@@ -212,5 +212,5 @@ gulp.task('build', function(cb) {
 // =============================================
 
 gulp.task('default', function(cb) {
-    plugin.runSequence('build', 'watch', cb);
+    nodeModule.runSequence('build', 'watch', cb);
 });
