@@ -38,7 +38,7 @@ var gulp = require('gulp'),
         clipEmptyFiles:     require('gulp-clip-empty-files'),
         combineMq:          require('gulp-combine-mq'),
         jsHint:             require('gulp-jshint'),
-        minifyCss:          require('gulp-minify-css'),
+        cssNano:            require('gulp-cssnano'),
         uglify:             require('gulp-uglify'),
         changed:            require('gulp-changed'),
         sourcemaps:         require('gulp-sourcemaps')
@@ -165,7 +165,7 @@ gulp.task('css', function() {
         .pipe(plugin.autoPrefixer(autoprefixer))
         .pipe(plugin.util.env.dev ? plugin.sourcemaps.write() : plugin.util.noop())
         .pipe(plugin.util.env.production ? plugin.combineMq() : plugin.util.noop())
-        .pipe(plugin.util.env.production ? plugin.minifyCss() : plugin.util.noop())
+        .pipe(plugin.util.env.production ? plugin.cssNano() : plugin.util.noop())
         .pipe(gulp.dest(scss.build))
         .pipe(plugin.util.env.dev ? plugin.browserSync.reload({stream: true}) : plugin.util.noop());
 });
