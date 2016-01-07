@@ -56,8 +56,10 @@ var gulp = require('gulp'),
 // Enviroment Variables
 // =============================================
 
-var dev = nodeModule.util.env.dev,
-    production = nodeModule.util.env.production;
+var enviroment = {
+    dev: nodeModule.util.env.dev,
+    production: nodeModule.util.env.production
+};
 
 // =============================================
 // Paths
@@ -89,7 +91,7 @@ var scss = {
 // Gulp Tasks
 // =============================================
 
-gulp.task('browser-sync', require('./gulp-tasks/browser-sync')(nodeModule, project, dev));
+gulp.task('browser-sync', require('./gulp-tasks/browser-sync')(nodeModule, project, enviroment));
 
 gulp.task('bower', require('./gulp-tasks/bower')(gulp, nodeModule, project));
 
