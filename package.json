@@ -34,7 +34,6 @@
     "del": "^2.1.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.2",
-    "gulp-bower": "0.0.10",
     "gulp-changed": "^1.3.0",
     "gulp-clip-empty-files": "^0.1.1",
     "gulp-combine-mq": "^0.4.0",
