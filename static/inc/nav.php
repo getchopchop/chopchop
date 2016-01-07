@@ -6,15 +6,15 @@ foreach($toplevels as $toplevel) {
         <li class="level0 parent">
             <a href="<?= $toplevel ?>"
                 id="<?= ucwords($toplevel) ?>-title"
-                data-group="cc-nav-title"
-                data-action="activate"
-                data-target="<?= ucwords($toplevel) ?>-content">
+                data-cc-group="cc-nav-title"
+                data-cc-action="activate"
+                data-cc-target="<?= ucwords($toplevel) ?>-content">
                 <?= ucwords($toplevel) ?> <span class="shape-hook"></span>
             </a>
             <ul class="nav nav--pills child"
                 id="<?= ucwords($toplevel) ?>-content"
-                data-group="cc-nav-content"
-                data-cascade-activate="<?= ucwords($toplevel) ?>-title">
+                data-cc-group="cc-nav-content"
+                data-cc-cascade-activate="<?= ucwords($toplevel) ?>-title">
                 <?php
                 $quarks = dir(dirname(__DIR__) . '/' . $toplevel);
                 while (false !== ($entry = $quarks->read())) {

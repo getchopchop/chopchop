@@ -2,11 +2,11 @@
 Title: Modal
 */ ?>
 
-<p><a href="#" data-action="activate" data-target="modal">Click me for modal time</a></p>
+<p><a href="#" data-cc-action="activate" data-cc-target="modal">Click me for modal time</a></p>
 
-<div class="overlay" id="overlay" data-action="deactivate" data-target="modal"></div>
+<div class="overlay" id="overlay" data-cc-action="deactivate" data-cc-target="modal"></div>
 
-<div class="modal" id="modal" data-cascade="overlay" data-trigger-on="direct-only" data-action="deactivate" data-target="modal">
+<div class="modal" id="modal" data-cc-cascade="overlay" data-cc-trigger-on="direct-only" data-cc-action="deactivate" data-cc-target="modal">
     <div class="modal__dialog">
         <div class="card">
             <div class="card__header">
@@ -19,7 +19,7 @@ Title: Modal
             </div>
             <div class="card__footer">
                 <p>Some footer bits</p>
-                <a href="#" data-action="deactivate" data-target="modal">Close</a>
+                <a href="#" data-cc-action="deactivate" data-cc-target="modal">Close</a>
             </div>
         </div>
     </div>

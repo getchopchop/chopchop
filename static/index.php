@@ -11,7 +11,7 @@
 <body>
 
     <div class="cc-toolbar">
-        <a href="#" class="site-navigation__toggle cc-readout" data-action="toggle" data-target="navigation">Menu</a>
+        <a href="#" class="site-navigation__toggle cc-readout" data-cc-action="toggle" data-cc-target="navigation">Menu</a>
         <span class="cc-readout cc-readout--mq"></span>
     </div>
 
@@ -36,7 +36,7 @@
                       <br>
                       <?php include('inc/nav-index.php'); ?>
                   </div>
-                  
+
              <?php } else {
                  $options = array(
                     'print_title' => true

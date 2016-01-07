@@ -88,10 +88,10 @@ var ChopChop = (function($, ChopChop) {
         init: function() {
             var self = this;
 
-            $(document).on('click', '[data-action]', function(e) {
+            $(document).on('click', '[data-cc-action]', function(e) {
                 var $this = $(this), t,
-                    $target = (t = $this.data('target')) ? $('#' + t) : false,
-                    mode = $this.data('trigger-on') || Trigger.BOTH;
+                    $target = (t = $this.data('cc-target')) ? $('#' + t) : false,
+                    mode = $this.data('cc-trigger-on') || Trigger.BOTH;
 
                 if (!$target) {
                     return;
@@ -104,7 +104,7 @@ var ChopChop = (function($, ChopChop) {
                 }
 
                 e.preventDefault();
-				self.performAction($target, $this.data('action') || Action.TOGGLE);
+				self.performAction($target, $this.data('cc-action') || Action.TOGGLE);
             });
         },
         toggle: function(target, action) {
@@ -139,10 +139,10 @@ var ChopChop = (function($, ChopChop) {
 				}
 
 				id = $current.attr('id');
-				group = $current.data('group');
+				group = $current.data('cc-group');
 
 				// NOTE: Perhaps don't process these; add to some kind of queue first (with activate or deactivate action)
-				for (i = 0, all = $('[data-group="' + group + '"]'), l = all.length; i < l; ++i) {
+				for (i = 0, all = $('[ data-cc-group="' + group + '"]'), l = all.length; i < l; ++i) {
                     el = all[i];
     			    $other = $(el);
 
@@ -165,8 +165,8 @@ var ChopChop = (function($, ChopChop) {
                 }
 
                 // Chain onto targets
-                chain = ($current.data('cascade-' + action) || '').split(',')
-                    .concat(($current.data('cascade') || '').split(','));
+                chain = ($current.data('cc-cascade-' + action) || '').split(',')
+                    .concat(($current.data('cc-cascade') || '').split(','));
 
                 for (i = 0, l = chain.length; i < l; ++i) {
                     $other = $('#' + chain[i]);
@@ -195,4 +195,3 @@ var ChopChop = (function($, ChopChop) {
 
     return ChopChop;
 })(jQuery, ChopChop || {});
-

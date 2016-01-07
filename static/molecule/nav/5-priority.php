@@ -25,7 +25,7 @@ Class: .priority-nav
         </nav>
     </div><!--/priority-nav__scroll -->
     <div class="nav nav--pills priority-nav__toggle">
-        <a href="#" data-action="toggle" data-target="priority-nav-more">More</a>
+        <a href="#" data-cc-action="toggle" data-cc-target="priority-nav-more">More</a>
     </div>
 </div>
 <div class="priority-nav__sub u-hidden" id="priority-nav-more">

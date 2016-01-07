@@ -2,11 +2,11 @@
 Title: Left Drawer
 */ ?>
 
-<p><a href="#" data-target="drawer-right" data-action="activate">Right drawer</a></p>
+<p><a href="#" data-cc-target="drawer-right" data-cc-action="activate">Right drawer</a></p>
 
-<div class="overlay" id="overlay" data-action="deactivate" data-target="overlay" data-cascade-deactivate="drawer-left,drawer-right"></div>
+<div class="overlay" id="overlay" data-cc-action="deactivate" data-cc-target="overlay" data-cc-cascade-deactivate="drawer-left,drawer-right"></div>
 
-<div class="drawer drawer--right" id="drawer-right" data-cascade="overlay">
+<div class="drawer drawer--right" id="drawer-right" data-cc-cascade="overlay">
     <div class="drawer__dialog">
         <div class="card">
             <div class="card__header">
@@ -19,7 +19,7 @@ Title: Left Drawer
             </div>
             <div class="card__footer">
                 <p>Some footer bits</p>
-                <p><a href="#" data-action="deactivate" data-target="drawer-right">Close</a></p>
+                <p><a href="#" data-cc-action="deactivate" data-cc-target="drawer-right">Close</a></p>
             </div>
         </div>
     </div>
