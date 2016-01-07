@@ -103,19 +103,7 @@ gulp.task('vendor', require('./gulp-tasks/vendor')(gulp, nodeModule, path));
 
 gulp.task('images', require('./gulp-tasks/images')(gulp, nodeModule, path, option));
 
-// =============================================
-// JS `gulp js`
-// compiles js, Jshint, Minify if `--production`
-// =============================================
-
-gulp.task('js', function() {
-    return gulp.src(path.scripts.source)
-        .pipe(nodeModule.jsHint())
-        .pipe(nodeModule.jsHint.reporter('default'))
-        .pipe(nodeModule.util.env.production ? nodeModule.uglify() : nodeModule.util.noop())
-        .pipe(gulp.dest(path.scripts.build))
-        .pipe(nodeModule.util.env.dev ? nodeModule.browserSync.reload({stream: true}) : nodeModule.util.noop());
-});
+gulp.task('scripts', require('./gulp-tasks/scripts')(gulp, nodeModule, path));
 
 // =============================================
 // CSS `gulp css`
@@ -151,8 +139,8 @@ gulp.task('clean', function(cb) {
 
 gulp.task('watch', ['browser-sync'], function(cb) {
     gulp.watch(path.styles.source, ['css']);
-    gulp.watch(path.scripts.source, ['js']);
-    gulp.watch(path.images.source, ['img']);
+    gulp.watch(path.scripts.source, ['scripts']);
+    gulp.watch(path.images.source, ['images']);
     gulp.watch(path.fonts.source, ['fonts']);
     gulp.watch(path.vendor.source, ['vendor']);
 });
@@ -163,7 +151,7 @@ gulp.task('watch', ['browser-sync'], function(cb) {
 // =============================================
 
 gulp.task('build', function(cb) {
-    nodeModule.runSequence('clean', ['bower', 'css', 'js', 'img', 'fonts', 'vendor'], cb);
+    nodeModule.runSequence('clean', ['bower', 'css', 'scripts', 'images', 'fonts', 'vendor'], cb);
 });
 
 // =============================================
