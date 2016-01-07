@@ -1,7 +1,6 @@
 // =============================================
 // Project Settings
 // edit these variables to suit your project
-// **this is the only section you should need to edit
 // =============================================
 
 var project = {
@@ -15,6 +14,14 @@ var project = {
     fonts: 'fonts',
     vendor: 'vendor',
     bower: './build/bower_components',
+};
+
+// =============================================
+// Options
+// edit these variables to suit your project
+// =============================================
+
+var option = {
     autoprefixer: ['last 2 versions'],
     imageOptimisation: {
         optimizationLevel: 3,   // PNG (Between 0 - 7)
@@ -136,7 +143,7 @@ gulp.task('vendor', function() {
 gulp.task('img', function() {
     return gulp.src(img.source)
         .pipe(plugin.changed(img.build))
-        .pipe(plugin.util.env.production ? plugin.imageMin(project.imageOptimisation) : plugin.util.noop())
+        .pipe(plugin.util.env.production ? plugin.imageMin(option.imageOptimisation) : plugin.util.noop())
         .pipe(gulp.dest(img.build));
 });
 
@@ -164,7 +171,7 @@ gulp.task('css', function() {
         .pipe(plugin.clipEmptyFiles())
         .pipe(plugin.util.env.dev ? plugin.sourcemaps.init() : plugin.util.noop())
         .pipe(plugin.sass.sync().on('error', plugin.sass.logError))
-        .pipe(plugin.autoPrefixer(project.autoprefixer))
+        .pipe(plugin.autoPrefixer(option.autoprefixer))
         .pipe(plugin.util.env.dev ? plugin.sourcemaps.write() : plugin.util.noop())
         .pipe(plugin.util.env.production ? plugin.combineMq() : plugin.util.noop())
         .pipe(plugin.util.env.production ? plugin.cssNano() : plugin.util.noop())
