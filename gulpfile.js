@@ -113,11 +113,4 @@ gulp.task('watch', ['browser-sync'] ,require('./gulp-tasks/watch')(gulp, path));
 
 gulp.task('build' ,require('./gulp-tasks/build')(nodeModule));
 
-// =============================================
-// Default 'gulp'
-// runs build task, then runs watche task
-// =============================================
-
-gulp.task('default', function(cb) {
-    nodeModule.runSequence('build', 'watch', cb);
-});
+gulp.task('default' ,require('./gulp-tasks/default')(nodeModule));
