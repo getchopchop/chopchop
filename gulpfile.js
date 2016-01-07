@@ -102,11 +102,11 @@ gulp.task('fonts', require('./gulp-tasks/fonts')(gulp, nodeModule, path));
 
 gulp.task('vendor', require('./gulp-tasks/vendor')(gulp, nodeModule, path));
 
-gulp.task('img', require('./gulp-tasks/img')(gulp, nodeModule, path, option));
+gulp.task('img', require('./gulp-tasks/img')(gulp, nodeModule, path, option, enviroment));
 
-gulp.task('js', require('./gulp-tasks/js')(gulp, nodeModule, path));
+gulp.task('js', require('./gulp-tasks/js')(gulp, nodeModule, path, enviroment));
 
-gulp.task('css', require('./gulp-tasks/css')(gulp, nodeModule, path, option));
+gulp.task('css', require('./gulp-tasks/css')(gulp, nodeModule, path, option, enviroment));
 
 gulp.task('clean', require('./gulp-tasks/clean')(nodeModule, project));
 
