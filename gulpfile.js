@@ -86,6 +86,12 @@ var scss = {
     bower = './' + project.bower;
 
 // =============================================
+// Gulp Tasks
+// =============================================
+
+gulp.task('bower', require('./gulp-tasks/bower')(gulp, nodeModule, project));
+
+// =============================================
 // BROWSER SYNC `gulp browser-sync`
 // injects css changes and auto reloads on js changes
 // ** gets developer name from enviroment name
@@ -97,16 +103,6 @@ gulp.task('browser-sync', function() {
 	    proxy: 'http://' + project.name + '.' + nodeModule.util.env.name + '.dyn.iweb.co.uk/'
         });
     }
-});
-
-// =============================================
-// BOWER `gulp bower`
-// installs dependencies from the bower.json file
-// =============================================
-
-gulp.task('bower', function() {
-    return nodeModule.bower()
-        .pipe(gulp.dest(bower));
 });
 
 // =============================================
