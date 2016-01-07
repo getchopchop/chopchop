@@ -109,18 +109,7 @@ gulp.task('styles', require('./gulp-tasks/styles')(gulp, nodeModule, path, optio
 
 gulp.task('clean', require('./gulp-tasks/clean')(nodeModule, project));
 
-// =============================================
-// Watch 'gulp watch'
-// watches for changes and runs the associated task on change
-// =============================================
-
-gulp.task('watch', ['browser-sync'], function(cb) {
-    gulp.watch(path.styles.source, ['styles']);
-    gulp.watch(path.scripts.source, ['scripts']);
-    gulp.watch(path.images.source, ['images']);
-    gulp.watch(path.fonts.source, ['fonts']);
-    gulp.watch(path.vendor.source, ['vendor']);
-});
+gulp.task('watch', ['browser-sync'] ,require('./gulp-tasks/watch')(gulp, path));
 
 // =============================================
 // Build 'gulp build'
