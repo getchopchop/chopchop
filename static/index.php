@@ -9,7 +9,7 @@
     <?php include('inc/styles.php'); ?>
 </head>
 <body>
-    
+
     <div class="cc-toolbar">
         <a href="#" class="site-navigation__toggle cc-readout" data-action="toggle" data-target="navigation">Menu</a>
         <span class="cc-readout cc-readout--mq"></span>
@@ -36,6 +36,7 @@
                       <br>
                       <?php include('inc/nav-index.php'); ?>
                   </div>
+                  
              <?php } else {
                  $options = array(
                     'print_title' => true
