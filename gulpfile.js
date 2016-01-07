@@ -37,7 +37,6 @@ var gulp = require('gulp'),
     nodeModule = {
         util:               require('gulp-util'),
         browserSync:        require('browser-sync'),
-        bower:              require('gulp-bower'),
         del:                require('del'),
         runSequence:        require('run-sequence'),
         imageMin:           require('gulp-imagemin'),
