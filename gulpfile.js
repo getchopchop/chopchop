@@ -89,21 +89,9 @@ var scss = {
 // Gulp Tasks
 // =============================================
 
+gulp.task('browser-sync', require('./gulp-tasks/browser-sync')(nodeModule, project, dev));
+
 gulp.task('bower', require('./gulp-tasks/bower')(gulp, nodeModule, project));
-
-// =============================================
-// BROWSER SYNC `gulp browser-sync`
-// injects css changes and auto reloads on js changes
-// ** gets developer name from enviroment name
-// =============================================
-
-gulp.task('browser-sync', function() {
-    if(dev) {
-        nodeModule.browserSync({
-	    proxy: 'http://' + project.name + '.' + nodeModule.util.env.name + '.dyn.iweb.co.uk/'
-        });
-    }
-});
 
 // =============================================
 // FONTS `gulp fonts`
