@@ -111,14 +111,7 @@ gulp.task('clean', require('./gulp-tasks/clean')(nodeModule, project));
 
 gulp.task('watch', ['browser-sync'] ,require('./gulp-tasks/watch')(gulp, path));
 
-// =============================================
-// Build 'gulp build'
-// builds all assets, also has `--production` option to build production ready assets
-// =============================================
-
-gulp.task('build', function(cb) {
-    nodeModule.runSequence('clean', ['bower', 'styles', 'scripts', 'images', 'fonts', 'vendor'], cb);
-});
+gulp.task('build' ,require('./gulp-tasks/build')(nodeModule));
 
 // =============================================
 // Default 'gulp'
