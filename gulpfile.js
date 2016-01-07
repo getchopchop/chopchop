@@ -12,8 +12,7 @@ var project = {
     js: 'js',
     img: 'img',
     fonts: 'fonts',
-    vendor: 'vendor',
-    bower: 'bower_components',
+    vendor: 'vendor'
 };
 
 // =============================================
@@ -86,8 +85,7 @@ var path = {
     vendor: {
         source: project.source + '/' + project.vendor + '/**/*.*',
         build: project.dist + '/' + project.vendor
-    },
-    bower: project.dist + '/' + project.bower
+    }
 };
 
 // =============================================
