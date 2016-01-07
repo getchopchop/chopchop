@@ -12,8 +12,7 @@ var project = {
     js: 'js',
     img: 'img',
     fonts: 'fonts',
-    vendor: 'vendor',
-    bower: 'bower_components',
+    vendor: 'vendor'
 };
 
 // =============================================
@@ -38,7 +37,6 @@ var gulp = require('gulp'),
     nodeModule = {
         util:               require('gulp-util'),
         browserSync:        require('browser-sync'),
-        bower:              require('gulp-bower'),
         del:                require('del'),
         runSequence:        require('run-sequence'),
         imageMin:           require('gulp-imagemin'),
@@ -86,8 +84,7 @@ var path = {
     vendor: {
         source: project.source + '/' + project.vendor + '/**/*.*',
         build: project.dist + '/' + project.vendor
-    },
-    bower: project.dist + '/' + project.bower
+    }
 };
 
 // =============================================
@@ -95,8 +92,6 @@ var path = {
 // =============================================
 
 gulp.task('browser-sync', require('./gulp-tasks/browser-sync')(nodeModule, project, enviroment));
-
-gulp.task('bower', require('./gulp-tasks/bower')(gulp, nodeModule, path));
 
 gulp.task('fonts', require('./gulp-tasks/fonts')(gulp, nodeModule, path));
 

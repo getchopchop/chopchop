@@ -7,11 +7,11 @@
     git clone git@gitlab.iweb.co.uk:labs/chopchop.git public_html
     cd public_html
     npm install
-    node_modules/gulp/bin/gulp.js build
+    npm run build
 
 ## Working on the project
 
     cd ~/Sites/chopchop/public_html
-    node_modules/gulp/bin/gulp.js watch
+    npm run watch / npm run watch-dev
 
-Info: https://github.com/JakeCobley/Kettle
+See: [Build Tools](https://gitlab.iweb.co.uk/labs/chopchop/wikis/Build-Tools) for detailed task information.
