@@ -4,9 +4,9 @@
 // ** gets developer name from enviroment name
 // =============================================
 
-module.exports = function (nodeModule, project, dev) {
+module.exports = function (nodeModule, project, enviroment) {
     return function () {
-        if(dev) {
+        if(enviroment.dev) {
             nodeModule.browserSync({
     	    proxy: 'http://' + project.name + '.' + nodeModule.util.env.name + '.dyn.iweb.co.uk/'
             });
