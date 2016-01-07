@@ -69,10 +69,7 @@ var scss = {
         build: project.dist + '/' + project.css
     },
     js = {
-        source: [
-            project.source + '/' + project.js + '/**/*.js',
-            '!' + project.source + '/' + project.js + '/**/_*.js',
-        ],
+        source: project.source + '/' + project.js + '/**/*.js',
         build: project.dist + '/' + project.js
     },
     img = {
