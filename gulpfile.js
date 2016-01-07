@@ -94,8 +94,6 @@ var path = {
 
 gulp.task('browser-sync', require('./gulp-tasks/browser-sync')(nodeModule, project, enviroment));
 
-gulp.task('bower', require('./gulp-tasks/bower')(gulp, nodeModule, path));
-
 gulp.task('fonts', require('./gulp-tasks/fonts')(gulp, nodeModule, path));
 
 gulp.task('vendor', require('./gulp-tasks/vendor')(gulp, nodeModule, path));
