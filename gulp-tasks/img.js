@@ -3,11 +3,11 @@
 // minifys images
 // =============================================
 
-module.exports = function (gulp, nodeModule, path, option, enviroment) {
+module.exports = function (gulp, nodeModule, path, option, environment) {
     return function () {
         gulp.src(path.images.source)
         .pipe(nodeModule.changed(path.images.build))
-        .pipe(enviroment.production ? nodeModule.imageMin(option.imageOptimisation) : nodeModule.util.noop())
+        .pipe(environment.production ? nodeModule.imageMin(option.imageOptimisation) : nodeModule.util.noop())
         .pipe(gulp.dest(path.images.build));
     };
 };

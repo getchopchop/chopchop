@@ -54,10 +54,10 @@ var gulp = require('gulp'),
     };
 
 // =============================================
-// Enviroment Variables
+// environment Variables
 // =============================================
 
-var enviroment = {
+var environment = {
     dev: nodeModule.util.env.dev,
     production: nodeModule.util.env.production
 };
@@ -94,7 +94,7 @@ var path = {
 // Gulp Tasks
 // =============================================
 
-gulp.task('browser-sync', require('./gulp-tasks/browser-sync')(nodeModule, project, enviroment));
+gulp.task('browser-sync', require('./gulp-tasks/browser-sync')(nodeModule, project, environment));
 
 gulp.task('bower', require('./gulp-tasks/bower')(gulp, nodeModule, path));
 
@@ -102,11 +102,11 @@ gulp.task('fonts', require('./gulp-tasks/fonts')(gulp, nodeModule, path));
 
 gulp.task('vendor', require('./gulp-tasks/vendor')(gulp, nodeModule, path));
 
-gulp.task('img', require('./gulp-tasks/img')(gulp, nodeModule, path, option, enviroment));
+gulp.task('img', require('./gulp-tasks/img')(gulp, nodeModule, path, option, environment));
 
-gulp.task('js', require('./gulp-tasks/js')(gulp, nodeModule, path, enviroment));
+gulp.task('js', require('./gulp-tasks/js')(gulp, nodeModule, path, environment));
 
-gulp.task('css', require('./gulp-tasks/css')(gulp, nodeModule, path, option, enviroment));
+gulp.task('css', require('./gulp-tasks/css')(gulp, nodeModule, path, option, environment));
 
 gulp.task('clean', require('./gulp-tasks/clean')(nodeModule, project));
 
