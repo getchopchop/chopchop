@@ -10,7 +10,7 @@ var project = {
     scss: 'scss',
     css: 'css',
     js: 'js',
-    images: 'img',
+    img: 'img',
     fonts: 'fonts',
     vendor: 'vendor',
     bower: 'bower_components',
@@ -76,8 +76,8 @@ var path = {
         build: project.dist + '/' + project.js
     },
     images: {
-        source: project.source + '/' + project.images + '/**/*.*',
-        build: project.dist + '/' + project.images
+        source: project.source + '/' + project.img + '/**/*.*',
+        build: project.dist + '/' + project.img
     },
     fonts: {
         source: project.source + '/' + project.fonts + '/**/*.*',
@@ -102,11 +102,11 @@ gulp.task('fonts', require('./gulp-tasks/fonts')(gulp, nodeModule, path));
 
 gulp.task('vendor', require('./gulp-tasks/vendor')(gulp, nodeModule, path));
 
-gulp.task('images', require('./gulp-tasks/images')(gulp, nodeModule, path, option));
+gulp.task('img', require('./gulp-tasks/img')(gulp, nodeModule, path, option));
 
-gulp.task('scripts', require('./gulp-tasks/scripts')(gulp, nodeModule, path));
+gulp.task('js', require('./gulp-tasks/js')(gulp, nodeModule, path));
 
-gulp.task('styles', require('./gulp-tasks/styles')(gulp, nodeModule, path, option));
+gulp.task('css', require('./gulp-tasks/css')(gulp, nodeModule, path, option));
 
 gulp.task('clean', require('./gulp-tasks/clean')(nodeModule, project));
 
