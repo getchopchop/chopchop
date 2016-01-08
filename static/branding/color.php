@@ -3,12 +3,12 @@ Title: Colour
 */ ?>
 
 <?php
-    $contents = file_get_contents('../src/scss/_var.scss', true);
-    $lines = explode("\n", $contents);
+    $scss_contents = file_get_contents('../src/scss/_var.scss', true);
+    $lines = explode("\n", $scss_contents);
     $hasHeading = false;
     foreach($lines as $line) {
 
-        if(substr($line, 0, 2) == '//') {
+        if(substr(trim($line), 0, 2) == '//') {
             if(strpos($line, '=====') === false) {
                 if($hasHeading === true) {
                     echo '</div>';
