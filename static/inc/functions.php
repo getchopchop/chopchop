@@ -5,13 +5,14 @@
 
     define('TEMPLATE_PATH', realpath(__DIR__ . '/../') . '/');
 
-    function getBlock($location, $options=array()) {
 
-        $path = TEMPLATE_PATH . trim($location, '/');
+    function recurseDir($location, $path) {
         $files = array();
-
         if(is_dir($path)){
-            $files = glob($path . '/*.php');
+            $files = array_merge($files, glob($path . '/*.php'));
+            foreach(glob($path . '/*', GLOB_ONLYDIR) as $dir) {
+                $files = array_merge($files, recurseDir($location, $dir));
+            }
         }
         else {
             $path = TEMPLATE_PATH . trim($location, '/') . '.php';
@@ -19,20 +20,31 @@
                 $files[] = $path;
             }
         }
+        return $files;
+    }
+
+    function getBlock($location, $options=array()) {
+
+        $path = TEMPLATE_PATH . trim($location, '/');
+
+        $files = recurseDir($location, $path);
 
         if(empty($files)) {
             return '';
         }
-
+        $printContainer = false;
         ob_start();
         foreach($files as $path) {
             $_t = new TemplateHelper(parseComments(file_get_contents($path)), $options);
+            $printContainer |= ($_t->Container !== false);
             echo $_t->printTitle();
             include $path;
         }
         $contents .= ob_get_contents();
         ob_end_clean();
-
+        if($printContainer) { 
+            $contents = '<div class="u-container">' . $contents . '</div>'; 
+        }
         return $contents;
     }
 
@@ -116,6 +128,7 @@
             return '';
         }
 
+        
         public function printTitle() {
             if(!$this->printTitle) {
                 return '';

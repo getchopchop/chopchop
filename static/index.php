@@ -25,25 +25,23 @@
 
         <!-- <main class="main site-main"> -->
         <main>
-            <div class="u-container">
               <?php if(isIndex()) { ?>
-
-                  <div class="u-container">
-                      <hgroup class="hgroup page-title hero-title u-hidden">
-                          <h1 class="hgroup__title">Chop Chop</h1>
-                          <h4 class="hgroup__subtitle">Static Pattern Library</h4>
-                      </hgroup>
-                      <br>
-                      <?php include('inc/nav-index.php'); ?>
-                  </div>
-
+                    <div class="u-container">
+                        <div class="u-container">
+                            <hgroup class="hgroup page-title hero-title u-hidden">
+                                <h1 class="hgroup__title">Chop Chop</h1>
+                                <h4 class="hgroup__subtitle">Static Pattern Library</h4>
+                            </hgroup>
+                            <br>
+                            <?php include('inc/nav-index.php'); ?>
+                        </div>
+                    </div>
              <?php } else {
                  $options = array(
                     'print_title' => true
                  );
                  echo getBlock(getRequestPath(), $options);
              }?>
-            </div>
         </main>
 
     </div><!--/#wrapper -->
