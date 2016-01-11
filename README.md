@@ -1,5 +1,8 @@
 # Chop Chop
 
+### Wiki Link
+https://gitlab.iweb.co.uk/labs/chopchop/wikis/pages
+
 ## To get going with it here are the commands
 
     mkdir ~/Sites/chopchop
