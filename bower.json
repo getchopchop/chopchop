@@ -5,6 +5,7 @@
   "author": "iWeb http://www.iweb.co.uk",
   "description": "Chop Chop is a lightweight frontend pattern primer.",
   "main": "gulpfile.js",
+  "directory": "./build/bower_components",
   "keywords": [
     "npm",
     "gulp",
