@@ -49,11 +49,13 @@ blockquote {
     padding-left: $spacing;
 }
 
-strong {
+strong, b {
 	font-weight: $bold;
-	color: $dark-grey;
 }
 
+em, i {
+    font-style: italic;
+}
 
 code {
     padding: 2px 4px;
@@ -81,7 +83,7 @@ a,
 
 
 // =============================================
-// Lead Paragraph
+// Lead
 // =============================================
 
 .lead {
@@ -89,4 +91,14 @@ a,
 	font-weight: $bold;
 	line-height: $line-height-sm;
 	margin-bottom: $spacing-lg;
+}
+
+
+// =============================================
+// Micro
+// =============================================
+
+.micro {
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
 }
