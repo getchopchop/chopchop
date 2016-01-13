@@ -4,7 +4,7 @@
 // =============================================
 
 module.exports = function (nodeModule, project) {
-    return function (callback) {
-        //return nodeModule.del([project.dist], callback);
-    };
+    //return function (callback) {
+    //    return nodeModule.del([project.dist], callback);
+    //};
 };
