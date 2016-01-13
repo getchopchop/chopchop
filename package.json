@@ -4,10 +4,10 @@
   "description": "Chop Chop is a lightweight frontend pattern primer.",
   "main": "gulpfile.js",
   "scripts": {
-    "watch": "gulp && bower install",
-    "watch-dev": "gulp --dev && bower install",
-    "build": "gulp build && bower install",
-    "build-production": "gulp build --production && bower install"
+    "watch": "bower install && gulp",
+    "watch-dev": "bower install && gulp --dev",
+    "build": "bower install && gulp build",
+    "build-production": "bower install && gulp build --production"
   },
   "repository": {
     "type": "git",
