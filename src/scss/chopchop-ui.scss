@@ -252,12 +252,12 @@ body {
 
 .cc-readout {
     display: block;
-    font-size: 10px;
+    font-size: 12px;
     white-space: nowrap;
     color: $white;
     background-color: $black;
     text-decoration: none;
-    padding: 3px 8px;
+    padding: 6px 10px;
 }
 
 .cc-toolbar {
@@ -267,7 +267,7 @@ body {
     bottom: 0;
     right: 0;
     background-color: magenta;
-    
+
     @include breakpoint($screen-xs) {
         background-color: red;
     }
@@ -283,15 +283,15 @@ body {
     @include breakpoint($screen-xl) {
         background-color: hotpink;
     }
-    
+
     > :last-child {
         margin-left: auto;
     }
-    
+
 }
 .cc-readout--mq:after {
     content: "$screen-xs < #{$screen-xs}";
-    
+
     @include breakpoint($screen-xs) {
         content: "$screen-xs > #{$screen-xs}";
     }
