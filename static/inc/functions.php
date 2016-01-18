@@ -130,6 +130,7 @@
 
         
         public function printTitle() {
+            $title = '';
             if(!$this->printTitle) {
                 return '';
             }
