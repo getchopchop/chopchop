@@ -24,7 +24,6 @@
     }
 
     function getBlock($location, $options=array()) {
-
         $path = TEMPLATE_PATH . trim($location, '/');
 
         $files = recurseDir($location, $path);
@@ -36,7 +35,7 @@
         ob_start();
         foreach($files as $path) {
             $_t = new TemplateHelper(parseComments(file_get_contents($path)), $options);
-            $printContainer |= ($_t->Container !== false);
+            $printContainer |= $_t->shouldPrintContainer();
             echo $_t->printTitle();
             include $path;
         }
@@ -58,7 +57,8 @@
 
     function getRequestPath() {
         $base = substr($_SERVER['SCRIPT_NAME'], 0, strpos($_SERVER['SCRIPT_NAME'], 'index.php'));
-        return substr($_SERVER['REQUEST_URI'], strlen($base) - 1);
+        $url_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+        return substr($url_path, strlen($base) - 1);
     }
 
     function isIndex() {
@@ -117,6 +117,7 @@
 
         public function __construct($data = array(), $options=array()) {
             $this->printTitle = isset($options['print_title']) && $options['print_title'];
+            $this->printContainer = isset($options['print_container']) && $options['print_container'];
             $this->data = $data;
             $this->options = $options;
         }
@@ -128,7 +129,10 @@
             return '';
         }
 
-        
+        public function shouldPrintContainer(){
+            return $this->printContainer && $this->Container !== false; 
+        }
+
         public function printTitle() {
             $title = '';
             if(!$this->printTitle) {
