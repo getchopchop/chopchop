@@ -10,11 +10,11 @@ https://gitlab.iweb.co.uk/labs/chopchop/wikis/pages
     git clone git@gitlab.iweb.co.uk:labs/chopchop.git public_html
     cd public_html
     npm install
-    node_modules/.bin/gulp build
+    ./node_modules/.bin/gulp build
 
 ## Working on the project
 
     cd ~/Sites/chopchop/public_html
-    node_modules/.bin/gulp watch
+    ./node_modules/.bin/gulp watch
 
 See: [Build Tools](https://gitlab.iweb.co.uk/labs/chopchop/wikis/Build-Tools) for detailed task information.
