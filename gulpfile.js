@@ -12,7 +12,8 @@ var project = {
     js: 'js',
     img: 'img',
     fonts: 'fonts',
-    vendor: 'vendor'
+    vendor: 'vendor',
+    bower: 'bower_components'
 };
 
 // =============================================

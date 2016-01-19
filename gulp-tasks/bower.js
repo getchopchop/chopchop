@@ -5,7 +5,7 @@
 
 module.exports = function (gulp, nodeModule, path) {
     return function () {
-        nodeModule.bower()
+        nodeModule.bower(path.bower)
         .pipe(gulp.dest(path.bower));
-    }; 
+    };
 };
