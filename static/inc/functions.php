@@ -152,4 +152,4 @@
         }
     }
 
-    $toplevels = array('branding', 'atom', 'molecule', 'organism', 'template');
+    $toplevels = array('global', 'atom', 'molecule', 'organism', 'template');
