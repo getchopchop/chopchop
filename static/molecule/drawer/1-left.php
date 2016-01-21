@@ -2,15 +2,15 @@
 Title: Left Drawer
 */ ?>
 
-<p><a href="#" data-cc-target="drawer-right" data-cc-action="activate">Right drawer</a></p>
+<p><a href="#" data-cc-target="drawer-left" data-cc-action="activate">Left drawer</a></p>
 
 <div class="overlay" id="overlay" data-cc-action="deactivate" data-cc-target="overlay" data-cc-cascade-deactivate="drawer-left,drawer-right"></div>
 
-<div class="drawer drawer--right" id="drawer-right" data-cc-cascade="overlay">
+<div class="drawer drawer--left" id="drawer-left" data-cc-cascade="overlay">
     <div class="drawer__dialog">
         <div class="card">
             <div class="card__header">
-                <h2>Right drawer</h2>
+                <h2>Left drawer</h2>
             </div>
             <div class="card__body">
                 <p>Vestibulum varius sem vitae diam venenatis porttitor. Pellentesque nec quam eget eros tincidunt mattis non ac nunc. Vivamus tristique, turpis vitae efficitur laoreet, eros tellus lobortis nulla, ac auctor neque velit at risus. Sed volutpat dolor erat, placerat malesuada quam tempor eu. Morbi a tellus sit amet lectus tincidunt imperdiet a tincidunt est. Cras vel volutpat mauris. Sed consectetur felis vel maximus elementum. Proin sed nisl lectus. Nunc non est ac ipsum gravida commodo vel quis nunc.</p>
@@ -19,7 +19,7 @@ Title: Left Drawer
             </div>
             <div class="card__footer">
                 <p>Some footer bits</p>
-                <p><a href="#" data-cc-action="deactivate" data-cc-target="drawer-right">Close</a></p>
+                <p><a href="#" data-cc-action="deactivate" data-cc-target="drawer-left">Close</a></p>
             </div>
         </div>
     </div>
