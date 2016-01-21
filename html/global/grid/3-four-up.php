@@ -1,5 +1,5 @@
 <?php /*
-Title: Grid
+Title: Grid 4 Up
 Class: .g-four-up
 */ ?>
 

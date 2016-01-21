@@ -33,9 +33,6 @@ $z-200: 200;
 @import "utility/z-index";
 @import "utility/list";
 
-body {
-    margin: 1em 0;
-}
 
 // =============================================
 // Layering z-index
@@ -53,10 +50,6 @@ body {
 // Light Styles
 // =============================================
 
-.well {
-    padding: 1.5rem;
-}
-
 .cc-heading {
     font-size: $font-size-xs;
     letter-spacing: 0.12em;
@@ -66,7 +59,7 @@ body {
 
 .cc-heading {
     padding-bottom: $spacing;
-    margin-top: $spacing-xl * 3;
+    margin-top: $spacing-xl * 2;
     margin-bottom: $spacing-xl;
 
     &__sub {
@@ -89,7 +82,7 @@ body {
     }
 
     &:first-of-type {
-        margin-top: 0;
+        margin-top: $spacing-xl;
     }
 }
 

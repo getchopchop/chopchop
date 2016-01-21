@@ -1,5 +1,5 @@
 <?php /*
-Title: Grid
+Title: Grid 6 Up w/Gutter
 Class: .g-six-up .g-gutter
 */ ?>
 
