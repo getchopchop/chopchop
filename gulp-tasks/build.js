@@ -5,6 +5,6 @@
 
 module.exports = function (nodeModule) {
     return function (callback) {
-        nodeModule.runSequence('clean', ['css', 'js', 'img', 'fonts', 'vendor'], callback);
+        nodeModule.runSequence('clean', ['bower', 'css', 'js', 'img', 'fonts', 'vendor'], callback);
     };
 };

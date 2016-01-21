@@ -38,7 +38,8 @@
                     </div>
              <?php } else {
                  $options = array(
-                    'print_title' => true
+                    'print_title' => !((isset($_GET['title']) && $_GET['title'] === 'false')),
+                    'print_container' => !((isset($_GET['container']) && $_GET['container'] === 'false'))
                  );
                  echo getBlock(getRequestPath(), $options);
              }?>
