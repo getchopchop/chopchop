@@ -15,7 +15,7 @@
                      continue;
                 }
             ?>
-            <li class="level1"><a href="<?php echo getUrl('static/' . $toplevel); ?>/<?= $entry ?>"><?= str_replace('-', ' ', ucwords($entry)) ?></a></li>
+            <li class="level1"><a href="<?php echo getUrl('html/' . $toplevel); ?>/<?= $entry ?>"><?= str_replace('-', ' ', ucwords($entry)) ?></a></li>
             <?php } ?>
         </ul>
     </div>
