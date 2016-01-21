@@ -308,3 +308,15 @@ body {
         content: "$screen-xl > #{$screen-xl}";
     }
 }
+
+
+// =============================================
+// CC Box
+// =============================================
+
+.cc-box {
+    height: $spacing-xl * 2;
+    background-color: Gainsboro;
+    border-radius: $border-radius;
+    margin-bottom: $spacing-lg;
+}
