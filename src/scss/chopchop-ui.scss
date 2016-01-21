@@ -186,12 +186,11 @@ body {
 // Layout
 // =============================================
 
+.cc-site-wrapper {
+    margin-bottom: $spacing-xl * 2;
+}
+
 @include breakpoint($screen-md) {
-    .site-wrapper {
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
-    }
     .site-navigation__content {
         overflow: hidden;
     }

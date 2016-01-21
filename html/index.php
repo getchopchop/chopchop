@@ -15,7 +15,7 @@
         <span class="cc-readout cc-readout--mq"></span>
     </div>
 
-    <div class="site-wrapper">
+    <div class="site-wrapper cc-site-wrapper">
 
         <nav class="site-navigation" id="navigation">
             <div class="block-content site-navigation__content">
