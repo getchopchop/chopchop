@@ -1,9 +1,8 @@
 <?php /*
-Title: Tabordion
-Class: .tabordion
+Title: Collapse One Collapsible
 */ ?>
 
-<div data-cc-tabordion="test-tabordion" class="tabs">
+<div data-cc-collapse="one-collapsible" class="accordion">
     <div class="is-active tabs__header">
         <h3>Tab 1</h3>
     </div>

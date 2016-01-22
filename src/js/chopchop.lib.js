@@ -17,7 +17,7 @@ var ChopChop = (function($, ChopChop) {
     // Initialisation
     var defaultInitOptions = {
         'toggle': {},
-        'tabordion': {}
+        'collapse': {}
     };
 
     ChopChop.init = api.init = function(options) {
@@ -58,7 +58,6 @@ var ChopChop = (function($, ChopChop) {
 
     return ChopChop;
 })(jQuery, ChopChop || {});
-
 
 // Toggles
 var ChopChop = (function($, ChopChop) {
@@ -197,62 +196,107 @@ var ChopChop = (function($, ChopChop) {
     return ChopChop;
 })(jQuery, ChopChop || {});
 
-// Tabordions
+// Collapse
 var ChopChop = (function($, ChopChop) {
+    // Tabordion types
+    var Types = {
+        ONE_OPEN: 'one-open',
+        ONE_COLLAPSIBLE: 'one-collapsible',
+        ALL_COLLAPSIBLE: 'all-collapsible'
+    };
+
     var defaultOptions = {
         classActive: 'is-active',
         classInactive: 'is-inactive',
-        headerSelector: '.tabs__header',
-        bodySelector: '.tabs__body'
+        headerSelector: '[class*="__header"]',
+        bodySelector: '[class*="__body"]',
+        type: Types.ONE_OPEN
     };
 
-    // Tabordions
-    var Tabordion = ChopChop.Tabordion = function(options) {
+    // Collapse
+    var Collapse = ChopChop.Collapse = function(options) {
         this.options = $.extend({}, defaultOptions, options);
+        this.id = 0;
         this.init();
     };
 
-    Tabordion.prototype = {
+    // Attribute creators and appliers for all collapse types
+    var attributors = {};
+    attributors[Types.ONE_OPEN] = function($header, $body, name, i) {
+        $header.attr({
+            'id': name + '-header-' + i,
+            'data-cc-group': name + '-headers',
+            'data-cc-action': 'activate',
+            'data-cc-target': name + '-body-' + i
+        });
+        $body.attr({
+            'id': name + '-body-' + i,
+            'data-cc-group': name + '-bodies',
+            'data-cc-cascade-activate': name + '-header-' + i
+        });
+    };
+    attributors[Types.ONE_COLLAPSIBLE] = function($header, $body, name, i) {
+        $header.attr({
+            'id': name + '-header-' + i,
+            'data-cc-group': name + '-headers',
+            'data-cc-action': 'toggle',
+            'data-cc-target': name + '-body-' + i
+        });
+        $body.attr({
+            'id': name + '-body-' + i,
+            'data-cc-group': name + '-bodies',
+            'data-cc-cascade': name + '-header-' + i
+        });
+    };
+    attributors[Types.ALL_COLLAPSIBLE] = function($header, $body, name, i) {
+        $header.attr({
+            'id': name + '-header-' + i,
+            'data-cc-action': 'toggle',
+            'data-cc-target': name + '-body-' + i
+        });
+        $body.attr({
+            'id': name + '-body-' + i,
+            'data-cc-cascade': name + '-header-' + i
+        });
+    };
+
+    Collapse.prototype = {
         init: function() {
             var self = this;
 
-            $('[data-cc-tabordion]').each(function() {
+            $('[data-cc-collapse]').each(function() {
                 self.applyToContainer(this);
             });
         },
-        applyToContainer: function(root, name) {
-            var $root = $(root),
-                headers = $root.find(this.options.headerSelector),
-                bodies = $root.find(this.options.bodySelector);
+        getNextName: function() {
+            return 'collapse' + (++this.id);
+        },
+        applyToContainer: function(root, options) {
+            options = $.extend({}, this.options, options);
 
-            name = name || $root.data('cc-tabordion');
+            var $root = $(root),
+                name = options.name || $root.data('cc-collapse-name') || this.getNextName(),
+                type =  $root.data('cc-collapse') || options.type,
+                headers = $root.find(options.headerSelector),
+                bodies = $root.find(options.bodySelector);
 
             if (headers.size() !== bodies.size()) {
                 throw new ChopChop.Exception(
-                    "Tabordion: number of headers does not match number of bodies (" + headers.size() + " vs " + bodies.size()+ ")"
+                    "Collapse: number of headers does not match number of bodies (" + headers.size() + " vs " + bodies.size()+ ")"
                 );
             }
 
             for (var i = 0, l = headers.size(); i < l; ++i) {
-                $(headers[i]).attr({
-                    'id': name + '-header-' + i,
-                    'data-cc-group': name + '-headers',
-                    'data-cc-action': 'activate',
-                    'data-cc-target': name + '-body-' + i
-                });
-                $(bodies[i]).attr({
-                    'id': name + '-body-' + i,
-                    'data-cc-group': name + '-bodies',
-                    'data-cc-cascade-activate': name + '-header-' + i
-                });
+                attributors[type]($(headers[i]), $(bodies[i]), name, i);
             }
         }
     };
 
     // Expose api
-    ChopChop.api.tabordion = function() {
-        return ChopChop.plugins.tabordion.applyToContainer.apply(ChopChop.plugins.tabordion, arguments);
+    ChopChop.api.collapse = function() {
+        return ChopChop.plugins.collapse.applyToContainer.apply(ChopChop.plugins.collapse, arguments);
     };
 
     return ChopChop;
 })(jQuery, ChopChop || {});
+
