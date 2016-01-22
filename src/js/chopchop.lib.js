@@ -16,7 +16,8 @@ var ChopChop = (function($, ChopChop) {
 
     // Initialisation
     var defaultInitOptions = {
-        'toggle': {}
+        'toggle': {},
+        'tabordion': {}
     };
 
     ChopChop.init = api.init = function(options) {
@@ -191,6 +192,66 @@ var ChopChop = (function($, ChopChop) {
     // Expose toggle api
     ChopChop.api.toggle = function() {
         return ChopChop.plugins.toggle.toggle.apply(ChopChop.plugins.toggle, arguments);
+    };
+
+    return ChopChop;
+})(jQuery, ChopChop || {});
+
+// Tabordions
+var ChopChop = (function($, ChopChop) {
+    var defaultOptions = {
+        classActive: 'is-active',
+        classInactive: 'is-inactive',
+        headerSelector: '.tabs__header',
+        bodySelector: '.tabs__body'
+    };
+
+    // Tabordions
+    var Tabordion = ChopChop.Tabordion = function(options) {
+        this.options = $.extend({}, defaultOptions, options);
+        this.init();
+    };
+
+    Tabordion.prototype = {
+        init: function() {
+            var self = this;
+
+            $('[data-cc-tabordion]').each(function() {
+                self.applyToContainer(this);
+            });
+        },
+        applyToContainer: function(root, name) {
+            var $root = $(root),
+                headers = $root.find(this.options.headerSelector),
+                bodies = $root.find(this.options.bodySelector);
+
+            name = name || $root.data('cc-tabordion');
+
+            if (headers.size() !== bodies.size()) {
+                throw new ChopChop.Exception(
+                    "Tabordion: number of headers does not match number of bodies (" + headers.size() + " vs " + bodies.size()+ ")"
+                );
+            }
+
+            for (var i = 0, l = headers.size(); i < l; ++i) {
+                $(headers[i]).attr({
+                    'id': name + '-header-' + i,
+                    'data-cc-group': name + '-headers',
+                    'data-cc-action': 'activate',
+                    'data-cc-target': name + '-body-' + i
+                });
+                $(bodies[i]).attr({
+                    'id': name + '-body-' + i,
+                    'data-cc-group': name + '-bodies',
+                    'data-cc-cascade-activate': name + '-header-' + i
+                });
+            }
+        }
+    };
+
+    // Expose api
+    ChopChop.api.tabordion = function() {
+        return ChopChop.plugins.tabordion.applyToContainer.apply(ChopChop.plugins.tabordion, arguments);
     };
 
     return ChopChop;
