@@ -3,7 +3,7 @@ Title: Tabordion
 Class: .tabordion
 */ ?>
 
-<div id="moose" class="tabs">
+<div data-cc-tabordion="test-tabordion" class="tabs">
     <div class="is-active tabs__header">
         <h3>Tab 1</h3>
     </div>
