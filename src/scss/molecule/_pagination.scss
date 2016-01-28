@@ -3,11 +3,13 @@
 // =============================================
 
 .pagination {
-    ul {
-        @extend %u-list-inline;
+    li a::after {
+        vertical-align: middle;
     }
-    a {
-        background-color: $lighter-grey;
-        padding: $spacing-xs $spacing-sm;
+    li:first-child a::after {
+        @include chevron($grey, 6px, left, 2px);
+    }
+    li:last-child a::after {
+        @include chevron($grey, 6px, right, 2px);
     }
 }

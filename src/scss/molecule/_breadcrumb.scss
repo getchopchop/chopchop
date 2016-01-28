@@ -1,23 +1,20 @@
 // =============================================
-// Pagination
+// Breadcrumb
 // =============================================
 
 .breadcrumb {
-    ul {
-        @extend %u-list-inline;
+    
+    li:not(:last-child) {
+        margin-right: $spacing-sm;
+        
+        &:after {
+            @include chevron($grey, 4px, right, 1px);
+            vertical-align: middle;
+        }
     }
-	li:not(:last-child) {
-		display: inline-block;
-		margin-right: $spacing-sm;
-
-		&:after {
-			content: '\e811';
-			font-family: fontello;
-			display: inline-block;
-		}
-	}
-	a {
-		display: inline-block;
-		margin-right: $spacing-sm;
-	}
+    
+    a {
+        margin-right: $spacing-sm;
+    }
+    
 }
