@@ -16,25 +16,9 @@
 // Nav Pills
 // =============================================
 
-.nav--pills {
-    display: flex;
-    justify-content: flex-start;
-    flex-flow: wrap;
-
-    a {
-        display: block;
-        padding: $spacing-xs;
-    }
-}
-
-
-// =============================================
-// Nav Stacked
-// =============================================
-
-.nav--stacked a {
+.nav--pills a {
     display: block;
-    padding: $spacing-xs;
+    padding: $spacing-xs $spacing-sm;
 }
 
 
@@ -42,8 +26,32 @@
 // Nav inline
 // =============================================
 
-.nav--inline > * {
-    display: inline-block;
+.nav--inline {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+// =============================================
+// Nav space
+// =============================================
+
+.nav--space {
+    &:not(.nav--inline) .nav__item {
+        margin-top: $spacing-xs;
+        margin-bottom: $spacing-xs;
+    }
+    
+    &.nav--inline .nav__item {
+        margin-left: $spacing-xs;
+        margin-right: $spacing-xs;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }
 
 
@@ -55,13 +63,14 @@
     display: flex;
     overflow: hidden;
 
-    .nav {
-        display: flex;
+    ::-webkit-scrollbar {
+        display: none;
     }
 
-    &__scroll {
+    &__container {
         overflow-x: scroll;
         white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
     }
 
     &__toggle {
@@ -69,11 +78,15 @@
     }
 
     &__sub {
-        padding: $spacing;
+        padding: $spacing;  
+        display: none;
+        &.is-active {
+            display: block;
+        }
     }
 
-    ::-webkit-scrollbar {
-        display: none;
+    .nav {
+        flex-wrap: nowrap;
     }
 }
 

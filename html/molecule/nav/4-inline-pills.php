@@ -1,10 +1,10 @@
 <?php /*
-Title: Nav Pills
-Class: .nav.nav--pills
+Title: Stacked Nav
+Class: .nav.nav--inline.nav--pills
 */ ?>
 
 <nav>
-    <ul class="nav nav--pills">
+    <ul class="nav nav--inline nav--pills">
         <li class="nav__item"><a href="#">Overview</a></li>
         <li class="nav__item"><a href="#">Credits</a></li>
         <li class="nav__item"><a href="#">Structure</a></li>
