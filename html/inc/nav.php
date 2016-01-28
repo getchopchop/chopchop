@@ -2,7 +2,7 @@
 foreach($toplevels as $toplevel) {
 ?>
 <nav class=" nav-<?= $toplevel ?> nav-collapse">
-    <ul class="nav nav--stacked">
+    <ul class="nav nav--pills">
         <li class="level0 parent">
             <a href="<?= $toplevel ?>"
                 id="<?= ucwords($toplevel) ?>-title"
@@ -21,7 +21,7 @@ foreach($toplevels as $toplevel) {
                     if(substr($entry, -4) == '.php') {
                         $entry = substr($entry, 0, strlen($entry) - 4);
                     }
-    		        if(substr($entry, 0, 1) == '.') {
+                    if(substr($entry, 0, 1) == '.') {
                          continue;
                     }
                 ?>
