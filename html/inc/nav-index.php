@@ -1,4 +1,4 @@
-<div class="g-five-up g-gutter g-margin">
+<div class="g-six-up g-gutter g-margin">
     <?php
     foreach($toplevels as $toplevel) {
     ?>

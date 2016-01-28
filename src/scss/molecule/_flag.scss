@@ -11,6 +11,15 @@
 // Flag Reversed
 // =============================================
 
-.flag--flip {
-    @include flag--flip;
+.flag--reverse {
+    @include flag--reverse;
+}
+
+
+// =============================================
+// Flag Gutter
+// =============================================
+
+.flag--gutter {
+    @include flag--gutter;
 }

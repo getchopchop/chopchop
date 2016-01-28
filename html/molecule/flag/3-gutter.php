@@ -1,9 +1,9 @@
 <?php /*
-Title: Flag
-Class: .flag
+Title: Flag with gutter
+Class: .flag.flag--gutter
 */ ?>
 
-<div class="flag">
+<div class="flag flag--gutter">
     <div>
         <img src="//placehold.it/350x350">
     </div>

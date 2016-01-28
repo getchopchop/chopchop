@@ -3,29 +3,35 @@
 // =============================================
 
 @mixin flag {
+    margin-bottom: $spacing;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1rem;
 
-    &__media {
-        width: 30%;
-
-        img {
-            width: 100%;
-            max-width: 100%;
-            display: block;
-        }
-    }
-
-    &__body {
-        width: 65%;
+    > *:first-child {
+        flex-grow: 1;
     }
 }
+
 
 // =============================================
 // Flag Reversed
 // =============================================
 
-@mixin flag--flip {
+@mixin flag--reverse {
     flex-direction: row-reverse;
+}
+
+
+// =============================================
+// Flag Reversed
+// =============================================
+
+@mixin flag--gutter {
+    &:not(.flag--reverse) > *:first-child {
+        margin-right: $gutter;
+    }
+    
+    &.flag--reverse > *:first-child {
+        margin-left: $gutter;
+    }
 }
