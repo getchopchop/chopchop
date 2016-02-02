@@ -1,0 +1,32 @@
+// =============================================
+// Pager
+// =============================================
+
+.pager {
+    @extend %u-text-center;
+    
+    &__item {
+        display: inline-block;
+        border: 1px solid $light-grey;
+        @include circle($white, 16px);
+        margin: 0 .1em;
+    
+        &:hover,
+        &.is-active {
+            background-color: $light-grey;
+        }
+    
+        &:active {
+            background-color: $white;
+        }
+    }
+}
+
+
+.banner {
+    overflow: hidden;
+    white-space: nowrap;
+    img {
+        float: left;
+    }
+}

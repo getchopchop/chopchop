@@ -1,0 +1,69 @@
+// =============================================
+// Shapes
+// =============================================
+
+$translucent: rgba(0,0,0,0.3);
+
+.a-circle {
+    @include circle(hotpink, 16px);
+}
+
+.a-square {
+    @include square(hotpink, 16px);
+}
+
+.a-triangle-up {
+    @include triangle(hotpink, 5px, 5px, up);
+}
+
+.a-triangle-down {
+    @include triangle(hotpink, 5px, 5px, down);
+}
+
+.a-triangle-left {
+    @include triangle(hotpink, 5px, 5px, left);
+}
+
+.a-triangle-right {
+    @include triangle(hotpink, 5px, 5px, right);
+}
+
+.a-chevron-up {
+    @include chevron(hotpink, 8px, up, 2px);
+}
+
+.a-chevron-down {
+    @include chevron(hotpink, 8px, down, 2px);
+}
+
+.a-chevron-left {
+    @include chevron(hotpink, 8px, left, 2px);
+}
+
+.a-chevron-right {
+    @include chevron(hotpink, 8px, right, 2px);
+}
+
+.a-minus {
+    @include minus(hotpink, 12px, 2px);
+}
+
+.a-plus {
+    @include plus(hotpink, 12px, 2px);
+}
+
+.a-cross {
+    @include cross(hotpink, 12px, 2px);
+}
+
+.a-tick {
+    @include tick(hotpink, 12px, 2px);
+}
+
+.a-hamburger {
+    @include hamburger(hotpink, 18px, 24px, 2px);
+}
+
+.a-ring {
+    @include ring(hotpink, $translucent, 16px, 3px);
+}
