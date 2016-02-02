@@ -1,0 +1,17 @@
+// =============================================
+// Loading Message
+// =============================================
+
+.loading {
+    display: flex;
+    align-items: center;
+    
+    &__spinner {
+        @extend .a-spin;
+        @include ring(hotpink, $translucent, 16px, 3px);
+    }
+    &__text {
+        @extend %micro;
+        margin-left: $spacing-xs;
+    }
+}
