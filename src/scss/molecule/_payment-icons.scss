@@ -1,0 +1,16 @@
+// =============================================
+// Payment Icons
+// =============================================
+
+.payment-icons {
+    margin-bottom: $spacing-lg;
+    li {
+        margin-left: $spacing-xs;
+        margin-right: $spacing-xs;
+    }
+    &__img {
+        display: block;
+        width: 100%;
+        max-width: 72px;
+    }
+}
