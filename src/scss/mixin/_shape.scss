@@ -246,3 +246,20 @@
     }
     
 }
+
+
+// =============================================
+// Ring
+// =============================================
+
+@mixin ring($foreground-color: rgba(0,0,0,0.3), $background-color: rgba(0,0,0,0.3), $size: 20px, $thickness: 4px) {
+    display: inline-block;
+    background: transparent;
+    border-bottom: $thickness solid $background-color;
+    border-left: $thickness solid $background-color;
+    border-right: $thickness solid $foreground-color;
+    border-top: $thickness solid $background-color;
+    border-radius: 100%;
+    height: $size;
+    width: $size;
+}

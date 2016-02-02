@@ -44,6 +44,7 @@
 // atom
 // =============================================
 
+@import "atom/animate";
 @import "atom/body";
 @import "atom/button";
 @import "atom/form";
@@ -51,7 +52,9 @@
 @import "atom/horizontal-rule";
 @import "atom/icon";
 @import "atom/image";
+@import "atom/logo";
 @import "atom/overlay";
+@import "atom/shape";
 @import "atom/table";
 @import "atom/tag";
 @import "atom/text";
@@ -68,6 +71,7 @@
 @import "molecule/drawer";
 @import "molecule/flag";
 @import "molecule/field-group";
+@import "molecule/pager";
 @import "molecule/title";
 @import "molecule/modal";
 @import "molecule/nav";
