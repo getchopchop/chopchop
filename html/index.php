@@ -1,5 +1,5 @@
 <?php require_once('inc/functions.php'); ?>
-<?php $paths = explode("/", substr($_SERVER['REQUEST_URI'], 1));?>
+<?php checkBlock(getRequestPath()); ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -47,6 +47,5 @@
 
     </div><!--/#wrapper -->
     <?php include('inc/scripts.php'); ?>
-
 </body>
 </html>

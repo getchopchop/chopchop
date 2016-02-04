@@ -5,6 +5,15 @@
 
     define('TEMPLATE_PATH', realpath(__DIR__ . '/../') . '/');
 
+    function checkBlock($location) {
+        $path = TEMPLATE_PATH . trim($location, '/');
+
+        $files = recurseDir($location, $path);
+
+        if(empty($files)) {
+            header('location: /static/');
+        }
+    }
 
     function recurseDir($location, $path) {
         $files = array();
