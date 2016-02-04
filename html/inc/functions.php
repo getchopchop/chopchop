@@ -11,7 +11,7 @@
         $files = recurseDir($location, $path);
 
         if(empty($files)) {
-            header('location: /static/');
+            header('location: /html/');
         }
     }
 
