@@ -36,14 +36,19 @@
         foreach($files as $path) {
             $_t = new TemplateHelper(parseComments(file_get_contents($path)), $options);
             $printContainer |= $_t->shouldPrintContainer();
+            if($printContainer) {
+                echo '<div class="u-container">';
+            }
+
             echo $_t->printTitle();
             include $path;
+
+            if($printContainer) {
+                echo '</div>';
+            }
         }
         $contents .= ob_get_contents();
         ob_end_clean();
-        if($printContainer) { 
-            $contents = '<div class="u-container">' . $contents . '</div>'; 
-        }
         return $contents;
     }
 
