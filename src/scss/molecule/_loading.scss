@@ -5,10 +5,9 @@
 .loading {
     display: flex;
     align-items: center;
-    
+
     &__spinner {
-        @extend .a-spin;
-        @include ring(hotpink, $translucent, 16px, 3px);
+        @include ring($black, $grey, 16px, 3px);
     }
     &__text {
         @extend %micro;
