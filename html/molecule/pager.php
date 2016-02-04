@@ -4,8 +4,10 @@ Class: .pager
 */ ?>
 
 <div class="pager">
-    <a href="#" class="pager__item is-active"></a>
-    <?php for($i=0; $i <=6; $i++) { ?>
-    <a href="#" class="pager__item"></a>
-    <?php } ?>
+    <ul class="u-list-inline">
+        <li><a href="#" class="pager__item is-active"></a></li>
+        <?php for($i=0; $i <=6; $i++) { ?>
+            <li><a href="#" class="pager__item"></a></li>
+        <?php } ?>
+    </ul>
 </div>
