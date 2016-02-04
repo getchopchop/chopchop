@@ -5,35 +5,22 @@
 .qty-actions {
     white-space: nowrap;
     min-width: 9.5em;
-    
+
     &__scale {
-        
+
         > * {
             display: inline-block;
             vertical-align: middle;
         }
-        .btn {
-            @extend %btn;
-            @extend %btn--sm;
-            padding-top: 0.4rem;
-            padding-bottom: 0.3rem;
-            padding-left: 0.6rem;
-            padding-right: 0.6rem;
-            border-radius: $border-radius;
-        }
+
     }
-    
-    &__qty {
-        max-width: $spacing * 4.5;
-        
-        input {
-            text-align: center;
-        }
+
+    .btn {
+        border-radius: $border-radius;
     }
-    
-    &__label {
-        font-size: $font-size-sm;
-        margin-bottom: $spacing-sm;
+
+    input {
+        text-align: center;
     }
 }
 
@@ -43,8 +30,4 @@
 }
 .btn--minus .shape {
     @include minus($white, 16px, 2px);
-}
-
-.btn__text {
-    @extend %u-visually-hidden;
 }
