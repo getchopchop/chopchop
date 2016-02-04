@@ -17,7 +17,8 @@ var ChopChop = (function($, ChopChop) {
     // Initialisation
     var defaultInitOptions = {
         'toggle': {},
-        'collapse': {}
+        'collapse': {},
+        'priorityNav': {}
     };
 
     ChopChop.init = api.init = function(options) {
@@ -53,6 +54,38 @@ var ChopChop = (function($, ChopChop) {
                 params.unshift(this);
                 api[method].apply(api, params);
             });
+        }
+    };
+
+    return ChopChop;
+})(jQuery, ChopChop || {});
+
+// Utilities
+var ChopChop = (function($, ChopChop) {
+    ChopChop.util = {
+        debounce: function(func, wait, immediate) {
+            var timeout;
+
+            return function() {
+                var context = this, 
+                    args = arguments;
+
+                var later = function() {
+                    timeout = null;
+
+                    if (!immediate) {
+                        func.apply(context, args);
+                    }
+                };
+
+                var callNow = immediate && !timeout;
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+
+                if (callNow) {
+                    func.apply(context, args);
+                }
+            };
         }
     };
 
@@ -300,3 +333,68 @@ var ChopChop = (function($, ChopChop) {
     return ChopChop;
 })(jQuery, ChopChop || {});
 
+// Priority nav
+var ChopChop = (function($, ChopChop) {
+    var defaultOptions = {
+    };
+
+    // Priority nav
+    var PriorityNav = ChopChop.Collapse = function(options) {
+        this.options = $.extend({}, defaultOptions, options);
+        this.init();
+    };
+
+    PriorityNav.prototype = {
+        init: function() {
+            var self = this;
+
+            $('[data-cc-priority-subnav]').each(function() {
+                self.applyToContainer(this);
+            });
+        },
+        applyToContainer: function(root, options) {
+            options = $.extend({}, this.options, options);
+
+            var $source = $(root),
+                $target = $('#' + $source.data('cc-priority-subnav'));
+
+            if ($target.size() !== 1) {
+                throw new ChopChop.Exception('Cannot find/found more than one priority subnav target: ' + $source.data('cc-priority-subnav'));
+            }
+
+            var $sourceContainer = $source.find('.priority-nav__container'),
+                $items = $sourceContainer.find('.nav__item'),
+                $sourceList = $sourceContainer.find('.nav'),
+                $targetList = $target.find('.nav');
+
+            var resizer = function() {
+                var containerWidth = $sourceContainer.width(),
+                    $item,
+                    totalWidth = 0,
+                    $t = $sourceList;
+
+                for (var i = 0, l = $items.size(); i < l; ++i) {
+                    $item = $items.eq(i);
+                    totalWidth += $item.width();
+
+                    if (totalWidth >= containerWidth) {
+                        $t = $targetList;
+                    }
+
+                    $item.appendTo($t);
+                }
+            };
+
+            $(window).resize(ChopChop.util.debounce(resizer, 50));
+
+            resizer();
+        }
+    };
+
+    // Expose api
+    ChopChop.api.priorityNav = function() {
+        return ChopChop.plugins.priorityNav.applyToContainer.apply(ChopChop.plugins.priorityNav, arguments);
+    };
+
+    return ChopChop;
+})(jQuery, ChopChop || {});

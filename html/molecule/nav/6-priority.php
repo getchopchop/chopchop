@@ -3,8 +3,8 @@ Title: Priority Nav
 Class: .priority-nav
 */ ?>
 
-<div class="priority-nav">
-    <div class="priority-nav__container">
+<div class="priority-nav" data-cc-priority-subnav="priority-nav-sub">
+    <div class="priority-nav__container" style="width: 100%;">
         <ul class="nav nav--inline nav--pills">
             <?php for($i=0; $i <=4; $i++) { ?>
             <li class="nav__item"><a href="#">home</a></li>
