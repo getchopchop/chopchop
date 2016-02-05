@@ -5,8 +5,8 @@
 
 var project = {
     name: 'chopchop',
-    source: './src',
-    dist: './build',
+    source: 'src',
+    dist: 'build',
     scss: 'scss',
     css: 'css',
     js: 'js',
@@ -50,7 +50,8 @@ var gulp = require('gulp'),
         uglify:             require('gulp-uglify'),
         changed:            require('gulp-changed'),
         sourcemaps:         require('gulp-sourcemaps'),
-        bower:              require('gulp-bower')
+        bower:              require('gulp-bower'),
+        plumber:            require('gulp-plumber')
     };
 
 // =============================================
