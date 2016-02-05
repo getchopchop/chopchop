@@ -5,6 +5,24 @@
 
     define('TEMPLATE_PATH', realpath(__DIR__ . '/../') . '/');
 
+    function get($location, $options=array()) {
+        if(substr($location, -1) === '/') {
+            $path = TEMPLATE_PATH . trim($location, '/');
+            $files = recurseDir($location, $path);
+        }
+        else {
+            $parts = explode('/', $location);
+            $last = array_pop($parts);
+
+            $parts[] = "*".$last."*.php";
+            $path = TEMPLATE_PATH . implode('/', $parts);
+            $files = glob($path);
+        }
+
+        return getContents($files, $options);
+    }
+
+
     function checkBlock($location) {
         $path = TEMPLATE_PATH . trim($location, '/');
 
@@ -32,14 +50,7 @@
         return $files;
     }
 
-    function getBlock($location, $options=array()) {
-        $path = TEMPLATE_PATH . trim($location, '/');
-
-        $files = recurseDir($location, $path);
-
-        if(empty($files)) {
-            return '';
-        }
+    function getContents($files, $options) {
         $printContainer = false;
         ob_start();
         foreach($files as $path) {
@@ -59,6 +70,18 @@
         $contents .= ob_get_contents();
         ob_end_clean();
         return $contents;
+    }
+
+    function getBlock($location, $options=array()) {
+        $path = TEMPLATE_PATH . trim($location, '/');
+
+        $files = recurseDir($location, $path);
+
+        if(empty($files)) {
+            return '';
+        }
+
+        return getContents($files, $options);
     }
 
     function getBaseUrl() {
