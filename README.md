@@ -1,9 +1,17 @@
 # Chop Chop
 
-### Wiki Link
+## Wiki Link
 https://gitlab.iweb.co.uk/labs/chopchop/wikis/pages
 
-## To get going with it here are the commands
+
+## Atomic
+- atoms - high level elements such as inputs and paragraphs
+- molecules - high level objects that are very generic
+- organisms - specific combinations of atoms and molecules such as sharing / product 
+
+## Get Started
+
+To get going with it here are the commands
 
     mkdir ~/Sites/chopchop
     cd ~/Sites/chopchop
