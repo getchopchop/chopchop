@@ -5,9 +5,9 @@ https://gitlab.iweb.co.uk/labs/chopchop/wikis/pages
 
 
 ## Atomic
-- atoms - high level elements such as inputs and paragraphs
-- molecules - high level objects that are very generic
-- organisms - specific combinations of atoms and molecules such as sharing / product
+- atoms – high level elements such as inputs, headings
+- molecules – something containing multiple atoms or a very reusable flexible pattern
+- organism – something very specific to it's use that contains multiple molecules
 
 See [wiki](https://gitlab.iweb.co.uk/labs/chopchop/wikis/best-practices) for more
 
