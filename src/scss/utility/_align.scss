@@ -45,17 +45,23 @@
 
 
 // =============================================
-// Flex Row with offset last child
+// Flex container with offset last child
 // =============================================
 
-%u-offset-last,
-.u-offset-last {
+@mixin flex-offset-last {
     display: flex;
     align-items: center;
+    
     > :first-child {
         margin-right: $spacing-sm;
     }
+    
     > :last-child {
         margin-left: auto;
     }
+    
+}
+%u-offset-last,
+.u-offset-last {
+    @include flex-offset-last;
 }
