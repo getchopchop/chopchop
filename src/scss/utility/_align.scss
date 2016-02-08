@@ -42,3 +42,20 @@
 %u-pull-right {
     float: right !important;
 }
+
+
+// =============================================
+// Flex Row with offset last child
+// =============================================
+
+%u-offset-last,
+.u-offset-last {
+    display: flex;
+    align-items: center;
+    > :first-child {
+        margin-right: $spacing-sm;
+    }
+    > :last-child {
+        margin-left: auto;
+    }
+}
