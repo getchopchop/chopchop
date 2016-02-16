@@ -363,7 +363,8 @@ var ChopChop = (function($, ChopChop) {
             }
 
             var $sourceContainer = $source.find('.priority-nav__container'),
-                $items = $sourceContainer.find('.nav__item'),
+                $items = $sourceContainer.find('> ul > .nav__item'),
+                widths = [],
                 $sourceList = $sourceContainer.find('.nav'),
                 $targetList = $target.find('.nav');
 
@@ -373,9 +374,16 @@ var ChopChop = (function($, ChopChop) {
                     totalWidth = 0,
                     $t = $sourceList;
 
+                if (widths.length === 0 || $items.eq(0).outerWidth() !== widths[0]) {
+                    widths = [];
+                    $items.outerWidth(function(i, w) {
+                        widths.push(w);
+                    });
+                }
+
                 for (var i = 0, l = $items.size(); i < l; ++i) {
                     $item = $items.eq(i);
-                    totalWidth += $item.width();
+                    totalWidth += widths[i];
 
                     if (totalWidth >= containerWidth) {
                         $t = $targetList;
