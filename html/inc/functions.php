@@ -47,6 +47,7 @@
                 $files[] = $path;
             }
         }
+        natsort($files);
         return $files;
     }
 
