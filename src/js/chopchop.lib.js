@@ -363,33 +363,46 @@ var ChopChop = (function($, ChopChop) {
             }
 
             var $sourceContainer = $source.find('.priority-nav__container'),
-                $items = $sourceContainer.find('> ul > .nav__item'),
+                $sourceItems = $sourceContainer.find('> ul > .nav__item'),
+                $targetItems = $sourceItems.clone(),
                 widths = [],
                 $sourceList = $sourceContainer.find('.nav'),
                 $targetList = $target.find('.nav');
 
+            // Clone full nav from source to target list
+            $targetItems.addClass('u-hidden');
+            $targetList.append($targetItems);
+
             var resizer = function() {
                 var containerWidth = $sourceContainer.width(),
-                    $item,
+                    $sourceItem, $targetItem,
                     totalWidth = 0,
                     $t = $sourceList;
 
-                if (widths.length === 0 || $items.eq(0).outerWidth() !== widths[0]) {
+                if (widths.length === 0 || $sourceItems.eq(0).outerWidth() !== widths[0]) {
                     widths = [];
-                    $items.outerWidth(function(i, w) {
+
+                    // Unhide all source items, as hidden sources items will have a width of 0
+                    // Any items that won't fit will be hidden again in the next section
+                    $sourceItems.removeClass('u-hidden');
+                    $sourceItems.outerWidth(function(i, w) {
                         widths.push(w);
                     });
                 }
 
-                for (var i = 0, l = $items.size(); i < l; ++i) {
-                    $item = $items.eq(i);
+                // Iterate over all items, hiding and showing items selectively based on fit
+                for (var i = 0, l = $sourceItems.size(); i < l; ++i) {
+                    $sourceItem = $sourceItems.eq(i);
+                    $targetItem = $targetItems.eq(i);
                     totalWidth += widths[i];
 
                     if (totalWidth >= containerWidth) {
-                        $t = $targetList;
+                        $sourceItem.addClass('u-hidden');
+                        $targetItem.removeClass('u-hidden');
+                    } else {
+                        $sourceItem.removeClass('u-hidden');
+                        $targetItem.addClass('u-hidden');
                     }
-
-                    $item.appendTo($t);
                 }
             };
 
