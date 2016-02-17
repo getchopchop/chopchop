@@ -367,7 +367,8 @@ var ChopChop = (function($, ChopChop) {
                 $targetItems = $sourceItems.clone(),
                 widths = [],
                 $sourceList = $sourceContainer.find('.nav'),
-                $targetList = $target.find('.nav');
+                $targetList = $target.find('.nav'),
+                $showMore = $source.find('.priority-nav__toggle');
 
             // Clone full nav from source to target list
             $targetItems.addClass('u-hidden');
@@ -391,6 +392,8 @@ var ChopChop = (function($, ChopChop) {
                 }
 
                 // Iterate over all items, hiding and showing items selectively based on fit
+                var visible = 0, hidden = 0;
+
                 for (var i = 0, l = $sourceItems.size(); i < l; ++i) {
                     $sourceItem = $sourceItems.eq(i);
                     $targetItem = $targetItems.eq(i);
@@ -399,11 +402,22 @@ var ChopChop = (function($, ChopChop) {
                     if (totalWidth >= containerWidth) {
                         $sourceItem.addClass('u-hidden');
                         $targetItem.removeClass('u-hidden');
+                        hidden += 1;
                     } else {
                         $sourceItem.removeClass('u-hidden');
                         $targetItem.addClass('u-hidden');
+                        visible += 1;
                     }
                 }
+
+                // If no items are hidden, disable the more button
+                if (hidden === 0) {
+                    $showMore.addClass('is-disabled');
+                } else {
+                    $showMore.removeClass('is-disabled');
+                }
+
+                $source.trigger('chopchop:priority-nav', [visible, hidden]);
             };
 
             $(window).resize(ChopChop.util.debounce(resizer, 50));
