@@ -37,12 +37,12 @@
 // =============================================
 
 .nav--space {
-    &:not(.nav--inline) .nav__item {
+    &:not(.nav--inline) > * {
         margin-top: $spacing-xs;
         margin-bottom: $spacing-xs;
     }
     
-    &.nav--inline .nav__item {
+    &.nav--inline > * {
         margin-left: $spacing-xs;
         margin-right: $spacing-xs;
         &:first-child {
