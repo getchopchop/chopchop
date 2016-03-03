@@ -227,7 +227,7 @@ $z-200: 200;
     @extend .card--bordered;
     border-radius: $border-radius;
     .card__body {
-        @include ratio(50%);
+        @include ratio(40%);
         border-top-left-radius: $border-radius;
         border-top-right-radius: $border-radius;
     }
