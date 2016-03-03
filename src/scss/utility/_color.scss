@@ -1,55 +1,112 @@
 // =============================================
-// Grey Palette
+// Grey Fill
 // =============================================
 
-.u-bg-grey {
+.u-fill-grey {
     background-color: $grey;
 }
-.u-bg-dark-grey {
+.u-fill-dark-grey {
     background-color: $dark-grey;
 }
-.u-bg-darker-grey {
+.u-fill-darker-grey {
     background-color: $darker-grey;
 }
-.u-bg-light-grey {
+.u-fill-light-grey {
     background-color: $light-grey;
 }
-.u-bg-lighter-grey {
+.u-fill-lighter-grey {
     background-color: $lighter-grey;
 }
-.u-bg-white {
+.u-fill-white {
     background-color: $white;
 }
-.u-bg-black {
+.u-fill-black {
     background-color: $black;
 }
 
 
 // =============================================
-// Social Media
+// Social Media Fill
 // =============================================
 
-.u-bg-twitter {
+.u-fill-twitter {
     background-color: $twitter;
 }
-.u-bg-facebook {
+.u-fill-facebook {
     background-color: $facebook;
 }
-.u-bg-google {
+.u-fill-google {
     background-color: $google;
 }
-.u-bg-pinterest {
+.u-fill-pinterest {
     background-color: $pinterest;
 }
-.u-bg-instagram {
+.u-fill-instagram {
     background-color: $instagram;
 }
-.u-bg-vimeo {
+.u-fill-vimeo {
     background-color: $vimeo;
 }
-.u-bg-linkedin {
+.u-fill-linkedin {
     background-color: $linkedin;
 }
-.u-bg-youtube {
+.u-fill-youtube {
     background-color: $youtube;
+}
+
+
+// =============================================
+// Grey Text
+// =============================================
+
+.u-text-grey {
+    color: $grey;
+}
+.u-text-dark-grey {
+    color: $dark-grey;
+}
+.u-text-darker-grey {
+    color: $darker-grey;
+}
+.u-text-light-grey {
+    color: $light-grey;
+}
+.u-text-lighter-grey {
+    color: $lighter-grey;
+}
+.u-text-white {
+    color: $white;
+}
+.u-text-black {
+    color: $black;
+}
+
+
+// =============================================
+// Social Media Text
+// =============================================
+
+.u-text-twitter {
+    color: $twitter;
+}
+.u-text-facebook {
+    color: $facebook;
+}
+.u-text-google {
+    color: $google;
+}
+.u-text-pinterest {
+    color: $pinterest;
+}
+.u-text-instagram {
+    color: $instagram;
+}
+.u-text-vimeo {
+    color: $vimeo;
+}
+.u-text-linkedin {
+    color: $linkedin;
+}
+.u-text-youtube {
+    color: $youtube;
 }
