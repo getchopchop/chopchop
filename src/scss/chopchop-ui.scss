@@ -312,3 +312,49 @@ $z-200: 200;
     border-radius: $border-radius;
     margin-bottom: $spacing-lg;
 }
+
+
+
+// =============================================
+// CC Shapes
+// =============================================
+
+.cc-shape-circle {
+    @include circle($black, 16px);
+}
+
+.cc-shape-square {
+    @include square($black, 16px);
+}
+
+.cc-shape-triangle {
+    @include triangle($black, 5px, 5px, right);
+}
+
+.cc-shape-chevron {
+    @include chevron($black, 8px, up, 2px);
+}
+
+.cc-shape-minus {
+    @include minus($black, 12px, 2px);
+}
+
+.cc-shape-plus {
+    @include plus($black, 12px, 2px);
+}
+
+.cc-shape-cross {
+    @include cross($black, 12px, 2px);
+}
+
+.cc-shape-tick {
+    @include tick($black, 12px, 2px);
+}
+
+.cc-shape-hamburger {
+    @include hamburger($black, 18px, 24px, 2px);
+}
+
+.cc-shape-ring {
+    @include ring($black, $grey, 16px, 3px);
+}
