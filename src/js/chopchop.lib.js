@@ -67,7 +67,7 @@ var ChopChop = (function($, ChopChop) {
             var timeout;
 
             return function() {
-                var context = this, 
+                var context = this,
                     args = arguments;
 
                 var later = function() {
@@ -328,107 +328,6 @@ var ChopChop = (function($, ChopChop) {
     // Expose api
     ChopChop.api.collapse = function() {
         return ChopChop.plugins.collapse.applyToContainer.apply(ChopChop.plugins.collapse, arguments);
-    };
-
-    return ChopChop;
-})(jQuery, ChopChop || {});
-
-// Priority nav
-var ChopChop = (function($, ChopChop) {
-    var defaultOptions = {
-    };
-
-    // Priority nav
-    var PriorityNav = ChopChop.Collapse = function(options) {
-        this.options = $.extend({}, defaultOptions, options);
-        this.init();
-    };
-
-    PriorityNav.prototype = {
-        init: function() {
-            var self = this;
-
-            $('[data-cc-priority-subnav]').each(function() {
-                self.applyToContainer(this);
-            });
-        },
-        applyToContainer: function(root, options) {
-            options = $.extend({}, this.options, options);
-
-            var $source = $(root),
-                $target = $('#' + $source.data('cc-priority-subnav'));
-
-            if ($target.size() !== 1) {
-                throw new ChopChop.Exception('Cannot find/found more than one priority subnav target: ' + $source.data('cc-priority-subnav'));
-            }
-
-            var $sourceContainer = $source.find('.priority-nav__container'),
-                $sourceItems = $sourceContainer.find('> ul > .nav__item'),
-                $targetItems = $sourceItems.clone(),
-                widths = [],
-                $sourceList = $sourceContainer.find('.nav'),
-                $targetList = $target.find('.nav'),
-                $showMore = $source.find('.priority-nav__toggle');
-
-            // Clone full nav from source to target list
-            $targetItems.addClass('u-hidden');
-            $targetList.append($targetItems);
-
-            var resizer = function() {
-                var containerWidth = $sourceContainer.width(),
-                    $sourceItem, $targetItem,
-                    totalWidth = 0,
-                    $t = $sourceList;
-
-                if (widths.length === 0 || $sourceItems.eq(0).outerWidth() !== widths[0]) {
-                    widths = [];
-
-                    // Unhide all source items, as hidden sources items will have a width of 0
-                    // Any items that won't fit will be hidden again in the next section
-                    $sourceItems.removeClass('u-hidden');
-                    $sourceItems.outerWidth(function(i, w) {
-                        widths.push(w);
-                    });
-                }
-
-                // Iterate over all items, hiding and showing items selectively based on fit
-                var visible = 0, hidden = 0;
-
-                for (var i = 0, l = $sourceItems.size(); i < l; ++i) {
-                    $sourceItem = $sourceItems.eq(i);
-                    $targetItem = $targetItems.eq(i);
-                    totalWidth += widths[i];
-
-                    if (totalWidth >= containerWidth) {
-                        $sourceItem.addClass('u-hidden');
-                        $targetItem.removeClass('u-hidden');
-                        hidden += 1;
-                    } else {
-                        $sourceItem.removeClass('u-hidden');
-                        $targetItem.addClass('u-hidden');
-                        visible += 1;
-                    }
-                }
-
-                // If no items are hidden, disable the more button
-                if (hidden === 0) {
-                    $showMore.addClass('is-disabled');
-                } else {
-                    $showMore.removeClass('is-disabled');
-                }
-
-                $source.trigger('chopchop:priority-nav', [visible, hidden]);
-            };
-
-            $(window).resize(ChopChop.util.debounce(resizer, 50));
-
-            resizer();
-        }
-    };
-
-    // Expose api
-    ChopChop.api.priorityNav = function() {
-        return ChopChop.plugins.priorityNav.applyToContainer.apply(ChopChop.plugins.priorityNav, arguments);
     };
 
     return ChopChop;

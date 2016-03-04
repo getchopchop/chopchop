@@ -3,9 +3,9 @@ Title: Priority Nav
 Class: .priority-nav
 */ ?>
 
-<div class="priority-nav" data-cc-priority-subnav="priority-nav-sub">
-    <div class="priority-nav__container" style="width: 100%;">
-        <ul class="nav nav--inline nav--pills">
+<div class="priority-nav">
+    <div class="priority-nav__container">
+        <ul class="priority-nav__nav nav nav--inline nav--pills">
             <?php for($i=0; $i <=4; $i++) { ?>
             <li class="nav__item"><a href="#">home</a></li>
             <li class="nav__item"><a href="#">UK</a></li>
@@ -15,11 +15,11 @@ Class: .priority-nav
         </ul>
     </div>
     <div class="priority-nav__toggle nav nav--pills">
-        <a href="#" data-cc-action="toggle" data-cc-target="priority-nav-sub" id="priority-nav-sub-toggle">More</a>
+        <a href="#" data-cc-action="toggle" data-cc-target="priority-nav-sub">More</a>
     </div>
 </div>
-<div class="priority-nav__sub" id="priority-nav-sub" data-cc-cascade="priority-nav-sub-toggle">
-    <ul class="nav nav--pills">
+<div class="priority-nav__sub" id="priority-nav-sub">
+    <ul class="priority-nav__sub-nav nav nav--pills">
         <!--priority-nav item target -->
     </ul>
 </div>

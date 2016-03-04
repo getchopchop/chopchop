@@ -2,5 +2,6 @@
 <script src="<?php echo getUrl('build/bower_components/jquery/dist/jquery.min.js'); ?>"></script>
 <script src="<?php echo getUrl('build/bower_components/picturefill/dist/picturefill.min.js'); ?>"></script>
 <script src="<?php echo getUrl('build/js/chopchop.lib.js'); ?>"></script>
+<script src="<?php echo getUrl('build/js/priority-nav.js'); ?>"></script>
 <script src="<?php echo getUrl('build/js/script.js'); ?>"></script>
 <!-- End template: _js !-->
