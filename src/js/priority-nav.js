@@ -26,7 +26,7 @@
 
         function check() {
             // Get instant state
-            availableSpace = $vlinks.width() - 10;
+            availableSpace = $vlinks.width();
             numOfVisibleItems = $vlinks.children().length;
             requiredSpace = breakWidths[numOfVisibleItems - 1];
 
