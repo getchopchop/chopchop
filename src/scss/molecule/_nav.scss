@@ -41,7 +41,7 @@
         margin-top: $spacing-xs;
         margin-bottom: $spacing-xs;
     }
-    
+
     &.nav--inline > * {
         margin-left: $spacing-xs;
         margin-right: $spacing-xs;
@@ -61,32 +61,37 @@
 
 .priority-nav {
     display: flex;
-    overflow: hidden;
+
+    &__container {
+        flex-grow: 1;
+        overflow-x: scroll;
+    }
 
     ::-webkit-scrollbar {
         display: none;
     }
 
-    &__container {
-        overflow-x: scroll;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-    }
-
     &__toggle {
-        flex-shrink: 0;
-    }
-
-    &__sub {
-        padding: $spacing;  
         display: none;
+
         &.is-active {
             display: block;
         }
     }
 
-    .nav {
+    &__nav {
+        white-space: nowrap;
         flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    &__sub {
+        padding: $spacing;
+        display: none;
+
+        &.is-active {
+            display: block;
+        }
     }
 }
 
