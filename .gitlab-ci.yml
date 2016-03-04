@@ -6,7 +6,7 @@ build_and_deploy_live:
     set -x # Do echo commands
     set -
     npm install
-    node_modules/.bin/gulp build
+    node_modules/.bin/gulp build --production
     echo $SSH_KEY | base64 -d > /tmp/deploy_key
     chmod 600 /tmp/deploy_key
     eval `ssh-agent`
