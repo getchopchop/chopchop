@@ -12,7 +12,6 @@ build_and_deploy_live:
     eval `ssh-agent`
     ssh-add /tmp/deploy_key
     SSH_OPTS="-v -A -oBatchMode=yes -oCheckHostIP=no -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null"
-    ssh $SSH_OPTS chopchopweb1@chopchopweb1.manc.iws-hosting.co.uk "cd public_html && modman update yuasa"
     rsync -Pvrax --delete -e "ssh $SSH_OPTS" . chopchopweb1@chopchopweb1.manc.iws-hosting.co.uk:~/public_html/chopchop/
     kill $SSH_AGENT_PID
   tags:
