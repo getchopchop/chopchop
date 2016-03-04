@@ -26,6 +26,11 @@
         <!-- <main class="main site-main"> -->
         <main>
               <?php if(isIndex()) { ?>
+                  <header class="header">
+                      <div class="u-container u-text-center">
+                          <?php include('molecule/logo.php'); ?>
+                      </div>
+                  </header>
                     <div class="u-container">
                         <div class="u-container">
                             <hgroup class="hgroup page-title hero-title u-hidden">
