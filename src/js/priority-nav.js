@@ -38,7 +38,7 @@
             // There is more than enough space
             } else if (availableSpace > breakWidths[numOfVisibleItems]) {
                 $hlinks.children().first().appendTo($vlinks);
-                numOfVisibleItems += 100; // This used to be one but 100 fixes it
+                numOfVisibleItems = numOfItems; // This used to be one but 100 fixes it
                 check();
             }
 
