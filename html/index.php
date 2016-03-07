@@ -23,7 +23,6 @@
             </div>
         </nav>
 
-        <!-- <main class="main site-main"> -->
         <main>
               <?php if(isIndex()) { ?>
                   <header class="header">
