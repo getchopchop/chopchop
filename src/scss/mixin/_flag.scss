@@ -23,7 +23,7 @@
 
 
 // =============================================
-// Flag Reversed
+// Flag Gutter
 // =============================================
 
 @mixin flag--gutter {
@@ -34,4 +34,13 @@
     &.flag--reverse > *:first-child {
         margin-left: $gutter;
     }
+}
+
+
+// =============================================
+// Flag Centered
+// =============================================
+
+@mixin flag--center {
+    align-items: center;
 }

@@ -1,10 +1,9 @@
 <?php /*
-Title: Flag
-Class: .flag
-Description: Base flag (aligns items top by default)
+Title: Flag Centered
+Class: .flag.flag--center
 */ ?>
 
-<div class="flag">
+<div class="flag flag--center">
     <div>
         <img src="//placehold.it/350x350">
     </div>
