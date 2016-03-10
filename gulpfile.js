@@ -77,15 +77,15 @@ var path = {
         build: project.dist + '/' + project.js
     },
     images: {
-        source: project.source + '/' + project.img + '/**/*.*',
+        source: project.source + '/' + project.img + '/**/*',
         build: project.dist + '/' + project.img
     },
     fonts: {
-        source: project.source + '/' + project.fonts + '/**/*.*',
+        source: project.source + '/' + project.fonts + '/**/*',
         build: project.dist + '/' + project.fonts
     },
     vendor: {
-        source: project.source + '/' + project.vendor + '/**/*.*',
+        source: project.source + '/' + project.vendor + '/**/*',
         build: project.dist + '/' + project.vendor
     },
     bower: project.dist + '/' + project.bower
