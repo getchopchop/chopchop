@@ -116,6 +116,12 @@
         top: 50%;
         margin-top: -($thickness/2);
     }
+    
+    // We need this as we may use plus on the same element
+    // so we dont want to show the vertical part of the shape
+    &:after {
+        display: none;
+    }
 }
 
 
