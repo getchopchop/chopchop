@@ -2,8 +2,8 @@
 // Flag
 // =============================================
 
-@mixin flag {
-    margin-bottom: $spacing;
+@mixin flag($mb: $spacing) {
+    margin-bottom: $mb;
     display: flex;
     justify-content: space-between;
 

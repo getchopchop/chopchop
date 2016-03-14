@@ -14,6 +14,7 @@ $z-200: 200;
 @import "mixin/shape";
 @import "mixin/ellipsis";
 @import "mixin/breakpoint";
+@import "mixin/flex-container";
 @import "mixin/grid";
 @import "mixin/list";
 @import "mixin/ratio";
@@ -357,4 +358,13 @@ $z-200: 200;
 
 .cc-shape-ring {
     @include ring($black, $grey, 16px, 3px);
+}
+
+
+// =============================================
+// CC Flex Container
+// =============================================
+
+.cc-flex-container {
+    @include flex-container(null, center, last);
 }

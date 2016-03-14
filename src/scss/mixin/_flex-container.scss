@@ -1,0 +1,29 @@
+// =============================================
+// Flex Container
+// =============================================
+
+@mixin flex-container(
+    $justify: null,
+    $alignment: null,
+    $offset: null) {
+        display: flex;
+        align-items: $alignment;
+        justify-content: $justify;
+        
+    > :nth-child(#{$offset}) {
+        margin-left: auto;
+    }
+    
+    @if $offset == first {
+        > :first-child {
+            margin-left: auto;
+        }
+    }
+    
+    @if $offset == last {
+        > :last-child {
+            margin-left: auto;
+        }
+    }
+    
+}
