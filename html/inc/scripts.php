@@ -1,6 +1,6 @@
 <!-- Template: _js !-->
 <script src="<?php echo getUrl('build/vendor/jquery/jquery.js'); ?>"></script>
-<script src="<?php echo getUrl('build/vendor/picturefill/dist/picturefill.js'); ?>"></script>
+<script src="<?php echo getUrl('build/vendor/picturefill/picturefill.js'); ?>"></script>
 <script src="<?php echo getUrl('build/js/chopchop.lib.js'); ?>"></script>
 <script src="<?php echo getUrl('build/js/priority-nav.js'); ?>"></script>
 <script src="<?php echo getUrl('build/js/script.js'); ?>"></script>
