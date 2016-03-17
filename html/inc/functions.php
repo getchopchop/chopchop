@@ -13,15 +13,27 @@
         else {
             $parts = explode('/', $location);
             $last = array_pop($parts);
-
-            $parts[] = "*".$last."*.php";
+            $parts[] = "*".$last.".php";
             $path = TEMPLATE_PATH . implode('/', $parts);
-            $files = glob($path);
+            $filestocheck = glob($path);
+            $files = array();
+            foreach ($filestocheck as $f) {
+                $filename = basename($f, '.php');
+                if(preg_match("/(\d+\-)?" . $last . "/", $filename)) {
+                    $files[] = $f;
+                }
+            }
         }
-
         return getContents($files, $options);
     }
 
+    function getPattern($location, $options=array()) {
+        return get($location, $options);
+    }
+
+    function printPattern($location, $options=array()) {
+        echo get($location, $options);
+    }
 
     function checkBlock($location) {
         $path = TEMPLATE_PATH . trim($location, '/');
