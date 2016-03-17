@@ -42,26 +42,3 @@
 %u-pull-right {
     float: right !important;
 }
-
-
-// =============================================
-// Flex container with offset last child
-// =============================================
-
-@mixin flex-offset-last {
-    display: flex;
-    align-items: center;
-    
-    > :first-child {
-        margin-right: $spacing-sm;
-    }
-    
-    > :last-child {
-        margin-left: auto;
-    }
-    
-}
-%u-flex-offset-last,
-.u-flex-offset-last {
-    @include flex-offset-last;
-}
