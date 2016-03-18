@@ -89,6 +89,10 @@ $z-200: 200;
 }
 
 
+// =============================================
+// Navigation on Index
+// =============================================
+
 .cc-index-nav {
     margin-bottom: $spacing;
     
@@ -102,10 +106,19 @@ $z-200: 200;
         @include grid-up(6);
     }
     
+    > :nth-child(1),
+    > :nth-child(2),
+    > :nth-child(3) {
+        @include breakpoint($screen-md $screen-md-max) {
+            border-bottom: 2px solid $grey;
+            padding-bottom: $spacing;
+            margin-bottom: $spacing;
+        }
+    }
+    
     &__item {
         margin-bottom: 1px;
     }
-    
     
     &__header,
     &__body {
@@ -144,10 +157,6 @@ $z-200: 200;
         }
         
     }
-
-    
-
-    
     
     // Show
     @include breakpoint($screen-md) {
@@ -160,6 +169,7 @@ $z-200: 200;
     }
     
 }
+
 
 // =============================================
 // Navigation
