@@ -12,6 +12,7 @@ $z-200: 200;
 // =============================================
 
 @import "mixin/shape";
+@import "mixin/card";
 @import "mixin/ellipsis";
 @import "mixin/breakpoint";
 @import "mixin/flex-container";
@@ -87,6 +88,78 @@ $z-200: 200;
     }
 }
 
+
+.cc-index-nav {
+    margin-bottom: $spacing;
+    
+    @include breakpoint($screen-md) {
+        @include grid;
+        @include grid-up(3);
+        @include grid-gutter($spacing);
+    }
+    
+    @include breakpoint($screen-lg) {
+        @include grid-up(6);
+    }
+    
+    &__item {
+        margin-bottom: 1px;
+    }
+    
+    
+    &__header,
+    &__body {
+        @include breakpoint(max-width $screen-sm-max) {
+            padding: $spacing;
+        }
+        @include breakpoint($screen-md) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    
+    &__header {
+        @include flex-container(null, center, last);
+        
+        @include breakpoint(max-width $screen-sm-max) {
+            background: gainsboro;
+        
+            &.is-active {
+                background-color: grey;
+                color: white;
+            }
+        }
+        
+        > :first-child {
+            margin-bottom: 0;
+        }
+    
+        .shape {
+            margin-left: auto;
+            @include plus($black, 12px, 2px);
+        }
+    
+        &.is-active .shape {
+            @include minus($black, 12px, 2px);
+        }
+        
+    }
+
+    
+
+    
+    
+    // Show
+    @include breakpoint($screen-md) {
+        .shape {
+            display: none !important;
+        }
+        .u-toggle {
+            display: block !important;
+        }
+    }
+    
+}
 
 // =============================================
 // Navigation
