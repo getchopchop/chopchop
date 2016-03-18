@@ -45,7 +45,8 @@
         margin-bottom: $spacing-xs;
     }
 
-    &.nav--inline > * {
+    &.nav--inline > *,
+    &%nav--inline > * {
         margin-left: $spacing-xs;
         margin-right: $spacing-xs;
         &:first-child {
