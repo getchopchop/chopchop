@@ -16,7 +16,8 @@
 // Nav Pills
 // =============================================
 
-.nav--pills a {
+.nav--pills a,
+%nav--pills a {
     display: block;
     padding: $spacing-xs $spacing-sm;
 }
@@ -26,7 +27,8 @@
 // Nav inline
 // =============================================
 
-.nav--inline {
+.nav--inline,
+%nav--inline {
     display: flex;
     flex-wrap: wrap;
 }
@@ -36,7 +38,8 @@
 // Nav space
 // =============================================
 
-.nav--space {
+.nav--space,
+%nav--space {
     &:not(.nav--inline) > * {
         margin-top: $spacing-xs;
         margin-bottom: $spacing-xs;
@@ -142,7 +145,8 @@
 // Nav Pager
 // =============================================
 
-.nav--pager {
+.nav--pager,
+%nav--pager {
     justify-content: center;
     font-size: 0;
     
