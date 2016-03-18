@@ -136,3 +136,26 @@
         white-space: nowrap;
     }
 }
+
+
+// =============================================
+// Nav Pager
+// =============================================
+
+.nav--pager {
+    justify-content: center;
+    font-size: 0;
+    
+    a {
+        @include circle($lighter-grey, 16px);
+
+        &:hover,
+        &.is-active {
+            background-color: $light-grey;
+        }
+
+        &:active {
+            background-color: $white;
+        }
+    }
+}
