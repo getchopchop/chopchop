@@ -25,8 +25,8 @@
 
         <main>
               <?php if(isIndex()) { ?>
-                  <header class="header">
-                      <div class="u-container u-text-center">
+                  <header class="cc-header">
+                      <div class="u-container">
                           <?php include('molecule/logo.php'); ?>
                       </div>
                   </header>
