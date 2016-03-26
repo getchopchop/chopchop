@@ -26,6 +26,7 @@
   speak: none;
  
   display: inline-block;
+  vertical-align: middle;
   text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
