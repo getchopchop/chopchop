@@ -77,6 +77,7 @@
 
     &__toggle {
         display: none;
+        flex-shrink: 0;
 
         &.is-active {
             display: block;
@@ -87,6 +88,10 @@
         white-space: nowrap;
         flex-wrap: nowrap;
         -webkit-overflow-scrolling: touch;
+
+        li {
+            flex-shrink: 0;
+        }
     }
 
     &__sub {
@@ -150,7 +155,7 @@
 %nav--pager {
     justify-content: center;
     font-size: 0;
-    
+
     a {
         @include circle($lighter-grey, 16px);
 

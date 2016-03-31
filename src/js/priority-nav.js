@@ -24,7 +24,8 @@
 
         var availableSpace, numOfVisibleItems, requiredSpace;
 
-        function check() {
+        function check(runAgain) {
+            runAgain = runAgain === false ? false : true;
             // Get instant state
             availableSpace = $vlinks.width();
             numOfVisibleItems = $vlinks.children().length;
@@ -34,26 +35,31 @@
             if (requiredSpace > availableSpace) {
                 $vlinks.children().last().prependTo($hlinks);
                 numOfVisibleItems -= 1;
-                check();
+                check(false);
             // There is more than enough space
             } else if (availableSpace > breakWidths[numOfVisibleItems]) {
                 $hlinks.children().first().appendTo($vlinks);
-                numOfVisibleItems = numOfItems; // This used to be one but 100 fixes it
-                check();
+                numOfVisibleItems = numOfItems;
+                check(false);
             }
 
             // Update the button accordingly
             $btn.attr("count", numOfItems - numOfVisibleItems);
             if (numOfVisibleItems === numOfItems) {
                 $btn.removeClass('is-active');
-            } else $btn.addClass('is-active');
+            } else {
+                $btn.addClass('is-active');
+            }
+
+            if(runAgain){
+                check(false);
+            }
         }
 
         // Window listeners
         $(window).resize(function() {
             check();
-        });
-        check();
+        }).resize();
 
     });
 }(jQuery));
