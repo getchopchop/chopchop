@@ -11,21 +11,22 @@
 <body>
 
     <?php if(!isset($_GET['preview'])) : ?>
-        <div class="cc-toolbar">
-            <a href="#" class="site-navigation__toggle cc-readout" data-cc-action="toggle" data-cc-target="navigation">Menu</a>
-            <span class="cc-readout cc-readout--mq"></span>
-        </div>
+            <div class="cc-toolbar">
+                <a href="#" class="site-navigation__toggle cc-readout" data-cc-action="toggle" data-cc-target="navigation">Menu</a>
+                <span class="cc-readout cc-readout--mq"></span>
+            </div>
+
+        <div class="site-wrapper cc-site-wrapper">
+
+            <nav class="site-navigation" id="navigation">
+                <div class="block-content site-navigation__content">
+                    <?php include('inc/nav.php'); ?>
+                </div>
+            </nav>
+
+            <main>
     <?php endif; ?>
 
-    <div class="site-wrapper cc-site-wrapper">
-
-        <nav class="site-navigation" id="navigation">
-            <div class="block-content site-navigation__content">
-                <?php include('inc/nav.php'); ?>
-            </div>
-        </nav>
-
-        <main>
               <?php if(isIndex()) { ?>
                   <header class="cc-header">
                       <div class="u-container">
@@ -49,9 +50,14 @@
                  );
                  echo getBlock(getRequestPath(), $options);
              }?>
-        </main>
 
-    </div><!--/#wrapper -->
+    <?php if(!isset($_GET['preview'])) : ?>
+            </main>
+
+        </div><!--/#wrapper -->
+    <?php endif; ?>
+
     <?php include('inc/scripts.php'); ?>
+
 </body>
 </html>
