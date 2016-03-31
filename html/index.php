@@ -10,10 +10,12 @@
 </head>
 <body>
 
-    <div class="cc-toolbar">
-        <a href="#" class="site-navigation__toggle cc-readout" data-cc-action="toggle" data-cc-target="navigation">Menu</a>
-        <span class="cc-readout cc-readout--mq"></span>
-    </div>
+    <?php if(!isset($_GET['preview'])) : ?>
+        <div class="cc-toolbar">
+            <a href="#" class="site-navigation__toggle cc-readout" data-cc-action="toggle" data-cc-target="navigation">Menu</a>
+            <span class="cc-readout cc-readout--mq"></span>
+        </div>
+    <?php endif; ?>
 
     <div class="site-wrapper cc-site-wrapper">
 
