@@ -1,8 +1,10 @@
 <?php /*
-Title: Collapse One Collapsible
+Title: Tabs
+Class: .tabs
+Description: A toggle group styled to look like tabs. Only one tab can be active at a time.
 */ ?>
 
-<div data-cc-collapse="one-collapsible" class="accordion">
+<div data-cc-collapse="one-open" class="tabs">
     <div class="is-active tabs__header">
         <h3>Tab 1</h3>
     </div>

@@ -1,59 +1,32 @@
 <?php /*
 Title: Accordion
 Class: .accordion
+Description: A toggle group styled to look like an accordion. Only 1 accordion can be active at a time.
 */ ?>
 
-<div class="accordion">
-    <div class="is-active accordion__header"
-        id="tabs1-tab1"
-        data-cc-group="tabs1"
-        data-cc-action="activate"
-        data-cc-target="tabs1-content1">
+<div data-cc-collapse="one-open" class="accordion">
+    <div class="is-active accordion__header">
         <h3>Tab 1</h3>
     </div>
-    <div class="is-active accordion__body"
-        id="tabs1-content1"
-        data-cc-group="tabs1-content"
-        data-cc-cascade="tabs1-tab1">
+    <div class="is-active accordion__body">
         <p>tab 1 content</p>
     </div>
-    <div class="is-inactive accordion__header"
-        id="tabs1-tab2"
-        data-cc-group="tabs1"
-        data-cc-action="activate"
-        data-cc-target="tabs1-content2">
+    <div class="accordion__header">
         <h3>Tab 2</h3>
     </div>
-    <div class="is-inactive accordion__body"
-        id="tabs1-content2"
-        data-cc-group="tabs1-content"
-        data-cc-cascade="tabs1-tab2">
+    <div class="accordion__body">
         <p>tab 2 content</p>
     </div>
-    <div class="is-inactive accordion__header"
-        id="tabs1-tab3"
-        data-cc-group="tabs1"
-        data-cc-action="activate"
-        data-cc-target="tabs1-content3">
+    <div class="accordion__header">
         <h3>Tab 3</h3>
     </div>
-    <div class="is-inactive accordion__body"
-        id="tabs1-content3"
-        data-cc-group="tabs1-content"
-        data-cc-cascade="tabs1-tab3">
+    <div class="accordion__body">
         <p>tab 3 content</p>
     </div>
-    <div class="is-inactive accordion__header"
-        id="tabs1-tab4"
-        data-cc-group="tabs1"
-        data-cc-action="activate"
-        data-cc-target="tabs1-content4">
+    <div class="accordion__header">
         <h3>Tab 4</h3>
     </div>
-    <div class="is-inactive accordion__body"
-        id="tabs1-content4"
-        data-cc-group="tabs1-content"
-        data-cc-cascade="tabs1-tab4">
+    <div class="accordion__body">
         <p>tab 4 content</p>
     </div>
 </div>
