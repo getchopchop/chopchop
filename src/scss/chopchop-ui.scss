@@ -106,17 +106,17 @@ $z-200: 200;
 
 .cc-index-nav {
     margin-bottom: $spacing;
-    
+
     @include breakpoint($screen-md) {
         @include grid;
         @include grid-up(3);
         @include grid-gutter($spacing);
     }
-    
+
     @include breakpoint($screen-lg) {
         @include grid-up(6);
     }
-    
+
     > :nth-child(1),
     > :nth-child(2),
     > :nth-child(3) {
@@ -126,11 +126,11 @@ $z-200: 200;
             margin-bottom: $spacing;
         }
     }
-    
+
     &__item {
         margin-bottom: 1px;
     }
-    
+
     &__header,
     &__body {
         @include breakpoint(max-width $screen-sm-max) {
@@ -141,34 +141,34 @@ $z-200: 200;
             padding-right: 0;
         }
     }
-    
+
     &__header {
         @include flex-container(null, center, last);
-        
+
         @include breakpoint(max-width $screen-sm-max) {
             background: gainsboro;
-        
+
             &.is-active {
                 background-color: grey;
                 color: white;
             }
         }
-        
+
         > :first-child {
             margin-bottom: 0;
         }
-    
+
         .shape {
             margin-left: auto;
             @include plus($black, 12px, 2px);
         }
-    
+
         &.is-active .shape {
             @include minus($black, 12px, 2px);
         }
-        
+
     }
-    
+
     // Show
     @include breakpoint($screen-md) {
         .shape {
@@ -178,7 +178,7 @@ $z-200: 200;
             display: block !important;
         }
     }
-    
+
 }
 
 
@@ -461,4 +461,74 @@ $z-200: 200;
 
 .cc-flex-container {
     @include flex-container(null, center, last);
+}
+
+
+// =============================================
+// CC Heading Group
+// =============================================
+
+.cc-title {
+    border-bottom: 2px solid #e4e4e4;
+    background-color: #f4f4f4;
+    margin-bottom: 2em;
+    margin-top: 5em;
+    padding: 0.8em 1em;
+
+    &__main {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 1.2em !important;
+    }
+
+    code {
+        font-size: 0.7em;
+        font-weight: 400;
+    }
+
+    .cc-title__actions ul {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+        list-style: none;
+        padding: 0;
+
+        li:not(.first-child) {
+            margin-left: 0.8em;
+        }
+    }
+}
+
+.cc-title-desc {
+    border: 1px solid #e4e4e4;
+    margin-bottom: 2em;
+    padding: 1em;
+    border-top: 0;
+
+    p {
+        margin: 0;
+        font-size: 0.9em;
+    }
+}
+.cc-title + .cc-title-desc {
+    margin-top: -2em;
+}
+
+@include breakpoint($screen-sm) {
+    .cc-title--actions {
+        display: flex;
+        align-items: center;
+    }
+    .cc-title--actions .cc-title__headings {
+        flex-grow: 1;
+    }
+    .cc-title--actions .cc-title__actions {
+        flex-grow: 1;
+        text-align: right;
+        .btn {
+            margin-bottom: .2rem;
+        }
+    }
 }

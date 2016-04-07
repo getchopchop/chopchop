@@ -181,7 +181,7 @@
         }
 
         public function shouldPrintContainer(){
-            return $this->printContainer && $this->Container !== false; 
+            return $this->printContainer && $this->Container !== false;
         }
 
         public function printTitle() {
@@ -189,15 +189,28 @@
             if(!$this->printTitle) {
                 return '';
             }
+
             if($this->Title) {
-                $title = '<p class=cc-heading>' . $this->Title;
+                $title .= '<hgroup class="cc-title cc-title--actions"><div class="title__titles">';
+            }
+            if($this->Title) {
+                $title .= '<h2 class="cc-title__main">' . $this->Title;
                 if($this->Class) {
                     $title .= ' <code>' . $this->Class . '</code>';
                 }
-                $title .= '</p>';
-                if($this->Description) {
-                    $title .= '<p>' . $this->Description . '</p>';
-                }
+                $title .= '</h2>';
+            }
+            if($this->Title) {
+                $title .= '</div>
+                <div class="cc-title__actions">
+                    <ul>
+                        <li><a href="#" class="micro">Permalink</a></li>
+                        <li><a href="#" class="micro">Preview</a></li>
+                    </ul>
+                </div></hgroup>';
+            }
+            if($this->Description) {
+                $title .= '<div class="cc-title-desc"><p>' . $this->Description . '</p></div>';
             }
             return $title;
         }
