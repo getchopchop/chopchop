@@ -10,7 +10,7 @@ Title: Inputs
 </div>
 
 <div class="field-group field-group--scaffold">
-    <label class="field-group__label">Text input</label>
+    <label class="field-group__label required">Text input</label>
     <div class="field-group__field">
         <input id="text" type="text" placeholder="Text Input">
     </div>

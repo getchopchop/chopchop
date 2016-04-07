@@ -111,15 +111,25 @@ abbr[title="Required"],
 .required em {
     color: red;
 }
+
+.required::after {
+    content: "*";
+    color: red;
+    margin-left: $spacing-xs;
+}
+
 .valid {
     color: green;
 }
+
 .is-error {
     border-color: red;
 }
+
 .is-valid {
     border-color: green;
 }
+
 .validation-advice {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -128,6 +138,7 @@ abbr[title="Required"],
         margin: 0;
     }
 }
+
 .has-error .validation-advice {
     background-color: #fcc;
     border-color: red;
