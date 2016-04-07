@@ -38,14 +38,14 @@
     function checkBlock($location) {
         $path = TEMPLATE_PATH . trim($location, '/');
 
-        $files = recurseDir($location, $path);
+        $files = recurseDir($location, $path, true);
 
         if(empty($files)) {
             header('location: /html/');
         }
     }
 
-    function recurseDir($location, $path) {
+    function recurseDir($location, $path, $glob=false) {
         $files = array();
         if(is_dir($path)){
             $files = array_merge($files, glob($path . '/*.php'));
@@ -54,9 +54,16 @@
             }
         }
         else {
-            $path = TEMPLATE_PATH . trim($location, '/') . '.php';
-            if (file_exists($path)) {
-                $files[] = $path;
+            $path = TEMPLATE_PATH . dirname($location);
+            if($glob){
+                $path .= '/*' . basename($location) . '.php';
+                $files = array_merge($files, glob($path));
+            }
+            else{
+                $path .= '/' . basename($location) . '.php';
+                if(file_exists($path)){
+                    $files[] = $path;
+                }
             }
         }
         natsort($files);

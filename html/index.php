@@ -48,7 +48,7 @@
                     'print_title' => !((isset($_GET['title']) && $_GET['title'] === 'false')),
                     'print_container' => !((isset($_GET['container']) && $_GET['container'] === 'false'))
                  );
-                 echo getBlock(getRequestPath(), $options);
+                 echo get(getRequestPath(), $options);
              }?>
 
     <?php if(!isset($_GET['preview'])) : ?>
