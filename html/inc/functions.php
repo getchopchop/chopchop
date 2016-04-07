@@ -69,8 +69,12 @@
         foreach($files as $path) {
             $_t = new TemplateHelper(parseComments(file_get_contents($path)), $options);
             $printContainer |= $_t->shouldPrintContainer();
+            $classes = array('u-container');
+            if($_t->Section){
+                $classes[] =  $_t->Section;
+            }
             if($printContainer) {
-                echo '<div class="u-container">';
+                echo '<div class="'.implode(' ', $classes).'">';
             }
 
             echo $_t->printTitle();
