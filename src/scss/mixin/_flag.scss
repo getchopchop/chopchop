@@ -2,14 +2,9 @@
 // Flag
 // =============================================
 
-@mixin flag($mb: $spacing) {
-    margin-bottom: $mb;
+@mixin flag {
     display: flex;
     justify-content: space-between;
-
-    > *:first-child {
-        flex-grow: 1;
-    }
 }
 
 
@@ -30,7 +25,7 @@
     &:not(.flag--reverse) > *:first-child {
         margin-right: $gutter;
     }
-    
+
     &.flag--reverse > *:first-child {
         margin-left: $gutter;
     }

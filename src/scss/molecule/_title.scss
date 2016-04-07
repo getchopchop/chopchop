@@ -10,24 +10,3 @@
         margin-top: 0;
     }
 }
-
-// =============================================
-// Titles with actions
-// =============================================
-
-@include breakpoint($screen-sm) {
-    .title--actions {
-        display: flex;
-        align-items: center;
-    }
-    .title--actions .title__headings {
-        flex-grow: 1;
-    }
-    .title--actions .title__actions {
-        flex-grow: 1;
-        text-align: right;
-        .btn {
-            margin-bottom: .2rem;
-        }
-    }
-}
