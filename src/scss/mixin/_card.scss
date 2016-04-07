@@ -3,21 +3,20 @@
 // =============================================
 
 @mixin card {
-    margin-bottom: $spacing;
-    
     &__img img {
         margin: 0 auto;
     }
-    
+
     &__header,
     &__body,
     &__footer {
         padding: $spacing-sm $spacing;
+        
         > *:last-child {
             margin-bottom: 0;
         }
     }
-    
+
     &__title,
     &__subtitle {
         margin-top: 0;
@@ -32,11 +31,11 @@
 
 @mixin card--bordered {
     border: 1px solid $light-grey;
-    
+
     .card__header {
         border-bottom: 1px solid $light-grey;
     }
-    
+
     .card__footer {
         border-top: 1px solid $light-grey;
     }
