@@ -19,6 +19,8 @@ $z-200: 200;
 @import "mixin/flag";
 @import "mixin/list";
 @import "mixin/ratio";
+@import "mixin/accordion";
+@import "mixin/tabs";
 
 
 // =============================================
@@ -105,41 +107,18 @@ $z-200: 200;
 // =============================================
 
 .cc-index-nav {
-    margin-bottom: $spacing;
+
+    > * {
+        display: flex;
+        > * {
+            width: 100%;
+        }
+    }
 
     @include breakpoint($screen-md) {
         @include grid;
-        @include grid-up(3);
-        @include grid-gutter($spacing);
-    }
-
-    @include breakpoint($screen-lg) {
-        @include grid-up(6);
-    }
-
-    > :nth-child(1),
-    > :nth-child(2),
-    > :nth-child(3) {
-        @include breakpoint($screen-md $screen-md-max) {
-            border-bottom: 2px solid $grey;
-            padding-bottom: $spacing;
-            margin-bottom: $spacing;
-        }
-    }
-
-    &__item {
-        margin-bottom: 1px;
-    }
-
-    &__header,
-    &__body {
-        @include breakpoint(max-width $screen-sm-max) {
-            padding: $spacing;
-        }
-        @include breakpoint($screen-md) {
-            padding-left: 0;
-            padding-right: 0;
-        }
+        @include grid-up(4);
+        @include grid-gutter;
     }
 
     &__header {
@@ -147,11 +126,10 @@ $z-200: 200;
         @include flag--center;
 
         @include breakpoint(max-width $screen-sm-max) {
-            background: gainsboro;
+            background: #f4f4f4;
 
             &.is-active {
-                background-color: grey;
-                color: white;
+                background-color: #e4e4e4;
             }
         }
 
@@ -522,5 +500,33 @@ $z-200: 200;
         .btn {
             margin-bottom: .2rem;
         }
+    }
+}
+
+
+// =============================================
+// Accordion to Tabs @screen-md
+// =============================================
+
+.cc-accordion-to-tabs {
+    @include breakpoint(max-width $screen-xs-max) {
+        @include accordion;
+    }
+    @include breakpoint($screen-sm) {
+        @include tabs;
+    }
+}
+
+
+// =============================================
+// Tabs to Accordion @screen-md
+// =============================================
+
+.cc-tabs-to-accordion {
+    @include breakpoint(max-width $screen-xs-max) {
+        @include tabs;
+    }
+    @include breakpoint($screen-sm) {
+        @include accordion;
     }
 }

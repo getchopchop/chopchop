@@ -1,10 +1,10 @@
 <?php /*
-Title: Accordion
-Class: .accordion
-Description: A toggle group styled to look like an accordion. Only 1 accordion can be active at a time.
+Title: One Collapsible Accordion
+Class: .accordion[data-cc-collapse="one-collapsible"]
+Description: An accordion that can be collapsed but only one tab can be open at a time.
 */ ?>
 
-<div data-cc-collapse="one-open" class="accordion">
+<div data-cc-collapse="one-collapsible" class="accordion">
     <div class="is-active accordion__header">
         <h3>Tab 1</h3>
     </div>
