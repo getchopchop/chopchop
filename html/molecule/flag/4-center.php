@@ -1,6 +1,7 @@
 <?php /*
 Title: Flag Centered
 Class: .flag.flag--center
+Description: Centers the flag items.
 */ ?>
 
 <div class="flag flag--center">

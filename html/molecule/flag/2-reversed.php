@@ -1,6 +1,7 @@
 <?php /*
 Title: Reversed Flag
 Class: .flag.flag--reverse
+Description: Reverses the row direction.
 */ ?>
 
 <div class="flag flag--reverse">

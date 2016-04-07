@@ -1,7 +1,7 @@
 <?php /*
 Title: Flag
 Class: .flag
-Description: Base flag (aligns items top by default)
+Description: Base flag - aligns items top by default.
 */ ?>
 
 <div class="flag">
