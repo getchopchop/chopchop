@@ -1,6 +1,6 @@
 <?php /*
 Title: Tabs
-Class: .tabs
+Class: .tabs[data-cc-collapse="one-open"]
 Description: A toggle group styled to look like tabs. Only one tab can be active at a time.
 */ ?>
 

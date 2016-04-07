@@ -19,6 +19,8 @@ $z-200: 200;
 @import "mixin/flag";
 @import "mixin/list";
 @import "mixin/ratio";
+@import "mixin/accordion";
+@import "mixin/tabs";
 
 
 // =============================================
@@ -522,5 +524,33 @@ $z-200: 200;
         .btn {
             margin-bottom: .2rem;
         }
+    }
+}
+
+
+// =============================================
+// Accordion to Tabs @screen-md
+// =============================================
+
+.cc-accordion-to-tabs {
+    @include breakpoint(max-width $screen-xs-max) {
+        @include accordion;
+    }
+    @include breakpoint($screen-sm) {
+        @include tabs;
+    }
+}
+
+
+// =============================================
+// Tabs to Accordion @screen-md
+// =============================================
+
+.cc-tabs-to-accordion {
+    @include breakpoint(max-width $screen-xs-max) {
+        @include tabs;
+    }
+    @include breakpoint($screen-sm) {
+        @include accordion;
     }
 }
