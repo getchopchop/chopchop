@@ -1,5 +1,10 @@
 <?php require_once('inc/functions.php'); ?>
 <?php checkBlock(getRequestPath()); ?>
+<?php if( isset($_GET['preview'])) {
+    $_GET['title'] = isset($_GET['title']) ? $_GET['title'] : 'false';
+    $_GET['container'] = isset($_GET['container']) ? $_GET['container'] : 'false';
+}
+?>
 <!DOCTYPE HTML>
 <html>
 <head>

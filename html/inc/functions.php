@@ -11,7 +11,7 @@
             $files = recurseDir($location, $path);
         }
         else {
-            $parts = explode('/', $location);
+            $parts = explode('/', trim($location, '/'));
             $last = array_pop($parts);
             $parts[] = "*".$last.".php";
             $path = TEMPLATE_PATH . implode('/', $parts);
@@ -74,7 +74,7 @@
         $printContainer = false;
         ob_start();
         foreach($files as $path) {
-            $_t = new TemplateHelper(parseComments(file_get_contents($path)), $options);
+            $_t = new TemplateHelper(parseComments(file_get_contents($path)), $path, $options);
             $printContainer |= $_t->shouldPrintContainer();
             $classes = array('u-container');
             if($_t->Section){
@@ -104,7 +104,7 @@
         if(empty($files)) {
             return '';
         }
-
+        
         return getContents($files, $options);
     }
 
@@ -121,6 +121,11 @@
         $base = substr($_SERVER['SCRIPT_NAME'], 0, strpos($_SERVER['SCRIPT_NAME'], 'index.php'));
         $url_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         return substr($url_path, strlen($base) - 1);
+    }
+
+    function pathToUrl($path) {
+        $base = dirname(__DIR__);
+        return '/html' . substr($path, strlen($base), -4);
     }
 
     function isIndex() {
@@ -177,10 +182,11 @@
         protected $data = array();
         protected $options = array();
 
-        public function __construct($data = array(), $options=array()) {
+        public function __construct($data = array(), $path, $options=array()) {
             $this->printTitle = isset($options['print_title']) && $options['print_title'];
             $this->printContainer = isset($options['print_container']) && $options['print_container'];
             $this->data = $data;
+            $this->path = $path;
             $this->options = $options;
         }
 
@@ -215,8 +221,8 @@
                 $title .= '</div>
                 <div class="cc-title__actions">
                     <ul>
-                        <li><a href="#" class="micro">Permalink</a></li>
-                        <li><a href="#" class="micro">Preview</a></li>
+                        <li><a href="'.$this->getUrl().'" class="micro">Permalink</a></li>
+                        <li><a href="'.$this->getUrl(true).'" class="micro">Preview</a></li>
                     </ul>
                 </div></hgroup>';
             }
@@ -224,6 +230,13 @@
                 $title .= '<div class="cc-title-desc"><p>' . $this->Description . '</p></div>';
             }
             return $title;
+        }
+
+        public function getUrl($preview = false){
+            if(!$preview){
+                return pathToUrl($this->path);
+            }
+            return pathToUrl($this->path) . '?preview';
         }
     }
 
