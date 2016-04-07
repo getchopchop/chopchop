@@ -1,0 +1,21 @@
+// =============================================
+// Accordions
+// =============================================
+
+@mixin accordion {
+    > [class*="__header"] {
+        cursor: pointer;
+    }
+
+    > [class*="__header"].is-active {
+        color: red;
+    }
+
+    > [class*="__body"] {
+        display: none;
+
+        &.is-active {
+            display: block;
+        }
+    }
+}
