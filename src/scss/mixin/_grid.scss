@@ -6,6 +6,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    > * {
+        width: 100%;
+    }
 }
 
 
@@ -26,22 +30,15 @@
 
 
 // =============================================
-// Grid Up
-// =============================================
-
-@mixin grid-up($cols: 1) {
-    > * {
-        width: 100% / $cols;
-    }
-}
-
-
-// =============================================
 // Grid Col
 // =============================================
 
 @mixin grid-col($col: 100%) {
-    width: $col;
+    @if length($col) > 1 {
+        width: (nth($col, 1) / nth($col, 3)) * 100%;
+    } @else {
+        width: $col;
+    }
 }
 
 
@@ -51,6 +48,15 @@
 
 @mixin grid-center() {
     justify-content: center;
+}
+
+
+// =============================================
+// Grid Justify
+// =============================================
+
+@mixin grid-justify() {
+    justify-content: space-between;
 }
 
 

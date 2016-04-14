@@ -36,7 +36,7 @@
     }
 }
 
-@include breakpoint($screen-lg) {
+@include breakpoint($screen-lg $screen-lg-max) {
     .u-visible-lg,
     %u-visible-lg {
         display: block !important;
@@ -89,7 +89,7 @@
     }
 }
 
-@include breakpoint($screen-lg) {
+@include breakpoint($screen-lg $screen-lg-max) {
     .u-visible-lg-inline,
     %u-visible-lg-inline {
         display: inline !important;
@@ -142,7 +142,7 @@
     }
 }
 
-@include breakpoint($screen-lg) {
+@include breakpoint($screen-lg $screen-lg-max) {
     .u-visible-lg-inline-block,
     %u-visible-lg-inline-block {
         display: inline-block !important;
@@ -195,7 +195,7 @@
     }
 }
 
-@include breakpoint($screen-lg) {
+@include breakpoint($screen-lg $screen-lg-max) {
     .u-hidden-lg,
     %u-hidden-lg {
         display: none !important;
@@ -248,7 +248,7 @@
     }
 }
 
-@include breakpoint($screen-lg) {
+@include breakpoint($screen-lg $screen-lg-max) {
     .u-hidden-lg-inline,
     %u-hidden-lg-inline {
         display: none !important;
@@ -301,7 +301,7 @@
     }
 }
 
-@include breakpoint($screen-lg) {
+@include breakpoint($screen-lg $screen-lg-max) {
     .u-hidden-lg-inline-block,
     %u-hidden-lg-inline-block {
         display: none !important;

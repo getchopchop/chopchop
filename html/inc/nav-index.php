@@ -1,9 +1,9 @@
-<div class="cc-index-nav">
+<div class="cc-index-nav grid g-gutter">
     <?php
     foreach($toplevels as $toplevel) {
     ?>
-    <?php if($toplevel == 'atom') { echo '</div><div class="cc-index-nav">'; } ?>
-    <div>
+    <?php if($toplevel == 'atom') { echo '</div><div class="cc-index-nav grid g-gutter">'; } ?>
+    <div class="g-col-sm-6 g-col-md-4 g-col-lg-3">
         <div class="card card--bordered nav-<?= $toplevel ?> cc-index-nav__item">
             <div class="card__header cc-index-nav__header has-plus-minus" data-cc-action="toggle" data-cc-target="toggle-<?= $toplevel ?>" id="toggle-title-<?= $toplevel ?>" data-cc-group="toggle-titles">
                 <h4><?= ucwords($toplevel) ?></h4>

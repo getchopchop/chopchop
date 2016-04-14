@@ -31,7 +31,6 @@ $z-200: 200;
 @import "utility/clearfix";
 @import "utility/align";
 @import "utility/visible";
-@import "utility/layout";
 @import "utility/grid";
 @import "utility/box-sizing";
 @import "utility/z-index";
@@ -108,18 +107,6 @@ $z-200: 200;
 
 .cc-index-nav {
 
-    > * {
-        display: flex;
-        > * {
-            width: 100%;
-        }
-    }
-
-    @include breakpoint($screen-md) {
-        @include grid;
-        @include grid-up(4);
-        @include grid-gutter;
-    }
 
     &__header {
         @include flag;
@@ -334,9 +321,9 @@ $z-200: 200;
     right: 0;
     background-color: magenta;
 
-    @include breakpoint($screen-xs) {
-        background-color: red;
-    }
+    // @include breakpoint($screen-xs) {
+    //     background-color: red;
+    // }
     @include breakpoint($screen-sm) {
         background-color: green;
     }
@@ -356,11 +343,11 @@ $z-200: 200;
 
 }
 .cc-readout--mq:after {
-    content: "$screen-xs < #{$screen-xs}";
+    content: "$screen-xs < #{$screen-xs-max}";
 
-    @include breakpoint($screen-xs) {
-        content: "$screen-xs > #{$screen-xs}";
-    }
+    // @include breakpoint($screen-xs) {
+    //     content: "$screen-xs > #{$screen-xs}";
+    // }
     @include breakpoint($screen-sm) {
         content: "$screen-sm > #{$screen-sm}";
     }
