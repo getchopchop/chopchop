@@ -241,8 +241,8 @@ var ChopChop = (function($, ChopChop) {
     var defaultOptions = {
         classActive: 'is-active',
         classInactive: 'is-inactive',
-        headerSelector: '[class*="__header"]',
-        bodySelector: '[class*="__body"]',
+        headerSelector: '> [class*="__header"]',
+        bodySelector: '> [class*="__body"]',
         type: Types.ONE_OPEN
     };
 
