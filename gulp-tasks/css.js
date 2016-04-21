@@ -6,10 +6,11 @@
 module.exports = function (gulp, nodeModule, path, option, environment) {
     return function () {
         gulp.src(path.styles.source)
-        .pipe(nodeModule.plumber())
+        .pipe(environment.dev ? nodeModule.plumber() : nodeModule.util.noop())
         .pipe(nodeModule.clipEmptyFiles())
         .pipe(environment.dev ? nodeModule.sourcemaps.init() : nodeModule.util.noop())
-        .pipe(nodeModule.sass.sync().on('error', nodeModule.sass.logError))
+        .pipe(!environment.production ? nodeModule.sass.sync().on('error', nodeModule.sass.logError) : nodeModule.util.noop())
+        .pipe(environment.production ? nodeModule.sass.sync() : nodeModule.util.noop())
         .pipe(nodeModule.autoPrefixer(option.autoprefixer))
         .pipe(environment.production ? nodeModule.combineMq() : nodeModule.util.noop())
         .pipe(environment.production ? nodeModule.cssNano() : nodeModule.util.noop())
