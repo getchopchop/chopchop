@@ -76,19 +76,19 @@
         foreach($files as $path) {
             $_t = new TemplateHelper(parseComments(file_get_contents($path)), $path, $options);
             $printContainer |= $_t->shouldPrintContainer();
-            $classes = array('u-container');
+            $classes = array('cc-section');
             if($_t->Section){
                 $classes[] =  $_t->Section;
             }
             if($printContainer) {
-                echo '<div class="'.implode(' ', $classes).'">';
+                echo '<section class="'.implode(' ', $classes).'"><div class="u-container">';
             }
 
             echo $_t->printTitle();
             include $path;
 
             if($printContainer) {
-                echo '</div>';
+                echo '</div></section>';
             }
         }
         $contents .= ob_get_contents();
@@ -104,7 +104,7 @@
         if(empty($files)) {
             return '';
         }
-        
+
         return getContents($files, $options);
     }
 

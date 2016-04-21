@@ -427,7 +427,6 @@ $z-200: 200;
     border-bottom: 2px solid #e4e4e4;
     background-color: #f4f4f4;
     margin-bottom: 2em;
-    margin-top: 5em;
     padding: 0.8em 1em;
 
     &__main {
@@ -514,4 +513,14 @@ $z-200: 200;
     @include breakpoint($screen-sm) {
         @include accordion;
     }
+}
+
+
+// =============================================
+// Section
+// =============================================
+
+.cc-section {
+    padding-top: $spacing-xl;
+    padding-bottom: $spacing-xl;
 }
