@@ -284,8 +284,6 @@ $z-200: 200;
 // =============================================
 
 .cc-card--swatch {
-    //border: 0;
-    @extend .card--bordered;
     border-radius: $border-radius;
     .card__body {
         @include ratio(40%);
