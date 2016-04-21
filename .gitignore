@@ -27,7 +27,6 @@ Temporary Items
 
 # Gulp
 node_modules
-bower_components
 .sass-cache
 
 # Server stuff
