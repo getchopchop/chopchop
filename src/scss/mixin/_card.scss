@@ -25,13 +25,13 @@
 // =============================================
 
 @mixin card--bordered {
-    border: 1px solid $light-grey;
+    border: 1px solid color(grey,light);
 
     > *:not(img) {
         padding: $spacing;
 
         &:not(:last-child) {
-            border-bottom: 1px solid $light-grey;
+            border-bottom: 1px solid color(grey,light);
         }
     }
 }

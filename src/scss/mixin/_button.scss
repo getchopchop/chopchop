@@ -17,13 +17,13 @@
     white-space: nowrap;
     line-height: 1;
     width: auto;
-    background-color: $darker-grey;
-    color: $white;
+    background-color: color(grey,darker);
+    color: color(white);
 
     &:hover,
     &:focus {
-        color: $white;
-        background-color: $dark-grey;
+        color: color(white);
+        background-color: color(grey,dark);
     }
 
     &::moz-focus-inner {
@@ -69,20 +69,20 @@
 @mixin btn--text {
     @extend %link;
     background-color: transparent;
-    color: $black;
+    color: color(black);
     font-weight: normal;
     text-decoration: underline;
 
     &:hover,
     &:focus {
         background-color: transparent;
-        color: $black;
+        color: color(black);
         text-decoration: none;
     }
 
     &:disabled {
         background-color: transparent;
-        color: $grey;
+        color: color(grey);
     }
 }
 
@@ -102,12 +102,12 @@
 
 @mixin btn--disabled {
     cursor: not-allowed;
-    background-color: $grey;
-	color: $dark-grey;
+    background-color: color(grey);
+	color: color(grey,dark);
 
     &:hover,
     &:focus {
-        background-color: $grey;
-		color: $dark-grey;
+        background-color: color(grey);
+		color: color(grey,dark);
     }
 }

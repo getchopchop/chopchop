@@ -13,6 +13,7 @@ $z-200: 200;
 
 @import "mixin/shape";
 @import "mixin/card";
+@import "mixin/color";
 @import "mixin/ellipsis";
 @import "mixin/breakpoint";
 @import "mixin/grid";
@@ -68,7 +69,7 @@ $z-200: 200;
     font-size: $font-size-xs;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    border-bottom: 1px dashed $lighter-grey;
+    border-bottom: 1px dashed color(grey,lighter);
 }
 
 .cc-heading {
@@ -126,11 +127,11 @@ $z-200: 200;
 
         .shape {
             margin-left: auto;
-            @include plus($black, 12px, 2px);
+            @include plus(color(black), 12px, 2px);
         }
 
         &.is-active .shape {
-            @include minus($black, 12px, 2px);
+            @include minus(color(black), 12px, 2px);
         }
 
     }
@@ -156,13 +157,13 @@ $z-200: 200;
     position: fixed;
     overflow-y: scroll; /* has to be scroll, not auto */
     -webkit-overflow-scrolling: touch;
-    background-color: $white;
+    background-color: color(white);
     transition: transform 0.4s ease;
     top: 0;
     bottom: 0;
     min-width: 12rem;
     max-width: 15rem;
-    border-right: 2px solid $lighter-grey;
+    border-right: 2px solid color(grey,lighter);
     transform: translateX(-100%);
 
     &.is-active {
@@ -184,10 +185,10 @@ $z-200: 200;
 
     a {
         &:not(.is-active) .shape-hook {
-            @include plus($light-grey, 12px, 2px);
+            @include plus(color(grey,light), 12px, 2px);
         }
         &.is-active .shape-hook {
-            @include minus($light-grey, 12px, 2px);
+            @include minus(color(grey,light), 12px, 2px);
         }
     }
 }
@@ -201,7 +202,7 @@ $z-200: 200;
     a {
         padding-left: $spacing;
         &.is-active {
-            background-color: $lighter-grey;
+            background-color: color(grey,lighter);
         }
     }
 }
@@ -217,9 +218,9 @@ $z-200: 200;
         padding-left: $spacing-lg;
         padding-top: $spacing-xs;
         padding-bottom: $spacing-xs;
-        background-color: lighten($lighter-grey, 5%);
+        background-color: lighten(color(grey,lighter), 5%);
         &:hover {
-            background-color: lighten($lighter-grey, 3%);
+            background-color: lighten(color(grey,lighter), 3%);
         }
 
     }
@@ -231,8 +232,8 @@ $z-200: 200;
 // =============================================
 
 .site-navigation__toggle:hover {
-    color: $white;
-    background-color: lighten($black, 20%);
+    color: color(white);
+    background-color: lighten(color(black), 20%);
 }
 
 
@@ -305,8 +306,8 @@ $z-200: 200;
     display: block;
     font-size: 12px;
     white-space: nowrap;
-    color: $white;
-    background-color: $black;
+    color: color(white);
+    background-color: color(black);
     text-decoration: none;
     padding: 6px 10px;
 }
@@ -379,43 +380,43 @@ $z-200: 200;
 // =============================================
 
 .cc-shape-circle {
-    @include circle($black, 16px);
+    @include circle(color(black), 16px);
 }
 
 .cc-shape-square {
-    @include square($black, 16px);
+    @include square(color(black), 16px);
 }
 
 .cc-shape-triangle {
-    @include triangle($black, 5px, 5px, right);
+    @include triangle(color(black), 5px, 5px, right);
 }
 
 .cc-shape-chevron {
-    @include chevron($black, 8px, up, 2px);
+    @include chevron(color(black), 8px, up, 2px);
 }
 
 .cc-shape-minus {
-    @include minus($black, 12px, 2px);
+    @include minus(color(black), 12px, 2px);
 }
 
 .cc-shape-plus {
-    @include plus($black, 12px, 2px);
+    @include plus(color(black), 12px, 2px);
 }
 
 .cc-shape-cross {
-    @include cross($black, 12px, 2px);
+    @include cross(color(black), 12px, 2px);
 }
 
 .cc-shape-tick {
-    @include tick($black, 12px, 2px);
+    @include tick(color(black), 12px, 2px);
 }
 
 .cc-shape-hamburger {
-    @include hamburger($black, 18px, 24px, 2px);
+    @include hamburger(color(black), 18px, 24px, 2px);
 }
 
 .cc-shape-ring {
-    @include ring($black, $grey, 16px, 3px);
+    @include ring(color(black), color(grey), 16px, 3px);
 }
 
 

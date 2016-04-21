@@ -22,14 +22,14 @@ label {
 input,
 textarea,
 select[multiple=multiple] {
-	background-color: $white;
-	border: 1px solid $grey;
+	background-color: color(white);
+	border: 1px solid color(grey);
 	border-radius: 0;
 	padding: $spacing-xs $spacing-sm;
 	width: 100%;
 
 	&:focus {
-		border-color: $black;
+		border-color: color(black);
 		outline: none;
 	}
 }

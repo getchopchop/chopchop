@@ -4,8 +4,8 @@
 
 .tag {
     display: inline-block;
-    background-color: $grey;
-    color: $white;
+    background-color: color(grey);
+    color: color(white);
     font-size: $font-size-sm * 0.9;
     padding: ($spacing-xs/1.5) $spacing-sm;
     text-align: center;

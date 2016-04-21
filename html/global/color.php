@@ -14,7 +14,7 @@ Title: Colour
                     echo '</div>';
                 }
                 if(strpos($line, "Colo") !== false) {
-                echo '<h3>' . substr($line, 3)  . '</h3><div class="g-four-up g-gutter">';
+                echo '<h3>' . substr($line, 3)  . '</h3><div class="grid g-gutter">';
                 $hasHeading = true;
                 }
             }
@@ -24,7 +24,7 @@ Title: Colour
         if($pos = strpos($line, '#')) {
             $colour = substr($line, $pos);
             ?>
-            <div>
+            <div class="g-col-xs-6 g-col-sm-4 g-col-md-3 g-col-xl-2">
                 <div class="card cc-card--swatch">
                     <div class="card__body" style="background-color: <?php echo $colour ?>">
 

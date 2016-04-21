@@ -4,8 +4,8 @@
 
 .alert {
     padding: $spacing;
-    background-color: lighten($grey, 30%);
-    border: 1px solid $grey;
+    background-color: lighten(color(grey), 30%);
+    border: 1px solid color(grey);
     margin-bottom: $spacing;
 
     p {
