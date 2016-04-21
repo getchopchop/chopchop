@@ -3,7 +3,7 @@
 // =============================================
 
 @mixin btn {
-    padding: 0.44rem $spacing;
+    padding: $spacing-xs $spacing;
 	border-radius: 0;
 	font-size: $font-size-lg;
 	font-family: $heading-font-family;
@@ -40,7 +40,6 @@
 // =============================================
 
 @mixin btn--xs {
-    padding: $spacing-xs $spacing-sm;
     font-size: $font-size-xs;
 }
 
@@ -50,7 +49,6 @@
 // =============================================
 
 @mixin btn--sm {
-    padding: $spacing-xs $spacing-sm;
     font-size: $font-size-sm;
 }
 
@@ -60,7 +58,6 @@
 // =============================================
 
 @mixin btn--lg {
-    padding: $spacing-sm $spacing-lg;
     font-size: $font-size-xl;
 }
 

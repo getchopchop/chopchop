@@ -22,12 +22,12 @@
 // =============================================
 
 @mixin flag--gutter {
-    &:not(.flag--reverse) > *:first-child {
-        margin-right: $gutter;
+    &:not([class*="--reverse"]) > *:first-child {
+        margin-right: $spacing;
     }
 
-    &.flag--reverse > *:first-child {
-        margin-left: $gutter;
+    &[class*="--reverse"] > *:first-child {
+        margin-left: $spacing;
     }
 }
 

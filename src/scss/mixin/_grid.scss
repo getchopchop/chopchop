@@ -2,7 +2,7 @@
 // Grid
 // =============================================
 
-@mixin grid() {
+@mixin grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -46,7 +46,7 @@
 // Grid Center
 // =============================================
 
-@mixin grid-center() {
+@mixin grid-center {
     justify-content: center;
 }
 
@@ -55,7 +55,7 @@
 // Grid Justify
 // =============================================
 
-@mixin grid-justify() {
+@mixin grid-justify {
     justify-content: space-between;
 }
 
@@ -64,6 +64,6 @@
 // Grid reverse
 // =============================================
 
-@mixin grid-reverse() {
+@mixin grid-reverse {
     flex-direction: row-reverse;
 }

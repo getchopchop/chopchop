@@ -5,10 +5,8 @@ Class: .card
 
 <div class="card">
     <div class="card__header">
-        <hgroup class="title">
-            <h3 class="title__main">This is a Main Title</h3>
-            <h4 class="title__sub">This is a Sub Title</h4>
-        </hgroup>
+        <h3>This is a Main Title</h3>
+        <h4>This is a Sub Title</h4>
     </div>
     <img class="card__img" src="//placehold.it/400x240" alt="Card image" />
     <div class="card__body">
