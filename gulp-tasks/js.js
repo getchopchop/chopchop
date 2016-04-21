@@ -7,8 +7,8 @@ module.exports = function (gulp, nodeModule, path, environment) {
     return function () {
         gulp.src(path.scripts.source)
         .pipe(nodeModule.plumber())
-        .pipe(nodeModule.jsHint())
-        .pipe(nodeModule.jsHint.reporter('default'))
+        .pipe(environment.dev ? nodeModule.jsHint() : nodeModule.util.noop())
+        .pipe(environment.dev ? nodeModule.jsHint.reporter('default') : nodeModule.util.noop())
         .pipe(environment.production ? nodeModule.uglify() : nodeModule.util.noop())
         .pipe(nodeModule.plumber.stop())
         .pipe(gulp.dest(path.scripts.build))
