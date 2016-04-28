@@ -2,18 +2,40 @@
 // Visible
 // =============================================
 
-.u-visible-xs,
-.u-visible-sm,
-.u-visible-md,
-.u-visible-lg,
-.u-visible-xl,
-%u-visible-xs,
-%u-visible-sm,
-%u-visible-md,
-%u-visible-lg,
-%u-visible-xl {
+[class*="u-visible-"] {
     display: none !important;
 }
+
+$display: (block) (inline) (inline-block);
+
+@each $breakpoint, $value in $breakpoints {
+    $media: $value;
+    $media-max: $value - 0.01em;
+    @debug $media;
+    @debug $media-max;
+
+    @if $breakpoint == xs {
+        @include breakpoint(max-width $media-max) {
+            .u-visible-#{$breakpoint} {
+                display: block !important;
+            }
+        }
+    } @else if $breakpoint == xl {
+        @include breakpoint($media) {
+            .u-visible-#{$breakpoint} {
+                display: block !important;
+            }
+        }
+    } @else {
+        @include breakpoint($media $media-max) {
+            .u-visible-#{$breakpoint} {
+                display: block !important;
+            }
+        }
+    }
+}
+
+
 
 @include breakpoint(max-width $screen-xs-max) {
     .u-visible-xs,
@@ -55,19 +77,6 @@
 // Visible inline
 // =============================================
 
-.u-visible-xs-inline,
-.u-visible-sm-inline,
-.u-visible-md-inline,
-.u-visible-lg-inline,
-.u-visible-xl-inline,
-%u-visible-xs-inline,
-%u-visible-sm-inline,
-%u-visible-md-inline,
-%u-visible-lg-inline,
-%u-visible-xl-inline {
-    display: none !important;
-}
-
 @include breakpoint(max-width $screen-xs-max) {
     .u-visible-xs-inline,
     %u-visible-xs-inline {
@@ -107,19 +116,6 @@
 // =============================================
 // Visible inline block
 // =============================================
-
-.u-visible-xs-inline-block,
-.u-visible-sm-inline-block,
-.u-visible-md-inline-block,
-.u-visible-lg-inline-block,
-.u-visible-xl-inline-block,
-%u-visible-xs-inline-block,
-%u-visible-sm-inline-block,
-%u-visible-md-inline-block,
-%u-visible-lg-inline-block,
-%u-visible-xl-inline-block {
-    display: none !important;
-}
 
 @include breakpoint(max-width $screen-xs-max) {
     .u-visible-xs-inline-block,

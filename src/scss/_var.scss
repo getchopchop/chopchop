@@ -104,7 +104,8 @@ $screen-sm-max          : $screen-md - 0.01em;
 $screen-md-max          : $screen-lg - 0.01em;
 $screen-lg-max          : $screen-xl - 0.01em;
 
-$breakpoints: (xs) (sm $screen-sm) (md $screen-md) (lg $screen-lg) (xl $screen-xl);
+$breakpoints: (xs $screen-xs) (sm $screen-sm) (md $screen-md) (lg $screen-lg) (xl $screen-xl);
+$breakpoints-max: (xs $screen-xs-max) (sm $screen-sm-max) (md $screen-md-max) (lg $screen-lg-max);
 
 
 // =============================================
