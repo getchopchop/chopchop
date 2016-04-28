@@ -123,6 +123,13 @@ $breakpoints: (
     xl : $screen-xl
 );
 
+$breakpoints-max: (
+    xs : $screen-xs-max,
+    sm : $screen-sm-max,
+    md : $screen-md-max,
+    lg : $screen-lg-max
+);
+
 
 // =============================================
 // Containers
