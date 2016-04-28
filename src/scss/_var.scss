@@ -2,28 +2,39 @@
 // Greyscale Colours
 // =============================================
 
-$darker-grey            : #222;
-$dark-grey              : #444;
-$grey                   : #666;
-$light-grey             : #999;
-$lighter-grey           : #e4e4e4;
-$white                  : #fff;
-$black                  : #000;
+$colors: (
+    grey: (
+        base            : #666,
+        darker          : #222,
+        dark            : #444,
+        light           : #999,
+        lighter         : #e4e4e4
+    ),
 
+    black: (
+        base            : #000
+    ),
 
-// =============================================
-// Social Media Colours
-// =============================================
+    white: (
+        base            : #fff
+    ),
 
-$twitter                : #55acee;
-$facebook               : #32639f;
-$google                 : #d34836;
-$pinterest              : #cb2028;
-$instagram              : #517fa4;
-$vimeo                  : #1ab7ea;
-$linkedin               : #4875b4;
-$youtube                : #bb0000;
-$tumblr                 : #36465D;
+    social: (
+        twitter         : #55acee,
+        facebook        : #32639f,
+        google          : #d34836,
+        pinterest       : #cb2028,
+        instagram       : #517fa4,
+        vimeo           : #1ab7ea,
+        linkedin        : #4875b4,
+        youtube         : #bb0000,
+        tumblr          : #36465D
+    ),
+
+    brand: (
+        pink            : hotpink
+    )
+);
 
 
 // =============================================
@@ -93,19 +104,20 @@ $z-10                   : 90;
 // Breakpoints
 // =============================================
 
-$screen-xs              : 28em;
-$screen-sm              : 35em;
-$screen-md              : 48em;
-$screen-lg              : 62em;
-$screen-xl              : 82em;
+$screens: (
+    xs : 28em,
+    sm : 35em,
+    md : 48em,
+    lg : 62em,
+    xl : 82em
+);
 
-$screen-xs-max          : $screen-sm - 0.01em;
-$screen-sm-max          : $screen-md - 0.01em;
-$screen-md-max          : $screen-lg - 0.01em;
-$screen-lg-max          : $screen-xl - 0.01em;
-
-$breakpoints: (xs $screen-xs) (sm $screen-sm) (md $screen-md) (lg $screen-lg) (xl $screen-xl);
-$breakpoints-max: (xs $screen-xs-max) (sm $screen-sm-max) (md $screen-md-max) (lg $screen-lg-max);
+$screens-max: (
+    xs : screen-max(xs),
+    sm : screen-max(sm),
+    md : screen-max(md),
+    lg : screen-max(lg)
+);
 
 
 // =============================================
@@ -122,3 +134,14 @@ $container-lg           : 110em;
 // =============================================
 
 $border-radius          : 0.3rem;
+
+
+// =============================================
+// Visibility for visible classes
+// =============================================
+
+$visibility: (
+    block,
+    inline,
+    inline-block
+);

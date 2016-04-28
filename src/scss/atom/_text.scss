@@ -24,7 +24,7 @@ html {
     font-size: $font-size;
     font-family: $font-family;
     line-height: $line-height;
-    color: $grey;
+    color: color(grey);
 }
 
 ul, ol, p {
@@ -45,7 +45,7 @@ ul, ol {
 }
 
 blockquote {
-    border-left: 3px solid $light-grey;
+    border-left: 3px solid color(grey,light);
     padding-left: $spacing;
 }
 
@@ -73,11 +73,11 @@ code {
 a,
 %link,
 .link {
-    color: $black;
+    color: color(black);
     touch-action: manipulation;
 
     &:hover {
-        color: $grey;
+        color: color(grey);
     }
 }
 

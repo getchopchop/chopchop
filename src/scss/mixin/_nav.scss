@@ -150,15 +150,15 @@
     font-size: 0;
 
     a {
-        @include circle($lighter-grey, 16px);
+        @include circle(color(grey, light), 16px);
 
         &:hover,
         &.is-active {
-            background-color: $light-grey;
+            background-color: color(grey, lighter);
         }
 
         &:active {
-            background-color: $white;
+            background-color: color(white);
         }
     }
 }

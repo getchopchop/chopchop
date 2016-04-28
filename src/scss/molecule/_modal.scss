@@ -22,12 +22,12 @@
 // =============================================
 
 .modal__dialog {
-    background-color: $white;
+    background-color: color(white);
     margin-left: auto;
     margin-right: auto;
     position: relative;
 
-    @include breakpoint($screen-sm) {
+    @include breakpoint(screen(sm)) {
         max-width: 50em;
         width: 90%;
         margin: 5em auto;

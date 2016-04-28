@@ -6,149 +6,27 @@
     display: none !important;
 }
 
-$display: (block) (inline) (inline-block);
+@each $screen, $value in $screens {
 
-@each $breakpoint, $value in $breakpoints {
-    $media: $value;
-    $media-max: $value - 0.01em;
-    @debug $media;
-    @debug $media-max;
+    $media-query: $value map-get($screens-max, $screen);
+    @if $screen == xs {
+        $media-query: max-width map-get($screens-max, $screen);
+    } @else if $screen == xl {
+        $media-query: $value;
+    }
 
-    @if $breakpoint == xs {
-        @include breakpoint(max-width $media-max) {
-            .u-visible-#{$breakpoint} {
-                display: block !important;
+    @include breakpoint($media-query) {
+        @each $visible in $visibility {
+
+            $class: #{$screen}-#{$visible};
+            @if $visible == block {
+                $class: #{$screen};
+            }
+
+            .u-visible-#{$class} {
+                display: #{$visible} !important;
             }
         }
-    } @else if $breakpoint == xl {
-        @include breakpoint($media) {
-            .u-visible-#{$breakpoint} {
-                display: block !important;
-            }
-        }
-    } @else {
-        @include breakpoint($media $media-max) {
-            .u-visible-#{$breakpoint} {
-                display: block !important;
-            }
-        }
-    }
-}
-
-
-
-@include breakpoint(max-width $screen-xs-max) {
-    .u-visible-xs,
-    %u-visible-xs {
-        display: block !important;
-    }
-}
-
-@include breakpoint($screen-sm $screen-sm-max) {
-    .u-visible-sm,
-    %u-visible-sm {
-        display: block !important;
-    }
-}
-
-@include breakpoint($screen-md $screen-md-max) {
-    .u-visible-md,
-    %u-visible-md {
-        display: block !important;
-    }
-}
-
-@include breakpoint($screen-lg $screen-lg-max) {
-    .u-visible-lg,
-    %u-visible-lg {
-        display: block !important;
-    }
-}
-
-@include breakpoint($screen-xl) {
-    .u-visible-xl,
-    %u-visible-xl {
-        display: block !important;
-    }
-}
-
-
-// =============================================
-// Visible inline
-// =============================================
-
-@include breakpoint(max-width $screen-xs-max) {
-    .u-visible-xs-inline,
-    %u-visible-xs-inline {
-        display: inline !important;
-    }
-}
-
-@include breakpoint($screen-sm $screen-sm-max) {
-    .u-visible-sm-inline,
-    %u-visible-sm-inline {
-        display: inline !important;
-    }
-}
-
-@include breakpoint($screen-md $screen-md-max) {
-    .u-visible-md-inline,
-    %u-visible-md-inline {
-        display: inline !important;
-    }
-}
-
-@include breakpoint($screen-lg $screen-lg-max) {
-    .u-visible-lg-inline,
-    %u-visible-lg-inline {
-        display: inline !important;
-    }
-}
-
-@include breakpoint($screen-xl) {
-    .u-visible-xl-inline,
-    %u-visible-xl-inline {
-        display: inline !important;
-    }
-}
-
-
-// =============================================
-// Visible inline block
-// =============================================
-
-@include breakpoint(max-width $screen-xs-max) {
-    .u-visible-xs-inline-block,
-    %u-visible-xs-inline-block {
-        display: inline-block !important;
-    }
-}
-
-@include breakpoint($screen-sm $screen-sm-max) {
-    .u-visible-sm-inline-block,
-    %u-visible-sm-inline-block {
-        display: inline-block !important;
-    }
-}
-
-@include breakpoint($screen-md $screen-md-max) {
-    .u-visible-md-inline-block,
-    %u-visible-md-inline-block {
-        display: inline-block !important;
-    }
-}
-
-@include breakpoint($screen-lg $screen-lg-max) {
-    .u-visible-lg-inline-block,
-    %u-visible-lg-inline-block {
-        display: inline-block !important;
-    }
-}
-
-@include breakpoint($screen-xl) {
-    .u-visible-xl-inline-block,
-    %u-visible-xl-inline-block {
-        display: inline-block !important;
     }
 }
 
@@ -157,157 +35,29 @@ $display: (block) (inline) (inline-block);
 // Hidden
 // =============================================
 
-.u-hidden-xs,
-.u-hidden-sm,
-.u-hidden-md,
-.u-hidden-lg,
-.u-hidden-xl,
-%u-hidden-xs,
-%u-hidden-sm,
-%u-hidden-md,
-%u-hidden-lg,
-%u-hidden-xl {
-    display: block !important;
-}
+@each $visible in $visibility {
+    $class: '[class*="u-hidden-"][class*="-#{$visible}"]';
+    @if $visible == block {
+        $class: '[class*="u-hidden-"]';
+    }
 
-@include breakpoint(max-width $screen-xs-max) {
-    .u-hidden-xs,
-    %u-hidden-xs {
-        display: none !important;
+    #{$class} {
+        display: #{$visible} !important;
     }
 }
 
-@include breakpoint($screen-sm $screen-sm-max) {
-    .u-hidden-sm,
-    %u-hidden-sm {
-        display: none !important;
+@each $screen, $value in $screens {
+    $media-query: $value map-get($screens-max, $screen);
+    @if $screen == xs {
+        $media-query: max-width map-get($screens-max, $screen);
+    } @else if $screen == xl {
+        $media-query: $value;
     }
-}
 
-@include breakpoint($screen-md $screen-md-max) {
-    .u-hidden-md,
-    %u-hidden-md {
-        display: none !important;
-    }
-}
-
-@include breakpoint($screen-lg $screen-lg-max) {
-    .u-hidden-lg,
-    %u-hidden-lg {
-        display: none !important;
-    }
-}
-
-@include breakpoint($screen-xl) {
-    .u-hidden-xl,
-    %u-hidden-xl {
-        display: none !important;
-    }
-}
-
-
-// =============================================
-// Hidden inline
-// =============================================
-
-.u-hidden-xs-inline,
-.u-hidden-sm-inline,
-.u-hidden-md-inline,
-.u-hidden-lg-inline,
-.u-hidden-xl-inline,
-%u-hidden-xs-inline,
-%u-hidden-sm-inline,
-%u-hidden-md-inline,
-%u-hidden-lg-inline,
-%u-hidden-xl-inline {
-    display: inline !important;
-}
-
-@include breakpoint(max-width $screen-xs-max) {
-    .u-hidden-xs-inline,
-    %u-hidden-xs-inline {
-        display: none !important;
-    }
-}
-
-@include breakpoint($screen-sm $screen-sm-max) {
-    .u-hidden-sm-inline,
-    %u-hidden-sm-inline {
-        display: none !important;
-    }
-}
-
-@include breakpoint($screen-md $screen-md-max) {
-    .u-hidden-md-inline,
-    %u-hidden-md-inline {
-        display: none !important;
-    }
-}
-
-@include breakpoint($screen-lg $screen-lg-max) {
-    .u-hidden-lg-inline,
-    %u-hidden-lg-inline {
-        display: none !important;
-    }
-}
-
-@include breakpoint($screen-xl) {
-    .u-hidden-xl-inline,
-    %u-hidden-xl-inline {
-        display: none !important;
-    }
-}
-
-
-// =============================================
-// Hidden inline block
-// =============================================
-
-.u-hidden-xs-inline-block,
-.u-hidden-sm-inline-block,
-.u-hidden-md-inline-block,
-.u-hidden-lg-inline-block,
-.u-hidden-xl-inline-block,
-%u-hidden-xs-inline-block,
-%u-hidden-sm-inline-block,
-%u-hidden-md-inline-block,
-%u-hidden-lg-inline-block,
-%u-hidden-xl-inline-block {
-    display: inline !important;
-}
-
-@include breakpoint(max-width $screen-xs-max) {
-    .u-hidden-xs-inline-block,
-    %u-hidden-xs-inline-block {
-        display: none !important;
-    }
-}
-
-@include breakpoint($screen-sm $screen-sm-max) {
-    .u-hidden-sm-inline-block,
-    %u-hidden-sm-inline-block {
-        display: none !important;
-    }
-}
-
-@include breakpoint($screen-md $screen-md-max) {
-    .u-hidden-md-inline-block,
-    %u-hidden-md-inline-block {
-        display: none !important;
-    }
-}
-
-@include breakpoint($screen-lg $screen-lg-max) {
-    .u-hidden-lg-inline-block,
-    %u-hidden-lg-inline-block {
-        display: none !important;
-    }
-}
-
-@include breakpoint($screen-xl) {
-    .u-hidden-xl-inline-block,
-    %u-hidden-xl-inline-block {
-        display: none !important;
+    @include breakpoint($media-query) {
+        [class*="u-hidden-#{$screen}"] {
+            display: none !important;
+        }
     }
 }
 
@@ -316,19 +66,15 @@ $display: (block) (inline) (inline-block);
 // Visible
 // =============================================
 
-.u-visible,
-%u-visible {
-    display: block !important;
-}
+@each $visible in $visibility {
+    $class: '.u-visible-#{$visible}';
+    @if $visible == block {
+        $class: '.u-visible';
+    }
 
-.u-visible-inline,
-%u-visible-inline {
-    display: inline !important;
-}
-
-.u-visible-inline-block,
-%u-visible-inline-block {
-    display: inline-block !important;
+    #{$class} {
+        display: #{$visible} !important;
+    }
 }
 
 

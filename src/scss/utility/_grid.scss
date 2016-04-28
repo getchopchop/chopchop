@@ -47,18 +47,17 @@
 // Grid Cols
 // =============================================
 
-@each $breakpoint, $value in $breakpoints {
-    @if $breakpoint == xs {
+@each $screen, $value in $screens {
+    @if $screen == xs {
         @for $i from 1 through 12 {
-            .g-col-#{$breakpoint}-#{$i} {
+            .g-col-#{$screen}-#{$i} {
                 @include grid-col($i of 12);
             }
         }
     } @else {
-        $media: '$screen-'#{$breakpoint};
         @media(min-width: $value) {
             @for $i from 1 through 12 {
-                .g-col-#{$breakpoint}-#{$i} {
+                .g-col-#{$screen}-#{$i} {
                     @include grid-col($i of 12);
                 }
             }

@@ -22,7 +22,7 @@
 // Form field group scaffold
 // =============================================
 
-@include breakpoint($screen-sm) {
+@include breakpoint(screen(sm)) {
     .field-group--scaffold,
     %field-group--scaffold {
         display: flex;

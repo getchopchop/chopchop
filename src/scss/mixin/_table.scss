@@ -6,18 +6,18 @@
     th, td {
         padding: $spacing;
         vertical-align: top;
-        border-top: 1px solid $light-grey;
+        border-top: 1px solid color(grey,light);
     }
 
     th {
         vertical-align: bottom;
-        border-bottom: 2px solid $light-grey;
+        border-bottom: 2px solid color(grey,light);
     }
 
     caption {
         padding-top: $spacing-sm;
         padding-bottom: $spacing-sm;
-        color: $grey;
+        color: color(grey);
         text-align: left;
     }
 
@@ -26,7 +26,7 @@
     }
 
     table > tbody {
-        border-bottom: 1px solid $light-grey;
+        border-bottom: 1px solid color(grey,light);
     }
 }
 
@@ -48,11 +48,11 @@
 // =============================================
 
 @mixin table--bordered {
-    border: 1px solid $light-grey;
+    border: 1px solid color(grey,light);
 
     th,
     td {
-        border: 1px solid $light-grey;
+        border: 1px solid color(grey,light);
     }
 
     > thead th,
@@ -68,6 +68,6 @@
 
 @mixin table--striped {
     > tbody > tr:nth-child(odd) {
-        background-color: $lighter-grey;
+        background-color: color(grey,lighter);
     }
 }

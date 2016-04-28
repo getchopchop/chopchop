@@ -1,0 +1,25 @@
+// =============================================
+// Color
+// =============================================
+
+@function color($color, $tone: 'base') {
+    @return map-get(map-get($colors, $color), $tone);
+}
+
+
+// =============================================
+// Screen
+// =============================================
+
+@function screen($value: 'xs') {
+    @return map-get($screens, $value);
+}
+
+
+// =============================================
+// Screen max
+// =============================================
+
+@function screen-max($value: 'xs') {
+    @return map-get($screens-max, $value);
+}
