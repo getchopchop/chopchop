@@ -18,7 +18,7 @@ Title: Colour
 
                     </div>
                     <div class="card__footer">
-                        <small><code><?php echo $class_ ?></code></small>
+                        <small><code>.<?php echo $class_ ?></code></small>
                     </div>
                 </div>
             </div>
