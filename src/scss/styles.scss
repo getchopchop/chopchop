@@ -9,11 +9,12 @@
 // Helpers
 // =============================================
 
+@import "mixin/function";
+
 @import "mixin/accordion";
 @import "mixin/button";
 @import "mixin/breakpoint";
 @import "mixin/card";
-@import "mixin/function";
 @import "mixin/ellipsis";
 @import "mixin/flag";
 @import "mixin/grid";
@@ -23,7 +24,6 @@
 @import "mixin/table";
 @import "mixin/nav";
 @import "mixin/tabs";
-
 
 // =============================================
 // utility

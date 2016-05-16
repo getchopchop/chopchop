@@ -101,22 +101,29 @@ $z-10                   : 90;
 
 
 // =============================================
-// Breakpoints
+// Screens
 // =============================================
 
 $screens: (
-    xs : 28em,
-    sm : 35em,
-    md : 48em,
-    lg : 62em,
-    xl : 82em
-);
-
-$screens-max: (
-    xs : screen-max(xs),
-    sm : screen-max(sm),
-    md : screen-max(md),
-    lg : screen-max(lg)
+    xs: (
+        base            : 28em,
+        max             : 28em - 0.01em
+    ),
+    sm: (
+        base            : 35em,
+        max             : 35em - 0.01em
+    ),
+    md: (
+        base            : 48em,
+        max             : 48em - 0.01em
+    ),
+    lg: (
+        base            : 62em,
+        max             : 62em - 0.01em
+    ),
+    xl: (
+        base            : 82em
+    )
 );
 
 

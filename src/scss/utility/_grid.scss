@@ -55,7 +55,7 @@
             }
         }
     } @else {
-        @media(min-width: $value) {
+        @include breakpoint(screen($screen)) {
             @for $i from 1 through 12 {
                 .g-col-#{$screen}-#{$i} {
                     @include grid-col($i of 12);

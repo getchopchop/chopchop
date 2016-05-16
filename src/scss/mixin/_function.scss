@@ -11,15 +11,6 @@
 // Screen
 // =============================================
 
-@function screen($value: 'xs') {
-    @return map-get($screens, $value);
-}
-
-
-// =============================================
-// Screen max
-// =============================================
-
-@function screen-max($value: 'xs') {
-    @return map-get($screens-max, $value);
+@function screen($screen, $type: 'base') {
+    @return map-get(map-get($screens, $screen), $type);
 }

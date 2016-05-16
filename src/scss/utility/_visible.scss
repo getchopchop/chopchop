@@ -8,14 +8,12 @@
 
 @each $screen, $value in $screens {
 
-    $media-query: $value screen-max($screen);
+    $media-query: screen($screen);
     @if $screen == xs {
-        $media-query: max-width map-get($screens-max, $screen);
+        $media-query: max-width screen($screen,max);
     } @else if $screen == xl {
-        $media-query: $value;
+        $media-query: screen($screen);
     }
-
-    @debug $media-query;
 
     @include breakpoint($media-query) {
         @each $visible in $visibility {
@@ -48,12 +46,13 @@
     }
 }
 
+
 @each $screen, $value in $screens {
-    $media-query: $value map-get($screens-max, #{$screen});
+    $media-query: screen($screen) screen($screen,max);
     @if $screen == xs {
-        $media-query: max-width map-get($screens-max, #{$screen});
+        $media-query: max-width screen($screen,max);
     } @else if $screen == xl {
-        $media-query: $value;
+        $media-query: screen($screen);
     }
 
     @include breakpoint($media-query) {
