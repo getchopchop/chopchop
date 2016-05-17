@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "Chop Chop is a lightweight frontend pattern primer.",
   "main": "gulpfile.js",
+   "scripts": {
+      "watch": "gulp",
+      "watch-dev": "gulp --dev",
+      "build": "gulp build",
+      "build-production": "gulp build --production"
+  },
   "repository": {
     "type": "git",
     "url": "git@gitlab.iweb.co.uk:labs/chopchop.git"
