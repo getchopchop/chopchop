@@ -16,8 +16,7 @@ See [wiki](https://gitlab.iweb.co.uk/labs/chopchop/wikis/best-practices) for mor
 To get going with it here are the commands  
 _You can copy this entire block into the command line and it will process it all for you._
 ```
-mkdir ~/sites/chopchop;
-cd ~/sites/chopchop;
+cd ~/sites;
 git clone git@gitlab.iweb.co.uk:labs/chopchop.git chopchop/public_html;
 cd chopchop/public_html;
 npm i;
