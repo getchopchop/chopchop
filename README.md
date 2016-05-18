@@ -16,12 +16,12 @@ See [wiki](https://gitlab.iweb.co.uk/labs/chopchop/wikis/best-practices) for mor
 To get going with it here are the commands  
 _You can copy this entire block into the command line and it will process it all for you._
 ```
-mkdir ~/Sites/chopchop;
-cd ~/Sites/chopchop;
-git clone git@gitlab.iweb.co.uk:labs/chopchop.git public_html;
-cd public_html;
-npm install;
-./node_modules/.bin/gulp build;
+mkdir ~/sites/chopchop;
+cd ~/sites/chopchop;
+git clone git@gitlab.iweb.co.uk:labs/chopchop.git chopchop/public_html;
+cd chopchop/public_html;
+npm i;
+npm run build;
 ```
 
 ## Working on the project
