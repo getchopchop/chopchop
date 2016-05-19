@@ -16,10 +16,10 @@
 <body>
 
     <?php if(!isset($_GET['preview'])) : ?>
-        <header class="cc-head">
-            <ul class="nav nav--inline nav--pills">
-                <li><a href="#" class="site-navigation__toggle" data-cc-action="toggle" data-cc-target="navigation">Menu</a></li>
-                <li><a href="#">ChopChop</a></li>
+        <header class="cc-header">
+            <ul>
+                <li><a href="#" data-cc-action="toggle" data-cc-target="cc-nav">Menu</a></li>
+                <li><a href="#">ChopChop library</a></li>
             </ul>
         </header>
 
@@ -29,7 +29,7 @@
 
         <div class="site-wrapper cc-site-wrapper">
 
-            <nav class="site-navigation" id="navigation">
+            <nav class="cc-nav" id="cc-nav">
                 <div class="block-content site-navigation__content">
                     <?php include('inc/nav.php'); ?>
                 </div>
@@ -39,21 +39,6 @@
     <?php endif; ?>
 
               <?php if(isIndex()) { ?>
-                  <header class="cc-header">
-                      <div class="u-container">
-                          <?php include('molecule/logo.php'); ?>
-                      </div>
-                  </header>
-                    <div class="u-container">
-                        <div class="u-container">
-                            <hgroup class="hgroup page-title hero-title u-hidden">
-                                <h1 class="hgroup__title">Chop Chop</h1>
-                                <h4 class="hgroup__subtitle">Static Pattern Library</h4>
-                            </hgroup>
-                            <br>
-                            <?php include('inc/nav-index.php'); ?>
-                        </div>
-                    </div>
              <?php } else {
                  $options = array(
                     'print_title' => !((isset($_GET['title']) && $_GET['title'] === 'false')),

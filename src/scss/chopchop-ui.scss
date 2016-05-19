@@ -1,8 +1,168 @@
+@import "var";
+@import "helper/breakpoint";
+
+
+// =============================================
+// Header
+// =============================================
+
+.cc-header {
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline-block;
+        list-style: none;
+    }
+
+    a {
+        display: inline-block;
+        padding: 10px 10px;
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+
+// =============================================
+// Breakpoint bar
+// =============================================
+
+.cc-readout,
+.cc-toolbar {
+    background-color: #FFE800;
+
+    @include breakpoint(screen(sm) screen(sm, max)) {
+        background-color: #E800E8;
+    }
+    @include breakpoint(screen(md) screen(md, max)) {
+        background-color: #70F800;
+    }
+    @include breakpoint(screen(lg) screen(lg, max)) {
+        background-color: #00B1F5;
+    }
+    @include breakpoint(screen(xl)) {
+        background-color: #FF2C00;
+    }
+}
+
+.cc-readout {
+    display: block;
+    position: fixed;
+    bottom:0;
+    right:0;
+    z-index: 997;
+    font-size: 12px;
+    white-space: nowrap;
+    color: color(black);
+    text-decoration: none;
+    padding: 4px 8px;
+}
+
+.cc-toolbar {
+    position: fixed;
+    height: 6px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    > :last-child {
+        margin-left: auto;
+    }
+
+}
+
+.cc-readout--mq:after {
+    content: "screen(xs) < #{screen-max(xs)}";
+
+    @include breakpoint(screen(sm)) {
+        content: "screen(sm) > #{screen(sm)}";
+    }
+    @include breakpoint(screen(md)) {
+        content: "screen(md) > #{screen(md)}";
+    }
+    @include breakpoint(screen(lg)) {
+        content: "screen(lg) > #{screen(lg)}";
+    }
+    @include breakpoint(screen(xl)) {
+        content: "screen(xl) > #{screen(xl)}";
+    }
+}
+
+
+// =============================================
+// Site nav
+// =============================================
+
+.cc-nav {
+    position: fixed;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+    transition: transform 0.4s ease;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    transform: translateX(-100%);
+    z-index: 998;
+    background-color: #EFEDED;
+    padding: 10px;
+    padding-top: 60px;
+    color: #000;
+
+    &.is-active {
+        transform: translateX(0);
+    }
+
+    ol {
+        margin: 5px 0 20px 30px;
+        padding: 0;
+        font-weight: bold;
+        font-size: 16px;
+
+        ol {
+            margin-left: 20px;
+            font-weight: normal;
+            font-size: 14px;
+        }
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
  // =============================================
  // Vars
  // =============================================
 
- @import "var";
 
  $z-100: 100;
  $z-200: 200;
@@ -15,7 +175,6 @@
  @import "helper/card";
  @import "helper/function";
  @import "helper/ellipsis";
- @import "helper/breakpoint";
  @import "helper/grid";
  @import "helper/flag";
  @import "helper/list";
@@ -54,7 +213,7 @@
  // Header
  // =============================================
 
- .cc-header {
+ .cc-header1 {
      @extend %u-text-center;
      padding-top: $spacing;
      padding-bottom: $spacing;
@@ -153,23 +312,7 @@
  // Navigation
  // =============================================
 
- .site-navigation {
-     position: fixed;
-     overflow-y: scroll; /* has to be scroll, not auto */
-     -webkit-overflow-scrolling: touch;
-     background-color: color(white);
-     transition: transform 0.4s ease;
-     top: 0;
-     bottom: 0;
-     min-width: 12rem;
-     max-width: 15rem;
-     border-right: 2px solid color(grey,lighter);
-     transform: translateX(-100%);
 
-     &.is-active {
-         transform: translateX(0);
-     }
- }
 
 
  // =============================================
@@ -302,81 +445,7 @@
  // Media Query Readout
  // =============================================
 
- .cc-readout {
-     display: block;
-     font-size: 10px;
-     white-space: nowrap;
-     color: color(black);
-     text-decoration: none;
-     padding: 4px 8px;
-     position: fixed;
-     bottom:0;
-     right:0;
-     background-color: magenta;
 
-     @include breakpoint(screen(sm) screen(sm, max)) {
-         background-color: green;
-     }
-     @include breakpoint(screen(md) screen(md, max)) {
-         background-color: blue;
-         color: color(white);
-     }
-     @include breakpoint(screen(lg) screen(lg, max)) {
-         background-color: yellow;
-     }
-     @include breakpoint(screen(xl)) {
-         background-color: hotpink;
-     }
- }
-
- .cc-toolbar {
-     position: fixed;
-     height: 6px;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     background-color: magenta;
-
-     // @include breakpoint(screen(xs)) {
-     //     background-color: red;
-     // }
-     @include breakpoint(screen(sm) screen(sm, max)) {
-         background-color: green;
-     }
-     @include breakpoint(screen(md) screen(md, max)) {
-         background-color: blue;
-     }
-     @include breakpoint(screen(lg) screen(lg, max)) {
-         background-color: yellow;
-     }
-     @include breakpoint(screen(xl)) {
-         background-color: hotpink;
-     }
-
-     > :last-child {
-         margin-left: auto;
-     }
-
- }
- .cc-readout--mq:after {
-     content: "screen(xs) < #{screen-max(xs)}";
-
-     // @include breakpoint(screen(xs)) {
-     //     content: "screen(xs) > #{screen(xs)}";
-     // }
-     @include breakpoint(screen(sm)) {
-         content: "screen(sm) > #{screen(sm)}";
-     }
-     @include breakpoint(screen(md)) {
-         content: "screen(md) > #{screen(md)}";
-     }
-     @include breakpoint(screen(lg)) {
-         content: "screen(lg) > #{screen(lg)}";
-     }
-     @include breakpoint(screen(xl)) {
-         content: "screen(xl) > #{screen(xl)}";
-     }
- }
 
 
  // =============================================
