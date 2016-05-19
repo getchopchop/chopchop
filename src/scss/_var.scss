@@ -3,6 +3,10 @@
 // =============================================
 
 $colors: (
+    brand: (
+        pink            : hotpink
+    ),
+
     grey: (
         base            : #666,
         darker          : #222,
@@ -29,10 +33,6 @@ $colors: (
         linkedin        : #4875b4,
         youtube         : #bb0000,
         tumblr          : #36465D
-    ),
-
-    brand: (
-        pink            : hotpink
     )
 );
 
@@ -111,15 +111,15 @@ $screens: (
     ),
     sm: (
         base            : 35em,
-        max             : 35em - 0.01em
+        max             : 48em - 0.01em
     ),
     md: (
         base            : 48em,
-        max             : 48em - 0.01em
+        max             : 62em - 0.01em
     ),
     lg: (
         base            : 62em,
-        max             : 62em - 0.01em
+        max             : 82em - 0.01em
     ),
     xl: (
         base            : 82em

@@ -16,10 +16,16 @@
 <body>
 
     <?php if(!isset($_GET['preview'])) : ?>
-            <div class="cc-toolbar">
-                <a href="#" class="site-navigation__toggle cc-readout" data-cc-action="toggle" data-cc-target="navigation">Menu</a>
-                <span class="cc-readout cc-readout--mq"></span>
-            </div>
+        <header class="cc-head">
+            <ul class="nav nav--inline nav--pills">
+                <li><a href="#" class="site-navigation__toggle" data-cc-action="toggle" data-cc-target="navigation">Menu</a></li>
+                <li><a href="#">ChopChop</a></li>
+            </ul>
+        </header>
+
+        <div class="cc-toolbar">
+            <span class="cc-readout cc-readout--mq"></span>
+        </div>
 
         <div class="site-wrapper cc-site-wrapper">
 

@@ -11,17 +11,17 @@
  // Helpers
  // =============================================
 
- @import "mixin/shape";
- @import "mixin/card";
- @import "mixin/function";
- @import "mixin/ellipsis";
- @import "mixin/breakpoint";
- @import "mixin/grid";
- @import "mixin/flag";
- @import "mixin/list";
- @import "mixin/ratio";
- @import "mixin/accordion";
- @import "mixin/tabs";
+ @import "helper/shape";
+ @import "helper/card";
+ @import "helper/function";
+ @import "helper/ellipsis";
+ @import "helper/breakpoint";
+ @import "helper/grid";
+ @import "helper/flag";
+ @import "helper/list";
+ @import "helper/ratio";
+ @import "helper/accordion";
+ @import "helper/tabs";
 
 
  // =============================================
@@ -304,17 +304,34 @@
 
  .cc-readout {
      display: block;
-     font-size: 12px;
+     font-size: 10px;
      white-space: nowrap;
-     color: color(white);
-     background-color: color(black);
+     color: color(black);
      text-decoration: none;
-     padding: 6px 10px;
+     padding: 4px 8px;
+     position: fixed;
+     bottom:0;
+     right:0;
+     background-color: magenta;
+
+     @include breakpoint(screen(sm) screen(sm, max)) {
+         background-color: green;
+     }
+     @include breakpoint(screen(md) screen(md, max)) {
+         background-color: blue;
+         color: color(white);
+     }
+     @include breakpoint(screen(lg) screen(lg, max)) {
+         background-color: yellow;
+     }
+     @include breakpoint(screen(xl)) {
+         background-color: hotpink;
+     }
  }
 
  .cc-toolbar {
-     display: flex;
      position: fixed;
+     height: 6px;
      left: 0;
      bottom: 0;
      right: 0;
@@ -323,13 +340,13 @@
      // @include breakpoint(screen(xs)) {
      //     background-color: red;
      // }
-     @include breakpoint(screen(sm)) {
+     @include breakpoint(screen(sm) screen(sm, max)) {
          background-color: green;
      }
-     @include breakpoint(screen(md)) {
+     @include breakpoint(screen(md) screen(md, max)) {
          background-color: blue;
      }
-     @include breakpoint(screen(lg)) {
+     @include breakpoint(screen(lg) screen(lg, max)) {
          background-color: yellow;
      }
      @include breakpoint(screen(xl)) {
@@ -524,4 +541,18 @@
  .cc-section {
      padding-top: $spacing-xl;
      padding-bottom: $spacing-xl;
+ }
+
+
+ .cc-head {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     background-color: color(black);
+
+     * {
+         margin: 0;
+         color: color(white);
+     }
  }
