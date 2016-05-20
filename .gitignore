@@ -28,6 +28,7 @@ Temporary Items
 # Gulp
 node_modules
 .sass-cache
+npm-debug.log
 
 # Server stuff
 .bash_history
