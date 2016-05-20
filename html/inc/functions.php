@@ -19,7 +19,7 @@
             $files = array();
             foreach ($filestocheck as $f) {
                 $filename = basename($f, '.php');
-                if(preg_match("/(\d+\-)?" . $last . "/", $filename)) {
+                if(preg_match("/^(\d+\-)?" . $last . "/", $filename)) {
                     $files[] = $f;
                 }
             }
