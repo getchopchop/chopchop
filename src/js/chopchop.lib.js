@@ -102,14 +102,16 @@ var ChopChop = (function($, ChopChop) {
     // Toggle
     var Toggle = ChopChop.Toggle = function(options) {
         this.options = $.extend({}, defaultOptions, options);
+        this.pending = [];
+        this.processed = [];
         this.init();
     };
 
-	var Action = {
-		TOGGLE: 'toggle',
-		ACTIVATE: 'activate',
-		DEACTIVATE: 'deactivate'
-	};
+    var Action = {
+        TOGGLE: 'toggle',
+        ACTIVATE: 'activate',
+        DEACTIVATE: 'deactivate'
+    };
 
     var Trigger = {
         DIRECT_ONLY: 'direct-only',
@@ -137,7 +139,7 @@ var ChopChop = (function($, ChopChop) {
                 }
 
                 e.preventDefault();
-				self.performAction($target, $this.data('cc-action') || Action.TOGGLE);
+                self.performAction($target, $this.data('cc-action') || Action.TOGGLE);
             });
         },
         toggle: function(target, action) {
@@ -149,44 +151,72 @@ var ChopChop = (function($, ChopChop) {
 
             this.performAction($target, action || Action.TOGGLE);
         },
-		performAction: function($el, action) {
-			if (action === Action.TOGGLE) {
-				if ($el.hasClass('is-active')) {
-					action = Action.DEACTIVATE;
-				} else {
-					action = Action.ACTIVATE;
-				}
-			}
+        cascade: function($el, action) {
+            var i, l, $other,
+                chain = ($el.data('cc-cascade-' + action) || '').split(',')
+                        .concat(($el.data('cc-cascade') || '').split(','));
 
-			var pending = [$el], processed = [],
-				id, dependants, group, $current,
+            for (i = 0, l = chain.length; i < l; ++i) {
+                $other = $('#' + chain[i]);
+
+                if (this.processed.indexOf($other[0]) !== -1 || this.pending.indexOf($other[0]) !== -1) {
+                    continue;
+                }
+
+                this.pending.push({
+                    action: action,
+                    target: $other
+                });
+            }
+        },
+        performAction: function($el, action) {
+            this.pending.length = 0;
+            this.processed.length = 0;
+
+            if (action === Action.TOGGLE) {
+                if ($el.hasClass('is-active')) {
+                    action = Action.DEACTIVATE;
+                } else {
+                    action = Action.ACTIVATE;
+                }
+            }
+
+            this.pending.push({
+                action: action,
+                target:$el
+            })
+
+            var id, dependants, group, $current, item,
                 iterations = 0,
                 el, chain, $other, i;
 
-			while (pending.length > 0) {
-				$current = pending.shift();
+            while (this.pending.length > 0) {
+                item = this.pending.shift();
+                action = item.action;
+                $current = item.target;
 
-				// Skip already processed nodes
-				if (processed.indexOf($current) !== -1) {
-					continue;
-				}
+                // Skip already processed nodes
+                if (this.processed.indexOf($current) !== -1) {
+                    continue;
+                }
 
-				id = $current.attr('id');
-				group = $current.data('cc-group');
+                id = $current.attr('id');
+                group = $current.data('cc-group');
 
-				// NOTE: Perhaps don't process these; add to some kind of queue first (with activate or deactivate action)
-				for (i = 0, all = $('[ data-cc-group="' + group + '"]'), l = all.length; i < l; ++i) {
+                // Process group members, if a group is present
+                for (i = 0, all = $('[data-cc-group="' + group + '"]'), l = all.length; i < l; ++i) {
                     el = all[i];
-    			    $other = $(el);
+                    $other = $(el);
 
                     // Skip element itself
-					if (el === $current[0]) {
+                    if (el === $current[0]) {
                         continue;
                     }
 
                     // Just a group member, not the target: deactivate
                     $other.addClass('is-inactive').removeClass('is-active');
-				}
+                    this.cascade($other, Action.DEACTIVTE);
+                }
 
                 // Process target
                 if (action === Action.ACTIVATE) {
@@ -198,27 +228,15 @@ var ChopChop = (function($, ChopChop) {
                 }
 
                 // Chain onto targets
-                chain = ($current.data('cc-cascade-' + action) || '').split(',')
-                    .concat(($current.data('cc-cascade') || '').split(','));
-
-                for (i = 0, l = chain.length; i < l; ++i) {
-                    $other = $('#' + chain[i]);
-
-                    if (processed.indexOf($other[0]) !== -1 || pending.indexOf($other[0]) !== -1) {
-                        continue;
-                    }
-
-                    pending.push($other);
-                }
-
-				processed.push($current[0]);
+                this.cascade($current, action);
+                this.processed.push($current[0]);
                 iterations += 1;
 
                 if (iterations > 100) {
                     throw new ChopChop.Exception("Too many iterations, aborting");
                 }
-			}
-		}
+            }
+        }
     };
 
     // Expose toggle api
