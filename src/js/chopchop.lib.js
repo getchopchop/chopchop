@@ -215,7 +215,7 @@ var ChopChop = (function($, ChopChop) {
 
                     // Just a group member, not the target: deactivate
                     $other.addClass('is-inactive').removeClass('is-active');
-                    this.cascade($other, Action.DEACTIVTE);
+                    this.cascade($other, Action.DEACTIVATE);
                 }
 
                 // Process target
