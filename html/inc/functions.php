@@ -208,7 +208,7 @@
             }
 
             if($this->Title) {
-                $title .= '<hgroup class="cc-title cc-title--actions"><div class="title__titles">';
+                $title .= '<hgroup class="cc-title cc-title--actions" id="section-' . str_replace(' ', '-', strtolower($this->Title)) . '"><div class="title__titles">';
             }
             if($this->Title) {
                 $title .= '<h2 class="cc-title__main">' . $this->Title;
