@@ -35,18 +35,6 @@
 // Hidden
 // =============================================
 
-@each $visible in $visibility {
-    $class: '[class*="u-hidden-"][class*="-#{$visible}"]';
-    @if $visible == block {
-        $class: '[class*="u-hidden-"]';
-    }
-
-    #{$class} {
-        display: #{$visible} !important;
-    }
-}
-
-
 @each $screen, $value in $screens {
     $media-query: screen($screen) screen($screen,max);
     @if $screen == xs {
