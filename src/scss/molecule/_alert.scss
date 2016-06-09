@@ -4,7 +4,7 @@
 
 .alert {
     padding: $spacing;
-    background-color: lighten(color(grey), 30%);
+    background-color: color(grey, lighter);
     border: 1px solid color(grey);
     margin-bottom: $spacing;
 
@@ -55,11 +55,11 @@
 // =============================================
 
 .alert--success {
-    background-color: lighten(green, 70%);
-    border-color: green;
+    background-color: color(success, light);
+    border-color: color(success);
 }
 
 .alert--error {
-    background-color: lighten(red, 40%);
-    border-color: red;
+    background-color: color(error, light);
+    border-color: color(error);
 }
