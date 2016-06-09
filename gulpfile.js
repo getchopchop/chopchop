@@ -117,6 +117,7 @@ gulp.task('vendor-images', function() {
     .pipe(gulp.dest(project.distDirectory + '/' + project.vendorDirectory));
 });
 
+
 // =============================================
 // SVG Sprite `gulp svg-sprite`
 // Optimises and merges SVG's into sprite
