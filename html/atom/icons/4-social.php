@@ -2,37 +2,45 @@
 Title: Social Icons
 */ ?>
 
-<ul class="u-list-unstyled g-three-up">
+<ul class="u-list-unstyled u-list-inline">
     <li>
-        <i class="icon-linkedin"></i>
-        <span class="i-name">icon-linkedin</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#social--linkedin" />
+        </svg>
     </li>
     <li>
-        <i class="icon-twitter"></i>
-        <span class="i-name">icon-twitter</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#social--twitter" />
+        </svg>
     </li>
     <li>
-        <i class="icon-facebook"></i>
-        <span class="i-name">icon-facebook</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#social--facebook" />
+        </svg>
     </li>
     <li>
-        <i class="icon-gplus"></i>
-        <span class="i-name">icon-gplus</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#social--google-plus" />
+        </svg>
     </li>
     <li>
-        <i class="icon-instagram"></i>
-        <span class="i-name">icon-instagram</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#social--instagram" />
+        </svg>
     </li>
     <li>
-        <i class="icon-youtube"></i>
-        <span class="i-name">icon-youtube</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#social--youtube" />
+        </svg>
     </li>
     <li>
-        <i class="icon-pinterest"></i>
-        <span class="i-name">icon-pinterest</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#social--pinterest" />
+        </svg>
     </li>
     <li>
-        <i class="icon-tumblr"></i>
-        <span class="i-name">icon-tumblr</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#social--tumblr" />
+        </svg>
     </li>
 </ul>

@@ -2,142 +2,162 @@
 Title: Common Icons
 */ ?>
 
-<ul class="u-list-unstyled g-three-up">
+<ul class="u-list-unstyled u-list-inline">
     <li>
-        <i class="icon-search"></i>
-        <span class="i-name">icon-search</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#search" />
+        </svg>
     </li>
     <li>
-        <i class="icon-ok"></i>
-        <span class="i-name">icon-ok</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#check" />
+        </svg>
     </li>
     <li>
-        <i class="icon-cancel"></i>
-        <span class="i-name">icon-cancel</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#times" />
+        </svg>
     </li>
     <li>
-        <i class="icon-plus"></i>
-        <span class="i-name">icon-plus</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#plus" />
+        </svg>
     </li>
     <li>
-        <i class="icon-minus"></i>
-        <span class="i-name">icon-minus</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#minus" />
+        </svg>
     </li>
     <li>
-        <i class="icon-user"></i>
-        <span class="i-name">icon-user</span>
-    </li>
-
-    <li>
-        <i class="icon-info"></i>
-        <span class="i-name">icon-info</span>
-    </li>
-
-    <li>
-        <i class="icon-help"></i>
-        <span class="i-name">icon-help</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#user" />
+        </svg>
     </li>
 
     <li>
-        <i class="icon-heart"></i>
-        <span class="i-name">icon-heart</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#info" />
+        </svg>
     </li>
 
     <li>
-        <i class="icon-download-cloud"></i>
-        <span class="i-name">icon-download-cloud</span>
-    </li>
-    <li>
-        <i class="icon-basket"></i>
-        <span class="i-name">icon-basket</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#question" />
+        </svg>
     </li>
 
     <li>
-        <i class="icon-comment"></i>
-        <span class="i-name">icon-comment</span>
-    </li>
-    <li>
-        <i class="icon-chat"></i>
-        <span class="i-name">icon-chat</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#heart" />
+        </svg>
     </li>
 
     <li>
-        <i class="icon-pencil"></i>
-        <span class="i-name">icon-pencil</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#cloud-download" />
+        </svg>
     </li>
     <li>
-        <i class="icon-star"></i>
-        <span class="i-name">icon-star</span>
-    </li>
-
-    <li>
-        <i class="icon-angle-down"></i>
-        <span class="i-name">icon-angle-down</span>
-    </li>
-    <li>
-        <i class="icon-angle-up"></i>
-        <span class="i-name">icon-angle-up</span>
-    </li>
-    <li>
-        <i class="icon-angle-left"></i>
-        <span class="i-name">icon-angle-left</span>
-    </li>
-    <li>
-        <i class="icon-angle-right"></i>
-        <span class="i-name">icon-angle-right</span>
-    </li>
-    <li>
-        <i class="icon-menu"></i>
-        <span class="i-name">icon-menu</span>
-    </li>
-    <li>
-        <i class="icon-cog"></i>
-        <span class="i-name">icon-cog</span>
-    </li>
-    <li>
-        <i class="icon-info"></i>
-        <span class="i-name">icon-info</span>
-    </li>
-    <li>
-        <i class="icon-home"></i>
-        <span class="i-name">icon-home</span>
-    </li>
-    <li>
-        <i class="icon-phone"></i>
-        <span class="i-name">icon-phone</span>
-    </li>
-    <li>
-        <i class="icon-mail-alt"></i>
-        <span class="i-name">icon-mail-alt</span>
-    </li>
-    <li>
-        <i class="icon-lock"></i>
-        <span class="i-name">icon-lock</span>
-    </li>
-    <li>
-        <i class="icon-attention-alt"></i>
-        <span class="i-name">icon-attention-alt</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#shopping-basket" />
+        </svg>
     </li>
 
     <li>
-        <i class="icon-basket"></i>
-        <span class="i-name">icon-basket</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#comment" />
+        </svg>
+    </li>
+    <li>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#comments" />
+        </svg>
     </li>
 
     <li>
-        <i class="icon-circle-empty"></i>
-        <span class="i-name">icon-circle-empty</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#pencil" />
+        </svg>
     </li>
     <li>
-        <i class="icon-dot-circled"></i>
-        <span class="i-name">icon-dot-circled</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#star" />
+        </svg>
+    </li>
+
+    <li>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#angle-down" />
+        </svg>
     </li>
     <li>
-        <i class="icon-th-list"></i>
-        <span class="i-name">icon-th-list</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#angle-up" />
+        </svg>
     </li>
     <li>
-        <i class="icon-th"></i>
-        <span class="i-name">icon-th</span>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#angle-left" />
+        </svg>
+    </li>
+    <li>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#angle-right" />
+        </svg>
+    </li>
+    <li>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#bars" />
+        </svg>
+    </li>
+    <li>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#cog" />
+        </svg>
+    </li>
+    <li>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#home" />
+        </svg>
+    </li>
+    <li>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#phone" />
+        </svg>
+    </li>
+    <li>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#envelope" />
+        </svg>
+    </li>
+    <li>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#lock" />
+        </svg>
+    </li>
+    <li>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#exclamation" />
+        </svg>
+    </li>
+    <li>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#circle-o" />
+        </svg>
+    </li>
+    <li>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#dot-circle-o" />
+        </svg>
+    </li>
+    <li>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#th-list" />
+        </svg>
+    </li>
+    <li>
+        <svg class="icon">
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#th" />
+        </svg>
     </li>
 </ul>

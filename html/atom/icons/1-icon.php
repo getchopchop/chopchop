@@ -1,9 +1,10 @@
 <?php /*
 Title: Icon
-Class: .icon-*
+Class: .icon
 */ ?>
 
 <p>
-    <i class="icon-twitter"></i>
-    <span class="i-name">icon-twitter</span>
+    <svg class="icon">
+        <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#bars" />
+    </svg>
 </p>

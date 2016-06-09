@@ -1,9 +1,10 @@
 <?php /*
 Title: Large Icon
-Class: .icon-*.icon--lg
+Class: .icon.icon--lg
 */ ?>
 
 <p>
-    <i class="icon-twitter icon--lg"></i>
-    <span class="i-name">icon-twitter icon--lg</span>
+    <svg class="icon icon--lg">
+        <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#bars" />
+    </svg>
 </p>
