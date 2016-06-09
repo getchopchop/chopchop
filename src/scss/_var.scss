@@ -33,6 +33,16 @@ $colors: (
 
     brand: (
         pink            : hotpink
+    ),
+    
+    success: (
+        base            : green,
+        light           : #e6ffe6
+    ),
+    
+    error: (
+        base            : red,
+        light           : #fcc
     )
 );
 
