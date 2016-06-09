@@ -184,7 +184,7 @@ var ChopChop = (function($, ChopChop) {
             this.pending.push({
                 action: action,
                 target:$el
-            })
+            });
 
             var id, dependants, group, $current, item,
                 iterations = 0,
