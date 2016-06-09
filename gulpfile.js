@@ -11,6 +11,7 @@ var project = {
     stylesDirectory: 'scss',
     scriptsDirectory: 'js',
     imagesDirectory: 'img',
+    iconsDirectory: '/img/icons',
     vendorDirectory: 'vendor'
 };
 
@@ -30,9 +31,27 @@ var option = {
         discardUnused: false
     },
     imageOptimisation: {
-        optimizationLevel: 3,   // PNG (Between 0 - 7)
-        progressive: true,      // JPG
-        interlaced: true        // GIF
+        optimizationLevel: 3,           // PNG (Between 0 - 7)
+        progressive: true,              // JPG
+        interlaced: true                // GIF
+    },
+    svgSpriteConfig: {
+        shape: {
+            dimension: {                // Set maximum dimensions
+                maxWidth: 32,
+                maxHeight: 32
+            },
+            dest: 'intermediate-svg'    // Keep the intermediate files
+        },
+        mode: {
+            view: {                     // Activate the «view» mode
+                bust: false,
+                render: {
+                    scss: true          // Activate Sass output (with default options)
+                }
+            },
+            symbol: true                // Activate the «symbol» mode
+        }
     }
 };
 
@@ -54,7 +73,8 @@ var gulp = require('gulp' ),
         jsHint:             require( 'gulp-jshint' ),
         cssNano:            require( 'gulp-cssnano' ),
         uglify:             require( 'gulp-uglify' ),
-        sourcemaps:         require( 'gulp-sourcemaps' )
+        sourcemaps:         require( 'gulp-sourcemaps' ),
+        svgSprite:          require('gulp-svg-sprite')
     };
 
 
@@ -97,6 +117,17 @@ gulp.task('vendor-images', function() {
     .pipe(gulp.dest(project.distDirectory + '/' + project.vendorDirectory));
 });
 
+// =============================================
+// SVG Sprite `gulp svg-sprite`
+// Optimises and merges SVG's into sprite
+// =============================================
+
+gulp.task( 'svg-sprite', function() {
+    return gulp.src( project.sourceDirectory + '/' + project.iconsDirectory + '/**/*.svg' )
+        .pipe( nodeModule.svgSprite( option.svgSpriteConfig ) )
+        .pipe( gulp.dest( project.distDirectory + '/' + project.iconsDirectory ) );
+} );
+
 
 // =============================================
 // IMG `gulp img`
@@ -104,7 +135,10 @@ gulp.task('vendor-images', function() {
 // =============================================
 
 gulp.task( 'img', function() {
-    return gulp.src( project.sourceDirectory + '/' + project.imagesDirectory + '/**/*' )
+    return gulp.src( [
+        project.sourceDirectory + '/' + project.imagesDirectory + '/**/*',
+        '!' + project.sourceDirectory + '/' + project.iconsDirectory + '/**/*'
+    ] )
         .pipe( nodeModule.changed( project.distDirectory + '/' + project.imagesDirectory ) )
         .pipe( environment.production ? nodeModule.imageMin( option.imageOptimisation ) : nodeModule.util.noop() )
         .pipe( gulp.dest( project.distDirectory + '/' + project.imagesDirectory ) );
@@ -159,7 +193,7 @@ gulp.task( 'clean', function( cb ) {
 // builds all assets, also has `--production` option to build production ready assets
 // =============================================
 
-gulp.task( 'build', gulp.series( 'clean', gulp.parallel( 'scss', 'js', 'img' ), 'vendor', 'vendor-images', 'vendor-styles', 'vendor-scripts' ) );
+gulp.task( 'build', gulp.series( 'clean', gulp.parallel( 'scss', 'js' ), 'img', 'svg-sprite', 'vendor', 'vendor-images', 'vendor-styles', 'vendor-scripts' ) );
 
 
 // =============================================
