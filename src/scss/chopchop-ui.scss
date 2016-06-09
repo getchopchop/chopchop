@@ -342,7 +342,7 @@
 
  }
  .cc-readout--mq:after {
-     content: "screen(xs) < #{screen-max(xs)}";
+     content: "screen(xs, max) < #{screen(xs, max)}";
 
      // @include breakpoint(screen(xs)) {
      //     content: "screen(xs) > #{screen(xs)}";
