@@ -78,6 +78,11 @@ samp {
     font-size: $font-size;
 }
 
+mark {
+    background: color(error);
+    color: color(black);
+}
+
 
 // =============================================
 // Links
