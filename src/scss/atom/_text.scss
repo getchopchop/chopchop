@@ -53,16 +53,34 @@ strong, b {
 	font-weight: $bold;
 }
 
-em, i, cite {
+dfn, em, i, cite {
     font-style: italic;
+}
+
+sub,
+sup,
+small {
+    font-size: $font-size-sm;
 }
 
 code {
     padding: 2px 4px;
     font-size: $font-size-sm;
-    color: #c7254e;
-    background-color: #f9f2f4;
-    border-radius: 4px;
+    color: color(error);
+    background-color: color(grey, lighter);
+    border-radius: $border-radius;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-size: $font-size;
+}
+
+mark {
+    background: color(error);
+    color: color(black);
 }
 
 
