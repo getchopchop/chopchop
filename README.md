@@ -1,3 +1,5 @@
+[![build status](https://gitlab.iweb.co.uk/labs/chopchop/badges/master/build.svg)](https://gitlab.iweb.co.uk/labs/chopchop/commits/master)
+
 # Chop Chop
 
 ## Wiki Link
