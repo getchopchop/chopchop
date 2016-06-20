@@ -74,7 +74,11 @@ var gulp = require('gulp' ),
         cssNano:            require( 'gulp-cssnano' ),
         uglify:             require( 'gulp-uglify' ),
         sourcemaps:         require( 'gulp-sourcemaps' ),
-        svgSprite:          require('gulp-svg-sprite')
+        svgSprite:          require('gulp-svg-sprite'),
+
+        svgstore:           require( 'gulp-svgstore'),
+        svgmin:             require( 'gulp-svgmin' ),
+        path:               require( 'path' )
     };
 
 
@@ -123,11 +127,28 @@ gulp.task('vendor-images', function() {
 // Optimises and merges SVG's into sprite
 // =============================================
 
-gulp.task( 'svg-sprite', function() {
+// gulp.task( 'svg-sprite', function() {
+//     return gulp.src( project.sourceDirectory + '/' + project.iconsDirectory + '/**/*.svg' )
+//         .pipe( nodeModule.svgSprite( option.svgSpriteConfig ) )
+//         .pipe( gulp.dest( project.distDirectory + '/' + project.iconsDirectory ) );
+// } );
+
+gulp.task('svgstore', function () {
     return gulp.src( project.sourceDirectory + '/' + project.iconsDirectory + '/**/*.svg' )
-        .pipe( nodeModule.svgSprite( option.svgSpriteConfig ) )
+        .pipe( nodeModule.svgmin( function (file) {
+            var prefix = nodeModule.path.basename( file.relative, nodeModule.path.extname( file.relative ) );
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
+                    }
+                }]
+            }
+        }))
+        .pipe( nodeModule.svgstore() )
         .pipe( gulp.dest( project.distDirectory + '/' + project.iconsDirectory ) );
-} );
+});
 
 
 // =============================================
@@ -194,7 +215,7 @@ gulp.task( 'clean', function( cb ) {
 // builds all assets, also has `--production` option to build production ready assets
 // =============================================
 
-gulp.task( 'build', gulp.series( 'clean', gulp.parallel( 'scss', 'js' ), 'img', 'svg-sprite', 'vendor', 'vendor-images', 'vendor-styles', 'vendor-scripts' ) );
+gulp.task( 'build', gulp.series( 'clean', gulp.parallel( 'scss', 'js' ), 'img', 'vendor', 'vendor-images', 'vendor-styles', 'vendor-scripts' ) );
 
 
 // =============================================
