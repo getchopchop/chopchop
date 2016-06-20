@@ -206,7 +206,7 @@ gulp.task( 'watch', function() {
     gulp.watch( project.sourceDirectory + '/' + project.stylesDirectory + '/**/*.scss', gulp.series( 'scss' ) );
     gulp.watch( project.sourceDirectory + '/' + project.scriptsDirectory + '/**/*.js', gulp.series( 'js' ) );
     gulp.watch( project.sourceDirectory + '/' + project.imagesDirectory + '/**/*', gulp.series( 'img' ) );
-    gulp.watch( project.sourceDirectory + '/' + project.fontsDirectory + '/**/*', gulp.series( 'vendor' ) );
+    gulp.watch( project.sourceDirectory + '/' + project.vendorDirectory + '/**/*', gulp.series( 'vendor' ) );
 } );
 
 
