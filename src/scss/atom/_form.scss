@@ -81,6 +81,11 @@ input[type="range"] {
 	}
 }
 
+input[type="number"] {
+	appearance: none;
+	 -moz-appearance: textfield;
+}
+
 
 // Button Padding Fix
 input[type="submit"].btn {
