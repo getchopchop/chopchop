@@ -75,9 +75,6 @@ var gulp = require('gulp' ),
         uglify:             require( 'gulp-uglify' ),
         sourcemaps:         require( 'gulp-sourcemaps' ),
         svgSprite:          require('gulp-svg-sprite'),
-
-        svgstore:           require( 'gulp-svgstore'),
-        svgmin:             require( 'gulp-svgmin' ),
         path:               require( 'path' )
     };
 
@@ -127,28 +124,11 @@ gulp.task('vendor-images', function() {
 // Optimises and merges SVG's into sprite
 // =============================================
 
-// gulp.task( 'svg-sprite', function() {
-//     return gulp.src( project.sourceDirectory + '/' + project.iconsDirectory + '/**/*.svg' )
-//         .pipe( nodeModule.svgSprite( option.svgSpriteConfig ) )
-//         .pipe( gulp.dest( project.distDirectory + '/' + project.iconsDirectory ) );
-// } );
-
-gulp.task('svgstore', function () {
+gulp.task( 'svg-sprite', function() {
     return gulp.src( project.sourceDirectory + '/' + project.iconsDirectory + '/**/*.svg' )
-        .pipe( nodeModule.svgmin( function (file) {
-            var prefix = nodeModule.path.basename( file.relative, nodeModule.path.extname( file.relative ) );
-            return {
-                plugins: [{
-                    cleanupIDs: {
-                        prefix: prefix + '-',
-                        minify: true
-                    }
-                }]
-            }
-        }))
-        .pipe( nodeModule.svgstore() )
+        .pipe( nodeModule.svgSprite( option.svgSpriteConfig ) )
         .pipe( gulp.dest( project.distDirectory + '/' + project.iconsDirectory ) );
-});
+} );
 
 
 // =============================================
@@ -215,7 +195,7 @@ gulp.task( 'clean', function( cb ) {
 // builds all assets, also has `--production` option to build production ready assets
 // =============================================
 
-gulp.task( 'build', gulp.series( 'clean', gulp.parallel( 'scss', 'js' ), 'img', 'vendor', 'vendor-images', 'vendor-styles', 'vendor-scripts' ) );
+gulp.task( 'build', gulp.series( 'clean', gulp.parallel( 'scss', 'js' ), 'img', 'svg-sprite', 'vendor', 'vendor-images', 'vendor-styles', 'vendor-scripts' ) );
 
 
 // =============================================
@@ -227,6 +207,7 @@ gulp.task( 'watch', function() {
     gulp.watch( project.sourceDirectory + '/' + project.stylesDirectory + '/**/*.scss', gulp.series( 'scss' ) );
     gulp.watch( project.sourceDirectory + '/' + project.scriptsDirectory + '/**/*.js', gulp.series( 'js' ) );
     gulp.watch( project.sourceDirectory + '/' + project.imagesDirectory + '/**/*', gulp.series( 'img' ) );
+    gulp.watch( project.sourceDirectory + '/' + project.iconsDirectory + '/**/*', gulp.series( 'svg-sprite' ) );
     gulp.watch( project.sourceDirectory + '/' + project.vendorDirectory + '/**/*', gulp.series( 'vendor' ) );
 } );
 
