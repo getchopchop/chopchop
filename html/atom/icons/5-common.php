@@ -10,12 +10,12 @@ Title: Common Icons
     </li>
     <li>
         <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--check" />
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--checkmark" />
         </svg>
     </li>
     <li>
         <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--times" />
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--cross" />
         </svg>
     </li>
     <li>
@@ -54,23 +54,23 @@ Title: Common Icons
 
     <li>
         <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--cloud-download" />
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--cloud" />
         </svg>
     </li>
     <li>
         <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--shopping-basket" />
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--basket" />
         </svg>
     </li>
 
     <li>
         <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--comment" />
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--bubble" />
         </svg>
     </li>
     <li>
         <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--comments" />
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--bubbles" />
         </svg>
     </li>
 
@@ -87,27 +87,27 @@ Title: Common Icons
 
     <li>
         <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--angle-down" />
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--arrow-down" />
         </svg>
     </li>
     <li>
         <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--angle-up" />
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--arrow-up" />
         </svg>
     </li>
     <li>
         <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--angle-left" />
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--arrow-left" />
         </svg>
     </li>
     <li>
         <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--angle-right" />
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--arrow-right" />
         </svg>
     </li>
     <li>
         <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--bars" />
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--menu" />
         </svg>
     </li>
     <li>
@@ -127,7 +127,7 @@ Title: Common Icons
     </li>
     <li>
         <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--envelope" />
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--envelop" />
         </svg>
     </li>
     <li>
@@ -137,27 +137,27 @@ Title: Common Icons
     </li>
     <li>
         <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--exclamation" />
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--notification" />
         </svg>
     </li>
     <li>
         <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--circle-o" />
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--radio-unchecked" />
         </svg>
     </li>
     <li>
         <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--dot-circle-o" />
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--radio-checked" />
         </svg>
     </li>
     <li>
         <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--th-list" />
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--list" />
         </svg>
     </li>
     <li>
         <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--th" />
+            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--grid" />
         </svg>
     </li>
 </ul>

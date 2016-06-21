@@ -5,6 +5,6 @@ Class: .icon.icon--lg
 
 <p>
     <svg class="icon icon--lg">
-        <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--bars" />
+        <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#general--home" />
     </svg>
 </p>
