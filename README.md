@@ -7,14 +7,15 @@
 
 ## Get Started
 
-To get going with it here are the commands  
+To get going with it here are the commands.
+
 _You can copy this entire block into the command line and it will process it all for you._
 ```
-cd ~/sites;
-git clone;
-cd chopchop/public_html;
-npm i;
-npm run build;
+cd ~/sites
+git clone git@github.com:getchopchop/chopchop.git .
+cd chopchop/public_html
+npm i
+npm run build
 ```
 
 ## Working on the project
