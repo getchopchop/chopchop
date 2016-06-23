@@ -35,6 +35,12 @@
         echo get($location, $options);
     }
 
+    function printSvg($hash, $class = '', $location = 'sprite.symbol.svg') {
+        echo '<svg class="icon ' . $class . '">
+            <use xlink:href="' . getUrl('build/img/icons/symbol/svg/' . $location) . '#' . $hash  . '" />
+        </svg>';
+    }
+
     function checkBlock($location) {
         $path = TEMPLATE_PATH . trim($location, '/');
 

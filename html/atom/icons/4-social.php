@@ -4,43 +4,27 @@ Title: Social Icons
 
 <ul class="u-list-unstyled u-list-inline">
     <li>
-        <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#social--linkedin" />
-        </svg>
+        <?php printSvg('social--linkedin'); ?>
     </li>
     <li>
-        <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#social--twitter" />
-        </svg>
+        <?php printSvg('social--twitter'); ?>
     </li>
     <li>
-        <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#social--facebook" />
-        </svg>
+        <?php printSvg('social--facebook'); ?>
     </li>
     <li>
-        <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#social--google-plus" />
-        </svg>
+        <?php printSvg('social--google-plus'); ?>
     </li>
     <li>
-        <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#social--instagram" />
-        </svg>
+        <?php printSvg('social--instagram'); ?>
     </li>
     <li>
-        <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#social--youtube" />
-        </svg>
+        <?php printSvg('social--youtube'); ?>
     </li>
     <li>
-        <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#social--pinterest" />
-        </svg>
+        <?php printSvg('social--pinterest'); ?>
     </li>
     <li>
-        <svg class="icon">
-            <use xlink:href="<?php echo getUrl('build/img/icons/symbol/svg/sprite.symbol.svg'); ?>#social--tumblr" />
-        </svg>
+        <?php printSvg('social--tumblr'); ?>
     </li>
 </ul>
