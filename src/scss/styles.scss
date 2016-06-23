@@ -9,7 +9,9 @@
 // Helpers
 // =============================================
 
-@import "mixin/accordion-tab";
+@import "mixin/function";
+
+@import "mixin/accordion";
 @import "mixin/button";
 @import "mixin/breakpoint";
 @import "mixin/card";
@@ -20,7 +22,8 @@
 @import "mixin/ratio";
 @import "mixin/shape";
 @import "mixin/table";
-
+@import "mixin/nav";
+@import "mixin/tabs";
 
 // =============================================
 // utility
@@ -34,8 +37,9 @@
 @import "utility/embed-container";
 @import "utility/grid";
 @import "utility/image";
-@import "utility/layout";
 @import "utility/list";
+@import "utility/toggle";
+@import "utility/typography";
 @import "utility/visible";
 @import "utility/z-index";
 
@@ -52,9 +56,7 @@
 @import "atom/horizontal-rule";
 @import "atom/icon";
 @import "atom/image";
-@import "atom/logo";
 @import "atom/overlay";
-@import "atom/shape";
 @import "atom/table";
 @import "atom/tag";
 @import "atom/text";
@@ -64,7 +66,7 @@
 // molecule
 // =============================================
 
-@import "molecule/accordion-tab";
+@import "molecule/accordion";
 @import "molecule/alert";
 @import "molecule/breadcrumb";
 @import "molecule/card";
@@ -76,12 +78,14 @@
 @import "molecule/title";
 @import "molecule/modal";
 @import "molecule/nav";
+@import "molecule/logo";
 @import "molecule/pagination";
 @import "molecule/payment-icons";
 @import "molecule/price";
 @import "molecule/quantity";
 @import "molecule/rating";
 @import "molecule/sorter";
+@import "molecule/tabs";
 
 
 // =============================================

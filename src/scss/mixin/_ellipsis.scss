@@ -2,7 +2,7 @@
 // Ellipsis
 // =============================================
 
-@mixin ellipsis() {
+@mixin ellipsis {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;

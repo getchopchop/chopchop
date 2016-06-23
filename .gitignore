@@ -27,8 +27,8 @@ Temporary Items
 
 # Gulp
 node_modules
-bower_components
 .sass-cache
+npm-debug.log
 
 # Server stuff
 .bash_history

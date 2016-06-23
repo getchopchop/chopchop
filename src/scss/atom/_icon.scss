@@ -2,8 +2,10 @@
 // Icons
 // =============================================
 
-[class^="icon-"], [class*=" icon-"] {
-     font-size: 1em;
+.icon,
+%icon {
+    height: $spacing;
+    width: $spacing;
 }
 
 
@@ -13,7 +15,8 @@
 
 .icon--sm,
 %icon--sm {
-     font-size: $font-size-xs;
+    height: $spacing-sm;
+    width: $spacing-sm;
  }
 
 
@@ -23,5 +26,24 @@
 
 .icon--lg,
 %icon--lg {
-    font-size: $font-size-xl;
+    height: $spacing-lg;
+    width: $spacing-lg;
+}
+
+
+// =============================================
+// Icons payment
+// =============================================
+
+.icon--payment,
+%icon--payment {
+    width: $spacing*1.5;
+
+    &.icon--sm {
+        width: $spacing-sm*1.5;
+    }
+
+    &.icon--lg {
+        width: $spacing-lg*1.5;
+    }
 }

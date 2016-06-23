@@ -1,314 +1,526 @@
-// =============================================
-// Vars
-// =============================================
+ // =============================================
+ // Vars
+ // =============================================
 
-@import "var";
+ @import "var";
 
-$z-100: 100;
-$z-200: 200;
+ $z-100: 100;
+ $z-200: 200;
 
-// =============================================
-// Helpers
-// =============================================
+ // =============================================
+ // Helpers
+ // =============================================
 
-@import "mixin/shape";
-@import "mixin/ellipsis";
-@import "mixin/breakpoint";
-@import "mixin/grid";
-@import "mixin/list";
-@import "mixin/ratio";
-
-
-// =============================================
-// utility
-// =============================================
-
-@import "utility/image";
-@import "utility/clearfix";
-@import "utility/align";
-@import "utility/visible";
-@import "utility/layout";
-@import "utility/grid";
-@import "utility/box-sizing";
-@import "utility/z-index";
-@import "utility/list";
+ @import "mixin/shape";
+ @import "mixin/card";
+ @import "mixin/function";
+ @import "mixin/ellipsis";
+ @import "mixin/breakpoint";
+ @import "mixin/grid";
+ @import "mixin/flag";
+ @import "mixin/list";
+ @import "mixin/ratio";
+ @import "mixin/accordion";
+ @import "mixin/tabs";
 
 
-// =============================================
-// Layering z-index
-// =============================================
+ // =============================================
+ // Utilities
+ // =============================================
 
-.site-navigation {
-    z-index: $z-100;
-}
-.cc-toolbar {
-    z-index: $z-200;
-}
-
-
-// =============================================
-// Light Styles
-// =============================================
-
-.cc-heading {
-    font-size: $font-size-xs;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    border-bottom: 1px dashed $lighter-grey;
-}
-
-.cc-heading {
-    padding-bottom: $spacing;
-    margin-top: $spacing-xl * 2;
-    margin-bottom: $spacing-xl;
-
-    &__sub {
-        display: block;
-        font-family: Georgia;
-        font-style: italic;
-        letter-spacing: 0;
-        text-transform: none;
-        &:before {
-            content: "(";
-        }
-        &:after {
-            content: ")";
-        }
-    }
-    code {
-        font-size: 100%;
-        text-transform: none;
-        letter-spacing: 0;
-    }
-
-    &:first-of-type {
-        margin-top: $spacing-xl;
-    }
-}
+ @import "utility/clearfix";
+ @import "utility/align";
+ @import "utility/visible";
+ @import "utility/grid";
+ @import "utility/box-sizing";
+ @import "utility/z-index";
+ @import "utility/list";
 
 
-// =============================================
-// Navigation
-// =============================================
+ // =============================================
+ // Layering z-index
+ // =============================================
 
-.site-navigation {
-    position: fixed;
-    overflow-y: scroll; /* has to be scroll, not auto */
-    -webkit-overflow-scrolling: touch;
-    background-color: $white;
-    transition: transform 0.4s ease;
-    top: 0;
-    bottom: 0;
-    min-width: 12rem;
-    max-width: 15rem;
-    border-right: 2px solid $lighter-grey;
-    transform: translateX(-100%);
-
-    &.is-active {
-        transform: translateX(0);
-    }
-}
+ .site-navigation {
+     z-index: $z-100;
+ }
+ .cc-toolbar {
+     z-index: $z-200;
+ }
 
 
-// =============================================
-// Navigation Shapes +/-
-// =============================================
+ // =============================================
+ // Header
+ // =============================================
 
-.site-navigation {
-
-    .shape-hook {
-        float: right;
-        margin-top: 0.3em;
-    }
-
-    a {
-        &:not(.is-active) .shape-hook {
-            @include plus($light-grey, 12px, 2px);
-        }
-        &.is-active .shape-hook {
-            @include minus($light-grey, 12px, 2px);
-        }
-    }
-}
+ .cc-header {
+     @extend %u-text-center;
+     padding-top: $spacing;
+     padding-bottom: $spacing;
+ }
 
 
-// =============================================
-// Navigation Sub Navigation
-// =============================================
+ // =============================================
+ // Light Styles
+ // =============================================
 
-.site-navigation a {
-    a {
-        padding-left: $spacing;
-        &.is-active {
-            background-color: $lighter-grey;
-        }
-    }
-}
+ .cc-heading {
+     font-size: $font-size-xs;
+     letter-spacing: 0.12em;
+     text-transform: uppercase;
+     border-bottom: 1px dashed color(grey,lighter);
+ }
 
-.site-navigation .child {
-    display: none;
-    font-size: $font-size-sm;
+ .cc-heading {
+     padding-bottom: $spacing;
+     margin-top: $spacing-xl * 2;
+     margin-bottom: $spacing-xl;
 
-    &.is-active {
-        display: block;
-    }
-    a {
-        padding-left: $spacing-lg;
-        padding-top: $spacing-xs;
-        padding-bottom: $spacing-xs;
-        background-color: lighten($lighter-grey, 5%);
-        &:hover {
-            background-color: lighten($lighter-grey, 3%);
-        }
+     &__sub {
+         display: block;
+         font-family: Georgia;
+         font-style: italic;
+         letter-spacing: 0;
+         text-transform: none;
+         &:before {
+             content: "(";
+         }
+         &:after {
+             content: ")";
+         }
+     }
+     code {
+         font-size: 100%;
+         text-transform: none;
+         letter-spacing: 0;
+     }
 
-    }
-}
-
-
-// =============================================
-// Navigation Toggle
-// =============================================
-
-.site-navigation__toggle:hover {
-    color: $white;
-    background-color: lighten($black, 20%);
-}
+     &:first-of-type {
+         margin-top: $spacing-xl;
+     }
+ }
 
 
-// =============================================
-// Layout
-// =============================================
+ // =============================================
+ // Navigation on Index
+ // =============================================
 
-.cc-site-wrapper {
-    margin-bottom: $spacing-xl * 2;
-}
-
-@include breakpoint($screen-md) {
-    .site-navigation__content {
-        overflow: hidden;
-    }
-}
+ .cc-index-nav {
 
 
-// =============================================
-// Color Swatches
-// =============================================
+     &__header {
+         @include flag;
+         @include flag--center;
 
-.cc-line {
-    display: block;
-}
+         @include breakpoint(max-width screen(sm,max)) {
+             background: #f4f4f4;
 
+             &.is-active {
+                 background-color: #e4e4e4;
+             }
+         }
 
-// =============================================
-// Color Swatches on Variables page
-// =============================================
+         > :first-child {
+             margin-bottom: 0;
+         }
 
-.cc-disc-swatch {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: $spacing;
-    height: 20px;
-    width: 20px;
-    border-radius: 100%;
-    border: 1px solid rgba(0,0,0,0.2);
-    transition: transform 0.1s ease;
-    &:hover {
-        transform: scale(2);
-    }
-}
+         .shape {
+             margin-left: auto;
+             @include plus(color(black), 12px, 2px);
+         }
 
+         &.is-active .shape {
+             @include minus(color(black), 12px, 2px);
+         }
 
-// =============================================
-// Color Swatches on colours page
-// =============================================
+     }
 
-.cc-card--swatch {
-    //border: 0;
-    @extend .card--bordered;
-    border-radius: $border-radius;
-    .card__body {
-        @include ratio(50%);
-        border-top-left-radius: $border-radius;
-        border-top-right-radius: $border-radius;
-    }
-    .card__footer {
-        border-bottom-left-radius: $border-radius;
-        border-bottom-right-radius: $border-radius;
-    }
-}
+     // Show
+     @include breakpoint(screen(md)) {
+         .shape {
+             display: none !important;
+         }
+         .u-toggle {
+             display: block !important;
+         }
+     }
+
+ }
 
 
-// =============================================
-// Media Query Readout
-// =============================================
+ // =============================================
+ // Navigation
+ // =============================================
 
-.cc-readout {
-    display: block;
-    font-size: 12px;
-    white-space: nowrap;
-    color: $white;
-    background-color: $black;
-    text-decoration: none;
-    padding: 6px 10px;
-}
+ .site-navigation {
+     position: fixed;
+     overflow-y: scroll; /* has to be scroll, not auto */
+     -webkit-overflow-scrolling: touch;
+     background-color: color(white);
+     transition: transform 0.4s ease;
+     top: 0;
+     bottom: 0;
+     min-width: 12rem;
+     max-width: 15rem;
+     border-right: 2px solid color(grey,lighter);
+     transform: translateX(-100%);
 
-.cc-toolbar {
-    display: flex;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: magenta;
-
-    @include breakpoint($screen-xs) {
-        background-color: red;
-    }
-    @include breakpoint($screen-sm) {
-        background-color: green;
-    }
-    @include breakpoint($screen-md) {
-        background-color: blue;
-    }
-    @include breakpoint($screen-lg) {
-        background-color: yellow;
-    }
-    @include breakpoint($screen-xl) {
-        background-color: hotpink;
-    }
-
-    > :last-child {
-        margin-left: auto;
-    }
-
-}
-.cc-readout--mq:after {
-    content: "$screen-xs < #{$screen-xs}";
-
-    @include breakpoint($screen-xs) {
-        content: "$screen-xs > #{$screen-xs}";
-    }
-    @include breakpoint($screen-sm) {
-        content: "$screen-sm > #{$screen-sm}";
-    }
-    @include breakpoint($screen-md) {
-        content: "$screen-md > #{$screen-md}";
-    }
-    @include breakpoint($screen-lg) {
-        content: "$screen-lg > #{$screen-lg}";
-    }
-    @include breakpoint($screen-xl) {
-        content: "$screen-xl > #{$screen-xl}";
-    }
-}
+     &.is-active {
+         transform: translateX(0);
+     }
+ }
 
 
-// =============================================
-// CC Box
-// =============================================
+ // =============================================
+ // Navigation Shapes +/-
+ // =============================================
 
-.cc-box {
-    height: $spacing-xl * 2;
-    background-color: Gainsboro;
-    border-radius: $border-radius;
-    margin-bottom: $spacing-lg;
-}
+ .site-navigation {
+
+     .shape-hook {
+         float: right;
+         margin-top: 0.3em;
+     }
+
+     a {
+         &:not(.is-active) .shape-hook {
+             @include plus(color(grey,light), 12px, 2px);
+         }
+         &.is-active .shape-hook {
+             @include minus(color(grey,light), 12px, 2px);
+         }
+     }
+ }
+
+
+ // =============================================
+ // Navigation Sub Navigation
+ // =============================================
+
+ .site-navigation a {
+     a {
+         padding-left: $spacing;
+         &.is-active {
+             background-color: color(grey,lighter);
+         }
+     }
+ }
+
+ .site-navigation .child {
+     display: none;
+     font-size: $font-size-sm;
+
+     &.is-active {
+         display: block;
+     }
+     a {
+         padding-left: $spacing-lg;
+         padding-top: $spacing-xs;
+         padding-bottom: $spacing-xs;
+         background-color: lighten(color(grey,lighter), 5%);
+         &:hover {
+             background-color: lighten(color(grey,lighter), 3%);
+         }
+
+     }
+ }
+
+
+ // =============================================
+ // Navigation Toggle
+ // =============================================
+
+ .site-navigation__toggle:hover {
+     color: color(white);
+     background-color: lighten(color(black), 20%);
+ }
+
+
+ // =============================================
+ // Layout
+ // =============================================
+
+ .cc-site-wrapper {
+     margin-bottom: $spacing-xl * 2;
+ }
+
+ @include breakpoint(screen(md)) {
+     .site-navigation__content {
+         overflow: hidden;
+     }
+ }
+
+
+ // =============================================
+ // Color Swatches
+ // =============================================
+
+ .cc-line {
+     display: block;
+ }
+
+
+ // =============================================
+ // Color Swatches on Variables page
+ // =============================================
+
+ .cc-disc-swatch {
+     display: inline-block;
+     vertical-align: middle;
+     margin-right: $spacing;
+     height: 20px;
+     width: 20px;
+     border-radius: 100%;
+     border: 1px solid rgba(0,0,0,0.2);
+     transition: transform 0.1s ease;
+     &:hover {
+         transform: scale(2);
+     }
+ }
+
+
+ // =============================================
+ // Color Swatches on colours page
+ // =============================================
+
+ .cc-card--swatch {
+     border-radius: $border-radius;
+     .card__body {
+         @include ratio(40%);
+         border-top-left-radius: $border-radius;
+         border-top-right-radius: $border-radius;
+     }
+     .card__footer {
+         border-bottom-left-radius: $border-radius;
+         border-bottom-right-radius: $border-radius;
+     }
+ }
+
+
+ // =============================================
+ // Media Query Readout
+ // =============================================
+
+ .cc-readout {
+     display: block;
+     font-size: 12px;
+     white-space: nowrap;
+     color: color(white);
+     background-color: color(black);
+     text-decoration: none;
+     padding: 6px 10px;
+ }
+
+ .cc-toolbar {
+     display: flex;
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     background-color: magenta;
+
+     // @include breakpoint(screen(xs)) {
+     //     background-color: red;
+     // }
+     @include breakpoint(screen(sm)) {
+         background-color: green;
+     }
+     @include breakpoint(screen(md)) {
+         background-color: blue;
+     }
+     @include breakpoint(screen(lg)) {
+         background-color: yellow;
+     }
+     @include breakpoint(screen(xl)) {
+         background-color: hotpink;
+     }
+
+     > :last-child {
+         margin-left: auto;
+     }
+
+ }
+ .cc-readout--mq:after {
+     content: "screen(xs, max) < #{screen(xs, max)}";
+
+     // @include breakpoint(screen(xs)) {
+     //     content: "screen(xs) > #{screen(xs)}";
+     // }
+     @include breakpoint(screen(sm)) {
+         content: "screen(sm) > #{screen(sm)}";
+     }
+     @include breakpoint(screen(md)) {
+         content: "screen(md) > #{screen(md)}";
+     }
+     @include breakpoint(screen(lg)) {
+         content: "screen(lg) > #{screen(lg)}";
+     }
+     @include breakpoint(screen(xl)) {
+         content: "screen(xl) > #{screen(xl)}";
+     }
+ }
+
+
+ // =============================================
+ // CC Box
+ // =============================================
+
+ .cc-box {
+     height: $spacing-xl * 2;
+     background-color: Gainsboro;
+     border-radius: $border-radius;
+     margin-bottom: $spacing-lg;
+ }
+
+
+
+ // =============================================
+ // CC Shapes
+ // =============================================
+
+ .cc-shape-circle {
+     @include circle(color(black), 16px);
+ }
+
+ .cc-shape-square {
+     @include square(color(black), 16px);
+ }
+
+ .cc-shape-triangle {
+     @include triangle(color(black), 5px, 5px, right);
+ }
+
+ .cc-shape-chevron {
+     @include chevron(color(black), 8px, up, 2px);
+ }
+
+ .cc-shape-minus {
+     @include minus(color(black), 12px, 2px);
+ }
+
+ .cc-shape-plus {
+     @include plus(color(black), 12px, 2px);
+ }
+
+ .cc-shape-cross {
+     @include cross(color(black), 12px, 2px);
+ }
+
+ .cc-shape-tick {
+     @include tick(color(black), 12px, 2px);
+ }
+
+ .cc-shape-hamburger {
+     @include hamburger(color(black), 18px, 24px, 2px);
+ }
+
+ .cc-shape-ring {
+     @include ring(color(black), color(grey), 16px, 3px);
+ }
+
+
+ // =============================================
+ // CC Heading Group
+ // =============================================
+
+ .cc-title {
+     border-bottom: 2px solid #e4e4e4;
+     background-color: #f4f4f4;
+     margin-bottom: 2em;
+     padding: 0.8em 1em;
+
+     &__main {
+         margin-bottom: 0;
+     }
+
+     h2 {
+         font-size: 1.2em !important;
+     }
+
+     code {
+         font-size: 0.7em;
+         font-weight: 400;
+     }
+
+     .cc-title__actions ul {
+         display: flex;
+         justify-content: flex-end;
+         margin: 0;
+         list-style: none;
+         padding: 0;
+
+         li:not(.first-child) {
+             margin-left: 0.8em;
+         }
+     }
+ }
+
+ .cc-title-desc {
+     border: 1px solid #e4e4e4;
+     margin-bottom: 2em;
+     padding: 1em;
+     border-top: 0;
+
+     p {
+         margin: 0;
+         font-size: 0.9em;
+     }
+ }
+ .cc-title + .cc-title-desc {
+     margin-top: -2em;
+ }
+
+ @include breakpoint(screen(sm)) {
+     .cc-title--actions {
+         display: flex;
+         align-items: center;
+     }
+     .cc-title--actions .cc-title__headings {
+         flex-grow: 1;
+     }
+     .cc-title--actions .cc-title__actions {
+         flex-grow: 1;
+         text-align: right;
+         .btn {
+             margin-bottom: .2rem;
+         }
+     }
+ }
+
+
+ // =============================================
+ // Accordion to Tabs @screen-md
+ // =============================================
+
+ .cc-accordion-to-tabs {
+     @include breakpoint(max-width screen(xs,max)) {
+         @include accordion;
+     }
+     @include breakpoint(screen(sm)) {
+         @include tabs;
+     }
+ }
+
+
+ // =============================================
+ // Tabs to Accordion @screen-md
+ // =============================================
+
+ .cc-tabs-to-accordion {
+     @include breakpoint(max-width screen(xs,max)) {
+         @include tabs;
+     }
+     @include breakpoint(screen(sm)) {
+         @include accordion;
+     }
+ }
+
+
+ // =============================================
+ // Section
+ // =============================================
+
+ .cc-section {
+     padding-top: $spacing-xl;
+     padding-bottom: $spacing-xl;
+ }

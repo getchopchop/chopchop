@@ -2,13 +2,8 @@
 // Grid
 // =============================================
 
-.g-two-up,
-.g-three-up,
-.g-four-up,
-.g-five-up,
-.g-six-up {
+.grid {
     @include grid;
-    @include grid-up;
 }
 
 
@@ -31,6 +26,15 @@
 
 
 // =============================================
+// Grid Justify
+// =============================================
+
+.g-justify {
+    @include grid-justify;
+}
+
+
+// =============================================
 // Grid Reverse
 // =============================================
 
@@ -40,67 +44,23 @@
 
 
 // =============================================
-// Grid Two up
+// Grid Cols
 // =============================================
 
-.g-two-up {
-    @include breakpoint($screen-sm) {
-        @include grid-up(2);
-    }
-}
-
-
-// =============================================
-// Grid Three up
-// =============================================
-
-.g-three-up {
-    @include breakpoint($screen-sm) {
-        @include grid-up(2);
-    }
-    @include breakpoint($screen-md) {
-        @include grid-up(3);
-    }
-}
-
-
-// =============================================
-// Grid Four up
-// =============================================
-
-.g-four-up {
-    @include breakpoint($screen-sm) {
-        @include grid-up(2);
-    }
-    @include breakpoint($screen-md) {
-        @include grid-up(4);
-    }
-}
-
-
-// =============================================
-// Grid Five up
-// =============================================
-
-.g-five-up {
-    @include breakpoint($screen-sm) {
-        @include grid-up(3);
-    }
-    @include breakpoint($screen-md) {
-        @include grid-up(5);
-    }
-}
-
-
-// =============================================
-// Grid Six up
-// =============================================
-
-.g-six-up {
-    @include breakpoint($screen-sm) {
-        @include grid-up(3);
-    }
-    @include breakpoint($screen-md) {
-        @include grid-up(6);
+@each $screen, $value in $screens {
+    @if $screen == xs {
+        @for $i from 1 through 12 {
+            .g-col-#{$screen}-#{$i} {
+                @include grid-col($i of 12);
+            }
+        }
+    } @else {
+        @include breakpoint(screen($screen)) {
+            @for $i from 1 through 12 {
+                .g-col-#{$screen}-#{$i} {
+                    @include grid-col($i of 12);
+                }
+            }
+        }
     }
 }

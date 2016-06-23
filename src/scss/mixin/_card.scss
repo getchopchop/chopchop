@@ -3,31 +3,19 @@
 // =============================================
 
 @mixin card {
-    margin-bottom: $spacing;
-
-    &__img {
-        @extend %u-img-responsive;
-    }
-
-    &__header,
-    &__body,
-    &__footer {
-        padding: $spacing-sm $spacing;
+    > *:not(img) {
+        &:not(:last-child) {
+            padding-bottom: $spacing;
+        }
 
         > *:last-child {
             margin-bottom: 0;
         }
     }
 
-    &__header,
-    &__footer {
-        background-color: $lighter-grey;
-    }
-
-    &__title,
-    &__subtitle {
-        margin-top: 0;
-        margin-bottom: 0;
+    &__header > *,
+    &__footer > * {
+        margin: 0;
     }
 }
 
@@ -37,13 +25,13 @@
 // =============================================
 
 @mixin card--bordered {
-    border: 1px solid $light-grey;
+    border: 1px solid color(grey,light);
 
-    .card__header {
-        border-bottom: 1px solid $light-grey;
-    }
+    > *:not(img) {
+        padding: $spacing;
 
-    .card__footer {
-        border-top: 1px solid $light-grey;
+        &:not(:last-child) {
+            border-bottom: 1px solid color(grey,light);
+        }
     }
 }

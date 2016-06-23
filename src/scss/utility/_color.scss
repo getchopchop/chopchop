@@ -1,55 +1,36 @@
 // =============================================
-// Grey Palette
+// Fill
 // =============================================
 
-.u-bg-grey {
-    background-color: $grey;
-}
-.u-bg-dark-grey {
-    background-color: $dark-grey;
-}
-.u-bg-darker-grey {
-    background-color: $darker-grey;
-}
-.u-bg-light-grey {
-    background-color: $light-grey;
-}
-.u-bg-lighter-grey {
-    background-color: $lighter-grey;
-}
-.u-bg-white {
-    background-color: $white;
-}
-.u-bg-black {
-    background-color: $black;
+@each $color-key, $color-value in $colors {
+    @each $tone-key, $tone-value in $color-value {
+        @if $tone-key == base {
+            .u-fill-#{$color-key} {
+                background-color: $tone-value !important;
+            }
+        } @else {
+            .u-fill-#{$color-key}-#{$tone-key} {
+                background-color: $tone-value !important;
+            }
+        }
+    }
 }
 
 
 // =============================================
-// Social Media
+// Text
 // =============================================
 
-.u-bg-twitter {
-    background-color: $twitter;
-}
-.u-bg-facebook {
-    background-color: $facebook;
-}
-.u-bg-google {
-    background-color: $google;
-}
-.u-bg-pinterest {
-    background-color: $pinterest;
-}
-.u-bg-instagram {
-    background-color: $instagram;
-}
-.u-bg-vimeo {
-    background-color: $vimeo;
-}
-.u-bg-linkedin {
-    background-color: $linkedin;
-}
-.u-bg-youtube {
-    background-color: $youtube;
+@each $color-key, $color-value in $colors {
+    @each $tone-key, $tone-value in $color-value {
+        @if $tone-key == base {
+            .u-text-#{$color-key} {
+                color: $tone-value !important;
+            }
+        } @else {
+            .u-text-#{$color-key}-#{$tone-key} {
+                color: $tone-value !important;
+            }
+        }
+    }
 }

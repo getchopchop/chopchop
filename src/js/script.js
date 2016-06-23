@@ -26,7 +26,6 @@
         $('#overlay').on('chopchop:deactivate', function() {
             $body.removeClass('overlay-is-active');
         });
-        
 
     });
 }(jQuery));

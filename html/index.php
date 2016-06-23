@@ -1,5 +1,10 @@
 <?php require_once('inc/functions.php'); ?>
-<?php $paths = explode("/", substr($_SERVER['REQUEST_URI'], 1));?>
+<?php checkBlock(getRequestPath()); ?>
+<?php if( isset($_GET['preview'])) {
+    $_GET['title'] = isset($_GET['title']) ? $_GET['title'] : 'false';
+    $_GET['container'] = isset($_GET['container']) ? $_GET['container'] : 'false';
+}
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -10,22 +15,29 @@
 </head>
 <body>
 
-    <div class="cc-toolbar">
-        <a href="#" class="site-navigation__toggle cc-readout" data-cc-action="toggle" data-cc-target="navigation">Menu</a>
-        <span class="cc-readout cc-readout--mq"></span>
-    </div>
-
-    <div class="site-wrapper cc-site-wrapper">
-
-        <nav class="site-navigation" id="navigation">
-            <div class="block-content site-navigation__content">
-                <?php include('inc/nav.php'); ?>
+    <?php if(!isset($_GET['preview'])) : ?>
+            <div class="cc-toolbar">
+                <a href="#" class="site-navigation__toggle cc-readout" data-cc-action="toggle" data-cc-target="navigation">Menu</a>
+                <span class="cc-readout cc-readout--mq"></span>
             </div>
-        </nav>
 
-        <!-- <main class="main site-main"> -->
-        <main>
+        <div class="site-wrapper cc-site-wrapper">
+
+            <nav class="site-navigation" id="navigation">
+                <div class="block-content site-navigation__content">
+                    <?php include('inc/nav.php'); ?>
+                </div>
+            </nav>
+
+            <main>
+    <?php endif; ?>
+
               <?php if(isIndex()) { ?>
+                  <header class="cc-header">
+                      <div class="u-container">
+                          <?php include('molecule/logo.php'); ?>
+                      </div>
+                  </header>
                     <div class="u-container">
                         <div class="u-container">
                             <hgroup class="hgroup page-title hero-title u-hidden">
@@ -41,11 +53,15 @@
                     'print_title' => !((isset($_GET['title']) && $_GET['title'] === 'false')),
                     'print_container' => !((isset($_GET['container']) && $_GET['container'] === 'false'))
                  );
-                 echo getBlock(getRequestPath(), $options);
+                 echo get(getRequestPath(), $options);
              }?>
-        </main>
 
-    </div><!--/#wrapper -->
+    <?php if(!isset($_GET['preview'])) : ?>
+            </main>
+
+        </div><!--/#wrapper -->
+    <?php endif; ?>
+
     <?php include('inc/scripts.php'); ?>
 
 </body>

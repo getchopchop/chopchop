@@ -1,5 +1,5 @@
 <?php /*
-Title: Stacked Nav
+Title: Inline Pills Nav
 Class: .nav.nav--inline.nav--pills
 */ ?>
 

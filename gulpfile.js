@@ -1,117 +1,220 @@
 // =============================================
 // Project Settings
 // edit these variables to suit your project
+// **this and the options object are the only sections you should need to edit
 // =============================================
 
 var project = {
     name: 'chopchop',
-    source: './src',
-    dist: './build',
-    scss: 'scss',
-    css: 'css',
-    js: 'js',
-    img: 'img',
-    fonts: 'fonts',
-    vendor: 'vendor',
-    bower: 'bower_components'
+    sourceDirectory: './src',
+    distDirectory: './build',
+    stylesDirectory: 'scss',
+    scriptsDirectory: 'js',
+    imagesDirectory: 'img',
+    iconsDirectory: '/img/icons',
+    vendorDirectory: 'vendor'
 };
 
+
 // =============================================
-// Options
+// Project Options
 // edit these variables to suit your project
+// **this and the project object are the only sections you should need to edit
 // =============================================
 
 var option = {
-    autoprefixer: ['last 2 versions'],
+    autoprefixer: [ 'last 2 versions' ],
+    cssNano: {
+        zindex: false,
+        reduceIdents: false,
+        mergeIdents: false,
+        discardUnused: false
+    },
     imageOptimisation: {
-        optimizationLevel: 3,   // PNG (Between 0 - 7)
-        progressive: true,      // JPG
-        interlaced: true        // GIF
+        optimizationLevel: 3,           // PNG (Between 0 - 7)
+        progressive: true,              // JPG
+        interlaced: true                // GIF
+    },
+    svgSpriteConfig: {
+        shape: {
+            dimension: {                // Set maximum dimensions
+                maxWidth: 32,
+                maxHeight: 32
+            },
+            dest: 'intermediate-svg'    // Keep the intermediate files
+        },
+        mode: {
+            view: {                     // Activate the «view» mode
+                bust: false,
+                render: {
+                    scss: true          // Activate Sass output (with default options)
+                }
+            },
+            symbol: true                // Activate the «symbol» mode
+        }
     }
 };
+
 
 // =============================================
 // Dependencies
 // =============================================
 
-var gulp = require('gulp'),
+var gulp = require('gulp' ),
     nodeModule = {
-        util:               require('gulp-util'),
-        browserSync:        require('browser-sync'),
-        del:                require('del'),
-        runSequence:        require('run-sequence'),
-        imageMin:           require('gulp-imagemin'),
-        sass:               require('gulp-sass'),
-        autoPrefixer:       require('gulp-autoprefixer'),
-        clipEmptyFiles:     require('gulp-clip-empty-files'),
-        combineMq:          require('gulp-combine-mq'),
-        jsHint:             require('gulp-jshint'),
-        cssNano:            require('gulp-cssnano'),
-        uglify:             require('gulp-uglify'),
-        changed:            require('gulp-changed'),
-        sourcemaps:         require('gulp-sourcemaps'),
-        bower:              require('gulp-bower')
+        util:               require( 'gulp-util' ),
+        del:                require( 'del' ),
+        changed:            require( 'gulp-changed' ),
+        imageMin:           require( 'gulp-imagemin' ),
+        sass:               require( 'gulp-sass' ),
+        autoPrefixer:       require( 'gulp-autoprefixer' ),
+        clipEmptyFiles:     require( 'gulp-clip-empty-files' ),
+        combineMq:          require( 'gulp-combine-mq' ),
+        jsHint:             require( 'gulp-jshint' ),
+        cssNano:            require( 'gulp-cssnano' ),
+        uglify:             require( 'gulp-uglify' ),
+        sourcemaps:         require( 'gulp-sourcemaps' ),
+        svgSprite:          require('gulp-svg-sprite'),
+        path:               require( 'path' )
     };
 
+
 // =============================================
-// environment Variables
+// Environment Variables
 // =============================================
 
 var environment = {
-    dev: nodeModule.util.env.dev,
+    development: nodeModule.util.env.dev,
     production: nodeModule.util.env.production
 };
 
-// =============================================
-// Paths
-// =============================================
-
-var path = {
-    styles: {
-        source: project.source + '/' + project.scss + '/**/*.scss',
-        build: project.dist + '/' + project.css
-    },
-    scripts: {
-        source: project.source + '/' + project.js + '/**/*.js',
-        build: project.dist + '/' + project.js
-    },
-    images: {
-        source: project.source + '/' + project.img + '/**/*.*',
-        build: project.dist + '/' + project.img
-    },
-    fonts: {
-        source: project.source + '/' + project.fonts + '/**/*.*',
-        build: project.dist + '/' + project.fonts
-    },
-    vendor: {
-        source: project.source + '/' + project.vendor + '/**/*.*',
-        build: project.dist + '/' + project.vendor
-    },
-    bower: project.dist + '/' + project.bower
-};
 
 // =============================================
-// Gulp Tasks
+// VENDOR `gulp vendor`
+// moves files from vendor to build directory
 // =============================================
 
-gulp.task('browser-sync', require('./gulp-tasks/browser-sync')(nodeModule, project, environment));
+gulp.task( 'vendor', function() {
+    return gulp.src( project.sourceDirectory + '/' + project.vendorDirectory + '/**/*' )
+        .pipe( nodeModule.changed( project.distDirectory + '/' + project.vendorDirectory ) )
+        .pipe( gulp.dest( project.distDirectory + '/' + project.vendorDirectory ) );
+} );
 
-gulp.task('bower', require('./gulp-tasks/bower')(gulp, nodeModule, path));
+gulp.task('vendor-scripts', function() {
+    return gulp.src(project.sourceDirectory + '/' + project.vendorDirectory + '/**/*.js')
+    .pipe(environment.production ? nodeModule.uglify() : nodeModule.util.noop())
+    .pipe(gulp.dest(project.distDirectory + '/' + project.vendorDirectory));
+});
 
-gulp.task('fonts', require('./gulp-tasks/fonts')(gulp, nodeModule, path));
+gulp.task('vendor-styles', function() {
+    return gulp.src(project.sourceDirectory + '/' + project.vendorDirectory + '/**/*.css')
+    .pipe(environment.production ? nodeModule.cssNano({discardUnused: {fontFace: false}}) : nodeModule.util.noop())
+    .pipe(gulp.dest(project.distDirectory + '/' + project.vendorDirectory));
+});
 
-gulp.task('vendor', require('./gulp-tasks/vendor')(gulp, nodeModule, path));
+gulp.task('vendor-images', function() {
+    return gulp.src(project.sourceDirectory + '/' + project.vendorDirectory + '/**/*')
+    .pipe(environment.production ? nodeModule.imageMin(option.imageOptimisation) : nodeModule.util.noop())
+    .pipe(gulp.dest(project.distDirectory + '/' + project.vendorDirectory));
+});
 
-gulp.task('img', require('./gulp-tasks/img')(gulp, nodeModule, path, option, environment));
 
-gulp.task('js', require('./gulp-tasks/js')(gulp, nodeModule, path, environment));
+// =============================================
+// SVG Sprite `gulp svg-sprite`
+// Optimises and merges SVG's into sprite
+// =============================================
 
-gulp.task('css', require('./gulp-tasks/css')(gulp, nodeModule, path, option, environment));
+gulp.task( 'svg-sprite', function() {
+    return gulp.src( project.sourceDirectory + '/' + project.iconsDirectory + '/**/*.svg' )
+        .pipe( nodeModule.svgSprite( option.svgSpriteConfig ) )
+        .pipe( gulp.dest( project.distDirectory + '/' + project.iconsDirectory ) );
+} );
 
-gulp.task('clean', require('./gulp-tasks/clean')(nodeModule, project));
 
-gulp.task('watch', ['browser-sync'] ,require('./gulp-tasks/watch')(gulp, path));
+// =============================================
+// IMG `gulp img`
+// minifys images
+// =============================================
 
-gulp.task('build' ,require('./gulp-tasks/build')(nodeModule));
+gulp.task( 'img', function() {
+    return gulp.src( [
+        project.sourceDirectory + '/' + project.imagesDirectory + '/**/*',
+        '!' + project.sourceDirectory + '/' + project.iconsDirectory + '/**/*'
+    ] )
+        .pipe( nodeModule.changed( project.distDirectory + '/' + project.imagesDirectory ) )
+        .pipe( environment.production ? nodeModule.imageMin( option.imageOptimisation ) : nodeModule.util.noop() )
+        .pipe( gulp.dest( project.distDirectory + '/' + project.imagesDirectory ) );
+} );
 
-gulp.task('default' ,require('./gulp-tasks/default')(nodeModule));
+
+// =============================================
+// JS `gulp js`
+// compiles js, Jshint, Minify if `--production`
+// =============================================
+
+gulp.task( 'js', function() {
+    return gulp.src( project.sourceDirectory + '/' + project.scriptsDirectory + '/**/*.js' )
+        .pipe( nodeModule.jsHint() )
+        .pipe( nodeModule.jsHint.reporter( 'default' ) )
+        .pipe( environment.production ? nodeModule.uglify() : nodeModule.util.noop() )
+        .pipe( gulp.dest( project.distDirectory + '/' + project.scriptsDirectory ) );
+} );
+
+
+// =============================================
+// CSS `gulp css`
+// compiles scss to css, autoprefixer, combines media queries and minifies if `--production`
+// =============================================
+
+gulp.task( 'scss', function() {
+    return gulp.src( project.sourceDirectory + '/' + project.stylesDirectory + '/**/*.scss' )
+        .pipe( nodeModule.clipEmptyFiles() )
+        .pipe( environment.development ? nodeModule.sourcemaps.init() : nodeModule.util.noop() )
+        .pipe( ! environment.production ? nodeModule.sass.sync().on( 'error', nodeModule.sass.logError ) : nodeModule.util.noop() )
+        .pipe( environment.production ? nodeModule.sass.sync() : nodeModule.util.noop() )
+        .pipe( nodeModule.autoPrefixer( option.autoprefixer ) )
+        .pipe( environment.development ? nodeModule.sourcemaps.write() : nodeModule.util.noop() )
+        .pipe( environment.production ? nodeModule.combineMq() : nodeModule.util.noop() )
+        .pipe( environment.production ? nodeModule.cssNano( option.cssNano ) : nodeModule.util.noop() )
+        .pipe( gulp.dest( project.distDirectory + '/css' ) );
+} );
+
+
+// =============================================
+// Clean `gulp clean
+// destroys the build directory
+// =============================================
+
+gulp.task( 'clean', function( cb ) {
+    return nodeModule.del( [ project.distDirectory ], cb );
+} );
+
+
+// =============================================
+// Build 'gulp build'
+// builds all assets, also has `--production` option to build production ready assets
+// =============================================
+
+gulp.task( 'build', gulp.series( 'clean', gulp.parallel( 'scss', 'js' ), 'img', 'svg-sprite', 'vendor', 'vendor-images', 'vendor-styles', 'vendor-scripts' ) );
+
+
+// =============================================
+// Watch 'gulp watch'
+// watches files and runs on change
+// =============================================
+
+gulp.task( 'watch', function() {
+    gulp.watch( project.sourceDirectory + '/' + project.stylesDirectory + '/**/*.scss', gulp.series( 'scss' ) );
+    gulp.watch( project.sourceDirectory + '/' + project.scriptsDirectory + '/**/*.js', gulp.series( 'js' ) );
+    gulp.watch( project.sourceDirectory + '/' + project.imagesDirectory + '/**/*', gulp.series( 'img' ) );
+    gulp.watch( project.sourceDirectory + '/' + project.iconsDirectory + '/**/*', gulp.series( 'svg-sprite' ) );
+    gulp.watch( project.sourceDirectory + '/' + project.vendorDirectory + '/**/*', gulp.series( 'vendor' ) );
+} );
+
+
+// =============================================
+// Default 'gulp'
+// runs build task, Runs watch tasks
+// =============================================
+
+gulp.task( 'default', gulp.series( 'build', 'watch' ) );

@@ -1,5 +1,7 @@
 <?php /*
-Title: Homepage
 Container: False
-Meta: False
 */ ?>
+
+<?php printPattern('organism/header'); ?>
+
+<?php printPattern('organism/footer'); ?>

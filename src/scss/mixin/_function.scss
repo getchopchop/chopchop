@@ -1,0 +1,16 @@
+// =============================================
+// Color
+// =============================================
+
+@function color($color, $tone: 'base') {
+    @return map-get(map-get($colors, $color), $tone);
+}
+
+
+// =============================================
+// Screen
+// =============================================
+
+@function screen($screen, $type: 'base') {
+    @return map-get(map-get($screens, $screen), $type);
+}

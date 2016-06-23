@@ -2,8 +2,10 @@
 // Flag
 // =============================================
 
-.flag {
+.flag,
+%flag {
     @include flag;
+    margin-bottom: $spacing;
 }
 
 
@@ -11,7 +13,8 @@
 // Flag Reversed
 // =============================================
 
-.flag--reverse {
+.flag--reverse,
+%flag--reverse {
     @include flag--reverse;
 }
 
@@ -20,6 +23,16 @@
 // Flag Gutter
 // =============================================
 
-.flag--gutter {
+.flag--gutter,
+%flag--gutter {
     @include flag--gutter;
+}
+
+// =============================================
+// Flag Center
+// =============================================
+
+.flag--center,
+%flag--center {
+    @include flag--center;
 }

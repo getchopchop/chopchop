@@ -2,8 +2,10 @@
 // Card
 // =============================================
 
-.card {
+.card,
+%card {
     @include card;
+    margin-bottom: $spacing;
 }
 
 
@@ -11,6 +13,7 @@
 // Card with border
 // =============================================
 
-.card--bordered {
+.card--bordered,
+%card--bordered {
     @include card--bordered;
 }

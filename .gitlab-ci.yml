@@ -1,0 +1,41 @@
+build_and_deploy_live:
+  stage: build
+  script: |
+    #!/bin/bash
+    set +v # Dont echo variables
+    set -x # Do echo commands
+    set -
+    npm install
+    node_modules/.bin/gulp build --production
+    echo $SSH_KEY | base64 -d > /tmp/deploy_key
+    chmod 600 /tmp/deploy_key
+    eval `ssh-agent`
+    ssh-add /tmp/deploy_key
+    SSH_OPTS="-v -A -oBatchMode=yes -oCheckHostIP=no -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null"
+    rsync -Pvrax --delete -e "ssh $SSH_OPTS" . chopchopweb1@chopchopweb1.manc.iws-hosting.co.uk:~/public_html/chopchop/
+    kill $SSH_AGENT_PID
+  tags:
+    - magento
+  only:
+    - master
+
+build_and_deploy_ecommerce:
+  stage: build
+  script: |
+    #!/bin/bash
+    set +v # Dont echo variables
+    set -x # Do echo commands
+    set -
+    npm install
+    node_modules/.bin/gulp build --production
+    echo $SSH_KEY | base64 -d > /tmp/deploy_key
+    chmod 600 /tmp/deploy_key
+    eval `ssh-agent`
+    ssh-add /tmp/deploy_key
+    SSH_OPTS="-v -A -oBatchMode=yes -oCheckHostIP=no -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null"
+    rsync -Pvrax --delete -e "ssh $SSH_OPTS" . chopchopweb1@chopchopweb1.manc.iws-hosting.co.uk:~/public_html/ecommerce/
+    kill $SSH_AGENT_PID
+  tags:
+    - magento
+  only:
+    - ecommerce

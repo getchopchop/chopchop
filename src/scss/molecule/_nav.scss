@@ -4,11 +4,7 @@
 
 %nav,
 .nav {
-    @extend %u-list-unstyled;
-
-    a {
-        text-decoration: none;
-    }
+    @include nav;
 }
 
 
@@ -16,9 +12,9 @@
 // Nav Pills
 // =============================================
 
-.nav--pills a {
-    display: block;
-    padding: $spacing-xs $spacing-sm;
+.nav--pills,
+%nav--pills {
+    @include nav--pills;
 }
 
 
@@ -26,9 +22,9 @@
 // Nav inline
 // =============================================
 
-.nav--inline {
-    display: flex;
-    flex-wrap: wrap;
+.nav--inline,
+%nav--inline {
+    @include nav--inline;
 }
 
 
@@ -36,22 +32,9 @@
 // Nav space
 // =============================================
 
-.nav--space {
-    &:not(.nav--inline) .nav__item {
-        margin-top: $spacing-xs;
-        margin-bottom: $spacing-xs;
-    }
-    
-    &.nav--inline .nav__item {
-        margin-left: $spacing-xs;
-        margin-right: $spacing-xs;
-        &:first-child {
-            margin-left: 0;
-        }
-        &:last-child {
-            margin-right: 0;
-        }
-    }
+.nav--space,
+%nav--space {
+    @include nav--space;
 }
 
 
@@ -60,34 +43,7 @@
 // =============================================
 
 .priority-nav {
-    display: flex;
-    overflow: hidden;
-
-    ::-webkit-scrollbar {
-        display: none;
-    }
-
-    &__container {
-        overflow-x: scroll;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    &__toggle {
-        flex-shrink: 0;
-    }
-
-    &__sub {
-        padding: $spacing;  
-        display: none;
-        &.is-active {
-            display: block;
-        }
-    }
-
-    .nav {
-        flex-wrap: nowrap;
-    }
+    @include priority-nav;
 }
 
 
@@ -96,40 +52,26 @@
 // =============================================
 
 .nav--multi-level {
-    li {
-        position: relative;
-    }
+    @include nav--multi-level;
+}
 
-    // All levels
-    ul,
-    ol {
-        @extend %nav;
-        display: none;
-        position: absolute;
-    }
 
-    // Just Level 0
-    > ul,
-    > ol {
-        top: 100%;
-    }
+// =============================================
+// Nav Pager
+// =============================================
 
-    ul ul,
-    ol ol,
-    ul ol,
-    ol ul {
-        top: 0;
-        left: 100%;
-    }
+.nav--pager,
+%nav--pager {
+    @include nav--pager;
+}
 
-    li:hover > ul,
-    li:hover > ol {
-        display: block;
-    }
 
-    a {
-        white-space: nowrap;
-    }
+// =============================================
+// Nav table
+// =============================================
+
+.nav--table {
+    @include nav--table;
 }
 
 

@@ -1,28 +1,50 @@
 // =============================================
-// Greyscale Colours
+// Colours
 // =============================================
 
-$darker-grey            : #222;
-$dark-grey              : #444;
-$grey                   : #666;
-$light-grey             : #999;
-$lighter-grey           : #e4e4e4;
-$white                  : #fff;
-$black                  : #000;
+$colors: (
+    grey: (
+        base            : #666,
+        darker          : #222,
+        dark            : #444,
+        light           : #999,
+        lighter         : #e4e4e4
+    ),
 
+    black: (
+        base            : #000
+    ),
 
-// =============================================
-// Social Media Colours
-// =============================================
+    white: (
+        base            : #fff
+    ),
 
-$twitter                : #55acee;
-$facebook               : #32639f;
-$google                 : #d34836;
-$pinterest              : #cb2028;
-$instagram              : #517fa4;
-$vimeo                  : #1ab7ea;
-$linkedin               : #4875b4;
-$youtube                : #bb0000;
+    social: (
+        twitter         : #55acee,
+        facebook        : #32639f,
+        google          : #d34836,
+        pinterest       : #cb2028,
+        instagram       : #517fa4,
+        vimeo           : #1ab7ea,
+        linkedin        : #4875b4,
+        youtube         : #bb0000,
+        tumblr          : #36465D
+    ),
+
+    brand: (
+        pink            : hotpink
+    ),
+    
+    success: (
+        base            : green,
+        light           : #e6ffe6
+    ),
+    
+    error: (
+        base            : red,
+        light           : #fcc
+    )
+);
 
 
 // =============================================
@@ -32,11 +54,10 @@ $youtube                : #bb0000;
 $font-family            : Helmet, Freesans, Helvetica, Arial, sans-serif;
 
 $font-size              : 100%;
-$font-size-xxs          : 0.5em;
-$font-size-xs           : 0.75em;
-$font-size-sm           : 0.9em;
-$font-size-lg           : 1.2em;
-$font-size-xl           : 1.6em;
+$font-size-xs           : 0.56em;
+$font-size-sm           : 0.75em;
+$font-size-lg           : 1.33em;
+$font-size-xl           : 1.77em;
 
 $bold                   : 600;
 
@@ -46,28 +67,28 @@ $line-height-sm         : 1.4;
 
 
 // =============================================
-// Headings
+// Headings - Perfect Fourth (1.333) http://type-scale.com/
 // =============================================
 
 $heading-font-family    : $font-family;
 
-$font-size-h1           : 2.8em;
-$font-size-h2           : $font-size-h1 * 0.7;
-$font-size-h3           : $font-size-h1 * 0.5;
-$font-size-h4           : $font-size-h1 * 0.35;
-$font-size-h5           : $font-size-h1 * 0.3;
-$font-size-h6           : $font-size-h1 * 0.25;
+$font-size-h1           : 3.15em;
+$font-size-h2           : 2.36em;
+$font-size-h3           : $font-size-xl;
+$font-size-h4           : $font-size-lg;
+$font-size-h5           : $font-size;
+$font-size-h6           : $font-size-sm;
 
 
 // =============================================
 // Spacing
 // =============================================
 
-$spacing                : 1rem;
-$spacing-xs             : 0.4rem;
-$spacing-sm             : 0.7rem;
-$spacing-lg             : 1.3rem;
-$spacing-xl             : 2rem;
+$spacing                : 1em;
+$spacing-xs             : 0.56em;
+$spacing-sm             : 0.75em;
+$spacing-lg             : 1.3em;
+$spacing-xl             : 1.8em;
 $gutter                 : 3%;
 
 
@@ -89,19 +110,30 @@ $z-10                   : 90;
 
 
 // =============================================
-// Breakpoints
+// Screens
 // =============================================
 
-$screen-xs              : 30em;
-$screen-sm              : 35em;
-$screen-md              : 52em;
-$screen-lg              : 62em;
-$screen-xl              : 82em;
-
-$screen-xs-max          : $screen-sm - 0.01em;
-$screen-sm-max          : $screen-md - 0.01em;
-$screen-md-max          : $screen-lg - 0.01em;
-$screen-lg-max          : $screen-xl - 0.01em;
+$screens: (
+    xs: (
+        base            : 28em,
+        max             : 35em - 0.01em
+    ),
+    sm: (
+        base            : 35em,
+        max             : 48em - 0.01em
+    ),
+    md: (
+        base            : 48em,
+        max             : 62em - 0.01em
+    ),
+    lg: (
+        base            : 62em,
+        max             : 82em - 0.01em
+    ),
+    xl: (
+        base            : 82em
+    )
+);
 
 
 // =============================================
@@ -118,3 +150,14 @@ $container-lg           : 110em;
 // =============================================
 
 $border-radius          : 0.3rem;
+
+
+// =============================================
+// Visibility for visible classes
+// =============================================
+
+$visibility: (
+    block,
+    inline,
+    inline-block
+);

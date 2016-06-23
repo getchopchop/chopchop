@@ -5,10 +5,7 @@
 .u-embed-container {
     @include ratio(56.25%);
 
-    iframe,
-    object,
-    embed,
-    video {
+    > * {
         position: absolute;
         top: 0;
         left: 0;
@@ -17,7 +14,7 @@
     }
 
     // 16 by 9 is default
-    &--4by3:before {
+    &--4x3:before {
         padding-top: 75%;
     }
 }

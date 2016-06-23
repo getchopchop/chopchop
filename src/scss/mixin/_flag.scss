@@ -3,13 +3,8 @@
 // =============================================
 
 @mixin flag {
-    margin-bottom: $spacing;
     display: flex;
     justify-content: space-between;
-
-    > *:first-child {
-        flex-grow: 1;
-    }
 }
 
 
@@ -23,15 +18,24 @@
 
 
 // =============================================
-// Flag Reversed
+// Flag Gutter
 // =============================================
 
 @mixin flag--gutter {
-    &:not(.flag--reverse) > *:first-child {
-        margin-right: $gutter;
+    &:not([class*="--reverse"]) > *:first-child {
+        margin-right: $spacing;
     }
-    
-    &.flag--reverse > *:first-child {
-        margin-left: $gutter;
+
+    &[class*="--reverse"] > *:first-child {
+        margin-left: $spacing;
     }
+}
+
+
+// =============================================
+// Flag Centered
+// =============================================
+
+@mixin flag--center {
+    align-items: center;
 }

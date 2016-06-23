@@ -8,7 +8,7 @@ select,
 textarea {
 	display: block;
 	font-family: $font-family;
-	font-size: 1em;
+	font-size: $font-size;
 }
 
 label {
@@ -22,14 +22,14 @@ label {
 input,
 textarea,
 select[multiple=multiple] {
-	background-color: $white;
-	border: 1px solid $grey;
+	background-color: color(white);
+	border: 1px solid color(grey);
 	border-radius: 0;
 	padding: $spacing-xs $spacing-sm;
 	width: 100%;
 
 	&:focus {
-		border-color: $black;
+		border-color: color(black);
 		outline: none;
 	}
 }
@@ -81,6 +81,12 @@ input[type="range"] {
 	}
 }
 
+input[type="number"] {
+	appearance: none;
+	 -moz-appearance: textfield;
+}
+
+
 // Button Padding Fix
 input[type="submit"].btn {
     vertical-align: bottom;
@@ -98,7 +104,16 @@ fieldset {
     margin-bottom: 2rem;
 }
 legend {
-    @extend .h5;
+    @extend %h5;
+}
+
+
+// =============================================
+// Option Group
+// =============================================
+
+optgroup {
+	font-weight: $bold;
 }
 
 
@@ -111,15 +126,25 @@ abbr[title="Required"],
 .required em {
     color: red;
 }
+
+.required::after {
+    content: "*";
+    color: red;
+    margin-left: $spacing-xs;
+}
+
 .valid {
     color: green;
 }
+
 .is-error {
     border-color: red;
 }
+
 .is-valid {
     border-color: green;
 }
+
 .validation-advice {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -128,6 +153,7 @@ abbr[title="Required"],
         margin: 0;
     }
 }
+
 .has-error .validation-advice {
     background-color: #fcc;
     border-color: red;
