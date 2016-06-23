@@ -1,6 +1,6 @@
 <?php /*
 Title: Breakpoint Mixin
-Class: @include breakpoint($min-width);
+Class: @include breakpoint(screen($breakpoint));
 */ ?>
 
 <div class="grid">

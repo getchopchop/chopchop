@@ -1,6 +1,6 @@
 <?php /*
 Title: Breakpoint Mixin using min and max
-Class: @include breakpoint($min-width $max-width);
+Class: @include breakpoint(screen($breakpoint) screen($breakpoint, max));
 */ ?>
 
 <div class="grid">
