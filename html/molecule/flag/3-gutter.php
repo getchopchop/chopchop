@@ -1,7 +1,7 @@
 <?php /*
 Title: Flag with gutter
 Class: .flag.flag--gutter
-Description: Provides spacing between the flag items using the <code>$gutter</code> variable.
+Description: Provides spacing between the flag items.
 */ ?>
 
 <div class="flag flag--gutter">
