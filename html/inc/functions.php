@@ -138,16 +138,6 @@
         return getRequestPath() === '/';
     }
 
-    function imageUrl($src, array $args) {
-        if (strlen($src) >= 4 && substr($src, 0, 4) !== 'http') {
-            $src = getUrl($src);
-        }
-
-        $qs = http_build_query($args);
-
-        return 'http://iweb:developer@isabelaweb1.cms.iwebcloud.co.uk/image/'.base64_encode($src).($qs ? '?'.$qs : '');
-    }
-
     function title($title, $class, $description='') {
 	    return array(
             'title'=>$title,

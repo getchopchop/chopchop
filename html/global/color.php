@@ -13,11 +13,7 @@ Title: Colour
             $bits = explode(" ", substr($line, 1));
             $class_ = $bits[0];
             $bits = explode("-", $class_);
-            if(count($bits) > 3) {
-                $group = $bits[2];
-            } else {
-                $group = 'no group';
-            }
+            $group = $bits[2];
             ?>
             <?php if($group != $previous_group) {
                 ?><h1><?php echo $group ?></h1><?php
