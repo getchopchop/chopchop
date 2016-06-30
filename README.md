@@ -1,26 +1,21 @@
 # Chop Chop
 
-## Wiki Link
-https://gitlab.iweb.co.uk/labs/chopchop/wikis/pages
-
-
 ## Atomic
 - atoms – high level elements such as inputs, headings
 - molecules – something containing multiple atoms or a very reusable flexible pattern
 - organism – something very specific to it's use that contains multiple molecules
 
-See [wiki](https://gitlab.iweb.co.uk/labs/chopchop/wikis/best-practices) for more
-
 ## Get Started
 
-To get going with it here are the commands  
+To get going with it here are the commands.
+
 _You can copy this entire block into the command line and it will process it all for you._
 ```
-cd ~/sites;
-git clone git@gitlab.iweb.co.uk:labs/chopchop.git chopchop/public_html;
-cd chopchop/public_html;
-npm i;
-npm run build;
+cd ~/sites
+git clone git@github.com:getchopchop/chopchop.git .
+cd chopchop/public_html
+npm i
+npm run build
 ```
 
 ## Working on the project

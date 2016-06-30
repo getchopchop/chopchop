@@ -2,37 +2,29 @@
 Title: Social Icons
 */ ?>
 
-<ul class="u-list-unstyled g-three-up">
+<ul class="u-list-unstyled u-list-inline">
     <li>
-        <i class="icon-linkedin"></i>
-        <span class="i-name">icon-linkedin</span>
+        <?php printSvg('social--linkedin'); ?>
     </li>
     <li>
-        <i class="icon-twitter"></i>
-        <span class="i-name">icon-twitter</span>
+        <?php printSvg('social--twitter'); ?>
     </li>
     <li>
-        <i class="icon-facebook"></i>
-        <span class="i-name">icon-facebook</span>
+        <?php printSvg('social--facebook'); ?>
     </li>
     <li>
-        <i class="icon-gplus"></i>
-        <span class="i-name">icon-gplus</span>
+        <?php printSvg('social--google-plus'); ?>
     </li>
     <li>
-        <i class="icon-instagram"></i>
-        <span class="i-name">icon-instagram</span>
+        <?php printSvg('social--instagram'); ?>
     </li>
     <li>
-        <i class="icon-youtube"></i>
-        <span class="i-name">icon-youtube</span>
+        <?php printSvg('social--youtube'); ?>
     </li>
     <li>
-        <i class="icon-pinterest"></i>
-        <span class="i-name">icon-pinterest</span>
+        <?php printSvg('social--pinterest'); ?>
     </li>
     <li>
-        <i class="icon-tumblr"></i>
-        <span class="i-name">icon-tumblr</span>
+        <?php printSvg('social--tumblr'); ?>
     </li>
 </ul>

@@ -8,11 +8,13 @@
 
 @each $screen, $value in $screens {
 
-    $media-query: screen($screen);
+    $media-query: screen($screen) screen($screen,max);
+    
     @if $screen == xs {
         $media-query: max-width screen($screen,max);
     } @else if $screen == xl {
         $media-query: screen($screen);
+
     }
 
     @include breakpoint($media-query) {
@@ -35,18 +37,6 @@
 // Hidden
 // =============================================
 
-@each $visible in $visibility {
-    $class: '[class*="u-hidden-"][class*="-#{$visible}"]';
-    @if $visible == block {
-        $class: '[class*="u-hidden-"]';
-    }
-
-    #{$class} {
-        display: #{$visible} !important;
-    }
-}
-
-
 @each $screen, $value in $screens {
     $media-query: screen($screen) screen($screen,max);
     @if $screen == xs {
@@ -56,7 +46,7 @@
     }
 
     @include breakpoint($media-query) {
-        [class*="u-hidden-#{$screen}"] {
+        .u-hidden-#{$screen} {
             display: none !important;
         }
     }

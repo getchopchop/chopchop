@@ -1,9 +1,8 @@
 <?php /*
 Title: Icon
-Class: .icon-*
+Class: .icon
 */ ?>
 
 <p>
-    <i class="icon-twitter"></i>
-    <span class="i-name">icon-twitter</span>
+    <?php printSvg('general--home'); ?>
 </p>

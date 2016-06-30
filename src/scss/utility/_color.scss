@@ -25,11 +25,11 @@
     @each $tone-key, $tone-value in $color-value {
         @if $tone-key == base {
             .u-text-#{$color-key} {
-                background-color: $tone-value !important;
+                color: $tone-value !important;
             }
         } @else {
             .u-text-#{$color-key}-#{$tone-key} {
-                background-color: $tone-value !important;
+                color: $tone-value !important;
             }
         }
     }
