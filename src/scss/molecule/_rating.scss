@@ -1,0 +1,39 @@
+// =============================================
+// Rating Stars
+// =============================================
+
+.rating {
+    display: inline-block;
+    position: relative;
+    
+    &__negative,
+    &__positive {
+        white-space: nowrap;
+    }
+    
+    &__negative {
+        position: relative;
+        z-index: $z-0;
+    }
+    
+    &__positive {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: $z-1;
+        overflow: hidden;
+    }
+    
+    [class^="icon-"],
+    [class*=" icon-"] {
+        line-height: 1;
+        
+        &:before {
+            margin: 0;
+        }
+    }
+}
+
+.rating--gold .rating__positive {
+    color: gold;
+}

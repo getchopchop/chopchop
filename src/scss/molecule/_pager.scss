@@ -1,0 +1,16 @@
+// =============================================
+// Pager
+// =============================================
+
+.pager__item {
+    @include circle($lighter-grey, 16px);
+
+    &:hover,
+    &.is-active {
+        background-color: $light-grey;
+    }
+
+    &:active {
+        background-color: $white;
+    }
+}

@@ -1,0 +1,16 @@
+// =============================================
+// Loading Message
+// =============================================
+
+.loading {
+    display: flex;
+    align-items: center;
+
+    &__spinner {
+        @include ring($black, $grey, 16px, 3px);
+    }
+    &__text {
+        @extend %micro;
+        margin-left: $spacing-xs;
+    }
+}

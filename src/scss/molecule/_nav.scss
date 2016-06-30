@@ -73,3 +73,54 @@
 .nav--table {
     @include nav--table;
 }
+
+
+// =============================================
+// Nav Check List
+// =============================================
+
+.nav--check {
+    @extend .nav--pills;
+    
+    a {
+        position: relative;
+        padding-left: $spacing-xl !important;
+        
+        &:before,
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+        }
+        
+        &:before {
+            z-index: $z-0;
+            left: 0;
+            top: 7px;
+            width: 16px;
+            height: 16px;
+            background-color: $white;
+            border: 2px solid $grey;
+            border-radius: 4px;
+        }
+        
+        &:after {
+            z-index: $z-1;
+            left: 5px;
+            top: 12px;
+            width: 10px;
+            height: 10px;
+            background-color: $grey;
+            display: none;
+            border-radius: 2px;
+        }
+        
+        &:hover,
+        &.is-active{
+            color: $darker-grey;
+            &:after {
+                display: block;
+            }
+        }
+    }
+}
