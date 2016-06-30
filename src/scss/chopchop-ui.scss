@@ -454,36 +454,37 @@
      text-decoration: none;
      padding: 6px 10px;
  }
-
+ 
  .cc-toolbar {
      display: flex;
      position: fixed;
      left: 0;
      bottom: 0;
      right: 0;
-     background-color: magenta;
-
-     // @include breakpoint(screen(xs)) {
-     //     background-color: red;
-     // }
-     @include breakpoint(screen(sm)) {
-         background-color: green;
-     }
-     @include breakpoint(screen(md)) {
-         background-color: blue;
-     }
-     @include breakpoint(screen(lg)) {
-         background-color: yellow;
-     }
-     @include breakpoint(screen(xl)) {
-         background-color: hotpink;
-     }
-
+     
      > :last-child {
          margin-left: auto;
      }
+}
+ 
+.cc-toolbar,
+.cc-readout--mq {
+    background-color: magenta;
+    @include breakpoint(screen(sm)) {
+        background-color: green;
+    }
+    @include breakpoint(screen(md)) {
+        background-color: blue;
+    }
+    @include breakpoint(screen(lg)) {
+        background-color: yellow;
+        color: color(black);
+    }
+    @include breakpoint(screen(xl)) {
+        background-color: hotpink;
+    }
+}
 
- }
  .cc-readout--mq:after {
      content: "screen(xs, max) < #{screen(xs, max)}";
  }
