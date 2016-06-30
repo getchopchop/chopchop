@@ -1,4 +1,4 @@
-<nav class=" nav-<?= $toplevel ?> nav-collapse">
+<nav>
     <ol>
         <?php
         foreach($toplevels as $toplevel) {

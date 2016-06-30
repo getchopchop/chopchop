@@ -19,12 +19,11 @@
         <header class="cc-header">
             <ul>
                 <li><a href="#" data-cc-action="toggle" data-cc-target="cc-nav">Menu</a></li>
-                <li><a href="#">ChopChop library</a></li>
+                <li class="cc-readout"><span></span></li>
             </ul>
         </header>
 
         <div class="cc-toolbar">
-            <span class="cc-readout cc-readout--mq"></span>
         </div>
 
         <div class="site-wrapper cc-site-wrapper">
@@ -35,7 +34,7 @@
                 </div>
             </nav>
 
-            <main>
+            <main class="cc-main-content">
     <?php endif; ?>
 
               <?php if(isIndex()) { ?>
