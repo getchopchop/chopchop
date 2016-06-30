@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.iweb.co.uk:labs/chopchop.git"
+    "url": "git@github.com:getchopchop/chopchop.git"
   },
   "keywords": [
     "npm",
@@ -22,12 +22,12 @@
     "img",
     "fonts"
   ],
-  "author": "iWeb http://www.iweb.co.uk",
+  "author": "Chop Chop https://github.com/getchopchop/chopchop/",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.iweb.co.uk/labs/chopchop/issues"
+    "url": "https://github.com/getchopchop/chopchop/issues"
   },
-  "homepage": "https://gitlab.iweb.co.uk/labs/chopchop/tree/master#README",
+  "homepage": "https://github.com/getchopchop/chopchop",
   "devDependencies": {
     "del": "^2.1.0",
     "gulp": "github:gulpjs/gulp#4.0",
