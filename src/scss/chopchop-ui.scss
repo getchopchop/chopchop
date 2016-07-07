@@ -39,8 +39,9 @@
         background-color: #000;
         text-decoration: none;
 
-        &:hover {
-            opacity: 0.8;
+        &.is-active {
+            background-color: #EFEDED;
+            color: #000;
         }
     }
 

@@ -18,7 +18,7 @@
     <?php if(!isset($_GET['preview'])) : ?>
         <header class="cc-header">
             <ul>
-                <li><a href="#" data-cc-action="toggle" data-cc-target="cc-nav">Menu</a></li>
+                <li><a href="#" id="cc-menu-trigger" data-cc-action="toggle" data-cc-target="cc-nav">Menu</a></li>
                 <li class="cc-readout"><span></span></li>
             </ul>
         </header>
@@ -28,7 +28,7 @@
 
         <div class="site-wrapper cc-site-wrapper">
 
-            <nav class="cc-nav" id="cc-nav">
+            <nav class="cc-nav" id="cc-nav" data-cc-cascade="cc-menu-trigger">
                 <div class="block-content site-navigation__content">
                     <?php include('inc/nav.php'); ?>
                 </div>
