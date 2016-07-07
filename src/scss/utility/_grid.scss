@@ -11,8 +11,27 @@
 // Grid Gutter
 // =============================================
 
+.g-gutter-x {
+    @include grid-gutter-x;
+}
+
+
+// =============================================
+// Grid Gutter
+// =============================================
+
+.g-gutter-y {
+    @include grid-gutter-y;
+}
+
+
+// =============================================
+// Grid Gutter
+// =============================================
+
 .g-gutter {
-    @include grid-gutter; // defaults to gutter var
+    @include grid-gutter-x;
+    @include grid-gutter-y;
 }
 
 
