@@ -1,6 +1,6 @@
 <?php /*
-Title: Grid Center Mixin
-Class: @include grid-center;
+Title: Grid Justify Mixin
+Class: @include grid-justify;
 */ ?>
 
 <div class="grid g-justify">
