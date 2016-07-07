@@ -126,10 +126,10 @@
     width: 200px;
     transform: translateX(-100%);
     z-index: 998;
-    background-color: #EFEDED;
+    background-color: #222;
     padding: 20px 10px;
     padding-bottom: 46px;
-    color: #000;
+    color: #EFEDED;
 
     &.is-active {
         transform: translateX(0);
@@ -148,8 +148,12 @@
     }
 
     a {
-        color: #000;
+        color: #EFEDED;
         text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
