@@ -18,4 +18,10 @@
 
 [data-cc-action] {
     cursor: pointer;
+
+    &,
+    * {
+        user-select: none;
+        -webkit-touch-callout: none;
+    }
 }
