@@ -18,10 +18,10 @@
 
 
 // =============================================
-// Grid gutter
+// Grid gutter X
 // =============================================
 
-@mixin grid-gutter($gap: $gutter) {
+@mixin grid-gutter-x($gap: $gutter) {
     $half-gutter: $gap / 2;
     margin-left: -$half-gutter;
     margin-right: -$half-gutter;
@@ -29,6 +29,17 @@
     > * {
         padding-left: $half-gutter;
         padding-right: $half-gutter;
+    }
+}
+
+
+// =============================================
+// Grid gutter Y
+// =============================================
+
+@mixin grid-gutter-y($gap: $gutter) {
+    > * {
+        margin-bottom: $gutter;
     }
 }
 
