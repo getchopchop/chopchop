@@ -5,8 +5,17 @@
 .u-toggle,
 %u-toggle {
     display: none;
-    
+
     &.is-active {
         display: block;
     }
+}
+
+
+// =============================================
+// Add cursor on toggles for mobile
+// =============================================
+
+[data-cc-action] {
+    cursor: pointer;
 }
