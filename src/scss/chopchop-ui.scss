@@ -8,26 +8,19 @@
 // =============================================
 
 .cc-header {
-    background-color: #000;
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     z-index: 999;
-    font-size: 14px;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 36px;
-    border-top: 3px solid #000;
+    font-size: 12px;
+    border-bottom: 4px solid #000;
     display: flex;
-    flex-flow: column;
-    justify-content: center;
 
     ul {
         margin: 0;
         padding: 0;
         display: flex;
-        align-items: center;
         width: 100%;
     }
 
@@ -37,12 +30,13 @@
 
         > * {
             display: inline-block;
-            padding: 0 10px;
+            padding: 3px 10px;
         }
     }
 
     a {
         color: #fff;
+        background-color: #000;
         text-decoration: none;
 
         &:hover {
@@ -50,19 +44,19 @@
         }
     }
 
-    border-top-color: #FFE800;
+    border-bottom-color: #FFE800;
 
     @include breakpoint(screen(sm) screen(sm, max)) {
-        border-top-color: #E800E8;
+        border-bottom-color: #E800E8;
     }
     @include breakpoint(screen(md) screen(md, max)) {
-        border-top-color: #70F800;
+        border-bottom-color: #70F800;
     }
     @include breakpoint(screen(lg) screen(lg, max)) {
-        border-top-color: #00B1F5;
+        border-bottom-color: #00B1F5;
     }
     @include breakpoint(screen(xl)) {
-        border-top-color: #FF2C00;
+        border-bottom-color: #FF2C00;
     }
 }
 
@@ -73,6 +67,28 @@
 
 .cc-readout {
     margin-left: auto;
+
+    span {
+        background-color: #FFE800;
+        color: #000;
+
+        @include breakpoint(screen(sm) screen(sm, max)) {
+            background-color: #E800E8;
+            color: #fff;
+        }
+        @include breakpoint(screen(md) screen(md, max)) {
+            background-color: #70F800;
+            color: #000;
+        }
+        @include breakpoint(screen(lg) screen(lg, max)) {
+            background-color: #00B1F5;
+            color: #fff;
+        }
+        @include breakpoint(screen(xl)) {
+            background-color: #FF2C00;
+            color: #fff;
+        }
+    }
 }
 .cc-readout span:after {
     content: "xs max: #{screen(xs, max)}";
@@ -111,9 +127,8 @@
     transform: translateX(-100%);
     z-index: 998;
     background-color: #EFEDED;
-    padding: 10px;
-    padding-top: 53px;
-    padding-bottom: 20px;
+    padding: 20px 10px;
+    padding-bottom: 46px;
     color: #000;
 
     &.is-active {
