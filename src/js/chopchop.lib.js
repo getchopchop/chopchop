@@ -125,7 +125,7 @@ var ChopChop = (function($, ChopChop) {
 
             $(document).on('click', '[data-cc-action]', function(e) {
                 var $this = $(this),
-                    targets = $this.data('cc-target').split(','),
+                    targets = $this.data('cc-target').split(' '),
                     mode = $this.data('cc-trigger-on') || Trigger.BOTH,
                     $target;
 
@@ -158,8 +158,8 @@ var ChopChop = (function($, ChopChop) {
         },
         cascade: function($el, action) {
             var i, l, $other,
-                chain = ($el.data('cc-cascade-' + action) || '').split(',')
-                        .concat(($el.data('cc-cascade') || '').split(','));
+                chain = ($el.data('cc-cascade-' + action) || '').split(' ')
+                        .concat(($el.data('cc-cascade') || '').split(' '));
 
             for (i = 0, l = chain.length; i < l; ++i) {
                 $other = $('#' + chain[i]);
