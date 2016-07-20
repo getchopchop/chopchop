@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6,
 	@if $heading-scale == base {
 		@include heading-scale(heading-scale($heading-scale, start), heading-scale($heading-scale, scale));
 	} @else {
-		@include breakpoint(screen(lg)) {
+		@include breakpoint(screen($heading-scale)) {
     		@include heading-scale(heading-scale($heading-scale, start), heading-scale($heading-scale, scale));
 		}
 	}
