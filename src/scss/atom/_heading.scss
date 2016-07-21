@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, h6,
 %h1, %h2, %h3, %h4, %h4, %h5, %h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: $heading-font-family;
-	line-height: $line-height-xs;
+	line-height: $line-height-sm;
 	font-weight: $bold;
     margin-top: 0;
     margin-bottom: $spacing-xs;
