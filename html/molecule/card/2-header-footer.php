@@ -1,5 +1,5 @@
 <?php /*
-Title: Card with Image
+Title: Card with header and footer
 Class: .card
 */ ?>
 
@@ -10,14 +10,13 @@ Class: .card
             <div class="card__header">
                 Card Header
             </div>
-            <img src="//placehold.it/400x240" alt="Card image" class="u-img-responsive">
             <div class="u-block">
                 Block Content
             </div>
             <div class="card__footer">
                 Card Footer
             </div>
-         </div>
-        
+        </div>
+
     </div>
 </div>
