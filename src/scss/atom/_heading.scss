@@ -9,13 +9,13 @@ h1, h2, h3, h4, h5, h6,
 	line-height: $line-height-xs;
 	font-weight: $bold;
     margin-top: 0;
-    margin-bottom: $spacing;
+    margin-bottom: $spacing-xs;
 	// font-smoothing: antialiased;
 }
 
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
 * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6 {
-	margin-top: $spacing-xl;
+	margin-top: $spacing-lg;
 }
 
 // Calculated from type scales
