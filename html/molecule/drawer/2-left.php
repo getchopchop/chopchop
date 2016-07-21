@@ -7,10 +7,10 @@ Description: The left drawer is hidden off screen by default, use the Left Drawe
 <div class="drawer drawer--left" id="drawer-left" data-cc-cascade="overlay">
     <div class="drawer__dialog">
         
-        <div id="drawer-left-info" class="u-toggle" data-cc-cascade="drawer-left" data-cc-group="drawer-left-contents">
+        <div id="drawer-left-1" class="u-toggle" data-cc-cascade="drawer-left" data-cc-group="drawer-left-contents">
             <div class="card">
                 <div class="card__header">
-                    <h2>Left drawer</h2>
+                    <h2>Left Drawer Panel 1</h2>
                 </div>
                 <div class="u-block">
                     <p>Vestibulum varius sem vitae diam venenatis porttitor. Pellentesque nec quam eget eros tincidunt mattis non ac nunc. Vivamus tristique, turpis vitae efficitur laoreet, eros tellus lobortis nulla, ac auctor neque velit at risus. Sed volutpat dolor erat, placerat malesuada quam tempor eu. Morbi a tellus sit amet lectus tincidunt imperdiet a tincidunt est. Cras vel volutpat mauris. Sed consectetur felis vel maximus elementum. Proin sed nisl lectus. Nunc non est ac ipsum gravida commodo vel quis nunc.</p>
