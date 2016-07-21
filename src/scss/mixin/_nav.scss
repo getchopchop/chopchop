@@ -31,6 +31,7 @@
 @mixin nav--inline {
     display: flex;
     flex-wrap: wrap;
+    white-space: nowrap;
 }
 
 
