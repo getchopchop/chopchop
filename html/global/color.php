@@ -26,7 +26,7 @@ Title: Colour
 
                     </div>
                     <div class="card__footer">
-                        <small><code>.<?php echo $class_ ?></code></small>
+                        <small><?php echo str_replace('-', ' ', str_replace('u-fill-', '', $class_)); ?></small>
                     </div>
                 </div>
             </div>
