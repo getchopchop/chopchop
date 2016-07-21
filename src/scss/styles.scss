@@ -33,7 +33,6 @@
 
 @import "utility/align";
 @import "utility/block";
-@import "utility/box-sizing";
 @import "utility/clearfix";
 @import "utility/color";
 @import "utility/container";
@@ -53,11 +52,11 @@
 // =============================================
 
 @import "atom/animate";
-@import "atom/body";
 @import "atom/button";
 @import "atom/form";
 @import "atom/heading";
 @import "atom/horizontal-rule";
+@import "atom/html";
 @import "atom/icon";
 @import "atom/image";
 @import "atom/overlay";
