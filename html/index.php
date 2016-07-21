@@ -36,16 +36,14 @@
 
             <main class="cc-main-content">
     <?php endif; ?>
-
-              <?php if(isIndex()) { ?>
+        <?php if(isIndex()) { ?>
              <?php } else {
                  $options = array(
                     'print_title' => !((isset($_GET['title']) && $_GET['title'] === 'false')),
                     'print_container' => !((isset($_GET['container']) && $_GET['container'] === 'false'))
                  );
-                 echo get(getRequestPath(), $options);
+                 echo Section::get(getRequestPath(), $options);
              }?>
-
     <?php if(!isset($_GET['preview'])) : ?>
             </main>
 
