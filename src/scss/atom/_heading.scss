@@ -18,8 +18,6 @@ h1, h2, h3, h4, h5, h6,
 	margin-top: $spacing-lg;
 }
 
-// Calculated from type scales
-// http://type-scale.com/
 @each $heading-scale, $value in $heading-scales {
 	@if $heading-scale == base {
 		@include heading-scale(heading-scale($heading-scale, start), heading-scale($heading-scale, scale));
