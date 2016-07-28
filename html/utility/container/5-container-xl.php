@@ -4,7 +4,7 @@ Class: .u-container-xl
 */ ?>
 
 <div class="u-container-xl">
-    <div class="cc-box">
+    <div class="u-block u-fill-grey-lighter">
         I am in an extra large container
     </div>
 </div>
