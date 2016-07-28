@@ -32,7 +32,6 @@
  @import "utility/align";
  @import "utility/visible";
  @import "utility/grid";
- @import "utility/box-sizing";
  @import "utility/z-index";
  @import "utility/list";
 
@@ -65,7 +64,7 @@
  // =============================================
 
  .cc-heading {
-     font-size: $font-size-xs;
+     font-size: $font-size-sm;
      letter-spacing: 0.12em;
      text-transform: uppercase;
      border-bottom: 1px dashed color(grey,lighter);
@@ -359,19 +358,6 @@
          content: "screen(xl) > #{screen(xl)}";
      }
  }
-
-
- // =============================================
- // CC Box
- // =============================================
-
- .cc-box {
-     height: $spacing-xl * 2;
-     background-color: Gainsboro;
-     border-radius: $border-radius;
-     margin-bottom: $spacing-lg;
- }
-
 
 
  // =============================================

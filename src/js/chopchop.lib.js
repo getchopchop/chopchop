@@ -124,22 +124,27 @@ var ChopChop = (function($, ChopChop) {
             var self = this;
 
             $(document).on('click', '[data-cc-action]', function(e) {
-                var $this = $(this), t,
-                    $target = (t = $this.data('cc-target')) ? $('#' + t) : false,
-                    mode = $this.data('cc-trigger-on') || Trigger.BOTH;
+                var $this = $(this),
+                    targets = $this.data('cc-target').split(' '),
+                    mode = $this.data('cc-trigger-on') || Trigger.BOTH,
+                    $target;
 
-                if (!$target) {
-                    return;
+                for (var i = 0, l = targets.length; i < l; ++i) {
+                    $target = $('#' + targets[i]);
+
+                    if ($target.size() === 0) {
+                        continue;
+                    }
+
+                    if (mode === Trigger.DIRECT_ONLY && e.target !== this) {
+                        continue;
+                    } else if (mode === Trigger.INDIRECT_ONLY && e.target === this) {
+                        continue;
+                    }
+
+                    e.preventDefault();
+                    self.performAction($target, $this.data('cc-action') || Action.TOGGLE);
                 }
-
-                if (mode === Trigger.DIRECT_ONLY && e.target !== this) {
-                    return;
-                } else if (mode === Trigger.INDIRECT_ONLY && e.target === this) {
-                    return;
-                }
-
-                e.preventDefault();
-                self.performAction($target, $this.data('cc-action') || Action.TOGGLE);
             });
         },
         toggle: function(target, action) {
@@ -153,8 +158,8 @@ var ChopChop = (function($, ChopChop) {
         },
         cascade: function($el, action) {
             var i, l, $other,
-                chain = ($el.data('cc-cascade-' + action) || '').split(',')
-                        .concat(($el.data('cc-cascade') || '').split(','));
+                chain = ($el.data('cc-cascade-' + action) || '').split(' ')
+                        .concat(($el.data('cc-cascade') || '').split(' '));
 
             for (i = 0, l = chain.length; i < l; ++i) {
                 $other = $('#' + chain[i]);

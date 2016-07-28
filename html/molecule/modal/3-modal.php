@@ -11,7 +11,7 @@ Title: Modal
                 <div class="card__header">
                     <h2>Modal Content 1</h2>
                 </div>
-                <div class="card__body">
+                <div class="u-block">
                     
                     <p><a href="#" data-cc-action="activate" data-cc-target="modal-tab-2">Show Modal 2 Content</a></p>
                     
@@ -30,7 +30,7 @@ Title: Modal
                 <div class="card__header">
                     <h2>Modal Content 2</h2>
                 </div>
-                <div class="card__body">
+                <div class="u-block">
                     <p><a href="#" data-cc-action="activate" data-cc-target="modal-tab-1">Show Modal 1 Content</a></p>
                     
                     <p>In convallis sem quis risus suscipit efficitur. Vivamus neque nisl, aliquam ac auctor nec, dignissim ac elit. Vivamus et enim augue. Cras mauris ex, pretium eget erat in, hendrerit tempus elit. Nam nisl tortor, vestibulum at arcu sit amet, posuere tincidunt enim. Nunc luctus sagittis sapien, quis tempor ligula mattis scelerisque. Quisque condimentum justo massa, vel egestas enim tempus et. Cras iaculis ex a velit molestie tempor. Aliquam aliquet faucibus rutrum. Aenean pharetra mattis imperdiet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque cursus risus non magna lobortis fermentum. Nulla accumsan nulla ac elit blandit, sed porta quam condimentum.</p>

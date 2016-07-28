@@ -5,7 +5,7 @@
 @mixin btn {
     padding: $spacing-xs $spacing;
 	border-radius: 0;
-	font-size: $font-size-lg;
+	font-size: $font-size;
 	font-family: $heading-font-family;
 	font-weight: $bold;
     text-decoration: none;
@@ -37,15 +37,6 @@
 
 
 // =============================================
-// Extra Small
-// =============================================
-
-@mixin btn--xs {
-    font-size: $font-size-xs;
-}
-
-
-// =============================================
 // Small
 // =============================================
 
@@ -59,7 +50,7 @@
 // =============================================
 
 @mixin btn--lg {
-    font-size: $font-size-xl;
+    font-size: $font-size-lg;
 }
 
 

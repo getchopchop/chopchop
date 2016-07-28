@@ -1,0 +1,23 @@
+// =============================================
+// Block
+// =============================================
+
+[class*="u-block"] > *:last-child {
+    margin-bottom: 0;
+}
+
+.u-block {
+    padding: $spacing;
+
+    &-sm {
+        padding: $spacing-sm;
+    }
+
+    &-lg {
+        padding: $spacing-lg;
+    }
+
+    &-xl {
+        padding: $spacing-xl;
+    }
+}

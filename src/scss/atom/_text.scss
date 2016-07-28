@@ -3,7 +3,8 @@
 // =============================================
 
 // html {
-// 	font-smoothing: antialiased;
+// 	-webkit-font-smoothing: antialiased;
+// 	-moz-osx-font-smoothing: grayscale;
 // }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25),
@@ -32,11 +33,11 @@ ul, ol, p {
 }
 
 p {
-    margin-bottom: $spacing;
+    margin-bottom: $spacing-lg;
 }
 
 ul, ol {
-	margin-bottom: $spacing-lg;
+	margin-bottom: $spacing-xl;
 	padding-left: $spacing-xl;
 
 	ul, ol {
@@ -46,7 +47,10 @@ ul, ol {
 
 blockquote {
     border-left: 3px solid color(grey,light);
-    padding-left: $spacing;
+    padding-left: calc(#{$spacing-xl} - 3px);
+    margin-top: $spacing-xl;
+    margin-bottom: $spacing-xl;
+    margin-left: 0;
 }
 
 strong, b {

@@ -24,20 +24,24 @@
 @import "mixin/table";
 @import "mixin/nav";
 @import "mixin/tabs";
+@import "mixin/type";
+
 
 // =============================================
 // utility
 // =============================================
 
 @import "utility/align";
-@import "utility/box-sizing";
+@import "utility/block";
 @import "utility/clearfix";
 @import "utility/color";
 @import "utility/container";
 @import "utility/embed-container";
+@import "utility/full-height";
 @import "utility/grid";
 @import "utility/image";
 @import "utility/list";
+@import "utility/section";
 @import "utility/toggle";
 @import "utility/typography";
 @import "utility/visible";
@@ -49,11 +53,11 @@
 // =============================================
 
 @import "atom/animate";
-@import "atom/body";
 @import "atom/button";
 @import "atom/form";
 @import "atom/heading";
 @import "atom/horizontal-rule";
+@import "atom/html";
 @import "atom/icon";
 @import "atom/image";
 @import "atom/overlay";
