@@ -75,7 +75,8 @@ var gulp = require('gulp' ),
         uglify:             require( 'gulp-uglify' ),
         sourcemaps:         require( 'gulp-sourcemaps' ),
         svgSprite:          require('gulp-svg-sprite'),
-        path:               require( 'path' )
+        path:               require( 'path' ),
+        runSequence:        require( 'run-sequence' )
     };
 
 
@@ -195,7 +196,22 @@ gulp.task( 'clean', function( cb ) {
 // builds all assets, also has `--production` option to build production ready assets
 // =============================================
 
-gulp.task( 'build', gulp.series( 'clean', gulp.parallel( 'scss', 'js' ), 'img', 'svg-sprite', 'vendor', 'vendor-images', 'vendor-styles', 'vendor-scripts' ) );
+gulp.task( 'build', function( callback ) {
+    nodeModule.runSequence(
+        'clean',
+        [
+            'scss',
+            'js'
+        ],
+        'img',
+        'svg-sprite',
+        'vendor',
+        'vendor-images',
+        'vendor-styles',
+        'vendor-scripts',
+        callback
+    );
+} );
 
 
 // =============================================
@@ -204,11 +220,11 @@ gulp.task( 'build', gulp.series( 'clean', gulp.parallel( 'scss', 'js' ), 'img', 
 // =============================================
 
 gulp.task( 'watch', function() {
-    gulp.watch( project.sourceDirectory + '/' + project.stylesDirectory + '/**/*.scss', gulp.series( 'scss' ) );
-    gulp.watch( project.sourceDirectory + '/' + project.scriptsDirectory + '/**/*.js', gulp.series( 'js' ) );
-    gulp.watch( project.sourceDirectory + '/' + project.imagesDirectory + '/**/*', gulp.series( 'img' ) );
-    gulp.watch( project.sourceDirectory + '/' + project.iconsDirectory + '/**/*', gulp.series( 'svg-sprite' ) );
-    gulp.watch( project.sourceDirectory + '/' + project.vendorDirectory + '/**/*', gulp.series( 'vendor' ) );
+    gulp.watch( project.sourceDirectory + '/' + project.stylesDirectory + '/**/*.scss', [ 'scss' ] );
+    gulp.watch( project.sourceDirectory + '/' + project.scriptsDirectory + '/**/*.js',  [ 'js' ] );
+    gulp.watch( project.sourceDirectory + '/' + project.imagesDirectory + '/**/*',  [ 'img' ] );
+    gulp.watch( project.sourceDirectory + '/' + project.iconsDirectory + '/**/*',  [ 'svg-sprite' ] );
+    gulp.watch( project.sourceDirectory + '/' + project.vendorDirectory + '/**/*',  [ 'vendor' ] );
 } );
 
 
@@ -217,4 +233,9 @@ gulp.task( 'watch', function() {
 // runs build task, Runs watch tasks
 // =============================================
 
-gulp.task( 'default', gulp.series( 'build', 'watch' ) );
+gulp.task( 'default', function() {
+    nodeModule.runSequence(
+        'build',
+        'watch'
+    );
+} );
