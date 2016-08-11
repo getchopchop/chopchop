@@ -69,19 +69,10 @@ $line-height-sm         : 1.2;
 
 $heading-font-family    : $font-family;
 
-$heading-scales: (
-    base: (
-        start           : 0.8em,
-        scale           : 1.25
-    ),
-    sm: (
-        start           : 0.75em,
-        scale           : 1.334
-    ),
-    lg: (
-        start           : 0.7em,
-        scale           : 1.414
-    )
+$type-scales: (
+    base                : 1.25,
+    sm                  : 1.334,
+    lg                  : 1.414
 );
 
 

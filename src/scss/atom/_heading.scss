@@ -18,12 +18,12 @@ h1, h2, h3, h4, h5, h6,
 	margin-top: $spacing-lg;
 }
 
-@each $heading-scale, $value in $heading-scales {
-	@if $heading-scale == base {
-		@include heading-scale(heading-scale($heading-scale, start), heading-scale($heading-scale, scale));
+@each $key, $value in $type-scales {
+	@if $key == base {
+		@include heading-scale($value);
 	} @else {
-		@include breakpoint(screen($heading-scale)) {
-    		@include heading-scale(heading-scale($heading-scale, start), heading-scale($heading-scale, scale));
+		@include breakpoint(screen($key)) {
+    		@include heading-scale($value);
 		}
 	}
 }

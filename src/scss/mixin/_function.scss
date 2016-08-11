@@ -14,12 +14,3 @@
 @function screen($screen, $type: 'base') {
     @return map-get(map-get($screens, $screen), $type);
 }
-
-
-// =============================================
-// Heading font size
-// =============================================
-
-@function heading-scale($heading-scale, $type: 'base') {
-    @return map-get(map-get($heading-scales, $heading-scale), $type);
-}

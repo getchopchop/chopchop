@@ -2,11 +2,12 @@
 // Text
 // =============================================
 
-@mixin heading-scale($start: 1em, $scale: 1.2) {
+@mixin heading-scale($scale: 1.2) {
+    $size: 1 / $scale * 1em;
     @each $h in h6, h5, h4, h3, h2, h1 {
         #{$h}, %#{$h}, .#{$h} {
-            font-size: $start;
+            font-size: $size;
         }
-        $start: $start * $scale;
+        $size: $size * $scale;
     }
 }
