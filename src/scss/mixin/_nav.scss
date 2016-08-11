@@ -19,7 +19,7 @@
 @mixin nav--pills {
     a {
         display: block;
-        padding: $spacing-xs $spacing-sm;
+        padding: spacing(xs) spacing(sm);
     }
 }
 
@@ -41,11 +41,11 @@
 
 @mixin nav--space {
     &:not(.nav--inline) > * {
-        margin-bottom: $spacing-sm;
+        margin-bottom: spacing(sm);
     }
 
     &.nav--inline > * {
-        margin-right: $spacing-sm;
+        margin-right: spacing(sm);
 
         &:last-child {
             margin-right: 0;
@@ -90,7 +90,7 @@
     }
 
     &__sub {
-        padding: $spacing;
+        padding: spacing();
         display: none;
 
         &.is-active {

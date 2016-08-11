@@ -54,8 +54,8 @@
 
  .cc-header {
      @extend %u-text-center;
-     padding-top: $spacing;
-     padding-bottom: $spacing;
+     padding-top: spacing();
+     padding-bottom: spacing();
  }
 
 
@@ -71,9 +71,9 @@
  }
 
  .cc-heading {
-     padding-bottom: $spacing;
-     margin-top: $spacing-xl * 2;
-     margin-bottom: $spacing-xl;
+     padding-bottom: spacing();
+     margin-top: spacing(xl) * 2;
+     margin-bottom: spacing(xl);
 
      &__sub {
          display: block;
@@ -95,7 +95,7 @@
      }
 
      &:first-of-type {
-         margin-top: $spacing-xl;
+         margin-top: spacing(xl);
      }
  }
 
@@ -198,7 +198,7 @@
 
  .site-navigation a {
      a {
-         padding-left: $spacing;
+         padding-left: spacing();
          &.is-active {
              background-color: color(grey,lighter);
          }
@@ -213,9 +213,9 @@
          display: block;
      }
      a {
-         padding-left: $spacing-lg;
-         padding-top: $spacing-xs;
-         padding-bottom: $spacing-xs;
+         padding-left: spacing(lg);
+         padding-top: spacing(xs);
+         padding-bottom: spacing(xs);
          background-color: lighten(color(grey,lighter), 5%);
          &:hover {
              background-color: lighten(color(grey,lighter), 3%);
@@ -240,7 +240,7 @@
  // =============================================
 
  .cc-site-wrapper {
-     margin-bottom: $spacing-xl * 2;
+     margin-bottom: spacing(xl) * 2;
  }
 
  @include breakpoint(screen(md)) {
@@ -266,7 +266,7 @@
  .cc-disc-swatch {
      display: inline-block;
      vertical-align: middle;
-     margin-right: $spacing;
+     margin-right: spacing();
      height: 20px;
      width: 20px;
      border-radius: 100%;
@@ -507,6 +507,6 @@
  // =============================================
 
  .cc-section {
-     padding-top: $spacing-xl;
-     padding-bottom: $spacing-xl;
+     padding-top: spacing(xl);
+     padding-bottom: spacing(xl);
  }

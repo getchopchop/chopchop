@@ -30,7 +30,7 @@ html {
 
 ul, ol, p {
     margin-top: 0;
-    margin-bottom: $spacing;
+    margin-bottom: spacing();
 }
 
 ul, ol {

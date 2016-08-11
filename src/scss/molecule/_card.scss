@@ -5,7 +5,7 @@
 .card,
 %card {
     @include card;
-    margin-bottom: $spacing;
+    margin-bottom: spacing();
 }
 
 

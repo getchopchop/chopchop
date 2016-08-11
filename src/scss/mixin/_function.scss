@@ -32,3 +32,12 @@
 @function section($value: 'base') {
     @return map-get($sections, $value);
 }
+
+
+// =============================================
+// Spacing
+// =============================================
+
+@function spacing($value: 'base') {
+    @return map-get($spacing, $value);
+}

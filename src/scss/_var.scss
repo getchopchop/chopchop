@@ -80,11 +80,13 @@ $type-scales: (
 // Spacing
 // =============================================
 
-$spacing                : 1em;
-$spacing-xs             : 0.56em;
-$spacing-sm             : 0.75em;
-$spacing-lg             : 1.3em;
-$spacing-xl             : 1.8em;
+$spacing: (
+    base                : 1em,
+    xs                  : .56em,
+    sm                  : .75em,
+    lg                  : 1.3em,
+    xl                  : 1.8em
+);
 
 $gutter                 : 3%;
 
@@ -98,7 +100,6 @@ $sections: (
     sm                  : 3vw,
     lg                  : 9vw
 );
-
 
 
 // =============================================

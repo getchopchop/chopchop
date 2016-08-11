@@ -3,7 +3,6 @@
 // =============================================
 
 @each $key, $value in $sections {
-    
     @if $key == base {
         .u-section,
         %u-section {

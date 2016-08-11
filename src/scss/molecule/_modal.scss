@@ -49,7 +49,7 @@
 
 .modal__close {
     position: fixed;
-    top: $spacing;
-    right: $spacing-lg;
+    top: spacing();
+    right: spacing(lg);
     z-index: $z-1;
 }
