@@ -308,7 +308,7 @@ class Section
         if($this->paths) {
             $contents .= $this->getContents($this->paths, $options);
         }
-        $contents .= '<section>';
+        $contents .= '</section>';
         return $contents;
     }
 
