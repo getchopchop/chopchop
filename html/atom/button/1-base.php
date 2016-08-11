@@ -1,5 +1,5 @@
 <?php /*
-Title: Basic Button
+Title: Base Button
 Class: .btn
 */ ?>
 

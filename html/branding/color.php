@@ -15,8 +15,11 @@ Title: Colour
             $bits = explode("-", $class_);
             $group = $bits[2];
             ?>
-            <?php if($group != $previous_group) {
-                ?><h3><?php echo $group ?></h3><?php
+            <?php if($group != $previous_group) { ?>
+                <div class="g-col-xs-12">
+                    <h3><?php echo $group ?></h3>
+                </div>
+            <?php
                 $previous_group = $group;
             }
             ?>
@@ -25,7 +28,7 @@ Title: Colour
                     <div class="u-block-xl <?php echo $class_ ?>">
                     </div>
                     <div class="card__footer">
-                        <small><code>.<?php echo $class_ ?></code></small>
+                        <small><?php echo str_replace('-', ' ', str_replace('u-fill-', '', $class_)); ?></small>
                     </div>
                 </div>
             </div>

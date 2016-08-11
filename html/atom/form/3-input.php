@@ -119,3 +119,10 @@ Title: Inputs
         <input id="search" type="search" placeholder="Enter Search Term">
     </div>
 </div>
+
+<div class="field-group field-group--scaffold">
+    <label class="field-group__label">File input</label>
+    <div class="field-group__field">
+        <input id="file" type="file" placeholder="Enter Search Term">
+    </div>
+</div>

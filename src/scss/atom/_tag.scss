@@ -4,15 +4,12 @@
 
 .tag {
     display: inline-block;
-    background-color: color(grey);
+    background-color: color(grey,dark);
     color: color(white);
-    font-size: $font-size-sm * 0.9;
-    padding: ($spacing-xs/1.5) $spacing-sm;
-    text-align: center;
+    padding: $spacing-xs/2 $spacing-xs;
     white-space: nowrap;
     vertical-align: baseline;
     line-height: 1;
-    font-weight: bold;
     border-radius: $border-radius;
 }
 
@@ -22,7 +19,7 @@
 // =============================================
 
 .tag--sm {
-    font-size: $font-size-xs;
+    font-size: $font-size-sm;
 }
 
 
@@ -32,7 +29,6 @@
 
 .tag--lg {
     font-size: $font-size-lg;
-    padding: ($spacing-sm/2) $spacing-sm;
 }
 
 

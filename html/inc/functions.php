@@ -78,6 +78,7 @@
 
     function getContents($files, $options) {
         $printContainer = false;
+        $contents = '';
         ob_start();
         foreach($files as $path) {
             $_t = new TemplateHelper(parseComments(file_get_contents($path)), $path, $options);

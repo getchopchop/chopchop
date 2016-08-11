@@ -15,11 +15,11 @@ Class: .table.table--bordered
 	</thead>
 	<tfoot>
 		<tr>
-			<th>Table Footer 1</th>
-			<th>Table Footer 2</th>
-			<th>Table Footer 3</th>
-			<th>Table Footer 4</th>
-			<th>Table Footer 5</th>
+			<td>Table Footer 1</td>
+			<td>Table Footer 2</td>
+			<td>Table Footer 3</td>
+			<td>Table Footer 4</td>
+			<td>Table Footer 5</td>
 		</tr>
 	</tfoot>
 	<tbody>
