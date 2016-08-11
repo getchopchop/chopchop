@@ -23,3 +23,12 @@
 @function container($value: 'base') {
     @return map-get($containers, $value);
 }
+
+
+// =============================================
+// Section
+// =============================================
+
+@function section($value: 'base') {
+    @return map-get($sections, $value);
+}
