@@ -4,7 +4,7 @@
         foreach($toplevels as $toplevel) {
         ?>
             <li>
-                <a href="<?= $toplevel ?>"><?= ucwords($toplevel) ?></a>
+                <a href="/html/<?= $toplevel ?>/"><?= ucwords($toplevel) ?></a>
                 <ol>
                     <?php
                     $quarks = dir(dirname(__DIR__) . '/' . $toplevel);
@@ -16,7 +16,7 @@
                              continue;
                         }
                     ?>
-                    <li class="level1"><a href="<?php echo $toplevel; ?>#section-<?= $entry ?>"><?= str_replace('-', ' ', ucwords($entry)) ?></a></li>
+                    <li class="level1"><a href="/html/<?php echo $toplevel; ?>/#section-<?= $entry ?>"><?= str_replace('-', ' ', ucwords($entry)) ?></a></li>
                     <?php } ?>
                 </ol>
             </li>
