@@ -80,6 +80,13 @@ $type-scales: (
 // Spacing
 // =============================================
 
+// $spacing: (
+//     base: 1em;
+//     base: 1em;
+//     base: 1em;
+//     base: 1em;
+// );
+
 $spacing                : 1em;
 $spacing-xs             : 0.56em;
 $spacing-sm             : 0.75em;
@@ -137,10 +144,12 @@ $screens: (
 // Containers
 // =============================================
 
-$container-sm           : 52em;
-$container-md           : 62em;
-$container-lg           : 82em;
-$container-xl           : 110em;
+$containers: (
+    sm                  : 52em,
+    md                  : 62em,
+    lg                  : 82em,
+    xl                  : 110em
+);
 
 
 // =============================================

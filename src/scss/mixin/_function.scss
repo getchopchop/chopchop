@@ -14,3 +14,12 @@
 @function screen($screen, $type: 'base') {
     @return map-get(map-get($screens, $screen), $type);
 }
+
+
+// =============================================
+// Container
+// =============================================
+
+@function container($value: 'base') {
+    @return map-get($containers, $value);
+}
