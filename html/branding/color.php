@@ -16,14 +16,13 @@ Title: Colour
             $group = $bits[2];
             ?>
             <?php if($group != $previous_group) {
-                ?><h1><?php echo $group ?></h1><?php
+                ?><h3><?php echo $group ?></h3><?php
                 $previous_group = $group;
             }
             ?>
             <div class="g-col-xs-6 g-col-sm-4 g-col-md-3 g-col-xl-2">
-                <div class="card cc-card--swatch">
-                    <div class="card__body <?php echo $class_ ?>">
-
+                <div class="card">
+                    <div class="u-block-xl <?php echo $class_ ?>">
                     </div>
                     <div class="card__footer">
                         <small><code>.<?php echo $class_ ?></code></small>

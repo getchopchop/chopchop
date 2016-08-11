@@ -14,7 +14,7 @@
     right: 0;
     z-index: 999;
     font-size: 12px;
-    border-bottom: 4px solid #000;
+    border-bottom: 4px solid color(grey,darker);
     display: flex;
 
     ul {
@@ -26,7 +26,7 @@
 
     li {
         list-style: none;
-        color: #fff;
+        color: color(white);
 
         > * {
             display: inline-block;
@@ -35,13 +35,13 @@
     }
 
     a {
-        color: #fff;
-        background-color: #000;
+        color: color(white);
+        background-color: color(grey,darker);
         text-decoration: none;
 
         &.is-active {
             background-color: #EFEDED;
-            color: #000;
+            color: color(grey,darker);
         }
     }
 
@@ -71,23 +71,23 @@
 
     span {
         background-color: #FFE800;
-        color: #000;
+        color: color(grey,darker);
 
         @include breakpoint(screen(sm) screen(sm, max)) {
             background-color: #E800E8;
-            color: #fff;
+            color: color(white);
         }
         @include breakpoint(screen(md) screen(md, max)) {
             background-color: #70F800;
-            color: #000;
+            color: color(grey,darker);
         }
         @include breakpoint(screen(lg) screen(lg, max)) {
             background-color: #00B1F5;
-            color: #fff;
+            color: color(white);
         }
         @include breakpoint(screen(xl)) {
             background-color: #FF2C00;
-            color: #fff;
+            color: color(white);
         }
     }
 }
@@ -127,10 +127,10 @@
     width: 200px;
     transform: translateX(-100%);
     z-index: 998;
-    background-color: #222;
+    background-color: color(grey,darker);
     padding: 20px 10px;
     padding-bottom: 46px;
-    color: #EFEDED;
+    color: color(grey,lighter);
 
     &.is-active {
         transform: translateX(0);
@@ -149,7 +149,7 @@
     }
 
     a {
-        color: #EFEDED;
+        color: color(grey,lighter);
         text-decoration: none;
 
         &:hover {
@@ -174,13 +174,13 @@
 // =============================================
 
 .cc-title {
-    background-color: #efefef;
+    background-color: color(grey,lighter);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 5px;
     margin-bottom: 20px;
-    border-bottom: 2px solid #e4e4e4;
+    border-bottom: 2px solid color(grey,light);
 
     * {
         margin: 0;
@@ -201,518 +201,3 @@
         font-weight: normal;
     }
 }
-
-
-
-
-
-
-
-//
-//  // =============================================
-//  // Vars
-//  // =============================================
-//
-//
-//  $z-100: 100;
-//  $z-200: 200;
-//
-//  // =============================================
-//  // Helpers
-//  // =============================================
-//
-//  @import "helper/shape";
-//  @import "helper/card";
-//  @import "helper/function";
-//  @import "helper/ellipsis";
-//  @import "helper/grid";
-//  @import "helper/flag";
-//  @import "helper/list";
-//  @import "helper/ratio";
-//  @import "helper/accordion";
-//  @import "helper/tabs";
-//
-//
-//  // =============================================
-//  // Utilities
-//  // =============================================
-//
-//  @import "utility/clearfix";
-//  @import "utility/align";
-//  @import "utility/visible";
-//  @import "utility/grid";
-//  @import "utility/box-sizing";
-//  @import "utility/z-index";
-//  @import "utility/list";
-//
-//
-//  // =============================================
-//  // Layering z-index
-//  // =============================================
-//
-//  .site-navigation {
-//      z-index: $z-100;
-//  }
-//  .cc-toolbar {
-//      z-index: $z-200;
-//  }
-//
-//
-//  // =============================================
-//  // Header
-//  // =============================================
-//
-//  .cc-header1 {
-//      @extend %u-text-center;
-//      padding-top: $spacing;
-//      padding-bottom: $spacing;
-//  }
-//
-//
-//  // =============================================
-//  // Light Styles
-//  // =============================================
-//
-//  .cc-heading {
-//      font-size: $font-size-xs;
-//      letter-spacing: 0.12em;
-//      text-transform: uppercase;
-//      border-bottom: 1px dashed color(grey,lighter);
-//  }
-//
-//  .cc-heading {
-//      padding-bottom: $spacing;
-//      margin-top: $spacing-xl * 2;
-//      margin-bottom: $spacing-xl;
-//
-//      &__sub {
-//          display: block;
-//          font-family: Georgia;
-//          font-style: italic;
-//          letter-spacing: 0;
-//          text-transform: none;
-//          &:before {
-//              content: "(";
-//          }
-//          &:after {
-//              content: ")";
-//          }
-//      }
-//      code {
-//          font-size: 100%;
-//          text-transform: none;
-//          letter-spacing: 0;
-//      }
-//
-//      &:first-of-type {
-//          margin-top: $spacing-xl;
-//      }
-//  }
-//
-//
-//  // =============================================
-//  // Navigation on Index
-//  // =============================================
-//
-//  .cc-index-nav {
-//
-//
-//      &__header {
-//          @include flag;
-//          @include flag--center;
-//
-//          @include breakpoint(max-width screen(sm,max)) {
-//              background: #f4f4f4;
-//
-//              &.is-active {
-//                  background-color: #e4e4e4;
-//              }
-//          }
-//
-//          > :first-child {
-//              margin-bottom: 0;
-//          }
-//
-//          .shape {
-//              margin-left: auto;
-//              @include plus(color(black), 12px, 2px);
-//          }
-//
-//          &.is-active .shape {
-//              @include minus(color(black), 12px, 2px);
-//          }
-//
-//      }
-//
-//      // Show
-//      @include breakpoint(screen(md)) {
-//          .shape {
-//              display: none !important;
-//          }
-//          .u-toggle {
-//              display: block !important;
-//          }
-//      }
-//
-//  }
-//
-//
-//  // =============================================
-//  // Navigation
-//  // =============================================
-//
-//
-//
-//
-//  // =============================================
-//  // Navigation Shapes +/-
-//  // =============================================
-//
-//  .site-navigation {
-//
-//      .shape-hook {
-//          float: right;
-//          margin-top: 0.3em;
-//      }
-//
-//      a {
-//          &:not(.is-active) .shape-hook {
-//              @include plus(color(grey,light), 12px, 2px);
-//          }
-//          &.is-active .shape-hook {
-//              @include minus(color(grey,light), 12px, 2px);
-//          }
-//      }
-//  }
-//
-//
-//  // =============================================
-//  // Navigation Sub Navigation
-//  // =============================================
-//
-//  .site-navigation a {
-//      a {
-//          padding-left: $spacing;
-//          &.is-active {
-//              background-color: color(grey,lighter);
-//          }
-//      }
-//  }
-//
-//  .site-navigation .child {
-//      display: none;
-//      font-size: $font-size-sm;
-//
-//      &.is-active {
-//          display: block;
-//      }
-//      a {
-//          padding-left: $spacing-lg;
-//          padding-top: $spacing-xs;
-//          padding-bottom: $spacing-xs;
-//          background-color: lighten(color(grey,lighter), 5%);
-//          &:hover {
-//              background-color: lighten(color(grey,lighter), 3%);
-//          }
-//
-//      }
-//  }
-//
-//
-//  // =============================================
-//  // Navigation Toggle
-//  // =============================================
-//
-//  .site-navigation__toggle:hover {
-//      color: color(white);
-//      background-color: lighten(color(black), 20%);
-//  }
-//
-//
-//  // =============================================
-//  // Layout
-//  // =============================================
-//
-//  .cc-site-wrapper {
-//      margin-bottom: $spacing-xl * 2;
-//  }
-//
-//  @include breakpoint(screen(md)) {
-//      .site-navigation__content {
-//          overflow: hidden;
-//      }
-//  }
-//
-//
-//  // =============================================
-//  // Color Swatches
-//  // =============================================
-//
-//  .cc-line {
-//      display: block;
-//  }
-//
-//
-//  // =============================================
-//  // Color Swatches on Variables page
-//  // =============================================
-//
-//  .cc-disc-swatch {
-//      display: inline-block;
-//      vertical-align: middle;
-//      margin-right: $spacing;
-//      height: 20px;
-//      width: 20px;
-//      border-radius: 100%;
-//      border: 1px solid rgba(0,0,0,0.2);
-//      transition: transform 0.1s ease;
-//      &:hover {
-//          transform: scale(2);
-//      }
-//  }
-//
-//
-//  // =============================================
-//  // Color Swatches on colours page
-//  // =============================================
-//
-//  .cc-card--swatch {
-//      border-radius: $border-radius;
-//      .card__body {
-//          @include ratio(40%);
-//          border-top-left-radius: $border-radius;
-//          border-top-right-radius: $border-radius;
-//      }
-//      .card__footer {
-//          border-bottom-left-radius: $border-radius;
-//          border-bottom-right-radius: $border-radius;
-//      }
-//  }
-//
-//
-//  // =============================================
-//  // Media Query Readout
-//  // =============================================
-//
-//  .cc-readout {
-//      display: block;
-//      font-size: 12px;
-//      white-space: nowrap;
-//      color: color(white);
-//      background-color: color(black);
-//      text-decoration: none;
-//      padding: 6px 10px;
-//  }
-//
-//  .cc-toolbar {
-//      display: flex;
-//      position: fixed;
-//      left: 0;
-//      bottom: 0;
-//      right: 0;
-//
-//      > :last-child {
-//          margin-left: auto;
-//      }
-// }
-//
-// .cc-toolbar,
-// .cc-readout--mq {
-//     background-color: magenta;
-//     @include breakpoint(screen(sm)) {
-//         background-color: green;
-//     }
-//     @include breakpoint(screen(md)) {
-//         background-color: blue;
-//     }
-//     @include breakpoint(screen(lg)) {
-//         background-color: yellow;
-//         color: color(black);
-//     }
-//     @include breakpoint(screen(xl)) {
-//         background-color: hotpink;
-//     }
-// }
-//
-//  .cc-readout--mq:after {
-//      content: "screen(xs, max) < #{screen(xs, max)}";
-//  }
-//
-//
-//  // =============================================
-//  // CC Box
-//  // =============================================
-//
-//  .cc-box {
-//      height: $spacing-xl * 2;
-//      background-color: Gainsboro;
-//      border-radius: $border-radius;
-//      margin-bottom: $spacing-lg;
-//  }
-//
-//
-//
-//  // =============================================
-//  // CC Shapes
-//  // =============================================
-//
-//  .cc-shape-circle {
-//      @include circle(color(black), 16px);
-//  }
-//
-//  .cc-shape-square {
-//      @include square(color(black), 16px);
-//  }
-//
-//  .cc-shape-triangle {
-//      @include triangle(color(black), 5px, 5px, right);
-//  }
-//
-//  .cc-shape-chevron {
-//      @include chevron(color(black), 8px, up, 2px);
-//  }
-//
-//  .cc-shape-minus {
-//      @include minus(color(black), 12px, 2px);
-//  }
-//
-//  .cc-shape-plus {
-//      @include plus(color(black), 12px, 2px);
-//  }
-//
-//  .cc-shape-cross {
-//      @include cross(color(black), 12px, 2px);
-//  }
-//
-//  .cc-shape-tick {
-//      @include tick(color(black), 12px, 2px);
-//  }
-//
-//  .cc-shape-hamburger {
-//      @include hamburger(color(black), 18px, 24px, 2px);
-//  }
-//
-//  .cc-shape-ring {
-//      @include ring(color(black), color(grey), 16px, 3px);
-//  }
-//
-//
-//  // =============================================
-//  // CC Heading Group
-//  // =============================================
-//
-//  .cc-title {
-//      border-bottom: 2px solid #e4e4e4;
-//      background-color: #f4f4f4;
-//      margin-bottom: 2em;
-//      padding: 0.8em 1em;
-//
-//      &__main {
-//          margin-bottom: 0;
-//      }
-//
-//      h2 {
-//          font-size: 1.2em !important;
-//      }
-//
-//      code {
-//          font-size: 0.7em;
-//          font-weight: 400;
-//      }
-//
-//      .cc-title__actions ul {
-//          display: flex;
-//          justify-content: flex-end;
-//          margin: 0;
-//          list-style: none;
-//          padding: 0;
-//
-//          li:not(.first-child) {
-//              margin-left: 0.8em;
-//          }
-//      }
-//  }
-//
-//  .cc-title-desc {
-//      border: 1px solid #e4e4e4;
-//      margin-bottom: 2em;
-//      padding: 1em;
-//      border-top: 0;
-//
-//      p {
-//          margin: 0;
-//          font-size: 0.9em;
-//      }
-//  }
-//  .cc-title + .cc-title-desc {
-//      margin-top: -2em;
-//  }
-//
-//  @include breakpoint(screen(sm)) {
-//      .cc-title--actions {
-//          display: flex;
-//          align-items: center;
-//      }
-//      .cc-title--actions .cc-title__headings {
-//          flex-grow: 1;
-//      }
-//      .cc-title--actions .cc-title__actions {
-//          flex-grow: 1;
-//          text-align: right;
-//          .btn {
-//              margin-bottom: .2rem;
-//          }
-//      }
-//  }
-//
-//
-//  // =============================================
-//  // Accordion to Tabs @screen-md
-//  // =============================================
-//
-//  .cc-accordion-to-tabs {
-//      @include breakpoint(max-width screen(xs,max)) {
-//          @include accordion;
-//      }
-//      @include breakpoint(screen(sm)) {
-//          @include tabs;
-//      }
-//  }
-//
-//
-//  // =============================================
-//  // Tabs to Accordion @screen-md
-//  // =============================================
-//
-//  .cc-tabs-to-accordion {
-//      @include breakpoint(max-width screen(xs,max)) {
-//          @include tabs;
-//      }
-//      @include breakpoint(screen(sm)) {
-//          @include accordion;
-//      }
-//  }
-//
-//
-//  // =============================================
-//  // Section
-//  // =============================================
-//
-//  .cc-section {
-//      padding-top: $spacing-xl;
-//      padding-bottom: $spacing-xl;
-//  }
-//
-//
-//  .cc-head {
-//      position: fixed;
-//      top: 0;
-//      left: 0;
-//      right: 0;
-//      background-color: color(black);
-//
-//      * {
-//          margin: 0;
-//          color: color(white);
-//      }
-//  }
