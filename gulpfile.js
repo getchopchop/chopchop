@@ -37,20 +37,13 @@ var option = {
     },
     svgSpriteConfig: {
         shape: {
-            dimension: {                // Set maximum dimensions
-                maxWidth: 32,
-                maxHeight: 32
-            },
-            dest: 'intermediate-svg'    // Keep the intermediate files
+            dest: 'svg'    // Keep the intermediate files
         },
         mode: {
-            view: {                     // Activate the «view» mode
-                bust: false,
-                render: {
-                    scss: true          // Activate Sass output (with default options)
-                }
-            },
-            symbol: true                // Activate the «symbol» mode
+            view: false,
+            symbol: {
+                sprite: 'sprite-symbol.svg'
+            }
         }
     }
 };
@@ -75,6 +68,7 @@ var gulp = require('gulp' ),
         uglify:             require( 'gulp-uglify' ),
         sourcemaps:         require( 'gulp-sourcemaps' ),
         svgSprite:          require('gulp-svg-sprite'),
+        fs:                 require( 'fs' ),
         path:               require( 'path' ),
         runSequence:        require( 'run-sequence' )
     };
@@ -88,6 +82,18 @@ var environment = {
     development: nodeModule.util.env.dev,
     production: nodeModule.util.env.production
 };
+
+
+// =============================================
+// Function: getFolders
+// =============================================
+
+function getFolders( directory ) {
+    return nodeModule.fs.readdirSync( directory )
+        .filter( function( file ) {
+            return nodeModule.fs.statSync( nodeModule.path.join( directory, file ) ).isDirectory();
+        } );
+}
 
 
 // =============================================
@@ -126,9 +132,13 @@ gulp.task('vendor-images', function() {
 // =============================================
 
 gulp.task( 'svg-sprite', function() {
-    return gulp.src( project.sourceDirectory + '/' + project.iconsDirectory + '/**/*.svg' )
-        .pipe( nodeModule.svgSprite( option.svgSpriteConfig ) )
-        .pipe( gulp.dest( project.distDirectory + '/' + project.iconsDirectory ) );
+    var folders = getFolders( project.sourceDirectory + '/' + project.iconsDirectory + '/' );
+
+    return folders.map( function( folder ) {
+        return gulp.src( project.sourceDirectory + '/' + project.iconsDirectory + '/' + folder + '/**/*.svg' )
+            .pipe( nodeModule.svgSprite( option.svgSpriteConfig ) )
+            .pipe( gulp.dest( project.distDirectory + '/' + project.iconsDirectory + '/' + folder + '/' ) );
+    } );
 } );
 
 

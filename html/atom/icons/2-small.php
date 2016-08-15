@@ -4,5 +4,5 @@ Class: .icon.icon--sm
 */ ?>
 
 <p>
-    <?php printSvg('general--home', 'icon--sm'); ?>
+    <?php printSvg('general', 'home', 'icon--sm'); ?>
 </p>

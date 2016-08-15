@@ -35,9 +35,9 @@
         echo get($location, $options);
     }
 
-    function printSvg($hash, $class = '', $location = 'sprite.symbol.svg') {
+    function printSvg($folder = 'general', $hash, $class = '') {
         echo '<svg class="icon ' . $class . '">
-            <use xlink:href="' . getUrl('build/img/icons/symbol/svg/' . $location) . '#' . $hash  . '" />
+            <use xlink:href="' . getUrl('build/img/icons/' . $folder . '/symbol/sprite-symbol.svg') . '#' . $hash  . '" />
         </svg>';
     }
 
@@ -140,7 +140,7 @@
     }
 
     function title($title, $class, $description='') {
-	    return array(
+        return array(
             'title'=>$title,
             'class'=>$class,
             'description'=>$description
