@@ -121,7 +121,6 @@
     position: fixed;
     overflow-y: scroll; /* has to be scroll, not auto */
     -webkit-overflow-scrolling: touch;
-    transition: transform 0.4s ease;
     top: 0;
     bottom: 0;
     width: 200px;
@@ -137,10 +136,10 @@
     }
 
     ol {
-        margin: 5px 0 20px 15px;
+        margin: 5px 0 25px 10px;
         padding: 0;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 16px;
         list-style: none;
         counter-reset: section;
         
@@ -152,8 +151,10 @@
         }
         
         ol {
-            margin-left: 12px;
+            margin-left: 0;
+            margin-top: 7px;
             font-weight: normal;
+            font-size: 14px;
         }
     }
 
@@ -218,4 +219,13 @@
         font-size: 12px;
         font-weight: normal;
     }
+}
+
+
+// =============================================
+// Move content across when nav active
+// =============================================
+
+.has-cc-nav-active .cc-main-content {
+    margin-left: 200px;
 }

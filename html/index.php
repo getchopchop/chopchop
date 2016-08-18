@@ -23,8 +23,6 @@
             </ul>
         </header>
 
-        <div class="cc-toolbar"></div>
-
         <div class="site-wrapper cc-site-wrapper">
 
             <nav class="cc-nav" id="cc-nav" data-cc-cascade="cc-menu-trigger cc-overlay">
