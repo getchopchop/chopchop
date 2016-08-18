@@ -15,15 +15,17 @@ Title: Colour
             $bits = explode("-", $class_);
             $group = $bits[2];
             ?>
-            <?php if($group != $previous_group) {
-                ?><div class="g-col-xs-12"><h3><?php echo $group ?></h3></div><?php
+            <?php if($group != $previous_group) { ?>
+                <div class="g-col-xs-12">
+                    <h3><?php echo $group ?></h3>
+                </div>
+            <?php
                 $previous_group = $group;
             }
             ?>
-            <div class="g-col-xs-6 g-col-sm-4 g-col-md-3 g-col-xl-2">
-                <div class="card cc-card--swatch">
+            <div class="g-col-xs-6 g-col-sm-4 g-col-lg-3">
+                <div class="card">
                     <div class="u-block-xl <?php echo $class_ ?>">
-
                     </div>
                     <div class="card__footer">
                         <small><?php echo str_replace('-', ' ', str_replace('u-fill-', '', $class_)); ?></small>
