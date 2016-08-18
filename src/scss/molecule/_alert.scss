@@ -3,10 +3,10 @@
 // =============================================
 
 .alert {
-    padding: $spacing;
+    padding: spacing();
     background-color: color(grey, lighter);
     border: 1px solid color(grey);
-    margin-bottom: $spacing;
+    margin-bottom: spacing();
 
     p {
         margin: 0;

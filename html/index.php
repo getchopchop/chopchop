@@ -11,7 +11,7 @@
     <?php require_once('inc/meta.php'); ?>
     <title>Chop Chop - Little user interface patterns to get us going</title>
     <?php include('inc/favicons.php'); ?>
-    <?php include('inc/styles.php'); ?>
+    <?php include('inc/head.php'); ?>
 </head>
 <body>
 
@@ -50,7 +50,7 @@
         </div><!--/#wrapper -->
     <?php endif; ?>
 
-    <?php include('inc/scripts.php'); ?>
+    <?php include('inc/footer.php'); ?>
 
 </body>
 </html>

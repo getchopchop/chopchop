@@ -1,6 +1,6 @@
 <?php /*
 Title: Cross Mixin
-Class: @include cross(color(black), 12px, 2px);
+Class: @include cross($color, $size, $thickness);
 */ ?>
 
 <span class="cc-shape-cross"></span>

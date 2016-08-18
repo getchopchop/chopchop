@@ -14,7 +14,7 @@
     &__header,
     &__footer {
         background-color: color(grey,lighter);
-        padding: $spacing-sm $spacing;
+        padding: spacing(sm) spacing();
     }
 
     &__header {

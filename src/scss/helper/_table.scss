@@ -4,7 +4,7 @@
 
 @mixin table {
     th, td {
-        padding: $spacing;
+        padding: spacing();
         vertical-align: top;
     }
     
@@ -17,8 +17,8 @@
     }
 
     caption {
-        padding-top: $spacing-sm;
-        padding-bottom: $spacing-sm;
+        padding-top: spacing(sm);
+        padding-bottom: spacing(sm);
         color: color(grey);
         text-align: left;
     }
@@ -41,7 +41,7 @@
 @mixin table--condensed {
     th,
     td {
-        padding: $spacing-xs;
+        padding: spacing(xs);
     }
 }
 

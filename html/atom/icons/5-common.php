@@ -41,7 +41,7 @@ Title: Common Icons
         foreach($icons as $icon) :
     ?>
         <li>
-            <?php printSvg('general--' . $icon); ?>
+            <?php printSvg('general', $icon); ?>
         </li>
     <?php
         endforeach;

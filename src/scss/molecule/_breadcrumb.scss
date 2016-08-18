@@ -5,7 +5,7 @@
 .breadcrumb {
     
     li:not(:last-child) {
-        margin-right: $spacing-sm;
+        margin-right: spacing(sm);
         
         &:after {
             @include chevron(color(grey), 4px, right, 1px);
@@ -14,7 +14,7 @@
     }
     
     a {
-        margin-right: $spacing-sm;
+        margin-right: spacing(sm);
     }
     
 }

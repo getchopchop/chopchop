@@ -3,7 +3,7 @@
 // =============================================
 
 @mixin btn {
-    padding: $spacing-xs $spacing;
+    padding: spacing(xs) spacing();
 	border-radius: 0;
 	font-size: $font-size;
 	font-family: $heading-font-family;

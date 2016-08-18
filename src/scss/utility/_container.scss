@@ -8,18 +8,9 @@
     width: 96%;
 }
 
-.u-container-sm {
-    max-width: $container-sm;
-}
-    
-.u-container-md {
-    max-width: $container-md;
-}
-    
-.u-container-lg {
-    max-width: $container-lg;
-}
-
-.u-container-xl {
-    max-width: $container-xl;
+@each $key, $value in $containers {
+    .u-container-#{$key},
+    %u-container-#{$key} {
+        max-width: $value;
+    }
 }

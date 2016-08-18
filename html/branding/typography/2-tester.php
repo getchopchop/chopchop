@@ -19,7 +19,14 @@ Title: Typography
         <li>Lorem ipsum dolor sit amet</li>
         <li>Consectetur adipiscing elit</li>
         <li>Integer molestie lorem at massa</li>
-        <li>Facilisis in pretium nisl aliquet</li>
+        <li>Facilisis in pretium nisl aliquet
+            <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Integer molestie lorem at massa</li>
+                <li>Facilisis in pretium nisl aliquet</li>
+            </ul>
+        </li>
         <li>Nulla volutpat aliquam velit</li>
         <li>Faucibus porta lacus fringilla vel</li>
         <li>Aenean sit amet erat nunc</li>

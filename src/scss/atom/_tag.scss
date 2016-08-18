@@ -6,7 +6,7 @@
     display: inline-block;
     background-color: color(grey,dark);
     color: color(white);
-    padding: $spacing-xs/2 $spacing-xs;
+    padding: spacing(xs)/2 spacing(xs);
     white-space: nowrap;
     vertical-align: baseline;
     line-height: 1;
@@ -37,5 +37,5 @@
 // =============================================
 
 .tag--badge {
-    border-radius: $spacing-xl;
+    border-radius: spacing(xl);
 }

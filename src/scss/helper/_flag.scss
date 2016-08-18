@@ -23,11 +23,11 @@
 
 @mixin flag--gutter {
     &:not([class*="--reverse"]) > *:first-child {
-        margin-right: $spacing;
+        margin-right: spacing();
     }
 
     &[class*="--reverse"] > *:first-child {
-        margin-left: $spacing;
+        margin-left: spacing();
     }
 }
 
