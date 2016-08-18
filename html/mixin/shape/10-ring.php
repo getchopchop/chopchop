@@ -1,6 +1,6 @@
 <?php /*
 Title: Ring Mixin
-Class: @include ring(color(black), color(grey), 16px, 3px);
+Class: @include ring($foreground-color, $background-color, $size, $thickness);
 */ ?>
 
 <span class="cc-shape-ring"></span>

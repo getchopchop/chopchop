@@ -155,8 +155,8 @@ abbr[title="Required"],
 }
 
 .has-error .validation-advice {
-    background-color: #fcc;
-    border-color: red;
+    background-color: color(error, light);
+    border-color: color(error);
 }
 
 
