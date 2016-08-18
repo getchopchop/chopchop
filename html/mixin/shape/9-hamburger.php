@@ -1,6 +1,6 @@
 <?php /*
 Title: Hamburger Mixin
-Class: @include hamburger(color(black), 18px, 24px, 2px);
+Class: @include hamburger($color, $size, $size2, $thickness);
 */ ?>
 
 <span class="cc-shape-hamburger"></span>
