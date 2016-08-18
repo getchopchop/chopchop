@@ -37,9 +37,13 @@
 // Grid gutter Y
 // =============================================
 
-@mixin grid-gutter-y($gap: $gutter-y) {
+@mixin grid-gutter-y($gap: $gutter-y, $edge: spacing()) {
     > * {
         margin-bottom: $gap;
+
+        @supports(-ms-accelerator:true) {
+            margin-bottom: $edge;
+        }
     }
 }
 
