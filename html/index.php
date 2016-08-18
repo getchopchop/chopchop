@@ -31,7 +31,7 @@
 
         <div class="site-wrapper cc-site-wrapper">
 
-            <nav class="cc-nav" id="cc-nav" data-cc-cascade="cc-menu-trigger cc-overlay">
+            <nav class="cc-nav" id="cc-nav" data-cc-cascade="cc-menu-trigger">
                 <div class="block-content site-navigation__content">
                     <?php include('inc/nav.php'); ?>
                 </div>
@@ -55,6 +55,5 @@
 
     <?php include('inc/footer.php'); ?>
     
-    <div id="cc-overlay" class="cc-overlay overlay" data-cc-action="deactivate" data-cc-target="cc-nav"></div>
 </body>
 </html>
