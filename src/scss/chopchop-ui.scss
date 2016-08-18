@@ -137,13 +137,22 @@
     }
 
     ol {
-        margin: 5px 0 20px 25px;
+        margin: 5px 0 20px 15px;
         padding: 0;
         font-weight: bold;
         font-size: 14px;
-
+        list-style: none;
+        counter-reset: section;
+        
+        li::before {
+            counter-increment: section;
+            content: counters(section,".") ". ";
+            font-size: $font-size-sm;
+            color: color(grey);
+        }
+        
         ol {
-            margin-left: 20px;
+            margin-left: 12px;
             font-weight: normal;
         }
     }
@@ -166,6 +175,15 @@
 .cc-section {
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+
+// =============================================
+// Overlay
+// =============================================
+
+.cc-overlay {
+    opacity: 0;
 }
 
 

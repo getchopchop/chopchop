@@ -23,12 +23,11 @@
             </ul>
         </header>
 
-        <div class="cc-toolbar">
-        </div>
+        <div class="cc-toolbar"></div>
 
         <div class="site-wrapper cc-site-wrapper">
 
-            <nav class="cc-nav" id="cc-nav" data-cc-cascade="cc-menu-trigger">
+            <nav class="cc-nav" id="cc-nav" data-cc-cascade="cc-menu-trigger cc-overlay">
                 <div class="block-content site-navigation__content">
                     <?php include('inc/nav.php'); ?>
                 </div>
@@ -51,6 +50,7 @@
     <?php endif; ?>
 
     <?php include('inc/footer.php'); ?>
-
+    
+    <div id="cc-overlay" class="cc-overlay overlay" data-cc-action="deactivate" data-cc-target="cc-nav"></div>
 </body>
 </html>
