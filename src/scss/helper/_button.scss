@@ -19,7 +19,7 @@
     width: auto;
     background-color: color(grey,darker);
     color: color(white);
-    fill: color(white);
+    fill: currentColor;
 
     &:hover,
     &:focus {
@@ -64,7 +64,6 @@
     color: color(black);
     font-weight: normal;
     text-decoration: underline;
-    fill: color(black);
 
     &:hover,
     &:focus {
@@ -97,7 +96,6 @@
     cursor: not-allowed;
     background-color: color(grey);
 	color: color(grey,dark);
-	fill: color(grey,dark);
 
     &:hover,
     &:focus {
