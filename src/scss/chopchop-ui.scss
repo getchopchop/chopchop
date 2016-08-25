@@ -1,6 +1,7 @@
 @import "var";
 @import "helper/function";
 @import "helper/breakpoint";
+@import "helper/shape";
 
 
 // =============================================
@@ -219,4 +220,49 @@
 
 .has-cc-nav-active .cc-main-content {
     margin-left: 200px;
+}
+
+
+// =============================================
+// Shape demos
+// =============================================
+
+.cc-shape-circle {
+    @include circle;
+}
+
+.cc-shape-square {
+    @include square;
+}
+
+.cc-shape-triangle {
+    @include triangle;
+}
+
+.cc-shape-chevron {
+    @include chevron;
+}
+
+.cc-shape-minus {
+    @include minus;
+}
+
+.cc-shape-plus {
+    @include plus;
+}
+
+.cc-shape-cross {
+    @include cross;
+}
+
+.cc-shape-tick {
+    @include tick;
+}
+
+.cc-shape-hamburger {
+    @include hamburger;
+}
+
+.cc-shape-ring {
+    @include ring;
 }
