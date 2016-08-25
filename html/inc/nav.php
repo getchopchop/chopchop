@@ -16,7 +16,7 @@
                              continue;
                         }
                     ?>
-                    <li class="level1"><a href="/html/<?php echo $toplevel; ?>/#section-<?= $entry ?>"><?= str_replace('-', ' ', ucwords($entry)) ?></a></li>
+                    <li class="level1"><a href="/html/<?php echo $toplevel; ?>/<?php if($toplevel != 'template') : ?>#section-<?php endif; ?><?= $entry ?>"><?= str_replace('-', ' ', ucwords($entry)) ?></a></li>
                     <?php } ?>
                 </ol>
             </li>
