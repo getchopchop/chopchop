@@ -266,3 +266,19 @@
 .cc-shape-ring {
     @include ring;
 }
+
+
+// =============================================
+// Overlay override
+// =============================================
+
+.cc-overlay {
+    position: relative;
+    height: 50vh;
+
+    .overlay {
+        top: 200px;
+        display: block;
+        position: absolute;
+    }
+}

@@ -1,5 +1,7 @@
 <?php /*
 Title: Modal
+Class: .modal
+Description: The modal is hidden off screen by default, use the modal toggles to show.
 */ ?>
 
 <div class="modal" id="modal" data-cc-cascade="overlay" data-cc-trigger-on="direct-only" data-cc-action="deactivate" data-cc-target="modal">
