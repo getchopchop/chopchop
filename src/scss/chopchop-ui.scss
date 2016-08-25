@@ -181,6 +181,15 @@
 
 
 // =============================================
+// Title container
+// =============================================
+
+.cc-title-container {
+    margin-bottom: 20px;
+}
+
+
+// =============================================
 // Title
 // =============================================
 
@@ -190,7 +199,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 5px;
-    margin-bottom: 20px;
     border-bottom: 2px solid color(grey,light);
 
     * {
@@ -213,6 +221,20 @@
     }
 }
 
+
+// =============================================
+// Description
+// =============================================
+
+.cc-title-desc {
+    padding: 10px;
+    border: 2px solid color(grey,lighter);
+    border-top: 0;
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
 
 // =============================================
 // Move content across when nav active

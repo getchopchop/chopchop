@@ -200,7 +200,7 @@
         }
 
         public function printTitle() {
-            $title = '';
+            $title = '<div class="cc-title-container">';
             if(!$this->printTitle) {
                 return '';
             }
@@ -227,6 +227,7 @@
             if($this->Description) {
                 $title .= '<div class="cc-title-desc"><p>' . $this->Description . '</p></div>';
             }
+            $title .= "</div>";
             return $title;
         }
 
