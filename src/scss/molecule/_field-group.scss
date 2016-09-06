@@ -4,12 +4,12 @@
 
 .field-group,
 %field-group {
-	margin-bottom: $spacing;
-    margin: $spacing 0;
+	margin-bottom: spacing();
+    margin: spacing() 0;
 
     .field-group {
-        margin-top: $spacing-xs;
-        margin-bottom: $spacing-xs;
+        margin-top: spacing(xs);
+        margin-bottom: spacing(xs);
     }
 
     &:first-child {
@@ -62,7 +62,7 @@
     justify-content: flex-start;
 
     > * {
-        margin-right: $spacing-sm;
+        margin-right: spacing(sm);
         width: auto;
         max-width: none;
         flex-grow: initial;

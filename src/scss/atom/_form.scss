@@ -12,7 +12,7 @@ textarea {
 }
 
 label {
-	margin-bottom: $spacing-xs;
+	margin-bottom: spacing(xs);
 
 	&.required::after {
 		content: "*";
@@ -25,7 +25,7 @@ select[multiple=multiple] {
 	background-color: color(white);
 	border: 1px solid color(grey);
 	border-radius: 0;
-	padding: $spacing-xs $spacing-sm;
+	padding: spacing(xs) spacing(sm);
 	width: 100%;
 
 	&:focus {
@@ -130,7 +130,7 @@ abbr[title="Required"],
 .required::after {
     content: "*";
     color: red;
-    margin-left: $spacing-xs;
+    margin-left: spacing(xs);
 }
 
 .valid {
@@ -155,8 +155,8 @@ abbr[title="Required"],
 }
 
 .has-error .validation-advice {
-    background-color: #fcc;
-    border-color: red;
+    background-color: color(error, light);
+    border-color: color(error);
 }
 
 

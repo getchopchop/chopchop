@@ -5,7 +5,7 @@
 .flag,
 %flag {
     @include flag;
-    margin-bottom: $spacing;
+    margin-bottom: spacing();
 }
 
 

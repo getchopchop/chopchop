@@ -4,6 +4,7 @@
     error_reporting(E_ALL);
 
     define('TEMPLATE_PATH', realpath(__DIR__ . '/../') . '/');
+    define('DS', DIRECTORY_SEPARATOR);
 
     function get($location, $options=array()) {
         if(substr($location, -1) === '/') {
@@ -35,9 +36,9 @@
         echo get($location, $options);
     }
 
-    function printSvg($hash, $class = '', $location = 'sprite.symbol.svg') {
+    function printSvg($folder = 'general', $hash, $class = '') {
         echo '<svg class="icon ' . $class . '">
-            <use xlink:href="' . getUrl('build/img/icons/symbol/svg/' . $location) . '#' . $hash  . '" />
+            <use xlink:href="' . getUrl('build/img/icons/' . $folder . '/symbol/sprite-symbol.svg') . '#' . $hash  . '" />
         </svg>';
     }
 
@@ -140,7 +141,7 @@
     }
 
     function title($title, $class, $description='') {
-	    return array(
+        return array(
             'title'=>$title,
             'class'=>$class,
             'description'=>$description
@@ -199,13 +200,13 @@
         }
 
         public function printTitle() {
-            $title = '';
+            $title = '<div class="cc-title-container">';
             if(!$this->printTitle) {
                 return '';
             }
 
             if($this->Title) {
-                $title .= '<hgroup class="cc-title cc-title--actions"><div class="title__titles">';
+                $title .= '<hgroup class="cc-title cc-title--actions" id="section-' . str_replace(' ', '-', strtolower($this->Title)) . '"><div class="title__titles">';
             }
             if($this->Title) {
                 $title .= '<h2 class="cc-title__main">' . $this->Title;
@@ -226,6 +227,7 @@
             if($this->Description) {
                 $title .= '<div class="cc-title-desc"><p>' . $this->Description . '</p></div>';
             }
+            $title .= "</div>";
             return $title;
         }
 
@@ -237,4 +239,104 @@
         }
     }
 
-    $toplevels = array('global', 'mixin', 'utility', 'atom', 'molecule', 'organism', 'template');
+class Section
+{
+    public $children = array();
+
+    public static function get($location, $options) {
+        $section = new Section($location);
+        return $section->getContent($options);
+    }
+
+    public function __construct($location) {
+        $this->location = $location;
+        $path = TEMPLATE_PATH . $this->location;
+
+        $this->paths = $this->getContentPaths($path);
+
+        if($children = $this->loadChildren($path)) {
+            $this->children = $children;
+        }
+
+    }
+
+    public function getContentPaths($path) {
+        if(is_dir($path)) {
+            return false;
+        }
+
+        if(file_exists($path)) {
+            return array($path);
+        }
+
+        $last = basename($path);
+        $path = dirname($path) . DS . '*' . $last . '.php';
+        $paths = array_filter(glob($path) , function($path) use ($last) {
+            return preg_match("/^(\d+\-)?" . $last . "/", basename($path, '.php'));
+        });
+
+        if(!empty($paths)) {
+            return $paths;
+        }
+
+        throw new Exception('No content in path: ' . $path);
+    }
+
+    public function loadChildren($path) {
+        $children = array();
+        if(!is_dir($path)) {
+            return false;
+        }
+        $paths = glob($path . DS . '*');
+        foreach($paths as $path) {
+            $children[] = new Section($this->pathToLocation($path)); 
+        }
+        return $children;
+    }
+
+    protected function pathToLocation($path) {
+        if (substr($path, 0, strlen(TEMPLATE_PATH)) == TEMPLATE_PATH) {
+            return substr($path, strlen(TEMPLATE_PATH));
+        }
+        return $path;
+    }
+
+    public function getContent($options) {
+        $contents = '<section id="section-'.basename($this->location, '.php').'" >';
+        foreach($this->children as $child) {
+            $contents .= $child->getContent($options);
+        }
+        if($this->paths) {
+            $contents .= $this->getContents($this->paths, $options);
+        }
+        $contents .= '</section>';
+        return $contents;
+    }
+
+    protected function getContents($paths, $options) {
+        $printContainer = false;
+        ob_start();
+        foreach($paths as $path) {
+            $_t = new TemplateHelper(parseComments(file_get_contents($path)), $path, $options);
+            $printContainer |= $_t->shouldPrintContainer();
+            $classes = array('cc-section');
+            if($_t->Section){
+                $classes[] =  $_t->Section;
+            }
+            if($printContainer) {
+                echo '<section class="'.implode(' ', $classes).'"><div class="u-container">';
+            }
+
+            echo $_t->printTitle();
+            include $path;
+
+            if($printContainer) {
+                echo '</div></section>';
+            }
+        }
+        $contents .= ob_get_contents();
+        ob_end_clean();
+        return $contents;
+    }
+}
+    $toplevels = array('branding', 'atom', 'molecule', 'organism', 'template', 'helper', 'utility', );

@@ -1,0 +1,43 @@
+// =============================================
+// Color
+// =============================================
+
+@function color($color, $tone: 'base') {
+    @return map-get(map-get($colors, $color), $tone);
+}
+
+
+// =============================================
+// Screen
+// =============================================
+
+@function screen($screen, $type: 'base') {
+    @return map-get(map-get($screens, $screen), $type);
+}
+
+
+// =============================================
+// Container
+// =============================================
+
+@function container($value: 'base') {
+    @return map-get($containers, $value);
+}
+
+
+// =============================================
+// Section
+// =============================================
+
+@function section($value: 'base') {
+    @return map-get($sections, $value);
+}
+
+
+// =============================================
+// Spacing
+// =============================================
+
+@function spacing($value: 'base') {
+    @return map-get($spacing, $value);
+}

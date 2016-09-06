@@ -30,27 +30,13 @@ html {
 
 ul, ol, p {
     margin-top: 0;
-}
-
-p {
-    margin-bottom: $spacing-lg;
+    margin-bottom: spacing();
 }
 
 ul, ol {
-	margin-bottom: $spacing-xl;
-	padding-left: $spacing-xl;
-
 	ul, ol {
 		margin-bottom: 0;
 	}
-}
-
-blockquote {
-    border-left: 3px solid color(grey,light);
-    padding-left: calc(#{$spacing-xl} - 3px);
-    margin-top: $spacing-xl;
-    margin-bottom: $spacing-xl;
-    margin-left: 0;
 }
 
 strong, b {

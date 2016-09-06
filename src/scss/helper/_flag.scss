@@ -1,0 +1,41 @@
+// =============================================
+// Flag
+// =============================================
+
+@mixin flag {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+// =============================================
+// Flag Reversed
+// =============================================
+
+@mixin flag--reverse {
+    flex-direction: row-reverse;
+}
+
+
+// =============================================
+// Flag Gutter
+// =============================================
+
+@mixin flag--gutter {
+    &:not([class*="--reverse"]) > *:first-child {
+        margin-right: spacing();
+    }
+
+    &[class*="--reverse"] > *:first-child {
+        margin-left: spacing();
+    }
+}
+
+
+// =============================================
+// Flag Centered
+// =============================================
+
+@mixin flag--center {
+    align-items: center;
+}

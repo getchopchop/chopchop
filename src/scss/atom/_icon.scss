@@ -4,8 +4,8 @@
 
 .icon,
 %icon {
-    height: $spacing;
-    width: $spacing;
+    height: spacing();
+    width: spacing();
 }
 
 
@@ -15,8 +15,8 @@
 
 .icon--sm,
 %icon--sm {
-    height: $spacing-sm;
-    width: $spacing-sm;
+    height: spacing(sm);
+    width: spacing(sm);
  }
 
 
@@ -26,8 +26,8 @@
 
 .icon--lg,
 %icon--lg {
-    height: $spacing-lg;
-    width: $spacing-lg;
+    height: spacing(lg);
+    width: spacing(lg);
 }
 
 
@@ -37,13 +37,13 @@
 
 .icon--payment,
 %icon--payment {
-    width: $spacing*1.5;
+    width: spacing()*1.5;
 
     &.icon--sm {
-        width: $spacing-sm*1.5;
+        width: spacing(sm)*1.5;
     }
 
     &.icon--lg {
-        width: $spacing-lg*1.5;
+        width: spacing(lg)*1.5;
     }
 }

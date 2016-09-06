@@ -9,21 +9,21 @@ h1, h2, h3, h4, h5, h6,
 	line-height: $line-height-sm;
 	font-weight: $bold;
     margin-top: 0;
-    margin-bottom: $spacing-xs;
+    margin-bottom: spacing(xs);
 	// font-smoothing: antialiased;
 }
 
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
 * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6 {
-	margin-top: $spacing-lg;
+	margin-top: spacing(xl);
 }
 
-@each $heading-scale, $value in $heading-scales {
-	@if $heading-scale == base {
-		@include heading-scale(heading-scale($heading-scale, start), heading-scale($heading-scale, scale));
+@each $key, $value in $type-scales {
+	@if $key == base {
+		@include heading-scale($value);
 	} @else {
-		@include breakpoint(screen($heading-scale)) {
-    		@include heading-scale(heading-scale($heading-scale, start), heading-scale($heading-scale, scale));
+		@include breakpoint(screen($key)) {
+    		@include heading-scale($value);
 		}
 	}
 }

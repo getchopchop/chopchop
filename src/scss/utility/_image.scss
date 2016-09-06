@@ -12,7 +12,7 @@
 
 figure {
     margin: 0;
-    margin-bottom: $spacing-lg;
+    margin-bottom: spacing(lg);
 
     img {
         @extend %u-img-responsive;

@@ -2,60 +2,30 @@
 // Section
 // =============================================
 
-.u-section,
-%u-section {
-    margin-top: 8vh !important;
-    margin-bottom: 8vh !important;
-}
-
-.u-section-sm,
-%u-section-sm {
-    margin-top: 6vh !important;
-    margin-bottom: 6vh !important;
-}
-
-.u-section-lg,
-%u-section-lg {
-    margin-top: 12vh !important;
-    margin-bottom: 12vh !important;
-}
-
-
-// =============================================
-// Top Only
-// =============================================
-
-.u-section-top,
-%u-section-top {
-    margin-top: 8vh !important;
-}
-
-.u-section-sm-top,
-%u-section-sm-top {
-    margin-top: 6vh !important;
-}
-
-.u-section-lg-top,
-%u-section-lg-top {
-    margin-top: 12vh !important;
-}
-
-
-// =============================================
-// Bottom Only
-// =============================================
-
-.u-section-bottom,
-%u-section-bottom {
-    margin-bottom: 8vh !important;
-}
-
-.u-section-sm-bottom,
-%u-section-sm-bottom {
-    margin-bottom: 6vh !important;
-}
-
-.u-section-lg-bottom,
-%u-section-lg-bottom {
-    margin-bottom: 12vh !important;
+@each $key, $value in $sections {
+    @if $key == base {
+        .u-section,
+        %u-section {
+            &-top {
+                margin-top: $value;
+            }
+            &-bottom {
+                margin-bottom: $value;
+            }
+            @extend %u-section-top;
+            @extend %u-section-bottom;
+        }
+    } @else {
+        .u-section-#{$key},
+        %u-section-#{$key} {
+            &-top {
+                margin-top: $value;
+            }
+            &-bottom {
+                margin-bottom: $value;
+            }
+            @extend %u-section-#{$key}-top;
+            @extend %u-section-#{$key}-bottom;
+        }
+    }
 }

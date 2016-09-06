@@ -6,18 +6,16 @@
     margin-bottom: 0;
 }
 
-.u-block {
-    padding: $spacing;
-
-    &-sm {
-        padding: $spacing-sm;
-    }
-
-    &-lg {
-        padding: $spacing-lg;
-    }
-
-    &-xl {
-        padding: $spacing-xl;
+@each $key, $value in $spacing {
+    @if $key == base {
+        .u-block,
+        %u-block {
+            padding: $value;
+        }
+    } @else {
+        .u-block-#{$key},
+        %u-block-#{$key} {
+            padding: $value;
+        }
     }
 }

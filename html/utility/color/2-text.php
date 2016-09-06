@@ -21,10 +21,10 @@ Container: true
                 $previous_group = $group;
             }
             ?>
-            <div class="g-col-xs-6 g-col-sm-4 g-col-md-3 g-col-xl-2">
-                <div class="card cc-card--swatch">
+            <div class="g-col-xs-6 g-col-sm-4 g-col-lg-3">
+                <div class="card">
                     <div class="u-block">
-                        <h3 class="<?php echo str_replace('u-fill', 'u-text', $class_); ?>">Hello World</h3>
+                        <h4 class="<?php echo str_replace('u-fill', 'u-text', $class_); ?>">Hello World</h4>
                     </div>
                     <div class="card__footer">
                         <small><code>.<?php echo $class_ ?></code></small>
