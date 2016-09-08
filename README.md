@@ -2,17 +2,20 @@
 
 ## Atomic
 - atoms – high level elements such as inputs, headings
-- molecules – something containing multiple atoms or a very reusable flexible pattern
-- organism – something very specific to it's use that contains multiple molecules
+- molecules – something containing multiple atoms or a very reusable flexible
+pattern
+- organism – something very specific to it's use that contains multiple
+molecules
 
 ## Get Started
 
 To get going with it here are the commands.
 
-_You can copy this entire block into the command line and it will process it all for you._
+_You can copy this entire block into the command line and it will process it
+all for you._
 ```
 cd ~/sites
-git clone git@github.com:getchopchop/chopchop.git .
+git clone git@github.com:getchopchop/chopchop.git chopchop/public_html
 cd chopchop/public_html
 npm i
 npm run build
@@ -20,24 +23,37 @@ npm run build
 
 ## Working on the project
 
-_Make sure you're running the commands from the project root where the gulpfile.js lives._  
+_Make sure you're running the commands from the project root where the
+gulpfile.js lives._  
 
 ```
 cd ~/Sites/chopchop/public_html
 ```
 
-### Gulp Tasks
+### NPM Scripts
 
-- `npm run watch` or `./node_modules/.bin/gulp`  
-Runs gulp build and once finished starts gulp watch.
+`npm run build`  
+Builds all assets.
+- Merges SVGs into a sprite
+- JSHint javascript files
+- Compile sass to css
+- Sass sourcemaps
+- Autoprefixes css
+- Combines media queries in css
+- Moves processed to build directory
 
-- `npm run watch-dev` or `./node_modules/.bin/gulp --dev`  
-Runs gulp build and once finished starts gulp watch. Both are run in development mode (linting & browsersync).
+*Errors will log to the command line and not fail the build*
 
-- `npm run build` or `./node_modules/.bin/gulp build`  
-Runs _clean_ to destroy the build directory, then runs _scss_, _js_, _vendor_, _fonts_, _img_ to re-compile the build directory.
+`npm run build:production`  
+Builds all assets in production mode. Does the same as above with the following
+differences
+- Minifies scripts and styles
+- Compresses images
+- Disables sourcemaps and JSHint
 
-- `npm run build-production` or `./node_modules/.bin/gulp build --production`  
-Runs _clean_ to destroy the build directory, then runs _scss_, _js_, _vendor_, _fonts_, _img_ in production mode (HARD Errors, minifies & other optimisations) to re-compile the build directory. This is the task which the CI task uses.
+*Errors will fail the build in production mode for the benefit of CI
+pipelines*
 
-_HARD Errors means an error in the task (sass / js etc) will cause the build to fail. By default errors are logged to the console but would not break the build._
+`npm run watch`  
+Builds all assets (Not in production mode), then watches directories for
+changes.

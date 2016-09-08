@@ -1,251 +1,253 @@
-// =============================================
-// Project Settings
-// edit these variables to suit your project
-// **this and the options object are the only sections you should need to edit
-// =============================================
-
-var project = {
-    name: 'chopchop',
-    sourceDirectory: './src',
-    distDirectory: './build',
-    stylesDirectory: 'scss',
-    scriptsDirectory: 'js',
-    imagesDirectory: 'img',
-    iconsDirectory: '/img/icons',
-    vendorDirectory: 'vendor'
+/**
+ * gulpfile.js
+ *
+ * Available tasks:
+ *    `gulp`
+ *    `gulp watch`
+ *
+ * Modules:
+ *     gulp                       : The streaming build system.
+ *     gulp-util                  : Utility functions for gulp plugins.
+ *     fs                         : File System.
+ *     del                        : Delete files and folders.
+ *     path                       : Node.JS path module.
+ *     merge-stream               : Create a stream that emits events from
+ *                                  multiple other streams.
+ *     gulp-gulp-clip-empty-files : Clip empty files from stream.
+ *     gulp-changed               : Only pass through changed files.
+ *     gulp-imagemin              : Minify PNG, JPEG, GIF and SVG images.
+ *     gulp-svg-sprite            : Reads in a bunch of SVG files, optimizes
+ *                                  them and creates SVG sprites and CSS
+ *                                  resources in various flavours.
+ *     gulp-jshint                : JSHint plugin for Gulp.
+ *     gulp-uglify                : Minify files with UglifyJS.
+ *     gulp-sass                  : Gulp plugin for sass.
+ *     gulp-sourcemaps            : Source map support for Gulp.js.
+ *     gulp-autoprefixer          : Prefix CSS.
+ *     gulp-combine-mq            : Gulp plugin for node-combine-mq.
+ *     gulp-cssnano               : Minify CSS with cssnano.
+ */
+var gulp = require('gulp');
+var $ = {
+    util          : require('gulp-util'),
+    fs            : require('fs'),
+    del           : require('del'),
+    path          : require('path'),
+    mergeStream   : require('merge-stream'),
+    clipEmptyFiles: require('gulp-clip-empty-files'),
+    changed       : require('gulp-changed'),
+    imageMin      : require('gulp-imagemin'),
+    svgSprite     : require('gulp-svg-sprite'),
+    jsHint        : require('gulp-jshint'),
+    uglify        : require('gulp-uglify'),
+    sass          : require('gulp-sass'),
+    sourcemaps    : require('gulp-sourcemaps'),
+    autoPrefixer  : require('gulp-autoprefixer'),
+    combineMq     : require('gulp-combine-mq'),
+    cssNano       : require('gulp-cssnano')
 };
 
+/**
+ * Config
+*/
+var root = {
+    src: './src',
+    dest: './build'
+};
 
-// =============================================
-// Project Options
-// edit these variables to suit your project
-// **this and the project object are the only sections you should need to edit
-// =============================================
+var tasks = {
+    clean: {
+    },
+    vendor: {
+        src: 'vendor',
+        dest: 'vendor'
+    },
 
-var option = {
-    autoprefixer: [ 'last 2 versions' ],
-    cssNano: {
-        zindex: false,
-        reduceIdents: false,
-        mergeIdents: false,
-        discardUnused: false
+    images: {
+        src: 'img',
+        dest: 'img',
+        exclude: 'img/icons',
+        extensions: [
+            'jpg',
+            'png',
+            'svg',
+            'gif'
+        ],
+        plugins: {
+            imageMin: {
+                optimizationLevel: 3,
+                progressive: true,
+                interlaced: true
+            }
+        }
     },
-    imageOptimisation: {
-        optimizationLevel: 3,           // PNG (Between 0 - 7)
-        progressive: true,              // JPG
-        interlaced: true                // GIF
+
+    svgSprite: {
+        src: 'img/icons',
+        dest: 'img/icons',
+        extensions: [
+            'svg'
+        ],
+        plugins: {
+            svgSprite: {
+                shape: {
+                    dest: 'svg'
+                },
+                mode: {
+                    view: false,
+                    symbol: {
+                        sprite: 'sprite-symbol.svg'
+                    }
+                }
+            }
+        }
     },
-    svgSpriteConfig: {
-        shape: {
-            dest: 'svg'    // Keep the intermediate files
-        },
-        mode: {
-            view: false,
-            symbol: {
-                sprite: 'sprite-symbol.svg'
+
+    js: {
+        src: 'js',
+        dest: 'js',
+        extensions: [
+            'js'
+        ]
+    },
+
+    css: {
+        src: 'scss',
+        dest: 'css',
+        extensions: [
+            'scss'
+        ],
+        plugins: {
+            autoPrefixer: [
+                'last 2 versions'
+            ],
+            cssNano: {
+                zindex: false,
+                reduceIdents: false,
+                mergeIdents: false,
+                discardUnused: false
             }
         }
     }
 };
 
-
-// =============================================
-// Dependencies
-// =============================================
-
-var gulp = require('gulp' ),
-    nodeModule = {
-        util:               require( 'gulp-util' ),
-        del:                require( 'del' ),
-        changed:            require( 'gulp-changed' ),
-        imageMin:           require( 'gulp-imagemin' ),
-        sass:               require( 'gulp-sass' ),
-        autoPrefixer:       require( 'gulp-autoprefixer' ),
-        clipEmptyFiles:     require( 'gulp-clip-empty-files' ),
-        combineMq:          require( 'gulp-combine-mq' ),
-        jsHint:             require( 'gulp-jshint' ),
-        cssNano:            require( 'gulp-cssnano' ),
-        uglify:             require( 'gulp-uglify' ),
-        sourcemaps:         require( 'gulp-sourcemaps' ),
-        svgSprite:          require('gulp-svg-sprite'),
-        fs:                 require( 'fs' ),
-        path:               require( 'path' ),
-        runSequence:        require( 'run-sequence' )
-    };
-
-
-// =============================================
-// Environment Variables
-// =============================================
-
-var environment = {
-    development: nodeModule.util.env.dev,
-    production: nodeModule.util.env.production
-};
-
-
-// =============================================
-// Function: getFolders
-// =============================================
-
-function getFolders( directory ) {
-    return nodeModule.fs.readdirSync( directory )
-        .filter( function( file ) {
-            return nodeModule.fs.statSync( nodeModule.path.join( directory, file ) ).isDirectory();
-        } );
+/**
+ * Returns list of sub folders within a directory
+ * @param {string} str - path to directory
+ * @return {array} array
+*/
+function getFolders(dir) {
+    return $.fs.readdirSync(dir)
+        .filter(function(file) {
+            return $.fs.statSync($.path.join(dir, file)).isDirectory();
+        });
 }
 
+/**
+ * Deletes dist directory
+*/
+function clean() {
+    return $.del([
+        root.dest
+    ]);
+}
 
-// =============================================
-// VENDOR `gulp vendor`
-// moves files from vendor to build directory
-// =============================================
+/**
+ * Moves vendor files to the dist directory
+*/
+function vendor() {
+    return gulp.src(root.src + '/' + tasks.vendor.src + '/**/*')
+        .pipe($.changed(root.dest + '/' + tasks.vendor.dest))
+        .pipe(gulp.dest(root.dest + '/' + tasks.vendor.dest + '/'));
+}
 
-gulp.task( 'vendor', function() {
-    return gulp.src( project.sourceDirectory + '/' + project.vendorDirectory + '/**/*' )
-        .pipe( nodeModule.changed( project.distDirectory + '/' + project.vendorDirectory ) )
-        .pipe( gulp.dest( project.distDirectory + '/' + project.vendorDirectory ) );
-} );
+/**
+ * Minifies images and moves processed files to the dist directory.
+*/
+function images() {
+    return gulp.src([
+            root.src + '/' + tasks.images.src + '/**/*',
+            '!' + root.src + '/' + tasks.images.exclude + '/**/*'
+        ])
+        .pipe($.changed(root.dest + '/' + tasks.images.dest))
+        .pipe($.util.env.production ? $.imageMin(tasks.images.plugins.imageMin) : $.util.noop())
+        .pipe(gulp.dest(root.dest + '/' + tasks.images.dest + '/'));
+}
 
-gulp.task('vendor-scripts', function() {
-    return gulp.src(project.sourceDirectory + '/' + project.vendorDirectory + '/**/*.js')
-    .pipe(environment.production ? nodeModule.uglify() : nodeModule.util.noop())
-    .pipe(gulp.dest(project.distDirectory + '/' + project.vendorDirectory));
-});
+/**
+ * Merges SVGs into sprite and moves processed files to the dist directory
+*/
+function svgSprite() {
 
-gulp.task('vendor-styles', function() {
-    return gulp.src(project.sourceDirectory + '/' + project.vendorDirectory + '/**/*.css')
-    .pipe(environment.production ? nodeModule.cssNano({discardUnused: {fontFace: false}}) : nodeModule.util.noop())
-    .pipe(gulp.dest(project.distDirectory + '/' + project.vendorDirectory));
-});
+    var folders = getFolders(root.src + '/' + tasks.svgSprite.src);
 
-gulp.task('vendor-images', function() {
-    return gulp.src(project.sourceDirectory + '/' + project.vendorDirectory + '/**/*')
-    .pipe(environment.production ? nodeModule.imageMin(option.imageOptimisation) : nodeModule.util.noop())
-    .pipe(gulp.dest(project.distDirectory + '/' + project.vendorDirectory));
-});
+    var streams = folders.map(function(folder) {
+        return gulp.src($.path.join(root.src + '/' + tasks.svgSprite.src + '/', folder, '/**/*.' + tasks.svgSprite.extensions))
+            .pipe($.svgSprite(tasks.svgSprite.plugins.svgSprite))
+            .pipe(gulp.dest(root.dest + '/' + tasks.svgSprite.dest + '/' + folder + '/'));
+    });
 
+    return $.mergeStream(streams);
+}
 
-// =============================================
-// SVG Sprite `gulp svg-sprite`
-// Optimises and merges SVG's into sprite
-// =============================================
+/**
+ * JSHint and minify javascript files and moves processed files to the dist
+ directory
+*/
+function js() {
+    return gulp.src(root.src + '/' + tasks.js.src +  '/**/*.' + tasks.js.extensions)
+        .pipe($.jsHint())
+        .pipe($.jsHint.reporter('default'))
+        .pipe($.util.env.production ? $.uglify() : $.util.noop())
+        .pipe(gulp.dest(root.dest + '/' + tasks.js.dest + '/'));
+}
 
-gulp.task( 'svg-sprite', function() {
-    var folders = getFolders( project.sourceDirectory + '/' + project.iconsDirectory + '/' );
+/**
+ * Clips empty files, Sourcemaps (if not production), AutoPrefixes css, combines
+ * media queries, minifes css and moves processed files to the dist directory
+*/
+function css() {
+    return gulp.src(root.src + '/' + tasks.css.src + '/**/*.' + tasks.css.extensions)
+        .pipe($.clipEmptyFiles())
+        .pipe(!$.util.env.production ? $.sourcemaps.init() : $.util.noop())
+        .pipe(!$.util.env.production ? $.sass.sync().on('error', $.sass.logError) : $.util.noop())
+        .pipe($.util.env.production ? $.sass.sync() : $.util.noop())
+        .pipe($.autoPrefixer(tasks.css.plugins.autoPrefixer))
+        .pipe(!$.util.env.production ? $.sourcemaps.write() : $.util.noop())
+        .pipe($.util.env.production ? $.combineMq() : $.util.noop())
+        .pipe($.util.env.production ? $.cssNano(tasks.css.plugins.cssNano) : $.util.noop())
+        .pipe(gulp.dest(root.dest + '/' + tasks.css.dest + '/'));
+}
 
-    return folders.map( function( folder ) {
-        return gulp.src( project.sourceDirectory + '/' + project.iconsDirectory + '/' + folder + '/**/*.svg' )
-            .pipe( nodeModule.svgSprite( option.svgSpriteConfig ) )
-            .pipe( gulp.dest( project.distDirectory + '/' + project.iconsDirectory + '/' + folder + '/' ) );
-    } );
-} );
+/**
+ * Watches files for changes
+*/
+function watch() {
+    gulp.watch(root.src + '/' + tasks.vendor.src + '/**/*', vendor);
+    gulp.watch(root.src + '/' + tasks.images.src + '/**/*', images);
+    gulp.watch(root.src + '/' + tasks.svgSprite.src + '/**/*', svgSprite);
+    gulp.watch(root.src + '/' + tasks.js.src + '/**/*', js);
+    gulp.watch(root.src + '/' + tasks.css.src + '/**/*', css);
+}
 
+/**
+ * Combines clean, vendor, images, svgSprite, js and css tasks.
+*/
+var build = gulp.series(
+    clean,
+    gulp.parallel(
+        vendor,
+        gulp.series(
+            images,
+            svgSprite
+        ),
+        js,
+        css
+    )
+);
 
-// =============================================
-// IMG `gulp img`
-// minifys images
-// =============================================
-
-gulp.task( 'img', function() {
-    return gulp.src( [
-        project.sourceDirectory + '/' + project.imagesDirectory + '/**/*',
-        '!' + project.sourceDirectory + '/' + project.iconsDirectory + '/**/*'
-    ] )
-        .pipe( nodeModule.changed( project.distDirectory + '/' + project.imagesDirectory ) )
-        .pipe( environment.production ? nodeModule.imageMin( option.imageOptimisation ) : nodeModule.util.noop() )
-        .pipe( gulp.dest( project.distDirectory + '/' + project.imagesDirectory ) );
-} );
-
-
-// =============================================
-// JS `gulp js`
-// compiles js, Jshint, Minify if `--production`
-// =============================================
-
-gulp.task( 'js', function() {
-    return gulp.src( project.sourceDirectory + '/' + project.scriptsDirectory + '/**/*.js' )
-        .pipe( nodeModule.jsHint() )
-        .pipe( nodeModule.jsHint.reporter( 'default' ) )
-        .pipe( environment.production ? nodeModule.uglify() : nodeModule.util.noop() )
-        .pipe( gulp.dest( project.distDirectory + '/' + project.scriptsDirectory ) );
-} );
-
-
-// =============================================
-// CSS `gulp css`
-// compiles scss to css, autoprefixer, combines media queries and minifies if `--production`
-// =============================================
-
-gulp.task( 'scss', function() {
-    return gulp.src( project.sourceDirectory + '/' + project.stylesDirectory + '/**/*.scss' )
-        .pipe( nodeModule.clipEmptyFiles() )
-        .pipe( environment.development ? nodeModule.sourcemaps.init() : nodeModule.util.noop() )
-        .pipe( ! environment.production ? nodeModule.sass.sync().on( 'error', nodeModule.sass.logError ) : nodeModule.util.noop() )
-        .pipe( environment.production ? nodeModule.sass.sync() : nodeModule.util.noop() )
-        .pipe( nodeModule.autoPrefixer( option.autoprefixer ) )
-        .pipe( environment.development ? nodeModule.sourcemaps.write() : nodeModule.util.noop() )
-        .pipe( environment.production ? nodeModule.combineMq() : nodeModule.util.noop() )
-        .pipe( environment.production ? nodeModule.cssNano( option.cssNano ) : nodeModule.util.noop() )
-        .pipe( gulp.dest( project.distDirectory + '/css' ) );
-} );
-
-
-// =============================================
-// Clean `gulp clean
-// destroys the build directory
-// =============================================
-
-gulp.task( 'clean', function( cb ) {
-    return nodeModule.del( [ project.distDirectory ], cb );
-} );
-
-
-// =============================================
-// Build 'gulp build'
-// builds all assets, also has `--production` option to build production ready assets
-// =============================================
-
-gulp.task( 'build', function( callback ) {
-    nodeModule.runSequence(
-        'clean',
-        [
-            'scss',
-            'js'
-        ],
-        'img',
-        'svg-sprite',
-        'vendor',
-        'vendor-images',
-        'vendor-styles',
-        'vendor-scripts',
-        callback
-    );
-} );
-
-
-// =============================================
-// Watch 'gulp watch'
-// watches files and runs on change
-// =============================================
-
-gulp.task( 'watch', function() {
-    gulp.watch( project.sourceDirectory + '/' + project.stylesDirectory + '/**/*.scss', [ 'scss' ] );
-    gulp.watch( project.sourceDirectory + '/' + project.scriptsDirectory + '/**/*.js',  [ 'js' ] );
-    gulp.watch( project.sourceDirectory + '/' + project.imagesDirectory + '/**/*',  [ 'img' ] );
-    gulp.watch( project.sourceDirectory + '/' + project.iconsDirectory + '/**/*',  [ 'svg-sprite' ] );
-    gulp.watch( project.sourceDirectory + '/' + project.vendorDirectory + '/**/*',  [ 'vendor' ] );
-} );
-
-
-// =============================================
-// Default 'gulp'
-// runs build task, Runs watch tasks
-// =============================================
-
-gulp.task( 'default', function() {
-    nodeModule.runSequence(
-        'build',
-        'watch'
-    );
-} );
+/**
+ * Gulp tasks
+*/
+exports.default = build;
+exports.watch = watch;
