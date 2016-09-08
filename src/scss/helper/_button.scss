@@ -4,10 +4,10 @@
 
 @mixin btn {
     padding: spacing(xs) spacing();
-	border-radius: 0;
-	font-size: $font-size;
-	font-family: $heading-font-family;
-	font-weight: $bold;
+    border-radius: 0;
+    font-size: $font-size;
+    font-family: $heading-font-family;
+    font-weight: $bold;
     text-decoration: none;
     border: 1px solid transparent;
     cursor: pointer;
@@ -95,11 +95,11 @@
 @mixin btn--disabled {
     cursor: not-allowed;
     background-color: color(grey);
-	color: color(grey,dark);
+    color: color(grey,dark);
 
     &:hover,
     &:focus {
         background-color: color(grey);
-		color: color(grey,dark);
+        color: color(grey,dark);
     }
 }
