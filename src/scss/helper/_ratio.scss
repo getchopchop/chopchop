@@ -3,13 +3,13 @@
 // =============================================
 
 @mixin ratio($value: 100%) {
-	position: relative;
-	overflow: hidden;
-	
-	&:before {
-		content: "";
-		display: block;
-		padding-top: $value;
-		overflow: hidden;
-	}
+    position: relative;
+    overflow: hidden;
+    
+    &:before {
+        content: "";
+        display: block;
+        padding-top: $value;
+        overflow: hidden;
+    }
 }

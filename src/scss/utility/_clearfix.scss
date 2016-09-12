@@ -5,9 +5,9 @@
 .u-clearfix,
 %u-clearfix {
     overflow: hidden;
-	&:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
