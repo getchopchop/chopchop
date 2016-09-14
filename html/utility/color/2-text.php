@@ -12,7 +12,7 @@ Container: true
 
         if(substr(trim($line), 0, 7) == '.u-fill') {
             $bits = explode(" ", substr($line, 1));
-            $class_ = $bits[0];
+            $class_ = str_replace(',','', $bits[0]);
             $bits = explode("-", $class_);
             $group = $bits[2];
             ?>
