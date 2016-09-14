@@ -2,7 +2,8 @@
 // Alert
 // =============================================
 
-.alert {
+.alert,
+%alert {
     padding: spacing();
     background-color: color(grey, lighter);
     border: 1px solid color(grey);
@@ -18,7 +19,8 @@
 // Dismissible alert
 // =============================================
 
-.alert--dismissible {
+.alert--dismissible,
+%alert--dismissible {
     padding-right: 3rem;
     position: relative;
 
@@ -54,12 +56,14 @@
 // Alert colour variations
 // =============================================
 
-.alert--success {
+.alert--success,
+%alert--success {
     background-color: color(success, light);
     border-color: color(success);
 }
 
-.alert--error {
+.alert--error,
+%alert--error {
     background-color: color(error, light);
     border-color: color(error);
 }
