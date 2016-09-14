@@ -296,13 +296,8 @@
 // Overlay override
 // =============================================
 
-.cc-overlay {
-    position: relative;
+.cc-overlay .overlay {
     height: 50vh;
-
-    .overlay {
-        top: 200px;
-        display: block;
-        position: absolute;
-    }
+    display: block;
+    position: static;
 }
