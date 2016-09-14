@@ -124,25 +124,25 @@ optgroup {
 .error,
 abbr[title="Required"],
 .required em {
-    color: red;
+    color: color(error, base);
 }
 
 .required::after {
     content: "*";
-    color: red;
+    color: color(error, base);
     margin-left: spacing(xs);
 }
 
 .valid {
-    color: green;
+    color: color(success, base);
 }
 
 .is-error {
-    border-color: red;
+    border-color: color(error, base);
 }
 
 .is-valid {
-    border-color: green;
+    border-color: color(success, base);
 }
 
 .validation-advice {
@@ -172,23 +172,23 @@ abbr[title="Required"],
     overflow: hidden;
     position: relative;
     background-color: color(white);
-    
+
     &::after,
     &::before {
         position: absolute;
         right: 1em;
     }
-    
+
     &::after {
         @include chevron(color(grey), 8px, down, 1px);
         top: 1.25em;
     }
-    
+
     &::before {
         @include chevron(color(grey), 8px, up, 1px);
         top: 0.8em;
     }
-    
+
     select {
         padding: 0.54em;
         width: 130%;
@@ -199,7 +199,7 @@ abbr[title="Required"],
         -webkit-appearance: none;
            -moz-appearance: none;
                 appearance: none;
-                
+
         &:focus {
             outline: none;
         }
