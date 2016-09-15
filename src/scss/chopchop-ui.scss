@@ -1,5 +1,6 @@
 @import "var";
 @import "helper/function";
+@import "helper/flex";
 @import "helper/breakpoint";
 @import "helper/shape";
 
@@ -17,12 +18,12 @@
     z-index: 999;
     font-size: 12px;
     border-bottom: 4px solid color(grey,darker);
-    display: flex;
+    @include flex;
 
     ul {
         margin: 0;
         padding: 0;
-        display: flex;
+        @include flex;
         width: 100%;
     }
 
@@ -144,14 +145,14 @@
         font-size: 16px;
         list-style: none;
         counter-reset: section;
-        
+
         li::before {
             counter-increment: section;
             content: counters(section,".") ". ";
             font-size: $font-size-sm;
             color: color(grey);
         }
-        
+
         ol {
             margin-left: 0;
             margin-top: 7px;
@@ -196,9 +197,9 @@
 
 .cc-title {
     background-color: color(grey,lighter);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex;
+    @include justify-content(space-between);
+    @include align-items(center);
     padding: 10px 5px;
     border-bottom: 2px solid color(grey,light);
 

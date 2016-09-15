@@ -3,8 +3,8 @@
 // =============================================
 
 @mixin tabs {
-    display: flex;
-    flex-wrap: wrap;
+    @include flex;
+    @include flex-wrap(wrap);
 
     > [class*="__header"] {
         cursor: pointer;

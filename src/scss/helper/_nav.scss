@@ -29,8 +29,8 @@
 // =============================================
 
 @mixin nav--inline {
-    display: flex;
-    flex-wrap: wrap;
+    @include flex;
+    @include flex-wrap(wrap);
     white-space: nowrap;
 }
 
@@ -59,7 +59,7 @@
 // =============================================
 
 @mixin priority-nav {
-    display: flex;
+    @include flex;
 
     &__container {
         flex-grow: 1;
@@ -81,7 +81,7 @@
 
     &__nav {
         white-space: nowrap;
-        flex-wrap: nowrap;
+        @include flex-wrap(wrap);
         -webkit-overflow-scrolling: touch;
 
         li {
@@ -147,7 +147,7 @@
 // =============================================
 
 @mixin nav--pager {
-    justify-content: center;
+    @include justify-content(center);
     font-size: 0;
 
     a {
