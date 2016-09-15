@@ -1,15 +1,14 @@
 <?php /*
 Title: Flag
 Class: .flag
-Description: Base flag - aligns items top by default.
+Description: Useful for splitting two chunks of content on the same row.
 */ ?>
 
 <div class="flag">
     <div>
-        <img src="//placehold.it/350x350">
+        <a href="#" class="btn">Cancel</a>
     </div>
     <div>
-        <h2>Title of flag</h2>
-        <p>In sodales sit amet nisi non tristique. Pellentesque dui libero, euismod quis velit rhoncus, lobortis porta justo. Proin eget malesuada sapien. Cras diam urna, finibus sed libero vehicula, venenatis sagittis est. Lorem ipsum dolor sit amet.</p>
+        <a href="#" class="btn">Ok</a>
     </div>
 </div>
