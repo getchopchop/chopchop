@@ -21,7 +21,7 @@
 // =============================================
 
 @mixin flex-direction($value: row) {
-    flex-wrap: $value;
+    flex-direction: $value;
 }
 
 
@@ -39,5 +39,5 @@
 // =============================================
 
 @mixin justify-content($value: flex-start) {
-    align-items: $value;
+    justify-content: $value;
 }
