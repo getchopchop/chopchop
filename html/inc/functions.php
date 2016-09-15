@@ -289,7 +289,7 @@ class Section
         }
         $paths = glob($path . DS . '*');
         foreach($paths as $path) {
-            $children[] = new Section($this->pathToLocation($path)); 
+            $children[] = new Section($this->pathToLocation($path));
         }
         return $children;
     }
@@ -339,4 +339,4 @@ class Section
         return $contents;
     }
 }
-    $toplevels = array('branding', 'atom', 'molecule', 'organism', 'template', 'helper', 'utility', );
+$toplevels = array('branding', 'atom', 'molecule', 'organism', 'template', 'helper', 'utility', );

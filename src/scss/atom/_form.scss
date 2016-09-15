@@ -6,32 +6,32 @@ input,
 label,
 select,
 textarea {
-	display: block;
-	font-family: $font-family;
-	font-size: $font-size;
+    display: block;
+    font-family: $font-family;
+    font-size: $font-size;
 }
 
 label {
-	margin-bottom: spacing(xs);
+    margin-bottom: spacing(xs);
 
-	&.required::after {
-		content: "*";
-	}
+    &.required::after {
+        content: "*";
+    }
 }
 
 input,
 textarea,
 select[multiple=multiple] {
-	background-color: color(white);
-	border: 1px solid color(grey);
-	border-radius: 0;
-	padding: spacing(xs) spacing(sm);
-	width: 100%;
+    background-color: color(white);
+    border: 1px solid color(grey);
+    border-radius: 0;
+    padding: spacing(xs) spacing(sm);
+    width: 100%;
 
-	&:focus {
-		border-color: color(black);
-		outline: none;
-	}
+    &:focus {
+        border-color: color(black);
+        outline: none;
+    }
 }
 
 label input {
@@ -39,28 +39,28 @@ label input {
 }
 
 select {
-	max-width: 100%;
-	width: auto;
+    max-width: 100%;
+    width: auto;
 }
 
 textarea {
-	resize: vertical;
+    resize: vertical;
 }
 
 input[type="search"] {
-	-webkit-appearance: none;
-	box-sizing: border-box;
-	border-radius: 0;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    border-radius: 0;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-	display: inline;
-	width: auto;
+    display: inline;
+    width: auto;
 }
 
 input[type="file"] {
-	width: 100%;
+    width: 100%;
     border-width: 0;
     padding-left: 0;
     padding-right: 0;
@@ -74,16 +74,16 @@ input[type="color"] {
 input[type="range"] {
     padding-left: 0;
     padding-right: 0;
-	border: 0;
+    border: 0;
 
-	&::-moz-focus-outer {
-		border: 0;
-	}
+    &::-moz-focus-outer {
+        border: 0;
+    }
 }
 
 input[type="number"] {
-	appearance: none;
-	 -moz-appearance: textfield;
+    appearance: none;
+     -moz-appearance: textfield;
 }
 
 
@@ -100,7 +100,7 @@ input[type="submit"].btn {
 fieldset {
     margin: 0;
     padding: 0;
-	border: 0;
+    border: 0;
     margin-bottom: 2rem;
 }
 legend {
@@ -113,7 +113,7 @@ legend {
 // =============================================
 
 optgroup {
-	font-weight: $bold;
+    font-weight: $bold;
 }
 
 
@@ -124,25 +124,25 @@ optgroup {
 .error,
 abbr[title="Required"],
 .required em {
-    color: red;
+    color: color(error, base);
 }
 
 .required::after {
     content: "*";
-    color: red;
+    color: color(error, base);
     margin-left: spacing(xs);
 }
 
 .valid {
-    color: green;
+    color: color(success, base);
 }
 
 .is-error {
-    border-color: red;
+    border-color: color(error, base);
 }
 
 .is-valid {
-    border-color: green;
+    border-color: color(success, base);
 }
 
 .validation-advice {
@@ -172,23 +172,23 @@ abbr[title="Required"],
     overflow: hidden;
     position: relative;
     background-color: color(white);
-    
+
     &::after,
     &::before {
         position: absolute;
         right: 1em;
     }
-    
+
     &::after {
         @include chevron(color(grey), 8px, down, 1px);
         top: 1.25em;
     }
-    
+
     &::before {
         @include chevron(color(grey), 8px, up, 1px);
         top: 0.8em;
     }
-    
+
     select {
         padding: 0.54em;
         width: 130%;
@@ -199,7 +199,7 @@ abbr[title="Required"],
         -webkit-appearance: none;
            -moz-appearance: none;
                 appearance: none;
-                
+
         &:focus {
             outline: none;
         }

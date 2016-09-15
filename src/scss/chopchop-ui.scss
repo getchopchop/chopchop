@@ -10,7 +10,8 @@
 
 .cc-header {
     position: fixed;
-    bottom: 0;
+    top: 100%;
+    transform: translateY(-100%);
     left: 0;
     right: 0;
     z-index: 999;
@@ -31,7 +32,7 @@
 
         > * {
             display: inline-block;
-            padding: 3px 10px;
+            padding: 6px 12px;
         }
     }
 
@@ -125,7 +126,7 @@
     top: 0;
     bottom: 0;
     width: 200px;
-    transform: translateX(-100%);
+    left: -100%;
     z-index: 998;
     background-color: color(grey,darker);
     padding: 20px 10px;
@@ -133,7 +134,7 @@
     color: color(grey,lighter);
 
     &.is-active {
-        transform: translateX(0);
+        left: 0;
     }
 
     ol {
@@ -242,6 +243,7 @@
 
 .has-cc-nav-active .cc-main-content {
     margin-left: 200px;
+    overflow: hidden;
 }
 
 
@@ -294,13 +296,8 @@
 // Overlay override
 // =============================================
 
-.cc-overlay {
-    position: relative;
+.cc-overlay .overlay {
     height: 50vh;
-
-    .overlay {
-        top: 200px;
-        display: block;
-        position: absolute;
-    }
+    display: block;
+    position: static;
 }
