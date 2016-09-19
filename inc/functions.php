@@ -48,7 +48,7 @@
         $files = recurseDir($location, $path, true);
 
         if(empty($files)) {
-            header('location: /html/');
+            header('location: /pattern/');
         }
     }
 
@@ -117,7 +117,7 @@
     }
 
     function getBaseUrl() {
-        $base = dirname($_SERVER['SCRIPT_NAME']) . "/../";
+        $base = dirname($_SERVER['SCRIPT_NAME']);
         return $base;
     }
 
@@ -133,7 +133,7 @@
 
     function pathToUrl($path) {
         $base = dirname(__DIR__);
-        return '/html' . substr($path, strlen($base), -4);
+        return '/pattern' . substr($path, strlen($base), -4);
     }
 
     function isIndex() {
