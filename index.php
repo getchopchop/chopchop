@@ -1,7 +1,7 @@
 <?php require_once('inc/functions.php'); ?>
 <?php
     if(getRequestPath() == '/') {
-        header('Location: ' . $_SERVER['REQUEST_URI'] . 'branding/');
+        header('Location: /pattern/branding/');
         exit;
     }
 ?>

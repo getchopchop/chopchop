@@ -3,7 +3,9 @@ Title: Colour
 */ ?>
 <div class="grid g-gutter">
 <?php
-    $css_contents = file_get_contents('../build/css/styles.css', true);
+    $path = realpath(dirname(__FILE__) . '/../../build/css/styles.css');
+
+    $css_contents = file_get_contents($path, true);
     $lines = explode("\n", $css_contents);
     $hasHeading = false;
     $previous_group = 'x';

@@ -4,7 +4,7 @@
         foreach($toplevels as $toplevel) {
         ?>
             <li>
-                <a href="/html/<?= $toplevel ?>/"><?= ucwords($toplevel) ?></a>
+                <a href="/pattern/<?= $toplevel ?>/"><?= ucwords($toplevel) ?></a>
                 <ol>
                     <?php
                     $quarks = dir(dirname(__DIR__) . '/pattern/' . $toplevel);
