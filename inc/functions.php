@@ -249,6 +249,7 @@ class Section
     }
 
     public function __construct($location) {
+        print $location;
         $this->location = $location;
         $path = TEMPLATE_PATH . $this->location;
 
