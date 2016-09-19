@@ -117,7 +117,7 @@
     }
 
     function getBaseUrl() {
-        $base = dirname($_SERVER['SCRIPT_NAME']) . "/../";
+        $base = dirname($_SERVER['SCRIPT_NAME']);
         return $base;
     }
 
