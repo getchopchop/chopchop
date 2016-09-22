@@ -2,6 +2,10 @@
 // Block
 // =============================================
 
+[class*="u-block"] {
+    display: block;
+}
+
 [class*="u-block"] > *:last-child {
     margin-bottom: 0;
 }
