@@ -219,7 +219,6 @@
                 $title .= '</div>
                 <div class="cc-title__actions">
                     <ul>
-                        <li><a href="'.$this->getUrl().'" class="micro">Permalink</a></li>
                         <li><a href="'.$this->getUrl(true).'" class="micro">Preview</a></li>
                     </ul>
                 </div></hgroup>';
