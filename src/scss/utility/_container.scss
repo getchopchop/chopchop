@@ -9,8 +9,7 @@
 }
 
 @each $key, $value in $containers {
-    .u-container-#{$key},
-    %u-container-#{$key} {
+    .u-container-#{$key} {
         max-width: $value;
     }
 }

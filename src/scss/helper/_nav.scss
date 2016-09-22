@@ -4,7 +4,7 @@
 
 
 @mixin nav {
-    @extend %u-list-unstyled;
+    @extend .u-list-unstyled;
 
     a {
         text-decoration: none;
@@ -112,7 +112,7 @@
     // All levels
     ul,
     ol {
-        @extend %nav;
+        @extend .nav;
         display: none;
         position: absolute;
     }

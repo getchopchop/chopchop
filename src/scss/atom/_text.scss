@@ -79,7 +79,6 @@ mark {
 // =============================================
 
 a,
-%link,
 .link {
     color: color(black);
     touch-action: manipulation;
@@ -94,7 +93,6 @@ a,
 // Lead
 // =============================================
 
-%lead,
 .lead {
     font-size: $font-size-lg;
 }
@@ -104,7 +102,6 @@ a,
 // Micro
 // =============================================
 
-%micro,
 .micro {
     font-size: $font-size-sm;
 }

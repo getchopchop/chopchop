@@ -2,8 +2,7 @@
 // Image Responsive
 // =============================================
 
-.u-img-responsive,
-%u-img-responsive {
+.u-img-responsive {
     display: block;
     max-width: 100%;
     height: auto;
@@ -15,6 +14,6 @@ figure {
     margin-bottom: spacing(lg);
 
     img {
-        @extend %u-img-responsive;
+        @extend .u-img-responsive;
     }
 }

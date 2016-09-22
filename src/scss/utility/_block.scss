@@ -12,13 +12,11 @@
 
 @each $key, $value in $spacing {
     @if $key == base {
-        .u-block,
-        %u-block {
+        .u-block {
             padding: $value;
         }
     } @else {
-        .u-block-#{$key},
-        %u-block-#{$key} {
+        .u-block-#{$key} {
             padding: $value;
         }
     }

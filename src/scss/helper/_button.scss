@@ -59,7 +59,7 @@
 // =============================================
 
 @mixin btn--text {
-    @extend %link;
+    @extend .link;
     background-color: transparent;
     color: color(black);
     font-weight: normal;
