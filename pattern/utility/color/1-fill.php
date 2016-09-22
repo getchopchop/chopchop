@@ -5,7 +5,7 @@ Container: true
 
 <div class="grid g-gutter">
 <?php
-    $css_contents = file_get_contents('../build/css/styles.css', true);
+    $css_contents = file_get_contents('build/css/styles.css', true);
     $lines = explode("\n", $css_contents);
     $hasHeading = false;
     $previous_group = 'x';
