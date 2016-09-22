@@ -200,22 +200,19 @@
         }
 
         public function printTitle() {
-            $title = '<div class="cc-title-container">';
             if(!$this->printTitle) {
                 return '';
             }
 
+            $title = '';
             if($this->Title) {
+                $title .= '<div class="cc-title-container">';
                 $title .= '<hgroup class="cc-title cc-title--actions" id="section-' . str_replace(' ', '-', strtolower($this->Title)) . '"><div class="title__titles">';
-            }
-            if($this->Title) {
                 $title .= '<h2 class="cc-title__main">' . $this->Title;
                 if($this->Class) {
                     $title .= ' <code>' . $this->Class . '</code>';
                 }
                 $title .= '</h2>';
-            }
-            if($this->Title) {
                 $title .= '</div>
                 <div class="cc-title__actions">
                     <ul>
@@ -226,7 +223,9 @@
             if($this->Description) {
                 $title .= '<div class="cc-title-desc"><p>' . $this->Description . '</p></div>';
             }
-            $title .= "</div>";
+            if($this->Title) {
+                $title .= "</div>";
+            }
             return $title;
         }
 
