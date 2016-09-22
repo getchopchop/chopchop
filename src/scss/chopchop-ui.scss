@@ -3,6 +3,7 @@
 @import "helper/flex";
 @import "helper/breakpoint";
 @import "helper/shape";
+@import "helper/ellipsis";
 
 
 // =============================================
@@ -290,6 +291,16 @@
 
 .cc-shape-ring {
     @include ring;
+}
+
+
+// =============================================
+// Ellipsis demos
+// =============================================
+
+.cc-ellipsis {
+    @include ellipsis;
+    display: block;
 }
 
 
