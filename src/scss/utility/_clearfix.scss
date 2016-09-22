@@ -2,8 +2,7 @@
 // Clearfix
 // =============================================
 
-.u-clearfix,
-%u-clearfix {
+.u-clearfix {
     overflow: hidden;
     &:after {
         content: "";

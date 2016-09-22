@@ -2,7 +2,6 @@
 // Base Nav
 // =============================================
 
-%nav,
 .nav {
     @include nav;
 }
@@ -12,8 +11,7 @@
 // Nav Pills
 // =============================================
 
-.nav--pills,
-%nav--pills {
+.nav--pills {
     @include nav--pills;
 }
 
@@ -22,8 +20,7 @@
 // Nav inline
 // =============================================
 
-.nav--inline,
-%nav--inline {
+.nav--inline {
     @include nav--inline;
 }
 
@@ -32,8 +29,7 @@
 // Nav space
 // =============================================
 
-.nav--space,
-%nav--space {
+.nav--space {
     @include nav--space;
 }
 
@@ -60,8 +56,7 @@
 // Nav Pager
 // =============================================
 
-.nav--pager,
-%nav--pager {
+.nav--pager {
     @include nav--pager;
 }
 

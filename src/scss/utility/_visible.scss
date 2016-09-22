@@ -9,7 +9,7 @@
 @each $screen, $value in $screens {
 
     $media-query: screen($screen) screen($screen,max);
-    
+
     @if $screen == xs {
         $media-query: max-width screen($screen,max);
     } @else if $screen == xl {
@@ -73,8 +73,7 @@
 // Hide
 // =============================================
 
-.u-hidden,
-%u-hidden {
+.u-hidden {
     display: none !important;
 }
 
@@ -83,8 +82,7 @@
 // Visually Hidden
 // =============================================
 
-.u-visually-hidden,
-%u-visually-hidden {
+.u-visually-hidden {
     position: absolute;
     overflow: hidden;
     width: 1px;

@@ -2,7 +2,6 @@
 // Base
 // =============================================
 
-%btn,
 .btn {
     @include btn;
 }
@@ -12,7 +11,6 @@
 // Small
 // =============================================
 
-%btn--sm,
 .btn--sm {
     @include btn--sm;
 }
@@ -22,7 +20,6 @@
 // Large
 // =============================================
 
-%btn--lg,
 .btn--lg {
     @include btn--lg;
 }
@@ -32,7 +29,6 @@
 // Text
 // =============================================
 
-%btn--text,
 .btn--text {
     @include btn--text;
 }
@@ -42,7 +38,6 @@
 // Block
 // =============================================
 
-%btn--block,
 .btn--block {
     @include btn--block;
 }
@@ -51,7 +46,6 @@
 // Disabled
 // =============================================
 
-%btn--disabled,
 .btn--disabled,
 .btn:disabled {
     @include btn--disabled;

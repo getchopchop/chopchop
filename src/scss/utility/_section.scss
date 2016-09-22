@@ -4,28 +4,26 @@
 
 @each $key, $value in $sections {
     @if $key == base {
-        .u-section,
-        %u-section {
+        .u-section {
             &-top {
                 margin-top: $value;
             }
             &-bottom {
                 margin-bottom: $value;
             }
-            @extend %u-section-top;
-            @extend %u-section-bottom;
+            @extend .u-section-top;
+            @extend .u-section-bottom;
         }
     } @else {
-        .u-section-#{$key},
-        %u-section-#{$key} {
+        .u-section-#{$key} {
             &-top {
                 margin-top: $value;
             }
             &-bottom {
                 margin-bottom: $value;
             }
-            @extend %u-section-#{$key}-top;
-            @extend %u-section-#{$key}-bottom;
+            @extend .u-section-#{$key}-top;
+            @extend .u-section-#{$key}-bottom;
         }
     }
 }
