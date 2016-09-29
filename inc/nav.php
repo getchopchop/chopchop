@@ -4,7 +4,7 @@
         foreach($toplevels as $toplevel) {
         ?>
             <li>
-                <a href="<?php echo getUrl('/pattern/' . $toplevel ).'/'; ?>"><?= ucwords($toplevel) ?></a>
+                <a href="/pattern/<?= $toplevel ?>/"><?= ucwords($toplevel) ?></a>
                 <ol>
                     <?php
                     $quarks = dir(dirname(__DIR__) . '/pattern/' . $toplevel);
@@ -16,8 +16,7 @@
                              continue;
                         }
                     ?>
-
-                    <li class="level1"><a href="<?php echo getUrl('/pattern/' . $toplevel ); ?>/<?php if($toplevel != 'template') : ?>#section-<?php endif; ?><?= $entry ?>"><?= str_replace('-', ' ', ucwords($entry)) ?></a></li>
+                    <li class="level1"><a href="/pattern/<?php echo $toplevel; ?>/<?php if($toplevel != 'template') : ?>#section-<?php endif; ?><?= $entry ?>"><?= str_replace('-', ' ', ucwords($entry)) ?></a></li>
                     <?php } ?>
                 </ol>
             </li>

@@ -1,8 +1,7 @@
 <?php require_once('inc/functions.php'); ?>
 <?php
-    if(isIndex()) {
-
-        header('Location: ' .getUrl('/pattern/branding/'));
+    if(getRequestPath() == '/') {
+        header('Location: /pattern/branding/');
         exit;
     }
 ?>
