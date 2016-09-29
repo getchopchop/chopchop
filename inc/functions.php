@@ -38,7 +38,7 @@
 
     function printSvg($folder = 'general', $hash, $class = '') {
         echo '<svg class="icon ' . $class . '">
-            <use xlink:href="' . getUrl('build/img/icons/' . $folder . '/symbol/sprite-symbol.svg') . '#' . $hash  . '" />
+            <use xlink:href="' . getUrl('/build/img/icons/' . $folder . '/symbol/sprite-symbol.svg') . '#' . $hash  . '" />
         </svg>';
     }
 
@@ -122,6 +122,9 @@
     }
 
     function getUrl($url = false) {
+        if($url && substr($url, 0, 1) !== '/') {
+            $url = '/' . $url;
+        }
         return getBaseUrl().($url ?: '');
     }
 
