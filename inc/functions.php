@@ -122,7 +122,17 @@
     }
 
     function getUrl($url = false) {
-        return getBaseUrl().($url ?: '');
+        $base_url = getBaseUrl();
+
+        if($url && substr($url,0,1) === '/' ) {
+            $url = substr($url,1);
+        }
+
+        if(substr($base_url, -1) !== '/') {
+            $base_url .=  '/';
+        }
+
+        return $base_url.($url ?: '');
     }
 
     function getRequestPath() {
