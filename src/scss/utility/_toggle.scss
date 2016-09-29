@@ -2,8 +2,7 @@
 // Toggle
 // =============================================
 
-.u-toggle,
-%u-toggle {
+.u-toggle {
     display: none;
 
     &.is-active {
@@ -23,5 +22,9 @@
     * {
         user-select: none;
         -webkit-touch-callout: none;
+    }
+
+    * {
+        cursor: auto;
     }
 }

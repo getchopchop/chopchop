@@ -3,8 +3,8 @@
 // =============================================
 
 // html {
-// 	-webkit-font-smoothing: antialiased;
-// 	-moz-osx-font-smoothing: grayscale;
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
 // }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25),
@@ -34,13 +34,13 @@ ul, ol, p {
 }
 
 ul, ol {
-	ul, ol {
-		margin-bottom: 0;
-	}
+    ul, ol {
+        margin-bottom: 0;
+    }
 }
 
 strong, b {
-	font-weight: $bold;
+    font-weight: $bold;
 }
 
 dfn, em, i, cite {
@@ -79,7 +79,6 @@ mark {
 // =============================================
 
 a,
-%link,
 .link {
     color: color(black);
     touch-action: manipulation;
@@ -94,7 +93,6 @@ a,
 // Lead
 // =============================================
 
-%lead,
 .lead {
     font-size: $font-size-lg;
 }
@@ -104,7 +102,6 @@ a,
 // Micro
 // =============================================
 
-%micro,
 .micro {
     font-size: $font-size-sm;
 }

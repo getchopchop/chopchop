@@ -3,27 +3,26 @@
 // =============================================
 
 h1, h2, h3, h4, h5, h6,
-%h1, %h2, %h3, %h4, %h4, %h5, %h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-	font-family: $heading-font-family;
-	line-height: $line-height-sm;
-	font-weight: $bold;
+    font-family: $heading-font-family;
+    line-height: $line-height-sm;
+    font-weight: $bold;
     margin-top: 0;
     margin-bottom: spacing(xs);
-	// font-smoothing: antialiased;
+    // font-smoothing: antialiased;
 }
 
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
 * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6 {
-	margin-top: spacing(xl);
+    margin-top: spacing(xl);
 }
 
 @each $key, $value in $type-scales {
-	@if $key == base {
-		@include heading-scale($value);
-	} @else {
-		@include breakpoint(screen($key)) {
-    		@include heading-scale($value);
-		}
-	}
+    @if $key == base {
+        @include heading-scale($value);
+    } @else {
+        @include breakpoint(screen($key)) {
+            @include heading-scale($value);
+        }
+    }
 }

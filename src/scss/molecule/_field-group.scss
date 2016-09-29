@@ -2,9 +2,7 @@
 // Form field group
 // =============================================
 
-.field-group,
-%field-group {
-	margin-bottom: spacing();
+.field-group {
     margin: spacing() 0;
 
     .field-group {
@@ -23,9 +21,8 @@
 // =============================================
 
 @include breakpoint(screen(sm)) {
-    .field-group--scaffold,
-    %field-group--scaffold {
-        display: flex;
+    .field-group--scaffold {
+        @include flex;
         flex-flow: wrap;
 
         .field-group__label {
@@ -49,7 +46,7 @@
 // =============================================
 
 .scaffold-form .field-group:not(.field-group--inline) {
-    @extend %field-group--scaffold;
+    @extend .field-group--scaffold;
 }
 
 
@@ -58,8 +55,8 @@
 // =============================================
 
 .field-group--inline {
-    display: flex;
-    justify-content: flex-start;
+    @include flex;
+    @include justify-content(flex-start);
 
     > * {
         margin-right: spacing(sm);

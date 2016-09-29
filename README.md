@@ -1,43 +1,85 @@
-# Chop Chop
+# ChopChop
+A front end framework and pattern library
 
-## Atomic
+**Atomic**
 - atoms – high level elements such as inputs, headings
-- molecules – something containing multiple atoms or a very reusable flexible pattern
-- organism – something very specific to it's use that contains multiple molecules
+- molecules – something containing multiple atoms or a very reusable flexible
+pattern
+- organism – something very specific to it's use that contains multiple
+molecules
 
-## Get Started
+## Getting Started
 
-To get going with it here are the commands.
-
-_You can copy this entire block into the command line and it will process it all for you._
+1. Clone the project / Download the zip.
 ```
-cd ~/sites
-git clone git@github.com:getchopchop/chopchop.git .
-cd chopchop/public_html
+git clone git@github.com:getchopchop/chopchop.git chopchop
+```
+2. Navigation to the working directory
+```
+cd chopchop
+```
+3. Install npm modules
+```
 npm i
+```
+4. Update variables, paths, folders, extensions etc at top of the gulpfile.js
+file to suite your project.
+5. Build assets
+```
 npm run build
 ```
 
-## Working on the project
+### NPM Scripts
+* `$ npm run watch` - Builds assets and watches directories for changes.
+* `$ npm run build` - Builds all assets.
+* `$ npm run build:production` - Builds all assets for production (Minified CSS
+  and JavaScript, compressed images etc).
 
-_Make sure you're running the commands from the project root where the gulpfile.js lives._  
-
+### Example Project Structure
+*This can be easily changed to suit your project.*
 ```
-cd ~/Sites/chopchop/public_html
++-- build/
+|   +-- css
+|   +-- img
+|   |   +-- icons
+|   +-- js
++-- node_modules/
++-- inc/
++-- pattern/
++-- src/
+|   +-- img
+|   |   +-- icons
+|   +-- js
+|   +-- scss
++-- .editorconfig
++-- .gitignore
++-- .htaccess
++-- gulpfile.js
++-- index.php
++-- LICENCE.md
++-- package.json
++-- README.md
 ```
 
-### Gulp Tasks
+## Bugs and feature requests
 
-- `npm run watch` or `./node_modules/.bin/gulp`  
-Runs gulp build and once finished starts gulp watch.
+Have a bug or a feature request? Please first read the [contributing guidelines](https://github.com/getchopchop/chopchop/blob/next/.github/CONTRIBUTING.md)
+document and search for existing and closed issues. If your problem or idea is
+not addressed yet, please open a [new issue](https://github.com/getchopchop/chopchop/issues).
 
-- `npm run watch-dev` or `./node_modules/.bin/gulp --dev`  
-Runs gulp build and once finished starts gulp watch. Both are run in development mode (linting & browsersync).
+## Contributing
 
-- `npm run build` or `./node_modules/.bin/gulp build`  
-Runs _clean_ to destroy the build directory, then runs _scss_, _js_, _vendor_, _fonts_, _img_ to re-compile the build directory.
+Please read through our [contributing guidelines](https://github.com/getchopchop/chopchop/blob/next/.github/CONTRIBUTING.md).
+Included are directions for opening issues, coding standards, and notes on
+development.
 
-- `npm run build-production` or `./node_modules/.bin/gulp build --production`  
-Runs _clean_ to destroy the build directory, then runs _scss_, _js_, _vendor_, _fonts_, _img_ in production mode (HARD Errors, minifies & other optimisations) to re-compile the build directory. This is the task which the CI task uses.
+Editor preferences are available in the editor config for easy use in common
+text editors. Read more and download plugins at http://editorconfig.org.
 
-_HARD Errors means an error in the task (sass / js etc) will cause the build to fail. By default errors are logged to the console but would not break the build._
+## Versioning
+
+This project is maintained under the [Semantic Versioning guidelines](http://semver.org/).
+Sometimes we screw up, but we'll adhere to those rules whenever possible.
+
+See the [Releases](https://github.com/getchopchop/chopchop/releases) section
+of our GitHub project for changelogs for each release.

@@ -2,37 +2,8 @@
 // Flag
 // =============================================
 
-.flag,
-%flag {
-    @include flag;
-    margin-bottom: spacing();
-}
-
-
-// =============================================
-// Flag Reversed
-// =============================================
-
-.flag--reverse,
-%flag--reverse {
-    @include flag--reverse;
-}
-
-
-// =============================================
-// Flag Gutter
-// =============================================
-
-.flag--gutter,
-%flag--gutter {
-    @include flag--gutter;
-}
-
-// =============================================
-// Flag Center
-// =============================================
-
-.flag--center,
-%flag--center {
-    @include flag--center;
+.flag {
+    @include flex;
+    @include align-items(center);
+    @include justify-content(space-between);
 }

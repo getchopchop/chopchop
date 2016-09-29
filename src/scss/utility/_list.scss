@@ -2,8 +2,7 @@
 // List inline
 // =============================================
 
-.u-list-inline,
-%u-list-inline {
+.u-list-inline {
     @include list-inline;
 }
 
@@ -12,9 +11,8 @@
 // Ordered list
 // =============================================
 
-.u-list-ordered,
-%u-list-ordered {
-	@include list-ordered;
+.u-list-ordered {
+    @include list-ordered;
 }
 
 
@@ -22,9 +20,8 @@
 // Unordered list
 // =============================================
 
-.u-list-unordered,
-%u-list-unordered {
-	@include list-unordered;
+.u-list-unordered {
+    @include list-unordered;
 }
 
 
@@ -32,7 +29,6 @@
 // Unstyled list
 // =============================================
 
-%u-list-unstyled,
 .u-list-unstyled {
     @include list-unstyled;
 }

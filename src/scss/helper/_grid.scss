@@ -3,9 +3,8 @@
 // =============================================
 
 @mixin grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    @include flex;
+    @include flex-wrap(wrap);
 
     > * {
         width: 100%;
@@ -66,7 +65,7 @@
 // =============================================
 
 @mixin grid-center {
-    justify-content: center;
+    @include justify-content(center);
 }
 
 
@@ -75,7 +74,7 @@
 // =============================================
 
 @mixin grid-justify {
-    justify-content: space-between;
+    @include justify-content(space-between);
 }
 
 
@@ -84,5 +83,5 @@
 // =============================================
 
 @mixin grid-reverse {
-    flex-direction: row-reverse;
+    @include flex-direction(row-reverse);
 }

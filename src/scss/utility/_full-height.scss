@@ -3,7 +3,7 @@
 // =============================================
 
 .u-full-height {
-    display: flex;
+    @include flex;
     flex-flow: wrap;
 
     > * {
