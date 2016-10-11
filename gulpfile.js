@@ -66,7 +66,7 @@ var tasks = {
     images: {
         src: 'img',
         dest: 'img',
-        exclude: 'img/icons',
+        exclude: 'img/vectors',
         extensions: [
             'jpg',
             'png',
@@ -83,8 +83,8 @@ var tasks = {
     },
 
     svgSprite: {
-        src: 'img/icons',
-        dest: 'img/icons',
+        src: 'img/vectors',
+        dest: 'img/vectors',
         extensions: [
             'svg'
         ],
