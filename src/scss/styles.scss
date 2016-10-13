@@ -49,52 +49,37 @@
 
 
 // =============================================
-// atom
+// base
 // =============================================
 
-@import "atom/animate";
-@import "atom/button";
-@import "atom/form";
-@import "atom/heading";
-@import "atom/horizontal-rule";
-@import "atom/html";
-@import "atom/icon";
-@import "atom/image";
-@import "atom/table";
-@import "atom/tag";
-@import "atom/text";
-
-
-// =============================================
-// molecule
-// =============================================
-
-@import "molecule/accordion";
-@import "molecule/alert";
-@import "molecule/breadcrumb";
-@import "molecule/card";
-@import "molecule/drawer";
-@import "molecule/flag";
-@import "molecule/field-group";
-@import "molecule/title";
-@import "molecule/modal";
-@import "molecule/nav";
-@import "molecule/overlay";
-@import "molecule/logo";
-@import "molecule/pagination";
-@import "molecule/tabs";
+@import "base/animate";
+@import "base/form";
+@import "base/heading";
+@import "base/horizontal-rule";
+@import "base/html";
+@import "base/icon";
+@import "base/image";
+@import "base/table";
+@import "base/tag";
+@import "base/text";
 
 
 // =============================================
-// Organism
+// component
 // =============================================
 
-@import "organism/header";
-@import "organism/footer";
-
-
-// =============================================
-// template
-// =============================================
-
-@import "template/homepage";
+@import "component/accordion";
+@import "component/alert";
+@import "component/button";
+@import "component/breadcrumb";
+@import "component/card";
+@import "component/drawer";
+@import "component/flag";
+@import "component/field-group";
+@import "component/logo";
+@import "component/title";
+@import "component/modal";
+@import "component/nav";
+@import "component/overlay";
+@import "component/pagination";
+@import "component/tabs";
