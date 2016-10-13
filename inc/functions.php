@@ -347,4 +347,4 @@ class Section
         return $contents;
     }
 }
-$toplevels = array('branding', 'atom', 'molecule', 'organism', 'template', 'helper', 'utility', );
+$toplevels = array('branding', 'base', 'component', 'demo', 'helper', 'utility', );
