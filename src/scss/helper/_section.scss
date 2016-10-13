@@ -1,0 +1,39 @@
+// =============================================
+// Section
+// =============================================
+
+@mixin section($key) {
+    margin-top: section($key, min);
+    margin-bottom: section($key, min);
+
+    &-top {
+        margin-top: section($key, min);
+    }
+    &-bottom {
+        margin-bottom: section($key, min);
+    }
+
+    @include breakpoint(screen(sm)) {
+        margin-top: responsive-size(section($key, min), section($key, max));
+        margin-bottom: responsive-size(section($key, min), section($key, max));
+
+        &-top {
+            margin-top: responsive-size(section($key, min), section($key, max));
+        }
+        &-bottom {
+            margin-bottom: responsive-size(section($key, min), section($key, max));
+        }
+    }
+
+    @include breakpoint(screen(xl)) {
+        margin-top: section($key, max);
+        margin-bottom: section($key, max);
+
+        &-top {
+            margin-top: section($key, max);
+        }
+        &-bottom {
+            margin-bottom: section($key, max);
+        }
+    }
+}

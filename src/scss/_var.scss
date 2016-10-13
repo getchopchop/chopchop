@@ -97,9 +97,18 @@ $gutter-y               : 3%;
 // =============================================
 
 $sections: (
-    base                : 6vw,
-    sm                  : 3vw,
-    lg                  : 9vw
+    sm: (
+        min            : 2em,
+        max            : 4em
+    ),
+    base: (
+        min            : 3em,
+        max            : 6em
+    ),
+    lg: (
+        min            : 4em,
+        max            : 8em
+    )
 );
 
 

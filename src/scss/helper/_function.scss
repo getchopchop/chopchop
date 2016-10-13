@@ -29,8 +29,8 @@
 // Section
 // =============================================
 
-@function section($value: 'base') {
-    @return map-get($sections, $value);
+@function section($section, $type: 'min') {
+    @return map-get(map-get($sections, $section), $type);
 }
 
 
@@ -40,4 +40,26 @@
 
 @function spacing($value: 'base') {
     @return map-get($spacing, $value);
+}
+
+
+// =============================================
+// Strip units
+// =============================================
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+
+// =============================================
+// Responsive size
+// =============================================
+
+@function responsive-size($min-size, $max-size, $min-media: screen(sm), $max-media: screen(xl)) {
+	@return calc( #{$min-size} + #{(strip-unit($max-size) - strip-unit($min-size))} * ( 100vw - #{$min-media} ) / (#{strip-unit($max-media)} - #{strip-unit($min-media)}) )
 }
