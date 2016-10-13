@@ -1,9 +1,8 @@
 <?php /*
 Title: Base Button
-Class: .btn
+Class: &lt;button&gt;
 */ ?>
 
 <p>
-    <a href="#" class="btn">Button</a>
-    <button type="button" class="btn">Button</button>
+    <button type="button">Button</button>
 </p>

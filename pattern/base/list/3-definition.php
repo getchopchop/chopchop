@@ -1,5 +1,6 @@
 <?php /*
 Title: Definition List
+Class: &lt;dl&gt;
 */ ?>
 
 <dl>

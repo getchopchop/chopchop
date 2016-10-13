@@ -1,5 +1,6 @@
 <?php /*
 Title: Checkbox
+Class: &lt;input type="checkbox"&gt;
 */ ?>
 
 <fieldset>

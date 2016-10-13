@@ -1,5 +1,6 @@
 <?php /*
 Title: Inputs
+Class: &lt;input&gt;
 */ ?>
 
 <div class="field-group field-group--scaffold">

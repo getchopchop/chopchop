@@ -1,5 +1,6 @@
 <?php /*
 Title: Picture
+Class: &lt;picture&gt;
 */ ?>
 
 <picture>

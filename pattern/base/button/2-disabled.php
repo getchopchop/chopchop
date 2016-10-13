@@ -1,9 +1,8 @@
 <?php /*
 Title: Disabled Button
-Class: .btn.btn--disabled
+Class: &lt;button disabled&gt;
 */ ?>
 
 <p>
-    <a href="#" class="btn btn--disabled">Disabled Button</a>
-    <button type="button" class="btn btn--disabled" disabled>Disabled Button</button>
+    <button type="button" disabled>Disabled Button</button>
 </p>

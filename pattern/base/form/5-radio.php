@@ -1,5 +1,6 @@
 <?php /*
 Title: Radio
+Class: &lt;input type="radio"&gt;
 */ ?>
 
 <fieldset>

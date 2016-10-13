@@ -1,5 +1,6 @@
 <?php /*
 Title: Ordered List
+Class: &lt;ol&gt;
 */ ?>
 
 <ol>

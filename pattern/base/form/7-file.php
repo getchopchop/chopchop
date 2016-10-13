@@ -1,6 +1,7 @@
 <?php /*
 Title: File
 Description: Requires <code>for</code> attribute on <code>&lt;label&gt;</code> to bind to file input behaviour
+Class: &lt;input type="file"&gt;
 */ ?>
 
 <fieldset>

@@ -1,5 +1,6 @@
 <?php /*
 Title: Blockquote
+Class: &lt;blockquote&gt;
 */ ?>
 
 <blockquote>

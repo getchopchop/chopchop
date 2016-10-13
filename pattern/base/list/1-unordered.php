@@ -1,5 +1,6 @@
 <?php /*
 Title: Unordered List
+Class: &lt;ul&gt;
 */ ?>
 
 <ul>

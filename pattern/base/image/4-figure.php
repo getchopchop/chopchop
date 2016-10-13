@@ -1,5 +1,6 @@
 <?php /*
 Title: Figure
+Class: &lt;figure&gt;
 */ ?>
 
 <figure>

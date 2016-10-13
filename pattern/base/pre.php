@@ -1,5 +1,6 @@
 <?php /*
 Title: Pre
+Class: &lt;pre&gt;
 */ ?>
 
 <pre>

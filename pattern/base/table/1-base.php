@@ -1,5 +1,6 @@
 <?php /*
 Title: Table
+Class: &lt;table&gt;
 */ ?>
 
 <table>
