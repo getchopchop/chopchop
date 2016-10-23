@@ -58,8 +58,8 @@
         border: 1px solid color(grey,light);
     }
 
-    > thead th,
-    > thead td {
+    thead th,
+    thead td {
        border-bottom-width: 2px;
     }
 }
@@ -70,7 +70,7 @@
 // =============================================
 
 @mixin table--striped {
-    > tbody > tr:nth-child(odd) {
+    tbody tr:nth-child(odd) {
         background-color: color(grey,lighter);
     }
 }
