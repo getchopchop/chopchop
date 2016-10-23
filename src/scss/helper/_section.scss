@@ -2,6 +2,9 @@
 // Section
 // =============================================
 
+$screen-min: screen( nth(map-keys($screens),2) );
+$screen-max: screen( nth( map-keys($screens), length($screens) ) );
+
 @mixin section($key) {
     margin-top: section($key, min);
     margin-bottom: section($key, min);
@@ -13,7 +16,7 @@
         margin-bottom: section($key, min);
     }
 
-    @include breakpoint(screen(sm)) {
+    @include breakpoint($screen-min) {
         margin-top: responsive-size(section($key, min), section($key, max));
         margin-bottom: responsive-size(section($key, min), section($key, max));
 
@@ -25,7 +28,7 @@
         }
     }
 
-    @include breakpoint(screen(xl)) {
+    @include breakpoint($screen-max) {
         margin-top: section($key, max);
         margin-bottom: section($key, max);
 

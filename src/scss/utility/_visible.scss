@@ -2,6 +2,9 @@
 // Visible
 // =============================================
 
+$screen-min: nth(map-keys($screens),1);
+$screen-max: nth( map-keys($screens), length($screens) );
+
 [class*="u-visible-"] {
     display: none !important;
 }
@@ -10,9 +13,9 @@
 
     $media-query: screen($screen) screen($screen,max);
 
-    @if $screen == xs {
+    @if $screen == $screen-min {
         $media-query: max-width screen($screen,max);
-    } @else if $screen == xl {
+    } @else if $screen == $screen-max {
         $media-query: screen($screen);
 
     }
@@ -39,9 +42,9 @@
 
 @each $screen, $value in $screens {
     $media-query: screen($screen) screen($screen,max);
-    @if $screen == xs {
+    @if $screen == $screen-min {
         $media-query: max-width screen($screen,max);
-    } @else if $screen == xl {
+    } @else if $screen == $screen-max {
         $media-query: screen($screen);
     }
 
