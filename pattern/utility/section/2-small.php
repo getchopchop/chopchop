@@ -1,5 +1,5 @@
 <?php /*
-Title: Section
+Title: Section sm
 Class: .u-section-sm .u-section-sm-top .u-section-sm-bottom
 */ ?>
 

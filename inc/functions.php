@@ -38,7 +38,7 @@
 
     function printSvg($folder = 'general', $hash, $class = '') {
         echo '<svg class="icon ' . $class . '">
-            <use xlink:href="' . getUrl('build/img/icons/' . $folder . '/symbol/sprite-symbol.svg') . '#' . $hash  . '" />
+            <use xlink:href="' . getUrl('build/img/vectors/' . $folder . '/symbol/sprite-symbol.svg') . '#' . $hash  . '" />
         </svg>';
     }
 
@@ -143,7 +143,9 @@
 
     function pathToUrl($path) {
         $base = dirname(__DIR__);
-        return 'pattern' . substr($path, strlen($base), -4);
+        $path = realpath($path);
+        $path = substr($path, strlen($base), -4);
+        return $path;
     }
 
     function isIndex() {
@@ -347,4 +349,4 @@ class Section
         return $contents;
     }
 }
-$toplevels = array('branding', 'atom', 'molecule', 'organism', 'template', 'helper', 'utility', );
+$toplevels = array('branding', 'base', 'component', 'demo', 'helper', 'utility', );

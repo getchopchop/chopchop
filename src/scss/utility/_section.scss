@@ -5,25 +5,11 @@
 @each $key, $value in $sections {
     @if $key == base {
         .u-section {
-            &-top {
-                margin-top: $value;
-            }
-            &-bottom {
-                margin-bottom: $value;
-            }
-            @extend .u-section-top;
-            @extend .u-section-bottom;
+            @include section($key);
         }
     } @else {
         .u-section-#{$key} {
-            &-top {
-                margin-top: $value;
-            }
-            &-bottom {
-                margin-bottom: $value;
-            }
-            @extend .u-section-#{$key}-top;
-            @extend .u-section-#{$key}-bottom;
+            @include section($key);
         }
     }
 }

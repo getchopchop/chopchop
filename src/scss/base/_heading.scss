@@ -1,0 +1,40 @@
+// =============================================
+// Headings
+// =============================================
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: $heading-font-family;
+    line-height: $line-height-sm;
+    font-weight: $bold;
+    margin-top: 0;
+    margin-bottom: spacing(sm);
+}
+
+* + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
+* + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6 {
+    margin-top: spacing(xl);
+}
+
+$heading-min: map-get($typescale-calc,min);
+$heading-max: map-get($typescale-calc,max);
+
+$screen-min: screen( nth(map-keys($screens),2) );
+$screen-max: screen( nth( map-keys($screens), length($screens) ) );
+
+@each $h in h6, h5, h4, h3, h2, h1 {
+	#{$h}, %#{$h}, .#{$h} {
+		font-size: $heading-min;
+
+        @include breakpoint($screen-min) {
+			font-size: calc(#{$heading-min} + #{strip-unit($heading-max - $heading-min)} * ((100vw - #{$screen-min}) / #{strip-unit($screen-max - $screen-min)}));
+		}
+
+        @include breakpoint($screen-max) {
+			font-size: $heading-max;
+		}
+	}
+
+	$heading-min: $heading-min * map-get($typescale,min);
+    $heading-max: $heading-max * map-get($typescale,max);
+}

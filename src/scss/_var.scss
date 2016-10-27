@@ -69,10 +69,15 @@ $line-height-sm         : 1.2;
 
 $heading-font-family    : $font-family;
 
-$type-scales: (
-    base                : 1.25,
-    sm                  : 1.334,
-    lg                  : 1.414
+$typescale: (
+	min: 1.25,
+	max: 1.414
+);
+
+// No need to edit
+$typescale-calc: (
+	min: 1 / map-get($typescale, min) * 1em,
+	max: 1 / map-get($typescale, max) * 1em
 );
 
 
@@ -88,8 +93,13 @@ $spacing: (
     xl                  : 1.8em
 );
 
+
+// =============================================
+// Grid gutters
+// =============================================
+
 $gutter-x               : 3%;
-$gutter-y               : 3%;
+$gutter-y               : $gutter-x;
 
 
 // =============================================
@@ -97,9 +107,18 @@ $gutter-y               : 3%;
 // =============================================
 
 $sections: (
-    base                : 6vw,
-    sm                  : 3vw,
-    lg                  : 9vw
+    sm: (
+        min            : 2em,
+        max            : 4em
+    ),
+    base: (
+        min            : 3em,
+        max            : 6em
+    ),
+    lg: (
+        min            : 4em,
+        max            : 8em
+    )
 );
 
 
