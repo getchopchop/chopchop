@@ -1,6 +1,6 @@
 {
   "name": "chopchop",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "description": "Chop Chop is a lightweight frontend pattern primer.",
   "main": "gulpfile.js",
   "scripts": {
