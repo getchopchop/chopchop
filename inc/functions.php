@@ -36,6 +36,27 @@
         echo get($location, $options);
     }
 
+    function getData($filename = null, $object = null) {
+        $yamlfile = file_get_contents(dirname(__FILE__) . '/../data/' . $filename . '.yml');
+
+        $yamlfile_contents = array();
+        $yamlfile_data = array_merge($yamlfile_contents, spyc_load($yamlfile));
+
+        if(empty($object)) {
+            $data = $yamlfile_data[$filename][array_rand($yamlfile_data[$filename])];
+        } elseif (is_integer($object)) {
+            $data = $yamlfile_data[$filename][$object];
+        } elseif (is_string($object)) {
+            $data = $yamlfile_data[$object];
+        }
+
+        return $data;
+    }
+
+    function printData($filename = null, $object = null) {
+        echo getData($filename, $object);
+    }
+
     function printSvg($folder = 'general', $hash, $class = '') {
         echo '<svg class="icon ' . $class . '">
             <use xlink:href="' . getUrl('build/img/vectors/' . $folder . '/symbol/sprite-symbol.svg') . '#' . $hash  . '" />
