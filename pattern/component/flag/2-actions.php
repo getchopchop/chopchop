@@ -9,6 +9,6 @@ Class: .flag.flag--center.flag--gutter.title
         <h2 class="title__sub">This is a Sub Title</h2>
     </div>
     <div>
-        <a href="#" class="btn">Has Buttons</a>
+        <a href="#" class="btn">Button</a>
     </div>
 </hgroup>

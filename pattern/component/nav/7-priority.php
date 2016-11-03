@@ -6,12 +6,10 @@ Class: .priority-nav
 <div class="priority-nav">
     <div class="priority-nav__container">
         <ul class="priority-nav__nav nav nav--inline nav--pills">
-            <?php for($i=0; $i <=4; $i++) { ?>
-            <li class="nav__item"><a href="#">home</a></li>
+            <?php for($i=0; $i <=4; $i++) { ?><li class="nav__item"><a href="#">home</a></li>
             <li class="nav__item"><a href="#">UK</a></li>
             <li class="nav__item"><a href="#">world</a></li>
-            <li class="nav__item"><a href="#">politics</a></li>
-            <?php } ?>
+            <li class="nav__item"><a href="#">politics</a></li><?php } ?>
         </ul>
     </div>
     <div class="priority-nav__toggle nav nav--pills">

@@ -6,28 +6,23 @@ Description: The modal is hidden off screen by default, use the modal toggles to
 
 <div class="modal" id="modal" data-cc-cascade="overlay" data-cc-trigger-on="direct-only" data-cc-action="deactivate" data-cc-target="modal">
     <div class="modal__dialog">
-
+        
         <div id="modal-tab-1" data-cc-cascade="modal" data-cc-group="modal-tabs" class="u-toggle">
-            
             <div class="card">
                 <div class="card__header">
                     <h2>Modal Content 1</h2>
                 </div>
                 <div class="u-block">
-                    
                     <p><a href="#" data-cc-action="activate" data-cc-target="modal-tab-2">Show Modal 2 Content</a></p>
-                    
                     <p>Vestibulum varius sem vitae diam venenatis porttitor. Pellentesque nec quam eget eros tincidunt mattis non ac nunc. Vivamus tristique, turpis vitae efficitur laoreet, eros tellus lobortis nulla, ac auctor neque velit at risus. Sed volutpat dolor erat, placerat malesuada quam tempor eu. Morbi a tellus sit amet lectus tincidunt imperdiet a tincidunt est. Cras vel volutpat mauris. Sed consectetur felis vel maximus elementum. Proin sed nisl lectus. Nunc non est ac ipsum gravida commodo vel quis nunc.</p>
                 </div>
                 <div class="card__footer">
                     <a href="#" data-cc-action="deactivate" data-cc-target="modal">Close</a>
                 </div>
             </div>
-            
         </div>
 
         <div id="modal-tab-2" data-cc-cascade="modal" data-cc-group="modal-tabs" class="u-toggle">
-            
             <div class="card">
                 <div class="card__header">
                     <h2>Modal Content 2</h2>

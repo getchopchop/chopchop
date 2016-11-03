@@ -7,19 +7,13 @@ Class: .nav.nav--multi-level
     <li>
         <a href="#">Top Level with sub</a>
         <ul>
-            <?php for($i=0; $i <=6; $i++) { ?>
-            <li>
+            <?php for($i=0; $i <=6; $i++) { ?><li>
                 <a href="#">Sub Level with sub</a>
                 <ul>
-                    <?php for($i=0; $i <=6; $i++) { ?>
-                    <li><a href="#">Sub Level</a></li>
-                    <?php } ?>
+                    <?php for($i=0; $i <=6; $i++) { ?><li><a href="#">Sub Level</a></li><?php } ?>
                 </ul>
-            </li>
-            <?php } ?>
+            </li><?php } ?>
         </ul>
     </li>
-    <?php for($i=0; $i <=6; $i++) { ?>
-        <li><a href="#">Top Level</a></li>
-    <?php } ?>
+    <?php for($i=0; $i <=6; $i++) { ?><li><a href="#">Top Level</a></li><?php } ?>
 </ul>
