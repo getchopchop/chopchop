@@ -2,4 +2,5 @@
 Title: Header
 */ ?>
 
-<?php printPattern('molecule/logo'); ?>
+<?php printPattern('component/logo'); ?>
+<?php printPattern('base/button/base'); ?>

@@ -16,6 +16,8 @@
             $last = array_pop($parts);
             $parts[] = "*".$last.".php";
             $path = TEMPLATE_PATH . implode('/', $parts);
+            print_r( $path );
+            echo '<Br />';
             $filestocheck = glob($path);
             $files = array();
             foreach ($filestocheck as $f) {
