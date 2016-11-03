@@ -7,15 +7,20 @@
     define('DS', DIRECTORY_SEPARATOR);
 
     function get($location, $options=array()) {
+        $location = 'pattern/' . $location;
+
         if(substr($location, -1) === '/') {
             $path = TEMPLATE_PATH . trim($location, '/');
             $files = recurseDir($location, $path);
         }
         else {
             $parts = explode('/', trim($location, '/'));
+
             $last = array_pop($parts);
             $parts[] = "*".$last.".php";
-            $path = TEMPLATE_PATH . implode('/', $parts);
+
+           $path = TEMPLATE_PATH . implode('/', $parts);
+
             $filestocheck = glob($path);
             $files = array();
             foreach ($filestocheck as $f) {
@@ -25,6 +30,7 @@
                 }
             }
         }
+
         return getContents($files, $options);
     }
 
