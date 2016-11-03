@@ -1,7 +1,7 @@
 <?php /*
 Title: Blockquote
 Class: &lt;blockquote&gt;
-Code: false
+Container: true
 */ ?>
 
 <blockquote>
