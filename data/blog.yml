@@ -1,0 +1,11 @@
+---
+blog:
+    title:
+        - Blog title 1
+        - Blog title 2
+        - Blog title 3
+    author:
+        - Jake Cobley
+        - Dave Redfern
+        - John Doe
+        - John Smith
