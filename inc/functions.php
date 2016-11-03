@@ -143,7 +143,9 @@
 
     function pathToUrl($path) {
         $base = dirname(__DIR__);
-        return 'pattern' . substr($path, strlen($base), -4);
+        $path = realpath($path);
+        $path = substr($path, strlen($base), -4);
+        return $path;
     }
 
     function isIndex() {
