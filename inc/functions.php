@@ -235,7 +235,7 @@
                     <ul>';
 
                 if($this->shouldPrintCode()) {
-                    $title .= '<li><a href="#" data-cc-action="toggle" data-cc-target="cc-code-' . str_replace(' ', '-', strtolower($this->Title)) . '" class="micro">Code</a></li>';
+                    $title .= '<li><a href="#" data-cc-action="toggle" data-cc-target="cc-code-' . substr(str_replace('/','-',$this->getUrl(false)),1) . '" class="micro">Code</a></li>';
                 }
                 $title .= '<li><a href="'.$this->getUrl(true).'" class="micro">Preview</a></li>
                     </ul>
@@ -363,7 +363,7 @@ class Section
             }
 
             if($printCode) {
-                echo '<div class="u-toggle" id="cc-code-' . str_replace(' ', '-', strtolower($_t->Title)) . '"><pre class="cc-code"><code class="language-html">';
+                echo '<div class="u-toggle" id="cc-code-' . substr(str_replace('/','-',$_t->getUrl(false)),1) . '"><pre class="cc-code"><code class="language-html">';
                     $html = file_get_contents($path);
                     echo htmlentities(trim(preg_replace('/<\\?.*(\\?>|$)/Us', '', $html)));
                 echo '</code></pre></div>';
