@@ -1,5 +1,6 @@
 <?php /*
 Title: Favicon
+Code: false
 */ ?>
 
 <div class="grid g-gutter">

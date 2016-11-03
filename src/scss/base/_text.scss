@@ -53,19 +53,19 @@ small {
     font-size: $font-size-sm;
 }
 
+code,
+kbd,
+pre,
+samp {
+    font-size: $font-size;
+}
+
 code {
     padding: 2px 4px;
     font-size: $font-size-sm;
     color: color(error);
     background-color: color(grey, lighter);
     border-radius: $border-radius;
-}
-
-code,
-kbd,
-pre,
-samp {
-    font-size: $font-size;
 }
 
 mark {

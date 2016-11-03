@@ -3,6 +3,4 @@ Title: Base Button
 Class: &lt;button&gt;
 */ ?>
 
-<p>
-    <button type="button">Button</button>
-</p>
+<button type="button">Button</button>

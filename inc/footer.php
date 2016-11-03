@@ -15,6 +15,7 @@
 
 <?php if(!isset($_GET['preview'])) : ?>
     <script src="<?php echo getUrl('build/vendor/jquery.cookie/jquery.cookie.js'); ?>"></script>
+    <script src="<?php echo getUrl('build/vendor/prismjs/prism.js'); ?>"></script>
     <script src="<?php echo getUrl('build/js/chopchop-ui.js'); ?>"></script>
 <?php endif; ?>
 <!-- End template: _footer !-->

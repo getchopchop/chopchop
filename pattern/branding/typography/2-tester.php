@@ -1,5 +1,6 @@
 <?php /*
 Title: Typography
+Code: false
 */ ?>
 
 <div class="u-container-sm">

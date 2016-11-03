@@ -43,7 +43,8 @@
              <?php } else {
                  $options = array(
                     'print_title' => !((isset($_GET['title']) && $_GET['title'] === 'false')),
-                    'print_container' => !((isset($_GET['container']) && $_GET['container'] === 'false'))
+                    'print_container' => !((isset($_GET['container']) && $_GET['container'] === 'false')),
+                    'print_code' => !((isset($_GET['code']) && $_GET['code'] === 'false'))
                  );
                  echo Section::get(getRequestPath(), $options);
              }?>
@@ -54,6 +55,6 @@
     <?php endif; ?>
 
     <?php include('inc/footer.php'); ?>
-    
+
 </body>
 </html>

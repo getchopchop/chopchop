@@ -193,6 +193,7 @@
         public function __construct($data = array(), $path, $options=array()) {
             $this->printTitle = isset($options['print_title']) && $options['print_title'];
             $this->printContainer = isset($options['print_container']) && $options['print_container'];
+            $this->printCode = isset($options['print_code']) && $options['print_code'];
             $this->data = $data;
             $this->path = $path;
             $this->options = $options;
@@ -207,6 +208,10 @@
 
         public function shouldPrintContainer(){
             return $this->printContainer && $this->Container !== false;
+        }
+
+        public function shouldPrintCode(){
+            return $this->printCode && $this->Code !== false;
         }
 
         public function printTitle() {
@@ -310,7 +315,7 @@ class Section
     }
 
     public function getContent($options) {
-        $contents = '<section id="section-'.basename($this->location, '.php').'" >';
+        $contents = '<section id="section-'.basename($this->location, '.php').'" class="cc-pattern">';
         foreach($this->children as $child) {
             $contents .= $child->getContent($options);
         }
@@ -323,23 +328,43 @@ class Section
 
     protected function getContents($paths, $options) {
         $printContainer = false;
+        $printCode = false;
         ob_start();
         foreach($paths as $path) {
             $_t = new TemplateHelper(parseComments(file_get_contents($path)), $path, $options);
             $printContainer |= $_t->shouldPrintContainer();
+            $printCode |= $_t->shouldPrintCode();
             $classes = array('cc-section');
             if($_t->Section){
                 $classes[] =  $_t->Section;
             }
+
             if($printContainer) {
-                echo '<section class="'.implode(' ', $classes).'"><div class="u-container">';
+                echo '<div class="u-container">';
             }
 
             echo $_t->printTitle();
+
+            if($printContainer) {
+                echo '</div>';
+                echo '<div class="u-container"><section class="'.implode(' ', $classes).'"><div class="cc-demo">';
+            }
+
             include $path;
 
             if($printContainer) {
-                echo '</div></section>';
+                echo '</div>';
+            }
+
+            if($printCode) {
+                echo '<div class="u-toggle"><pre class="cc-code"><code class="language-html">';
+                    $html = file_get_contents($path);
+                    echo htmlentities(trim(preg_replace('/<\\?.*(\\?>|$)/Us', '', $html)));
+                echo '</code></pre></div>';
+            }
+
+            if($printContainer) {
+                echo '</section></div>';
             }
         }
         $contents .= ob_get_contents();
