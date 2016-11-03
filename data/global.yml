@@ -1,4 +1,5 @@
 ---
-site-name: "ChopChop"
-tagline: "Front end user interface toolkit for the pro's"
-email: "youshould@getchopchop.io"
+global:
+    site-name: "ChopChop"
+    tagline: "Front end user interface toolkit for the pro's"
+    email: "youshould@getchopchop.io"

@@ -35,26 +35,34 @@
     function printPattern($location, $options=array()) {
         echo get($location, $options);
     }
-
-    function getData($filename = null, $object = null) {
-        $yamlfile = file_get_contents(dirname(__FILE__) . '/../data/' . $filename . '.yml');
-
+    
+    function getdata($file, $section, $num = null) {
+        $yamlfile = file_get_contents(dirname(__FILE__) . '/../data/' . $file . '.yml');
+        
         $yamlfile_contents = array();
         $yamlfile_data = array_merge($yamlfile_contents, spyc_load($yamlfile));
-
-        if(empty($object)) {
-            $data = $yamlfile_data[$filename][array_rand($yamlfile_data[$filename])];
-        } elseif (is_integer($object)) {
-            $data = $yamlfile_data[$filename][$object];
-        } elseif (is_string($object)) {
-            $data = $yamlfile_data[$object];
+        
+        $data = $yamlfile_data[$file];
+        
+        if(empty($section)) {
+            $data = $data[array_rand($data)];
+        } else {
+            if(is_array($data[$section])) {
+                if(empty($num)) {
+                    $data = $data[$section][array_rand($data[$section])];
+                } else {
+                    $data = $data[$section][$num];
+                }
+            } else {
+                $data = $data[$section];
+            }
         }
 
         return $data;
     }
 
-    function printData($filename = null, $object = null) {
-        echo getData($filename, $object);
+    function printData($file, $section, $num = null) {
+        echo getData($file, $section, $num);
     }
 
     function printSvg($folder = 'general', $hash, $class = '') {
