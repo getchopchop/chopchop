@@ -1,7 +1,7 @@
 <?php /*
 Title: Right Drawer
 Class: .drawer.drawer--right
-Description: The right drawer is hidden off screen by default, use the Right Drawer toggle to show.
+Description: The right drawer is hidden off screen by default. <a href="#" data-cc-target="drawer-right-1" data-cc-action="activate">Active Right Drawer</a>.
 */ ?>
 
 <div class="drawer drawer--right" id="drawer-right" data-cc-cascade="overlay">
@@ -23,7 +23,7 @@ Description: The right drawer is hidden off screen by default, use the Right Dra
                 </div>
             </div>
         </div>
-        
+
         <div id="drawer-right-2" class="u-toggle" data-cc-cascade="drawer-right" data-cc-group="drawer-right-contents">
             <div class="card">
                 <div class="card__header">
@@ -37,6 +37,6 @@ Description: The right drawer is hidden off screen by default, use the Right Dra
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>

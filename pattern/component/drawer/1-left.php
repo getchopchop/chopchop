@@ -1,12 +1,12 @@
 <?php /*
 Title: Left Drawer
 Class: .drawer.drawer--left
-Description: The left drawer is hidden off screen by default, use the Left Drawer toggle to show.
+Description: The left drawer is hidden off screen by default. <a href="#" data-cc-target="drawer-left-1" data-cc-action="activate">Active Left Drawer</a>.
 */ ?>
 
 <div class="drawer drawer--left" id="drawer-left" data-cc-cascade="overlay">
     <div class="drawer__dialog">
-        
+
         <div id="drawer-left-1" class="u-toggle" data-cc-cascade="drawer-left" data-cc-group="drawer-left-contents">
             <div class="card">
                 <div class="card__header">
@@ -22,6 +22,6 @@ Description: The left drawer is hidden off screen by default, use the Left Drawe
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>

@@ -42,10 +42,12 @@
         <?php if(isIndex()) { ?>
              <?php } else {
                  $options = array(
-                    'print_title' => !((isset($_GET['title']) && $_GET['title'] === 'false')),
-                    'print_container' => !((isset($_GET['container']) && $_GET['container'] === 'false')),
-                    'print_code' => !((isset($_GET['code']) && $_GET['code'] === 'false'))
+                    'print_title' => !((isset($_GET['title']) && $_GET['title'] === false)),
+                    'print_container' => !((isset($_GET['container']) && $_GET['container'] === false)),
+                    'print_code' => !((isset($_GET['code']) && $_GET['code'] === false)),
+                    'print_codeactive' => !((isset($_GET['codeactive']) && $_GET['codeactive'] === false))
                  );
+
                  echo Section::get(getRequestPath(), $options);
              }?>
     <?php if(!isset($_GET['preview'])) : ?>

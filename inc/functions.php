@@ -38,15 +38,15 @@
     function printPattern($location, $options=array()) {
         echo get($location, $options);
     }
-    
+
     function getdata($file, $section, $num = null) {
         $yamlfile = file_get_contents(dirname(__FILE__) . '/../data/' . $file . '.yml');
-        
+
         $yamlfile_contents = array();
         $yamlfile_data = array_merge($yamlfile_contents, spyc_load($yamlfile));
-        
+
         $data = $yamlfile_data[$file];
-        
+
         if(empty($section)) {
             $data = $data[array_rand($data)];
         } else {
@@ -228,6 +228,7 @@
             $this->printTitle = isset($options['print_title']) && $options['print_title'];
             $this->printContainer = isset($options['print_container']) && $options['print_container'];
             $this->printCode = isset($options['print_code']) && $options['print_code'];
+            $this->printCodeActive = isset($options['print_codeactive']) && $options['print_codeactive'];
             $this->data = $data;
             $this->path = $path;
             $this->options = $options;
@@ -248,6 +249,10 @@
             return $this->printCode && $this->Code !== false;
         }
 
+        public function shouldPrintCodeActive(){
+            return $this->printCodeActive && $this->CodeActive == true;
+        }
+
         public function printTitle() {
             if(!$this->printTitle) {
                 return '';
@@ -265,7 +270,6 @@
                 $title .= '</div>
                 <div class="cc-title__actions">
                     <ul>';
-
                 if($this->shouldPrintCode()) {
                     $title .= '<li><a href="#" data-cc-action="toggle" data-cc-target="cc-code-' . substr(str_replace('/','-',$this->getUrl(false)),1) . '" class="micro">Code</a></li>';
                 }
@@ -367,11 +371,14 @@ class Section
     protected function getContents($paths, $options) {
         $printContainer = false;
         $printCode = false;
+        $printCodeActive = false;
         ob_start();
         foreach($paths as $path) {
             $_t = new TemplateHelper(parseComments(file_get_contents($path)), $path, $options);
             $printContainer |= $_t->shouldPrintContainer();
             $printCode |= $_t->shouldPrintCode();
+            $printCodeActive |= $_t->shouldPrintCodeActive();
+
             $classes = array('cc-section');
             if($_t->Section){
                 $classes[] =  $_t->Section;
@@ -395,7 +402,11 @@ class Section
             }
 
             if($printCode) {
-                echo '<div class="u-toggle" id="cc-code-' . substr(str_replace('/','-',$_t->getUrl(false)),1) . '"><pre class="cc-code"><code class="language-html">';
+                echo '<div class="u-toggle';
+                if($printCodeActive) {
+                    echo ' is-active';
+                }
+                echo'" id="cc-code-' . substr(str_replace('/','-',$_t->getUrl(false)),1) . '"><pre class="cc-code"><code class="language-html">';
                     $html = file_get_contents($path);
                     echo htmlentities(trim(preg_replace('/<\\?.*(\\?>|$)/Us', '', $html)));
                 echo '</code></pre></div>';
@@ -410,4 +421,4 @@ class Section
         return $contents;
     }
 }
-$toplevels = array('branding', 'base', 'component', 'demo', 'helper', 'utility', );
+$toplevels = array('branding', 'base', 'component', 'demo', 'helper', 'utility' );
