@@ -1,6 +1,6 @@
 <?php require_once('inc/functions.php'); ?>
 <?php
-    if(getRequestPath() == '/') {
+    if(getRequestPath() == '/' || getRequestPath() == '/pattern/') {
         header('Location: ' . getUrl('/pattern/branding/'));
         exit;
     }
