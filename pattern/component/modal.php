@@ -1,7 +1,7 @@
 <?php /*
 Title: Modal
 Class: .modal
-Description: The modal is hidden off screen by default. <a href="#" data-cc-action="activate" data-cc-target="modal-tab-1">Show Modal 1 Content</a> or <a href="#" data-cc-action="activate" data-cc-target="modal-tab-2">Show Modal 2 Content</a>.
+Description: The modal is hidden off screen by default. <a href="#" data-cc-action="activate" data-cc-target="modal-tab-1">Show modal 1 content</a> or <a href="#" data-cc-action="activate" data-cc-target="modal-tab-2">Show modal 2 content</a>.
 */ ?>
 
 <div class="modal" id="modal" data-cc-cascade="overlay" data-cc-trigger-on="direct-only" data-cc-action="deactivate" data-cc-target="modal">

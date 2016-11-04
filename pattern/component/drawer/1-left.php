@@ -1,7 +1,7 @@
 <?php /*
 Title: Left Drawer
 Class: .drawer.drawer--left
-Description: The left drawer is hidden off screen by default. <a href="#" data-cc-target="drawer-left-1" data-cc-action="activate">Active Left Drawer</a>.
+Description: The left drawer is hidden off screen by default. <a href="#" data-cc-target="drawer-left-1" data-cc-action="activate">Active left drawer</a>.
 */ ?>
 
 <div class="drawer drawer--left" id="drawer-left" data-cc-cascade="overlay">
