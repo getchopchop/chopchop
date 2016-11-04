@@ -384,7 +384,7 @@ class Section
                 $classes[] =  $_t->Section;
             }
 
-            if($printContainer) {
+            if($printContainer && !isset($_GET['preview'])) {
                 echo '<div class="u-container">';
             }
 
@@ -392,18 +392,18 @@ class Section
                 echo $_t->printTitle();
             }
 
-            if($printContainer) {
+            if($printContainer && !isset($_GET['preview'])) {
                 echo '</div>';
                 echo '<div class="u-container"><section class="'.implode(' ', $classes).'"><div class="cc-demo">';
             }
 
             include $path;
 
-            if($printContainer) {
+            if($printContainer && !isset($_GET['preview'])) {
                 echo '</div>';
             }
 
-            if($printCode) {
+            if($printCode && !isset($_GET['preview'])) {
                 echo '<div class="u-toggle';
                 if($printCodeActive) {
                     echo ' is-active';
@@ -417,7 +417,7 @@ class Section
                 echo '</code></pre></div>';
             }
 
-            if($printContainer) {
+            if($printContainer && !isset($_GET['preview'])) {
                 echo '</section></div>';
             }
         }
