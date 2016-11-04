@@ -39,7 +39,7 @@
         echo get($location, $options);
     }
 
-    function getdata($file, $section, $num = null) {
+    function getdata($file, $section = null, $num = null) {
         $yamlfile = file_get_contents(dirname(__FILE__) . '/../data/' . $file . '.yml');
 
         $yamlfile_contents = array();
@@ -47,7 +47,7 @@
 
         $data = $yamlfile_data[$file];
 
-        if(empty($section)) {
+        if(empty($section) && !is_int($section)) {
             $data = $data[array_rand($data)];
         } else {
             if(is_array($data[$section])) {
@@ -64,7 +64,7 @@
         return $data;
     }
 
-    function printData($file, $section, $num = null) {
+    function printData($file, $section = null, $num = null) {
         echo getData($file, $section, $num);
     }
 
@@ -286,8 +286,8 @@
             return $title;
         }
 
-        public function getUrl($preview = false){
-            if(!$preview){
+        public function getUrl($preview = false) {
+            if(!$preview) {
                 return pathToUrl($this->path);
             }
             return pathToUrl($this->path) . '?preview';
@@ -388,7 +388,9 @@ class Section
                 echo '<div class="u-container">';
             }
 
-            echo $_t->printTitle();
+            if(!isset($_GET['preview'])) {
+                echo $_t->printTitle();
+            }
 
             if($printContainer) {
                 echo '</div>';
@@ -407,8 +409,11 @@ class Section
                     echo ' is-active';
                 }
                 echo'" id="cc-code-' . substr(str_replace('/','-',$_t->getUrl(false)),1) . '"><pre class="cc-code"><code class="language-html">';
-                    $html = file_get_contents($path);
-                    echo htmlentities(trim(preg_replace('/<\\?.*(\\?>|$)/Us', '', $html)));
+                    ob_start();
+                    include $path;
+                    $html = ob_get_contents();
+                    ob_end_clean();
+                    echo htmlentities(trim($html));
                 echo '</code></pre></div>';
             }
 
