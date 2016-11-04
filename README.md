@@ -1,13 +1,6 @@
 # ChopChop
 A front end framework and pattern library
 
-**Atomic**
-- atoms – high level elements such as inputs, headings
-- molecules – something containing multiple atoms or a very reusable flexible
-pattern
-- organism – something very specific to it's use that contains multiple
-molecules
-
 ## Getting Started
 
 1. Clone the project / Download the zip.
