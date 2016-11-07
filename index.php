@@ -14,29 +14,10 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="noindex">
+    <?php require_once('inc/meta.php'); ?>
     <title>Chop Chop - Little user interface patterns to get us going</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo getUrl('build/vendor/favicons/apple-touch-icon.png'); ?>">
-    <link rel="icon" type="image/png" href="<?php echo getUrl('build/vendor/favicons/favicon-32x32.png'); ?>" sizes="32x32">
-    <link rel="icon" type="image/png" href="<?php echo getUrl('build/vendor/favicons/favicon-16x16.png'); ?>" sizes="16x16">
-    <link rel="manifest" href="<?php echo getUrl('build/vendor/favicons/manifest.json'); ?>">
-    <link rel="mask-icon" href="<?php echo getUrl('build/vendor/favicons/safari-pinned-tab.svg'); ?>" color="#5bbad5">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" type="text/css" href="<?php echo getUrl('build/vendor/normalize.css/normalize.css'); ?>" media="all" />
-    <link rel="stylesheet" type="text/css" href="<?php echo getUrl('build/css/styles.css'); ?>" media="screen" />
-    <?php /* ?>
-    <script src="<?php echo getUrl('build/vendor/element-queries/ResizeSensor.js'); ?>"></script>
-    <script src="<?php echo getUrl('build/vendor/element-queries/ElementQueries.js'); ?>"></script>
-    <?php */ ?>
-    <?php if(!isset($_GET['preview'])) : ?>
-    <link rel="stylesheet" type="text/css" href="<?php echo getUrl('build/vendor/prismjs/prism.css'); ?>" media="all" />
-        <link rel="stylesheet" type="text/css" href="<?php echo getUrl('build/css/chopchop-ui.css'); ?>" media="screen" />
-    <?php endif; ?>
+    <?php include('inc/favicons.php'); ?>
+    <?php include('inc/head.php'); ?>
 </head>
 <body>
 
@@ -52,31 +33,7 @@
 
             <nav class="cc-nav" id="cc-nav" data-cc-cascade="cc-menu-trigger">
                 <div class="block-content site-navigation__content">
-                    <nav>
-                        <ol>
-                            <?php
-                            foreach($toplevels as $toplevel) {
-                            ?>
-                                <li>
-                                    <a href="<?php echo getUrl('/pattern/' . $toplevel) ?>/"><?= ucwords($toplevel) ?></a>
-                                    <ol>
-                                        <?php
-                                        $quarks = dir(dirname(__DIR__) . '/pattern/' . $toplevel);
-                                        while (false !== ($entry = $quarks->read())) {
-                                            if(substr($entry, -4) == '.php') {
-                                                $entry = substr($entry, 0, strlen($entry) - 4);
-                                            }
-                                            if(substr($entry, 0, 1) == '.') {
-                                                 continue;
-                                            }
-                                        ?>
-                                        <li class="level1"><a href="<?php echo getUrl('/pattern/' . $toplevel)?>/<?php if($toplevel != 'template') : ?>#section-<?php endif; ?><?= $entry ?>"><?= str_replace('-', ' ', ucwords($entry)) ?></a></li>
-                                        <?php } ?>
-                                    </ol>
-                                </li>
-                            <?php } ?>
-                        </ol>
-                    </nav>
+                    <?php include('inc/nav.php'); ?>
                 </div>
             </nav>
 
@@ -98,25 +55,7 @@
         </div><!--/#wrapper -->
     <?php endif; ?>
 
-    <script src="<?php echo getUrl('build/vendor/svgxuse/svgxuse.js'); ?>" async></script>
-    <!--[if IE 9]>
-        <script src="<?php echo getUrl('build/vendor/svg4everybody/svg4everybody.js'); ?>" async></script>
-        <script async>svg4everybody(); // run it now or whenever you are ready</script>
-    <![endif]-->
-    <script src="<?php echo getUrl('build/vendor/picturefill/picturefill.js'); ?>" async></script>
-    <script src="<?php echo getUrl('build/vendor/jquery/jquery.js'); ?>"></script>
-    <?php /*?>
-    <script src="<?php echo getUrl('build/vendor/enquire/enquire.js'); ?>"></script>
-    <?php */ ?>
-    <script src="<?php echo getUrl('build/js/chopchop.lib.js'); ?>"></script>
-    <script src="<?php echo getUrl('build/js/priority-nav.js'); ?>"></script>
-    <script src="<?php echo getUrl('build/js/script.js'); ?>"></script>
-
-    <?php if(!isset($_GET['preview'])) : ?>
-        <script src="<?php echo getUrl('build/vendor/jquery.cookie/jquery.cookie.js'); ?>"></script>
-        <script src="<?php echo getUrl('build/vendor/prismjs/prism.js'); ?>"></script>
-        <script src="<?php echo getUrl('build/js/chopchop-ui.js'); ?>"></script>
-    <?php endif; ?>
+    <?php include('inc/footer.php'); ?>
 
 </body>
 </html>
