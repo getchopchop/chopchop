@@ -1,3 +1,7 @@
-<?php printPattern('demo/header'); ?>
+<?php /*
+Container: false
+*/ ?>
 
-<?php printPattern('demo/footer'); ?>
+<?php printPattern('demo/header/base'); ?>
+
+<?php printPattern('demo/footer/base'); ?>
