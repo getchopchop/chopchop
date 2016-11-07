@@ -426,4 +426,4 @@ class Section
         return $contents;
     }
 }
-$toplevels = array('branding', 'base', 'component', 'demo', 'helper', 'utility' );
+$toplevels = array('branding', 'base', 'component', 'demo', 'helper', 'utility', 'template' );
