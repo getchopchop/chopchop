@@ -22,7 +22,7 @@ Code: false
                 $previous_group = $group;
             }
             ?>
-            <div class="g-col-xs-6 g-col-sm-4 g-col-lg-3">
+            <div class="g-col-xs-6 g-col-sm-4 g-col-lg-3 g-col-xl-2">
                 <div class="card">
                     <div class="u-block">
                         <h4 class="<?php echo str_replace('u-fill', 'u-text', $class_); ?>">Hello World</h4>
