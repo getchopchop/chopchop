@@ -1,6 +1,9 @@
 # ChopChop
 A front end framework and pattern library
 
+## Wiki Documentation
+Full [documentation can be found here](https://github.com/getchopchop/chopchop/wiki)
+
 ## Getting Started
 
 1. Clone the project / Download the zip.
