@@ -143,7 +143,7 @@ var ChopChop = (function($, ChopChop) {
                     }
 
                     e.preventDefault();
-                    self.performAction($target, $this.data('cc-action') || Action.TOGGLE);
+                    self.performAction($target, $this.data('cc-action') || Action.TOGGLE, $this);
                 }
             });
         },
@@ -174,7 +174,7 @@ var ChopChop = (function($, ChopChop) {
                 });
             }
         },
-        performAction: function($el, action) {
+        performAction: function($el, action, $source) {
             this.pending.length = 0;
             this.processed.length = 0;
 
@@ -188,7 +188,7 @@ var ChopChop = (function($, ChopChop) {
 
             this.pending.push({
                 action: action,
-                target:$el
+                target: $el
             });
 
             var id, dependants, group, $current, item,
@@ -226,10 +226,10 @@ var ChopChop = (function($, ChopChop) {
                 // Process target
                 if (action === Action.ACTIVATE) {
                     $current.addClass('is-active').removeClass('is-inactive');
-                    $current.trigger('chopchop:activate');
+                    $current.trigger('chopchop:activate', [$source]);
                 } else {
                     $current.addClass('is-inactive').removeClass('is-active');
-                    $current.trigger('chopchop:deactivate');
+                    $current.trigger('chopchop:deactivate', [$source]);
                 }
 
                 // Chain onto targets
