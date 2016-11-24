@@ -4,6 +4,7 @@
 
 .field-group {
     margin: spacing() 0;
+    max-width: screen(xs,max);
 
     .field-group {
         margin-top: spacing(xs);
@@ -24,6 +25,7 @@
     .field-group--scaffold {
         @include flex;
         flex-flow: wrap;
+        max-width: none;
 
         .field-group__label {
             width: 25%;
