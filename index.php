@@ -52,7 +52,7 @@
 
             <nav class="cc-nav" id="cc-nav" data-cc-cascade="cc-menu-trigger">
                 <div class="block-content site-navigation__content">
-                    <?php require_once('inc/nav.php'); ?>
+                    <?php require_once('inc/template/nav.php'); ?>
                 </div>
             </nav>
 
