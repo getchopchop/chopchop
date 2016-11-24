@@ -10,6 +10,40 @@
     }
 }
 
+@each $screen, $value in $screens {
+    @if $screen == xs {
+        @include breakpoint( max-width screen($screen, max) ) {
+            .u-toggle-#{$screen} {
+                display: none;
+
+                &.is-active {
+                    display: block;
+                }
+            }
+        }
+    } @elseif $screen == nth( map-keys($screens), length($screens) ) {
+        @include breakpoint( screen( nth( map-keys($screens), length($screens) ) ) ) {
+            .u-toggle-#{$screen} {
+                display: none;
+
+                &.is-active {
+                    display: block;
+                }
+            }
+        }
+    } @else {
+        @include breakpoint( screen($screen) screen($screen, max) ) {
+            .u-toggle-#{$screen} {
+                display: none;
+
+                &.is-active {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
 
 // =============================================
 // Add cursor on toggles for mobile

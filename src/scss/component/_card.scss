@@ -6,12 +6,3 @@
     @include card;
     margin-bottom: spacing();
 }
-
-
-// =============================================
-// Card with border
-// =============================================
-
-.card--bordered {
-    @include card--bordered;
-}
