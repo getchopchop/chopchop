@@ -5,12 +5,6 @@
 @mixin card {
     border: 1px solid color(grey,light);
 
-    > *:not(img) {
-        > *:last-child {
-            margin-bottom: 0;
-        }
-    }
-
     &__header,
     &__footer {
         background-color: color(grey,lighter);
@@ -24,12 +18,4 @@
     &__footer {
         border-top: 1px solid color(grey, light);
     }
-}
-
-
-// =============================================
-// Card with border
-// =============================================
-
-@mixin card--bordered {
 }
