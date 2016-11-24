@@ -25,7 +25,7 @@
     .field-group--scaffold {
         @include flex;
         flex-flow: wrap;
-        max-width: none;
+        max-width: screen(sm,max);
 
         .field-group__label {
             width: 25%;
