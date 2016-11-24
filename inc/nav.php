@@ -27,7 +27,7 @@
                              continue;
                         }
                     ?>
-                    <li class="level1"><a href="<?php echo getUrl('/pattern/' . $toplevel)?>/<?php if($toplevel != 'template') : ?>#section-<?php endif; ?><?= $entry ?>"><?= str_replace('-', ' ', ucwords($entry)) ?></a></li>
+                        <li class="level1"><a href="<?php echo getUrl('/pattern/' . $toplevel)?>/<?php if($toplevel != 'template') : ?>#section-<?php endif; ?><?= $entry ?>"><?= str_replace('-', ' ', ucwords($entry)) ?></a></li>
                     <?php } ?>
                 </ol>
             </li>
