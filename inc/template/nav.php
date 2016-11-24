@@ -1,15 +1,15 @@
 <?php
-$categories = array(
-    'pattern' => array(
-        'branding',
-        'base',
-        'component',
-        'demo',
-        'helper',
-        'utility',
-        'template'
-    )
-);
+    $categories = array(
+        'pattern' => array(
+            'branding',
+            'base',
+            'component',
+            'demo',
+            'helper',
+            'utility',
+            'template'
+        )
+    );
 ?>
 <nav>
     <ol>

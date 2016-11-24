@@ -1,5 +1,6 @@
 <?php
     require_once(__DIR__ . '/lib/Spyc.php');
+    require_once(__DIR__ . '/lib/navigation.php');
 
     error_reporting(E_ALL);
 
