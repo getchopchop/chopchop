@@ -1,9 +1,0 @@
-// =============================================
-// Flag
-// =============================================
-
-.flag {
-    @include flex;
-    @include align-items(center);
-    @include justify-content(space-between);
-}

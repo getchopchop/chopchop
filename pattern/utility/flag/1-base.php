@@ -1,10 +1,10 @@
 <?php /*
 Title: Flag
-Class: .flag
-Description: Useful for splitting two chunks of content on the same row.
+Class: .u-flag
+Description: Splits items to the left and right.
 */ ?>
 
-<div class="flag">
+<div class="u-flag">
     <div>
         <a href="#" class="btn">Cancel</a>
     </div>
