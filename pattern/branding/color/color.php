@@ -11,8 +11,14 @@ Code: false
     $lines = explode("\n", $css_contents);
     $hasHeading = false;
     $previous_group = 'x';
+    
+    $matches = array();
+    preg_match_all('/\.u-fill-.*\n.*(#[0-9a-fA-F]+)/', $css_contents, $matches);
+ 
+    $cnt = 0;
+    
     foreach($lines as $line) {
-
+        
         if(substr(trim($line), 0, 7) == '.u-fill') {
             $bits = explode(" ", substr($line, 1));
             $class_ = str_replace(',','', $bits[0]);
@@ -32,12 +38,14 @@ Code: false
                     <div class="u-block-xl <?php echo $class_ ?>">
                     </div>
                     <div class="card__footer">
-                        <small><?php echo str_replace('-', ' ', str_replace('u-fill-', '', $class_)); ?></small>
+                        <small><?php echo str_replace('-', ' ', str_replace('u-fill-', '', $class_)); ?> - <?php echo $matches[1][$cnt]; ?></small>
                     </div>
                 </div>
             </div>
             <?php
+            $cnt++;
         }
+        
     }
 ?>
 </div> <!-- close the last cc-vars div -->
