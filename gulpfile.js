@@ -22,7 +22,6 @@
  *     gulp-jshint                : JSHint plugin for Gulp.
  *     gulp-uglify                : Minify files with UglifyJS.
  *     gulp-sass                  : Gulp plugin for sass.
- *     gulp-sourcemaps            : Source map support for Gulp.js.
  *     gulp-autoprefixer          : Prefix CSS.
  *     gulp-combine-mq            : Gulp plugin for node-combine-mq.
  *     gulp-cssnano               : Minify CSS with cssnano.
@@ -41,7 +40,6 @@ var $ = {
     jsHint        : require('gulp-jshint'),
     uglify        : require('gulp-uglify'),
     sass          : require('gulp-sass'),
-    sourcemaps    : require('gulp-sourcemaps'),
     autoPrefixer  : require('gulp-autoprefixer'),
     combineMq     : require('gulp-combine-mq'),
     cssNano       : require('gulp-cssnano')
@@ -203,17 +201,15 @@ function js() {
 }
 
 /**
- * Clips empty files, Sourcemaps (if not production), AutoPrefixes css, combines
- * media queries, minifes css and moves processed files to the dist directory
+ * Clips empty files, AutoPrefixes css, combines media queries, minifes css and
+ * moves processed files to the dist directory
 */
 function css() {
     return gulp.src(root.src + '/' + tasks.css.src + '/**/*.' + tasks.css.extensions)
         .pipe($.clipEmptyFiles())
-        .pipe(!$.util.env.production ? $.sourcemaps.init() : $.util.noop())
         .pipe(!$.util.env.production ? $.sass.sync().on('error', $.sass.logError) : $.util.noop())
         .pipe($.util.env.production ? $.sass.sync() : $.util.noop())
         .pipe($.autoPrefixer(tasks.css.plugins.autoPrefixer))
-        .pipe(!$.util.env.production ? $.sourcemaps.write() : $.util.noop())
         .pipe($.util.env.production ? $.combineMq() : $.util.noop())
         .pipe($.util.env.production ? $.cssNano(tasks.css.plugins.cssNano) : $.util.noop())
         .pipe(gulp.dest(root.dest + '/' + tasks.css.dest + '/'));
