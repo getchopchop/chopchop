@@ -3,6 +3,10 @@
 // =============================================
 
 $colors: (
+    brand: (
+        pink            : #e91e63
+    ),
+
     grey: (
         base            : #666,
         darker          : #222,
@@ -19,6 +23,21 @@ $colors: (
         base            : #fff
     ),
 
+    success: (
+        base            : #4caf50,
+        light           : #c8e6c9
+    ),
+
+    warning: (
+        base            : #ffeb3b,
+        light           : #fff59d
+    ),
+
+    error: (
+        base            : #f44336,
+        light           : #ffcdd2
+    ),
+
     social: (
         twitter         : #55acee,
         facebook        : #32639f,
@@ -30,20 +49,6 @@ $colors: (
         youtube         : #bb0000,
         tumblr          : #36465D
     ),
-
-    brand: (
-        pink            : #e91e63
-    ),
-
-    success: (
-        base            : #4caf50,
-        light           : #c8e6c9
-    ),
-
-    error: (
-        base            : #f44336,
-        light           : #ffcdd2
-    )
 );
 
 
