@@ -32,7 +32,7 @@ Code: false
             <div class="g-col-xs-6 g-col-sm-4 g-col-lg-3 g-col-xl-2">
                 <div class="u-block-xl <?php echo $class_ ?>">
                 </div>
-                <code>.<?php echo $class_ ?></code>
+                <code>.<?php echo str_replace('u-fill', 'u-text', $class_); ?></code>
             </div>
             <?php
         }
