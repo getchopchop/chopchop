@@ -5,9 +5,10 @@
 @mixin btn {
     padding: spacing(xs) spacing();
     border-radius: 0;
-    font-size: $font-size;
-    font-family: $heading-font-family;
+    font-size: inherit;
+    font-family: inherit;
     font-weight: $bold;
+    line-height: inherit;
     text-decoration: none;
     border: 1px solid transparent;
     cursor: pointer;
@@ -15,7 +16,6 @@
     vertical-align: middle;
     text-align: center;
     white-space: nowrap;
-    line-height: inherit;
     width: auto;
     background-color: color(grey,darker);
     color: color(white);
@@ -62,7 +62,7 @@
     @extend .link;
     background-color: transparent;
     color: color(black);
-    font-weight: normal;
+    font-weight: inherit;
     text-decoration: underline;
 
     &:hover,

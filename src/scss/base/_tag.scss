@@ -9,7 +9,7 @@
     padding: spacing(xs)/2 spacing(xs);
     white-space: nowrap;
     vertical-align: baseline;
-    line-height: 1;
+    line-height: $line-height-sm;
     border-radius: $border-radius;
 }
 

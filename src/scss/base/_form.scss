@@ -7,8 +7,8 @@ label,
 select,
 textarea {
     display: block;
-    font-family: $font-family;
-    font-size: $font-size;
+    font-family: inherit;
+    font-size: inherit;
     line-height: inherit;
 }
 
