@@ -55,52 +55,6 @@
 
 
 // =============================================
-// Priority Nav
-// =============================================
-
-@mixin priority-nav {
-    @include flex;
-
-    &__container {
-        flex-grow: 1;
-        overflow-x: scroll;
-    }
-
-    ::-webkit-scrollbar {
-        display: none;
-    }
-
-    &__toggle {
-        display: none;
-        flex-shrink: 0;
-
-        &.is-active {
-            display: block;
-        }
-    }
-
-    &__nav {
-        white-space: nowrap;
-        @include flex-wrap(wrap);
-        -webkit-overflow-scrolling: touch;
-
-        li {
-            flex-shrink: 0;
-        }
-    }
-
-    &__sub {
-        padding: spacing();
-        display: none;
-
-        &.is-active {
-            display: block;
-        }
-    }
-}
-
-
-// =============================================
 // Nav Multi Level
 // =============================================
 
