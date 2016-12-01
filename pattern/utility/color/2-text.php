@@ -28,7 +28,7 @@ Code: false
                         <h4 class="<?php echo str_replace('u-fill', 'u-text', $class_); ?>">Hello World</h4>
                     </div>
                     <div class="card__footer">
-                        <small><code>.<?php echo $class_ ?></code></small>
+                        <small><code>.<?php echo str_replace('u-fill', 'u-text', $class_); ?></code></small>
                     </div>
                 </div>
             </div>
