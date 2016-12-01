@@ -1,6 +1,6 @@
 <?php /*
-Title: Grid Center Mixin
-Class: @include grid-center;
+Title: Grid Reverse Mixin
+Class: @include grid-reverse;
 */ ?>
 
 <div class="grid g-reverse">
