@@ -8,7 +8,7 @@ Class: .grid
 </div>
 
 <div class="grid">
-    <div class="g-col-xs-12"><div class="u-block u-fill-grey-lighter"><code>.g-col-xs-1</code></div></div>
+    <div class="g-col-xs-12"><div class="u-block u-fill-grey-lighter"><code>.g-col-xs-12</code></div></div>
 </div>
 
 <div class="grid">
