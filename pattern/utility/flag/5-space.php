@@ -1,10 +1,10 @@
 <?php /*
-Title: Flag Gutter
-Class: .u-flag.u-flag--gutter
-Description: Adds a gutter between items if they meet.
+Title: Flag Space
+Class: .u-flag.u-flag--space
+Description: Moves the items to the far left and right.
 */ ?>
 
-<div class="u-flag u-flag--gutter">
+<div class="u-flag u-flag--space">
     <div>
         <a href="#" class="btn">Cancel</a>
     </div>

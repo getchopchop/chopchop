@@ -4,8 +4,6 @@
 
 .u-flag {
     @include flex;
-    @include align-items(center);
-    @include justify-content(space-between);
 }
 
 
@@ -15,6 +13,24 @@
 
 .u-flag--gutter {
     @include grid-gutter-x;
+}
+
+
+// =============================================
+// Flag centered
+// =============================================
+
+.u-flag--center {
+    @include align-items(center);
+}
+
+
+// =============================================
+// Flag split
+// =============================================
+
+.u-flag--space {
+    @include justify-content(space-between);
 }
 
 
@@ -33,9 +49,9 @@
 
 .u-flag--stretch {
     > *:first-child {
-        flex-shrink: 0;
+        flex-grow: 1;
     }
     > *:last-child {
-        flex-grow: 1;
+        flex-shrink: 0;
     }
 }

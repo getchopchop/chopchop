@@ -73,7 +73,7 @@
 // Grid Justify
 // =============================================
 
-@mixin grid-justify {
+@mixin grid-space {
     @include justify-content(space-between);
 }
 

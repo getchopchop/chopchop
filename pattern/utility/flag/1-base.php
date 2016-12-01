@@ -1,7 +1,7 @@
 <?php /*
 Title: Flag
 Class: .u-flag
-Description: Splits items to the left and right.
+Description: Adds flex to the container.
 */ ?>
 
 <div class="u-flag">
