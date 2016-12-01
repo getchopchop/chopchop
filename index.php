@@ -85,7 +85,6 @@
     <script src="<?php echo getUrl('build/vendor/enquire/enquire.js'); ?>"></script>
     <?php */ ?>
     <script src="<?php echo getUrl('build/js/chopchop.lib.js'); ?>"></script>
-    <script src="<?php echo getUrl('build/js/priority-nav.js'); ?>"></script>
     <script src="<?php echo getUrl('build/js/script.js'); ?>"></script>
 
     <?php if(!isset($_GET['preview'])) : ?>
