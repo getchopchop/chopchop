@@ -1,5 +1,5 @@
 <?php /*
-Title: Grid
+Title: Grid Center
 Class: .g-center
 */ ?>
 

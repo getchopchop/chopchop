@@ -1,5 +1,5 @@
 <?php /*
-Title: Grid
+Title: Grid Reverse
 Class: .g-reverse
 */ ?>
 

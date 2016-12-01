@@ -1,10 +1,10 @@
 <?php /*
-Title: Flag Gutter
-Class: .u-flag.u-flag--gutter
-Description: Adds a gutter between items if they meet.
+Title: Grid Collapse
+Class: .g-collapse
+Description: Collapses the 100% width on its direct descendents.
 */ ?>
 
-<div class="grid g-collapse g-gutter">
+<div class="grid g-collapse">
     <div>
         <a href="#" class="btn">Cancel</a>
     </div>
