@@ -1,5 +1,5 @@
 <?php /*
-Title: Grid
+Title: Grid Space
 Class: .g-space
 When the row doesn't add to 12 columns it distributes the items evenly.
 */ ?>
