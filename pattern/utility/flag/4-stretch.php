@@ -4,7 +4,7 @@ Class: .u-flag.u-flag--stretch
 Description: Flips a flag around.
 */ ?>
 
-<div class="u-flag u-flag--stretch">
+<div class="grid g-collapse g-stretch">
     <div>
         <input id="text" type="text" placeholder="Text Input">
     </div>

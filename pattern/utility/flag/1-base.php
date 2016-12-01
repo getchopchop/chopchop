@@ -4,7 +4,7 @@ Class: .u-flag
 Description: Adds flex to the container.
 */ ?>
 
-<div class="u-flag">
+<div class="grid g-collapse">
     <div>
         <a href="#" class="btn">Cancel</a>
     </div>

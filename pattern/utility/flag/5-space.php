@@ -4,7 +4,7 @@ Class: .u-flag.u-flag--space
 Description: Moves the items to the far left and right.
 */ ?>
 
-<div class="u-flag u-flag--space">
+<div class="grid g-collapse g-space">
     <div>
         <a href="#" class="btn">Cancel</a>
     </div>

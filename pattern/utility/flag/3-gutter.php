@@ -4,7 +4,7 @@ Class: .u-flag.u-flag--gutter
 Description: Adds a gutter between items if they meet.
 */ ?>
 
-<div class="u-flag u-flag--gutter">
+<div class="grid g-collapse g-gutter">
     <div>
         <a href="#" class="btn">Cancel</a>
     </div>
