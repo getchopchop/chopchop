@@ -9,6 +9,7 @@ textarea {
     display: block;
     font-family: $font-family;
     font-size: $font-size;
+    line-height: inherit;
 }
 
 label {
