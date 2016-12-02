@@ -97,6 +97,8 @@
 // =============================================
 
 .g-stretch {
+    @include flex-flow(nowrap);
+    
     > *:first-child {
         flex-grow: 1;
     }
