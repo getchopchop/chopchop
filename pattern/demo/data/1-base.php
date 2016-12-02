@@ -10,6 +10,13 @@ Description: A demo of using data. See documentation for more information.
 <li>Email: <?php printData('global', 'email'); ?></li>
 </ul>
 
+<h5>Company Information</h5>
+<ul>
+<li>Name: <?php printData('company', 'name'); ?></li>
+<li>Copyright: <?php printData('company', 'copyright'); ?></li>
+<li>Twitter: <?php printData('company', 'twitter-handle'); ?></li>
+</ul>
+
 <h5>List of Blog Posts</h5>
 <ul>
     <?php for($i=0; $i<3; $i++) : ?>
