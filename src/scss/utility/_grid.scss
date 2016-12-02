@@ -39,8 +39,27 @@
 // Grid Center
 // =============================================
 
+.g-center-x {
+    @include justify-content(center);
+}
+
+
+// =============================================
+// Grid Center
+// =============================================
+
+.g-center-y {
+    @include align-items(center);
+}
+
+
+// =============================================
+// Grid Center
+// =============================================
+
 .g-center {
-    @include grid-center;
+    @include justify-content(center);
+    @include align-items(center);
 }
 
 
@@ -49,7 +68,7 @@
 // =============================================
 
 .g-space {
-    @include grid-space;
+    @include justify-content(space-between);
 }
 
 
@@ -58,7 +77,7 @@
 // =============================================
 
 .g-reverse {
-    @include grid-reverse;
+    @include flex-direction(row-reverse);
 }
 
 
@@ -78,6 +97,8 @@
 // =============================================
 
 .g-stretch {
+    @include flex-flow(nowrap);
+    
     > *:first-child {
         flex-grow: 1;
     }
