@@ -4,7 +4,8 @@
         options: {
             activeClass: 'is-active',
             inactiveClass: 'is-inactive',
-            dataPrepend: 'cc'
+            // Override data prepend in subclasses
+            dataPrepend: ''
         },
 
         _create: function(){
@@ -39,7 +40,7 @@
         /* Gets an option first from the elements data, then falls back to the option object */
         _getLocalOption: function(option){
             // Replace first character with an uppercase version
-            var localOption =  this._createDataProperty(option.replace(/^([a-z])/, function(a){return a.toUpperCase()}));
+            var localOption =  this._createDataProperty(option);
             var local = this.element.data(localOption);
 
             if(local){
@@ -50,7 +51,13 @@
         },
 
         _createDataProperty: function(prop) {
-            return this.options.dataPrepend + "-" + prop;
+            return this.options.dataPrepend + prop.replace(/^([a-z])/, function(a){return a.toUpperCase();});
+        },
+
+        // Constructs a global selector to be used, E.g. 'group' in the toggle widget will result in something like [data-cc-toggle-group="val"]
+        _getGlobalDataSelector: function(prop, val) {
+            val = val ? '="' + val + '"' : '';
+            return '[data-' + this.options.dataPrepend.replace(/([A-Z])/g, function(a){return "-" + a.toLowerCase();}) + "-" + prop + val + ']';
         },
 
         _getData: function(prop) {
@@ -61,61 +68,207 @@
 
 ;(function($){
     /* Definition consts */
-    var WIDGET_ID = "chopchop.toggle",
-        DEFAULT_SELECTOR = "[data-cc-toggle]";
+    window.Chopchop = window.Chopchop || {};
+    window.Chopchop.Toggle = {};
 
+    var Static = window.Chopchop.Toggle;
+    Static.WIDGET_ID = "chopchop.toggle";
+    Static.TRIGGER_TYPE_DIRECT = 'direct-only';
+    Static.TRIGGER_TYPE_ALL = 'all';
+    Static.ACTION_ACTIVATE = 'activate';
+    Static.ACTION_DEACTIVATE = 'deactivate';
+    Static.ACTION_TOGGLE = 'toggle';
+    Static.INSTANCE_NAME = 'chopchop-toggle';
 
+    // An array of all processed elements to prevent infinite loops
+    Static.processed = [];
 
     /* Widget */
-    $.widget(WIDGET_ID, $.chopchop.base, {
-        TRIGGER_DIRECT: 'direct-only',
-        TRIGGER_INDIRECT: 'indirect-only',
-        TRIGGER_BOTH: 'both',
-
+    $.widget(Static.WIDGET_ID, $.chopchop.base, {
         options: {
-            dataTarget: 'target',
-            dataMode: 'trigger-on',
-            dataAction: 'action'
+            dataAction: 'action',
+            dataGroup: 'group',
+            dataPrepend: 'ccToggle',
+            dataTrigger: 'trigger',
+            dataTriggerActivate: 'triggerActivate',
+            dataTriggerDeactivate: 'triggerDeactivate',
 
-            initEvent: 'click'
+            triggerType: 'all',
+            trigger: 'click',
+            triggerActivate: '', // E.g. 'mouseenter'
+            triggerDeactivate: '', // E.g. 'mouseleave'
+            target: '',
+            group: '',
+            action: 'toggle'
         },
 
         _create: function(){
             this._super();
             this._addEvents();
-        }
+        },
 
         _addEvents: function(){
-            var self = this;
-            var events = {};
+            var self = this,
+                events = {},
+                action = this._getLocalOption(this.options.dataAction),
+                triggerOn = this._getLocalOption(this.options.dataTrigger),
+                triggerDeactivate = this._getLocalOption(this.options.dataTriggerDeactivate),
+                triggerActivate = this._getLocalOption(this.options.dataTriggerActivate);
 
-            events[this.options.initEvent] = function(ev){
-                ev.preventDefault();
-                self.performAction();
+
+            // Explicitly require a data attribute of action to init this form of event
+            if(action) {
+                events[triggerOn] = function (ev) {
+                    ev.preventDefault();
+
+                    if(self.options.triggerType == Static.TRIGGER_TYPE_DIRECT && ev.target !== self.element){
+                        return;
+                    }
+
+                    self.performAction(action);
+                };
+            }
+
+            if(triggerActivate) {
+                events[triggerActivate] = function (ev) {
+                    ev.preventDefault();
+
+                    if(self.options.triggerType == Static.TRIGGER_TYPE_DIRECT && ev.target !== self.element){
+                        return;
+                    }
+
+                    self.activate();
+                };
+            }
+
+            if(triggerDeactivate) {
+                events[triggerDeactivate] = function (ev) {
+                    ev.preventDefault();
+
+                    if(self.options.triggerType == Static.TRIGGER_TYPE_DIRECT && ev.target !== self.element){
+                        return;
+                    }
+
+                    self.deactivate();
+                };
             }
 
             this._on(this.element, events);
         },
 
         _getTargets: function(){
-            return this.element.data(this._getData(this.options.dataTarget)).split(' ');
+            return $(this._getLocalOption('target'));
         },
 
-        performAction: function(){
-            var 
-        }
-    });
+        _getCascades: function(type){
+            var cascade = this._getLocalOption('cascade') || '';
 
+            if(type){
+                var cascadeType = this._getLocalOption('cascade-' + type);
+
+                if(cascadeType){
+                    cascade = cascade ? ", " + cascadeType : cascadeType;
+                }
+            }
+
+            return $(cascade);
+        },
+
+        _getInstance: function($el){
+            if(!$el.data(Static.INSTANCE_NAME)){
+                $el.toggle({
+                    trigger: null
+                });
+            }
+
+            return $el.data(Static.INSTANCE_NAME);
+        },
+
+        activate: function(partOfChain){
+            this.performAction(Static.ACTION_ACTIVATE, partOfChain);
+        },
+
+        deactivate: function(partOfChain){
+            this.performAction(Static.ACTION_DEACTIVATE, partOfChain);
+        },
+
+        toggle: function(){
+            this.performAction(Static.ACTION_TOGGLE);
+        },
+
+        performAction: function(type, partOfChain){
+            var self = this,
+                toggle,
+                group;
+
+
+            if(!partOfChain){
+                Static.processed = [];
+            }
+
+            if(Static.processed.indexOf(this.element) !== -1){
+                return;
+            }
+
+            // Add this element to the processed chain so we don't get an infinite loop
+            Static.processed.push(this.element);
+
+            if(!type){
+                type = this.options.action;
+            }
+
+            if(type == Static.ACTION_TOGGLE){
+                type = this.element.hasClass(this.options.activeClass) ? Static.ACTION_DEACTIVATE : Static.ACTION_ACTIVATE;
+            }
+
+            if(type == Static.ACTION_ACTIVATE){
+                this.element.addClass(this.options.activeClass);
+                this.element.removeClass(this.options.inactiveClass);
+
+                // Deal with groups
+                group = this._getLocalOption(this.options.dataGroup);
+
+                if(group){
+                    $(this._getGlobalDataSelector(this.options.dataGroup, group)).each(function(){
+                        var $this = $(this);
+
+                        if($this.is(self.element)){
+                            return true;
+                        }
+
+                        self._getInstance($this).deactivate(true);
+                    });
+                }
+            }else{
+                this.element.removeClass(this.options.activeClass);
+                this.element.addClass(this.options.inactiveClass);
+            }
+
+            var totalElements = this._getTargets().toArray().concat(this._getCascades(type).toArray());
+
+            $(totalElements).each(function(){
+                var $this = $(this);
+
+                toggle = self._getInstance($this);
+
+                if(type == Static.ACTION_ACTIVATE){
+                    toggle.activate(true);
+                }else{
+                    toggle.deactivate(true);
+                }
+            });
+        }
+
+    });
 
 
     /* Initialisation */
-    $(document).on('ready.' + WIDGET_ID, function(ev) {
-        console.log("horse");
-        $(DEFAULT_SELECTOR).toggle();
+    $(document).on('ready.' + Static.WIDGET_ID, function(ev) {
+        $('.js-cc-toggle, [data-cc-toggle-action]').toggle();
     });
 
     /* Reinitialisation */
-    $(document).on('click.' + WIDGET_ID, DEFAULT_SELECTOR, function(ev) {
+    $(document).on('click.' + Static.WIDGET_ID, '.js-cc-toggle', function(ev) {
         // if($(this).data('chopchop-'))
     });
 }(jQuery));
