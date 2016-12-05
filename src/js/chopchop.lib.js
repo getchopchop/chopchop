@@ -90,6 +90,8 @@
             dataGroup: 'group',
             dataPrepend: 'ccToggle',
             dataTrigger: 'trigger',
+            dataCascade: 'cascade',
+            dataTarget: 'target',
             dataTriggerActivate: 'triggerActivate',
             dataTriggerDeactivate: 'triggerDeactivate',
 
@@ -157,14 +159,14 @@
         },
 
         _getTargets: function(){
-            return $(this._getLocalOption('target'));
+            return $(this._getLocalOption(this.options.dataTarget));
         },
 
         _getCascades: function(type){
-            var cascade = this._getLocalOption('cascade') || '';
+            var cascade = this._getLocalOption(this.options.dataCascade) || '';
 
             if(type){
-                var cascadeType = this._getLocalOption('cascade-' + type);
+                var cascadeType = this._getLocalOption(this.options.dataCascade + '-' + type);
 
                 if(cascadeType){
                     cascade = cascade ? ", " + cascadeType : cascadeType;
