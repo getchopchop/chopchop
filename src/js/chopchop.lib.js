@@ -5,7 +5,9 @@
             activeClass: 'is-active',
             inactiveClass: 'is-inactive',
             // Override data prepend in subclasses
-            dataPrepend: ''
+            dataPrepend: '',
+            dataActiveClass: 'activeClass',
+            dataInactiveClass: 'inactiveClass'
         },
 
         _create: function(){
@@ -51,13 +53,18 @@
         },
 
         _createDataProperty: function(prop) {
-            return this.options.dataPrepend + prop.replace(/^([a-z])/, function(a){return a.toUpperCase();});
+            return this.options.dataPrepend + prop.replace(/^([a-z])/, function(a){
+                return a.toUpperCase();
+            });
         },
 
-        // Constructs a global selector to be used, E.g. 'group' in the toggle widget will result in something like [data-cc-toggle-group="val"]
+        // Constructs a global selector to be used, E.g. 'group' in the toggle
+        // widget will result in something like [data-cc-toggle-group="val"]
         _getGlobalDataSelector: function(prop, val) {
             val = val ? '="' + val + '"' : '';
-            return '[data-' + this.options.dataPrepend.replace(/([A-Z])/g, function(a){return "-" + a.toLowerCase();}) + "-" + prop + val + ']';
+            return '[data-' + this.options.dataPrepend.replace(/([A-Z])/g, function(a){
+                return "-" + a.toLowerCase();
+            }) + "-" + prop + val + ']';
         },
 
         _getData: function(prop) {
@@ -67,7 +74,7 @@
 }(jQuery));
 
 ;(function($){
-    /* Definition consts */
+    /* Definition constants */
     window.Chopchop = window.Chopchop || {};
     window.Chopchop.Toggle = {};
 
@@ -83,15 +90,30 @@
     // An array of all processed elements to prevent infinite loops
     Static.processed = [];
 
-    /* Widget */
+    // To reinitialise at a later point, use window.Chopchop.Toggle.init();
+    // Only initialise on elements which have been explicitly given a class of js-cc-toggle an action,
+    // or triggers for activate or deactivate
+    Static.init = function(){
+        $('.js-cc-toggle, [data-cc-toggle-action], ' +
+            '[data-cc-toggle-trigger-activate], ' +
+            '[data-cc-toggle-trigger-deactivate').toggle();
+    };
+
+    /* Initialisation */
+    $(document).on('ready.' + Static.WIDGET_ID, function(ev) {
+        Static.init();
+    });
+
+    
+    /* Widget Definition*/
     $.widget(Static.WIDGET_ID, $.chopchop.base, {
         options: {
-            dataAction: 'action',
-            dataGroup: 'group',
             dataPrepend: 'ccToggle',
 
-            dataTrigger: 'trigger',
-            dataTriggerType: 'triggerType',
+            dataAction: 'action',
+            dataGroup: 'group',
+            dataTrigger: 'trigger', // Type of event
+            dataTriggerType: 'triggerType', // direct-only or all
             dataCascade: 'cascade',
             dataTarget: 'target',
             dataStateful: 'stateful',
@@ -170,6 +192,8 @@
             return $(this._getLocalOption(this.options.dataTarget));
         },
 
+        // Cascades can be used by data-cc-toggle-cascade, and can also be type based such
+        // as data-cc-toggle-cascade-activate and data-cc-toggle-cascade-deactivate
         _getCascades: function(type){
             var cascade = this._getLocalOption(this.options.dataCascade) || '';
 
@@ -184,6 +208,8 @@
             return $(cascade);
         },
 
+        // Create a toggle instance on the element if one doesn't exist, default the trigger to null so it
+        // does not listen for events, unless overridden by data-cc-toggle-trigger
         _getInstance: function($el){
             if(!$el.data(Static.INSTANCE_NAME)){
                 $el.toggle({
@@ -194,9 +220,29 @@
             return $el.data(Static.INSTANCE_NAME);
         },
 
+        _removeActiveClass: function () {
+            this._removeClass(this._getLocalOption(this.options.dataActiveClass));
+        },
+
+        _addActiveClass: function () {
+            this._addClass(this._getLocalOption(this.options.dataActiveClass));
+        },
+
+        _addInactiveClass: function () {
+            this._addClass(this._getLocalOption(this.options.dataInactiveClass));
+        },
+
+        _removeInactiveClass: function () {
+            this._removeClass(this._getLocalOption(this.options.dataInactiveClass));
+        },
+
         _isStateful: function(){
             return this._getLocalOption(this.options.dataStateful);
         },
+
+        /******************************************
+         * Public methods
+         ******************************************/
 
         activate: function(partOfChain, cascade){
             this.performAction(Static.ACTION_ACTIVATE, partOfChain, cascade);
@@ -210,10 +256,19 @@
             this.performAction(Static.ACTION_TOGGLE);
         },
 
+        isActive: function(){
+            return this.element.hasClass(this.options.activeClass);
+        },
+
+        destroy: function(){
+            this._super();
+            this._removeActiveClass();
+            this._removeInactiveClass();
+        },
+
         performAction: function(type, partOfChain, cascade){
             var self = this,
                 stateful = this._isStateful(),
-                toggle,
                 group;
 
             // Default to true for cascades
@@ -234,14 +289,15 @@
                 type = this.options.action;
             }
 
+            // Flip the actions if we're toggling
             if(type == Static.ACTION_TOGGLE){
-                type = this.element.hasClass(this.options.activeClass) ? Static.ACTION_DEACTIVATE : Static.ACTION_ACTIVATE;
+                type = this.isActive() ? Static.ACTION_DEACTIVATE : Static.ACTION_ACTIVATE;
             }
 
             if(type == Static.ACTION_ACTIVATE){
                 if(stateful) {
-                    this.element.addClass(this.options.activeClass);
-                    this.element.removeClass(this.options.inactiveClass);
+                    this._addActiveClass();
+                    this._removeInactiveClass();
                 }
 
                 // Deal with groups
@@ -251,21 +307,25 @@
                     $(this._getGlobalDataSelector(this.options.dataGroup, group)).each(function(){
                         var $this = $(this);
 
+                        // Don't do anything for *this* element, we're only interested in
+                        // deactivating other members of the group
                         if($this.is(self.element)){
                             return true;
                         }
 
-                        // Don't cascade when deactivating group items
+                        // Don't cascade when deactivating group items otherwise targets
+                        // which should remain active will be deactivated
                         self._getInstance($this).deactivate(true, false);
                     });
                 }
             }else{
                 if(stateful) {
-                    this.element.removeClass(this.options.activeClass);
-                    this.element.addClass(this.options.inactiveClass);
+                    this._removeActiveClass();
+                    this._addInactiveClass();
                 }
             }
 
+            // TODO: Consider mergin cascades and targets (they appear to be synonymous into something like 'chain'
             if(cascade) {
                 var totalElements = this._getTargets().toArray().concat(this._getCascades(type).toArray());
 
@@ -276,26 +336,15 @@
                 });
             }
 
+            // data-cc-toggle-target-callback allows a selector to be chained, without it having its targets
+            // or cascades also called. Most useful for group items to call back to a button or link
             var $targetCallback = $(this._getLocalOption(this.options.dataTargetCallback));
-
+            
             $targetCallback.each(function(){
                 var $this = $(this);
                 self._getInstance($this).performAction(type, true, false);
             });
-
         }
-
-    });
-
-
-    /* Initialisation */
-    $(document).on('ready.' + Static.WIDGET_ID, function(ev) {
-        $('.js-cc-toggle, [data-cc-toggle-action]').toggle();
-    });
-
-    /* Reinitialisation */
-    $(document).on('click.' + Static.WIDGET_ID, '.js-cc-toggle', function(ev) {
-        // if($(this).data('chopchop-'))
     });
 }(jQuery));
 
