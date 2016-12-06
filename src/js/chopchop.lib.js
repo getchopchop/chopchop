@@ -43,7 +43,7 @@
             var localOption =  this._createDataProperty(option);
             var local = this.element.data(localOption);
 
-            if(local){
+            if(local !== undefined){
                 return local;
             }
 
@@ -89,9 +89,14 @@
             dataAction: 'action',
             dataGroup: 'group',
             dataPrepend: 'ccToggle',
+
             dataTrigger: 'trigger',
+            dataTriggerType: 'triggerType',
             dataCascade: 'cascade',
             dataTarget: 'target',
+            dataStateful: 'stateful',
+            /* A target to callback to and execute the action, but don't chain on its targets or cascades */
+            dataTargetCallback: 'targetCallback',
             dataTriggerActivate: 'triggerActivate',
             dataTriggerDeactivate: 'triggerDeactivate',
 
@@ -99,9 +104,11 @@
             trigger: 'click',
             triggerActivate: '', // E.g. 'mouseenter'
             triggerDeactivate: '', // E.g. 'mouseleave'
+            action: 'toggle',
+            targetCallback: '',
+            stateful: true,
             target: '',
-            group: '',
-            action: 'toggle'
+            group: ''
         },
 
         _create: function(){
@@ -115,7 +122,8 @@
                 action = this._getLocalOption(this.options.dataAction),
                 triggerOn = this._getLocalOption(this.options.dataTrigger),
                 triggerDeactivate = this._getLocalOption(this.options.dataTriggerDeactivate),
-                triggerActivate = this._getLocalOption(this.options.dataTriggerActivate);
+                triggerActivate = this._getLocalOption(this.options.dataTriggerActivate),
+                triggerType = this._getLocalOption(this.options.dataTriggerType);
 
 
             // Explicitly require a data attribute of action to init this form of event
@@ -123,7 +131,7 @@
                 events[triggerOn] = function (ev) {
                     ev.preventDefault();
 
-                    if(self.options.triggerType == Static.TRIGGER_TYPE_DIRECT && ev.target !== self.element){
+                    if(triggerType == Static.TRIGGER_TYPE_DIRECT && (self.element.is(ev.target) === false)){
                         return;
                     }
 
@@ -135,7 +143,7 @@
                 events[triggerActivate] = function (ev) {
                     ev.preventDefault();
 
-                    if(self.options.triggerType == Static.TRIGGER_TYPE_DIRECT && ev.target !== self.element){
+                    if(triggerType == Static.TRIGGER_TYPE_DIRECT && (self.element.is(ev.target) === false)){
                         return;
                     }
 
@@ -186,23 +194,30 @@
             return $el.data(Static.INSTANCE_NAME);
         },
 
-        activate: function(partOfChain){
-            this.performAction(Static.ACTION_ACTIVATE, partOfChain);
+        _isStateful: function(){
+            return this._getLocalOption(this.options.dataStateful);
         },
 
-        deactivate: function(partOfChain){
-            this.performAction(Static.ACTION_DEACTIVATE, partOfChain);
+        activate: function(partOfChain, cascade){
+            this.performAction(Static.ACTION_ACTIVATE, partOfChain, cascade);
+        },
+
+        deactivate: function(partOfChain, cascade){
+            this.performAction(Static.ACTION_DEACTIVATE, partOfChain, cascade);
         },
 
         toggle: function(){
             this.performAction(Static.ACTION_TOGGLE);
         },
 
-        performAction: function(type, partOfChain){
+        performAction: function(type, partOfChain, cascade){
             var self = this,
+                stateful = this._isStateful(),
                 toggle,
                 group;
 
+            // Default to true for cascades
+            cascade = cascade === false ? false : true;
 
             if(!partOfChain){
                 Static.processed = [];
@@ -224,8 +239,10 @@
             }
 
             if(type == Static.ACTION_ACTIVATE){
-                this.element.addClass(this.options.activeClass);
-                this.element.removeClass(this.options.inactiveClass);
+                if(stateful) {
+                    this.element.addClass(this.options.activeClass);
+                    this.element.removeClass(this.options.inactiveClass);
+                }
 
                 // Deal with groups
                 group = this._getLocalOption(this.options.dataGroup);
@@ -238,27 +255,34 @@
                             return true;
                         }
 
-                        self._getInstance($this).deactivate(true);
+                        // Don't cascade when deactivating group items
+                        self._getInstance($this).deactivate(true, false);
                     });
                 }
             }else{
-                this.element.removeClass(this.options.activeClass);
-                this.element.addClass(this.options.inactiveClass);
+                if(stateful) {
+                    this.element.removeClass(this.options.activeClass);
+                    this.element.addClass(this.options.inactiveClass);
+                }
             }
 
-            var totalElements = this._getTargets().toArray().concat(this._getCascades(type).toArray());
+            if(cascade) {
+                var totalElements = this._getTargets().toArray().concat(this._getCascades(type).toArray());
 
-            $(totalElements).each(function(){
+                $(totalElements).each(function () {
+                    var $this = $(this);
+
+                    self._getInstance($this).performAction(type, true);
+                });
+            }
+
+            var $targetCallback = $(this._getLocalOption(this.options.dataTargetCallback));
+
+            $targetCallback.each(function(){
                 var $this = $(this);
-
-                toggle = self._getInstance($this);
-
-                if(type == Static.ACTION_ACTIVATE){
-                    toggle.activate(true);
-                }else{
-                    toggle.deactivate(true);
-                }
+                self._getInstance($this).performAction(type, true, false);
             });
+
         }
 
     });
