@@ -15,7 +15,7 @@
 // Add cursor on toggles for mobile
 // =============================================
 
-[data-cc-action] {
+[data-cc-toggle-action] {
     cursor: pointer;
 
     &,
@@ -26,5 +26,13 @@
 
     * {
         cursor: auto;
+    }
+}
+
+
+[data-cc-toggle-action]  {
+    color: red;
+    &.is-active {
+        color: green;
     }
 }

@@ -104,7 +104,7 @@
         Static.init();
     });
 
-    
+
     /* Widget Definition*/
     $.widget(Static.WIDGET_ID, $.chopchop.base, {
         options: {
@@ -113,10 +113,11 @@
             dataAction: 'action',
             dataGroup: 'group',
             dataTrigger: 'trigger', // Type of event
-            dataTriggerType: 'triggerType', // direct-only or all
+            dataTriggerType: 'triggerType', // direct-only (only for this element) or all (allow bubbling)
             dataCascade: 'cascade',
             dataTarget: 'target',
             dataStateful: 'stateful',
+            dataClosestContainer: 'closestContainer',
             /* A target to callback to and execute the action, but don't chain on its targets or cascades */
             dataTargetCallback: 'targetCallback',
             dataTriggerActivate: 'triggerActivate',
@@ -126,6 +127,7 @@
             trigger: 'click',
             triggerActivate: '', // E.g. 'mouseenter'
             triggerDeactivate: '', // E.g. 'mouseleave'
+            closestContainer: null, // A closest() container to look within for target selectors
             action: 'toggle',
             targetCallback: '',
             stateful: true,
@@ -189,7 +191,7 @@
         },
 
         _getTargets: function(){
-            return $(this._getLocalOption(this.options.dataTarget));
+            return $(this._getLocalOption(this.options.dataTarget), this._getClosestContainer());
         },
 
         // Cascades can be used by data-cc-toggle-cascade, and can also be type based such
@@ -205,7 +207,23 @@
                 }
             }
 
-            return $(cascade);
+            return $(cascade, this._getClosestContainer());
+        },
+
+        _getClosestContainer: function(){
+            var closestContainer = this._getLocalOption(this.options.dataClosestContainer);
+
+            if(!closestContainer){
+                return document;
+            }
+
+            var $container = this.element.closest(closestContainer);
+
+            if($container.size()){
+                return $container;
+            }
+
+            return document;
         },
 
         // Create a toggle instance on the element if one doesn't exist, default the trigger to null so it
@@ -294,6 +312,17 @@
                 type = this.isActive() ? Static.ACTION_DEACTIVATE : Static.ACTION_ACTIVATE;
             }
 
+            // TODO: Consider merging cascades and targets (they appear to be synonymous) into something like 'chain'
+            if(cascade) {
+                var totalElements = this._getTargets().toArray().concat(this._getCascades(type).toArray());
+
+                $(totalElements).each(function () {
+                    var $this = $(this);
+
+                    self._getInstance($this).performAction(type, true);
+                });
+            }
+
             if(type == Static.ACTION_ACTIVATE){
                 if(stateful) {
                     this._addActiveClass();
@@ -304,7 +333,7 @@
                 group = this._getLocalOption(this.options.dataGroup);
 
                 if(group){
-                    $(this._getGlobalDataSelector(this.options.dataGroup, group)).each(function(){
+                    $(this._getGlobalDataSelector(this.options.dataGroup, group), this._getClosestContainer()).each(function(){
                         var $this = $(this);
 
                         // Don't do anything for *this* element, we're only interested in
@@ -325,25 +354,17 @@
                 }
             }
 
-            // TODO: Consider mergin cascades and targets (they appear to be synonymous into something like 'chain'
-            if(cascade) {
-                var totalElements = this._getTargets().toArray().concat(this._getCascades(type).toArray());
-
-                $(totalElements).each(function () {
-                    var $this = $(this);
-
-                    self._getInstance($this).performAction(type, true);
-                });
-            }
-
             // data-cc-toggle-target-callback allows a selector to be chained, without it having its targets
             // or cascades also called. Most useful for group items to call back to a button or link
-            var $targetCallback = $(this._getLocalOption(this.options.dataTargetCallback));
+            var $targetCallback = $(this._getLocalOption(this.options.dataTargetCallback), this._getClosestContainer());
             
             $targetCallback.each(function(){
                 var $this = $(this);
+
                 self._getInstance($this).performAction(type, true, false);
             });
+
+            this._trigger(type);
         }
     });
 }(jQuery));
