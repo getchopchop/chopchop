@@ -105,15 +105,15 @@
     font-size: 0;
 
     a {
-        @include circle(color(grey, light), 16px);
+        @include circle(color(neutral, light), 16px);
 
         &:hover,
         &.is-active {
-            background-color: color(grey, lighter);
+            background-color: color(neutral, lighter);
         }
 
         &:active {
-            background-color: color(white);
+            background-color: color(neutral, white);
         }
     }
 }

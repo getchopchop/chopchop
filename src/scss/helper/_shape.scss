@@ -2,7 +2,7 @@
 // Circle
 // =============================================
 
-@mixin circle($color: color(grey), $size: 5px) {
+@mixin circle($color: color(neutral, dark), $size: 5px) {
     height: $size;
     width: $size;
     border-radius: 100%;
@@ -15,7 +15,7 @@
 // Square
 // =============================================
 
-@mixin square($color: color(grey), $size: 5px) {
+@mixin square($color: color(neutral, dark), $size: 5px) {
     height: $size;
     width: $size;
     background-color: $color;
@@ -27,7 +27,7 @@
 // Triangle
 // =============================================
 
-@mixin triangle($color: color(grey), $size: 5px, $size-2: $size, $direction: up) {
+@mixin triangle($color: color(neutral, dark), $size: 5px, $size-2: $size, $direction: up) {
     content: '';
     width: 0;
     height: 0;
@@ -68,7 +68,7 @@
 // Chevron
 // =============================================
 
-@mixin chevron($color:  color(grey), $size: 5px, $direction: left, $thickness: 1px) {
+@mixin chevron($color:  color(neutral, dark), $size: 5px, $direction: left, $thickness: 1px) {
     content: '';
     display: inline-block;
     width: $size;
@@ -99,7 +99,7 @@
 // Minus
 // =============================================
 
-@mixin minus($color: color(grey), $size: 22px, $thickness: 2px) {
+@mixin minus($color: color(neutral, dark), $size: 22px, $thickness: 2px) {
     display: inline-block;
     position: relative;
     width: $size;
@@ -129,7 +129,7 @@
 // Plus
 // =============================================
 
-@mixin plus($color: color(grey), $size: 22px, $thickness: 2px) {
+@mixin plus($color: color(neutral, dark), $size: 22px, $thickness: 2px) {
     display: inline-block;
     position: relative;
     width: $size;
@@ -163,7 +163,7 @@
 // Cross
 // =============================================
 
-@mixin cross($color: color(grey), $size: 22px, $thickness: 2px) {
+@mixin cross($color: color(neutral, dark), $size: 22px, $thickness: 2px) {
     transform: rotate(45deg);
     display: inline-block;
     position: relative;
@@ -198,7 +198,7 @@
 // Tick
 // =============================================
 
-@mixin tick($color: color(grey), $size: 20px, $thickness: 2px) {
+@mixin tick($color: color(neutral, dark), $size: 20px, $thickness: 2px) {
     
     position: relative;
     display: inline-block;
@@ -232,7 +232,7 @@
 // Hamburger
 // =============================================
 
-@mixin hamburger($color: color(grey), $size: 20px, $size2: $size, $thickness: 2px) {
+@mixin hamburger($color: color(neutral, dark), $size: 20px, $size2: $size, $thickness: 2px) {
     position: relative;
     display: inline-block;
     border-top: $thickness solid $color;
@@ -259,7 +259,7 @@
 // Ring
 // =============================================
 
-@mixin ring($foreground-color: color(grey), $background-color: color(grey, dark), $size: 20px, $thickness: 4px) {
+@mixin ring($foreground-color: color(neutral, dark), $background-color: color(neutral, darker), $size: 20px, $thickness: 4px) {
     display: inline-block;
     background: transparent;
     border-bottom: $thickness solid $background-color;

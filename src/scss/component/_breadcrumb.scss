@@ -8,7 +8,7 @@
         margin-right: spacing(sm);
         
         &:after {
-            @include chevron(color(grey), 4px, right, 1px);
+            @include chevron(color(neutral, dark), 4px, right, 1px);
             vertical-align: middle;
         }
     }

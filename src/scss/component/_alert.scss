@@ -4,8 +4,8 @@
 
 .alert {
     padding: spacing();
-    background-color: color(grey, lighter);
-    border: 1px solid color(grey);
+    background-color: color(neutral, lighter);
+    border: 1px solid color(neutral, dark);
     margin-bottom: spacing();
 
     p {
@@ -55,11 +55,11 @@
 // =============================================
 
 .alert--success {
-    background-color: color(success, light);
-    border-color: color(success);
+    background-color: color(contextual, success-light);
+    border-color: color(contextual, success);
 }
 
 .alert--error {
-    background-color: color(error, light);
-    border-color: color(error);
+    background-color: color(contextual, error-light);
+    border-color: color(contextual, error);
 }

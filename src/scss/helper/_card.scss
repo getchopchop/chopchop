@@ -3,19 +3,19 @@
 // =============================================
 
 @mixin card {
-    border: 1px solid color(grey,light);
+    border: 1px solid color(neutral, light);
 
     &__header,
     &__footer {
-        background-color: color(grey,lighter);
+        background-color: color(neutral, lighter);
         padding: spacing(sm) spacing();
     }
 
     &__header {
-        border-bottom: 1px solid color(grey, light);
+        border-bottom: 1px solid color(neutral, light);
     }
 
     &__footer {
-        border-top: 1px solid color(grey, light);
+        border-top: 1px solid color(neutral, light);
     }
 }

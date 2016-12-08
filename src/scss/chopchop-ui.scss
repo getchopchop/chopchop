@@ -18,7 +18,7 @@
     right: 0;
     z-index: 999;
     font-size: 12px;
-    border-bottom: 4px solid color(grey,darker);
+    border-bottom: 4px solid color(neutral,darkest);
     @include flex;
 
     ul {
@@ -30,7 +30,7 @@
 
     li {
         list-style: none;
-        color: color(white);
+        color: color(neutral, white);
 
         > * {
             display: inline-block;
@@ -39,13 +39,13 @@
     }
 
     a {
-        color: color(white);
-        background-color: color(grey,darker);
+        color: color(neutral, white);
+        background-color: color(neutral,darkest);
         text-decoration: none;
 
         &.is-active {
             background-color: #EFEDED;
-            color: color(grey,darker);
+            color: color(neutral,darkest);
         }
     }
 
@@ -75,23 +75,23 @@
 
     span {
         background-color: #FFE800;
-        color: color(grey,darker);
+        color: color(neutral,darkest);
 
         @include breakpoint(screen(sm) screen(sm, max)) {
             background-color: #E800E8;
-            color: color(white);
+            color: color(neutral, white);
         }
         @include breakpoint(screen(md) screen(md, max)) {
             background-color: #70F800;
-            color: color(grey,darker);
+            color: color(neutral,darkest);
         }
         @include breakpoint(screen(lg) screen(lg, max)) {
             background-color: #00B1F5;
-            color: color(white);
+            color: color(neutral, white);
         }
         @include breakpoint(screen(xl)) {
             background-color: #FF2C00;
-            color: color(white);
+            color: color(neutral, white);
         }
     }
 }
@@ -130,10 +130,10 @@
     width: 200px;
     left: -100%;
     z-index: 998;
-    background-color: color(grey,darker);
+    background-color: color(neutral,darkest);
     padding: 20px 10px;
     padding-bottom: 46px;
-    color: color(grey,lighter);
+    color: color(neutral, lighter);
 
     &.is-active {
         left: 0;
@@ -151,7 +151,7 @@
             counter-increment: section;
             content: counters(section,".") ". ";
             font-size: $font-size-sm;
-            color: color(grey);
+            color: color(neutral, dark);
         }
 
         ol {
@@ -163,7 +163,7 @@
     }
 
     a {
-        color: color(grey,lighter);
+        color: color(neutral, lighter);
         text-decoration: none;
 
         &:hover {
@@ -178,9 +178,9 @@
 // =============================================
 
 .cc-section {
-    border: 5px solid color(grey,lighter);
+    border: 5px solid color(neutral, lighter);
     border-top: 0;
-    background-color: color(white);
+    background-color: color(neutral, white);
 }
 
 .cc-demo {
@@ -201,7 +201,7 @@
 // =============================================
 
 .cc-title {
-    background-color: color(grey,lighter);
+    background-color: color(neutral, lighter);
     @include flex;
     @include justify-content(space-between);
     @include align-items(center);
@@ -234,13 +234,13 @@
 
 .cc-title-desc {
     padding: 20px 20px 0;
-    border-left: 5px solid color(grey,lighter);
-    border-right: 5px solid color(grey,lighter);
+    border-left: 5px solid color(neutral, lighter);
+    border-right: 5px solid color(neutral, lighter);
     border-top: 0;
 
     > *:last-child {
         margin-bottom: 0;
-        border-bottom: 2px solid color(grey,lighter);
+        border-bottom: 2px solid color(neutral, lighter);
         padding-bottom: 20px;
     }
 }
@@ -330,7 +330,7 @@
     display: block;
     max-height: 20em;
     overflow: scroll;
-    background-color: color(grey,lighter) !important;
+    background-color: color(neutral, lighter) !important;
 }
 
 

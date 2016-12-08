@@ -9,7 +9,7 @@
     }
     
     td {
-        border-top: 1px solid color(grey,light);
+        border-top: 1px solid color(neutral, light);
     }
 
     th {
@@ -19,13 +19,13 @@
     caption {
         padding-top: spacing(sm);
         padding-bottom: spacing(sm);
-        color: color(grey);
+        color: color(neutral, dark);
         text-align: left;
     }
 
     thead th {
         border-top: 0;
-        border-bottom: 2px solid color(grey,light);
+        border-bottom: 2px solid color(neutral, light);
     }
 
     tfoot td {
@@ -51,11 +51,11 @@
 // =============================================
 
 @mixin table--bordered {
-    border: 1px solid color(grey,light);
+    border: 1px solid color(neutral, light);
 
     th,
     td {
-        border: 1px solid color(grey,light);
+        border: 1px solid color(neutral, light);
     }
 
     thead th,
@@ -71,6 +71,6 @@
 
 @mixin table--striped {
     tbody tr:nth-child(odd) {
-        background-color: color(grey,lighter);
+        background-color: color(neutral, lighter);
     }
 }

@@ -6,10 +6,10 @@
     padding: 0;
     padding-right: 2em;
     margin: 0;
-    border: 1px solid color(grey);
+    border: 1px solid color(neutral, dark);
     overflow: hidden;
     position: relative;
-    background-color: color(white);
+    background-color: color(neutral, white);
 
     &::after,
     &::before {
@@ -18,12 +18,12 @@
     }
 
     &::after {
-        @include chevron(color(grey), 8px, down, 1px);
+        @include chevron(color(neutral, dark), 8px, down, 1px);
         top: 1.25em;
     }
 
     &::before {
-        @include chevron(color(grey), 8px, up, 1px);
+        @include chevron(color(neutral, dark), 8px, up, 1px);
         top: 0.8em;
     }
 

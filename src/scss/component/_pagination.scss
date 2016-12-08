@@ -7,9 +7,9 @@
         vertical-align: middle;
     }
     li:first-child a::after {
-        @include chevron(color(grey), 6px, left, 2px);
+        @include chevron(color(neutral, dark), 6px, left, 2px);
     }
     li:last-child a::after {
-        @include chevron(color(grey), 6px, right, 2px);
+        @include chevron(color(neutral, dark), 6px, right, 2px);
     }
 }

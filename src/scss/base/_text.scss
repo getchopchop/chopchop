@@ -25,7 +25,7 @@ html {
     font-size: $font-size;
     font-family: $font-family;
     line-height: $line-height;
-    color: color(grey);
+    color: color(neutral, dark);
 }
 
 ul, ol, p {
@@ -63,14 +63,14 @@ samp {
 code {
     padding: 2px 4px;
     font-size: $font-size-sm;
-    color: color(error);
-    background-color: color(grey, lighter);
+    color: color(contextual, error);
+    background-color: color(neutral, lighter);
     border-radius: $border-radius;
 }
 
 mark {
-    background: color(error);
-    color: color(black);
+    background: color(contextual, error);
+    color: color(neutral, black);
 }
 
 
@@ -80,11 +80,11 @@ mark {
 
 a,
 .link {
-    color: color(black);
+    color: color(neutral, black);
     touch-action: manipulation;
 
     &:hover {
-        color: color(grey);
+        color: color(neutral, dark);
     }
 }
 

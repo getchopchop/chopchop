@@ -3,41 +3,34 @@
 // =============================================
 
 $colors: (
-    brand: (
-        pink            : #e91e63
+    primary: (
+        pink            : DeepPink
     ),
-
-    grey: (
-        base            : #666,
-        darker          : #222,
-        dark            : #444,
+    
+    secondary: (
+        purple          : RebeccaPurple
+    ),
+    
+    neutral: (
+        black           : #000,
+        white           : #fff,
+        darkest         : #222,
+        darker          : #444,
+        dark            : #666,
         light           : #999,
-        lighter         : #e4e4e4
+        lighter         : #e4e4e4,
+        lightest        : #f4f4f4
     ),
-
-    black: (
-        base            : #000
+    
+    contextual: (
+        success         : #4caf50,
+        success-light   : #c8e6c9,
+        warning         : #ffeb3b,
+        warning-light   : #fff59d,
+        error           : #f44336,
+        error-light     : #ffcdd2
     ),
-
-    white: (
-        base            : #fff
-    ),
-
-    success: (
-        base            : #4caf50,
-        light           : #c8e6c9
-    ),
-
-    warning: (
-        base            : #ffeb3b,
-        light           : #fff59d
-    ),
-
-    error: (
-        base            : #f44336,
-        light           : #ffcdd2
-    ),
-
+    
     social: (
         twitter         : #55acee,
         facebook        : #32639f,

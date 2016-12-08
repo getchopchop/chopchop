@@ -23,14 +23,14 @@ label {
 input,
 textarea,
 select[multiple=multiple] {
-    background-color: color(white);
-    border: 1px solid color(grey);
+    background-color: color(neutral, white);
+    border: 1px solid color(neutral, dark);
     border-radius: 0;
     padding: spacing(xs) spacing(sm);
     width: 100%;
 
     &:focus {
-        border-color: color(black);
+        border-color: color(neutral, black);
         outline: none;
     }
 }
@@ -125,25 +125,25 @@ optgroup {
 .error,
 abbr[title="Required"],
 .required em {
-    color: color(error, base);
+    color: color(contextual, error);
 }
 
 .required::after {
     content: "*";
-    color: color(error, base);
+    color: color(contextual, error);
     margin-left: spacing(xs);
 }
 
 .valid {
-    color: color(success, base);
+    color: color(contextual, success);
 }
 
 .is-error {
-    border-color: color(error, base);
+    border-color: color(contextual, error);
 }
 
 .is-valid {
-    border-color: color(success, base);
+    border-color: color(contextual, success);
 }
 
 .validation-advice {
@@ -156,7 +156,7 @@ abbr[title="Required"],
 }
 
 .has-error .validation-advice {
-    background-color: color(error, light);
-    border-color: color(error);
+    background-color: color(contextual, error-light);
+    border-color: color(contextual, error);
 }
 
