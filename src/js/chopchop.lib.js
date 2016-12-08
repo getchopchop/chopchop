@@ -312,16 +312,7 @@
                 type = this.isActive() ? Static.ACTION_DEACTIVATE : Static.ACTION_ACTIVATE;
             }
 
-            // TODO: Consider merging cascades and targets (they appear to be synonymous) into something like 'chain'
-            if(cascade) {
-                var totalElements = this._getTargets().toArray().concat(this._getCascades(type).toArray());
 
-                $(totalElements).each(function () {
-                    var $this = $(this);
-
-                    self._getInstance($this).performAction(type, true);
-                });
-            }
 
             if(type == Static.ACTION_ACTIVATE){
                 if(stateful) {
@@ -352,6 +343,17 @@
                     this._removeActiveClass();
                     this._addInactiveClass();
                 }
+            }
+
+            // TODO: Consider merging cascades and targets (they appear to be synonymous) into something like 'chain'
+            if(cascade) {
+                var totalElements = this._getTargets().toArray().concat(this._getCascades(type).toArray());
+
+                $(totalElements).each(function () {
+                    var $this = $(this);
+
+                    self._getInstance($this).performAction(type, true);
+                });
             }
 
             // data-cc-toggle-target-callback allows a selector to be chained, without it having its targets
