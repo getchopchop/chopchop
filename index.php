@@ -85,7 +85,9 @@
     <?php /*?>
     <script src="<?php echo getUrl('build/vendor/enquire/enquire.js'); ?>"></script>
     <?php */ ?>
-    <script src="<?php echo getUrl('build/js/chopchop.lib.js'); ?>"></script>
+    <script src="<?php echo getUrl('build/js/chop.base.widget.js'); ?>"></script>
+    <script src="<?php echo getUrl('build/js/chop.toggle.widget.js'); ?>"></script>
+    <script src="<?php echo getUrl('build/js/chop.collapsible.widget.js'); ?>"></script>
 <!--    <script src="--><?php //echo getUrl('build/js/priority-nav.js'); ?><!--"></script>-->
 <!--    <script src="--><?php //echo getUrl('build/js/script.js'); ?><!--"></script>-->
 
