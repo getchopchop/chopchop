@@ -1,6 +1,22 @@
-// =============================================
-// Section
-// =============================================
+/**
+ * Section Utility
+ *
+ * Adds spacing above, below and both that scales between the min and max
+ * value from the min breakpoint to the max breakpoint.
+ *
+ * Loops through an array of section values set in _var.scss.
+ * 3 classes become available for each value in the array:-
+ * 
+ * * `u-section-*`
+ * * `u-section-*-bottom`
+ * * `u-section-*-top`
+ *
+ * A default base setting doesn't require `-*`.
+ * For example `u-section-top`.
+ *
+ * @since 1.2.0
+ * @link http://goo.gl/l2mymR
+ */
 
 @each $key, $value in $sections {
     @if $key == base {

@@ -1,6 +1,13 @@
-// =============================================
-// Visible
-// =============================================
+/**
+ * Visibility Utility
+ *
+ * Loops through an array of screen values set in _var.scss.
+ * Each value is given a class `u-visible-*` where * is the
+ * key for that value in the array.
+ *
+ * @since 1.0.0
+ * @link http://goo.gl/l2mymR
+ */
 
 $screen-min: nth(map-keys($screens),1);
 $screen-max: nth( map-keys($screens), length($screens) );

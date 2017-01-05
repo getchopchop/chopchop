@@ -1,6 +1,12 @@
-// =============================================
-// Toggle
-// =============================================
+/**
+ * Simple Toggle Utility
+ * 
+ * Works in combination with javascript toggle in js/chopchop.lib.js
+ * Provides a way of making an element a toggle. Typically this would
+ * be `display: none;` and `display: block;`.
+ * 
+ * @since 1.0.0
+ */
 
 .u-toggle {
     display: none;
@@ -9,6 +15,21 @@
         display: block;
     }
 }
+
+
+/*
+ * Responsive Toggle Utility
+ * 
+ * We pass through the $screens array in _var.scss so that an element can
+ * be a toggle at a certain breakpoint. An example of this would be footer links
+ * that are toggles on small screens and shown on larger screens.
+ * * `u-toggle`
+ * * `u-toggle-*`
+ * 
+ * @var $screens
+ * 
+ * @since 2.2.0
+ */
 
 @each $screen, $value in $screens {
     @if $screen == xs {
@@ -45,9 +66,14 @@
 }
 
 
-// =============================================
-// Add cursor on toggles for mobile
-// =============================================
+/*
+ * Enable Click on iOS
+ * 
+ * Fixes a bug whereby the click action doesn't work on anything that isn't an `<a>`.
+ * 
+ * @since 1.2.0
+ * @link https://goo.gl/UnXoeG
+ */
 
 [data-cc-action] {
     cursor: pointer;
