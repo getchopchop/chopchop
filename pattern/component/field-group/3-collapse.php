@@ -1,10 +1,9 @@
 <?php /*
-Title: Field Group Collapsed Widths
-Class: .field-group.field-group--collapse
-Description: see component/field-group.scss
+Title: Field Group Collapsed Widths using Grids
+Class: .field-group
 */ ?>
 
-<div class="field-group field-group--collapse">
+<div class="field-group grid g-gutter-x g-stretch-last">
     <div class="field-group__field">
         <input type="checkbox" id="is_subscribed" name="is_subscribed" value="1" class="checkbox">
     </div>

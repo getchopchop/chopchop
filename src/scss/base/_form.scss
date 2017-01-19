@@ -58,6 +58,7 @@ input[type="checkbox"],
 input[type="radio"] {
     display: inline;
     width: auto;
+    vertical-align: text-top;
 }
 
 input[type="file"] {

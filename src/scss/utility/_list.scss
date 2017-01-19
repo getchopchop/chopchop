@@ -1,42 +1,50 @@
 /**
+ * Unstyled List
+ *
+ * @since 1.0.0
+ */
+
+.u-list-unstyled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/**
  * List Inline
- * 
+ *
  * @since 1.0.0
  */
 
 .u-list-inline {
-    @include list-inline;
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        display: inline-block;
+    }
 }
 
 
 /**
  * Ordered List
- * 
+ *
  * @since 1.0.0
  */
 
 .u-list-ordered {
-    @include list-ordered;
+    list-style: decimal;
 }
 
 
 /**
  * Unordered List
- * 
+ *
  * @since 1.0.0
  */
 
 .u-list-unordered {
-    @include list-unordered;
-}
-
-
-/**
- * Unstyled List
- * 
- * @since 1.0.0
- */
-
-.u-list-unstyled {
-    @include list-unstyled;
+    list-style: disc;
 }

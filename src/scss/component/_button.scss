@@ -3,7 +3,36 @@
  */
 
 .btn {
-    @include btn;
+    padding: spacing(xs) spacing();
+    border-radius: 0;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: $bold;
+    line-height: inherit;
+    text-decoration: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+    width: auto;
+    background-color: color(neutral,darkest);
+    color: color(neutral, white);
+    fill: currentColor;
+
+    &:hover,
+    &:focus {
+        color: color(neutral, white);
+        background-color: color(neutral,darker);
+    }
+
+    &::moz-focus-inner {
+        border: 0;
+        padding: 0;
+        margin-top: -2px;
+        margin-bottom: -2px;
+    }
 }
 
 
@@ -12,7 +41,7 @@
  */
 
 .btn--sm {
-    @include btn--sm;
+    font-size: $font-size-sm;
 }
 
 /**
@@ -20,7 +49,7 @@
  */
 
 .btn--lg {
-    @include btn--lg;
+    font-size: $font-size-lg;
 }
 
 
@@ -29,7 +58,23 @@
  */
 
 .btn--text {
-    @include btn--text;
+    @extend .link;
+    background-color: transparent;
+    color: color(neutral, black);
+    font-weight: inherit;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: color(neutral, black);
+        text-decoration: none;
+    }
+
+    &:disabled {
+        background-color: transparent;
+        color: color(neutral, dark);
+    }
 }
 
 
@@ -38,7 +83,8 @@
  */
 
 .btn--block {
-    @include btn--block;
+    display: block;
+    width: 100%;
 }
 
 
@@ -48,5 +94,13 @@
 
 .btn--disabled,
 .btn:disabled {
-    @include btn--disabled;
+    cursor: not-allowed;
+    background-color: color(neutral, dark);
+    color: color(neutral,darker);
+
+    &:hover,
+    &:focus {
+        background-color: color(neutral, dark);
+        color: color(neutral,darker);
+    }
 }

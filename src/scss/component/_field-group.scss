@@ -4,7 +4,6 @@
 
 .field-group {
     margin: spacing() 0;
-    max-width: screen(xs,max);
 
     .field-group {
         margin-top: spacing(xs);
@@ -13,53 +12,5 @@
 
     &:first-child {
         margin-top: 0;
-    }
-
-    &__label {
-        margin-bottom: spacing(xs) !important;
-    }
-}
-
-
-/**
- * Field Group Inline
- */
-
-@include breakpoint(screen(sm)) {
-    .field-group--inline {
-        @include flex;
-        @include align-items(center);
-        max-width: screen(sm,max);
-
-        .field-group__label {
-            width: 25%;
-            max-width: 16em;
-            margin-bottom: 0;
-        }
-
-        .field-group__field {
-            flex-grow: 1;
-        }
-
-        .field-group__field + * {
-            width: 100%;
-        }
-    }
-}
-
-
-/**
- * Field Group Collapse
- */
-
-.field-group--collapse {
-    @include flex;
-    @include justify-content(flex-start);
-
-    > * {
-        margin-right: spacing(sm);
-        width: auto;
-        max-width: none;
-        flex-grow: initial;
     }
 }

@@ -2,7 +2,22 @@
  * Card
  */
 
-.card {
-    @include card;
+.card,
+%card {
+    border: 1px solid color(neutral, light);
     margin-bottom: spacing();
+
+    &__header,
+    &__footer {
+        background-color: color(neutral, lighter);
+        padding: spacing(sm) spacing();
+    }
+
+    &__header {
+        border-bottom: 1px solid color(neutral, light);
+    }
+
+    &__footer {
+        border-top: 1px solid color(neutral, light);
+    }
 }
