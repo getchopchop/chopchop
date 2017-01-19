@@ -14,22 +14,27 @@
     &:first-child {
         margin-top: 0;
     }
+    
+    &__label {
+        margin-bottom: spacing(xs) !important;
+    }
 }
 
 
 // =============================================
-// Form field group scaffold
+// Form field group inline
 // =============================================
 
 @include breakpoint(screen(sm)) {
-    .field-group--scaffold {
+    .field-group--inline {
         @include flex;
-        flex-flow: wrap;
+        @include align-items(center);
         max-width: screen(sm,max);
 
         .field-group__label {
             width: 25%;
             max-width: 16em;
+            margin-bottom: 0;
         }
 
         .field-group__field {
@@ -44,19 +49,10 @@
 
 
 // =============================================
-// scaffold form
+// Collapse field group
 // =============================================
 
-.scaffold-form .field-group:not(.field-group--inline) {
-    @extend .field-group--scaffold;
-}
-
-
-// =============================================
-// Inline field group
-// =============================================
-
-.field-group--inline {
+.field-group--collapse {
     @include flex;
     @include justify-content(flex-start);
 

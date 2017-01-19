@@ -1,6 +1,11 @@
-// =============================================
-// Typography
-// =============================================
+/**
+ * Typography Utility
+ * 
+ * Useful for setting a font on a specific component or text element.
+ * Add any custom fonts here. Values are set in _var.scss.
+ * 
+ * @since 1.0.0
+ */
 
 .u-font-family {
     font-family: $font-family;

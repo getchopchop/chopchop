@@ -1,6 +1,14 @@
-// =============================================
-// Visible
-// =============================================
+/**
+ * Visibility Utility
+ *
+ * Loops through an array of screen values set in _var.scss.
+ * Each value is given a class `u-visible-*` where * is the
+ * key for that value in the array.
+ *
+ * @var $visibility
+ * @since 1.0.0
+ * @link http://goo.gl/l2mymR
+ */
 
 $screen-min: nth(map-keys($screens),1);
 $screen-max: nth( map-keys($screens), length($screens) );
@@ -36,9 +44,11 @@ $screen-max: nth( map-keys($screens), length($screens) );
 }
 
 
-// =============================================
-// Hidden
-// =============================================
+/**
+ * Responsive Hidden Utility
+ *
+ * @since 1.0.0
+ */
 
 @each $screen, $value in $screens {
     $media-query: screen($screen) screen($screen,max);
@@ -56,9 +66,11 @@ $screen-max: nth( map-keys($screens), length($screens) );
 }
 
 
-// =============================================
-// Visible
-// =============================================
+/**
+ * Visible Display Utility
+ *
+ * @since 1.0.0
+ */
 
 @each $visible in $visibility {
     $class: '.u-visible-#{$visible}';
@@ -72,18 +84,25 @@ $screen-max: nth( map-keys($screens), length($screens) );
 }
 
 
-// =============================================
-// Hide
-// =============================================
+/**
+ * Hidden Utility
+ *
+ * @since 1.0.0
+ */
 
 .u-hidden {
     display: none !important;
 }
 
 
-// =============================================
-// Visually Hidden
-// =============================================
+/**
+ * Visually Hidden Utility
+ *
+ * Provides an screen reader aware, accessible way to hide content.
+ *
+ * @since 1.0.0
+ * @link https://goo.gl/6nUkqa
+ */
 
 .u-visually-hidden {
     position: absolute;

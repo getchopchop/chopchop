@@ -3,13 +3,14 @@
 // =============================================
 
 $colors: (
-    primary: (
-        pink            : DeepPink
-    ),
-    
-    secondary: (
-        purple          : RebeccaPurple
-    ),
+
+//    primary: (
+//        pink            : DeepPink
+//    ),
+//
+//    secondary: (
+//        purple          : RebeccaPurple
+//    ),
     
     neutral: (
         black           : #000,
@@ -138,8 +139,20 @@ $z-10                   : 100;
 
 
 // =============================================
-// Screens
+// Border Radius
 // =============================================
+
+$border-radius          : 0.3em;
+
+
+/**
+ * Screen Breakpoints
+ *
+ * @see helper/_breakpoint.scss
+ * @see utility/_grid.scss
+ * @see utility/_toggle.scss
+ * @see utility/_visible.scss
+ */
 
 $screens: (
     xs: (
@@ -164,9 +177,10 @@ $screens: (
 );
 
 
-// =============================================
-// Containers
-// =============================================
+/**
+ * Container Utility
+ * @see utility/_container.scss
+ */
 
 $containers: (
     sm                  : 52em,
@@ -176,16 +190,10 @@ $containers: (
 );
 
 
-// =============================================
-// Border Radius
-// =============================================
-
-$border-radius          : 0.3em;
-
-
-// =============================================
-// Visibility for visible classes
-// =============================================
+/**
+ * Visibility Utility
+ * @see utility/_visible.scss
+ */
 
 $visibility: (
     block,

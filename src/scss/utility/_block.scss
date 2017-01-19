@@ -1,6 +1,13 @@
-// =============================================
-// Block
-// =============================================
+/**
+ * Block Utility
+ *
+ * Gives an element padding based on the `$spacing` array set in _var.scss
+ * Useful on `.card` elements in particular.
+ *
+ * @var $spacing
+ * 
+ * @since 1.2.0
+ */
 
 [class*="u-block"] {
     display: block;
