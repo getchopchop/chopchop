@@ -271,7 +271,7 @@
                 <div class="cc-title__actions">
                     <ul>';
                 if($this->shouldPrintCode()) {
-                    $title .= '<li><a href="#" data-cc-toggle-action="toggle" data-cc-toggle-target="#cc-code-' . substr(str_replace('/','-',$this->getUrl(false)),1) . '" class="micro">Code</a></li>';
+                    $title .= '<li><a href="#" data-cc-toggle-action="toggle" data-cc-toggle-closest-container=".cc-pattern" data-cc-toggle-target=".js-code-container" class="micro">Code</a></li>';
                 }
                 $title .= '<li><a href="'.$this->getUrl(true).'" class="micro">Preview</a></li>
                     </ul>
@@ -404,11 +404,11 @@ class Section
             }
 
             if($printCode && !isset($_GET['preview'])) {
-                echo '<div class="u-toggle';
+                echo '<div class="js-code-container u-toggle';
                 if($printCodeActive) {
                     echo ' is-active';
                 }
-                echo'" id="cc-code-' . substr(str_replace('/','-',$_t->getUrl(false)),1) . '"><pre class="cc-code"><code class="language-html">';
+                echo'"><pre class="cc-code"><code class="language-html">';
                     ob_start();
                     include $path;
                     $html = ob_get_contents();

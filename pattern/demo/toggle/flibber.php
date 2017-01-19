@@ -1,5 +1,5 @@
 <?php /*
-Title: Flibber
+Title: Flibber headers
 */ ?>
 
 <p><a href="#" class="dish" data-cc-toggle-action="toggle" data-cc-toggle-target=".dish">Activate Dish</a></p>
