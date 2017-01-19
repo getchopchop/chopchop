@@ -89,7 +89,7 @@
     <script src="<?php echo getUrl('build/js/chop.toggle.widget.js'); ?>"></script>
     <script src="<?php echo getUrl('build/js/chop.collapsible.widget.js'); ?>"></script>
 <!--    <script src="--><?php //echo getUrl('build/js/priority-nav.js'); ?><!--"></script>-->
-<!--    <script src="--><?php //echo getUrl('build/js/script.js'); ?><!--"></script>-->
+    <script src="<?php echo getUrl('build/js/script.js'); ?>"></script>
 
     <?php if(!isset($_GET['preview'])) : ?>
         <script src="<?php echo getUrl('build/vendor/jquery.cookie/jquery.cookie.js'); ?>"></script>
