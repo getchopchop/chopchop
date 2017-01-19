@@ -4,6 +4,7 @@
 
 .u-clearfix {
     overflow: hidden;
+
     &:after {
         content: "";
         display: table;

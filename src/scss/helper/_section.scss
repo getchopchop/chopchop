@@ -1,6 +1,6 @@
-// =============================================
-// Section
-// =============================================
+/**
+ * Section
+ */
 
 $screen-min: screen( nth(map-keys($screens),2) );
 $screen-max: screen( nth( map-keys($screens), length($screens) ) );

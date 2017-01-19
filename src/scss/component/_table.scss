@@ -1,33 +1,33 @@
-// =============================================
-// Table
-// =============================================
+/**
+ * Table
+ */
 
 .table {
     @include table;
 }
 
 
-// =============================================
-// Condensed Table
-// =============================================
+/**
+ * Table Condensed
+ */
 
 .table--condensed {
     @include table--condensed;
 }
 
 
-// =============================================
-// Bordered Table
-// =============================================
+/**
+ * Tabled Bordered
+ */
 
 .table--bordered {
     @include table--bordered;
 }
 
 
-// =============================================
-// Striped Table
-// =============================================
+/**
+ * Table Striped
+ */
 
 .table--striped {
     @include table--striped;

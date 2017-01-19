@@ -1,6 +1,6 @@
-// =============================================
-// Form field group
-// =============================================
+/**
+ * Field Group
+ */
 
 .field-group {
     margin: spacing() 0;
@@ -14,16 +14,16 @@
     &:first-child {
         margin-top: 0;
     }
-    
+
     &__label {
         margin-bottom: spacing(xs) !important;
     }
 }
 
 
-// =============================================
-// Form field group inline
-// =============================================
+/**
+ * Field Group Inline
+ */
 
 @include breakpoint(screen(sm)) {
     .field-group--inline {
@@ -48,9 +48,9 @@
 }
 
 
-// =============================================
-// Collapse field group
-// =============================================
+/**
+ * Field Group Collapse
+ */
 
 .field-group--collapse {
     @include flex;

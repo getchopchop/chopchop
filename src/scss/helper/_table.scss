@@ -1,13 +1,13 @@
-// =============================================
-// Table
-// =============================================
+/**
+ * Table
+ */
 
 @mixin table {
     th, td {
         padding: spacing();
         vertical-align: top;
     }
-    
+
     td {
         border-top: 1px solid color(neutral, light);
     }
@@ -34,9 +34,9 @@
 }
 
 
-// =============================================
-// Condensed Table
-// =============================================
+/**
+ * Table Condensed
+ */
 
 @mixin table--condensed {
     th,
@@ -46,9 +46,9 @@
 }
 
 
-// =============================================
-// Bordered Table
-// =============================================
+/**
+ * Table Bordered
+ */
 
 @mixin table--bordered {
     border: 1px solid color(neutral, light);
@@ -65,9 +65,9 @@
 }
 
 
-// =============================================
-// Striped Table
-// =============================================
+/**
+ * Table Striped
+ */
 
 @mixin table--striped {
     tbody tr:nth-child(odd) {

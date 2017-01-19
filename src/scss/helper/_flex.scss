@@ -1,42 +1,42 @@
-// =============================================
-// Flex
-// =============================================
+/**
+ * Flex
+ */
 
 @mixin flex {
     display: flex;
 }
 
 
-// =============================================
-// Flex wrap
-// =============================================
+/**
+ * Flex Wrap
+ */
 
 @mixin flex-wrap($value: nowrap) {
     flex-wrap: $value;
 }
 
 
-// =============================================
-// Flex direction
-// =============================================
+/**
+ * Flex Direction
+ */
 
 @mixin flex-direction($value: row) {
     flex-direction: $value;
 }
 
 
-// =============================================
-// Align items
-// =============================================
+/**
+ * Align Items
+ */
 
 @mixin align-items($value: flex-start) {
     align-items: $value;
 }
 
 
-// =============================================
-// Justify content
-// =============================================
+/**
+ * Justify Content
+ */
 
 @mixin justify-content($value: flex-start) {
     justify-content: $value;

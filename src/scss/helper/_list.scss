@@ -1,6 +1,17 @@
-// =============================================
-// List inline
-// =============================================
+/**
+ * List Unstyled
+ */
+
+@mixin list-unstyled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/**
+ * List Inline
+ */
 
 @mixin list-inline {
     padding-left: 0;
@@ -13,30 +24,19 @@
 }
 
 
-// =============================================
-// Ordered list
-// =============================================
+/**
+ * List Ordered
+ */
 
 @mixin list-ordered {
     list-style: decimal;
 }
 
 
-// =============================================
-// Ordered list
-// =============================================
+/**
+ * List Unordered
+ */
 
 @mixin list-unordered {
     list-style: disc;
-}
-
-
-// =============================================
-// Unstyled list
-// =============================================
-
-@mixin list-unstyled {
-    margin: 0;
-    padding: 0;
-    list-style: none;
 }

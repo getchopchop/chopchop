@@ -1,11 +1,11 @@
-// =============================================
-// Ratio
-// =============================================
+/**
+ * Ratio
+ */
 
 @mixin ratio($value: 100%) {
     position: relative;
     overflow: hidden;
-    
+
     &:before {
         content: "";
         display: block;

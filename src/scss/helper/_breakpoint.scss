@@ -1,6 +1,6 @@
-// =============================================
-// Breakpoint
-// =============================================
+/**
+ * Breakpoint
+ */
 
 @mixin breakpoint($query) {
   $query-string: breakpoint-parse-query($query);
