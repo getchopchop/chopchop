@@ -4,14 +4,10 @@ Class: .modal
 Description: The modal is hidden off screen by default. <a href="#" class="js-cc-toggle js-modal-content-1 " data-cc-toggle-action="activate" data-cc-toggle-target="#modal-tab-1">Show modal 1 content</a> or <a href="#" class="js-cc-toggle js-modal-content-2" data-cc-toggle-action="activate" data-cc-toggle-target="#modal-tab-2">Show modal 2 content</a>.
 */ ?>
 
-<div class="modal" id="modal" data-cc-toggle-cascade="#overlay, .modal-tab" data-cc-toggle-trigger-type="direct-only" data-cc-toggle-action="deactivate" data-cc-toggle-target="#modal">
+<div class="modal" id="modal" data-cc-toggle-target-callback="#overlay" data-cc-toggle-trigger-type="direct-only" data-cc-toggle-action="deactivate" data-cc-toggle-target="#modal">
     <div class="modal__dialog">
 
-        <p><a href="#" class="js-cc-toggle js-modal-content-1" data-cc-toggle-trigger="mouseenter" data-cc-toggle-action="activate" data-cc-toggle-target="#modal-tab-1">Show Modal 1 Content</a></p>
-
-        <p><a href="#" class="js-cc-toggle js-modal-content-2" data-cc-toggle-trigger="mouseenter" data-cc-toggle-action="activate" data-cc-toggle-target="#modal-tab-2">Show Modal 2 Content</a></p>
-
-        <div id="modal-tab-1" data-cc-toggle-cascade="#modal"  data-cc-toggle-target-callback=".close, .js-modal-content-1" data-cc-toggle-group="modal-tabs" class="u-toggle modal-tab">
+        <div id="modal-tab-1" data-cc-toggle-target="#modal"  data-cc-toggle-target-callback=".close, .js-modal-content-1" data-cc-toggle-group="modal-tabs" class="u-toggle modal-tab">
             <div class="card">
                 <div class="card__header">
                     <h2>Modal Content 1</h2>
@@ -26,7 +22,7 @@ Description: The modal is hidden off screen by default. <a href="#" class="js-cc
             </div>
         </div>
 
-        <div id="modal-tab-2" data-cc-toggle-cascade="#modal" data-cc-toggle-target-callback=".close, .js-modal-content-2" data-cc-toggle-group="modal-tabs" class="u-toggle modal-tab">
+        <div id="modal-tab-2" data-cc-toggle-target="#modal" data-cc-toggle-target-callback=".close, .js-modal-content-2" data-cc-toggle-group="modal-tabs" class="u-toggle modal-tab">
             <div class="card">
                 <div class="card__header">
                     <h2>Modal Content 2</h2>
