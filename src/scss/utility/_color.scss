@@ -1,6 +1,6 @@
-// =============================================
-// Fill
-// =============================================
+/**
+ * Color (Background)
+ */
 
 @each $color-key, $color-value in $colors {
     @each $tone-key, $tone-value in $color-value {
@@ -17,9 +17,9 @@
 }
 
 
-// =============================================
-// Text
-// =============================================
+/**
+ * Color (Text)
+ */
 
 @each $color-key, $color-value in $colors {
     @each $tone-key, $tone-value in $color-value {

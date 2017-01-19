@@ -1,33 +1,41 @@
-// =============================================
-// List inline
-// =============================================
+/**
+ * List Inline
+ * 
+ * @since 1.0.0
+ */
 
 .u-list-inline {
     @include list-inline;
 }
 
 
-// =============================================
-// Ordered list
-// =============================================
+/**
+ * Ordered List
+ * 
+ * @since 1.0.0
+ */
 
 .u-list-ordered {
     @include list-ordered;
 }
 
 
-// =============================================
-// Unordered list
-// =============================================
+/**
+ * Unordered List
+ * 
+ * @since 1.0.0
+ */
 
 .u-list-unordered {
     @include list-unordered;
 }
 
 
-// =============================================
-// Unstyled list
-// =============================================
+/**
+ * Unstyled List
+ * 
+ * @since 1.0.0
+ */
 
 .u-list-unstyled {
     @include list-unstyled;

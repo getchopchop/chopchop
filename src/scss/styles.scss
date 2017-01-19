@@ -1,16 +1,15 @@
-// =============================================
-// Vars
-// =============================================
+/**
+ * Global Variables
+ */
 
 @import "var";
 
 
-// =============================================
-// Helpers
-// =============================================
+/**
+ * Helper Mixins & Functions
+ */
 
 @import "helper/function";
-
 @import "helper/flex";
 @import "helper/accordion";
 @import "helper/button";
@@ -28,9 +27,9 @@
 @import "helper/type";
 
 
-// =============================================
-// utility
-// =============================================
+/**
+ * Utilities
+ */
 
 @import "utility/align";
 @import "utility/block";
@@ -49,9 +48,9 @@
 @import "utility/z-index";
 
 
-// =============================================
-// base
-// =============================================
+/**
+ * Base
+ */
 
 @import "base/animate";
 @import "base/form";
@@ -65,9 +64,9 @@
 @import "base/text";
 
 
-// =============================================
-// component
-// =============================================
+/**
+ * Component
+ */
 
 @import "component/accordion";
 @import "component/alert";
