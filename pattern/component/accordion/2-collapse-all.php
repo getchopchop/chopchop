@@ -1,32 +1,32 @@
 <?php /*
 Title: All Collapsible Accordion
-Class: .accordion[data-cc-collapse="all-collapsible"]
-Description: An accordion where all tabs can be open and closed independently of eachother.
+Class: .accordion.js-cc-collapsible[data-cc-collapsible-mode="collapse-all"]
+Description: An accordion whose children can all be collapsed
 */ ?>
 
-<div data-cc-collapse="all-collapsible" class="accordion">
+<div data-cc-collapsible-mode="collapse-all" class="accordion js-cc-collapsible">
     <div class="is-active accordion__header">
-        <h3>Tab 1</h3>
+        <h3>Header 1</h3>
     </div>
     <div class="is-active accordion__body">
-        <p>tab 1 content</p>
+        <p>Content 1</p>
     </div>
     <div class="accordion__header">
-        <h3>Tab 2</h3>
+        <h3>Header 2</h3>
     </div>
     <div class="accordion__body">
-        <p>tab 2 content</p>
+        <p>Content 2</p>
     </div>
     <div class="accordion__header">
-        <h3>Tab 3</h3>
+        <h3>Header 3</h3>
     </div>
     <div class="accordion__body">
-        <p>tab 3 content</p>
+        <p>Content 3</p>
     </div>
     <div class="accordion__header">
-        <h3>Tab 4</h3>
+        <h3>Header 4</h3>
     </div>
     <div class="accordion__body">
-        <p>tab 4 content</p>
+        <p>Content 4 </p>
     </div>
 </div>

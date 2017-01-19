@@ -4,8 +4,12 @@
 
     Static.WIDGET_ID = "chopchop.collapsible";
     Static.INSTANCE_NAME = "chopchop-collapsible";
-    Static.MODE_COLLAPSE_ALL = "all";
-    Static.MODE_ONE_REMAIN = "one-remain";
+    // Allows all to be collapsed, none remain open
+    Static.MODE_COLLAPSE_ALL = "collapse-all";
+    // One remains open
+    Static.MODE_OPEN_ONE = "open-one";
+    // All can be opened
+    Static.MODE_OPEN_ALL = "open-all";
 
 
     Static.init = function(){
@@ -28,7 +32,8 @@
 
             headerSelector: '[class*="__header"]',
             bodySelector: '[class*="__body"]',
-            mode: Static.MODE_COLLAPSE_ALL
+            // By default, initialise as a tab
+            mode: Static.MODE_OPEN_ONE
         },
 
         $headers: null,
@@ -65,7 +70,7 @@
 
             /* If we've got a mode of MODE_COLLAPSE_ALL then create the toggle as toggleable, otherwise only activate */
             var headerValues = {
-                action: mode == Static.MODE_COLLAPSE_ALL ? window.Chopchop.Toggle.ACTION_TOGGLE : window.Chopchop.Toggle.ACTION_ACTIVATE
+                action: mode == Static.MODE_COLLAPSE_ALL || Static.MODE_OPEN_ALL ? window.Chopchop.Toggle.ACTION_TOGGLE : window.Chopchop.Toggle.ACTION_ACTIVATE
             };
 
             /* The body elements should not have a trigger on them */
@@ -83,7 +88,10 @@
                 $bodyToggle = this._getToggleInstance($body, bodyValues);
                 $bodyToggle.addTargetCallbackElement($header);
 
-                $bodyToggle.addGroupElements(this.$bodies);
+                // Don't use grouping functionality if we allow all to be open
+                if(mode !== Static.MODE_OPEN_ALL) {
+                    $bodyToggle.addGroupElements(this.$bodies);
+                }
 
                 /* Log any bodies or headers with an active data flag */
                 if($headerToggle.getLocalOption(this.options.dataActiveInitial, this.options.dataPrepend)){
