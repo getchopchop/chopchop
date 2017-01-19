@@ -2,8 +2,36 @@
  * Table
  */
 
-.table {
-    @include table;
+.table,
+%table {
+    th, td {
+        padding: spacing();
+        vertical-align: top;
+    }
+    
+    td {
+        border-top: 1px solid color(neutral, light);
+    }
+
+    th {
+        vertical-align: bottom;
+    }
+
+    caption {
+        padding-top: spacing(sm);
+        padding-bottom: spacing(sm);
+        color: color(neutral, dark);
+        text-align: left;
+    }
+
+    thead th {
+        border-top: 0;
+        border-bottom: 2px solid color(neutral, light);
+    }
+
+    tfoot td {
+        border-top-width: 2px;
+    }
 }
 
 
@@ -11,8 +39,12 @@
  * Table Condensed
  */
 
-.table--condensed {
-    @include table--condensed;
+.table--condensed,
+%table--condensed {
+    th,
+    td {
+        padding: spacing(xs);
+    }
 }
 
 
@@ -20,8 +52,19 @@
  * Tabled Bordered
  */
 
-.table--bordered {
-    @include table--bordered;
+.table--bordered,
+%table--bordered {
+    border: 1px solid color(neutral, light);
+
+    th,
+    td {
+        border: 1px solid color(neutral, light);
+    }
+
+    thead th,
+    thead td {
+       border-bottom-width: 2px;
+    }
 }
 
 
@@ -29,6 +72,9 @@
  * Table Striped
  */
 
-.table--striped {
-    @include table--striped;
+.table--striped,
+%table--striped {
+    tbody tr:nth-child(odd) {
+        background-color: color(neutral, lighter);
+    }
 }
