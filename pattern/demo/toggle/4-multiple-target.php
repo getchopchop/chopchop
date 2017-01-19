@@ -2,17 +2,16 @@
 Title: Toggle with Multiple Targets
 */ ?>
 
-<p><a href="#" data-cc-toggle-action="toggle" data-cc-toggle-target=".shitzu, .poodle">Toggle All Dogs</a></p>
+<p><a href="#" data-cc-toggle-action="toggle" data-cc-toggle-target=".horse, .chicken">Toggle All Animals</a></p>
 
-
-<div class="u-toggle shitzu">
-    Shitzu
+<div class="u-toggle horse">
+    <h1>🐴</h1>
 </div>
 
-<div class="u-toggle poodle">
-    Poodle
+<div class="u-toggle chicken">
+    <h1>🐔</h1>
 </div>
 
-<div class="u-toggle shitzu">
-    Shitzu
+<div class="u-toggle horse">
+    <h1>🐴</h1>
 </div>

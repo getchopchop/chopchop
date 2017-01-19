@@ -10,7 +10,7 @@
 
     Static.init = function(){
         $('.js-cc-collapsible').collapsible();
-    }
+    };
 
     $(document).on('ready.' + Static.WIDGET_ID, function(){
         Static.init();

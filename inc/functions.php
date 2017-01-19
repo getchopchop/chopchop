@@ -271,7 +271,7 @@
                 <div class="cc-title__actions">
                     <ul>';
                 if($this->shouldPrintCode()) {
-                    $title .= '<li><a href="#" data-cc-action="toggle" data-cc-target="cc-code-' . substr(str_replace('/','-',$this->getUrl(false)),1) . '" class="micro">Code</a></li>';
+                    $title .= '<li><a href="#" data-cc-toggle-action="toggle" data-cc-toggle-target="#cc-code-' . substr(str_replace('/','-',$this->getUrl(false)),1) . '" class="micro">Code</a></li>';
                 }
                 $title .= '<li><a href="'.$this->getUrl(true).'" class="micro">Preview</a></li>
                     </ul>
