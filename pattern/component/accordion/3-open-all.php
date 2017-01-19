@@ -1,6 +1,6 @@
 <?php /*
 Title: All Open Accordion
-Class: .accordion.js-cc-collapsible[data-cc-collapsible-mode="collapse-all"]
+Class: .accordion.js-cc-collapsible[data-cc-collapsible-mode="open-all"]
 Description: An accordion whose children can all be opened
 */ ?>
 
