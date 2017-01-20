@@ -1,5 +1,5 @@
 <?php /*
-Container: false
+Title: Homepage
 */ ?>
 
 <?php printPattern('demo/header/base'); ?>
