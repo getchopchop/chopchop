@@ -2,7 +2,8 @@
  * Tag
  */
 
-.tag {
+.tag,
+%tag {
     display: inline-block;
     background-color: color(neutral,darker);
     color: color(neutral, white);
@@ -18,7 +19,8 @@
  * Tag Small
  */
 
-.tag--sm {
+.tag--sm,
+%tag--sm {
     font-size: $font-size-sm;
 }
 
@@ -27,7 +29,8 @@
  * Tag Large
  */
 
-.tag--lg {
+.tag--lg,
+%tag--lg {
     font-size: $font-size-lg;
 }
 
@@ -36,6 +39,7 @@
  * Badge
  */
 
-.tag--badge {
+.tag--badge,
+%tag--badge {
     border-radius: spacing(xl);
 }

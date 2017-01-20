@@ -2,7 +2,8 @@
  * Pagination
  */
 
-.pagination {
+.pagination,
+%pagination {
     li a::after {
         vertical-align: middle;
     }

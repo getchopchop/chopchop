@@ -2,7 +2,8 @@
  * Responsive Table
  */
 
-.responsive-table {
+.responsive-table,
+%responsive-table {
     overflow-x: auto;
     min-height: 0.01%;
     -webkit-overflow-scrolling: touch;
@@ -14,7 +15,8 @@
 }
 
 @include breakpoint(max-width screen(sm)) {
-    .responsive-table {
+    .responsive-table,
+    %responsive-table {
         width: 100%;
         overflow-y: hidden;
         -ms-overflow-style: -ms-autohiding-scrollbar;

@@ -13,7 +13,8 @@
 $screen-min: nth(map-keys($screens),1);
 $screen-max: nth( map-keys($screens), length($screens) );
 
-[class*="u-visible-"] {
+[class*="u-visible-"],
+%u-visible {
     display: none !important;
 }
 
@@ -36,7 +37,8 @@ $screen-max: nth( map-keys($screens), length($screens) );
                 $class: #{$screen};
             }
 
-            .u-visible-#{$class} {
+            .u-visible-#{$class},
+            %u-visible-#{$class} {
                 display: #{$visible} !important;
             }
         }
@@ -59,7 +61,8 @@ $screen-max: nth( map-keys($screens), length($screens) );
     }
 
     @include breakpoint($media-query) {
-        .u-hidden-#{$screen} {
+        .u-hidden-#{$screen},
+        %u-hidden-#{$screen} {
             display: none !important;
         }
     }
@@ -73,9 +76,10 @@ $screen-max: nth( map-keys($screens), length($screens) );
  */
 
 @each $visible in $visibility {
-    $class: '.u-visible-#{$visible}';
+    $class: '.u-visible-#{$visible}, %u-visible-#{$visible}';
+
     @if $visible == block {
-        $class: '.u-visible';
+        $class: '.u-visible, %u-visible';
     }
 
     #{$class} {
@@ -90,7 +94,8 @@ $screen-max: nth( map-keys($screens), length($screens) );
  * @since 1.0.0
  */
 
-.u-hidden {
+.u-hidden,
+%u-hidden {
     display: none !important;
 }
 
@@ -104,7 +109,8 @@ $screen-max: nth( map-keys($screens), length($screens) );
  * @link https://goo.gl/6nUkqa
  */
 
-.u-visually-hidden {
+.u-visually-hidden,
+%u-visually-hidden {
     position: absolute;
     overflow: hidden;
     width: 1px;

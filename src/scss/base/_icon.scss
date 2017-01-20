@@ -2,7 +2,8 @@
  * Icon
  */
 
-.icon {
+.icon,
+%icon {
     height: spacing();
     width: spacing();
 }
@@ -12,7 +13,8 @@
  * Icon Small
  */
 
-.icon--sm {
+.icon--sm,
+%icon--sm {
     height: spacing(sm);
     width: spacing(sm);
  }
@@ -22,7 +24,8 @@
  * Icon Large
  */
 
-.icon--lg {
+.icon--lg,
+%icon--lg {
     height: spacing(lg);
     width: spacing(lg);
 }
@@ -32,7 +35,8 @@
  * Icon Payment
  */
 
-.icon--payment {
+.icon--payment,
+%icon--payment {
     width: spacing()*1.5;
 
     &.icon--sm {

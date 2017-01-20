@@ -2,7 +2,8 @@
  * Button
  */
 
-.btn {
+.btn,
+%btn {
     padding: spacing(xs) spacing();
     border-radius: 0;
     font-size: inherit;
@@ -40,7 +41,8 @@
  * Button Small
  */
 
-.btn--sm {
+.btn--sm,
+%btn--sm {
     font-size: $font-size-sm;
 }
 
@@ -48,7 +50,8 @@
  * Button Large
  */
 
-.btn--lg {
+.btn--lg,
+%btn--lg {
     font-size: $font-size-lg;
 }
 
@@ -57,8 +60,9 @@
  * Button Text
  */
 
-.btn--text {
-    @extend .link;
+.btn--text,
+%btn--text {
+    @extend %link;
     background-color: transparent;
     color: color(neutral, black);
     font-weight: inherit;
@@ -82,7 +86,8 @@
  * Button Block
  */
 
-.btn--block {
+.btn--block,
+%btn--block {
     display: block;
     width: 100%;
 }
@@ -93,6 +98,7 @@
  */
 
 .btn--disabled,
+%btn--disabled,
 .btn:disabled {
     cursor: not-allowed;
     background-color: color(neutral, dark);

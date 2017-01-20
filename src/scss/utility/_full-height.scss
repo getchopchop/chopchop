@@ -2,7 +2,8 @@
  * Full Height
  */
 
-.u-full-height {
+.u-full-height,
+%u-full-height {
     @include flex;
     flex-flow: wrap;
 

@@ -2,8 +2,9 @@
  * Nav
  */
 
-.nav {
-    @extend .u-list-unstyled;
+.nav,
+%nav {
+    @extend %u-list-unstyled;
 
     a {
         text-decoration: none;
@@ -15,7 +16,8 @@
  * Nav Pills
  */
 
-.nav--pills {
+.nav--pills,
+%nav--pills {
     a {
         display: block;
         padding: spacing(xs) spacing(sm);
@@ -27,7 +29,8 @@
  * Nav Inline
  */
 
-.nav--inline {
+.nav--inline,
+%nav--inline {
     @include flex;
     @include flex-wrap(wrap);
     white-space: nowrap;
@@ -38,7 +41,8 @@
  * Nav Space
  */
 
-.nav--space {
+.nav--space,
+%nav--space {
     &:not(.nav--inline) > * {
         margin-bottom: spacing(sm);
     }
@@ -57,7 +61,8 @@
  * Nav Multi Level
  */
 
-.nav--multi-level {
+.nav--multi-level,
+%nav--multi-level {
     li {
         position: relative;
     }
@@ -65,7 +70,7 @@
     // All levels
     ul,
     ol {
-        @extend .nav;
+        @extend %nav;
         display: none;
         position: absolute;
     }
@@ -99,7 +104,8 @@
  * Nav Pager
  */
 
-.nav--pager {
+.nav--pager,
+%nav--pager {
     @include justify-content(center);
     font-size: 0;
 

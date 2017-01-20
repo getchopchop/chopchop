@@ -2,6 +2,7 @@
  * Tabs
  */
 
-.tabs {
+.tabs,
+%tabs {
     @include tabs;
 }

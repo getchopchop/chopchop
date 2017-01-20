@@ -5,25 +5,29 @@
  * Useful on `.card` elements in particular.
  *
  * @var $spacing
- * 
+ *
  * @since 1.2.0
  */
 
-[class*="u-block"] {
+[class*="u-block"],
+%u-block {
     display: block;
 }
 
-[class*="u-block"] > *:last-child {
+[class*="u-block"] > *:last-child,
+%u-block > *:last-child {
     margin-bottom: 0;
 }
 
 @each $key, $value in $spacing {
     @if $key == base {
-        .u-block {
+        .u-block,
+        %u-block {
             padding: $value;
         }
     } @else {
-        .u-block-#{$key} {
+        .u-block-#{$key},
+        %u-block-#{$key} {
             padding: $value;
         }
     }

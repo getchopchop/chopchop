@@ -2,7 +2,8 @@
  * Breadcrumb
  */
 
-.breadcrumb {
+.breadcrumb,
+%breadcrumb {
 
     li:not(:last-child) {
         margin-right: spacing(sm);

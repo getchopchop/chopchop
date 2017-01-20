@@ -4,7 +4,8 @@
  * @link https://goo.gl/iyJRmk
  */
 
-.u-clearfix {
+.u-clearfix,
+%u-clearfix {
     overflow: hidden;
 
     &:after {

@@ -11,27 +11,33 @@
  * @since 1.0.0
  */
 
-.u-text-center {
+.u-text-center,
+%u-text-center {
     text-align: center !important;
 }
 
-.u-text-left {
+.u-text-left,
+%u-text-left {
     text-align: left !important;
 }
 
-.u-text-right {
+.u-text-right,
+%u-text-right {
     text-align: right !important;
 }
 
-.u-center {
+.u-center,
+%u-center {
     margin-left: auto !important;
     margin-right: auto !important;
 }
 
-.u-pull-left {
+.u-pull-left,
+%u-pull-left {
     float: left !important;
 }
 
-.u-pull-right {
+.u-pull-right,
+%u-pull-right {
     float: right !important;
 }

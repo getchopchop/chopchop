@@ -2,10 +2,11 @@
  * Logo
  */
 
-.logo {
+.logo,
+%logo {
     display: inline-block;
 
     &__text {
-        @extend .u-visually-hidden;
+        @extend %u-visually-hidden;
     }
 }

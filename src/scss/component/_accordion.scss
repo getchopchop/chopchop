@@ -2,6 +2,7 @@
  * Accordion
  */
 
-.accordion {
+.accordion,
+%accordion {
     @include accordion;
 }

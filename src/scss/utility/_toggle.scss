@@ -1,14 +1,15 @@
 /**
  * Simple Toggle Utility
- * 
+ *
  * Works in combination with javascript toggle in js/chopchop.lib.js
  * Provides a way of making an element a toggle. Typically this would
  * be `display: none;` and `display: block;`.
- * 
+ *
  * @since 1.0.0
  */
 
-.u-toggle {
+.u-toggle,
+%u-toggle {
     display: none;
 
     &.is-active {
@@ -19,22 +20,23 @@
 
 /*
  * Responsive Toggle Utility
- * 
+ *
  * We pass through the $screens array in _var.scss so that an element can
  * be a toggle at a certain breakpoint. An example of this would be footer links
  * that are toggles on small screens and shown on larger screens.
  * * `u-toggle`
  * * `u-toggle-*`
- * 
+ *
  * @var $screens
- * 
+ *
  * @since 2.2.0
  */
 
 @each $screen, $value in $screens {
     @if $screen == xs {
         @include breakpoint( max-width screen($screen, max) ) {
-            .u-toggle-#{$screen} {
+            .u-toggle-#{$screen},
+            %u-toggle-#{$screen} {
                 display: none;
 
                 &.is-active {
@@ -44,7 +46,8 @@
         }
     } @elseif $screen == nth( map-keys($screens), length($screens) ) {
         @include breakpoint( screen( nth( map-keys($screens), length($screens) ) ) ) {
-            .u-toggle-#{$screen} {
+            .u-toggle-#{$screen},
+            %u-toggle-#{$screen} {
                 display: none;
 
                 &.is-active {
@@ -54,7 +57,8 @@
         }
     } @else {
         @include breakpoint( screen($screen) screen($screen, max) ) {
-            .u-toggle-#{$screen} {
+            .u-toggle-#{$screen},
+            %u-toggle-#{$screen} {
                 display: none;
 
                 &.is-active {
@@ -68,9 +72,9 @@
 
 /*
  * Enable Click on iOS
- * 
+ *
  * Fixes a bug whereby the click action doesn't work on anything that isn't an `<a>`.
- * 
+ *
  * @since 1.2.0
  * @link https://goo.gl/UnXoeG
  */

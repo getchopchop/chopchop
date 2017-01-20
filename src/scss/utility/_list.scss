@@ -4,7 +4,8 @@
  * @since 1.0.0
  */
 
-.u-list-unstyled {
+.u-list-unstyled,
+%u-list-unstyled {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -17,7 +18,8 @@
  * @since 1.0.0
  */
 
-.u-list-inline {
+.u-list-inline,
+%u-list-inline {
     padding-left: 0;
     margin-left: 0;
     list-style: none;
@@ -34,7 +36,8 @@
  * @since 1.0.0
  */
 
-.u-list-ordered {
+.u-list-ordered,
+%u-list-ordered {
     list-style: decimal;
 }
 
@@ -45,6 +48,7 @@
  * @since 1.0.0
  */
 
-.u-list-unordered {
+.u-list-unordered,
+%u-list-unordered {
     list-style: disc;
 }

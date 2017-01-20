@@ -2,11 +2,12 @@
  * Title
  */
 
-.title {
-    &__main {
+.title,
+%title {
+    > *:not(:last-child) {
         margin-bottom: 0;
     }
-    &__sub {
+    > *:not(:first-child) {
         margin-top: 0;
     }
 }

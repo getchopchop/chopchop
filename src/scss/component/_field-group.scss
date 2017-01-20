@@ -2,7 +2,8 @@
  * Field Group
  */
 
-.field-group {
+.field-group,
+%field-group {
     margin: spacing() 0;
 
     .field-group {
