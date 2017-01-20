@@ -11,7 +11,7 @@ $colors: (
 //    secondary: (
 //        purple          : RebeccaPurple
 //    ),
-    
+
     neutral: (
         black           : #000,
         white           : #fff,
@@ -22,7 +22,7 @@ $colors: (
         lighter         : #e4e4e4,
         lightest        : #f4f4f4
     ),
-    
+
     contextual: (
         success         : #4caf50,
         success-light   : #c8e6c9,
@@ -31,7 +31,7 @@ $colors: (
         error           : #f44336,
         error-light     : #ffcdd2
     ),
-    
+
     social: (
         twitter         : #55acee,
         facebook        : #32639f,
@@ -98,8 +98,11 @@ $spacing: (
  * Gutter
  */
 
-$gutter-x               : 3%;
+$gutter-x               : 1em;
 $gutter-y               : $gutter-x;
+
+$gutter-x-lg            : 3%;
+$gutter-y-lg            : $gutter-x-lg;
 
 
 /**

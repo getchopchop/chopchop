@@ -40,6 +40,37 @@
 
 
 /**
+ * Grid Gutter X Axis
+ */
+
+.g-gutter-x-lg,
+%g-gutter-x-lg {
+    @include grid-gutter-x($gutter-x-lg);
+}
+
+
+/**
+ * Grid Gutter Y Axis
+ */
+
+.g-gutter-y-lg,
+%g-gutter-y-lg {
+    @include grid-gutter-y($gutter-y-lg);
+}
+
+
+/**
+ * Grid Gutter X&Y Axis
+ */
+
+.g-gutter-lg,
+%g-gutter-lg {
+    @include grid-gutter-x;
+    @include grid-gutter-y;
+}
+
+
+/**
  * Grid Center X Axis
  */
 
