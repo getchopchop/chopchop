@@ -44,7 +44,7 @@ npm run build
 +-- pattern/
 +-- src/
 |   +-- img
-|   |   +-- vectors
+|   |   +-- icons
 |   +-- js
 |   +-- scss
 +-- .editorconfig
