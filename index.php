@@ -43,7 +43,7 @@
     <?php if(!isset($_GET['preview'])) : ?>
         <header class="cc-header">
             <ul>
-                <li><a href="#" id="cc-menu-trigger" data-cc-action="toggle" data-cc-target="cc-nav">Menu</a></li>
+                <li><a href="#" class="js-cc-toggle" id="cc-menu-trigger" data-cc-toggle-action="toggle" data-cc-toggle-target="#cc-nav">Menu</a></li>
                 <li class="cc-readout"><span></span></li>
             </ul>
         </header>
@@ -81,16 +81,19 @@
     <![endif]-->
     <script src="<?php echo getUrl('build/vendor/picturefill/picturefill.js'); ?>" async></script>
     <script src="<?php echo getUrl('build/vendor/jquery/jquery.js'); ?>"></script>
+    <script src="<?php echo getUrl('build/vendor/jquery/jquery-ui.min.js'); ?>"></script>
     <?php /*?>
     <script src="<?php echo getUrl('build/vendor/enquire/enquire.js'); ?>"></script>
     <?php */ ?>
-    <script src="<?php echo getUrl('build/js/chopchop.lib.js'); ?>"></script>
+    <script src="<?php echo getUrl('build/js/chop.base.widget.js'); ?>"></script>
+    <script src="<?php echo getUrl('build/js/chop.toggle.widget.js'); ?>"></script>
+    <script src="<?php echo getUrl('build/js/chop.collapsible.widget.js'); ?>"></script>
     <script src="<?php echo getUrl('build/js/script.js'); ?>"></script>
 
     <?php if(!isset($_GET['preview'])) : ?>
         <script src="<?php echo getUrl('build/vendor/jquery.cookie/jquery.cookie.js'); ?>"></script>
         <script src="<?php echo getUrl('build/vendor/prismjs/prism.js'); ?>"></script>
-        <script src="<?php echo getUrl('build/js/chopchop-ui.js'); ?>"></script>
+<!--        <script src="--><?php //echo getUrl('build/js/chopchop-ui.js'); ?><!--"></script>-->
     <?php endif; ?>
 
 </body>

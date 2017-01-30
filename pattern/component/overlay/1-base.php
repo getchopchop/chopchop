@@ -5,4 +5,4 @@ Description: An overlay is used on modals and drawers to add a layer of opacity 
 Section: cc-overlay
 */ ?>
 
-<div class="overlay" id="overlay" data-cc-action="deactivate" data-cc-target="modal drawer-left drawer-right"></div>
+<div class="overlay" id="overlay" data-cc-toggle-action="deactivate" data-cc-toggle-target="#modal, #drawer-left, #drawer-right"></div>

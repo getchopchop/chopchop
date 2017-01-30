@@ -1,13 +1,13 @@
 <?php /*
 Title: Left Drawer
 Class: .drawer.drawer--left
-Description: The left drawer is hidden off screen by default. <a href="#" data-cc-target="drawer-left-1" data-cc-action="activate">Active left drawer</a>.
+Description: The left drawer is hidden off screen by default. <a href="#" data-cc-toggle-target="#drawer-left-1" data-cc-toggle-action="activate">Active left drawer</a>.
 */ ?>
 
-<div class="drawer drawer--left" id="drawer-left" data-cc-cascade="overlay">
+<div class="drawer drawer--left" id="drawer-left" data-cc-toggle-target-callback="#overlay">
     <div class="drawer__dialog">
 
-        <div id="drawer-left-1" class="u-toggle" data-cc-cascade="drawer-left" data-cc-group="drawer-left-contents">
+        <div id="drawer-left-1" class="u-toggle" data-cc-toggle-target="#drawer-left" data-cc-toggle-group="drawer-left-contents">
             <div class="card">
                 <div class="card__header">
                     <h2>Left Drawer Panel 1</h2>
@@ -18,7 +18,7 @@ Description: The left drawer is hidden off screen by default. <a href="#" data-c
                     <p>Ut malesuada felis pulvinar nulla tempor tempus. Donec at quam scelerisque, egestas augue dignissim, gravida mi. Cras at pellentesque mi, quis tristique felis. In auctor vel mauris at tempus. Fusce fermentum vel mi sit amet faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer pretium, mauris et imperdiet pulvinar, velit elit rhoncus lacus, nec volutpat turpis elit non arcu. Curabitur vel lorem ac lacus consectetur consequat. Ut nulla justo, viverra nec urna et, pharetra varius orci. Aenean sit amet lorem nunc. Vivamus sagittis accumsan justo, id luctus leo facilisis eget. Aliquam bibendum erat commodo, consectetur erat non, varius neque.</p>
                 </div>
                 <div class="card__footer">
-                    <p><a href="#" data-cc-action="deactivate" data-cc-target="drawer-left" class="btn">Close</a></p>
+                    <p><a href="#" data-cc-toggle-action="deactivate" data-cc-toggle-target="#drawer-left" class="btn">Close</a></p>
                 </div>
             </div>
         </div>
