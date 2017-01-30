@@ -1,6 +1,6 @@
-// =============================================
-// Font Anti aliasing magic
-// =============================================
+/**
+ * Font Anti Aliasing
+ */
 
 // html {
 //     -webkit-font-smoothing: antialiased;
@@ -17,15 +17,15 @@ only screen and ( min-resolution: 1.25dppx) {
 }
 
 
-// =============================================
-// Typography
-// =============================================
+/**
+ * Typography
+ */
 
 html {
     font-size: $font-size;
     font-family: $font-family;
     line-height: $line-height;
-    color: color(grey);
+    color: color(neutral, dark);
 }
 
 ul, ol, p {
@@ -63,45 +63,48 @@ samp {
 code {
     padding: 2px 4px;
     font-size: $font-size-sm;
-    color: color(error);
-    background-color: color(grey, lighter);
+    color: color(contextual, error);
+    background-color: color(neutral, lighter);
     border-radius: $border-radius;
 }
 
 mark {
-    background: color(error);
-    color: color(black);
+    background: color(contextual, error);
+    color: color(neutral, black);
 }
 
 
-// =============================================
-// Links
-// =============================================
+/**
+ * Link
+ */
 
 a,
-.link {
-    color: color(black);
+.link,
+%link {
+    color: color(neutral, black);
     touch-action: manipulation;
 
     &:hover {
-        color: color(grey);
+        color: color(neutral, dark);
     }
 }
 
 
-// =============================================
-// Lead
-// =============================================
+/**
+ * Lead
+ */
 
-.lead {
+.lead,
+%lead {
     font-size: $font-size-lg;
 }
 
 
-// =============================================
-// Micro
-// =============================================
+/**
+ * Micro
+ */
 
-.micro {
+.micro,
+%micro {
     font-size: $font-size-sm;
 }

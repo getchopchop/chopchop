@@ -1,51 +1,51 @@
-// =============================================
-// Color
-// =============================================
+/**
+ * Color
+ */
 
 @function color($color, $tone: 'base') {
     @return map-get(map-get($colors, $color), $tone);
 }
 
 
-// =============================================
-// Screen
-// =============================================
+/**
+ * Screen
+ */
 
 @function screen($screen, $type: 'base') {
     @return map-get(map-get($screens, $screen), $type);
 }
 
 
-// =============================================
-// Container
-// =============================================
+/**
+ * Container
+ */
 
 @function container($value: 'base') {
     @return map-get($containers, $value);
 }
 
 
-// =============================================
-// Section
-// =============================================
+/**
+ * Section
+ */
 
 @function section($section, $type: 'min') {
     @return map-get(map-get($sections, $section), $type);
 }
 
 
-// =============================================
-// Spacing
-// =============================================
+/**
+ * Spacing
+ */
 
 @function spacing($value: 'base') {
     @return map-get($spacing, $value);
 }
 
 
-// =============================================
-// Strip units
-// =============================================
+/**
+ * Strip Unit
+ */
 
 @function strip-unit($number) {
   @if type-of($number) == 'number' and not unitless($number) {
@@ -56,9 +56,9 @@
 }
 
 
-// =============================================
-// Responsive size
-// =============================================
+/**
+ * Responsive Size
+ */
 
 $screen-min: screen( nth(map-keys($screens),2) );
 $screen-max: screen( nth( map-keys($screens), length($screens) ) );

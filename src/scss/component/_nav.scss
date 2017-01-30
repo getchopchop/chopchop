@@ -1,70 +1,124 @@
-// =============================================
-// Base Nav
-// =============================================
+/**
+ * Nav
+ */
 
-.nav {
-    @include nav;
+.nav,
+%nav {
+    @extend %u-list-unstyled;
+
+    a {
+        text-decoration: none;
+    }
 }
 
 
-// =============================================
-// Nav Pills
-// =============================================
+/**
+ * Nav Pills
+ */
 
-.nav--pills {
-    @include nav--pills;
+.nav--pills,
+%nav--pills {
+    a {
+        display: block;
+        padding: spacing(xs) spacing(sm);
+    }
 }
 
 
-// =============================================
-// Nav inline
-// =============================================
+/**
+ * Nav Inline
+ */
 
-.nav--inline {
-    @include nav--inline;
+.nav--inline,
+%nav--inline {
+    @include flex;
+    @include flex-wrap(wrap);
+    white-space: nowrap;
 }
 
 
-// =============================================
-// Nav space
-// =============================================
+/**
+ * Nav Space
+ */
 
-.nav--space {
-    @include nav--space;
+.nav--space,
+%nav--space {
+    &:not(.nav--inline) > * {
+        margin-bottom: spacing(sm);
+    }
+
+    &.nav--inline > * {
+        margin-right: spacing(sm);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }
 
 
-// =============================================
-// Priority Nav
-// =============================================
+/**
+ * Nav Multi Level
+ */
 
-.priority-nav {
-    @include priority-nav;
+.nav--multi-level,
+%nav--multi-level {
+    li {
+        position: relative;
+    }
+
+    // All levels
+    ul,
+    ol {
+        @extend %nav;
+        display: none;
+        position: absolute;
+    }
+
+    // Just Level 0
+    > ul,
+    > ol {
+        top: 100%;
+    }
+
+    ul ul,
+    ol ol,
+    ul ol,
+    ol ul {
+        top: 0;
+        left: 100%;
+    }
+
+    li:hover > ul,
+    li:hover > ol {
+        display: block;
+    }
+
+    a {
+        white-space: nowrap;
+    }
 }
 
 
-// =============================================
-// Nav Multi Level
-// =============================================
+/**
+ * Nav Pager
+ */
 
-.nav--multi-level {
-    @include nav--multi-level;
-}
+.nav--pager,
+%nav--pager {
+    @include justify-content(center);
+    font-size: 0;
 
+    a {
+        @include circle(color(neutral, light), 16px);
 
-// =============================================
-// Nav Pager
-// =============================================
+        &:hover,
+        &.is-active {
+            background-color: color(neutral, lighter);
+        }
 
-.nav--pager {
-    @include nav--pager;
-}
-
-
-// =============================================
-// Nav table
-// =============================================
-
-.nav--table {
-    @include nav--table;
+        &:active {
+            background-color: color(neutral, white);
+        }
+    }
 }

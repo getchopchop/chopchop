@@ -1,38 +1,42 @@
-// =============================================
-// Icons
-// =============================================
+/**
+ * Icon
+ */
 
-.icon {
+.icon,
+%icon {
     height: spacing();
     width: spacing();
 }
 
 
- // =============================================
- // Icons Small
- // =============================================
+ /**
+ * Icon Small
+ */
 
-.icon--sm {
+.icon--sm,
+%icon--sm {
     height: spacing(sm);
     width: spacing(sm);
  }
 
 
-// =============================================
-// Icons large
-// =============================================
+/**
+ * Icon Large
+ */
 
-.icon--lg {
+.icon--lg,
+%icon--lg {
     height: spacing(lg);
     width: spacing(lg);
 }
 
 
-// =============================================
-// Icons payment
-// =============================================
+/**
+ * Icon Payment
+ */
 
-.icon--payment {
+.icon--payment,
+%icon--payment {
     width: spacing()*1.5;
 
     &.icon--sm {

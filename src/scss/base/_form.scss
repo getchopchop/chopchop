@@ -1,14 +1,15 @@
-// =============================================
-// Form
-// =============================================
+/**
+ * Form
+ */
 
 input,
 label,
 select,
 textarea {
     display: block;
-    font-family: $font-family;
-    font-size: $font-size;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
 }
 
 label {
@@ -22,14 +23,14 @@ label {
 input,
 textarea,
 select[multiple=multiple] {
-    background-color: color(white);
-    border: 1px solid color(grey);
+    background-color: color(neutral, white);
+    border: 1px solid color(neutral, dark);
     border-radius: 0;
     padding: spacing(xs) spacing(sm);
     width: 100%;
 
     &:focus {
-        border-color: color(black);
+        border-color: color(neutral, black);
         outline: none;
     }
 }
@@ -57,6 +58,7 @@ input[type="checkbox"],
 input[type="radio"] {
     display: inline;
     width: auto;
+    vertical-align: text-top;
 }
 
 input[type="file"] {
@@ -93,9 +95,9 @@ input[type="submit"].btn {
 }
 
 
-// =============================================
-// Fieldsets
-// =============================================
+/**
+ * Fieldsets
+ */
 
 fieldset {
     margin: 0;
@@ -104,45 +106,45 @@ fieldset {
     margin-bottom: 2rem;
 }
 legend {
-    @extend .h5;
+    @extend %h5;
 }
 
 
-// =============================================
-// Option Group
-// =============================================
+/**
+ * Option Group
+ */
 
 optgroup {
     font-weight: $bold;
 }
 
 
-// =============================================
-// Validation
-// =============================================
+/**
+ * Validation
+ */
 
 .error,
 abbr[title="Required"],
 .required em {
-    color: color(error, base);
+    color: color(contextual, error);
 }
 
 .required::after {
     content: "*";
-    color: color(error, base);
+    color: color(contextual, error);
     margin-left: spacing(xs);
 }
 
 .valid {
-    color: color(success, base);
+    color: color(contextual, success);
 }
 
 .is-error {
-    border-color: color(error, base);
+    border-color: color(contextual, error);
 }
 
 .is-valid {
-    border-color: color(success, base);
+    border-color: color(contextual, success);
 }
 
 .validation-advice {
@@ -155,53 +157,7 @@ abbr[title="Required"],
 }
 
 .has-error .validation-advice {
-    background-color: color(error, light);
-    border-color: color(error);
+    background-color: color(contextual, error-light);
+    border-color: color(contextual, error);
 }
 
-
-// =============================================
-// Custom select
-// =============================================
-
-.select {
-    padding: 0;
-    padding-right: 2em;
-    margin: 0;
-    border: 1px solid color(grey);
-    overflow: hidden;
-    position: relative;
-    background-color: color(white);
-
-    &::after,
-    &::before {
-        position: absolute;
-        right: 1em;
-    }
-
-    &::after {
-        @include chevron(color(grey), 8px, down, 1px);
-        top: 1.25em;
-    }
-
-    &::before {
-        @include chevron(color(grey), 8px, up, 1px);
-        top: 0.8em;
-    }
-
-    select {
-        padding: 0.54em;
-        width: 130%;
-        max-width: none;
-        border: none;
-        box-shadow: none;
-        background-color: transparent;
-        -webkit-appearance: none;
-           -moz-appearance: none;
-                appearance: none;
-
-        &:focus {
-            outline: none;
-        }
-    }
-}

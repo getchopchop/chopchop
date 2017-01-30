@@ -1,41 +1,45 @@
-// =============================================
-// Tag
-// =============================================
+/**
+ * Tag
+ */
 
-.tag {
+.tag,
+%tag {
     display: inline-block;
-    background-color: color(grey,dark);
-    color: color(white);
+    background-color: color(neutral,darker);
+    color: color(neutral, white);
     padding: spacing(xs)/2 spacing(xs);
     white-space: nowrap;
     vertical-align: baseline;
-    line-height: 1;
+    line-height: $line-height-sm;
     border-radius: $border-radius;
 }
 
 
-// =============================================
-// Tag small
-// =============================================
+/**
+ * Tag Small
+ */
 
-.tag--sm {
+.tag--sm,
+%tag--sm {
     font-size: $font-size-sm;
 }
 
 
-// =============================================
-// Tag large
-// =============================================
+/**
+ * Tag Large
+ */
 
-.tag--lg {
+.tag--lg,
+%tag--lg {
     font-size: $font-size-lg;
 }
 
 
-// =============================================
-// Badges
-// =============================================
+/**
+ * Badge
+ */
 
-.tag--badge {
+.tag--badge,
+%tag--badge {
     border-radius: spacing(xl);
 }

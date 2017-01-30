@@ -2,4 +2,4 @@
 Title: Header
 */ ?>
 
-<?php printPattern('component/logo/base'); ?>
+<?php printPattern('demo/logo/base'); ?>

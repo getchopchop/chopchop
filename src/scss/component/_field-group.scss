@@ -1,10 +1,10 @@
-// =============================================
-// Form field group
-// =============================================
+/**
+ * Field Group
+ */
 
-.field-group {
+.field-group,
+%field-group {
     margin: spacing() 0;
-    max-width: screen(xs,max);
 
     .field-group {
         margin-top: spacing(xs);
@@ -13,57 +13,5 @@
 
     &:first-child {
         margin-top: 0;
-    }
-}
-
-
-// =============================================
-// Form field group scaffold
-// =============================================
-
-@include breakpoint(screen(sm)) {
-    .field-group--scaffold {
-        @include flex;
-        flex-flow: wrap;
-        max-width: screen(sm,max);
-
-        .field-group__label {
-            width: 25%;
-            max-width: 16em;
-        }
-
-        .field-group__field {
-            flex-grow: 1;
-        }
-
-        .field-group__field + * {
-            width: 100%;
-        }
-    }
-}
-
-
-// =============================================
-// scaffold form
-// =============================================
-
-.scaffold-form .field-group:not(.field-group--inline) {
-    @extend .field-group--scaffold;
-}
-
-
-// =============================================
-// Inline field group
-// =============================================
-
-.field-group--inline {
-    @include flex;
-    @include justify-content(flex-start);
-
-    > * {
-        margin-right: spacing(sm);
-        width: auto;
-        max-width: none;
-        flex-grow: initial;
     }
 }
