@@ -71,7 +71,7 @@
 
     function printSvg($folder = 'general', $hash, $class = '') {
         echo '<svg class="icon ' . $class . '">
-            <use xlink:href="' . getUrl('build/img/vectors/' . $folder . '/symbol/sprite-symbol.svg') . '#' . $hash  . '" />
+            <use xlink:href="' . getUrl('build/img/vector/' . $folder . '/symbol/sprite-symbol.svg') . '#' . $hash  . '" />
         </svg>';
     }
 

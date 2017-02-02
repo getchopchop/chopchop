@@ -5,5 +5,5 @@ Description: Makes an element a fixed ratio. Default is square with options for 
 */ ?>
 
 <div class="u-ratio u-fill-neutral-light">
-    <img src="<?php echo getUrl('build/img/placeholders/300x300.jpg'); ?>" />
+    <img src="<?php echo getUrl('build/img/placeholder/300x300.jpg'); ?>" />
 </div>
