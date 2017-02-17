@@ -37,7 +37,7 @@ npm run build
 +-- build/
 |   +-- css
 |   +-- img
-|   |   +-- vectors
+|   |   +-- vector
 |   +-- js
 |   +-- vendor
 +-- node_modules/
@@ -45,7 +45,7 @@ npm run build
 +-- pattern/
 +-- src/
 |   +-- img
-|   |   +-- vectors
+|   |   +-- vector
 |   +-- js
 |   +-- scss
 |   +-- vendor
