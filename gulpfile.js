@@ -77,7 +77,7 @@ var pathConfig =
             "dist": "./build/img/",
             "exclude":
             [
-                "!./src/img/vectors/**/*"
+                "!./src/img/vector/**/*"
             ]
         },
         {
@@ -91,18 +91,18 @@ var pathConfig =
     "svgSprite":
     [
         {
-            "src": "./src/img/vectors/general/**/*.svg",
-            "dist": "./build/img/vectors/general/",
+            "src": "./src/img/vector/general/**/*.svg",
+            "dist": "./build/img/vector/general/",
             "exclude": []
         },
         {
-            "src": "./src/img/vectors/payments/**/*.svg",
-            "dist": "./build/img/vectors/payments/",
+            "src": "./src/img/vector/payments/**/*.svg",
+            "dist": "./build/img/vector/payments/",
             "exclude": []
         },
         {
-            "src": "./src/img/vectors/social/**/*.svg",
-            "dist": "./build/img/vectors/social/",
+            "src": "./src/img/vector/social/**/*.svg",
+            "dist": "./build/img/vector/social/",
             "exclude": [],
         }
     ],
