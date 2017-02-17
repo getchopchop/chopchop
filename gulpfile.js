@@ -88,25 +88,6 @@ var pathConfig =
         }
     ],
 
-    "svgSprite":
-    [
-        {
-            "src": "./src/img/vector/general/**/*.svg",
-            "dist": "./build/img/vector/general/",
-            "exclude": []
-        },
-        {
-            "src": "./src/img/vector/payments/**/*.svg",
-            "dist": "./build/img/vector/payments/",
-            "exclude": []
-        },
-        {
-            "src": "./src/img/vector/social/**/*.svg",
-            "dist": "./build/img/vector/social/",
-            "exclude": [],
-        }
-    ],
-
     "js":
     [
         {
@@ -192,6 +173,19 @@ var taskConfig =
 
 
 /**
+ * Returns list of sub folders within a directory
+ * @param {string} str - path to directory
+ * @return {array} array
+*/
+function getFolders( folder ) {
+    return $.fs.readdirSync( folder )
+        .filter( function( file ) {
+            return $.fs.statSync( $.path.join( folder, file ) ).isDirectory();
+        } );
+}
+
+
+/**
  * Returns array of paths for gulp.src including exclude paths and multiple file extensions
  * @param {object}
  * @return {array} array
@@ -251,11 +245,13 @@ function img()
 */
 function svgSprite()
 {
-    var streams = pathConfig.svgSprite.map( function( folder )
+    var folders = getFolders( "./src/img/vector/" );
+
+    var streams = folders.map( function( folder )
     {
-        return gulp.src( getGlob( folder ) )
+        return gulp.src( "./src/img/vector/" + folder + "/**/*.svg" )
             .pipe( $.svgSprite( taskConfig.svgSprite.svgSprite ) )
-            .pipe( gulp.dest( folder.dist ) );
+            .pipe( gulp.dest( "./build/img/vector/" + folder + "/" ) );
     } );
 
     return $.mergeStream( streams );
