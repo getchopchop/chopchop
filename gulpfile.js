@@ -50,7 +50,8 @@ var $ =
 /**
  * Config
 */
-var pathConfig = {
+var pathConfig =
+{
     "clean":
     [
         "./build"
@@ -137,7 +138,8 @@ var pathConfig = {
     ]
 }
 
-var taskConfig = {
+var taskConfig =
+{
     "img":
     {
         "imagemin":
