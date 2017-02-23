@@ -8,7 +8,7 @@ Full [documentation can be found here](https://github.com/getchopchop/chopchop/w
 
 1. Clone the project / Download the zip.
 ```
-git clone git@github.com:getchopchop/chopchop.git chopchop
+git clone git@github.com:getchopchop/chopchop.git
 ```
 2. Navigation to the working directory
 ```
@@ -37,16 +37,18 @@ npm run build
 +-- build/
 |   +-- css
 |   +-- img
-|   |   +-- icons
+|   |   +-- vector
 |   +-- js
+|   +-- vendor
 +-- node_modules/
 +-- inc/
 +-- pattern/
 +-- src/
 |   +-- img
-|   |   +-- vectors
+|   |   +-- vector
 |   +-- js
 |   +-- scss
+|   +-- vendor
 +-- .editorconfig
 +-- .gitignore
 +-- .htaccess

@@ -2,29 +2,18 @@
 Title: Social Icons
 */ ?>
 
-<ul class="u-list-unstyled u-list-inline">
-    <li>
-        <?php printSvg('social', 'linkedin'); ?>
-    </li>
-    <li>
-        <?php printSvg('social', 'twitter'); ?>
-    </li>
-    <li>
-        <?php printSvg('social', 'facebook'); ?>
-    </li>
-    <li>
-        <?php printSvg('social', 'google-plus'); ?>
-    </li>
-    <li>
-        <?php printSvg('social', 'instagram'); ?>
-    </li>
-    <li>
-        <?php printSvg('social', 'youtube'); ?>
-    </li>
-    <li>
-        <?php printSvg('social', 'pinterest'); ?>
-    </li>
-    <li>
-        <?php printSvg('social', 'tumblr'); ?>
-    </li>
+<?php
+    $icons = array(
+        'linkedin',
+        'twitter',
+        'facebook',
+        'google-plus',
+        'instagram',
+        'youtube',
+        'pinterest',
+        'tumblr'
+    );
+?>
+<ul class="nav nav--inline nav--space">
+    <?php foreach($icons as $icon) : ?><li><?php printSvg('social', $icon); ?></li><?php endforeach; ?>
 </ul>

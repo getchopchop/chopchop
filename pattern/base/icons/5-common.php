@@ -36,6 +36,6 @@ Title: Common Icons
         'table2',
     );
 ?>
-<ul class="u-list-unstyled u-list-inline">
+<ul class="nav nav--inline nav--space">
     <?php foreach($icons as $icon) : ?><li><?php printSvg('general', $icon); ?></li><?php endforeach; ?>
 </ul>

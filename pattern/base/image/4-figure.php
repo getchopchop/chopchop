@@ -4,5 +4,5 @@ Class: &lt;figure&gt;
 */ ?>
 
 <figure>
-    <img src="<?php echo getUrl('build/img/placeholders/300x300.jpg'); ?>" width="340" height="340" alt="Demo Image" />
+    <img src="<?php echo getUrl('build/img/placeholder/300x300.jpg'); ?>" width="340" height="340" alt="Demo Image" />
 </figure>
