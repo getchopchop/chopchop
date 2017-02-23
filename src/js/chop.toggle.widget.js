@@ -20,7 +20,7 @@
     Static.init = function(){
         $('.js-cc-toggle, [data-cc-toggle-action], ' +
             '[data-cc-toggle-trigger-activate], ' +
-            '[data-cc-toggle-trigger-deactivate').toggle();
+            '[data-cc-toggle-trigger-deactivate]').toggle();
     };
 
     /* Initialisation */
