@@ -1,9 +1,9 @@
 ---
 colour:
-    - Red
-    - Green
-    - Blue
-    - Yellow
-    - Purple
-    - Pink
-    - Turquoise
+    - "Red"
+    - "Green"
+    - "Blue"
+    - "Yellow"
+    - "Purple"
+    - "Pink"
+    - "Turquoise"
