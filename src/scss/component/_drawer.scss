@@ -1,6 +1,6 @@
-// =============================================
-// Drawer
-// =============================================
+/**
+ * Drawer
+ */
 
 .drawer__dialog {
     position: fixed;
@@ -8,15 +8,15 @@
     bottom: 0;
     width: 90%;
     max-width: 30em;
-    background: color(white);
+    background: color(neutral, white);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
 
 
-// =============================================
-// Drawer - Left/Right Positioning
-// =============================================
+/**
+ * Drawer Positioning
+ */
 
 .drawer--left .drawer__dialog {
     left: 0;

@@ -17,20 +17,22 @@ Code: false
             $bits = explode("-", $class_);
             $group = $bits[2];
             ?>
-            <?php if($group != $previous_group) {
-                ?><div class="g-col-xs-12"><h3><?php echo $group ?></h3></div><?php
+            <?php if($group != $previous_group && $group != 'white' && $group != 'black' && $group != 'error' && $group != 'warning') { ?>
+                <div class="g-col-xs-12">
+                    <?php if($group == 'success') : ?>
+                        <h3>contextual</h3>
+                    <?php else : ?>
+                        <h3><?php echo $group ?></h3>
+                    <?php endif; ?>
+                </div>
+            <?php
                 $previous_group = $group;
             }
             ?>
             <div class="g-col-xs-6 g-col-sm-4 g-col-lg-3 g-col-xl-2">
-                <div class="card">
-                    <div class="u-block">
-                        <h4 class="<?php echo str_replace('u-fill', 'u-text', $class_); ?>">Hello World</h4>
-                    </div>
-                    <div class="card__footer">
-                        <small><code>.<?php echo $class_ ?></code></small>
-                    </div>
+                <div class="u-block-xl <?php echo $class_ ?>">
                 </div>
+                <code>.<?php echo str_replace('u-fill', 'u-text', $class_); ?></code>
             </div>
             <?php
         }

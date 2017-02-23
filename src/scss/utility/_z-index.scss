@@ -1,6 +1,13 @@
-// =============================================
-// Z index
-// =============================================
+/**
+ * z-index Utility
+ * 
+ * Use to keep all layered components together, this keeps things
+ * easy when debugging any z-index issues.
+ * 
+ * Values are set in _var.scss and range from 1 to 10.
+ * 
+ * @since 1.0.0
+ */
 
 .overlay {
     z-index: $z-9;

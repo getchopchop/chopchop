@@ -1,11 +1,11 @@
-// =============================================
-// Horizontal line
-// =============================================
+/**
+ * Horizontal Line
+ */
 
 hr {
     border: 0;
     height: 1px;
-    background-color: color(grey,light);
+    background-color: color(neutral, light);
     margin-top: spacing(xl);
     margin-bottom: spacing(xl);
 }

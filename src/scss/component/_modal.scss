@@ -1,6 +1,6 @@
-// =============================================
-// Modal
-// =============================================
+/**
+ * Modal
+ */
 
 .modal {
     position: fixed;
@@ -17,12 +17,12 @@
     display: block;
 }
 
-// =============================================
-// Modal dialog
-// =============================================
+/**
+ * Modal Dialog
+ */
 
 .modal__dialog {
-    background-color: color(white);
+    background-color: color(neutral, white);
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -43,9 +43,9 @@
 }
 
 
-// =============================================
-// Modal close
-// =============================================
+/**
+ * Modal Close
+ */
 
 .modal__close {
     position: fixed;

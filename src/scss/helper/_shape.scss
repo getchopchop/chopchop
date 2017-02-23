@@ -1,8 +1,8 @@
-// =============================================
-// Circle
-// =============================================
+/**
+ * Circle
+ */
 
-@mixin circle($color: color(grey), $size: 5px) {
+@mixin circle($color: color(neutral, dark), $size: 5px) {
     height: $size;
     width: $size;
     border-radius: 100%;
@@ -11,11 +11,11 @@
 }
 
 
-// =============================================
-// Square
-// =============================================
+/**
+ * Square
+ */
 
-@mixin square($color: color(grey), $size: 5px) {
+@mixin square($color: color(neutral, dark), $size: 5px) {
     height: $size;
     width: $size;
     background-color: $color;
@@ -23,11 +23,11 @@
 }
 
 
-// =============================================
-// Triangle
-// =============================================
+/**
+ * Triangle
+ */
 
-@mixin triangle($color: color(grey), $size: 5px, $size-2: $size, $direction: up) {
+@mixin triangle($color: color(neutral, dark), $size: 5px, $size-2: $size, $direction: up) {
     content: '';
     width: 0;
     height: 0;
@@ -64,11 +64,11 @@
 }
 
 
-// =============================================
-// Chevron
-// =============================================
+/**
+ * Chevron
+ */
 
-@mixin chevron($color:  color(grey), $size: 5px, $direction: left, $thickness: 1px) {
+@mixin chevron($color:  color(neutral, dark), $size: 5px, $direction: left, $thickness: 1px) {
     content: '';
     display: inline-block;
     width: $size;
@@ -76,7 +76,7 @@
     background: transparent;
     border-top: $thickness solid $color;
     border-right: $thickness solid $color;
-    
+
     @if $direction == up {
         transform: rotate(-45deg);
     }
@@ -95,16 +95,16 @@
 }
 
 
-// =============================================
-// Minus
-// =============================================
+/**
+ * Minus
+ */
 
-@mixin minus($color: color(grey), $size: 22px, $thickness: 2px) {
+@mixin minus($color: color(neutral, dark), $size: 22px, $thickness: 2px) {
     display: inline-block;
     position: relative;
     width: $size;
     height: $size;
-    
+
     &:before {
         content: '';
         display: inline-block;
@@ -116,7 +116,7 @@
         top: 50%;
         margin-top: -($thickness/2);
     }
-    
+
     // We need this as we may use plus on the same element
     // so we dont want to show the vertical part of the shape
     &:after {
@@ -125,16 +125,16 @@
 }
 
 
-// =============================================
-// Plus
-// =============================================
+/**
+ * Plus
+ */
 
-@mixin plus($color: color(grey), $size: 22px, $thickness: 2px) {
+@mixin plus($color: color(neutral, dark), $size: 22px, $thickness: 2px) {
     display: inline-block;
     position: relative;
     width: $size;
     height: $size;
-    
+
     &:before,
     &:after {
         content: '';
@@ -159,17 +159,17 @@
 }
 
 
-// =============================================
-// Cross
-// =============================================
+/**
+ * Cross
+ */
 
-@mixin cross($color: color(grey), $size: 22px, $thickness: 2px) {
+@mixin cross($color: color(neutral, dark), $size: 22px, $thickness: 2px) {
     transform: rotate(45deg);
     display: inline-block;
     position: relative;
     width: $size;
     height: $size;
-    
+
     &:before,
     &:after {
         content: '';
@@ -194,18 +194,18 @@
 }
 
 
-// =============================================
-// Tick
-// =============================================
+/**
+ * Tick
+ */
 
-@mixin tick($color: color(grey), $size: 20px, $thickness: 2px) {
-    
+@mixin tick($color: color(neutral, dark), $size: 20px, $thickness: 2px) {
+
     position: relative;
     display: inline-block;
     width: $size;
     height: $size;
     transform: rotate(45deg);
-    
+
     &:before,
     &:after {
         content: '';
@@ -215,12 +215,12 @@
         bottom: 0;
         right: 0;
     }
-    
+
     &:before {
         width: $thickness;
         height: $size;
     }
-    
+
     &:after {
         width: $size/2;
         height: $thickness;
@@ -228,11 +228,11 @@
 }
 
 
-// =============================================
-// Hamburger
-// =============================================
+/**
+ * Hamburger
+ */
 
-@mixin hamburger($color: color(grey), $size: 20px, $size2: $size, $thickness: 2px) {
+@mixin hamburger($color: color(neutral, dark), $size: 20px, $size2: $size, $thickness: 2px) {
     position: relative;
     display: inline-block;
     border-top: $thickness solid $color;
@@ -251,15 +251,15 @@
         left: 0;
         margin-top: -$thickness/2;
     }
-    
+
 }
 
 
-// =============================================
-// Ring
-// =============================================
+/**
+ * Ring
+ */
 
-@mixin ring($foreground-color: color(grey), $background-color: color(grey, dark), $size: 20px, $thickness: 4px) {
+@mixin ring($foreground-color: color(neutral, dark), $background-color: color(neutral, darker), $size: 20px, $thickness: 4px) {
     display: inline-block;
     background: transparent;
     border-bottom: $thickness solid $background-color;

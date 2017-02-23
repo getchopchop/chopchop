@@ -52,7 +52,7 @@
 
             <nav class="cc-nav" id="cc-nav" data-cc-cascade="cc-menu-trigger">
                 <div class="block-content site-navigation__content">
-                    <?php require_once('inc/nav.php'); ?>
+                    <?php require_once('inc/template/nav.php'); ?>
                 </div>
             </nav>
 
@@ -88,7 +88,6 @@
     <script src="<?php echo getUrl('build/js/chop.base.widget.js'); ?>"></script>
     <script src="<?php echo getUrl('build/js/chop.toggle.widget.js'); ?>"></script>
     <script src="<?php echo getUrl('build/js/chop.collapsible.widget.js'); ?>"></script>
-<!--    <script src="--><?php //echo getUrl('build/js/priority-nav.js'); ?><!--"></script>-->
     <script src="<?php echo getUrl('build/js/script.js'); ?>"></script>
 
     <?php if(!isset($_GET['preview'])) : ?>

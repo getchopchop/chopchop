@@ -1,44 +1,37 @@
-// =============================================
-// Vars
-// =============================================
+/**
+ * Global Variables
+ */
 
 @import "var";
 
 
-// =============================================
-// Helpers
-// =============================================
+/**
+ * Helper Mixins & Functions
+ */
 
 @import "helper/function";
-
 @import "helper/flex";
 @import "helper/accordion";
-@import "helper/button";
 @import "helper/breakpoint";
-@import "helper/card";
 @import "helper/ellipsis";
 @import "helper/grid";
-@import "helper/list";
 @import "helper/ratio";
 @import "helper/section";
 @import "helper/shape";
-@import "helper/table";
-@import "helper/nav";
 @import "helper/tabs";
 @import "helper/type";
 
 
-// =============================================
-// utility
-// =============================================
+/**
+ * Utilities
+ */
 
 @import "utility/align";
 @import "utility/block";
 @import "utility/clearfix";
 @import "utility/color";
 @import "utility/container";
-@import "utility/embed-container";
-@import "utility/flag";
+@import "utility/ratio";
 @import "utility/full-height";
 @import "utility/grid";
 @import "utility/image";
@@ -50,9 +43,9 @@
 @import "utility/z-index";
 
 
-// =============================================
-// base
-// =============================================
+/**
+ * Base
+ */
 
 @import "base/animate";
 @import "base/form";
@@ -66,9 +59,9 @@
 @import "base/text";
 
 
-// =============================================
-// component
-// =============================================
+/**
+ * Component
+ */
 
 @import "component/accordion";
 @import "component/alert";
@@ -77,12 +70,12 @@
 @import "component/card";
 @import "component/drawer";
 @import "component/field-group";
-@import "component/logo";
 @import "component/title";
 @import "component/modal";
 @import "component/nav";
 @import "component/overlay";
 @import "component/pagination";
+@import "component/select";
 @import "component/tabs";
 @import "component/table";
 @import "component/responsive-table";
