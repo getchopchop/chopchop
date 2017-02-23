@@ -320,11 +320,7 @@ function watch() {
         img
     );
     gulp.watch(
-        [
-            pathConfig.svgSprite[0].src,
-            pathConfig.svgSprite[1].src,
-            pathConfig.svgSprite[2].src
-        ],
+        "./src/img/vector/",
         svgSprite
     );
     gulp.watch(
