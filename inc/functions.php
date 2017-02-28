@@ -52,7 +52,7 @@
             $data = $data[array_rand($data)];
         } else {
             if(is_array($data[$section])) {
-                if(empty($num)) {
+                if(is_null($num)) {
                     $data = $data[$section][array_rand($data[$section])];
                 } else {
                     $data = $data[$section][$num];
@@ -71,7 +71,7 @@
 
     function printSvg($folder = 'general', $hash, $class = '') {
         echo '<svg class="icon ' . $class . '">
-            <use xlink:href="' . getUrl('build/img/vectors/' . $folder . '/symbol/sprite-symbol.svg') . '#' . $hash  . '" />
+            <use xlink:href="' . getUrl('build/img/vector/' . $folder . '/symbol/sprite-symbol.svg') . '#' . $hash  . '" />
         </svg>';
     }
 
