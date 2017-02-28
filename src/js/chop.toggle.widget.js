@@ -268,6 +268,7 @@
         performAction: function(type, partOfChain, cascade){
             var self = this,
                 stateful = this._isStateful(),
+                thisType,
                 group;
 
             // Default to true for cascades
@@ -288,12 +289,15 @@
                 type = this.options.action;
             }
 
+            // The type of action to perform on this instance, will maintain toggles going down the chain
+            thisType = type;
+
             // Flip the actions if we're toggling
             if(type == Static.ACTION_TOGGLE){
-                type = this.isActive() ? Static.ACTION_DEACTIVATE : Static.ACTION_ACTIVATE;
+                thisType = this.isActive() ? Static.ACTION_DEACTIVATE : Static.ACTION_ACTIVATE;
             }
 
-            if(type == Static.ACTION_ACTIVATE){
+            if(thisType == Static.ACTION_ACTIVATE){
                 if(stateful) {
                     this._addActiveClass();
                     this._removeInactiveClass();
@@ -342,7 +346,7 @@
                 self._getInstance($this).performAction(type, true, false);
             });
 
-            this._trigger(type);
+            this._trigger(thisType);
         }
     });
 }(jQuery));
