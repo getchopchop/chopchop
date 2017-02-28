@@ -268,7 +268,7 @@
         performAction: function(type, partOfChain, cascade){
             var self = this,
                 stateful = this._isStateful(),
-                thisType,
+                thisType = type,
                 group;
 
             // Default to true for cascades
@@ -288,11 +288,9 @@
             if(!type){
                 type = this.options.action;
             }
-
-            // The type of action to perform on this instance, will maintain toggles going down the chain
-            thisType = type;
-
-            // Flip the actions if we're toggling
+            
+            // Flip the actions if we're toggling, but only for this instance -- each element down the chain
+            // should also toggle
             if(type == Static.ACTION_TOGGLE){
                 thisType = this.isActive() ? Static.ACTION_DEACTIVATE : Static.ACTION_ACTIVATE;
             }
