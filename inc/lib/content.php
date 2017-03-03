@@ -38,7 +38,6 @@ class Content
                 }
 
                 foreach ($patternSectionFiles as $patternSectionFile) {
-                    var_dump($patternSectionFile);
                     //we are in the pattern > section > files
                     if (substr($patternSectionFile, 0, 1) == '.') continue;
                     if (substr($patternSectionFile, -5) == '.html') continue;
