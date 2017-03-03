@@ -1,38 +1,43 @@
-// =============================================
-// Text alignment
-// =============================================
+/**
+ * Alignment Utility
+ *
+ * General alignment utilities useful for arranging content.
+ * The use of `!important` means they should be used wisely.
+ *
+ * * Text Align
+ * * Align Centrally
+ * * Float Align
+ *
+ * @since 1.0.0
+ */
 
-.u-text-center {
+.u-text-center,
+%u-text-center {
     text-align: center !important;
 }
 
-.u-text-left {
+.u-text-left,
+%u-text-left {
     text-align: left !important;
 }
 
-.u-text-right {
+.u-text-right,
+%u-text-right {
     text-align: right !important;
 }
 
-
-// =============================================
-// Center alignment
-// =============================================
-
-.u-center {
+.u-center,
+%u-center {
     margin-left: auto !important;
     margin-right: auto !important;
 }
 
-
-// =============================================
-// Float alignment
-// =============================================
-
-.u-pull-left {
+.u-pull-left,
+%u-pull-left {
     float: left !important;
 }
 
-.u-pull-right {
+.u-pull-right,
+%u-pull-right {
     float: right !important;
 }

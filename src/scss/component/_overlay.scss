@@ -1,6 +1,6 @@
-// =============================================
-// Overlay
-// =============================================
+/**
+ * Overlay
+ */
 
 .overlay {
     position: fixed;
@@ -13,7 +13,7 @@
     cursor: pointer;
 }
 
-.overlay-is-active {
+.has-active-overlay {
     overflow: hidden;
 }
 

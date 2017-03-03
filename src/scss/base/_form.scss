@@ -1,6 +1,6 @@
-// =============================================
-// Form
-// =============================================
+/**
+ * Form
+ */
 
 input,
 label,
@@ -58,6 +58,7 @@ input[type="checkbox"],
 input[type="radio"] {
     display: inline;
     width: auto;
+    vertical-align: text-top;
 }
 
 input[type="file"] {
@@ -94,9 +95,9 @@ input[type="submit"].btn {
 }
 
 
-// =============================================
-// Fieldsets
-// =============================================
+/**
+ * Fieldsets
+ */
 
 fieldset {
     margin: 0;
@@ -105,22 +106,22 @@ fieldset {
     margin-bottom: 2rem;
 }
 legend {
-    @extend .h5;
+    @extend %h5;
 }
 
 
-// =============================================
-// Option Group
-// =============================================
+/**
+ * Option Group
+ */
 
 optgroup {
     font-weight: $bold;
 }
 
 
-// =============================================
-// Validation
-// =============================================
+/**
+ * Validation
+ */
 
 .error,
 abbr[title="Required"],

@@ -23,22 +23,15 @@
 
 
         // =============================================
-        // Initialise toggles globally
-        // =============================================
-
-        ChopChop.init();
-
-
-        // =============================================
         // Overlay
         // =============================================
 
-        $('#overlay').on('chopchop:activate', function() {
-            $body.addClass('overlay-is-active');
+        $('#overlay').on('toggleactivate', function() {
+            $body.addClass('has-active-overlay');
         });
 
-        $('#overlay').on('chopchop:deactivate', function() {
-            $body.removeClass('overlay-is-active');
+        $('#overlay').on('toggledeactivate', function() {
+            $body.removeClass('has-active-overlay');
         });
 
 

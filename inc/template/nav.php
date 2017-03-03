@@ -19,9 +19,12 @@
                     <a href="<?php echo getUrl('/'.$topLevelCategory.'/' .$category) ?>/"><?php echo ucwords($category) ?></a>
                     <ol>
                         <?php $subCategories = Navigation::getSubCategories($category); ?>
-                        <?php foreach($subCategories as $subCategory){ ?>
+                        <?php foreach($subCategories as $subCategory) {
+                            $subCategoryLink = ( $category == 'template' ? '' : '#section-');
+                            $subCategoryLink .= $subCategory;
+                            ?>
                             <li class="level1">
-                                <a href="<?php echo getUrl('/'.$topLevelCategory.'/' . $category . '/#section-' . $subCategory )?>">
+                                <a href="<?php echo getUrl('/'.$topLevelCategory.'/' . $category . '/' . $subCategoryLink )?>">
                                     <?php echo str_replace('-', ' ', ucwords($subCategory)) ?>
                                 </a>
                             </li>

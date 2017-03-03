@@ -1,6 +1,6 @@
-// =============================================
-// Colours
-// =============================================
+/**
+ * Color
+ */
 
 $colors: (
 
@@ -11,7 +11,7 @@ $colors: (
 //    secondary: (
 //        purple          : RebeccaPurple
 //    ),
-    
+
     neutral: (
         black           : #000,
         white           : #fff,
@@ -22,7 +22,7 @@ $colors: (
         lighter         : #e4e4e4,
         lightest        : #f4f4f4
     ),
-    
+
     contextual: (
         success         : #4caf50,
         success-light   : #c8e6c9,
@@ -31,7 +31,7 @@ $colors: (
         error           : #f44336,
         error-light     : #ffcdd2
     ),
-    
+
     social: (
         twitter         : #55acee,
         facebook        : #32639f,
@@ -46,9 +46,9 @@ $colors: (
 );
 
 
-// =============================================
-// Fonts
-// =============================================
+/**
+ * Font
+ */
 
 $font-family            : -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
 
@@ -62,27 +62,28 @@ $line-height            : 1.618;
 $line-height-sm         : 1.25;
 
 
-// =============================================
-// Headings - Calculated from type scales http://type-scale.com/
-// =============================================
+/**
+ * Heading
+ * Calculated from type scales http://type-scale.com/
+ */
 
 $heading-font-family    : $font-family;
 
 $typescale: (
-	min: 1.25,
-	max: 1.414
+    min: 1.25,
+    max: 1.414
 );
 
 // No need to edit
 $typescale-calc: (
-	min: 1 / map-get($typescale, min) * 1em,
-	max: 1 / map-get($typescale, max) * 1em
+    min: 1 / map-get($typescale, min) * 1em,
+    max: 1 / map-get($typescale, max) * 1em
 );
 
 
-// =============================================
-// Spacing
-// =============================================
+/**
+ * Spacing
+ */
 
 $spacing: (
     base                : 1em,
@@ -93,17 +94,21 @@ $spacing: (
 );
 
 
-// =============================================
-// Grid gutters
-// =============================================
+/**
+ * Gutter
+ */
 
-$gutter-x               : 3%;
+$gutter-x               : 1em;
 $gutter-y               : $gutter-x;
 
+$gutter-x-lg            : 3%;
+$gutter-y-lg            : $gutter-x-lg;
 
-// =============================================
-// Section
-// =============================================
+
+/**
+ * Section
+ * @see utility/_section.scss
+ */
 
 $sections: (
     sm: (
@@ -121,9 +126,9 @@ $sections: (
 );
 
 
-// =============================================
-// Z indexing
-// =============================================
+/**
+ * Z indexing
+ */
 
 $z-0                    : 0;
 $z-1                    : 10;
@@ -138,9 +143,21 @@ $z-9                    : 90;
 $z-10                   : 100;
 
 
-// =============================================
-// Screens
-// =============================================
+/**
+ * Border Radius
+ */
+
+$border-radius          : 0.3em;
+
+
+/**
+ * Breakpoint
+ *
+ * @see helper/_breakpoint.scss
+ * @see utility/_grid.scss
+ * @see utility/_toggle.scss
+ * @see utility/_visible.scss
+ */
 
 $screens: (
     xs: (
@@ -165,9 +182,10 @@ $screens: (
 );
 
 
-// =============================================
-// Containers
-// =============================================
+/**
+ * Container
+ * @see utility/_container.scss
+ */
 
 $containers: (
     sm                  : 52em,
@@ -177,16 +195,10 @@ $containers: (
 );
 
 
-// =============================================
-// Border Radius
-// =============================================
-
-$border-radius          : 0.3em;
-
-
-// =============================================
-// Visibility for visible classes
-// =============================================
+/**
+ * Visibility
+ * @see utility/_visible.scss
+ */
 
 $visibility: (
     block,

@@ -1,6 +1,6 @@
-// =============================================
-// Font Anti aliasing magic
-// =============================================
+/**
+ * Font Anti Aliasing
+ */
 
 // html {
 //     -webkit-font-smoothing: antialiased;
@@ -17,9 +17,9 @@ only screen and ( min-resolution: 1.25dppx) {
 }
 
 
-// =============================================
-// Typography
-// =============================================
+/**
+ * Typography
+ */
 
 html {
     font-size: $font-size;
@@ -74,12 +74,13 @@ mark {
 }
 
 
-// =============================================
-// Links
-// =============================================
+/**
+ * Link
+ */
 
 a,
-.link {
+.link,
+%link {
     color: color(neutral, black);
     touch-action: manipulation;
 
@@ -89,19 +90,21 @@ a,
 }
 
 
-// =============================================
-// Lead
-// =============================================
+/**
+ * Lead
+ */
 
-.lead {
+.lead,
+%lead {
     font-size: $font-size-lg;
 }
 
 
-// =============================================
-// Micro
-// =============================================
+/**
+ * Micro
+ */
 
-.micro {
+.micro,
+%micro {
     font-size: $font-size-sm;
 }

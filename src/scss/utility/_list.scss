@@ -1,34 +1,54 @@
-// =============================================
-// List inline
-// =============================================
+/**
+ * Unstyled List
+ *
+ * @since 1.0.0
+ */
 
-.u-list-inline {
-    @include list-inline;
+.u-list-unstyled,
+%u-list-unstyled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 
-// =============================================
-// Ordered list
-// =============================================
+/**
+ * List Inline
+ *
+ * @since 1.0.0
+ */
 
-.u-list-ordered {
-    @include list-ordered;
+.u-list-inline,
+%u-list-inline {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        display: inline-block;
+    }
 }
 
 
-// =============================================
-// Unordered list
-// =============================================
+/**
+ * Ordered List
+ *
+ * @since 1.0.0
+ */
 
-.u-list-unordered {
-    @include list-unordered;
+.u-list-ordered,
+%u-list-ordered {
+    list-style: decimal;
 }
 
 
-// =============================================
-// Unstyled list
-// =============================================
+/**
+ * Unordered List
+ *
+ * @since 1.0.0
+ */
 
-.u-list-unstyled {
-    @include list-unstyled;
+.u-list-unordered,
+%u-list-unordered {
+    list-style: disc;
 }

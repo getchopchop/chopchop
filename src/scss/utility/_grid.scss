@@ -1,104 +1,147 @@
-// =============================================
-// Grid
-// =============================================
+/**
+ * Grid
+ */
 
-.grid {
+.grid,
+%grid {
     @include grid;
 }
 
 
-// =============================================
-// Grid Gutter
-// =============================================
+/**
+ * Grid Gutter X Axis
+ */
 
-.g-gutter-x {
+.g-gutter-x,
+%g-gutter-x {
     @include grid-gutter-x;
 }
 
 
-// =============================================
-// Grid Gutter
-// =============================================
+/**
+ * Grid Gutter Y Axis
+ */
 
-.g-gutter-y {
+.g-gutter-y,
+%g-gutter-y {
     @include grid-gutter-y;
 }
 
 
-// =============================================
-// Grid Gutter
-// =============================================
+/**
+ * Grid Gutter X&Y Axis
+ */
 
-.g-gutter {
+.g-gutter,
+%g-gutter {
     @include grid-gutter-x;
     @include grid-gutter-y;
 }
 
 
-// =============================================
-// Grid Center
-// =============================================
+/**
+ * Grid Gutter X Axis
+ */
 
-.g-center-x {
+.g-gutter-x-lg,
+%g-gutter-x-lg {
+    @include grid-gutter-x($gutter-x-lg);
+}
+
+
+/**
+ * Grid Gutter Y Axis
+ */
+
+.g-gutter-y-lg,
+%g-gutter-y-lg {
+    @include grid-gutter-y($gutter-y-lg);
+}
+
+
+/**
+ * Grid Gutter X&Y Axis
+ */
+
+.g-gutter-lg,
+%g-gutter-lg {
+    @include grid-gutter-x;
+    @include grid-gutter-y;
+}
+
+
+/**
+ * Grid Center X Axis
+ */
+
+.g-center-x,
+%g-center-x {
     @include justify-content(center);
 }
 
 
-// =============================================
-// Grid Center
-// =============================================
+/**
+ * Grid Center Y Axis
+ */
 
-.g-center-y {
+.g-center-y,
+%g-center-y {
     @include align-items(center);
 }
 
 
-// =============================================
-// Grid Center
-// =============================================
+/**
+ * Grid Center X&Y Axis
+ */
 
-.g-center {
+.g-center,
+%g-center {
     @include justify-content(center);
     @include align-items(center);
 }
 
 
-// =============================================
-// Grid Space
-// =============================================
+/**
+ * Grid Space
+ */
 
-.g-space {
+.g-space,
+%g-space {
     @include justify-content(space-between);
 }
 
 
-// =============================================
-// Grid Reverse
-// =============================================
+/**
+ * Grid Reverse
+ */
 
-.g-reverse {
+.g-reverse,
+%g-reverse {
     @include flex-direction(row-reverse);
 }
 
 
-// =============================================
-// Grid Collapse
-// =============================================
+/**
+ * Grid Collapse
+ */
 
-.g-collapse {
+.g-collapse,
+%g-collapse {
     > * {
         width: auto;
     }
 }
 
 
-// =============================================
-// Grid Stretch
-// =============================================
+/**
+ * Grid Stretch First
+ */
 
-.g-stretch {
+.g-stretch-first,
+%g-stretch-first {
+    @extend %g-collapse;
     @include flex-wrap(nowrap);
-    
+
     > *:first-child {
         flex-grow: 1;
     }
@@ -108,21 +151,41 @@
 }
 
 
-// =============================================
-// Grid Cols
-// =============================================
+/**
+ * Grid Stretch Last
+ */
+
+.g-stretch-last,
+%g-stretch-last {
+    @extend %g-collapse;
+    @include flex-wrap(nowrap);
+
+    > *:first-child {
+        flex-shrink: 0;
+    }
+    > *:last-child {
+        flex-grow: 1;
+    }
+}
+
+
+/**
+ * Grid Columns
+ */
 
 @each $screen, $value in $screens {
     @if $screen == xs {
         @for $i from 1 through 12 {
-            .g-col-#{$screen}-#{$i} {
+            .g-col-#{$screen}-#{$i},
+            %g-col-#{$screen}-#{$i} {
                 @include grid-col($i of 12);
             }
         }
     } @else {
         @include breakpoint(screen($screen)) {
             @for $i from 1 through 12 {
-                .g-col-#{$screen}-#{$i} {
+                .g-col-#{$screen}-#{$i},
+                %g-col-#{$screen}-#{$i} {
                     @include grid-col($i of 12);
                 }
             }
