@@ -34,7 +34,7 @@ class Content
                 $html .= self::sectionTitle($options, $patternSection);
                 $html .= '<section class="cc-section">';
                 if( file_exists($patternSectionPath . '/readme.html') ) {
-                    $html .= '<div class="readme">' . file_get_contents($patternSectionPath . '/readme.html') . '</div>';
+                    $html .= '<div class="u-block-lg readme">' . file_get_contents($patternSectionPath . '/readme.html') . '</div>';
                 }
 
                 foreach ($patternSectionFiles as $patternSectionFile) {
@@ -76,8 +76,8 @@ class Content
 
     public static function sectionContent($section, $patternSectionFilePath) {
 
-        $sectionTitleSmall  = substr($section, 0, -4);
-        $sectionTitle       = ucwords( str_replace('-', ' ', $sectionTitleSmall) );
+        $section        = substr($section, 0, -4);
+        $sectionTitle   = ucwords( str_replace('-', ' ', $section) );
 
         $fileContents = self::getTemplate($patternSectionFilePath);
 
@@ -87,17 +87,16 @@ class Content
 
         $content = '<section id="section-'.$section.'" class="">';
         $content    .= '<div class="u-container"><section class="">';
-        $content        .= '<h5>'.$sectionTitle.'</h5><div class="cc-title__actions"><ul>';
-        $content        .= '<li><a href="#" data-cc-action="toggle" data-cc-target="cc-demo-' . $section . '" class="micro">Demo</a></li>';
-        $content        .= '<li><a href="#" data-cc-action="toggle" data-cc-target="cc-code-' . $section . '" class="micro">Code</a></li>';
-        $content        .= '<li><a href="'.self::getPreviewUrl($patternSectionFilePath).'" class="micro">Preview</a></li>';
+        $content        .= '<h5>'.$sectionTitle.'</h5><div class="cc-title__actions"><ul class="nav nav--inline nav--pills">';
+        $content        .= '<li><a href="#" data-cc-toggle-action="toggle" data-cc-toggle-target="#cc-demo-' . $section . '" class="">Demo</a></li>';
+        $content        .= '<li><a href="#" data-cc-toggle-action="toggle" data-cc-toggle-target="#cc-code-' . $section . '" class="">Code</a></li>';
+        $content        .= '<li><a href="'.self::getPreviewUrl($patternSectionFilePath).'" class="">Preview</a></li>';
         $content        .= '</ul></div>';
-        $content        .= '<div class="readme">' . '</div>';
         $content        .= '<div class="cc-' . $section . '">';
-        $content        .= '<div class="u-toggle" id="cc-demo-' . $section . '">';
+        $content        .= '<div class="u-toggle is-active" id="cc-demo-' . $section . '" data-cc-toggle-group="cc-section-' . $section . '">';
         $content        .= $fileContents;
         $content        .= '</div>';
-        $content        .= '<div class="" id="cc-code-' . $section . '"><pre class="cc-code"><code class="language-html">';
+        $content        .= '<div class="u-toggle" id="cc-code-' . $section . '" data-cc-toggle-group="cc-section-' . $section . '"><pre class="cc-code"><code class="language-html">';
         $content        .= htmlentities($fileContents);
         $content        .= '</code></pre></div>';
         $content    .= '</div></section></div>';
