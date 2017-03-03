@@ -68,7 +68,8 @@
                 );
                 $requestPath = Content::getRequestPath();
                 echo Content::getContent($requestPath, $options);
-                echo Section::get(getRequestPath(), $options);
+                //trying to make Section redundant, so I've commented out for now - RL
+                //echo Section::get(getRequestPath(), $options);
             }?>
     <?php if(!isset($_GET['preview'])) : ?>
             </main>

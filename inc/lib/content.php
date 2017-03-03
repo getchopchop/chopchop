@@ -1,7 +1,5 @@
 <?php
 
-//TODO: Preview sort of working, fix coe view also and add readme 
-
 class Content
 {
 
@@ -13,30 +11,45 @@ class Content
 
     public static function getContent($requestPath, $options)
     {
-        //echo '<pre>';
-
         $html = '';
         $patternPath = dirname(dirname(dirname(__FILE__))) . $requestPath;
         $patternDirs = scandir($patternPath);
+
         foreach($patternDirs as $patternSection) {
             //we are in the pattern > section
             if(substr($patternSection, 0, 1) == '.') continue;
-            $html .= '<section class="cc-pattern"><div class="u-container">';
-            $patternSectionFiles = scandir($patternPath . '/' . $patternSection);
 
-            $html .= self::sectionTitle($options, $patternSection);
+            if(isset($_GET['preview'])) {
+                //preview is enabled, so only output the template
+                if (substr($patternSection, 0, 1) != '.' && substr($patternSection, -5) != '.html') {
+                    $html .= self::getTemplate($patternPath . $patternSection);
+                }
 
-            $html .= '<section class="cc-section">';
+            } else {
 
-            foreach($patternSectionFiles as $patternSectionFile) {
-                //we are in the pattern > section > files
-                if(substr($patternSectionFile, 0, 1) == '.') continue;
+                $patternSectionPath = $patternPath . '/' . $patternSection;
+                $patternSectionFiles = scandir($patternSectionPath);
 
-                $patternSectionFilePath = $patternPath . $patternSection . '/' . $patternSectionFile;
-                $html .= self::sectionContent( $patternSectionFile, $patternSectionFilePath );
+                $html .= '<section class="cc-pattern"><div class="u-container">';
+                $html .= self::sectionTitle($options, $patternSection);
+                $html .= '<section class="cc-section">';
+                if( file_exists($patternSectionPath . '/readme.html') ) {
+                    $html .= '<div class="readme">' . file_get_contents($patternSectionPath . '/readme.html') . '</div>';
+                }
+
+                foreach ($patternSectionFiles as $patternSectionFile) {
+                    var_dump($patternSectionFile);
+                    //we are in the pattern > section > files
+                    if (substr($patternSectionFile, 0, 1) == '.') continue;
+                    if (substr($patternSectionFile, -5) == '.html') continue;
+
+                    $patternSectionFilePath = $patternPath . $patternSection . '/' . $patternSectionFile;
+                    $html .= self::sectionContent($patternSectionFile, $patternSectionFilePath);
+                }
+
+                $html .= '</section></div></section>';
+
             }
-
-            $html .= '</section></div></section>';
         }
 
 
@@ -67,16 +80,27 @@ class Content
         $sectionTitleSmall  = substr($section, 0, -4);
         $sectionTitle       = ucwords( str_replace('-', ' ', $sectionTitleSmall) );
 
+        $fileContents = self::getTemplate($patternSectionFilePath);
+
+        if(isset($_GET['preview'])) {
+            return $fileContents;
+        }
+
         $content = '<section id="section-'.$section.'" class="">';
         $content    .= '<div class="u-container"><section class="">';
         $content        .= '<h5>'.$sectionTitle.'</h5><div class="cc-title__actions"><ul>';
-        $content        .= '<li><a href="#" data-cc-action="toggle" data-cc-target="cc-code-' . substr(str_replace('/','-',self::getUrl(false)),1) . '" class="micro">Code</a></li>';
-        $content        .= '<li><a href="'.$sectionTitleSmall.'#preview" class="micro">Preview</a></li>';
+        $content        .= '<li><a href="#" data-cc-action="toggle" data-cc-target="cc-demo-' . $section . '" class="micro">Demo</a></li>';
+        $content        .= '<li><a href="#" data-cc-action="toggle" data-cc-target="cc-code-' . $section . '" class="micro">Code</a></li>';
+        $content        .= '<li><a href="'.self::getPreviewUrl($patternSectionFilePath).'" class="micro">Preview</a></li>';
         $content        .= '</ul></div>';
-        $content        .= '<div class="cc-demo">';
-        //$content        .= '<div class="u-toggle" id="cc-code-' . substr(str_replace('/','-',self::getUrl(false)),1) . '"><pre class="cc-code"><code class="language-html">';
-        $content            .= file_get_contents($patternSectionFilePath);
-        //$content        .= '</code></pre></div>';
+        $content        .= '<div class="readme">' . '</div>';
+        $content        .= '<div class="cc-' . $section . '">';
+        $content        .= '<div class="u-toggle" id="cc-demo-' . $section . '">';
+        $content        .= $fileContents;
+        $content        .= '</div>';
+        $content        .= '<div class="" id="cc-code-' . $section . '"><pre class="cc-code"><code class="language-html">';
+        $content        .= htmlentities($fileContents);
+        $content        .= '</code></pre></div>';
         $content    .= '</div></section></div>';
         $content .= '</section>';
 
@@ -100,6 +124,26 @@ class Content
         }
 
         return $base_url.($url ?: '');
+    }
+
+    public static function getPreviewUrl($filePath) {
+
+        $pathArray  = explode('/', $filePath);
+        $file       = array_pop($pathArray);
+        $directory  = array_pop($pathArray);
+
+        return self::getRequestPath() . $directory . '?preview=true';
+    }
+
+    public static function getTemplate($file) {
+
+        ob_start(); // start output buffer
+
+        include $file;
+        $template = ob_get_contents(); // get contents of buffer
+        ob_end_clean();
+        return $template;
+
     }
 
 }
