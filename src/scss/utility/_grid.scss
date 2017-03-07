@@ -15,10 +15,6 @@
 .g-gutter-x,
 %g-gutter-x {
     @include grid-gutter-x;
-
-    @include breakpoint(screen(xl)) {
-        @include grid-gutter-x($gutter-x * 1.3);
-    }
 }
 
 
@@ -29,10 +25,6 @@
 .g-gutter-y,
 %g-gutter-y {
     @include grid-gutter-y;
-
-    @include breakpoint(screen(xl)) {
-        @include grid-gutter-y($gutter-y * 1.3);
-    }
 }
 
 
@@ -40,72 +32,42 @@
  * Grid Gutter
  */
 
-.g-gutter,
-%g-gutter {
-    @extend .g-gutter-x;
-    @extend .g-gutter-y;
-}
-
-
-/**
- * Grid Gutter X LG
- */
-
-.g-gutter-x-lg,
-%g-gutter-x-lg {
-    @include grid-gutter-x($gutter-x-lg);
-}
-
-
-/**
- * Grid Gutter Y LG
- */
-
-.g-gutter-y-lg,
-%g-gutter-y-lg {
-    @include grid-gutter-y($gutter-y-lg);
-}
-
-
-/**
- * Grid Gutter LG
- */
-
-.g-gutter-lg,
-%g-gutter-lg {
-    @extend %g-gutter-x-lg;
-    @extend %g-gutter-y-lg;
-}
-
-
-/**
- * Grid Gutter X SM
- */
-
-.g-gutter-x-sm,
-%g-gutter-x-sm {
-    @include grid-gutter-x($gutter-x-sm);
-}
-
-
-/**
- * Grid Gutter Y SM
- */
-
-.g-gutter-y-sm,
-%g-gutter-y-sm {
-    @include grid-gutter-y($gutter-y-sm);
-}
-
-
-/**
- * Grid Gutter SM
- */
-
-.g-gutter-sm,
-%g-gutter-sm {
-    @extend %g-gutter-x-sm;
-    @extend %g-gutter-y-sm;
+@each $key, $value in $gutters {
+    @if $key == base {
+        .g-gutter-x,
+        %g-gutter-x {
+            @include grid-gutter-x($value);
+        }
+    } @else {
+        .g-gutter-x-#{$key},
+        %g-gutter-x-#{$key} {
+            @include grid-gutter-x($value);
+        }
+    }
+    @if $key == base {
+        .g-gutter-y,
+        %g-gutter-y {
+            @include grid-gutter-y($value);
+        }
+    } @else {
+        .g-gutter-y-#{$key},
+        %g-gutter-y-#{$key} {
+            @include grid-gutter-y($value);
+        }
+    }
+    @if $key == base {
+        .g-gutter,
+        %g-gutter {
+            @extend %g-gutter-x;
+            @extend %g-gutter-y;
+        }
+    } @else {
+        .gutter-#{$key},
+        %gutter-#{$key} {
+            @extend %g-gutter-x-#{$key};
+            @extend %g-gutter-y-#{$key};
+        }
+    }
 }
 
 
