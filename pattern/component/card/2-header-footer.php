@@ -10,7 +10,7 @@ Class: .card
             <div class="card__header">
                 Card Header
             </div>
-            <div class="u-block">
+            <div class="card__body">
                 Block Content
             </div>
             <div class="card__footer">
