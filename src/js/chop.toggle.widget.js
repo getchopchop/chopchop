@@ -93,36 +93,32 @@
             // Explicitly require a data attribute of action to init this form of event
             if(action) {
                 events[triggerOn] = function (ev) {
-                    ev.preventDefault();
-
                     if(triggerType == Static.TRIGGER_TYPE_DIRECT && (self.element.is(ev.target) === false)){
                         return;
                     }
 
+                    ev.preventDefault();
                     self.performAction(action);
                 };
             }
 
             if(triggerActivate) {
                 events[triggerActivate] = function (ev) {
-                    ev.preventDefault();
-
                     if(triggerType == Static.TRIGGER_TYPE_DIRECT && (self.element.is(ev.target) === false)){
                         return;
                     }
 
+                    ev.preventDefault();
                     self.activate();
                 };
             }
 
             if(triggerDeactivate) {
                 events[triggerDeactivate] = function (ev) {
-                    ev.preventDefault();
-
                     if(self.options.triggerType == Static.TRIGGER_TYPE_DIRECT && ev.target !== self.element){
                         return;
                     }
-
+                    ev.preventDefault();
                     self.deactivate();
                 };
             }
