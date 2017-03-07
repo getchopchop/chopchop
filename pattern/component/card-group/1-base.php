@@ -9,7 +9,10 @@ Description: Stacks cards by removing borders
         <div class="card__body">
             <?php $price = getData('price'); ?>
             <p>
-                <strong class="h2 u-text-contextual-error"><span class="u-visually-hidden">Now</span> &pound;<?php echo number_format($price * 0.8, 2); ?></strong><span class="lead"> delivered</span><br />
+                <strong class="h2 u-text-contextual-error">
+                    <span class="u-visually-hidden">Now</span> &pound;<?php echo number_format($price * 0.8, 2); ?>
+                </strong>
+                <span class="lead"> delivered</span><br />
                 Was <s>&pound;<?php echo number_format($price, 2); ?></s><br />
                 You save &pound;<?php echo number_format($price * 0.2, 2); ?><br />
             </p>
@@ -20,7 +23,7 @@ Description: Stacks cards by removing borders
             </ul>
         </div>
     </div>
-    <div class="card card--featured stacked__last">
+    <div class="card">
         <div class="card__body">
             <label for="text" class="field-group__label">Qty:</label>
             <form action="" class="u-space-bottom grid g-gutter-x g-center-y g-stretch-first">
@@ -32,7 +35,7 @@ Description: Stacks cards by removing borders
                     </div>
                 </div>
                 <div>
-                    <button type="submit" class="btn btn--lg btn--green">Add to basket</button>
+                    <button type="submit" class="btn btn--lg">Add to basket</button>
                 </div>
             </form>
             <p><strong class="lead u-text-contextual-success">Free delivery.<br />Dispatched within 24 hours</strong></p>
