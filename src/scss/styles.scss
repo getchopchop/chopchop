@@ -3,13 +3,7 @@
  */
 
 @import "var";
-
-
-/**
- * Functions to reference arrays
- */
-
-@import "helper/function";
+@import "helper/variable-function";
 
 
 /**
@@ -17,7 +11,7 @@
  */
 
 @import "setting";
-
+@import "helper/setting-function";
 
 /**
  * Helper Mixins

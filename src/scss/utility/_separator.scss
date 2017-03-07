@@ -4,27 +4,29 @@
  * @since 3.0.0
  */
 
-.u-separator,
-%u-separator {
-    border: 1px solid color(neutral, light);
+@function seperator($seperator, $var: 'width') {
+    @return map-get(map-get($separators, $seperator), $var);
 }
 
-.u-separator-top,
-%u-separator-top {
-    border-top: 1px solid color(neutral, light);
-}
+$seperator-sides: (base, top, left, bottom, right);
 
-.u-separator-bottom,
-%u-separator-bottom {
-    border-bottom: 1px solid color(neutral, light);
-}
+@each $key, $value in $separators {
+    $class: 'u-separator-' + $key;
+    @if($key == base) {
+         $class: 'u-separator';
+    }
 
-.u-separator-left,
-%u-separator-left {
-    border-left: 1px solid color(neutral, light);
-}
-
-.u-separator-right,
-%u-separator-right {
-    border-right: 1px solid color(neutral, light);
+    @each $side in $seperator-sides {
+        @if($side == base) {
+            .#{$class},
+            %#{$class} {
+                border: seperator($key, width) seperator($key, style) seperator($key, color);
+            }
+        } @else {
+            .#{$class}-#{$side},
+            %#{$class}-#{$side} {
+                border-#{$side}: seperator($key, width) seperator($key, style) seperator($key, color);
+            }
+        }
+    }
 }

@@ -1,9 +1,21 @@
 @import "var";
-@import "helper/function";
+@import "helper/variable-function";
+@import "setting";
+@import "helper/setting-function";
 @import "helper/flex";
 @import "helper/breakpoint";
 @import "helper/shape";
 @import "helper/ellipsis";
+
+
+/**
+ * Modes added to <body> tag
+ * library or preview
+ */
+
+.cc-mode-library {
+    padding-top: 4em;
+}
 
 
 /**
@@ -12,56 +24,37 @@
 
 .cc-header {
     position: fixed;
-    top: 100%;
-    transform: translateY(-100%);
+    top: 0;
+    width: 100%;
     left: 0;
-    right: 0;
     z-index: 999;
-    font-size: 12px;
-    border-bottom: 4px solid color(neutral,darkest);
+    padding: spacing(sm) 0;
     @include flex;
-
-    ul {
-        margin: 0;
-        padding: 0;
-        @include flex;
-        width: 100%;
-    }
-
-    li {
-        list-style: none;
-        color: color(neutral, white);
-
-        > * {
-            display: inline-block;
-            padding: 6px 12px;
-        }
-    }
+    @include align-items(center);
+    background-color: color(neutral,darker);
+    color: #fff;
 
     a {
+        @include flex;
+        @include align-items(center);
         color: color(neutral, white);
-        background-color: color(neutral,darkest);
+        fill: color(neutral, white);
         text-decoration: none;
-
-        &.is-active {
-            background-color: #EFEDED;
-            color: color(neutral,darkest);
+        > * {
+            margin-right: 0.2em;
         }
-    }
-
-    border-bottom-color: #FFE800;
-
-    @include breakpoint(screen(sm) screen(sm, max)) {
-        border-bottom-color: #E800E8;
-    }
-    @include breakpoint(screen(md) screen(md, max)) {
-        border-bottom-color: #70F800;
-    }
-    @include breakpoint(screen(lg) screen(lg, max)) {
-        border-bottom-color: #00B1F5;
-    }
-    @include breakpoint(screen(xl)) {
-        border-bottom-color: #FF2C00;
+        .icon-cross {
+            display: none;
+        }
+        
+        &.is-active {
+            .icon-menu {
+                display: none;
+            }
+            .icon-cross {
+                display: block;
+            }
+        }
     }
 }
 
@@ -70,49 +63,59 @@
  * Developer Bar
  */
 
-.cc-readout {
-    margin-left: auto;
+.cc-devbar,
+.cc-devbar__bp {
+    background-color: #8e7cc3;
+    color: color(neutral, white);
 
-    span {
-        background-color: #FFE800;
-        color: color(neutral,darkest);
-
-        @include breakpoint(screen(sm) screen(sm, max)) {
-            background-color: #E800E8;
-            color: color(neutral, white);
-        }
-        @include breakpoint(screen(md) screen(md, max)) {
-            background-color: #70F800;
-            color: color(neutral,darkest);
-        }
-        @include breakpoint(screen(lg) screen(lg, max)) {
-            background-color: #00B1F5;
-            color: color(neutral, white);
-        }
-        @include breakpoint(screen(xl)) {
-            background-color: #FF2C00;
-            color: color(neutral, white);
-        }
+    @include breakpoint(screen(sm) screen(sm, max)) {
+        background-color: #6fa8dc;
     }
-}
-.cc-readout span:after {
-    content: "xs max: #{screen(xs, max)}";
-
-    @include breakpoint(screen(xs)) {
-        content: "xs: #{screen(sm)}";
+    @include breakpoint(screen(md) screen(md, max)) {
+        background-color: #6aa84f;
     }
-
-    @include breakpoint(screen(sm)) {
-        content: "sm: #{screen(sm)}";
-    }
-    @include breakpoint(screen(md)) {
-        content: "md: #{screen(md)}";
-    }
-    @include breakpoint(screen(lg)) {
-        content: "lg: #{screen(lg)}";
+    @include breakpoint(screen(lg) screen(lg, max)) {
+        background-color: #ffd966;
+        color: color(neutral, darkest);
     }
     @include breakpoint(screen(xl)) {
-        content: "xl: #{screen(xl)}";
+        background-color: #e06666;
+        color: color(neutral, white);
+    }
+}
+
+.cc-devbar {
+    position: fixed;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    right: 0;
+    font-size: 12px;
+    
+    &__bp {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 4px 8px;
+        &:after {
+            content: "xs max: #{screen(xs, max)}";
+            
+            @include breakpoint(screen(xs)) {
+                content: "xs: #{screen(sm)}";
+            }
+            @include breakpoint(screen(sm)) {
+                content: "sm: #{screen(sm)}";
+            }
+            @include breakpoint(screen(md)) {
+                content: "md: #{screen(md)}";
+            }
+            @include breakpoint(screen(lg)) {
+                content: "lg: #{screen(lg)}";
+            }
+            @include breakpoint(screen(xl)) {
+                content: "xl: #{screen(xl)}";
+            }
+        }
     }
 }
 
@@ -131,7 +134,7 @@
     left: -100%;
     z-index: 998;
     background-color: color(neutral,darkest);
-    padding: 20px 10px;
+    padding: 60px 10px;
     padding-bottom: 46px;
     color: color(neutral, lighter);
 
@@ -340,6 +343,6 @@
  */
 
 .cc-pattern {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 4em;
+    margin-bottom: 4em;
 }
