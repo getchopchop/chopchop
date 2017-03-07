@@ -9,38 +9,46 @@
 
 
 /**
- * Grid Gutter X Axis
+ * Grid Gutter X
  */
 
 .g-gutter-x,
 %g-gutter-x {
     @include grid-gutter-x;
+
+    @include breakpoint(screen(xl)) {
+        @include grid-gutter-x($gutter-x * 1.3);
+    }
 }
 
 
 /**
- * Grid Gutter Y Axis
+ * Grid Gutter Y
  */
 
 .g-gutter-y,
 %g-gutter-y {
     @include grid-gutter-y;
+
+    @include breakpoint(screen(xl)) {
+        @include grid-gutter-y($gutter-y * 1.3);
+    }
 }
 
 
 /**
- * Grid Gutter X&Y Axis
+ * Grid Gutter
  */
 
 .g-gutter,
 %g-gutter {
-    @include grid-gutter-x;
-    @include grid-gutter-y;
+    @extend .g-gutter-x;
+    @extend .g-gutter-y;
 }
 
 
 /**
- * Grid Gutter X Axis
+ * Grid Gutter X LG
  */
 
 .g-gutter-x-lg,
@@ -50,7 +58,7 @@
 
 
 /**
- * Grid Gutter Y Axis
+ * Grid Gutter Y LG
  */
 
 .g-gutter-y-lg,
@@ -60,18 +68,49 @@
 
 
 /**
- * Grid Gutter X&Y Axis
+ * Grid Gutter LG
  */
 
 .g-gutter-lg,
 %g-gutter-lg {
-    @include grid-gutter-x;
-    @include grid-gutter-y;
+    @extend %g-gutter-x-lg;
+    @extend %g-gutter-y-lg;
 }
 
 
 /**
- * Grid Center X Axis
+ * Grid Gutter X SM
+ */
+
+.g-gutter-x-sm,
+%g-gutter-x-sm {
+    @include grid-gutter-x($gutter-x-sm);
+}
+
+
+/**
+ * Grid Gutter Y SM
+ */
+
+.g-gutter-y-sm,
+%g-gutter-y-sm {
+    @include grid-gutter-y($gutter-y-sm);
+}
+
+
+/**
+ * Grid Gutter SM
+ */
+
+.g-gutter-sm,
+%g-gutter-sm {
+    @extend %g-gutter-x-sm;
+    @extend %g-gutter-y-sm;
+}
+
+
+/**
+ * Grid Center X
  */
 
 .g-center-x,
@@ -81,7 +120,7 @@
 
 
 /**
- * Grid Center Y Axis
+ * Grid Center Y
  */
 
 .g-center-y,
@@ -91,13 +130,23 @@
 
 
 /**
- * Grid Center X&Y Axis
+ * Grid Center
  */
 
 .g-center,
 %g-center {
     @include justify-content(center);
     @include align-items(center);
+}
+
+
+/**
+ * Grid Baseline
+ */
+
+.g-baseline,
+%g-baseline {
+    @include align-items(flex-end);
 }
 
 
@@ -134,7 +183,7 @@
 
 
 /**
- * Grid Stretch First
+ * Grid Stretch
  */
 
 .g-stretch-first,
@@ -149,11 +198,6 @@
         flex-shrink: 0;
     }
 }
-
-
-/**
- * Grid Stretch Last
- */
 
 .g-stretch-last,
 %g-stretch-last {
@@ -170,7 +214,7 @@
 
 
 /**
- * Grid Columns
+ * Grid Cols
  */
 
 @each $screen, $value in $screens {
