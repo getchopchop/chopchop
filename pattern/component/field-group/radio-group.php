@@ -1,5 +1,5 @@
 <?php /*
-Title: Radio
+Title: Radio Group
 */ ?>
 
 <div class="field-group">
