@@ -38,14 +38,16 @@ class Content
             $html .= '<section class="cc-pattern"><div class="u-container">';
             $html .= self::sectionTitle($options, $patternSection);
             $html .= '<section class="cc-section">';
-            if( file_exists($patternSectionPath . '/readme.html') ) {
-                $html .= '<div class="u-block-top readme"><div class="u-container">' . file_get_contents($patternSectionPath . '/readme.html') . '</div></div>';
+
+            if( file_exists($patternSectionPath . '/readme.php') ) {
+
+                $html .= self::loadReadme($patternSectionPath);
             }
 
             foreach ($patternSectionFiles as $patternSectionFile) {
                 //we are in the pattern > section > files
                 if (substr($patternSectionFile, 0, 1) == '.') continue;
-                if (substr($patternSectionFile, -5) == '.html') continue;
+                if ($patternSectionFile == 'readme.php') continue;
 
                 $patternSectionFilePath = $patternPath . $patternSection . '/' . $patternSectionFile;
                 $html .= self::sectionContent($patternSectionFile, $patternSectionFilePath, $i);
@@ -156,4 +158,18 @@ class Content
 
         return self::getTemplate($patternSectionFile);
     }
+
+    public static function loadReadme($file) {
+
+        $html = '<div class="u-block-top readme"><div class="u-container">';
+        ob_start(); // start output buffer
+        include($file . '/readme.php');
+        $html .= ob_get_contents(); // get contents of buffer
+        ob_end_clean();
+
+        $html .= '</div></div>';
+
+        return $html;
+    }
+
 }
