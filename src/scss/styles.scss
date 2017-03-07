@@ -6,12 +6,26 @@
 
 
 /**
- * Helper Mixins & Functions
+ * Functions to reference arrays
  */
 
 @import "helper/function";
+
+
+/**
+ * Settings for specific components and utilities
+ */
+
+@import "setting";
+
+
+/**
+ * Helper Mixins
+ */
+
 @import "helper/flex";
 @import "helper/accordion";
+@import "helper/button";
 @import "helper/breakpoint";
 @import "helper/ellipsis";
 @import "helper/grid";

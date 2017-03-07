@@ -94,6 +94,43 @@
 
 
 /**
+ * Button color variations
+ */
+
+@each $button-key, $button-value in $buttons {
+    .btn--#{$button-key},
+    %btn--#{$button-key} {
+
+        @include button-colors($button-key, default);
+
+        @if(index(map-keys($button-value), 'visited') != null) {
+            &:visited {
+                @include button-colors($button-key, default);
+            }
+        }
+
+        @if(index(map-keys($button-value), 'hover') != null) {
+            &:hover {
+                @include button-colors($button-key, hover);
+            }
+        }
+
+        @if(index(map-keys($button-value), 'active') != null) {
+            &:active {
+                @include button-colors($button-key, active);
+            }
+        }
+
+        @if(index(map-keys($button-value), 'focus') != null) {
+            &:focus {
+                @include button-colors($button-key, focus);
+            }
+        }
+    }
+}
+
+
+/**
  * Button Disabled
  */
 

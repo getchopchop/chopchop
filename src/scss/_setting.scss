@@ -1,0 +1,64 @@
+/**
+ * Button
+ */
+
+$buttons: (
+    base: (
+        default: (
+            background          : green,
+            border-color        : yellow,
+            color               : DeepPink
+        ),
+        hover: (
+            background          : blue,
+            border-color        : pink,
+            color               : rebeccaPurple
+        )
+    ),
+    primary: (
+        default: (
+            background          : green,
+            border-color        : yellow,
+            color               : #444
+        ),
+        hover: (
+            background          : blue,
+            border-color        : pink,
+            color               : rebeccaPurple
+        )
+    ),
+    secondary: (
+        default: (
+            background          : DeepPink,
+            border-color        : DeepPink,
+            color               : DeepPink
+        ),
+        visited: (
+            background          : DeepPink,
+            border-color        : DeepPink,
+            color               : DeepPink
+        ),
+        hover: (
+            background          : DeepPink,
+            border-color        : DeepPink,
+            color               : DeepPink
+        ),
+        active: (
+            background          : DeepPink,
+            border-color        : DeepPink,
+            color               : DeepPink
+        )
+    ),
+    ghost: (
+        default: (
+            background          : transparent,
+            border-color        : yellow,
+            color               : #444
+        ),
+        hover: (
+            background          : inherit,
+            border-color        : pink,
+            color               : rebeccaPurple
+        )
+    ),
+);

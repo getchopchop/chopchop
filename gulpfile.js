@@ -141,7 +141,7 @@ var taskConfig =
             },
             "mode":
             {
-                "view": false,
+                "view": true,
                 "symbol":
                 {
                     "sprite": "sprite-symbol.svg"
