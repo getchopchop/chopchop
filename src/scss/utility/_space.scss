@@ -1,0 +1,37 @@
+/**
+ * Space
+ *
+ * @since 3.0.0
+ */
+
+@each $key, $value in $spacing {
+    $value: strip-unit($value) * 1rem;
+
+    @if $key == base {
+        .u-space,
+        %u-space {
+            margin-top: $value !important;
+            margin-bottom: $value !important;
+
+            &-top {
+                margin-top: $value !important;
+            }
+            &-bottom {
+                margin-bottom: $value !important;
+            }
+        }
+    } @else {
+        .u-space-#{$key},
+        %u-space-#{$key} {
+            margin-top: $value !important;
+            margin-bottom: $value !important;
+
+            &-top {
+                margin-top: $value !important;
+            }
+            &-bottom {
+                margin-bottom: $value !important;
+            }
+        }
+    }
+}

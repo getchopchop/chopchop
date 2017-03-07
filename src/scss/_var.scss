@@ -30,7 +30,9 @@ $colors: (
         warning         : #ffeb3b,
         warning-light   : #fff59d,
         error           : #f44336,
-        error-light     : #ffcdd2
+        error-light     : #ffcdd2,
+        info            : #4b68b3,
+        info-light      : #e5eef9
     ),
 
     social: (
@@ -53,14 +55,14 @@ $colors: (
 
 $font-family            : -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
 
-$font-size              : 100%;
-$font-size-sm           : 0.75em;
-$font-size-lg           : 1.33em;
+$font-size              : 82.75%;
+$font-size-sm           : 0.85em;
+$font-size-lg           : 1.2em;
 
 $bold                   : 600;
 
-$line-height            : 1.618;
-$line-height-sm         : 1.25;
+$line-height            : 1.6;
+$line-height-sm         : 1.2;
 
 
 /**
@@ -71,8 +73,8 @@ $line-height-sm         : 1.25;
 $heading-font-family    : $font-family;
 
 $typescale: (
-    min: 1.25,
-    max: 1.414
+    min                 : 1.125,
+    max                 : 1.2
 );
 
 // No need to edit
@@ -102,8 +104,11 @@ $spacing: (
 $gutter-x               : 1em;
 $gutter-y               : $gutter-x;
 
-$gutter-x-lg            : 3%;
+$gutter-x-lg            : 2%;
 $gutter-y-lg            : $gutter-x-lg;
+
+$gutter-x-sm            : 0.5em;
+$gutter-y-sm            : $gutter-x-sm;
 
 
 /**
@@ -112,6 +117,10 @@ $gutter-y-lg            : $gutter-x-lg;
  */
 
 $sections: (
+    xs: (
+        min            : 1.3em,
+        max            : 1.5em
+    ),
     sm: (
         min            : 2em,
         max            : 4em

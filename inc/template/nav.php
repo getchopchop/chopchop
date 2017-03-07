@@ -4,7 +4,6 @@
             'branding',
             'base',
             'component',
-            'demo',
             'helper',
             'utility',
             'template'
