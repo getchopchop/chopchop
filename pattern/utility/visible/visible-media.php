@@ -1,8 +1,3 @@
-<?php /*
-Title: Visible Media Queries
-Class: .u-visible-{mq}-{display}
-*/ ?>
-
 <div class="grid g-gutter">
     <div class="g-col-xs-6 g-col-md-4"><div class="u-block u-fill-neutral-lighter u-text-center"><span class="u-visible-xs"><code>.u-visible-xs</code></span></div></div>
     <div class="g-col-xs-6 g-col-md-4"><div class="u-block u-fill-neutral-lighter u-text-center"><span class="u-visible-sm"><code>.u-visible-sm</code></span></div></div>

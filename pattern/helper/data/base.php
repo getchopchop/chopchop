@@ -1,8 +1,3 @@
-<?php /*
-Title: Data
-Description: A demo of using data. See documentation for <a href="https://github.com/getchopchop/chopchop/wiki/Data">more information</a>.
-*/ ?>
-
 <h5>Company Information</h5>
 <ul>
 <li>Name: <?php printData('company', 'name'); ?></li>

@@ -1,7 +1,3 @@
-<?php /*
-Title: Inline Elements
-*/ ?>
-
 <p><a href="#">This is a text link</a></p>
 
 <p><strong>Strong is used to indicate strong importance</strong></p>

@@ -1,7 +1,3 @@
-<?php /*
-Title: Form Validation
-*/ ?>
-
 <div class="field-group has-error">
     <label class="field-group__label" class="error">Error Input</label>
     <div class="field-group__field">

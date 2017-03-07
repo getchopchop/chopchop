@@ -1,9 +1,3 @@
-<?php /*
-Title: All Collapsible Accordion
-Class: .accordion.js-cc-collapsible[data-cc-collapsible-mode="collapse-all"]
-Description: An accordion whose children can all be collapsed
-*/ ?>
-
 <div data-cc-collapsible-mode="collapse-all" class="accordion js-cc-collapsible">
     <div class="is-active accordion__header">
         <h3>Header 1</h3>

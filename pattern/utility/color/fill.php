@@ -1,9 +1,3 @@
-<?php /*
-Title: Fill
-Container: true
-Code: false
-*/ ?>
-
 <div class="grid g-gutter">
 <?php
     $css_contents = file_get_contents('build/css/styles.css', true);

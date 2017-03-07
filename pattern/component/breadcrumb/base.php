@@ -1,8 +1,3 @@
-<?php /*
-Title: Breadcrumb
-Class: .breadcrumb
-*/ ?>
-
 <nav class="breadcrumb">
     <ul class="nav nav--inline nav--space">
         <li><a href="#">Home</a></li>

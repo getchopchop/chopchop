@@ -1,9 +1,3 @@
-<?php /*
-Title: Right Drawer
-Class: .drawer.drawer--right
-Description: The right drawer is hidden off screen by default. <a href="#" data-cc-toggle-target="#drawer-right-1" data-cc-toggle-action="activate">Active right drawer</a>.
-*/ ?>
-
 <div class="drawer drawer--right" id="drawer-right" data-cc-toggle-target-callback="#overlay">
     <div class="drawer__dialog">
 

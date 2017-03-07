@@ -1,8 +1,3 @@
-<?php /*
-Title: Bordered Table
-Class: .table.table--bordered
-*/ ?>
-
 <table class="table table--bordered">
     <thead>
         <tr>

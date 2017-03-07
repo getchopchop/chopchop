@@ -1,8 +1,3 @@
-<?php /*
-Title: Checkbox
-Class: &lt;input type="checkbox"&gt;
-*/ ?>
-
 <div class="field-group">
     <label class="field-group__label" for="checkbox1">
         <input id="checkbox1" name="checkbox" type="checkbox" checked="checked">

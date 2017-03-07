@@ -1,9 +1,3 @@
-<?php /*
-Title: Responsive Table
-Class: .responsive-table
-Description: A wrapper for a <code>&lt;table&gt;</code> to make the it scollable on smaller screens.
-*/ ?>
-
 <div class="responsive-table">
     <table class="table">
         <thead>

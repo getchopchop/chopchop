@@ -1,8 +1,3 @@
-<?php /*
-Title: Full Height
-Class: .u-full-height
-*/ ?>
-
 <div class="grid g-gutter">
     <div class="g-col-xs-6 u-fill-neutral-lighter u-full-height">
         <div class="u-fill-neutral-lighter">

@@ -1,7 +1,3 @@
-<?php /*
-Title: Headings
-*/ ?>
-
 <h1>h1 Heading</h1>
 
 <h2>h2 Heading</h2>

@@ -1,9 +1,3 @@
-<?php /*
-Title: Card group
-Class: .card-group
-Description: Stacks cards by removing borders
-*/ ?>
-
 <div class="card-group">
     <div class="card">
         <div class="card__body">

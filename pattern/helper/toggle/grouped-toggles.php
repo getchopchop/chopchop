@@ -1,9 +1,3 @@
-<?php /*
-Title: Grouped Toggles with button demo
-Description: Shows an example of it working with a read more/read less button where the button text changes.
-*/ ?>
-
-
 <div class="u-toggle" id="full-description">
     <h1>🏴‍☠️</h1>
 </div>

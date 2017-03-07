@@ -1,8 +1,3 @@
-<?php /*
-Title: Typography
-Code: false
-*/ ?>
-
 <div class="u-container-sm">
     <h1>I am the big heading</h1>
     <?php printPattern('base/paragraph/lead'); ?>

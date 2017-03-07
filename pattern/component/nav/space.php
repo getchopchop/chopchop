@@ -1,8 +1,3 @@
-<?php /*
-Title: Nav Space
-Class: .nav.nav--space
-*/ ?>
-
 <nav>
     <ul class="nav nav--space">
         <li><a href="#">Overview</a></li>

@@ -1,9 +1,3 @@
-<?php /*
-Title: Accordion
-Class: .accordion.js-cc-collapsible
-Description: A standard accordion where only one tab can be open at a time.
-*/ ?>
-
 <div class="accordion js-cc-collapsible">
     <div class="is-active accordion__header">
         <h3>Header 1</h3>

@@ -1,8 +1,3 @@
-<?php /*
-Title: Pre
-Class: &lt;pre&gt;
-*/ ?>
-
 <pre>
     P R E F O R M A T T E D T E X T
     ! " # $ % &amp; ' ( ) * + , - . /

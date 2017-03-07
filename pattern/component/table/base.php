@@ -1,8 +1,3 @@
-<?php /*
-Title: Table
-Class: .table
-*/ ?>
-
 <table class="table">
     <thead>
         <tr>

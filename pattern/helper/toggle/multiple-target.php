@@ -1,7 +1,3 @@
-<?php /*
-Title: Toggle with Multiple Targets
-*/ ?>
-
 <p><a href="#" data-cc-toggle-action="toggle" data-cc-toggle-target=".horse, .chicken">Toggle All Animals</a></p>
 
 <div class="u-toggle horse">

@@ -1,8 +1,3 @@
-<?php /*
-Title: Grid
-Class: .grid
-*/ ?>
-
 <div class="grid">
     <div><div class="u-block u-fill-neutral-lighter">No class col required</div></div>
 </div>

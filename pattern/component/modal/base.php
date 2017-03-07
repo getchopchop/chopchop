@@ -1,9 +1,3 @@
-<?php /*
-Title: Modal
-Class: .modal
-Description: The modal is hidden off screen by default. <a href="#" class="js-cc-toggle js-modal-content-1 " data-cc-toggle-action="activate" data-cc-toggle-target="#modal-tab-1">Show modal 1 content</a> or <a href="#" class="js-cc-toggle js-modal-content-2" data-cc-toggle-action="activate" data-cc-toggle-target="#modal-tab-2">Show modal 2 content</a>.
-*/ ?>
-
 <div class="modal" id="modal" data-cc-toggle-target-callback="#overlay" data-cc-toggle-trigger-type="direct-only" data-cc-toggle-action="deactivate" data-cc-toggle-target="#modal">
     <div class="modal__dialog">
 

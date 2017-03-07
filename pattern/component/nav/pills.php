@@ -1,8 +1,3 @@
-<?php /*
-Title: Nav Pills
-Class: .nav.nav--pills
-*/ ?>
-
 <nav>
     <ul class="nav nav--pills">
         <li><a href="#">Overview</a></li>

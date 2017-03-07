@@ -1,8 +1,3 @@
-<?php /*
-Title: Definition List
-Class: &lt;dl&gt;
-*/ ?>
-
 <dl>
     <dt>This is a term.</dt>
     <dd>This is the definition of that term, which both live in a <code>dl</code>.</dd>

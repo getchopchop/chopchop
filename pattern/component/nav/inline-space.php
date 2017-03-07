@@ -1,8 +1,3 @@
-<?php /*
-Title: Nav Inline Space
-Class: .nav.nav--inline.nav--space
-*/ ?>
-
 <nav>
     <ul class="nav nav--inline nav--space">
         <?php for($i=0; $i <=1; $i++) { ?><li><a href="#">Overview</a></li>

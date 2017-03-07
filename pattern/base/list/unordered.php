@@ -1,8 +1,3 @@
-<?php /*
-Title: Unordered List
-Class: &lt;ul&gt;
-*/ ?>
-
 <ul>
     <li>The European languages are members of the same family.</li>
     <li>Their separate existence is a myth.</li>

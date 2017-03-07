@@ -1,7 +1,3 @@
-<?php /*
-Title: Social Icons
-*/ ?>
-
 <?php
     $icons = array(
         'linkedin',

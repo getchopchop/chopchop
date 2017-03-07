@@ -1,7 +1,3 @@
-<?php /*
-Title: Select
-*/ ?>
-
 <div class="field-group">
     <label class="field-group__label" for="select">Browse a category...</label>
     <div class="field-group__field">

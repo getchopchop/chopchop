@@ -1,8 +1,3 @@
-<?php /*
-Title: Payment Icons
-Section: u-fill-grey-lighter
-*/ ?>
-
 <?php
     $icons = array(
         'Amazon-card-light',

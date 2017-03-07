@@ -1,8 +1,3 @@
-<?php /*
-Title: Headings classes
-Class: .h*
-*/ ?>
-
 <p class="h1">h1 Heading</p>
 
 <p class="h2">h2 Heading</p>

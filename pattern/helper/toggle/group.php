@@ -1,8 +1,3 @@
-<?php /*
-Title: Toggle Group
-Description: Demo of group.
-*/ ?>
-
 <p><a href="#" data-cc-toggle-action="toggle" data-cc-toggle-target=".mushroom" class="mushroom">Toggle Mushroom in group "veg"</a></p>
 <p><a href="#" data-cc-toggle-action="toggle" data-cc-toggle-target=".tomato" class="tomato">Toggle Tomato in group "veg"</a></p>
 

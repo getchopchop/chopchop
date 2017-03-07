@@ -1,8 +1,3 @@
-<?php /*
-Title: List Inline
-Class: .u-list-inline
-*/ ?>
-
 <ul class="u-list-inline">
     <li>Item 1</li>
     <li>Item 2</li>

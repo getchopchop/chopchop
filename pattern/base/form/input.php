@@ -1,8 +1,3 @@
-<?php /*
-Title: Inputs
-Class: &lt;input&gt;
-*/ ?>
-
 <div class="field-group field-group--scaffold">
     <label class="field-group__label">Submit</label>
     <div class="field-group__field">

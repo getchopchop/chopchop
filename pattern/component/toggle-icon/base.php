@@ -1,9 +1,3 @@
-<?php /*
-Title: Toggle Icon
-Class: .toggle-icon
-Description: Adds the plus and minus arrows to the interface.
-*/ ?>
-
 <div class="toggle-icon" data-cc-toggle-action="toggle" data-cc-toggle-target="#demo-toggle-icon-1" id="demo-toggle-icon-1-header">
     <h4>Toggle Me</h4>
     <span class="toggle-icon__icon"></span>

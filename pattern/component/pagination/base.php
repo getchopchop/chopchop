@@ -1,8 +1,3 @@
-<?php /*
-Title: Pagination
-Class: .pagination
-*/ ?>
-
 <nav class="pagination">
     <ul class="pagination__pager">
         <li>

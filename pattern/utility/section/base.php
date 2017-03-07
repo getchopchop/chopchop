@@ -1,8 +1,3 @@
-<?php /*
-Title: Section
-Class: .u-section .u-section-top .u-section-bottom
-*/ ?>
-
 <div class="u-clearfix u-fill-neutral-lighter">
     <div class="u-section">
         <p>I am in a section with margin top and bottom</p>

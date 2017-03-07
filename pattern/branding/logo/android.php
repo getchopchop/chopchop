@@ -1,8 +1,3 @@
-<?php /*
-Title: Android Icons
-Code: false
-*/ ?>
-
 <div class="grid g-gutter">
     <div class="g-col-sm-6">
         <h4>Android Home Screen</h4>

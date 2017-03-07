@@ -1,7 +1,3 @@
-<?php /*
-Title: Common Icons
-*/ ?>
-
 <?php
     $icons = array(
         'search3',

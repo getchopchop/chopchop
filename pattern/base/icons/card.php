@@ -1,8 +1,3 @@
-<?php /*
-Title: Credit Card Icons
-Section: u-fill-grey-lighter
-*/ ?>
-
 <?php
     $icons = array(
         'AmericanExpress-light',

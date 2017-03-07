@@ -1,9 +1,3 @@
-<?php /*
-Title: Tabs
-Class: .tabs[data-cc-collapse="one-open"]
-Description: A toggle group styled to look like tabs. Only one tab can be active at a time.
-*/ ?>
-
 <div data-cc-collapse="one-open" class="tabs">
     <div class="is-active tabs__header">
         <h3>Tab 1</h3>
