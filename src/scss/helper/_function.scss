@@ -41,3 +41,12 @@
 @function spacing($value: 'base') {
     @return map-get($spacing, $value);
 }
+
+
+/**
+ * Guuter
+ */
+
+@function gutter($value: 'base') {
+    @return map-get($gutters, $value);
+}

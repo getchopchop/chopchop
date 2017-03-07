@@ -101,14 +101,11 @@ $spacing: (
  * Gutter
  */
 
-$gutter-x               : 1em;
-$gutter-y               : $gutter-x;
-
-$gutter-x-lg            : 2%;
-$gutter-y-lg            : $gutter-x-lg;
-
-$gutter-x-sm            : 0.5em;
-$gutter-y-sm            : $gutter-x-sm;
+$gutters: (
+    base                : 1em,
+    sm                  : 0.5em,
+    lg                  : 2%
+);
 
 
 /**
