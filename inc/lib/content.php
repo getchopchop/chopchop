@@ -30,11 +30,11 @@ class Content
                 $patternSectionPath = $patternPath . '/' . $patternSection;
                 $patternSectionFiles = scandir($patternSectionPath);
 
-                $html .= '<div class="u-container"><section class="cc-pattern">';
+                $html .= '<div class="cc-pattern">';
                 $html .= self::sectionTitle($options, $patternSection);
-                $html .= '<section class="cc-section">';
+                $html .= '<div class="cc-pattern__body">';
                 if( file_exists($patternSectionPath . '/readme.html') ) {
-                    $html .= '<div class="u-block-top readme"><div class="u-container">' . file_get_contents($patternSectionPath . '/readme.html') . '</div></div>';
+                    $html .= '<div class="cc-pattern__doc">' . file_get_contents($patternSectionPath . '/readme.html') . '</div>';
                 }
 
                 foreach ($patternSectionFiles as $patternSectionFile) {
@@ -46,7 +46,7 @@ class Content
                     $html .= self::sectionContent($patternSectionFile, $patternSectionFilePath);
                 }
 
-                $html .= '</section></section></div>';
+                $html .= '</div></div>';
 
             }
         }
@@ -63,11 +63,8 @@ class Content
         $title = '';
         if($section) {
             $sectionTitle = ucwords(str_replace('-',' ',$section ));
-            $title .= '<div class="cc-title-container">';
-            $title .= '<hgroup class="cc-title cc-title--actions" id="section-' . str_replace(' ', '-', strtolower($sectionTitle)) . '"><div class="title__titles">';
-            $title .= '<h2 class="cc-title__main">' . $sectionTitle;
-            $title .= '</h2>';
-            $title .= '</div></hgroup>';
+            $title .= '<span class="cc-pattern__anchor" id="section-' . str_replace(' ', '-', strtolower($sectionTitle)) . '"></span><div class="cc-pattern__header">';
+            $title .= '<h3>' . $sectionTitle . '</h3>';
             $title .= "</div>";
         }
 
@@ -85,21 +82,23 @@ class Content
             return $fileContents;
         }
 
-        $content = '<section id="section-'.$section.'" class="u-space-sm-bottom">';
-        $content    .= '<div><section class="u-separator-top u-block-sm">';
-        $content        .= '<div class="u-space-sm-bottom grid g-center g-stretch-first"><div><h4>'.$sectionTitle.'</h4></div><div class="cc-title__actions"><ul class="nav nav--inline nav--pills">';
-        $content        .= '<li><a href="#" data-cc-toggle-action="toggle" data-cc-toggle-target="#cc-code-' . $section . '" class="">Code</a></li>';
-        $content        .= '<li><a href="'.self::getPreviewUrl($patternSectionFilePath).'" class="">Preview</a></li>';
-        $content        .= '</ul></div></div>';
-        $content        .= '<div class="cc-' . $section . '">';
-        $content        .= '<div>';
-        $content        .= $fileContents;
-        $content        .= '</div>';
-        $content        .= '<div class="u-toggle" id="cc-code-' . $section . '" data-cc-toggle-group="cc-section-' . $section . '"><pre class="cc-code"><code class="language-html">';
-        $content        .= htmlentities($fileContents);
-        $content        .= '</code></pre></div>';
-        $content    .= '</div></section></div>';
-        $content .= '</section>';
+        $content = '
+        <div class="cc-demo">
+            <div class="cc-demo__header">
+                <p>' . $sectionTitle . '</p>
+                <ul>
+                    <li><a href="#" data-cc-toggle-action="toggle" data-cc-toggle-target="#cc-code-' . $section . '">Code</a></li>
+                    <li><a href="'.self::getPreviewUrl($patternSectionFilePath).'">Preview</a></li>
+                </ul>
+            </div>
+            <div class="cc-demo__demo">
+                ' . $fileContents . '
+            </div>
+            <div class="cc-demo__code u-toggle" id="cc-code-' . $section . '" data-cc-toggle-group="cc-section-' . $section . '">
+                <pre><code class="language-html">' . htmlentities($fileContents) . '</code></pre>
+            </div>
+        </div>
+        ';
 
         return $content;
     }
