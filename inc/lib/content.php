@@ -30,7 +30,7 @@ class Content
                 $patternSectionPath = $patternPath . '/' . $patternSection;
                 $patternSectionFiles = scandir($patternSectionPath);
 
-                $html .= '<section class="cc-pattern"><div class="u-container">';
+                $html .= '<div class="u-container"><section class="cc-pattern">';
                 $html .= self::sectionTitle($options, $patternSection);
                 $html .= '<section class="cc-section">';
                 if( file_exists($patternSectionPath . '/readme.html') ) {
@@ -46,7 +46,7 @@ class Content
                     $html .= self::sectionContent($patternSectionFile, $patternSectionFilePath);
                 }
 
-                $html .= '</section></div></section>';
+                $html .= '</section></section></div>';
 
             }
         }
@@ -85,7 +85,7 @@ class Content
             return $fileContents;
         }
 
-        $content = '<section id="section-'.$section.'" class="u-section-xs-bottom">';
+        $content = '<section id="section-'.$section.'" class="u-space-sm-bottom">';
         $content    .= '<div><section class="u-separator-top u-block-sm">';
         $content        .= '<div class="u-space-sm-bottom grid g-center g-stretch-first"><div><h4>'.$sectionTitle.'</h4></div><div class="cc-title__actions"><ul class="nav nav--inline nav--pills">';
         $content        .= '<li><a href="#" data-cc-toggle-action="toggle" data-cc-toggle-target="#cc-code-' . $section . '" class="">Code</a></li>';

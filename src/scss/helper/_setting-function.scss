@@ -8,6 +8,33 @@
 
 
 /**
+ * Container
+ */
+
+@function container($value: 'base') {
+    @return map-get($containers, $value);
+}
+
+
+/**
+ * Gutter
+ */
+
+@function gutter($value: 'base') {
+    @return map-get($gutters, $value);
+}
+
+
+/**
+ * Section
+ */
+
+@function section($section, $type: 'min') {
+    @return map-get(map-get($sections, $section), $type);
+}
+
+
+/**
  * Separator
  */
 

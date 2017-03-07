@@ -17,21 +17,13 @@
 
 
 /**
- * Container
+ * Generating typescale calculations
  */
 
-@function container($value: 'base') {
-    @return map-get($containers, $value);
-}
-
-
-/**
- * Section
- */
-
-@function section($section, $type: 'min') {
-    @return map-get(map-get($sections, $section), $type);
-}
+$typescale-calc: (
+    min: 1 / map-get($typescale, min) * 1em,
+    max: 1 / map-get($typescale, max) * 1em
+);
 
 
 /**
@@ -40,13 +32,4 @@
 
 @function spacing($value: 'base') {
     @return map-get($spacing, $value);
-}
-
-
-/**
- * Guuter
- */
-
-@function gutter($value: 'base') {
-    @return map-get($gutters, $value);
 }
