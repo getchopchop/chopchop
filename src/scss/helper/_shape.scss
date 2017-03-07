@@ -203,8 +203,8 @@
     display: inline-block;
     height: $size;
     width: $size * .45;
-    border-right: 2px solid $color;
-    border-bottom: 2px solid $color;
+    border-right: $thickness solid $color;
+    border-bottom: $thickness solid $color;
     transform: rotate(42deg);
 }
 
