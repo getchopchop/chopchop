@@ -50,3 +50,16 @@ $buttons: (
         )
     )
 );
+
+
+/**
+ * Separator
+ */
+
+$separators: (
+    base: (
+        color                   : color(neutral, light),
+        style                   : solid,
+        width                   : 1px
+    )
+);
