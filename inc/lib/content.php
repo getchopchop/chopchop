@@ -86,8 +86,8 @@ class Content
         }
 
         $content = '<section id="section-'.$section.'" class="u-section-xs-bottom">';
-        $content    .= '<div class="u-container"><section class="">';
-        $content        .= '<div class="grid g-center g-stretch-first"><div><h5>'.$sectionTitle.'</h5></div><div class="cc-title__actions"><ul class="nav nav--inline nav--pills">';
+        $content    .= '<div><section class="u-separator-top u-block-sm">';
+        $content        .= '<div class="u-space-sm-bottom grid g-center g-stretch-first"><div><h4>'.$sectionTitle.'</h4></div><div class="cc-title__actions"><ul class="nav nav--inline nav--pills">';
         $content        .= '<li><a href="#" data-cc-toggle-action="toggle" data-cc-toggle-target="#cc-code-' . $section . '" class="">Code</a></li>';
         $content        .= '<li><a href="'.self::getPreviewUrl($patternSectionFilePath).'" class="">Preview</a></li>';
         $content        .= '</ul></div></div>';

@@ -35,14 +35,6 @@ select[multiple=multiple] {
         box-shadow: 0 0 5px 0 rgba(color(neutral, black),.3);
         outline: none;
     }
-    
-    &.lead {
-        padding: 10px 20px;
-    }
-
-    &.micro {
-        padding: 4px 12px;
-    }
 }
 
 label input {
