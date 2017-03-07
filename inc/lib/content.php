@@ -34,7 +34,7 @@ class Content
                 $html .= self::sectionTitle($options, $patternSection);
                 $html .= '<section class="cc-section">';
                 if( file_exists($patternSectionPath . '/readme.html') ) {
-                    $html .= '<div class="u-block-lg readme">' . file_get_contents($patternSectionPath . '/readme.html') . '</div>';
+                    $html .= '<div class="u-block-top readme"><div class="u-container">' . file_get_contents($patternSectionPath . '/readme.html') . '</div></div>';
                 }
 
                 foreach ($patternSectionFiles as $patternSectionFile) {
@@ -85,15 +85,14 @@ class Content
             return $fileContents;
         }
 
-        $content = '<section id="section-'.$section.'" class="">';
+        $content = '<section id="section-'.$section.'" class="u-section-xs-bottom">';
         $content    .= '<div class="u-container"><section class="">';
-        $content        .= '<h5>'.$sectionTitle.'</h5><div class="cc-title__actions"><ul class="nav nav--inline nav--pills">';
-        $content        .= '<li><a href="#" data-cc-toggle-action="toggle" data-cc-toggle-target="#cc-demo-' . $section . '" class="">Demo</a></li>';
+        $content        .= '<div class="grid g-center g-stretch-first"><div><h5>'.$sectionTitle.'</h5></div><div class="cc-title__actions"><ul class="nav nav--inline nav--pills">';
         $content        .= '<li><a href="#" data-cc-toggle-action="toggle" data-cc-toggle-target="#cc-code-' . $section . '" class="">Code</a></li>';
         $content        .= '<li><a href="'.self::getPreviewUrl($patternSectionFilePath).'" class="">Preview</a></li>';
-        $content        .= '</ul></div>';
+        $content        .= '</ul></div></div>';
         $content        .= '<div class="cc-' . $section . '">';
-        $content        .= '<div class="u-toggle is-active" id="cc-demo-' . $section . '" data-cc-toggle-group="cc-section-' . $section . '">';
+        $content        .= '<div>';
         $content        .= $fileContents;
         $content        .= '</div>';
         $content        .= '<div class="u-toggle" id="cc-code-' . $section . '" data-cc-toggle-group="cc-section-' . $section . '"><pre class="cc-code"><code class="language-html">';
