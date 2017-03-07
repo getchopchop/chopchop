@@ -6,7 +6,7 @@ $buttons: (
     base: (
         default: (
             background          : green,
-            border-color        : yellow,
+            border-color        : green,
             color               : DeepPink
         ),
         hover: (
@@ -17,14 +17,14 @@ $buttons: (
     ),
     primary: (
         default: (
-            background          : green,
-            border-color        : yellow,
-            color               : #444
+            background          : color(neutral, dark),
+            border-color        : color(neutral, dark),
+            color               : color(neutral, white)
         ),
         hover: (
-            background          : blue,
-            border-color        : pink,
-            color               : rebeccaPurple
+            background          : color(neutral, light),
+            border-color        : color(neutral, light),
+            color               : color(neutral, darker)
         )
     ),
     secondary: (
@@ -48,17 +48,5 @@ $buttons: (
             border-color        : DeepPink,
             color               : DeepPink
         )
-    ),
-    ghost: (
-        default: (
-            background          : transparent,
-            border-color        : yellow,
-            color               : #444
-        ),
-        hover: (
-            background          : inherit,
-            border-color        : pink,
-            color               : rebeccaPurple
-        )
-    ),
+    )
 );

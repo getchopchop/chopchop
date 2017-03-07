@@ -15,3 +15,8 @@
     border-color: button($button, $state, border-color);
     color: button($button, $state, color);
 }
+
+@mixin button-ghost-colors($button, $state) {
+    background: transparent;
+    color: button($button, $state, background);
+}
