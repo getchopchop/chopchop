@@ -43,3 +43,35 @@
 %tag--badge {
     border-radius: spacing(xl);
 }
+
+
+/**
+ * Has Tag
+ */
+
+.has-tag {
+    position: relative;
+
+    .tag {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        max-width: 100%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        z-index: 1;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 2px 2px;
+        border-color: transparent transparent rgba(0,0,0,.1) transparent;
+    }
+}

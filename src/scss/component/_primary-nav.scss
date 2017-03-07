@@ -1,0 +1,160 @@
+.primary-nav,
+%primary-nav {
+    @extend %nav;
+    @extend %nav--pills;
+
+    ul {
+        @extend %u-list-unstyled;
+    }
+
+    li {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    @include breakpoint(max-width screen(sm, max)) {
+        a {
+            border-bottom: 1px solid color(neutral,light);
+            position: relative;
+            padding-right: 10%;
+
+            &:after {
+                position: absolute;
+                right: spacing(lg);
+                top: 35%;
+            }
+        }
+
+        .has-child:not(.is-active):not(.has-active-child) > a:after {
+            @include chevron(color(contextual, success), spacing(xs), down, 2px);
+        }
+
+        .has-active-child > a {
+            background-color: color(contextual, success-light);
+            border-bottom-color: color(neutral, white);
+
+            &:after {
+                top: 45%;
+                @include chevron(color(contextual, success), spacing(xs), up, 2px);
+            }
+        }
+
+        .is-active > a {
+            background-color: color(contextual, success);
+            color: color(neutral, white);
+            border-bottom-color: color(neutral, white);
+            font-weight: bold;
+
+            &:after {
+                top: 30%;
+                right: spacing(lg) * 1.1;
+                @include tick(color(neutral, white), spacing(sm)*1.2);
+            }
+        }
+    }
+
+    @include breakpoint(screen(md)) {
+        
+        z-index: $z-1;
+
+        /* hide browse all link and inline the rest */
+        .nav__depth-1 {
+            > a {
+                display: none;
+            }
+
+            > ul {
+                @include flex;
+            }
+        }
+
+        /* Main menu items */
+        li.level0,
+        .nav__depth-2 {
+            position: relative;
+            z-index: $z-1;
+
+            /* Top level link style */
+            > a {
+                font-weight: $bold;
+                margin-right: 1px;
+                //color: color(neutral, white);
+                font-size: 1.1em;
+
+                &:hover {
+                    background-color: color(contextual, error);
+                    color: color(neutral, white);
+                }
+            }
+
+            /* Show and hide sub menu */
+            > ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                padding: spacing(lg) spacing(lg) spacing(xl);
+                background-color: color(neutral, white);
+                border: 1px solid color(neutral,light);
+                border-top: 3px solid color(contextual, error);
+                border-bottom-width: 3px;
+                box-shadow: 0 10px 20px 0 rgba(color(neutral, black),0.6);
+                white-space: nowrap;
+
+                > li {
+                    width: 15.5em;
+                    vertical-align: top;
+                    padding-right: spacing();
+                }
+            }
+
+            @include breakpoint(max-width screen(lg)) {
+                &:nth-last-child(-n+3) > ul {
+                    right: 1px;
+                    left: auto;
+                }
+            }
+
+            &:hover {
+                > a {
+                    background-color: color(contextual, error);
+                    color: color(neutral, white);
+                }
+
+                > ul {
+                    display: block;
+                }
+            }
+
+            /* add columns if multiple levels */
+            &.has-multi-level:hover > ul {
+                > li {
+                    display: inline-block;
+                }
+            }
+        }
+
+        /* Make items a bit thinner */
+        li.level1.has-child > a,
+        li.level0 li:not(.has-child) a,
+        .nav__depth-3.has-child > a,
+        .nav__depth-2 li:not(.has-child) a {
+            padding-top: spacing(xs)/2;
+            padding-bottom: spacing(xs)/2;
+            padding-left: spacing(sm);
+            padding-right: spacing(sm);
+        }
+
+        /* Third level */
+        li.level1.has-child > a,
+        .nav__depth-3.has-child > a {
+            font-weight: $bold;
+            color: color(contextual, error);
+            padding-bottom: spacing(xs);
+            border-bottom: 1px solid color(neutral,light);
+            margin-bottom: spacing(sm);
+        }
+        
+    }
+
+}

@@ -1,0 +1,43 @@
+// =============================================
+// Layer
+// =============================================
+
+.layer {
+    @include ratio;
+    position: relative;
+    display: block;
+
+    img {
+        position: absolute;
+        max-width: 70%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    &--lg img {
+        max-width: 90%;
+    }
+}
+
+
+// =============================================
+// Layer
+// =============================================
+
+.layer--4x3 {
+    @include ratio(75%);
+}
+
+
+// =============================================
+// Layer Fill
+// =============================================
+
+.layer--fill {
+    img {
+        min-width: 100%;
+        min-height: 100%;
+        max-width: none;
+    }
+}

@@ -1,0 +1,14 @@
+// =============================================
+// Loading Message
+// =============================================
+
+.loading {
+    @include flex;
+    @include align-items(center);
+    
+    &__text {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: spacing(xs);
+    }
+}

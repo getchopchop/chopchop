@@ -1,0 +1,22 @@
+// =============================================
+// Product bar
+// =============================================
+
+.product-bar {
+    z-index: $z-3;
+    top: -100%;
+    left: 0;
+    right: 0;
+    background-color: color(neutral, white);
+    transition: top .6s;
+
+    &.is-active {
+        top: 0;
+        position: fixed;
+        box-shadow: 0 5px 10px 0 rgba(color(neutral, black),0.2);
+    }
+
+    &__title {
+        @include ellipsis;
+    }
+}

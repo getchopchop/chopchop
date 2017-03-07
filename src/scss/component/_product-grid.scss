@@ -1,0 +1,25 @@
+// =============================================
+// Product Grid
+// =============================================
+
+.product-grid {
+    @extend %grid;
+    @extend %g-gutter;
+
+    > * {
+        @extend %g-col-xs-6;
+        @extend %g-col-sm-4;
+        @extend %g-col-lg-3;
+        @extend %u-full-height;
+
+        @include breakpoint(screen(xl)) {
+            width: 20%;
+            flex-basis: 19em;
+            flex-grow: 1;
+        }
+    }
+
+    &__placeholder {
+        margin-bottom: 0;
+    }
+}

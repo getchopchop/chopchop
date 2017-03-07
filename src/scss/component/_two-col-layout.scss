@@ -1,0 +1,17 @@
+// =============================================
+// 2 Col Layout
+// =============================================
+
+.two-col-layout {
+    @extend %grid;
+    @extend %g-gutter-x-lg;
+    @extend %g-stretch-last;
+
+    &__side {
+        min-width: 16em;
+        max-width: 20em;
+        width: 20%;
+        @extend %u-hidden-xs;
+        @extend %u-hidden-sm;
+    }
+}

@@ -1,0 +1,30 @@
+// =============================================
+// Header
+// =============================================
+
+.header {
+    position: relative;
+
+    &__body {
+        padding-top: spacing(sm);
+        padding-bottom: spacing(sm);
+    }
+
+    &__anchor {
+        @extend %u-hidden-xs;
+        position: absolute;
+        top: spacing(xs);
+        right: 0;
+    }
+
+    @include breakpoint(screen(md)) {
+        &__body {
+            padding-top: spacing(lg);
+            padding-bottom: spacing(lg);
+        }
+    }
+
+    a:not(.btn) {
+        text-decoration: none;
+    }
+}

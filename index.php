@@ -96,12 +96,16 @@
     <script src="<?php echo getUrl('build/vendor/picturefill/picturefill.js'); ?>" async></script>
     <script src="<?php echo getUrl('build/vendor/jquery/jquery.js'); ?>"></script>
     <script src="<?php echo getUrl('build/vendor/jquery/jquery-ui.min.js'); ?>"></script>
-    <?php /*?>
+    
+    <script src="<?php echo getUrl('build/vendor/llapgoch/melodeon.widget.js'); ?>"></script>
     <script src="<?php echo getUrl('build/vendor/enquire/enquire.js'); ?>"></script>
-    <?php */ ?>
+    <script src="<?php echo getUrl('build/js/chop.enquire.breakpoint.js'); ?>"></script>
     <script src="<?php echo getUrl('build/js/chop.base.widget.js'); ?>"></script>
     <script src="<?php echo getUrl('build/js/chop.toggle.widget.js'); ?>"></script>
     <script src="<?php echo getUrl('build/js/chop.collapsible.widget.js'); ?>"></script>
+    <script src="<?php echo getUrl('build/js/chop.scroll.js'); ?>"></script>
+    <script src="<?php echo getUrl('build/js/chop.listing.js'); ?>"></script>
+    <script src="<?php echo getUrl('build/js/chop.product.js'); ?>"></script>
     <script src="<?php echo getUrl('build/js/script.js'); ?>"></script>
 
     <?php if(!isset($_GET['preview'])) : ?>

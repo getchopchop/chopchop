@@ -1,0 +1,44 @@
+.checklist,
+%checklist {
+    @extend %nav;
+    
+    > * {
+        margin-bottom: .3em;
+    }
+
+    a {
+        padding-left: spacing(xl);
+        position: relative;
+        display: inline-block;
+
+        &::before,
+        &::after {
+            display: block;
+            content: "";
+            position: absolute;
+        }
+
+        &::before {
+            border: 1px solid color(neutral, dark);
+            height: spacing();
+            width: spacing();
+            left: 0;
+            top: .22em;
+        }
+
+        &::after {
+            height: calc(#{spacing()} - 4px);
+            width: calc(#{spacing()} - 4px);
+            left: 3px;
+            top: calc(.22em + 3px);
+        }
+
+        &:hover::after {
+            background-color: color(neutral, dark);
+        }
+    }
+
+    a.is-active::after {
+        background-color: color(contextual, error);
+    }
+}

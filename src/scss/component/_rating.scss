@@ -1,0 +1,98 @@
+// =============================================
+// Rating used on reviews
+// =============================================
+
+.rating {
+    @include flex;
+    @include align-items(center);
+
+    &__stars,
+    &__num {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__num a {
+        vertical-align: text-bottom;
+    }
+
+    &__stars {
+        position: relative;
+        margin-right: spacing(xs);
+    }
+
+    svg {
+        fill: color(neutral, dark);
+    }
+
+    &__negative,
+    &__positive {
+        white-space: nowrap;
+    }
+
+    &__negative {
+        position: relative;
+    }
+
+    &__positive {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        overflow: hidden;
+
+        svg {
+            fill: color(contextual, warning);
+            stroke-width: 1px;
+            stroke: darken(color(contextual, warning), 5%);
+        }
+    }
+    
+    &--lg {
+        font-size: 180%;
+        line-height: 1.2;
+    }
+}
+
+
+// =============================================
+// Rating with inputs
+// based on http://codepen.io/gazjoy/pen/jyEYgV
+// =============================================
+
+.rating--input {
+    &:not(:checked) {
+        input {
+            position: absolute;
+            top: -9999px;
+            clip: rect(0,0,0,0);
+        }
+        label {
+            float: right;
+            margin: 0 .1em 0 0;
+            overflow: hidden;
+            white-space: nowrap;
+            cursor: pointer;
+            color: color(neutral, dark);
+            position: relative;
+            transition: transform .6s;
+            
+            &:active {
+                top: 1px;
+                left: 1px;
+            }
+        }
+        
+        label:hover .icon,
+        label:hover ~ label .icon {
+            color: color(contextual, warning);
+        }
+    }
+    
+    input:checked ~ label .icon {
+        color: color(contextual, warning);
+        fill: currentColor;
+        stroke-width: 1px;
+        stroke: darken(color(contextual, warning), 2%);
+    }
+}

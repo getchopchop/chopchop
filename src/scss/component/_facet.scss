@@ -1,0 +1,20 @@
+// =============================================
+// Facet
+// =============================================
+
+.facet {
+    margin-bottom: spacing();
+}
+
+.facet__header {
+    > * {
+        margin-bottom: 0;
+    }
+}
+
+.facet__body {
+    padding-top: spacing(xs);
+    margin-bottom: spacing(xl);
+    max-height: 20em;
+    overflow: auto;
+}
