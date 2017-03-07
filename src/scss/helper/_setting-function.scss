@@ -1,0 +1,16 @@
+/**
+ * Button
+ */
+
+@function button($button: 'base', $state: 'default', $var: 'color') {
+    @return map-get(map-get(map-get($buttons, $button), $state), $var);
+}
+
+
+/**
+ * Separator
+ */
+
+@function seperator($seperator, $var: 'width') {
+    @return map-get(map-get($separators, $seperator), $var);
+}
