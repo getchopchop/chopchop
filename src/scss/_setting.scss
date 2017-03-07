@@ -1,0 +1,52 @@
+/**
+ * Button
+ */
+
+$buttons: (
+    base: (
+        default: (
+            background          : green,
+            border-color        : green,
+            color               : DeepPink
+        ),
+        hover: (
+            background          : blue,
+            border-color        : pink,
+            color               : rebeccaPurple
+        )
+    ),
+    primary: (
+        default: (
+            background          : color(neutral, dark),
+            border-color        : color(neutral, dark),
+            color               : color(neutral, white)
+        ),
+        hover: (
+            background          : color(neutral, light),
+            border-color        : color(neutral, light),
+            color               : color(neutral, darker)
+        )
+    ),
+    secondary: (
+        default: (
+            background          : DeepPink,
+            border-color        : DeepPink,
+            color               : DeepPink
+        ),
+        visited: (
+            background          : DeepPink,
+            border-color        : DeepPink,
+            color               : DeepPink
+        ),
+        hover: (
+            background          : DeepPink,
+            border-color        : DeepPink,
+            color               : DeepPink
+        ),
+        active: (
+            background          : DeepPink,
+            border-color        : DeepPink,
+            color               : DeepPink
+        )
+    )
+);

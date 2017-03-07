@@ -1,0 +1,21 @@
+/**
+ * Toggle Icon
+ *
+ * @since 3.0.0
+ */
+
+.toggle-icon,
+%toggle-icon {
+    @include flex;
+    @include justify-content(space-between);
+    @include align-items(center);
+    
+    &.is-active .toggle-icon__icon {
+        @include minus(color(neutral, light), 16px, 2px);
+    }
+
+    &:not(.is-active) .toggle-icon__icon {
+        @include plus(color(neutral, light), 16px, 2px);
+    }
+    
+}

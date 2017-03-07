@@ -1,8 +1,8 @@
 ---
 size:
-    - X-Small
-    - Small
-    - Medium
-    - Large
-    - X-Large
-    - XX-Large
+    - "X-Small"
+    - "Small"
+    - "Medium"
+    - "Large"
+    - "X-Large"
+    - "XX-Large"

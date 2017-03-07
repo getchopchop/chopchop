@@ -1,0 +1,30 @@
+/**
+ * Separator
+ *
+ * @since 3.0.0
+ */
+
+.u-separator,
+%u-separator {
+    border: 1px solid color(neutral, light);
+}
+
+.u-separator-top,
+%u-separator-top {
+    border-top: 1px solid color(neutral, light);
+}
+
+.u-separator-bottom,
+%u-separator-bottom {
+    border-bottom: 1px solid color(neutral, light);
+}
+
+.u-separator-left,
+%u-separator-left {
+    border-left: 1px solid color(neutral, light);
+}
+
+.u-separator-right,
+%u-separator-right {
+    border-right: 1px solid color(neutral, light);
+}

@@ -78,8 +78,10 @@
                 'print_code' => !((isset($_GET['code']) && $_GET['code'] === false)),
                 'print_codeactive' => !((isset($_GET['codeactive']) && $_GET['codeactive'] === false))
                 );
-
-                echo Section::get(getRequestPath(), $options);
+                $requestPath = Content::getRequestPath();
+                echo Content::getContent($requestPath, $options);
+                //trying to make Section redundant, so I've commented out for now - RL
+                //echo Section::get(getRequestPath(), $options);
             }?>
     <?php if(!isset($_GET['preview'])) : ?>
             </main>

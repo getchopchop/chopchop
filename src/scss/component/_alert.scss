@@ -1,5 +1,7 @@
 /**
  * Alert
+ *
+ * @since 1.0.0
  */
 
 .alert,
@@ -59,11 +61,23 @@
 .alert--success,
 %alert--success {
     background-color: color(contextual, success-light);
-    border-color: color(contextual, success);
+    border-color: darken(color(contextual, success-light),12%);
+}
+
+.alert--warning,
+%alert--warning {
+    background-color: color(contextual, warning-light);
+    border-color: darken(color(contextual, warning-light),15%);
 }
 
 .alert--error,
 %alert--error {
     background-color: color(contextual, error-light);
-    border-color: color(contextual, error);
+    border-color: darken(color(contextual, error-light),5%);
+}
+
+.alert--info,
+%alert--info {
+    background-color: color(contextual, info-light);
+    border-color: darken(color(contextual, info-light),5%);
 }

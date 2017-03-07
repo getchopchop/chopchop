@@ -1,6 +1,7 @@
 <?php
     require_once(__DIR__ . '/lib/Spyc.php');
     require_once(__DIR__ . '/lib/navigation.php');
+    require_once(__DIR__ . '/lib/content.php');
 
     error_reporting(E_ALL);
 
@@ -52,7 +53,7 @@
             $data = $data[array_rand($data)];
         } else {
             if(is_array($data[$section])) {
-                if(empty($num)) {
+                if(is_null($num)) {
                     $data = $data[$section][array_rand($data[$section])];
                 } else {
                     $data = $data[$section][$num];
