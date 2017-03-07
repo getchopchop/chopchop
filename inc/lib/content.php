@@ -4,12 +4,15 @@ class Content
 {
 
     public static function getRequestPath() {
+
         $base = substr($_SERVER['SCRIPT_NAME'], 0, strpos($_SERVER['SCRIPT_NAME'], 'index.php'));
         $url_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
         return substr($url_path, strlen($base) - 1);
     }
 
     public static function getBaseFilePath() {
+
         return dirname(dirname(dirname(__FILE__)));
     }
 
@@ -23,6 +26,7 @@ class Content
         $html = '';
         $patternPath = self::getBaseFilePath() . $requestPath;
         $patternDirs = scandir($patternPath);
+        $i = 0;
 
         foreach($patternDirs as $patternSection) {
             //we are in the pattern > section
@@ -44,7 +48,8 @@ class Content
                 if (substr($patternSectionFile, -5) == '.html') continue;
 
                 $patternSectionFilePath = $patternPath . $patternSection . '/' . $patternSectionFile;
-                $html .= self::sectionContent($patternSectionFile, $patternSectionFilePath);
+                $html .= self::sectionContent($patternSectionFile, $patternSectionFilePath, $i);
+                $i++;
             }
 
             $html .= '</section></div></section>';
@@ -55,6 +60,7 @@ class Content
     }
 
     public static function sectionTitle($options, $section) {
+
         if(!isset($options['print_title'])) {
             return '';
         }
@@ -73,10 +79,11 @@ class Content
         return $title;
     }
 
-    public static function sectionContent($section, $patternSectionFilePath) {
+    public static function sectionContent($section, $patternSectionFilePath, $i = 0) {
 
         $section        = substr($section, 0, -4);
         $sectionTitle   = ucwords( str_replace('-', ' ', $section) );
+        $sectionId      = $section . '-' . $i;
 
         $fileContents = self::getTemplate($patternSectionFilePath);
 
@@ -87,14 +94,14 @@ class Content
         $content = '<section id="section-'.$section.'" class="u-section-xs-bottom">';
         $content    .= '<div><section class="u-separator-top u-block-sm">';
         $content        .= '<div class="u-space-sm-bottom grid g-center g-stretch-first"><div><h4>'.$sectionTitle.'</h4></div><div class="cc-title__actions"><ul class="nav nav--inline nav--pills">';
-        $content        .= '<li><a href="#" data-cc-toggle-action="toggle" data-cc-toggle-target="#cc-code-' . $section . '" class="">Code</a></li>';
+        $content        .= '<li><a href="#" data-cc-toggle-action="toggle" data-cc-toggle-target="#cc-code-' . $sectionId . '" class="">Code</a></li>';
         $content        .= '<li><a href="'.self::getPreviewUrl($patternSectionFilePath).'" class="">Preview</a></li>';
         $content        .= '</ul></div></div>';
         $content        .= '<div class="cc-' . $section . '">';
         $content        .= '<div>';
         $content        .= $fileContents;
         $content        .= '</div>';
-        $content        .= '<div class="u-toggle" id="cc-code-' . $section . '" data-cc-toggle-group="cc-section-' . $section . '"><pre class="cc-code"><code class="language-html">';
+        $content        .= '<div class="u-toggle" id="cc-code-' . $sectionId . '" data-cc-toggle-group="cc-section-' . $section . '"><pre class="cc-code"><code class="language-html">';
         $content        .= htmlentities($fileContents);
         $content        .= '</code></pre></div>';
         $content    .= '</div></section></div>';
@@ -104,10 +111,12 @@ class Content
     }
 
     private static function getBaseUrl() {
+
        return dirname($_SERVER['SCRIPT_NAME']);
     }
 
     public static function getUrl($url = false) {
+
         $base_url = self::getBaseUrl();
 
         if($url && substr($url,0,1) === '/' ) {
@@ -124,7 +133,6 @@ class Content
     public static function getPreviewUrl($filePath) {
 
         $pathArray  = explode('/', $filePath);
-        //var_dump($pathArray);die;
         $file       = array_pop($pathArray);
         $file       = substr($file, 0, -4);
         $directory  = array_pop($pathArray);
@@ -145,6 +153,7 @@ class Content
     public static function loadPreview($requestPath) {
 
         $patternSectionFile = self::getBaseFilePath() . $requestPath.'.php';
+
         return self::getTemplate($patternSectionFile);
     }
 }
