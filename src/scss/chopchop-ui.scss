@@ -370,8 +370,16 @@
         max-width: container(sm);
         padding: spacing(xl);
     }
+
+    code {
+        background-color: color(neutral, lightest);
+        font-size: 11px;
+    }
 }
 
+/**
+ * Demo
+ */
 
 .cc-demo {
     &:not(:first-child) {
@@ -430,5 +438,33 @@
             padding: 0 !important;
             margin: 0 !important;
         }
+    }
+}
+
+
+/**
+ * Color
+ */
+
+.cc-color__swatch {
+    height: 4em;
+    border-radius: $border-radius $border-radius 0 0;
+}
+.cc-color__body {
+    padding: spacing(sm);
+    border-radius: 0 0 $border-radius $border-radius;
+    background-color: color(neutral, lightest);
+
+    > * {
+        margin: 0;
+    }
+
+    p {
+        font-size: 11px;
+        color: color(neutral, dark);
+    }
+
+    code {
+        padding-left: 0;
     }
 }
