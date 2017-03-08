@@ -1,4 +1,5 @@
-<div class="modal" id="modal" data-cc-toggle-target-callback="#overlay" data-cc-toggle-trigger-type="direct-only" data-cc-toggle-action="deactivate" data-cc-toggle-target="#modal">
+<div class="modal" id="modal" data-cc-toggle-keyboard-close="true" data-cc-toggle-target-callback="#overlay" data-cc-toggle-trigger-type="direct-only" data-cc-toggle-action="deactivate" data-cc-toggle-target="#modal">
+
     <div class="modal__dialog">
 
         <div id="modal-tab-1" data-cc-toggle-target="#modal"  data-cc-toggle-target-callback=".close, .js-modal-content-1" data-cc-toggle-group="modal-tabs" class="u-toggle modal-tab">
