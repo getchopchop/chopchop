@@ -156,8 +156,7 @@
     padding-bottom: spacing(lg);
 }
 
-.cc-accordion__header,
-.cc-accordion__body {
+.cc-accordion__header {
     padding-left: spacing(lg);
     padding-right: spacing(lg);
 }
@@ -173,7 +172,7 @@
 }
 
 .cc-accordion__body {
-    padding-bottom: spacing(lg);
+    padding-bottom: spacing(xl);
 
     ol {
         list-style: none;
@@ -182,8 +181,17 @@
     }
 
     li {
-        margin-bottom: 5px;
         font-size: 13px;
+    }
+
+    a {
+        color: color(neutral, lighter);
+        display: block;
+        padding: 5px spacing(lg);
+
+        &:hover {
+            background-color: color(neutral, darker);
+        }
     }
 }
 
