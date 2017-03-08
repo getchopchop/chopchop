@@ -4,4 +4,4 @@
 <script src="<?php echo getUrl('build/js/chop.scroll.js'); ?>"></script>
 <script src="<?php echo getUrl('build/js/chop.listing.js'); ?>"></script>
 <script src="<?php echo getUrl('build/js/chop.product.js'); ?>"></script>
-<script src="<?php echo getUrl('build/js/script.js'); ?>"></script>
+<script src="<?php echo getUrl('build/js/chop.kitchen-sink.js'); ?>"></script>
