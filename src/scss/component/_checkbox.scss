@@ -6,37 +6,37 @@
 
 
 .checkbox {
-    
+
     &__label {
         @include flex;
         @include align-items(center);
         position: relative;
         margin-bottom: 0;
     }
-    
+
     input[type="checkbox"] {
         position: absolute;
         opacity: 0;
-        
+
         & + .checkbox__label {
             &::before {
-                @include square(color(neutral, white), 1.4em);
+                @include square(color(neutral, white), 1.3em);
                 content: "";
                 border: 2px solid color(neutral, light);
                 margin-right: spacing();
                 cursor: pointer;
-                transition: all 250ms ease;
+                transition: all $animation-speed ease;
             }
             &::after {
-                @include tick(color(neutral, white), 10px, 4px);
+                @include tick(color(neutral, white), 10px, 2px);
                 position: absolute;
                 left: 8px;
                 top: 4px;
                 opacity: 0;
-                transition: opacity 250ms ease;
+                transition: opacity $animation-speed ease;
             }
         }
-        
+
         &:checked {
             + .checkbox__label {
                 &::before {
@@ -44,12 +44,12 @@
                     background-color: color(neutral, white);
                 }
                 &::after {
-                    @include tick(color(contextual, success), 10px, 4px);
+                    @include tick(color(contextual, success), 9px, 3px);
                     opacity: 1;
                 }
             }
         }
-        
+
         &:focus {
             + .checkbox__label {
                 &::before {
@@ -59,7 +59,7 @@
                 }
             }
         }
-        
+
         &:disabled {
             + .checkbox__label {
                 &::before {
@@ -68,7 +68,7 @@
                 }
             }
         }
-        
+
         + .checkbox__label {
             &:empty {
                 &::before {
@@ -76,6 +76,6 @@
                 }
             }
         }
-        
+
     }
 }

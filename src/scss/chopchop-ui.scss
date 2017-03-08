@@ -33,6 +33,7 @@
     @include align-items(center);
     background-color: color(neutral,darkest);
     color: #fff;
+    border-bottom: 1px solid color(neutral, darker);
 
     a {
         @include flex;
@@ -87,16 +88,17 @@
 .cc-devbar {
     position: fixed;
     width: 100%;
-    height: 5px;
+    height: 6px;
     bottom: 0;
     right: 0;
     font-size: 12px;
+    z-index: 9999;
 
     &__bp {
         position: absolute;
         bottom: 0;
         right: 0;
-        padding: 4px 8px;
+        padding: 5px 10px;
         &:after {
             content: "xs max: #{screen(xs, max)}";
 
@@ -131,7 +133,8 @@
     top: 0;
     bottom: 0;
     width: 200px;
-    left: -100%;
+    left: 0;
+    transform: translateX(-100%);
     z-index: 998;
     background-color: color(neutral,darkest);
     padding: 60px 10px;
@@ -139,7 +142,7 @@
     color: color(neutral, lighter);
 
     &.is-active {
-        left: 0;
+        transform: translateX(0);
     }
 
     ol {
@@ -155,6 +158,12 @@
             content: counters(section,".") ". ";
             font-size: $font-size-sm;
             color: color(neutral, dark);
+            width: 30px;
+            display: inline-block;
+        }
+
+        a {
+            color: color(neutral, lightest);
         }
 
         ol {
@@ -162,85 +171,19 @@
             margin-top: 7px;
             font-weight: normal;
             font-size: 14px;
+
+            a {
+                color: color(neutral, lighter);
+            }
         }
     }
 
     a {
-        color: color(neutral, lighter);
         text-decoration: none;
 
         &:hover {
             text-decoration: underline;
         }
-    }
-}
-
-
-/**
- * Page Wrapper
- */
-
-.cc-section {
-    border: 5px solid color(neutral, lighter);
-    border-top: 0;
-    background-color: color(neutral, white);
-}
-
-
-/**
- * Title Container
- */
-
-.cc-title-container {
-}
-
-
-/**
- * Title
- */
-
-.cc-title {
-    background-color: color(neutral, lighter);
-    @include flex;
-    @include justify-content(space-between);
-    @include align-items(center);
-    padding: 10px 5px;
-
-    * {
-        margin: 0;
-        padding: 0;
-        font-size: 14px;
-        display: inline-block;
-        list-style: none;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    h2 {
-        font-size: 16px;
-    }
-
-    code {
-        font-size: 12px;
-        font-weight: normal;
-    }
-}
-
-
-/**
- * Description
- */
-
-.cc-title-desc {
-    padding: 20px 20px 0;
-    border-left: 5px solid color(neutral, lighter);
-    border-right: 5px solid color(neutral, lighter);
-    border-top: 0;
-
-    > *:last-child {
-        margin-bottom: 0;
-        border-bottom: 2px solid color(neutral, lighter);
-        padding-bottom: 20px;
     }
 }
 
@@ -311,35 +254,12 @@
 
 
 /**
- * Overlay Override
- */
-
-//.cc-overlay .overlay {
-//    height: 50vh;
-//    display: block;
-//    position: static;
-//}
-
-
-/**
- * Code
- */
-
-.cc-code {
-    margin: 0 !important;
-    display: block;
-    max-height: 20em;
-    overflow: scroll;
-    background-color: color(neutral, lighter) !important;
-}
-
-
-/**
  * Pattern
  */
 
 .cc-pattern {
     width: 96%;
+    max-width: container(xl);
     margin: 3em auto;
     position: relative;
 
@@ -353,6 +273,17 @@
         border: 1px solid color(neutral, lighter);
         border-radius: $border-radius $border-radius 0 0;
         padding: spacing() spacing(xl);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h3 {
+            padding-right: spacing();
+        }
+
+        svg {
+            fill: color(neutral, light);
+        }
 
         * {
             margin: 0;
@@ -392,7 +323,7 @@
         align-items: center;
 
         p {
-            padding: 3px;
+            padding: 3px 6px;
             font-size: 13px;
             font-weight: bold;
             background-color: color(neutral, lightest);
@@ -432,6 +363,9 @@
         background-color: color(neutral, lightest);
         padding: spacing(xl);
         box-shadow:inset 0 3px 3px 0 rgba(0,0,0,.1);
+        max-height: 20em;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
 
         pre,
         code {
@@ -449,11 +383,13 @@
 .cc-color__swatch {
     height: 4em;
     border-radius: $border-radius $border-radius 0 0;
+    border: 1px solid rgba(0,0,0,.1);
 }
 .cc-color__body {
     padding: spacing(sm);
     border-radius: 0 0 $border-radius $border-radius;
     background-color: color(neutral, lightest);
+    border: 1px solid rgba(0,0,0,.1);
 
     > * {
         margin: 0;
@@ -467,4 +403,16 @@
     code {
         padding-left: 0;
     }
+}
+
+
+/**
+ * Visible in chopchop
+ */
+
+body:not(.cc-mode-library) .u-visible-cc {
+    display: none !important;
+}
+body.cc-mode-library .u-visible-cc {
+    display: block !important;
 }

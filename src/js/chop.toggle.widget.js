@@ -284,7 +284,7 @@
             if(!type){
                 type = this.options.action;
             }
-            
+
             // Flip the actions if we're toggling, but only for this instance -- each element down the chain
             // should also toggle
             if(type == Static.ACTION_TOGGLE){

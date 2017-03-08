@@ -1,1 +1,0 @@
-<p>The modal is hidden off screen by default. <a href="#" class="js-cc-toggle js-modal-content-1 " data-cc-toggle-action="activate" data-cc-toggle-target="#modal-tab-1">Show modal 1 content</a> or <a href="#" class="js-cc-toggle js-modal-content-2" data-cc-toggle-action="activate" data-cc-toggle-target="#modal-tab-2">Show modal 2 content</a>.</p>

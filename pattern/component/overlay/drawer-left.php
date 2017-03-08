@@ -1,3 +1,5 @@
+<p class="u-visible-cc"><a href="#" class="btn" data-cc-toggle-target="#drawer-left-1" data-cc-toggle-action="activate">Active left drawer</a></p>
+
 <div class="drawer drawer--left" id="drawer-left" data-cc-toggle-target-callback="#overlay">
     <div class="drawer__dialog">
 

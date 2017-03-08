@@ -36,13 +36,13 @@
     <link rel="stylesheet" type="text/css" href="<?php echo getUrl('build/css/chopchop-ui.css'); ?>" media="screen" />
     <?php if(!isset($_GET['preview'])) : ?>
     <link rel="stylesheet" type="text/css" href="<?php echo getUrl('build/vendor/prismjs/prism.css'); ?>" media="all" />
-        
+
     <?php endif; ?>
 </head>
 <body class="cc-mode-<?php echo !isset($_GET['preview'])?'library':'preview' ?>">
-    
+
     <div class="cc-devbar"><span class="cc-devbar__bp"></span></div>
-    
+
     <?php if(!isset($_GET['preview'])) : ?>
         <header class="cc-header">
             <div class="u-container">
@@ -62,7 +62,7 @@
 
         <div class="site-wrapper cc-site-wrapper">
 
-            <nav class="cc-nav" id="cc-nav" data-cc-cascade="cc-menu-trigger">
+            <nav class="cc-nav" id="cc-nav">
                 <div class="block-content site-navigation__content">
                     <?php require_once('inc/template/nav.php'); ?>
                 </div>
@@ -107,7 +107,7 @@
     <?php if(!isset($_GET['preview'])) : ?>
         <script src="<?php echo getUrl('build/vendor/jquery.cookie/jquery.cookie.js'); ?>"></script>
         <script src="<?php echo getUrl('build/vendor/prismjs/prism.js'); ?>"></script>
-<!--        <script src="--><?php //echo getUrl('build/js/chopchop-ui.js'); ?><!--"></script>-->
+        <script src="<?php echo getUrl('build/js/chopchop-ui.js'); ?>"></script>
     <?php endif; ?>
 
 </body>

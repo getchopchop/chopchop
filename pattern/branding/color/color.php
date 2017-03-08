@@ -20,13 +20,9 @@
             $bits = explode("-", $class_);
             $group = $bits[2];
             ?>
-            <?php if($group != $previous_group && $group != 'white' && $group != 'black' && $group != 'error' && $group != 'warning') { ?>
+            <?php if($group != $previous_group) { ?>
                 <div class="g-col-xs-12">
-                    <?php if($group == 'success') : ?>
-                        <h3>contextual</h3>
-                    <?php else : ?>
-                        <h3><?php echo $group ?></h3>
-                    <?php endif; ?>
+                    <h3><?php echo $group ?></h3>
                 </div>
             <?php
                 $previous_group = $group;
