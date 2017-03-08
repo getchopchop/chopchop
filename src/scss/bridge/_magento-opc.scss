@@ -1,0 +1,34 @@
+// =============================================
+// Hide Show Section & Hide Number also
+// Hide Show Checkmark tag and edit link
+// =============================================
+
+.opc {
+    .step-title .btn,
+    .allow.active .step-title .btn,
+    .step-title .tag,
+    .allow.active .step-title .tag {
+        visibility: hidden;
+    }
+    
+    /* States */
+    .allow {
+        .step-title {
+            .tag,
+            .btn {
+                visibility: visible;
+            }
+        }
+        .card {
+            @extend %u-fill-contextual-success-light;
+            border-color: darken(color(contextual, success-light),12%);
+        }
+    
+        &.active {
+            .card {
+                @extend %u-fill-neutral-white;
+                border-color: color(neutral, light);
+            }
+        }
+    }
+}

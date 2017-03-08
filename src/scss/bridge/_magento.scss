@@ -1,0 +1,305 @@
+// =============================================
+// Hides
+// =============================================
+
+.no-display,
+.required em,
+.wishlist-index-index .buttons-set {
+    @extend %u-hidden;
+}
+
+
+// =============================================
+// Visual Hides
+// =============================================
+
+p.required,
+p.back-link {
+    @extend %u-visually-hidden;
+}
+
+
+// =============================================
+// Common Tables
+// Specific tables in bridge/magento-table.scss
+// =============================================
+
+.data-table {
+    @extend %table;
+}
+
+
+// =============================================
+// Align
+// =============================================
+
+.a-right {
+    @extend %u-text-right;
+}
+
+.a-left {
+    @extend %u-text-left;
+}
+
+.a-center {
+    @extend %u-text-center;
+}
+
+
+// =============================================
+// Unstyle Lists
+// =============================================
+
+.opc,
+.form-list,
+.form-list ul,
+.sp-methods ul,
+.checkout-agreements,
+.checkout-types,
+.sp-methods dd,
+.gift-messages-form ol {
+    @extend %u-list-unstyled;
+}
+
+
+// =============================================
+// Buttons
+// =============================================
+
+.button {
+    @extend %btn;
+}
+
+
+// =============================================
+// Messages
+// =============================================
+
+.messages {
+    margin-bottom: spacing();
+}
+
+.messages > div > div,
+.global-site-notice {
+    @extend %u-container;
+    @extend %u-container-lg;
+}
+
+
+// =============================================
+// Alerts
+// =============================================
+
+.error-msg,
+.success-msg,
+.note-msg,
+.global-site-notice .notice-inner {
+    @extend %alert;
+}
+
+.error-msg {
+    @extend %alert--error;
+}
+
+.success-msg {
+    @extend %alert--success;
+}
+
+.note-msg,
+.notice-msg {
+    @extend %alert--info;
+}
+
+
+// =============================================
+// Loading
+// =============================================
+
+.please-wait,
+.scp-please-wait {
+    @extend .loading;
+}
+
+
+// =============================================
+// Form Structure
+// =============================================
+
+.my-account .buttons-set {
+    padding-top: 0;
+}
+
+.legend {
+    @extend %h3;
+}
+
+.field,
+.wide,
+.control,
+.sp-methods dt {
+    @extend %u-space-bottom;
+}
+
+.control,
+.agree,
+.sp-methods dt,
+.gift-messages-form p {
+    @extend .field-group;
+    @extend %grid;
+    @extend %g-center;
+    @extend %g-gutter-x;
+    @extend %g-stretch-last;
+    
+    label {
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+// =============================================
+// Form Validation
+// =============================================
+
+.validation-advice {
+//    @extend %alert;
+//    @extend %u-block-xs;
+//    @extend %alert--error;
+//    @extend %micro;
+//    @extend %u-space-xs-top;
+
+    margin-top: 0.2em;
+
+    &::before {
+        content: '';
+        @include triangle(color(contextual, error), 4px, 4px, up);
+        margin-right: 0.2em;
+        vertical-align: super;
+    }
+}
+
+.validation-failed {
+    @extend .is-error;
+}
+
+
+// =============================================
+// Pager
+// Used on reviews in accounts
+// =============================================
+
+.pager {
+//    @extend .flag;
+//    @extend .flag--center;
+//    @extend .flag--gutter;
+
+    > * {
+        margin-bottom: 0;
+    }
+}
+
+.limiter {
+    //@extend .flag;
+
+    > select {
+        margin-left: spacing(xs);
+        margin-right: spacing(xs);
+    }
+    > label {
+        margin-bottom: 0;
+    }
+}
+
+.toolbar-top {
+    .has-pager-limiter {
+        @extend %u-hidden;
+    }
+}
+.toolbar-bottom {
+    .has-amount-sorter {
+        @extend %u-hidden;
+    }
+}
+
+
+// =============================================
+// Price
+// =============================================
+
+//.price-box .price {
+//    font-weight: $bold;
+//}
+.price-box .special-price .price,
+.price-box .regular-price .price {
+    @extend %lead;
+}
+
+
+// =============================================
+// Cart
+// =============================================
+
+@include breakpoint(max-width screen(xs, max)) {
+    .cart .title {
+        display: block;
+        text-align: center;
+    }
+    .totals .button {
+        //@include btn--block;
+    }
+}
+
+.checkout-types {
+    @include breakpoint(screen(sm)) {
+        text-align: right;
+    }
+}
+
+.discount {
+    background-color: color(neutral, white);
+
+    .input-box {
+        @extend %field-group;
+    }
+
+    .button {
+        @extend %btn--sm;
+    }
+}
+
+.cart-collaterals {
+    .col2-set {
+        @extend %grid;
+        .col-1,
+        .col-2 {
+            @extend %g-col-sm-6;
+        }
+    }
+}
+
+
+.checkout-onepage-index {
+    .header__options {
+        display: none;
+    }
+    .header__logo,
+    .header__body {
+        justify-content: center;
+    }
+    .header__logo {
+        margin-right: 0;
+    }
+}
+
+// =============================================
+// Layer
+// =============================================
+
+.type-device {
+    .layer {
+        img {
+            max-width: 100px;
+        }
+    }
+}

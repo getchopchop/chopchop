@@ -114,3 +114,13 @@
 @import "component/rating";
 @import "component/scroll";
 @import "component/two-col-layout";
+
+
+/**
+ * bridge
+ */
+
+@import "bridge/iweb-media";
+@import "bridge/magento";
+@import "bridge/magento-opc";
+@import "bridge/wordpress";

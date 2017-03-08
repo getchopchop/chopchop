@@ -1,0 +1,193 @@
+// =============================================
+// Vars
+// =============================================
+
+@import "var";
+@import "helper/variable-function";
+
+@import "setting";
+@import "helper/setting-function";
+
+// =============================================
+// Helpers
+// =============================================
+
+@import "helper/flex";
+@import "helper/breakpoint";
+@import "helper/grid";
+@import "helper/section";
+@import "helper/shape";
+@import "helper/type";
+
+
+// =============================================
+// utility
+// =============================================
+
+@import "utility/align";
+@import "utility/block";
+@import "utility/clearfix";
+@import "utility/color";
+@import "utility/container";
+@import "utility/full-height";
+@import "utility/grid";
+@import "utility/image";
+@import "utility/list";
+@import "utility/section";
+@import "utility/separator";
+@import "utility/typography";
+@import "utility/visible";
+@import "utility/z-index";
+
+
+// =============================================
+// base
+// =============================================
+
+@import "base/form";
+@import "base/heading";
+@import "base/horizontal-rule";
+@import "base/html";
+@import "base/icon";
+@import "base/image";
+@import "base/table";
+@import "base/text";
+
+
+// =============================================
+// component
+// =============================================
+
+@import "component/title";
+@import "component/table";
+@import "component/card";
+
+
+// =============================================
+// Base
+// =============================================
+
+* {
+    text-align: left !important;
+}
+
+html {
+    background: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body {
+    font-family: $font-family;
+    background: #fff !important;
+    padding: 0 !important;
+    margin: 10pt !important;
+}
+
+a {
+    color: #2976c9 !important;
+}
+
+hr {
+    height: 1pt !important;
+}
+
+
+// =============================================
+// Align
+// =============================================
+
+.a-right {
+    @extend %u-text-right;
+}
+
+.a-left {
+    @extend %u-text-left;
+}
+
+.a-center {
+    @extend %u-text-center;
+}
+
+
+// =============================================
+// Header
+// =============================================
+
+.print-head {
+    margin-top: 20pt;
+    margin-bottom: 20pt;
+}
+
+
+// =============================================
+// Display
+// =============================================
+
+.header-container,
+.nav-container,
+.footer-container,
+.pager,
+.toolbar,
+.actions,
+.buttons-set {
+    @extend %u-hidden;
+}
+
+.page-print .data-table .cart-tax-info {
+    display: block !important;
+}
+
+
+// =============================================
+// Table
+// =============================================
+
+.data-table {
+    @extend .table;
+
+
+    th,td {
+        padding: spacing(sm);
+    }
+}
+
+.totals-table tr td:last-child {
+    width: 100pt;
+}
+
+
+// =============================================
+// Grid
+// =============================================
+
+.col2-set {
+    @extend %grid;
+    @extend %g-gutter;
+
+    > * {
+        @include grid-col(50%);
+    }
+}
+
+
+// =============================================
+// Product Item
+// =============================================
+
+.product-name {
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.item-options {
+    margin: 0;
+    dt,dd {
+        display: inline;
+        margin: 0;
+    }
+    dt {
+        font-weight: bold;
+    }
+}

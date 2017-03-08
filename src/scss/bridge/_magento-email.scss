@@ -1,0 +1,70 @@
+// =============================================
+// Import Chop Chop
+// =============================================
+
+@import "var";
+@import "helper/variable-function";
+
+@import "setting";
+@import "helper/setting-function";
+
+
+// =============================================
+// Spacing
+// =============================================
+
+$element-spacing: 7px;
+
+
+// =============================================
+// Brand Colors
+// =============================================
+
+$c-blue: color(neutral, black);
+$c-green: color(neutral, black);
+$c-yellow: color(neutral, black);
+$c-black: color(neutral, black);
+$c-white: color(neutral, white);
+$c-gray: color(neutral, dark);
+
+
+// =============================================
+// Base Colors
+// =============================================
+
+$c-text: color(neutral, dark);
+$c-text-gray: $c-gray;
+$c-text-white: $c-white;
+$c-text-primary: $c-blue;
+$c-action: $c-blue;
+$c-h2: $c-text;
+
+
+// =============================================
+// Email
+// =============================================
+
+$c-email-background: #EBEBEB;
+$c-email-background-secondary: #E1F0F8;
+$c-email-border: #C3CED4;
+$c-email-action: #3696C2;
+$c-email-cell: #F1F1F1;
+$c-email-highlighted-background: #FFFDD9;
+$c-email-highlighted-border: #FFF74C;
+
+
+// =============================================
+// Typography
+// =============================================
+
+$f-stack-sans: $font-family;
+$f-stack-serif: $font-family;
+$f-stack-special: $f-stack-sans;
+
+$f-size-xxl: 18px;
+$f-size-xl: 16px;
+$f-size-l: 15px;
+$f-size: 14px;
+$f-size-s: 13px;
+$f-size-xs: 12px;
+$f-size-xxs: 11px;

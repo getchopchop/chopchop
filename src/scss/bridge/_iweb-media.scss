@@ -1,0 +1,212 @@
+// =============================================
+// Thumb Lists
+// =============================================
+
+.product-media-thumbs,
+.product-zoom-thumbs,
+.iweb-media-zoom-thumbs {
+    @extend %u-list-unstyled;
+}
+
+
+// =============================================
+// Display
+// =============================================
+
+.iweb-media-hide {
+    @extend %u-hidden;
+}
+
+// =============================================
+// Thumb Lists
+// =============================================
+
+.iweb-media-container {
+	position: relative;
+}
+
+
+// =============================================
+// Zoom
+// =============================================
+
+.iweb-media-zoom-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 400;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.iweb-media-zoom {
+    overflow: hidden;
+    position: relative;
+    z-index: $z-10;
+    background: color(neutral, white);
+    max-width: 90%;
+    max-height: 90%;
+    width: 2500px;
+    height: 2500px;
+    top: 5%;
+    margin: 0 auto;
+}
+
+.iweb-media-icon-zoom,
+.iweb-zoom-close {
+    position: absolute;
+    z-index: $z-1;
+    
+}
+
+.iweb-media-icon-zoom {
+    bottom: 0;
+    right: 0;
+}
+
+.iweb-zoom-close {
+    top: spacing();
+    left: spacing();
+}
+
+.iweb-media-zoom .img-container {
+    position: relative;
+    height: 100%;
+    width: calc(100% - 120px);
+    overflow: hidden;
+    float: left;
+}
+
+
+// =============================================
+// Zoom Overlay
+// =============================================
+
+.iweb-media-zoom-cover {
+    @extend %overlay;
+    display: block;
+}
+
+
+// =============================================
+// Zoom Thumbs
+// =============================================
+
+.iweb-media-zoom-thumbs-container {
+    float: right;
+    width: 120px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.iweb-media-zoom-thumbs {
+    padding: spacing();
+}
+
+.iweb-media-zoom-thumbs li {
+    margin-bottom: spacing();
+}
+
+.iweb-media-zoom-thumbs img {
+    display: block;
+    width: 100%;
+}
+
+
+// =============================================
+// Zoom HTML Mode
+// =============================================
+
+.iweb-media-zoom .html-container{
+    position: absolute;
+    background: white;
+    border: 1px solid white;
+    width: 100%;
+    height: 100%;
+}
+
+.iweb-media-zoom.html-mode-constricted .html-container{
+    width: auto;
+    height: auto;
+}
+
+
+// =============================================
+// Zoom HTML Video
+// =============================================
+
+
+@media only screen and (max-width : 600px) {
+    .iweb-media-zoom-thumbs{
+        display:none;
+    }
+    
+    .iweb-media-zoom .img-container{
+        width:100%;
+    }
+}
+
+.iweb-media-zoom .img-container.full-width{
+    width:100%;
+}
+
+.media-thumbs-container .item > a,
+.iweb-media-zoom-thumbs .item > a {
+    display: block;
+}
+
+/* Scaling the video - this class is added if htmlModeFullDimensions is set to true. 
+Dimensions should be left off the video's iFrame */
+.iweb-media-zoom .html-container.html-mode-constricted{
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+}
+
+.iweb-media-zoom .html-mode-constricted iframe,
+.iweb-media-scalable-video{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.iweb-media-video{
+    position: relative;
+    display: block;
+}
+
+.iweb-media-video.overlay:before{
+    width: 50%;
+    height: 50%;
+//    background: url(../images/play-icon-overlay.png) center no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    background-size: contain;
+    transform: translate(-50%, -50%);
+}
+
+
+.iweb-media-loader {
+    @extend .u-shape-ring-lg;
+    @extend .u-spin;
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -16px;
+    margin-top: -16px;
+}
+
+.media-thumbs-container {
+    @include ratio(500%);
+    overflow: auto;
+    > *:first-child {
+        position: absolute;
+        top: 0;
+    }
+}
