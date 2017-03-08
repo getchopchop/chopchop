@@ -1,4 +1,4 @@
-<div data-cc-collapse="one-open" class="tabs">
+<div data-cc-collapse-mode="one-open" class="tabs js-cc-collapsible">
     <div class="is-active tabs__header">
         <h3>Tab 1</h3>
     </div>
