@@ -27,6 +27,6 @@
     }
 
     > [class*="__footer"] {
-        padding-top: 0;
+        @extend %u-separator-top;
     }
 }

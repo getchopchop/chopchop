@@ -121,8 +121,7 @@
             }
 
             if(triggerDeactivate) {
-                events[trigg
-                erDeactivate] = function (ev) {
+                events[triggerDeactivate] = function (ev) {
                     if(self.options.triggerType == Static.TRIGGER_TYPE_DIRECT && ev.target !== self.element){
                         return;
                     }

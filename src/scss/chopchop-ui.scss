@@ -14,7 +14,7 @@
  */
 
 .cc-mode-library {
-    padding-top: 4em;
+    padding-top: 3em;
 }
 
 
@@ -31,7 +31,7 @@
     padding: spacing(sm) 0;
     @include flex;
     @include align-items(center);
-    background-color: color(neutral,darker);
+    background-color: color(neutral,darkest);
     color: #fff;
 
     a {
@@ -46,7 +46,7 @@
         .icon-cross {
             display: none;
         }
-        
+
         &.is-active {
             .icon-menu {
                 display: none;
@@ -91,7 +91,7 @@
     bottom: 0;
     right: 0;
     font-size: 12px;
-    
+
     &__bp {
         position: absolute;
         bottom: 0;
@@ -99,7 +99,7 @@
         padding: 4px 8px;
         &:after {
             content: "xs max: #{screen(xs, max)}";
-            
+
             @include breakpoint(screen(xs)) {
                 content: "xs: #{screen(sm)}";
             }
@@ -184,10 +184,6 @@
     border: 5px solid color(neutral, lighter);
     border-top: 0;
     background-color: color(neutral, white);
-}
-
-.cc-demo {
-    padding: 20px;
 }
 
 
@@ -343,6 +339,132 @@
  */
 
 .cc-pattern {
-    margin-top: 4em;
-    margin-bottom: 4em;
+    width: 96%;
+    margin: 3em auto;
+    position: relative;
+
+    &__anchor {
+        position: absolute;
+        top: -5em;
+    }
+
+    &__header {
+        background-color: color(neutral, lightest);
+        border: 1px solid color(neutral, lighter);
+        border-radius: $border-radius $border-radius 0 0;
+        padding: spacing() spacing(xl);
+
+        * {
+            margin: 0;
+        }
+    }
+
+    &__body {
+        border: 1px solid color(neutral, lighter);
+        border-radius: 0 0 $border-radius $border-radius;
+        background-color: color(neutral, white);
+        border-top: 0;
+    }
+
+    &__doc {
+        max-width: container(sm);
+        padding: spacing(xl);
+    }
+
+    code {
+        background-color: color(neutral, lightest);
+        font-size: 11px;
+    }
+}
+
+/**
+ * Demo
+ */
+
+.cc-demo {
+    &:not(:first-child) {
+        border-top: 1px solid color(neutral, lighter);
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            padding: 3px;
+            font-size: 13px;
+            font-weight: bold;
+            background-color: color(neutral, lightest);
+            border-bottom: 1px solid color(neutral, lighter);
+            border-right: 1px solid color(neutral, lighter);
+            border-bottom-right-radius: $border-radius;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul {
+            margin-right: spacing(sm);
+        }
+
+        li {
+            display: inline-block;
+            padding-left: spacing(xs);
+        }
+
+        a {
+            display: inline-block;
+            padding: 3px;
+            font-size: 13px;
+        }
+    }
+
+    &__demo {
+        padding: spacing(xl);
+        padding-top: spacing(lg);
+    }
+
+    &__code {
+        background-color: color(neutral, lightest);
+        padding: spacing(xl);
+        box-shadow:inset 0 3px 3px 0 rgba(0,0,0,.1);
+
+        pre,
+        code {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    }
+}
+
+
+/**
+ * Color
+ */
+
+.cc-color__swatch {
+    height: 4em;
+    border-radius: $border-radius $border-radius 0 0;
+}
+.cc-color__body {
+    padding: spacing(sm);
+    border-radius: 0 0 $border-radius $border-radius;
+    background-color: color(neutral, lightest);
+
+    > * {
+        margin: 0;
+    }
+
+    p {
+        font-size: 11px;
+        color: color(neutral, dark);
+    }
+
+    code {
+        padding-left: 0;
+    }
 }
