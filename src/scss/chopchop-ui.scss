@@ -178,6 +178,7 @@
         list-style: none;
         margin: 0;
         padding: 0;
+        counter-reset: section;
     }
 
     li {
@@ -191,6 +192,15 @@
 
         &:hover {
             background-color: color(neutral, darker);
+        }
+
+        &::before {
+            counter-increment: section;
+            content: counters(section,".") ". ";
+            font-size: $font-size-sm;
+            color: color(neutral, dark);
+            display: inline-block;
+            width: 15px;
         }
     }
 }

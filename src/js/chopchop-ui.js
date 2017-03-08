@@ -9,7 +9,8 @@ $(document).on('ready', function() {
             $body = $('body');
 
         if($.cookie('cc-nav') == 1) {
-            //$ccNav.data('chopchop-toggle').activate();
+            $ccNav.data('chopchop-toggle').activate();
+            $body.addClass('has-cc-nav-active');
         }
 
         $ccNav.on('toggleactivate', function() {

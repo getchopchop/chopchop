@@ -62,7 +62,7 @@
 
         <div class="site-wrapper cc-site-wrapper">
 
-            <nav class="cc-nav" id="cc-nav">
+            <nav class="cc-nav js-cc-toggle" id="cc-nav" data-cc-toggle-target-callback="#cc-menu-trigger">
                 <div class="block-content site-navigation__content">
                     <?php require_once('inc/template/nav.php'); ?>
                 </div>

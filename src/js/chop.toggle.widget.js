@@ -54,7 +54,7 @@
             triggerActivate: '', // E.g. 'mouseenter'
             triggerDeactivate: '', // E.g. 'mouseleave'
             closestContainer: null, // A closest() container to look within for target selectors
-            action: 'toggle',
+            action: '',
             targetCallback: '',
             stateful: true,
             target: '',
