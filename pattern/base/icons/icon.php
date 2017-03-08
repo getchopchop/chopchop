@@ -1,0 +1,1 @@
+<?php printSvg('general', 'home'); ?>

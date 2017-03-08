@@ -1,0 +1,32 @@
+/**
+ * Separator
+ *
+ * @since 3.0.0
+ */
+
+@function seperator($seperator, $var: 'width') {
+    @return map-get(map-get($separators, $seperator), $var);
+}
+
+$seperator-sides: (base, top, left, bottom, right);
+
+@each $key, $value in $separators {
+    $class: 'u-separator-' + $key;
+    @if($key == base) {
+         $class: 'u-separator';
+    }
+
+    @each $side in $seperator-sides {
+        @if($side == base) {
+            .#{$class},
+            %#{$class} {
+                border: seperator($key, width) seperator($key, style) seperator($key, color);
+            }
+        } @else {
+            .#{$class}-#{$side},
+            %#{$class}-#{$side} {
+                border-#{$side}: seperator($key, width) seperator($key, style) seperator($key, color);
+            }
+        }
+    }
+}

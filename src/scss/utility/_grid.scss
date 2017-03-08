@@ -9,7 +9,7 @@
 
 
 /**
- * Grid Gutter X Axis
+ * Grid Gutter X
  */
 
 .g-gutter-x,
@@ -19,7 +19,7 @@
 
 
 /**
- * Grid Gutter Y Axis
+ * Grid Gutter Y
  */
 
 .g-gutter-y,
@@ -29,49 +29,50 @@
 
 
 /**
- * Grid Gutter X&Y Axis
+ * Grid Gutter
  */
 
-.g-gutter,
-%g-gutter {
-    @include grid-gutter-x;
-    @include grid-gutter-y;
+@each $key, $value in $gutters {
+    @if $key == base {
+        .g-gutter-x,
+        %g-gutter-x {
+            @include grid-gutter-x($value);
+        }
+    } @else {
+        .g-gutter-x-#{$key},
+        %g-gutter-x-#{$key} {
+            @include grid-gutter-x($value);
+        }
+    }
+    @if $key == base {
+        .g-gutter-y,
+        %g-gutter-y {
+            @include grid-gutter-y($value);
+        }
+    } @else {
+        .g-gutter-y-#{$key},
+        %g-gutter-y-#{$key} {
+            @include grid-gutter-y($value);
+        }
+    }
+    @if $key == base {
+        .g-gutter,
+        %g-gutter {
+            @extend %g-gutter-x;
+            @extend %g-gutter-y;
+        }
+    } @else {
+        .gutter-#{$key},
+        %gutter-#{$key} {
+            @extend %g-gutter-x-#{$key};
+            @extend %g-gutter-y-#{$key};
+        }
+    }
 }
 
 
 /**
- * Grid Gutter X Axis
- */
-
-.g-gutter-x-lg,
-%g-gutter-x-lg {
-    @include grid-gutter-x($gutter-x-lg);
-}
-
-
-/**
- * Grid Gutter Y Axis
- */
-
-.g-gutter-y-lg,
-%g-gutter-y-lg {
-    @include grid-gutter-y($gutter-y-lg);
-}
-
-
-/**
- * Grid Gutter X&Y Axis
- */
-
-.g-gutter-lg,
-%g-gutter-lg {
-    @include grid-gutter-x;
-    @include grid-gutter-y;
-}
-
-
-/**
- * Grid Center X Axis
+ * Grid Center X
  */
 
 .g-center-x,
@@ -81,7 +82,7 @@
 
 
 /**
- * Grid Center Y Axis
+ * Grid Center Y
  */
 
 .g-center-y,
@@ -91,13 +92,23 @@
 
 
 /**
- * Grid Center X&Y Axis
+ * Grid Center
  */
 
 .g-center,
 %g-center {
     @include justify-content(center);
     @include align-items(center);
+}
+
+
+/**
+ * Grid Baseline
+ */
+
+.g-baseline,
+%g-baseline {
+    @include align-items(flex-end);
 }
 
 
@@ -134,7 +145,7 @@
 
 
 /**
- * Grid Stretch First
+ * Grid Stretch
  */
 
 .g-stretch-first,
@@ -149,11 +160,6 @@
         flex-shrink: 0;
     }
 }
-
-
-/**
- * Grid Stretch Last
- */
 
 .g-stretch-last,
 %g-stretch-last {
@@ -170,7 +176,7 @@
 
 
 /**
- * Grid Columns
+ * Grid Cols
  */
 
 @each $screen, $value in $screens {
