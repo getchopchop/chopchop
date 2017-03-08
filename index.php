@@ -95,6 +95,7 @@
     <![endif]-->
     <script src="<?php echo getUrl('build/vendor/picturefill/picturefill.js'); ?>" async></script>
     <script src="<?php echo getUrl('build/vendor/jquery/jquery.js'); ?>"></script>
+    <script src="<?php echo getUrl('build/vendor/jquery/jquery-no-conflict.js'); ?>"></script>
     <script src="<?php echo getUrl('build/vendor/jquery/jquery-ui.min.js'); ?>"></script>
     <?php /*?>
     <script src="<?php echo getUrl('build/vendor/enquire/enquire.js'); ?>"></script>
