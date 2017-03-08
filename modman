@@ -8,6 +8,7 @@ index.php   chopchop/index.php
 build                                       skin/frontend/base/default/chopchop
 
 # Magento Logos
+build/img/logo/logo.png                     skin/frontend/base/default/images/media/logo.png
 build/img/logo/logo_email.gif               media/email/logo/chopchop/img/logo/logo_email.gif
 build/img/logo/logo_print.gif               media/sales/store/logo_html/chopchop/img/logo/logo_print.gif
 build/vendor/favicons/favicon.ico           media/favicon/chopchop/vendor/favicons/favicon.ico
@@ -19,5 +20,5 @@ build/css/email-non-inline.css              skin/frontend/package/default/css/em
 # Magento Error Pages Assets
 build/vendor/normalize.css/normalize.css    errors/custom/css/normalize.css
 build/css/styles.css                        errors/custom/css/styles.css
-build/img/logo/logo.svg                     errors/custom/images/logo.svg
+build/img/logo/logo.png                     errors/custom/images/logo.png
 build/vendor/favicons/favicon.ico           errors/custom/images/favicon.ico
