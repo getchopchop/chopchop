@@ -12,9 +12,6 @@ build/img/logo/logo_email.gif               media/email/logo/chopchop/img/logo/l
 build/img/logo/logo_print.gif               media/sales/store/logo_html/chopchop/img/logo/logo_print.gif
 build/vendor/favicons/favicon.ico           media/favicon/chopchop/vendor/favicons/favicon.ico
 
-# Magento Print
-build/css/print.css                         skin/frontend/package/default/css/print.css
-
 # Magento Emails
 build/css/email-inline.css                  skin/frontend/package/default/css/email-inline.css
 build/css/email-non-inline.css              skin/frontend/package/default/css/email-non-inline.css
