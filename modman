@@ -1,8 +1,8 @@
 # Chop Chop
-pattern/    chopchop/pattern
-build/      chopchop/build
-index.php   chopchop/index.php
-.htaccess   chopchop/.htaccess
+pattern/    pattern/pattern
+build/      pattern/build
+index.php   pattern/index.php
+.htaccess   pattern/.htaccess
 
 # Link into Magento
 build                                       skin/frontend/base/default/chopchop
