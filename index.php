@@ -95,19 +95,16 @@
     <![endif]-->
     <script src="<?php echo getUrl('build/vendor/picturefill/picturefill.js'); ?>" async></script>
     <script src="<?php echo getUrl('build/vendor/jquery/jquery.js'); ?>"></script>
+    <script src="<?php echo getUrl('build/vendor/jquery/jquery-no-conflict.js'); ?>"></script>
     <script src="<?php echo getUrl('build/vendor/jquery/jquery-ui.min.js'); ?>"></script>
-    
-    <script src="<?php echo getUrl('build/vendor/llapgoch/melodeon.widget.js'); ?>"></script>
-    <script src="<?php echo getUrl('build/vendor/enquire/enquire.js'); ?>"></script>
-    <script src="<?php echo getUrl('build/js/chop.enquire.breakpoint.js'); ?>"></script>
     <script src="<?php echo getUrl('build/js/chop.base.widget.js'); ?>"></script>
     <script src="<?php echo getUrl('build/js/chop.toggle.widget.js'); ?>"></script>
     <script src="<?php echo getUrl('build/js/chop.collapsible.widget.js'); ?>"></script>
-    <script src="<?php echo getUrl('build/js/chop.scroll.js'); ?>"></script>
-    <script src="<?php echo getUrl('build/js/chop.listing.js'); ?>"></script>
-    <script src="<?php echo getUrl('build/js/chop.product.js'); ?>"></script>
-    <script src="<?php echo getUrl('build/js/script.js'); ?>"></script>
-
+    <script src="<?php echo getUrl('build/js/chop.global.js'); ?>"></script>
+    
+    <!-- Placeholder for kitchen-sink scripts -->
+    <?php if(file_exists(__DIR__ . '/kitchen-sink.php')) { require_once('kitchen-sink.php'); }?>
+    
     <?php if(!isset($_GET['preview'])) : ?>
         <script src="<?php echo getUrl('build/vendor/jquery.cookie/jquery.cookie.js'); ?>"></script>
         <script src="<?php echo getUrl('build/vendor/prismjs/prism.js'); ?>"></script>
