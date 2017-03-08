@@ -11,7 +11,6 @@
         visibility: hidden;
     }
     
-    /* States */
     .allow {
         .step-title {
             .tag,
@@ -20,13 +19,13 @@
             }
         }
         .card {
-            @extend %u-fill-contextual-success-light;
+            background-color: color(contextual, success-light);
             border-color: darken(color(contextual, success-light),12%);
         }
     
         &.active {
             .card {
-                @extend %u-fill-neutral-white;
+                background-color: color(neutral, white);
                 border-color: color(neutral, light);
             }
         }
