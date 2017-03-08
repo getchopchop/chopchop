@@ -1,4 +1,6 @@
-<div class="drawer drawer--right" id="drawer-right" data-cc-toggle-target-callback="#overlay">
+<p class="u-visible-cc"><a href="#" class="btn" data-cc-toggle-target="#drawer-right-1" data-cc-toggle-action="activate">Active right 1 drawer</a> or <a href="#" class="btn" data-cc-toggle-target="#drawer-right-2" data-cc-toggle-action="activate">Active right 2 drawer</a></p>
+
+<div class="drawer drawer--right" id="drawer-right" data-cc-toggle-keyboard-close="true" data-cc-toggle-target-callback="#overlay">
     <div class="drawer__dialog">
 
         <div id="drawer-right-1" class="u-toggle" data-cc-toggle-target="#drawer-right" data-cc-toggle-group="drawer-right-contents">

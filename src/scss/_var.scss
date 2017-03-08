@@ -6,12 +6,8 @@
 $colors: (
 
     primary: (
-        pink            : DeepPink
+        pink            : #F42D8C
     ),
-
-//    secondary: (
-//        purple          : RebeccaPurple
-//    ),
 
     neutral: (
         black         : #000,
@@ -20,7 +16,7 @@ $colors: (
         darker          : #444,
         dark            : #666,
         light           : #999,
-        lighter         : #e4e4e4,
+        lighter         : #ccc,
         lightest        : #f4f4f4
     ),
 
@@ -140,3 +136,10 @@ $spacing: (
     lg                  : 1.3em,
     xl                  : 1.8em
 );
+
+
+/**
+ * Animation speed
+ */
+
+$animation-speed        : .2s;

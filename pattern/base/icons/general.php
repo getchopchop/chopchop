@@ -29,6 +29,7 @@
         'radio-unchecked',
         'radio-checked',
         'list',
+        'link',
         'table2',
     );
 ?>

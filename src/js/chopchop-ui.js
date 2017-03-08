@@ -1,5 +1,5 @@
 ;(function($){
-    $(document).ready(function() {
+$(document).on('ready', function() {
 
         // =============================================
         // Cookie to show menu
@@ -8,23 +8,19 @@
         var $ccNav = $('#cc-nav'),
             $body = $('body');
 
-        checkCookie();
-
-        function checkCookie() {
-            if($.cookie('cc-nav') == 1) {
-                $ccNav.chopchop('toggle', 'activate');
-                $body.addClass('has-cc-nav-active');
-            }
+        if($.cookie('cc-nav') == 1) {
+            $ccNav.data('chopchop-toggle').activate();
+            $body.addClass('has-cc-nav-active');
         }
 
-        $ccNav.on('chopchop:activate', function() {
+        $ccNav.on('toggleactivate', function() {
             $.cookie('cc-nav', [1], { expires: 30, path: '/' });
-            $body.addClass('has-cc-nav-active'); 
+            $body.addClass('has-cc-nav-active');
         });
 
-        $ccNav.on('chopchop:deactivate', function() {
+        $ccNav.on('toggledeactivate', function() {
             $.cookie('cc-nav', [0], { expires: 30, path: '/' });
-            $body.removeClass('has-cc-nav-active'); 
+            $body.removeClass('has-cc-nav-active');
         });
 
     });

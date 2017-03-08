@@ -17,10 +17,4 @@
     <div class="accordion__body">
         <p>Content 3</p>
     </div>
-    <div class="accordion__header">
-        <h3>Header 4</h3>
-    </div>
-    <div class="accordion__body">
-        <p>Content 4 </p>
-    </div>
 </div>

@@ -46,17 +46,21 @@
             dataTriggerActivate: 'triggerActivate',
             dataTriggerDeactivate: 'triggerDeactivate',
             dataActiveInitial: 'activeInitial',
+            dataKeyboardClose: 'keyboardClose',
+            dataKeyboardCloseKeyCode: 'keyboardCloseKeyCode',
 
             triggerType: 'all',
             trigger: 'click',
             triggerActivate: '', // E.g. 'mouseenter'
             triggerDeactivate: '', // E.g. 'mouseleave'
             closestContainer: null, // A closest() container to look within for target selectors
-            action: 'toggle',
+            action: '',
             targetCallback: '',
             stateful: true,
             target: '',
-            activeInitial: false
+            activeInitial: false,
+            keyboardClose: false,
+            keyboardCloseKeyCode: 27
         },
 
         // Initialise as jQuery arrays in constructor
@@ -83,51 +87,63 @@
         _addEvents: function(){
             var self = this,
                 events = {},
+                documentEvents = {},
                 action = this.getLocalOption(this.options.dataAction),
                 triggerOn = this.getLocalOption(this.options.dataTrigger),
                 triggerDeactivate = this.getLocalOption(this.options.dataTriggerDeactivate),
                 triggerActivate = this.getLocalOption(this.options.dataTriggerActivate),
-                triggerType = this.getLocalOption(this.options.dataTriggerType);
+                triggerType = this.getLocalOption(this.options.dataTriggerType),
+                keyboardClose = this.getLocalOption(this.options.dataKeyboardClose),
+                keyboardCloseKeyCode = this.getLocalOption(this.options.dataKeyboardCloseKeyCode);
 
 
             // Explicitly require a data attribute of action to init this form of event
             if(action) {
                 events[triggerOn] = function (ev) {
-                    ev.preventDefault();
-
                     if(triggerType == Static.TRIGGER_TYPE_DIRECT && (self.element.is(ev.target) === false)){
                         return;
                     }
 
+                    ev.preventDefault();
                     self.performAction(action);
                 };
             }
 
             if(triggerActivate) {
                 events[triggerActivate] = function (ev) {
-                    ev.preventDefault();
-
                     if(triggerType == Static.TRIGGER_TYPE_DIRECT && (self.element.is(ev.target) === false)){
                         return;
                     }
 
+                    ev.preventDefault();
                     self.activate();
                 };
             }
 
             if(triggerDeactivate) {
                 events[triggerDeactivate] = function (ev) {
-                    ev.preventDefault();
-
                     if(self.options.triggerType == Static.TRIGGER_TYPE_DIRECT && ev.target !== self.element){
                         return;
                     }
-
+                    ev.preventDefault();
                     self.deactivate();
                 };
             }
 
+            // Add events for this element
             this._on(this.element, events);
+
+
+            // Document events -- add the keyboard event to close if it's been set
+            if(keyboardClose){
+                documentEvents.keyup = function (ev) {
+                    if(ev.keyCode == keyboardCloseKeyCode){
+                        this.deactivate();
+                    }
+                };
+            }
+
+            this._on( document,  documentEvents);
         },
 
         _getTargets: function(){
@@ -288,7 +304,7 @@
             if(!type){
                 type = this.options.action;
             }
-            
+
             // Flip the actions if we're toggling, but only for this instance -- each element down the chain
             // should also toggle
             if(type == Static.ACTION_TOGGLE){

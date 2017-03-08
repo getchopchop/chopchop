@@ -1,5 +1,5 @@
 ;(function($){
-    $(document).ready(function() {
+    $(document).on('ready', function() {
 
         // =============================================
         // Global variables

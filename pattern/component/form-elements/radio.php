@@ -19,3 +19,8 @@ Description: Customise the style of the <code>&lt;input type=radio&gt;</code> by
     <input id="radio-3" name="radio" type="radio" disabled>
     <label for="radio-3" class="radio__label">Disabled</label>
 </div>
+
+<label class="radio field-group">
+    <input id="radio-4" name="radio" type="radio">
+    <span class="radio__label">Label wrap input</span>
+</label>

@@ -25,9 +25,14 @@
             }
             ?>
             <div class="g-col-xs-6 g-col-sm-4 g-col-lg-3 g-col-xl-2">
-                <div class="u-block-xl <?php echo $class_ ?>">
+                <div class="cc-color">
+                    <div class="cc-color__swatch <?php echo $class_ ?>">
+                    </div>
+                    <div class="cc-color__body">
+                        <h6><?php echo str_replace('-', ' ', str_replace('u-fill-', '', $class_)); ?></h6>
+                        <p><code>.<?php echo str_replace('u-fill', 'u-text', $class_); ?></code></p>
+                    </div>
                 </div>
-                <code>.<?php echo $class_ ?></code>
             </div>
             <?php
         }
