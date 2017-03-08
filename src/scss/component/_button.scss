@@ -49,32 +49,6 @@
 
 
 /**
- * Button Text
- */
-
-.btn--text,
-%btn--text {
-    @extend %link;
-    background-color: transparent;
-    color: color(neutral, black);
-    font-weight: inherit;
-    text-decoration: underline;
-
-    &:hover,
-    &:focus {
-        background-color: transparent;
-        color: color(neutral, black);
-        text-decoration: none;
-    }
-
-    &:disabled {
-        background-color: transparent;
-        color: color(neutral, dark);
-    }
-}
-
-
-/**
  * Button Block
  */
 
@@ -157,14 +131,42 @@
 %btn--disabled,
 .btn:disabled {
     cursor: not-allowed;
-    background-color: color(neutral, light);
-    border-color: color(neutral, dark);
-    color: color(neutral,darker);
+    background-color: color(neutral, lighter);
+    border-color: color(neutral, light);
+    color: color(neutral, dark);
 
     &:hover,
     &:focus {
-        background-color: color(neutral, light);
-        border-color: color(neutral, dark);
-        color: color(neutral,darker);
+        background-color: color(neutral, lighter);
+        border-color: color(neutral, light);
+        color: color(neutral, dark);
+    }
+}
+
+
+/**
+ * Button Text
+ */
+
+.btn--text,
+%btn--text {
+    @extend %link;
+    background-color: transparent;
+    color: color(neutral, black);
+    font-weight: inherit;
+    text-decoration: underline;
+    border-color: transparent;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: color(neutral, black);
+        border-color: transparent;
+        text-decoration: none;
+    }
+
+    &:disabled {
+        background-color: transparent;
+        color: color(neutral, dark);
     }
 }
