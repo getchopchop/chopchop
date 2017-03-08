@@ -277,17 +277,21 @@
         background-color: color(neutral, lightest);
         border: 1px solid color(neutral, lighter);
         border-radius: $border-radius $border-radius 0 0;
-        padding: spacing() spacing(xl);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        padding: spacing() spacing(lg);
 
         h3 {
             padding-right: spacing();
         }
 
+        a {
+            text-decoration: none;
+        }
+
         svg {
             fill: color(neutral, light);
+            height: 18px;
+            width: 18px;
+            margin-right: 5px;
         }
 
         * {
