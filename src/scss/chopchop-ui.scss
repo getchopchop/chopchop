@@ -374,7 +374,9 @@
 
 
 .cc-demo {
-    border-top: 1px solid color(neutral, lighter);
+    &:not(:first-child) {
+        border-top: 1px solid color(neutral, lighter);
+    }
 
     &__header {
         display: flex;
