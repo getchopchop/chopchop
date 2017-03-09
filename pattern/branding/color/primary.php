@@ -1,4 +1,5 @@
-<?php $colors = parseCss('u-fill-'); ?>
+
+<?php $colors = parseCss('u-fill-primary'); ?>
 
 <div class="grid g-gutter">
     <?php foreach($colors as $color) : ?>

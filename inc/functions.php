@@ -2,6 +2,7 @@
     require_once(__DIR__ . '/lib/Spyc.php');
     require_once(__DIR__ . '/lib/navigation.php');
     require_once(__DIR__ . '/lib/content.php');
+    require_once(__DIR__ . '/lib/helper.php');
 
     error_reporting(E_ALL);
 

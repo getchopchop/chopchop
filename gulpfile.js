@@ -125,7 +125,7 @@ var taskConfig =
     {
         "imagemin":
         {
-            "optimizationLevel": 3,
+        "optimizationLevel": 3,
             "progressive": true,
             "interlaced": true
         }
@@ -166,7 +166,8 @@ var taskConfig =
             "zindex": false,
             "reduceIdents": false,
             "mergeIdents": false,
-            "discardUnused": false
+            "discardUnused": false,
+            "discardComments": true
         }
     }
 }
