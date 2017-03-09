@@ -5,7 +5,7 @@
             <input type="text" id="search" placeholder="Search..." />
         </div>
         <div>
-            <button type="submit" class="btn btn--red"><?php printSvg('general', 'search3'); ?></button>
+            <button type="submit" class="btn"><?php printSvg('general', 'search3'); ?></button>
         </div>
     </div>
 </form>

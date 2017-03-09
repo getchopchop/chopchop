@@ -1,0 +1,1 @@
+<p>Adds a max width of children items and horizontally scrolls them.</p>

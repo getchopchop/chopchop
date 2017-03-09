@@ -1,0 +1,1 @@
+<p>Adds a shape to a list using the <code>::before</code> pseudo element.</p>

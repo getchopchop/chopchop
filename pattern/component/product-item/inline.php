@@ -5,7 +5,7 @@ Class: .product-item
 
 <?php $offer = rand(0,2); ?>
 
-<div class="product-item product-item--inline<?php if($offer < 1) { echo ' has-tag'; } ?>">
+<div class="product-item product-item--inline<?php if($offer < 1) { echo ' has-tag'; } ?> cc-pattern-width-lg">
 
     <div class="product-item__image">
         <?php printPattern('component/layer/base'); ?>
@@ -25,7 +25,7 @@ Class: .product-item
             <s><span class="u-visually-hidden">Was</span> &pound;<?php echo number_format($price * 0.8, 2); ?></s>
             <strong class="lead u-text-contextual-error"><span class="u-visually-hidden">Now</span> &pound;<?php echo number_format($price, 2); ?></strong>
         </p>
-        <a href="#" class="btn btn--green btn--block" data-cc-toggle-action="activate" data-cc-toggle-target="#modal-add-to-basket">Add to basket</a>
+        <a href="#" class="btn btn--block" data-cc-toggle-action="activate" data-cc-toggle-target="#modal-add-to-basket">Add to basket</a>
     </div>
 
     <?php if($offer < 1) : ?>

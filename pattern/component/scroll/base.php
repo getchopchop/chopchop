@@ -1,9 +1,3 @@
-<?php /*
-Title: Scroll
-Class: .scrolls
-Description: Adds a max width of children items and horizontally scrolls them.
-*/ ?>
-
 <div class="scroll js-scroll is-start">
     <a href="#" class="scroll__arrow scroll__arrow--left js-scroll-left"></a>
     <a href="#" class="scroll__arrow scroll__arrow--right js-scroll-right"></a>

@@ -20,7 +20,7 @@ Title: Footer
                             <input type="text" id="email" placeholder="Enter email address" />
                         </div>
                         <div>
-                            <button type="submit" class="btn btn--red">Subscribe</button>
+                            <button type="submit" class="btn">Subscribe</button>
                         </div>
                     </div>
                 </form>

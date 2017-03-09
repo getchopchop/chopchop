@@ -1,0 +1,1 @@
+<p>Adds a max-height and <code>overlow: auto;</code> to the <code>facet__body</code>. Great for use on product filter blocks.</p>

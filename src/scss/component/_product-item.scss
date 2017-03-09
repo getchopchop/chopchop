@@ -1,6 +1,6 @@
-// =============================================
-// Product item
-// =============================================
+/**
+ * Product item
+ */
 
 .product-item {
     @extend %card;
@@ -19,6 +19,10 @@
     
 }
 
+
+/**
+ * Product Item with image on left and content on right
+ */
 
 .product-item--inline {
     @extend %u-clearfix;
