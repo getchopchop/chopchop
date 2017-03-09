@@ -5,5 +5,5 @@ Description: Uses ratios to ensure the image is contained within a square. Used 
 */ ?>
 
 <div class="layer">
-    <a href="#"><img src="<?php //echo getUrl( 'build/img/product/' . getData('image') ); ?>" class="u-center" alt="<?php printData('title'); ?>" /></a>
+    <a href="#"><img src="<?php echo getUrl('build/img/placeholder/300x300.jpg'); ?>" class="u-center" alt="<?php printData('title'); ?>" width="300" height="300" /></a>
 </div>

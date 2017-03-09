@@ -7,15 +7,32 @@
     @include flex;
     @include flex-direction(column);
     
-    &__body {
-        //border-top: 1px solid color(neutral, light);
+    > [class*="__image"] {
+        border-bottom: seperator(base, width) seperator(base, style) seperator(base, color);
     }
     
-    &__footer {
+    > [class*="__footer"] {
         margin-top: auto;
+        padding-top: 0;
+        border-top: 0;
     }
     
-    &--inline {
-        
+}
+
+
+.product-item--inline {
+    @extend %u-clearfix;
+    display: block;
+    
+    > [class*="__image"] {
+        float: left;
+        width: 30%;
+        border-bottom: 0;
+        border-right: seperator(base, width) seperator(base, style) seperator(base, color);
+    }
+    
+    > [class*="__body"],
+    > [class*="__footer"] {
+        margin-left: 30%;
     }
 }
