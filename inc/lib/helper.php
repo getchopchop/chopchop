@@ -8,7 +8,7 @@
         $previous_group = 'x';
 
         $matches = array();
-        $regex = '/' . $pattern . '([^\s,{"]+)?/';
+        $regex = '/' . $pattern . '([^\s,{\]"]+)?/';
 
         preg_match_all($regex, $css_contents, $matches);
         //sort($matches[0]);
