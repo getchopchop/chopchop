@@ -8,7 +8,7 @@
                 </div>
                 <div class="cc-color__body">
                     <h6><?php echo str_replace('-', ' ', str_replace('u-fill-', '', $color)); ?></h6>
-                    <p><?php echo $color; ?></p>
+                    <p><code>.<?php echo $color; ?></code></p>
                 </div>
             </div>
         </div>
