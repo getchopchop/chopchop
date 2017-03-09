@@ -29,10 +29,12 @@
         width: 30%;
         border-bottom: 0;
         border-right: seperator(base, width) seperator(base, style) seperator(base, color);
+        transform: translateX(1px);
     }
     
     > [class*="__body"],
     > [class*="__footer"] {
         margin-left: 30%;
+        border-left: seperator(base, width) seperator(base, style) seperator(base, color);
     }
 }
