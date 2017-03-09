@@ -1,0 +1,1 @@
+<p>Example of a footer block.</p>

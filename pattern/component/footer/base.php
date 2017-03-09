@@ -39,9 +39,9 @@ Title: Footer
                         </div>
                         <div class="u-toggle-xs u-toggle-sm" id="footer-1" data-cc-toggle-group="footer" data-cc-cascade="footer-1-header">
                             <ul class="u-list-inline">
-                                <li><?php printSvg('card', 'Visa-card-light', 'icon--card'); ?></li>
-                                <li><?php printSvg('card', 'MasterCard-light', 'icon--card'); ?></li>
-                                <li><?php printSvg('card', 'Maestro-card-light', 'icon--card'); ?></li>
+                                <li><?php printSvg('payment', 'Visa-card-light', 'icon--card'); ?></li>
+                                <li><?php printSvg('payment', 'MasterCard-light', 'icon--card'); ?></li>
+                                <li><?php printSvg('payment', 'Maestro-card-light', 'icon--card'); ?></li>
                                 <li><?php printSvg('payment', 'Apple-card-light', 'icon--card'); ?></li>
                                 <li><?php printSvg('payment', 'Paypal-card-light', 'icon--card'); ?></li>
                                 <li><?php printSvg('payment', 'AmericanExpress-card-light', 'icon--card'); ?></li>
