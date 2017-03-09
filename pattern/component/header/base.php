@@ -7,7 +7,7 @@
                 <div class="g-col-xs-6 g-col-md-4 g-col-lg-3">
                     
                     <a href="#" title="<?php printData('company', 'name'); ?>" class="logo">
-                        <img src="<?php echo getUrl('build/img/logo/logo.png'); ?>" class="u-img-responsive" width="100" height="100" alt="<?php printData('company', 'name'); ?>" />
+                        <img src="<?php echo getUrl('build/img/logo/logo.png'); ?>" class="u-img-responsive" width="70" height="70" alt="<?php printData('company', 'name'); ?>" />
                     </a>
                     
                 </div>

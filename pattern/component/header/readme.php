@@ -1,0 +1,1 @@
+<p>Example of header. Uses enquire javascript in chop.kitchen-sink.js to move the search around in the header and primary navigation into the left drawer.</p>
