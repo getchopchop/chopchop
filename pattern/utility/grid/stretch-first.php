@@ -1,8 +1,8 @@
-<div class="grid g-stretch-first">
+<div class="grid g-gutter-x g-stretch-first">
     <div>
-        <a href="#" class="btn">Cancel</a>
+        <div class="u-block u-fill-neutral-lighter"></div>
     </div>
     <div>
-        <a href="#" class="btn">Ok</a>
+        <div class="u-block u-fill-neutral-lighter"></div>
     </div>
 </div>
