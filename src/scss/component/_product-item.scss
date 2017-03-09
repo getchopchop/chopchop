@@ -6,28 +6,16 @@
     @extend %card;
     @include flex;
     @include flex-direction(column);
-    position: relative;
-
-    a:not(.btn) {
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
+    
     &__body {
-        border-top: 1px solid color(neutral, light);
-        padding-bottom: 0;
-
-        > * {
-            margin-bottom: spacing(xs)/2;
-        }
+        //border-top: 1px solid color(neutral, light);
     }
-
+    
     &__footer {
-        border-top: 0 !important;
-        padding-top: 0 !important;
         margin-top: auto;
+    }
+    
+    &--inline {
+        
     }
 }
