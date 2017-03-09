@@ -3,7 +3,7 @@
 // =============================================
 
 .product-item {
-    @extend .card;
+    @extend %card;
     @include flex;
     @include flex-direction(column);
     position: relative;
@@ -26,6 +26,8 @@
     }
 
     &__footer {
+        border-top: 0 !important;
+        padding-top: 0 !important;
         margin-top: auto;
     }
 }

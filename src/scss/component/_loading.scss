@@ -2,7 +2,8 @@
 // Loading Message
 // =============================================
 
-.loading {
+.loading,
+%loading {
     @include flex;
     @include align-items(center);
     

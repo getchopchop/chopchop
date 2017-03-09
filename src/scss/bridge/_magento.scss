@@ -117,7 +117,7 @@ p.back-link {
 
 .please-wait,
 .scp-please-wait {
-    @extend .loading;
+    @extend %loading;
 }
 
 
@@ -180,7 +180,7 @@ p.back-link {
 }
 
 .validation-failed {
-    @extend .is-error;
+    @extend %is-error;
 }
 
 
@@ -227,12 +227,24 @@ p.back-link {
 // Price
 // =============================================
 
-//.price-box .price {
-//    font-weight: $bold;
-//}
 .price-box .special-price .price,
 .price-box .regular-price .price {
     @extend %lead;
+}
+
+.product-info,
+.fixed-bar {
+    .price-box .special-price {
+        display: block;
+    }
+}
+
+.product-info {
+    .price-box .special-price .price,
+    .price-box .regular-price .price {
+        @extend %h2;
+        @extend %u-text-contextual-error;
+    }
 }
 
 
@@ -289,17 +301,5 @@ p.back-link {
     }
     .header__logo {
         margin-right: 0;
-    }
-}
-
-// =============================================
-// Layer
-// =============================================
-
-.type-device {
-    .layer {
-        img {
-            max-width: 100px;
-        }
     }
 }

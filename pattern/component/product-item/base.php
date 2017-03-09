@@ -23,7 +23,7 @@ Class: .product-item
         <p>
             Free UK Delivery<br />
             <s><span class="u-visually-hidden">Was</span> &pound;<?php echo number_format($price * 0.8, 2); ?></s>
-            <strong class="lead u-text-brand-red"><span class="u-visually-hidden">Now</span> &pound;<?php echo number_format($price, 2); ?></strong>
+            <strong class="lead u-text-contextual-error"><span class="u-visually-hidden">Now</span> &pound;<?php echo number_format($price, 2); ?></strong>
         </p>
         <a href="#" class="btn btn--green btn--block" data-cc-toggle-action="activate" data-cc-toggle-target="#modal-add-to-basket">Add to basket</a>
     </div>

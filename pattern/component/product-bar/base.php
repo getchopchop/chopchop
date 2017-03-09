@@ -29,7 +29,7 @@ Description: Fixes an item to the top of the page. Only visible with .is-active 
                     <div>
                         <?php $price = getData('price'); ?>
                         <p>
-                            <strong class="h4 u-text-brand-red"><span class="u-visually-hidden">Now</span> &pound;<?php echo number_format($price * 0.8, 2); ?></strong> delivered<br />
+                            <strong class="h4 u-text-contextual-error"><span class="u-visually-hidden">Now</span> &pound;<?php echo number_format($price * 0.8, 2); ?></strong> delivered<br />
                             Was <s>&pound;<?php echo number_format($price, 2); ?></s> &nbsp;You save &pound;<?php echo number_format($price * 0.2, 2); ?><br />
                         </p>
                     </div>
