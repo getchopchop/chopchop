@@ -44,10 +44,10 @@ class Content
                 $html .= self::loadReadme($patternSectionPath);
             }
 
+            $patternSectionFiles = self::arrangeSections($patternSectionFiles);
+
             foreach ($patternSectionFiles as $patternSectionFile) {
                 //we are in the pattern > section > files
-                if (substr($patternSectionFile, 0, 1) == '.') continue;
-                if ($patternSectionFile == 'readme.php') continue;
 
                 $patternSectionFilePath = $patternPath . $patternSection . '/' . $patternSectionFile;
                 $html .= self::sectionContent($patternSectionFile, $patternSectionFilePath, $i);
@@ -170,6 +170,26 @@ class Content
         $html .= '</div></div>';
 
         return $html;
+    }
+
+    public static function arrangeSections($sectionArray) {
+        $i = 1;
+        $sections = array();
+        foreach($sectionArray as $key => $section) {
+            if (substr($section, 0, 1) == '.') continue;
+            if ($section == 'readme.php') continue;
+
+            if($section == 'base.php') {
+                $sections[0] = $section;
+            }else{
+                $sections[$i] = $section;
+                $i++;
+            }
+        }
+
+        ksort($sections);
+
+        return $sections;
     }
 
 }
