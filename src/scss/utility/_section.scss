@@ -5,14 +5,9 @@
  * value from the min breakpoint to the max breakpoint.
  *
  * Loops through an array of section values set in _var.scss.
- * 3 classes become available for each value in the array:-
- *
- * * `u-section-*`
- * * `u-section-*-bottom`
- * * `u-section-*-top`
+ * 3 classes become available for each value in the array.
  *
  * A default base setting doesn't require `-*`.
- * For example `u-section-top`.
  *
  * @var $sections
  * @since 1.2.0

@@ -331,7 +331,7 @@
 
     code {
         background-color: color(neutral, lightest);
-        font-size: 11px;
+        font-size: 13px;
     }
 }
 
@@ -379,6 +379,10 @@
             padding: 3px;
             font-size: 13px;
         }
+
+        code {
+            font-size: 11px;
+        }
     }
 
     &__demo {
@@ -409,6 +413,10 @@
 
 .cc-color__swatch {
     height: 4em;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 4em;
+    font-size: 18px;
     border-radius: $border-radius $border-radius 0 0;
     border: 1px solid rgba(0,0,0,.1);
 }
@@ -458,6 +466,26 @@ body.cc-mode-library .u-visible-cc {
     }
     .cc-pattern-width-lg {
         max-width: container(lg)/2;
+    }
+}
+
+
+/**
+ * Classes
+ */
+
+.cc-classes {
+    > ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+    }
+
+    li {
+        display: block;
+        float: left;
+        padding: 0 spacing(xs) spacing(xs) 0;
     }
 }
 
