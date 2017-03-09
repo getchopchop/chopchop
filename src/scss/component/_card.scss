@@ -4,12 +4,12 @@
 
 .card,
 %card {
-    @extend %u-separator;
+    border: seperator(base, width) seperator(base, style) seperator(base, color);
     background-color: color(neutral, white);
     border-radius: $border-radius;
 
     > [class*="__header"] {
-        @extend %u-separator-bottom;
+        border-bottom: seperator(base, width) seperator(base, style) seperator(base, color);
 
         > * {
             margin-bottom: 0;
@@ -27,6 +27,6 @@
     }
 
     > [class*="__footer"] {
-        @extend %u-separator-top;
+        border-top: seperator(base, width) seperator(base, style) seperator(base, color);
     }
 }
