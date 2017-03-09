@@ -2,7 +2,7 @@
 
 <h4>Available classes:</h4>
 
-<?php $classes = parseCss('u-space'); ?>
+<?php $classes = Helper::parseCss('u-space'); ?>
 <div class="cc-classes">
     <ul>
         <?php foreach($classes as $class) : ?>

@@ -1,4 +1,4 @@
-<?php $colors = parseCss('u-fill-'); ?>
+<?php $colors = Helper::parseCss('u-fill-'); ?>
 
 <div class="grid g-gutter">
     <?php foreach($colors as $color) : ?>

@@ -1,5 +1,4 @@
-<?php $colors = parseCss('u-fill-contextual'); ?>
-
+<?php $colors = Helper::parseCss('u-fill-contextual'); ?>
 <div class="grid g-gutter">
     <?php foreach($colors as $color) : ?>
         <div class="g-col-xs-6 g-col-sm-4 g-col-lg-3 g-col-xl-2">

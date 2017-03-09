@@ -2,7 +2,7 @@
 
 <h4>Visible Classes</h4>
 
-<?php $classes = parseCss('u-visible'); ?>
+<?php $classes = Helper::parseCss('u-visible'); ?>
 <div class="cc-classes">
     <ul>
         <?php foreach($classes as $class) : ?>
@@ -13,7 +13,7 @@
 
 <h4>Hidden Classes</h4>
 
-<?php $classes = parseCss('u-hidden'); ?>
+<?php $classes = Helper::parseCss('u-hidden'); ?>
 <div class="cc-classes">
     <ul>
         <?php foreach($classes as $class) : ?>
@@ -24,7 +24,7 @@
 
 <h4>Visually Hidden Classes</h4>
 
-<?php $classes = parseCss('u-visually'); ?>
+<?php $classes = Helper::parseCss('u-visually'); ?>
 <div class="cc-classes">
     <ul>
         <?php foreach($classes as $class) : ?>
