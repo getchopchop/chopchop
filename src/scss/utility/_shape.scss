@@ -11,5 +11,5 @@
 
 .u-shape-ring-lg,
 %u-shape-ring-lg {
-    @include ring(color(neutral, red), color(neutral, light), 32px, 3px);
+    @include ring(color(neutral, dark), color(neutral, light), 32px, 3px);
 }
