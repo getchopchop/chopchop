@@ -28,6 +28,7 @@
     width: 100%;
     left: 0;
     z-index: 999;
+    font-size: 16px;
     padding: spacing(sm) 0;
     @include flex;
     @include align-items(center);
@@ -437,6 +438,7 @@
 
     code {
         padding-left: 0;
+        font-size: 11px;
     }
 }
 
