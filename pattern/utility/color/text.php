@@ -1,4 +1,4 @@
-<?php $colors = parseCss('u-fill-'); ?>
+<?php $colors = Helper::parseCss('u-fill-'); ?>
 
 <div class="grid g-gutter">
     <?php foreach($colors as $color) : ?>
@@ -9,7 +9,7 @@
                 </div>
                 <div class="cc-color__body">
                     <h6><?php echo str_replace('-', ' ', str_replace('u-fill-', '', $color)); ?></h6>
-                    <p><?php echo str_replace('fill', 'text', $color); ?></p>
+                    <p><code>.<?php echo str_replace('fill', 'text', $color); ?></code></p>
                 </div>
             </div>
         </div>
