@@ -443,3 +443,21 @@ body:not(.cc-mode-library) .u-visible-cc {
 body.cc-mode-library .u-visible-cc {
     display: block !important;
 }
+
+
+/**
+ * Special widths for chopchop
+ */
+
+.cc-mode-library {
+    .cc-pattern-width-sm {
+        max-width: container(sm)/2;
+    }
+    .cc-pattern-width-md {
+        max-width: container(md)/2;
+    }
+    .cc-pattern-width-lg {
+        max-width: container(lg)/2;
+    }
+}
+

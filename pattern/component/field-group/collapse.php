@@ -1,4 +1,4 @@
-<div class="field-group grid g-gutter-x g-stretch-last">
+<div class="field-group grid g-gutter-x g-stretch-last cc-pattern-width-lg">
     <div class="field-group__field">
         <input type="checkbox" id="is_subscribed" name="is_subscribed" value="1" class="checkbox">
     </div>

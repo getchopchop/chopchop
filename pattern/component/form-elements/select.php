@@ -1,4 +1,4 @@
-<div class="field-group">
+<div class="field-group cc-pattern-width-md">
     <label class="field-group__label" for="select">Browse a category...</label>
     <div class="field-group__field">
         <div class="select">
