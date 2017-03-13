@@ -62,8 +62,8 @@
             @extend %g-gutter-y;
         }
     } @else {
-        .gutter-#{$key},
-        %gutter-#{$key} {
+        .g-gutter-#{$key},
+        %g-gutter-#{$key} {
             @extend %g-gutter-x-#{$key};
             @extend %g-gutter-y-#{$key};
         }
