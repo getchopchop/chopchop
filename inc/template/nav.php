@@ -21,8 +21,7 @@
                     <ol>
                         <?php $subCategories = Navigation::getSubCategories($category); ?>
                         <?php foreach($subCategories as $subCategory) {
-                            $subCategoryLink = ( $category == 'template' ? '' : '#section-');
-                            $subCategoryLink .= $subCategory;
+                            $subCategoryLink = '#section-' . $subCategory;
                             ?>
                             <li class="level1">
                                 <a href="<?php echo getUrl('/'.$topLevelCategory.'/' . $category . '/' . $subCategoryLink )?>">

@@ -151,21 +151,17 @@
     }
 }
 
-
-.cc-accordion {
-    padding-top: spacing(lg);
-    padding-bottom: spacing(lg);
-}
-
 .cc-accordion__header {
-    padding-left: spacing(lg);
-    padding-right: spacing(lg);
-}
-
-.cc-accordion__header {
-    padding-top: spacing(sm);
-    padding-bottom: spacing(sm);
+    padding: spacing(sm) spacing(lg);
     font-size: 16px;
+    border: 0 !important;
+
+    &:before {
+        right: spacing() !important;
+    }
+    &:after {
+        right: calc(#{spacing()} + 5px) !important;
+    }
 
     &:hover {
         background-color: color(neutral, darker);
