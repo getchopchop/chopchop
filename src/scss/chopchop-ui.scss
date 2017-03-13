@@ -138,7 +138,7 @@
     transform: translateX(-100%);
     z-index: 998;
     background-color: color(neutral,darkest);
-    padding: 40px 0;
+    padding: 60px 0;
     color: color(neutral, lighter);
 
     &.is-active {
@@ -170,6 +170,11 @@
 
 .cc-accordion__body {
     padding-bottom: spacing(xl);
+    display: none;
+
+    &.is-active {
+        display: block;
+    }
 
     ol {
         list-style: none;
