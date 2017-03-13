@@ -75,11 +75,12 @@ p.back-link {
 .btn-login,
 .btn-apply-discount,
 .btn-cancel-discount {
-    @extend %btn--ghost;
+    // extend custom button
+    // @extend %btn--ghost;
 }
 .btn-cart,
 .btn-proceed-checkout {
-    // extend primary button
+    // extend custom button
     //@extend %btn--primary-pink;
 }
 .btn-update,
