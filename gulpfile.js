@@ -159,7 +159,7 @@ var taskConfig =
     {
         "autoPrefixer":
         [
-            "last 2 versions"
+            "last 5 versions"
         ],
         "cssNano":
         {
