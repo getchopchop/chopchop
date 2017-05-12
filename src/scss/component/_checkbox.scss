@@ -1,0 +1,81 @@
+/**
+ * Checkbox
+ *
+ * @link http://codepen.io/triss90/pen/XNEdRe
+ */
+
+
+.checkbox {
+
+    &__label {
+        @include flex;
+        @include align-items(center);
+        position: relative;
+        margin-bottom: 0;
+    }
+
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+
+        & + .checkbox__label {
+            &::before {
+                @include square(color(neutral, white), 1.3em);
+                content: "";
+                border: 2px solid color(neutral, light);
+                margin-right: spacing();
+                cursor: pointer;
+                transition: all $animation-speed ease;
+            }
+            &::after {
+                @include tick(color(neutral, white), 10px, 2px);
+                position: absolute;
+                left: 8px;
+                top: 4px;
+                opacity: 0;
+                transition: opacity $animation-speed ease;
+            }
+        }
+
+        &:checked {
+            + .checkbox__label {
+                &::before {
+                    border-color: color(contextual, success);
+                    background-color: color(neutral, white);
+                }
+                &::after {
+                    @include tick(color(contextual, success), 9px, 3px);
+                    opacity: 1;
+                }
+            }
+        }
+
+        &:focus {
+            + .checkbox__label {
+                &::before {
+                    border-color: color(contextual, success);
+                    box-shadow: 0 0 5px 0 rgba(color(neutral, black),.3);
+                    outline: none;
+                }
+            }
+        }
+
+        &:disabled {
+            + .checkbox__label {
+                &::before {
+                    opacity: 0.3;
+                    border-color: color(neutral, light);
+                }
+            }
+        }
+
+        + .checkbox__label {
+            &:empty {
+                &::before {
+                    margin-right: 0;
+                }
+            }
+        }
+
+    }
+}

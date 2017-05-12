@@ -20,7 +20,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="robots" content="noindex">
-    <title>Chop Chop - Little user interface patterns to get us going</title>
+    <title><?php printData('company', 'name'); ?> Component Library</title>
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo getUrl('build/vendor/favicons/apple-touch-icon.png'); ?>">
     <link rel="icon" type="image/png" href="<?php echo getUrl('build/vendor/favicons/favicon-32x32.png'); ?>" sizes="32x32">
     <link rel="icon" type="image/png" href="<?php echo getUrl('build/vendor/favicons/favicon-16x16.png'); ?>" sizes="16x16">
@@ -33,24 +33,36 @@
     <script src="<?php echo getUrl('build/vendor/element-queries/ResizeSensor.js'); ?>"></script>
     <script src="<?php echo getUrl('build/vendor/element-queries/ElementQueries.js'); ?>"></script>
     <?php */ ?>
+    <link rel="stylesheet" type="text/css" href="<?php echo getUrl('build/css/chopchop-ui.css'); ?>" media="screen" />
     <?php if(!isset($_GET['preview'])) : ?>
     <link rel="stylesheet" type="text/css" href="<?php echo getUrl('build/vendor/prismjs/prism.css'); ?>" media="all" />
-        <link rel="stylesheet" type="text/css" href="<?php echo getUrl('build/css/chopchop-ui.css'); ?>" media="screen" />
+
     <?php endif; ?>
 </head>
-<body>
+<body class="cc-mode-<?php echo !isset($_GET['preview'])?'library':'preview' ?>">
+
+    <div class="cc-devbar"><span class="cc-devbar__bp"></span></div>
 
     <?php if(!isset($_GET['preview'])) : ?>
         <header class="cc-header">
-            <ul>
-                <li><a href="#" class="js-cc-toggle" id="cc-menu-trigger" data-cc-toggle-action="toggle" data-cc-toggle-target="#cc-nav">Menu</a></li>
-                <li class="cc-readout"><span></span></li>
-            </ul>
+            <div class="u-container">
+                <div class="grid g-center g-gutter-x g-stretch-last">
+                    <div>
+                        <a href="#" class="js-cc-toggle" id="cc-menu-trigger" data-cc-toggle-action="toggle" data-cc-toggle-target="#cc-nav">
+                            <?php printSvg('general', 'menu', 'icon--lg icon-menu'); ?>
+                            <?php printSvg('general', 'cross', 'icon--lg icon-cross'); ?>
+                        </a>
+                    </div>
+                    <div>
+                        <?php printData('company', 'name'); ?> Component Library
+                    </div>
+                </div>
+            </div>
         </header>
 
         <div class="site-wrapper cc-site-wrapper">
 
-            <nav class="cc-nav" id="cc-nav" data-cc-cascade="cc-menu-trigger">
+            <nav class="cc-nav js-cc-toggle" id="cc-nav" data-cc-toggle-target-callback="#cc-menu-trigger">
                 <div class="block-content site-navigation__content">
                     <?php require_once('inc/template/nav.php'); ?>
                 </div>
@@ -66,8 +78,10 @@
                 'print_code' => !((isset($_GET['code']) && $_GET['code'] === false)),
                 'print_codeactive' => !((isset($_GET['codeactive']) && $_GET['codeactive'] === false))
                 );
-
-                echo Section::get(getRequestPath(), $options);
+                $requestPath = Content::getRequestPath();
+                echo Content::getContent($requestPath, $options);
+                //trying to make Section redundant, so I've commented out for now - RL
+                //echo Section::get(getRequestPath(), $options);
             }?>
     <?php if(!isset($_GET['preview'])) : ?>
             </main>
@@ -81,19 +95,20 @@
     <![endif]-->
     <script src="<?php echo getUrl('build/vendor/picturefill/picturefill.js'); ?>" async></script>
     <script src="<?php echo getUrl('build/vendor/jquery/jquery.js'); ?>"></script>
+    <script src="<?php echo getUrl('build/vendor/jquery/jquery-no-conflict.js'); ?>"></script>
     <script src="<?php echo getUrl('build/vendor/jquery/jquery-ui.min.js'); ?>"></script>
-    <?php /*?>
-    <script src="<?php echo getUrl('build/vendor/enquire/enquire.js'); ?>"></script>
-    <?php */ ?>
     <script src="<?php echo getUrl('build/js/chop.base.widget.js'); ?>"></script>
     <script src="<?php echo getUrl('build/js/chop.toggle.widget.js'); ?>"></script>
     <script src="<?php echo getUrl('build/js/chop.collapsible.widget.js'); ?>"></script>
-    <script src="<?php echo getUrl('build/js/script.js'); ?>"></script>
+    <script src="<?php echo getUrl('build/js/chop.global.js'); ?>"></script>
+
+    <!-- Placeholder for kitchen-sink scripts -->
+    <?php if(file_exists(__DIR__ . '/kitchen-sink.php')) { require_once('kitchen-sink.php'); }?>
 
     <?php if(!isset($_GET['preview'])) : ?>
-        <script src="<?php echo getUrl('build/vendor/jquery.cookie/jquery.cookie.js'); ?>"></script>
+        <script src="<?php echo getUrl('build/vendor/js.cookie/js.cookie.js'); ?>"></script>
         <script src="<?php echo getUrl('build/vendor/prismjs/prism.js'); ?>"></script>
-<!--        <script src="--><?php //echo getUrl('build/js/chopchop-ui.js'); ?><!--"></script>-->
+        <script src="<?php echo getUrl('build/js/chopchop-ui.js'); ?>"></script>
     <?php endif; ?>
 
 </body>

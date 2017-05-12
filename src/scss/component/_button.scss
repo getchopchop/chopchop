@@ -18,15 +18,7 @@
     text-align: center;
     white-space: nowrap;
     width: auto;
-    background-color: color(neutral,darkest);
-    color: color(neutral, white);
     fill: currentColor;
-
-    &:hover,
-    &:focus {
-        color: color(neutral, white);
-        background-color: color(neutral,darker);
-    }
 
     &::moz-focus-inner {
         border: 0;
@@ -57,32 +49,6 @@
 
 
 /**
- * Button Text
- */
-
-.btn--text,
-%btn--text {
-    @extend %link;
-    background-color: transparent;
-    color: color(neutral, black);
-    font-weight: inherit;
-    text-decoration: underline;
-
-    &:hover,
-    &:focus {
-        background-color: transparent;
-        color: color(neutral, black);
-        text-decoration: none;
-    }
-
-    &:disabled {
-        background-color: transparent;
-        color: color(neutral, dark);
-    }
-}
-
-
-/**
  * Button Block
  */
 
@@ -94,6 +60,70 @@
 
 
 /**
+ * Button color variations
+ */
+
+@each $button-key, $button-value in $buttons {
+    $button-class: 'btn';
+
+    @if($button-key != 'base') {
+        $button-class: 'btn--' + $button-key;
+    }
+
+    .#{$button-class},
+    %#{$button-class} {
+        @include button-colors($button-key, default);
+
+        @if(index(map-keys($button-value), 'visited') != null) {
+            &:visited {
+                @include button-colors($button-key, default);
+            }
+        }
+        @if(index(map-keys($button-value), 'hover') != null) {
+            &:hover {
+                @include button-colors($button-key, hover);
+            }
+        }
+        @if(index(map-keys($button-value), 'active') != null) {
+            &:active {
+                @include button-colors($button-key, active);
+            }
+        }
+        @if(index(map-keys($button-value), 'focus') != null) {
+            &:focus {
+                @include button-colors($button-key, focus);
+            }
+        }
+
+        &.btn--ghost {
+            @include button-ghost-colors($button-key, default);
+
+            @if(index(map-keys($button-value), 'visited') != null) {
+                &:visited {
+                    @include button-ghost-colors($button-key, default);
+                }
+            }
+            @if(index(map-keys($button-value), 'hover') != null) {
+                &:hover {
+                    @include button-ghost-colors($button-key, hover);
+                }
+            }
+            @if(index(map-keys($button-value), 'active') != null) {
+                &:active {
+                    @include button-ghost-colors($button-key, active);
+                }
+            }
+            @if(index(map-keys($button-value), 'focus') != null) {
+                &:focus {
+                    @include button-ghost-colors($button-key, focus);
+                }
+            }
+        }
+    }
+}
+
+
+/**
  * Button Disabled
  */
 
@@ -101,12 +131,42 @@
 %btn--disabled,
 .btn:disabled {
     cursor: not-allowed;
-    background-color: color(neutral, dark);
-    color: color(neutral,darker);
+    background-color: color(neutral, lighter);
+    border-color: color(neutral, light);
+    color: color(neutral, dark);
 
     &:hover,
     &:focus {
-        background-color: color(neutral, dark);
-        color: color(neutral,darker);
+        background-color: color(neutral, lighter);
+        border-color: color(neutral, light);
+        color: color(neutral, dark);
+    }
+}
+
+
+/**
+ * Button Text
+ */
+
+.btn--text,
+%btn--text {
+    @extend %link;
+    background-color: transparent;
+    color: color(neutral, black);
+    font-weight: inherit;
+    text-decoration: underline;
+    border-color: transparent;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: color(neutral, black);
+        border-color: transparent;
+        text-decoration: none;
+    }
+
+    &:disabled {
+        background-color: transparent;
+        color: color(neutral, dark);
     }
 }

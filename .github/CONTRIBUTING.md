@@ -12,9 +12,9 @@ patches and features.
 
 ## Using the issue tracker
 
-The [issue tracker](https://github.com/jakecobley/gulpfile.js/issues) is
+The [issue tracker](https://github.com/getchopchop/chopchop/issues) is
 the preferred channel for bug reports, features requests and submitting
-[pull requests](https://github.com/jakecobley/gulpfile.js/pulls), but please
+[pull requests](https://github.com/getchopchop/chopchop/pulls), but please
 respect the following restrictions:
 
 * Please **do not** use the issue tracker for personal support requests.
@@ -41,7 +41,7 @@ one to be extended or modified. New features require a minor version bump
 resolve.
 - `question` - Issues/enhancements which need discussion.
 
-For a complete look at our labels, see the [project labels page](https://github.com/jakecobley/gulpfile.js/labels).
+For a complete look at our labels, see the [project labels page](https://github.com/getchopchop/chopchop/labels).
 
 ## Feature requests
 
@@ -76,7 +76,7 @@ included in the project:
    # Navigate to the newly cloned directory
    cd bootstrap
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/jakecobley/gulpfile.js.git
+   git remote add upstream https://github.com/getchopchop/chopchop.git
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:

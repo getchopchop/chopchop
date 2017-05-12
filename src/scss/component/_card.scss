@@ -4,20 +4,29 @@
 
 .card,
 %card {
-    border: 1px solid color(neutral, light);
-    margin-bottom: spacing();
+    border: seperator(base, width) seperator(base, style) seperator(base, color);
+    background-color: color(neutral, white);
+    border-radius: $border-radius;
 
-    &__header,
-    &__footer {
-        background-color: color(neutral, lighter);
-        padding: spacing(sm) spacing();
+    > [class*="__header"] {
+        border-bottom: seperator(base, width) seperator(base, style) seperator(base, color);
+
+        > * {
+            margin-bottom: 0;
+        }
     }
 
-    &__header {
-        border-bottom: 1px solid color(neutral, light);
+    > [class*="__body"] > *:last-child {
+        margin-bottom: 0;
     }
 
-    &__footer {
-        border-top: 1px solid color(neutral, light);
+    > [class*="__header"],
+    > [class*="__body"],
+    > [class*="__footer"] {
+        padding: spacing(lg);
+    }
+
+    > [class*="__footer"] {
+        border-top: seperator(base, width) seperator(base, style) seperator(base, color);
     }
 }

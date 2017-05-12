@@ -1,0 +1,15 @@
+/**
+ * Shape
+ *
+ * @since 3.0.0
+ */
+
+.u-shape-ring,
+%u-shape-ring {
+    @include ring(color(neutral, dark), color(neutral, light), 16px, 3px);
+}
+
+.u-shape-ring-lg,
+%u-shape-ring-lg {
+    @include ring(color(neutral, dark), color(neutral, light), 32px, 3px);
+}

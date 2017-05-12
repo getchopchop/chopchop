@@ -28,9 +28,11 @@ select[multiple=multiple] {
     border-radius: 0;
     padding: spacing(xs) spacing(sm);
     width: 100%;
+    color: color(neutral, dark);
 
     &:focus {
-        border-color: color(neutral, black);
+        border-color: color(contextual, success);
+        box-shadow: 0 0 5px 0 rgba(color(neutral, black),.3);
         outline: none;
     }
 }
@@ -135,15 +137,18 @@ abbr[title="Required"],
     margin-left: spacing(xs);
 }
 
-.valid {
+.valid,
+%valid {
     color: color(contextual, success);
 }
 
-.is-error {
+.is-error,
+%is-error {
     border-color: color(contextual, error);
 }
 
-.is-valid {
+.is-valid,
+%is-valid {
     border-color: color(contextual, success);
 }
 

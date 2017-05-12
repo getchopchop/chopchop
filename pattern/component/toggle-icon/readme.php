@@ -1,0 +1,1 @@
+<p>Adds a plus and minus icon to the interface using the <a href="<?php echo getUrl('/pattern/helper/#section-shape'); ?>">shape mixin</a>.</p>

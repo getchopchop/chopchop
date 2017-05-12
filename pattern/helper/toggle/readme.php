@@ -1,0 +1,1 @@
+<p>Full documentation can be found on our <a href="https://github.com/getchopchop/chopchop/wiki/JavaScript-Toggle-Widget-Options">GitHub wiki</a>.</p>

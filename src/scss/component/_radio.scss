@@ -1,0 +1,70 @@
+/**
+ * Radio
+ *
+ * @link http://codepen.io/triss90/pen/XNEdRe
+ */
+
+
+.radio {
+
+    input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+
+        & + .radio__label {
+            &::before {
+                content: '';
+                background: color(neutral, lightest);
+                border-radius: 100%;
+                border: 2px solid color(neutral, light);
+                display: inline-block;
+                width: 1.4em;
+                height: 1.4em;
+                position: relative;
+                top: -0.1em;
+                margin-right: spacing();
+                vertical-align: top;
+                cursor: pointer;
+                text-align: center;
+                transition: all $animation-speed ease;
+            }
+        }
+
+        &:checked {
+            + .radio__label {
+                &::before {
+                    background-color: color(contextual, success);
+                    box-shadow: inset 0 0 0 4px color(neutral, lightest);
+                }
+            }
+        }
+
+        &:focus {
+            + .radio__label {
+                &::before {
+                    outline: none;
+                    border-color: color(contextual, success);
+                }
+            }
+        }
+
+        &:disabled {
+            + .radio__label {
+                &::before {
+                    box-shadow: inset 0 0 0 4px color(neutral, lightest);
+                    border-color: color(neutral, light);
+                    background: color(neutral, light);
+                }
+            }
+        }
+
+        + .radio__label {
+            &:empty {
+                &::before {
+                    margin-right: 0;
+                }
+            }
+        }
+
+    }
+}

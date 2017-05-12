@@ -29,11 +29,13 @@
             .u-text-#{$color-key},
             %u-text-#{$color-key} {
                 color: $tone-value !important;
+                fill: currentColor !important;
             }
         } @else {
             .u-text-#{$color-key}-#{$tone-key},
             %u-text-#{$color-key}-#{$tone-key} {
                 color: $tone-value !important;
+                fill: currentColor !important;
             }
         }
     }

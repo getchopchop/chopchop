@@ -32,7 +32,9 @@
  *
  * @since 2.4.0
  */
-%u-ratio--16x9:before {
+
+.u-ratio--16x9::before,
+%u-ratio--16x9::before {
     padding-top: 56.25%;
 }
 
@@ -42,6 +44,8 @@
  *
  * @since 2.4.0
  */
-%u-ratio--4x3:before {
+
+.u-ratio--4x3::before,
+%u-ratio--4x3::before {
     padding-top: 75%;
 }

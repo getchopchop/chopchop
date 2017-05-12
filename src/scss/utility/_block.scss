@@ -10,25 +10,53 @@
  */
 
 [class*="u-block"],
-%u-block {
+%u-block-base {
     display: block;
+    
+    > *:last-child {
+        margin-bottom: 0;
+    }
 }
 
-[class*="u-block"] > *:last-child,
-%u-block > *:last-child {
-    margin-bottom: 0;
-}
 
 @each $key, $value in $spacing {
     @if $key == base {
         .u-block,
         %u-block {
-            padding: $value;
+            padding: $value !important;
+            
+            &-top {
+                padding-top: $value !important;
+            }
+            &-bottom {
+                padding-bottom: $value !important;
+            }
+        }
+        %u-block {
+            &,
+            &-top,
+            &-bottom {
+                @extend %u-block-base;
+            }
         }
     } @else {
         .u-block-#{$key},
         %u-block-#{$key} {
-            padding: $value;
+            padding: $value !important;
+
+            &-top {
+                padding-top: $value !important;
+            }
+            &-bottom {
+                padding-bottom: $value !important;
+            }
+        }
+        %u-block-#{$key} {
+            &,
+            &-top,
+            &-bottom {
+                @extend %u-block-base;
+            }
         }
     }
 }
